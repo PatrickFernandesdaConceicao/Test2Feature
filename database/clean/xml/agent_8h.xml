@@ -1,0 +1,866 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="agent_8h" kind="file" language="C++">
+    <compoundname>agent.h</compoundname>
+    <includes refid="libssh_8h" local="yes">libssh/libssh.h</includes>
+    <includedby refid="agent_8c" local="yes">src/agent.c</includedby>
+    <includedby refid="auth_8c" local="yes">src/auth.c</includedby>
+    <includedby refid="pki_8c" local="yes">src/pki.c</includedby>
+    <includedby refid="session_8c" local="yes">src/session.c</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>sys/select.h</label>
+      </node>
+      <node id="8">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>netdb.h</label>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1">
+        <label>include/libssh/agent.h</label>
+        <link refid="agent_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="2">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="9">
+        <label>tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="10">
+        <label>tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="8">
+        <label>tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="7">
+        <label>tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="3">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="14">
+        <label>tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="11">
+        <label>tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="2">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/libssh/agent.h</label>
+        <link refid="agent_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="4">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="15">
+        <label>src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="16">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structssh__agent__struct" prot="public">ssh_agent_struct</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="agent_8h_1a0df722b795f823c79523ce7ccf3673a3" prot="public" static="no">
+        <name>SSH_AGENTC_REQUEST_RSA_IDENTITIES</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="27" column="9" bodyfile="include/libssh/agent.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a64a3217863b3d2f5da78f9f4ce5baa3e" prot="public" static="no">
+        <name>SSH_AGENT_RSA_IDENTITIES_ANSWER</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="28" column="9" bodyfile="include/libssh/agent.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a3cc2570c47d2b328d472db18c42c1e61" prot="public" static="no">
+        <name>SSH_AGENTC_RSA_CHALLENGE</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="29" column="9" bodyfile="include/libssh/agent.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a3c6bd7eefafb06c5932f2dbaaf9d8fb4" prot="public" static="no">
+        <name>SSH_AGENT_RSA_RESPONSE</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="30" column="9" bodyfile="include/libssh/agent.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a8d5d425ebe473c7a9366b0100228bace" prot="public" static="no">
+        <name>SSH_AGENT_FAILURE</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="31" column="9" bodyfile="include/libssh/agent.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1acea25cd33d98cbfd6b83769782b621f6" prot="public" static="no">
+        <name>SSH_AGENT_SUCCESS</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="32" column="9" bodyfile="include/libssh/agent.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ad90d4166f29308ed696b99eb74d489bf" prot="public" static="no">
+        <name>SSH_AGENTC_ADD_RSA_IDENTITY</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="33" column="9" bodyfile="include/libssh/agent.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a82f304bb39e96184fcf2f037029fc5b3" prot="public" static="no">
+        <name>SSH_AGENTC_REMOVE_RSA_IDENTITY</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="34" column="9" bodyfile="include/libssh/agent.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a340becff6221b4556b22d85f5d4ff023" prot="public" static="no">
+        <name>SSH_AGENTC_REMOVE_ALL_RSA_IDENTITIES</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="35" column="9" bodyfile="include/libssh/agent.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1af19519b513de44d6a567916421e722a0" prot="public" static="no">
+        <name>SSH2_AGENTC_REQUEST_IDENTITIES</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="38" column="9" bodyfile="include/libssh/agent.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ad9e6f176dfeb1af610c0aedb1bdb4223" prot="public" static="no">
+        <name>SSH2_AGENT_IDENTITIES_ANSWER</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="39" column="9" bodyfile="include/libssh/agent.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a1a5605c0efc46f2ca85b84f1dd9c35be" prot="public" static="no">
+        <name>SSH2_AGENTC_SIGN_REQUEST</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="40" column="9" bodyfile="include/libssh/agent.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a01fcd736af6a063b939fb15450b177e8" prot="public" static="no">
+        <name>SSH2_AGENT_SIGN_RESPONSE</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="41" column="9" bodyfile="include/libssh/agent.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ad82568cc18a6fb58a5ff39b49d4be92b" prot="public" static="no">
+        <name>SSH2_AGENTC_ADD_IDENTITY</name>
+        <initializer>17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="42" column="9" bodyfile="include/libssh/agent.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a3d88a2f49ee54ad29ab5f0889f7c24c5" prot="public" static="no">
+        <name>SSH2_AGENTC_REMOVE_IDENTITY</name>
+        <initializer>18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="43" column="9" bodyfile="include/libssh/agent.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a297aec04c43a94a90f6537e7bc7870d9" prot="public" static="no">
+        <name>SSH2_AGENTC_REMOVE_ALL_IDENTITIES</name>
+        <initializer>19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="44" column="9" bodyfile="include/libssh/agent.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1af0762aa3f8268d053e1307823c2fb075" prot="public" static="no">
+        <name>SSH_AGENTC_ADD_SMARTCARD_KEY</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="47" column="9" bodyfile="include/libssh/agent.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ac2ce38bc677edc73f21f7927a898d089" prot="public" static="no">
+        <name>SSH_AGENTC_REMOVE_SMARTCARD_KEY</name>
+        <initializer>21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="48" column="9" bodyfile="include/libssh/agent.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a16c17bfb507585b89802c6b3f7c3afea" prot="public" static="no">
+        <name>SSH_AGENTC_LOCK</name>
+        <initializer>22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="51" column="9" bodyfile="include/libssh/agent.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a324891c1f127387ceccb44f5d5306a8e" prot="public" static="no">
+        <name>SSH_AGENTC_UNLOCK</name>
+        <initializer>23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="52" column="9" bodyfile="include/libssh/agent.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ab9f6a1bb4b46de2a935c73ee8f21a3a9" prot="public" static="no">
+        <name>SSH_AGENTC_ADD_RSA_ID_CONSTRAINED</name>
+        <initializer>24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="55" column="9" bodyfile="include/libssh/agent.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a0022eeb848b1f9d7f0b244e2f1113925" prot="public" static="no">
+        <name>SSH2_AGENTC_ADD_ID_CONSTRAINED</name>
+        <initializer>25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="56" column="9" bodyfile="include/libssh/agent.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a81266f042e73c92d6eb4f5d6c6005b76" prot="public" static="no">
+        <name>SSH_AGENTC_ADD_SMARTCARD_KEY_CONSTRAINED</name>
+        <initializer>26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="57" column="9" bodyfile="include/libssh/agent.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ab07ee94d5b881230d43b85fb602602bf" prot="public" static="no">
+        <name>SSH_AGENT_CONSTRAIN_LIFETIME</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="59" column="9" bodyfile="include/libssh/agent.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a0a4cda7909df3d61af6c1eab78af3070" prot="public" static="no">
+        <name>SSH_AGENT_CONSTRAIN_CONFIRM</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="60" column="9" bodyfile="include/libssh/agent.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a930c836ddc222a0e63bd8599878d79dc" prot="public" static="no">
+        <name>SSH2_AGENT_FAILURE</name>
+        <initializer>30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="63" column="9" bodyfile="include/libssh/agent.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a60d96c957e8e208c25d8e85cbe55d63b" prot="public" static="no">
+        <name>SSH_COM_AGENT2_FAILURE</name>
+        <initializer>102</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="66" column="9" bodyfile="include/libssh/agent.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ae9bfd82b84f0840171144f73f5eb5c32" prot="public" static="no">
+        <name>SSH_AGENT_OLD_SIGNATURE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="68" column="9" bodyfile="include/libssh/agent.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1a2106b131e9fc3de7c286d2dec572a39f" prot="public" static="no">
+        <name>SSH_AGENT_RSA_SHA2_256</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="70" column="9" bodyfile="include/libssh/agent.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="agent_8h_1ae0fe78b60b75f0f6e7bfbd6d4686a54b" prot="public" static="no">
+        <name>SSH_AGENT_RSA_SHA2_512</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="71" column="9" bodyfile="include/libssh/agent.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="agent_8h_1adc12d57484ac2d7f4d4c7a379fe04382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__agent__struct" kindref="compound">ssh_agent_struct</ref> *</type>
+        <definition>struct ssh_agent_struct* ssh_agent_new</definition>
+        <argsstring>(struct ssh_session_struct *session)</argsstring>
+        <name>ssh_agent_new</name>
+        <param>
+          <type>struct <ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref> *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Create a new ssh agent structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An allocated ssh agent structure or NULL on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="87" column="23" bodyfile="src/agent.c" bodystart="126" bodyend="143" declfile="include/libssh/agent.h" declline="87" declcolumn="23"/>
+        <references refid="structssh__agent__struct_1ae4b83c7ceb91db8899a90727bf3b80aa" compoundref="agent_8h" startline="77">ssh_agent_struct::channel</references>
+        <references refid="structssh__agent__struct_1aae9f1c309666d4db4eadb486fb9b61e8" compoundref="agent_8h" startline="76">ssh_agent_struct::count</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__agent__struct_1a24bb4e9bb9fcfc979ec423fbdd97228e" compoundref="agent_8h" startline="74">ssh_agent_struct::sock</references>
+        <references refid="socket_8h_1ae616d257d1f37fcaf60f6d243fe4e964" compoundref="socket_8c" startline="148" endline="180">ssh_socket_new</references>
+        <references refid="priv_8h_1a65e0a55b6af58e00b0a584d665af60ab" compoundref="priv_8h" startline="320">ZERO_STRUCTP</references>
+        <referencedby refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="agent_8h_1a2990b7f52fca9ee1dbebb306f28dc734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_agent_close</definition>
+        <argsstring>(struct ssh_agent_struct *agent)</argsstring>
+        <name>ssh_agent_close</name>
+        <param>
+          <type>struct <ref refid="structssh__agent__struct" kindref="compound">ssh_agent_struct</ref> *</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="89" column="6" bodyfile="src/agent.c" bodystart="188" bodyend="194" declfile="include/libssh/agent.h" declline="89" declcolumn="6"/>
+        <references refid="structssh__agent__struct_1a24bb4e9bb9fcfc979ec423fbdd97228e" compoundref="agent_8h" startline="74">ssh_agent_struct::sock</references>
+        <references refid="socket_8h_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</references>
+        <referencedby refid="agent_8c_1a9ce225db395840212b219e35179baa2a" compoundref="agent_8c" startline="196" endline="207">ssh_agent_free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="agent_8h_1a688156b0951d126f1a2504feb010c7c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_agent_free</definition>
+        <argsstring>(struct ssh_agent_struct *agent)</argsstring>
+        <name>ssh_agent_free</name>
+        <param>
+          <type>struct <ref refid="structssh__agent__struct" kindref="compound">ssh_agent_struct</ref> *</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Free an allocated ssh agent structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh agent structure to free. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="96" column="6" declfile="include/libssh/agent.h" declline="96" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="agent_8h_1a8ecb166e690f4b0bf35af42184f28407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_agent_is_running</definition>
+        <argsstring>(struct ssh_session_struct *session)</argsstring>
+        <name>ssh_agent_is_running</name>
+        <param>
+          <type>struct <ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref> *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Check if the ssh agent is running. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to check for the agent.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if it is running, 0 if not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="105" column="5" declfile="include/libssh/agent.h" declline="105" declcolumn="5"/>
+        <referencedby refid="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" compoundref="auth_8c" startline="872" endline="961">ssh_userauth_agent</referencedby>
+        <referencedby refid="torture__auth_8c_1add171176cc97a54d8bf7a3a9fcbd49c8" compoundref="torture__auth_8c" startline="440" endline="465">torture_auth_agent</referencedby>
+        <referencedby refid="torture__auth_8c_1ac1e47567b2530e7c7c17d7f3367db43c" compoundref="torture__auth_8c" startline="467" endline="496">torture_auth_agent_nonblocking</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="agent_8h_1a4081a49ab8059fed3287f4977c53af0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ssh_agent_get_ident_count</definition>
+        <argsstring>(struct ssh_session_struct *session)</argsstring>
+        <name>ssh_agent_get_ident_count</name>
+        <param>
+          <type>struct <ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref> *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="107" column="10" bodyfile="src/agent.c" bodystart="310" bodyend="395" declfile="include/libssh/agent.h" declline="107" declcolumn="10"/>
+        <references refid="structssh__session__struct_1abc1f0bff268e2e92f6e526a0118bd2cc" compoundref="session_8h" startline="177">ssh_session_struct::agent</references>
+        <references refid="agent_8c_1acfa74033b6354c4464a2b9684a103a0b" compoundref="agent_8c" startline="62">agent_failed</references>
+        <references refid="agent_8c_1af7754ba893f43f407eedc899b5a9cc49" compoundref="agent_8c" startline="251" endline="308">agent_talk</references>
+        <references refid="priv_8h_1a5bcbf8b6ee067af4c2fd60ef3bdb39d2" compoundref="priv_8h" startline="61">bswap_32</references>
+        <references refid="structssh__agent__struct_1aae9f1c309666d4db4eadb486fb9b61e8" compoundref="agent_8h" startline="76">ssh_agent_struct::count</references>
+        <references refid="structssh__agent__struct_1a1ebac770252eecbe90f15e8065fdcb4b" compoundref="agent_8h" startline="75">ssh_agent_struct::ident</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="agent_8h_1ad9e6f176dfeb1af610c0aedb1bdb4223" compoundref="agent_8h" startline="39">SSH2_AGENT_IDENTITIES_ANSWER</references>
+        <references refid="agent_8h_1af19519b513de44d6a567916421e722a0" compoundref="agent_8h" startline="38">SSH2_AGENTC_REQUEST_IDENTITIES</references>
+        <references refid="buffer_8h_1a25dc9ca6178465fb850de52b30e2add6">ssh_buffer_add_u8</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="buffer_8h_1a71d2508b2ed54654c2fae5f0e4422a8f">ssh_buffer_get_u32</references>
+        <references refid="buffer_8h_1ad47ec3aec619c88af7bc8fcf641235d8">ssh_buffer_get_u8</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <referencedby refid="agent_8h_1a470bb8d667532292562a8567cbd708de" compoundref="agent_8c" startline="398" endline="405">ssh_agent_get_first_ident</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="agent_8h_1a730a3c31e6bef0b7f88f0061dc5deb3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+        <definition>ssh_key ssh_agent_get_next_ident</definition>
+        <argsstring>(struct ssh_session_struct *session, char **comment)</argsstring>
+        <name>ssh_agent_get_next_ident</name>
+        <param>
+          <type>struct <ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref> *</type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>comment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="109" column="9" bodyfile="src/agent.c" bodystart="408" bodyend="455" declfile="include/libssh/agent.h" declline="109" declcolumn="9"/>
+        <references refid="structssh__session__struct_1abc1f0bff268e2e92f6e526a0118bd2cc" compoundref="session_8h" startline="177">ssh_session_struct::agent</references>
+        <references refid="structssh__agent__struct_1aae9f1c309666d4db4eadb486fb9b61e8" compoundref="agent_8h" startline="76">ssh_agent_struct::count</references>
+        <references refid="structssh__agent__struct_1a1ebac770252eecbe90f15e8065fdcb4b" compoundref="agent_8h" startline="75">ssh_agent_struct::ident</references>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="buffer_8h_1ae9ba83ddeaf673b2d15be5312495ed7e">ssh_buffer_get_ssh_string</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__pki_1gadc54a1993774f76e9e013ac922ab8edb" compoundref="pki_8c" startline="1860" endline="1863">ssh_pki_import_cert_blob</references>
+        <references refid="group__libssh__pki_1ga942b96ee72b13655952c87efe938e6ee" compoundref="pki_8c" startline="1610" endline="1661">ssh_pki_import_pubkey_blob</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="libssh_8h_1aa1070301a131ac0943da581a3ca6f71b">ssh_string_to_char</references>
+        <referencedby refid="agent_8h_1a470bb8d667532292562a8567cbd708de" compoundref="agent_8c" startline="398" endline="405">ssh_agent_get_first_ident</referencedby>
+        <referencedby refid="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" compoundref="auth_8c" startline="872" endline="961">ssh_userauth_agent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="agent_8h_1a470bb8d667532292562a8567cbd708de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+        <definition>ssh_key ssh_agent_get_first_ident</definition>
+        <argsstring>(struct ssh_session_struct *session, char **comment)</argsstring>
+        <name>ssh_agent_get_first_ident</name>
+        <param>
+          <type>struct <ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref> *</type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>comment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="112" column="9" bodyfile="src/agent.c" bodystart="398" bodyend="405" declfile="include/libssh/agent.h" declline="112" declcolumn="9"/>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="agent_8c_1a4081a49ab8059fed3287f4977c53af0f" compoundref="agent_8c" startline="310" endline="395">ssh_agent_get_ident_count</references>
+        <references refid="agent_8c_1a730a3c31e6bef0b7f88f0061dc5deb3f" compoundref="agent_8c" startline="408" endline="455">ssh_agent_get_next_ident</references>
+        <referencedby refid="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" compoundref="auth_8c" startline="872" endline="961">ssh_userauth_agent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="agent_8h_1ac53a1b1236f14bba793156f30686570d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a27e04455dbb0a80b6fed70b30772717b" kindref="member">ssh_string</ref></type>
+        <definition>ssh_string ssh_agent_sign_data</definition>
+        <argsstring>(ssh_session session, const ssh_key pubkey, struct ssh_buffer_struct *data)</argsstring>
+        <name>ssh_agent_sign_data</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const <ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+          <declname>pubkey</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/agent.h" line="115" column="12" bodyfile="src/agent.c" bodystart="475" bodyend="592" declfile="include/libssh/agent.h" declline="115" declcolumn="12"/>
+        <references refid="agent_8c_1acfa74033b6354c4464a2b9684a103a0b" compoundref="agent_8c" startline="62">agent_failed</references>
+        <references refid="agent_8c_1af7754ba893f43f407eedc899b5a9cc49" compoundref="agent_8c" startline="251" endline="308">agent_talk</references>
+        <references refid="priv_8h_1a5bcbf8b6ee067af4c2fd60ef3bdb39d2" compoundref="priv_8h" startline="61">bswap_32</references>
+        <references refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" compoundref="string_8h" startline="31">ssh_string_struct::data</references>
+        <references refid="structssh__session__struct_1a2881b30666809faf781755e3ba827418" compoundref="session_8h" startline="132">ssh_session_struct::extensions</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="agent_8h_1a01fcd736af6a063b939fb15450b177e8" compoundref="agent_8h" startline="41">SSH2_AGENT_SIGN_RESPONSE</references>
+        <references refid="agent_8h_1a1a5605c0efc46f2ca85b84f1dd9c35be" compoundref="agent_8h" startline="40">SSH2_AGENTC_SIGN_REQUEST</references>
+        <references refid="agent_8h_1a2106b131e9fc3de7c286d2dec572a39f" compoundref="agent_8h" startline="70">SSH_AGENT_RSA_SHA2_256</references>
+        <references refid="agent_8h_1ae0fe78b60b75f0f6e7bfbd6d4686a54b" compoundref="agent_8h" startline="71">SSH_AGENT_RSA_SHA2_512</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="buffer_8h_1a75f9cd3d07f2039b0cd1821a7eb0d7f8">ssh_buffer_add_ssh_string</references>
+        <references refid="buffer_8h_1a4f0ecf7574fd0aeefdef4e05671cc960">ssh_buffer_add_u32</references>
+        <references refid="buffer_8h_1a25dc9ca6178465fb850de52b30e2add6">ssh_buffer_add_u8</references>
+        <references refid="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" compoundref="buffer_8c" startline="335" endline="352">ssh_buffer_allocate_size</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="buffer_8h_1ae9ba83ddeaf673b2d15be5312495ed7e">ssh_buffer_get_ssh_string</references>
+        <references refid="buffer_8h_1ad47ec3aec619c88af7bc8fcf641235d8">ssh_buffer_get_u8</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="session_8h_1a047e80f4290d0129301e4dbf10903c40" compoundref="session_8h" startline="99">SSH_EXT_SIG_RSA_SHA256</references>
+        <references refid="session_8h_1a4002e4f8ce4c956ef89c3335f36c9c8e" compoundref="session_8h" startline="100">SSH_EXT_SIG_RSA_SHA512</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__pki_1ga1fbd9d4c0af2d5dc42a606b899ecbe89" compoundref="pki_8c" startline="591" endline="612">ssh_key_type_plain</references>
+        <references refid="libssh_8h_1a244b017e5993fde29fe9e9b1f04a7bcea94ea687ea48d0e1eceef97f1c1745683" compoundref="libssh_8h" startline="294">SSH_KEYTYPE_RSA</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="group__libssh__pki_1gaadeaf6dc35e99214de0af82c3c431649" compoundref="pki_8c" startline="2030" endline="2046">ssh_pki_export_pubkey_blob</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="libssh_8h_1aad7b2fc092973a478df54a40af69abf2">ssh_string_len</references>
+        <referencedby refid="group__libssh__pki_1ga030b5e767d97bd26053a5644b083c133" compoundref="pki_8c" startline="2585" endline="2633">ssh_pki_do_sign_agent</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2008-2009<sp/>Andreas<sp/>Schneider<sp/>&lt;asn@cryptomilk.org&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__AGENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__AGENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Messages<sp/>for<sp/>the<sp/>authentication<sp/>agent<sp/>connection.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="agent_8h_1a0df722b795f823c79523ce7ccf3673a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_REQUEST_RSA_IDENTITIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="agent_8h_1a64a3217863b3d2f5da78f9f4ce5baa3e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_RSA_IDENTITIES_ANSWER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="agent_8h_1a3cc2570c47d2b328d472db18c42c1e61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_RSA_CHALLENGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="agent_8h_1a3c6bd7eefafb06c5932f2dbaaf9d8fb4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_RSA_RESPONSE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="agent_8h_1a8d5d425ebe473c7a9366b0100228bace" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="agent_8h_1acea25cd33d98cbfd6b83769782b621f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_SUCCESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="agent_8h_1ad90d4166f29308ed696b99eb74d489bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_ADD_RSA_IDENTITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="agent_8h_1a82f304bb39e96184fcf2f037029fc5b3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_REMOVE_RSA_IDENTITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="agent_8h_1a340becff6221b4556b22d85f5d4ff023" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_REMOVE_ALL_RSA_IDENTITIES<sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>private<sp/>OpenSSH<sp/>extensions<sp/>for<sp/>SSH2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="agent_8h_1af19519b513de44d6a567916421e722a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENTC_REQUEST_IDENTITIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="agent_8h_1ad9e6f176dfeb1af610c0aedb1bdb4223" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENT_IDENTITIES_ANSWER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="agent_8h_1a1a5605c0efc46f2ca85b84f1dd9c35be" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENTC_SIGN_REQUEST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="agent_8h_1a01fcd736af6a063b939fb15450b177e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENT_SIGN_RESPONSE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="agent_8h_1ad82568cc18a6fb58a5ff39b49d4be92b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENTC_ADD_IDENTITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="agent_8h_1a3d88a2f49ee54ad29ab5f0889f7c24c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENTC_REMOVE_IDENTITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="agent_8h_1a297aec04c43a94a90f6537e7bc7870d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENTC_REMOVE_ALL_IDENTITIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>smartcard<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="agent_8h_1af0762aa3f8268d053e1307823c2fb075" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_ADD_SMARTCARD_KEY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="agent_8h_1ac2ce38bc677edc73f21f7927a898d089" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_REMOVE_SMARTCARD_KEY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>lock/unlock<sp/>the<sp/>agent<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="agent_8h_1a16c17bfb507585b89802c6b3f7c3afea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_LOCK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="agent_8h_1a324891c1f127387ceccb44f5d5306a8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_UNLOCK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>add<sp/>key<sp/>with<sp/>constraints<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="agent_8h_1ab9f6a1bb4b46de2a935c73ee8f21a3a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_ADD_RSA_ID_CONSTRAINED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="agent_8h_1a0022eeb848b1f9d7f0b244e2f1113925" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENTC_ADD_ID_CONSTRAINED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="agent_8h_1a81266f042e73c92d6eb4f5d6c6005b76" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENTC_ADD_SMARTCARD_KEY_CONSTRAINED<sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="agent_8h_1ab07ee94d5b881230d43b85fb602602bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_CONSTRAIN_LIFETIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="agent_8h_1a0a4cda7909df3d61af6c1eab78af3070" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_CONSTRAIN_CONFIRM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>extended<sp/>failure<sp/>messages<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="agent_8h_1a930c836ddc222a0e63bd8599878d79dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH2_AGENT_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>additional<sp/>error<sp/>code<sp/>for<sp/>ssh.com&apos;s<sp/>ssh-agent2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="agent_8h_1a60d96c957e8e208c25d8e85cbe55d63b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_COM_AGENT2_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>102</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="agent_8h_1ae9bfd82b84f0840171144f73f5eb5c32" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_OLD_SIGNATURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Signature<sp/>flags<sp/>from<sp/>draft-miller-ssh-agent-02<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="agent_8h_1a2106b131e9fc3de7c286d2dec572a39f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_RSA_SHA2_256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="agent_8h_1ae0fe78b60b75f0f6e7bfbd6d4686a54b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_AGENT_RSA_SHA2_512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="structssh__agent__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__agent__struct" kindref="compound">ssh_agent_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="74" refid="structssh__agent__struct_1a24bb4e9bb9fcfc979ec423fbdd97228e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref><sp/>*<ref refid="structssh__agent__struct_1a24bb4e9bb9fcfc979ec423fbdd97228e" kindref="member">sock</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structssh__agent__struct_1a1ebac770252eecbe90f15e8065fdcb4b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/><ref refid="structssh__agent__struct_1a1ebac770252eecbe90f15e8065fdcb4b" kindref="member">ident</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structssh__agent__struct_1aae9f1c309666d4db4eadb486fb9b61e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structssh__agent__struct_1aae9f1c309666d4db4eadb486fb9b61e8" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="77" refid="structssh__agent__struct_1ae4b83c7ceb91db8899a90727bf3b80aa" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/><ref refid="structssh__agent__struct_1ae4b83c7ceb91db8899a90727bf3b80aa" kindref="member">channel</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>agent.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__agent__struct" kindref="compound">ssh_agent_struct</ref><sp/>*<ref refid="agent_8h_1adc12d57484ac2d7f4d4c7a379fe04382" kindref="member">ssh_agent_new</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref><sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="agent_8h_1a2990b7f52fca9ee1dbebb306f28dc734" kindref="member">ssh_agent_close</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__agent__struct" kindref="compound">ssh_agent_struct</ref><sp/>*agent);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="agent_8h_1a688156b0951d126f1a2504feb010c7c0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="agent_8h_1a688156b0951d126f1a2504feb010c7c0" kindref="member">ssh_agent_free</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__agent__struct" kindref="compound">ssh_agent_struct</ref><sp/>*agent);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="agent_8h_1a8ecb166e690f4b0bf35af42184f28407" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="agent_8h_1a8ecb166e690f4b0bf35af42184f28407" kindref="member">ssh_agent_is_running</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref><sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">uint32_t<sp/><ref refid="agent_8h_1a4081a49ab8059fed3287f4977c53af0f" kindref="member">ssh_agent_get_ident_count</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref><sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="agent_8h_1a730a3c31e6bef0b7f88f0061dc5deb3f" kindref="member">ssh_agent_get_next_ident</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref><sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**comment);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="agent_8h_1a470bb8d667532292562a8567cbd708de" kindref="member">ssh_agent_get_first_ident</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session_struct</ref><sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**comment);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/><ref refid="agent_8h_1ac53a1b1236f14bba793156f30686570d" kindref="member">ssh_agent_sign_data</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref><sp/>*data);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__AGENT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/agent.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo Automatizado</title>
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <section class="section-navbar">
+        <div class="shut-icon">
+            <img src="{{ url_for('static', filename='assets/shut-icon.png') }}" alt="">
+        </div>
+        <nav>
+            <p id="section-inputs-button" class="nav-button">
+                <img src="{{ url_for('static', filename='assets/input-icon.png') }}" alt="">
+                <span>Realizar Teste</span>
+            </p>
+            <p id="section-table-button" class="nav-button">
+                <img src="{{ url_for('static', filename='assets/dashboard-icon.png') }}" alt="">
+                <span>Tabela</span>
+            </p>
+        </nav>
+    </section>
+
+    <!-- Inputs Section -->
+    <section id="section-inputs" class="section-inputs" style="display: none;">
+        <div class="main-title">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='assets/main-logo.png') }}" alt="Main Logo">
+            </a>
+        </div>
+
+        <div class="title-pattern">
+            <h1>Realizar Testes</h1>
+        </div>
+        <!-- Form -->
+        <form action="/" method="post">
+            <label for="repositoryUrl">URL do Repositório:</label><br>
+            <input type="text" id="repositoryUrl" name="repositoryUrl" required><br><br>
+            <label for="sysFolder">Nome da Pasta do Sistema:</label><br>
+            <input type="text" id="sysFolder" name="sysFolder" required><br><br>
+            <label for="testFolder">Nome da Pasta de Testes:</label><br>
+            <input type="text" id="testFolder" name="testFolder" required><br><br>
+            <label for="nCommit">SHA do Commit:</label><br>
+            <input type="text" id="nCommit" name="nCommit" required><br><br>
+            <input type="submit" value="Buscar">
+        </form>
+        <!-- Message Display -->
+        {% if message %}
+        <div id="message" class="message {% if message.startswith('Erro') %}error{% else %}success{% endif %}">
+            {{ message|safe }}
+        </div>
+        {% endif %}
+    </section>
+
+    <!-- Table Section -->
+    <section id="section-table" class="section-table" style="width: 100%;">
+        <div class="main-title">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='assets/main-logo.png') }}" alt="Main Logo">
+            </a>
+        </div>
+
+        <div class="title-pattern">
+            <h1>Tabelas</h1>
+        </div>
+
+        <div class="table-input-search">
+            <input type="text" placeholder="Pesquisar" id="searchInput">
+        </div>
+
+        <div class="div-select-tables">
+            <select class="select-tables" onchange="changeTable()">
+                <option value="MergeFeatureLines" {% if table_option == 'MergeFeatureLines' %}selected{% endif %}>MergeFeatureLines</option>
+                <option value="MineTestLines" {% if table_option == 'MineTestLines' %}selected{% endif %}>MineTestLines</option>
+            </select>
+        </div>
+
+        <!-- Gráficos Section -->
+        <section id="section-graficos" class="section-graficos">
+            <div class="select-column">
+                <select id="columnSelect" onchange="updateCharts()">
+                    <option value="TestFile">TestFile</option>
+                    <option value="TestCase">TestCase</option>
+                    <option value="TargetFile">TargetFile</option>
+                    <option value="TargetFunction">TargetFunction</option>
+                </select>
+            </div>
+
+            <div id="chartContainer">
+                <div id="barChartContainer">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div id="lineChartContainer">
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div id="pieChartContainer">
+                    <canvas id="pieChart"></canvas>
+                    <ul id="legend" class="legend-container"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-minetestlines" class="section-minetestlines" style="display: none;">
+            <div class="select-column-minetestlines select-column">
+                <select id="columnSelectMineTestLines" onchange="updateMineTestCharts()">
+                    <option value="TestFile">TestFile</option>
+                    <option value="TestCase">TestCase</option>
+                    <option value="TargetFile">TargetFile</option>
+                    <option value="TargetFunction">TargetFunction</option>
+                </select>
+            </div>
+
+            <div id="chartContainerMineTestLines">
+                <div id="barChartContainerMineTest">
+                    <canvas id="barChartMineTest"></canvas>
+                </div>
+                <div id="lineChartContainerMineTest">
+                    <canvas id="lineChartMineTest"></canvas>
+                </div>
+                <div id="pieChartContainerMineTest">
+                    <canvas id="pieChartMineTest"></canvas>
+                    <ul id="legendMineTest" class="legend-container"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Container -->
+        <div class="table-container" id="table-container">
+            {% if tabela_html %}
+            {{ tabela_html|safe }}
+            {% else %}
+            <p class="error">Nenhuma tabela disponível.</p>
+            {% endif %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination-container">
+            <!-- The pagination buttons will be dynamically inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/table.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pages.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+</body>
+</html>

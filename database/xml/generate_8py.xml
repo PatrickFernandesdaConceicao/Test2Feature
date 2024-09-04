@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="generate_8py" kind="file" language="Python">
+    <compoundname>generate.py</compoundname>
+    <innernamespace refid="namespacegenerate">generate</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string generate.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/generate.py" line="3" column="1" bodyfile="libssh-mirror/tests/generate.py" bodystart="3" bodyend="-1"/>
+        <referencedby refid="curve25519__ref_8c_1a632ddf968f189e43034312b67c0ddce9" compoundref="curve25519__ref_8c" startline="17" endline="24">add</referencedby>
+        <referencedby refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" compoundref="ge25519_8c" startline="127" endline="145">add_p1p1</referencedby>
+        <referencedby refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" compoundref="ge25519_8c" startline="148" endline="164">dbl_p1p1</referencedby>
+        <referencedby refid="fe25519_8c_1a6b0587172df7e0c85432d3e71bea3a9d" compoundref="fe25519_8c" startline="14" endline="20">equal</referencedby>
+        <referencedby refid="curve25519__ref_8c_1ad08a0cb116d5133fdb813c83b884d67f" compoundref="curve25519__ref_8c" startline="56" endline="66">freeze</referencedby>
+        <referencedby refid="fe25519_8c_1a503739da547daca95084f92bece89d06" compoundref="fe25519_8c" startline="22" endline="31">ge</referencedby>
+        <referencedby refid="ge25519_8c_1a27bbd9c4c5f968bf6b2fa9ae8698d6a7" compoundref="ge25519_8c" startline="104" endline="125">ge25519_mixadd2</referencedby>
+        <referencedby refid="sc25519_8c_1a5c294bce7dcb3f9a60bff0851d7a9172" compoundref="sc25519_8c" startline="28" endline="36">lt</referencedby>
+        <referencedby refid="curve25519__ref_8c_1a0e278dc68e20c984208be2688d0d4165" compoundref="curve25519__ref_8c" startline="68" endline="81">mult</referencedby>
+        <referencedby refid="curve25519__ref_8c_1a9034855396bf7bd0019343b5e0de43b1" compoundref="curve25519__ref_8c" startline="83" endline="94">mult121665</referencedby>
+        <referencedby refid="pkd__daemon_8c_1a69029cade6d389940e081066d842f213" compoundref="pkd__daemon_8c" startline="481" endline="543">pkd_main</referencedby>
+        <referencedby refid="curve25519__ref_8c_1a7471add6b1c020d4b0723d75f6cfb163" compoundref="curve25519__ref_8c" startline="96" endline="114">square</referencedby>
+        <referencedby refid="curve25519__ref_8c_1a09a395b398c3655ed92bd8552713aa70" compoundref="curve25519__ref_8c" startline="40" endline="50">squeeze</referencedby>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+        <referencedby refid="group__libssh__misc_1gaf3cfcc97538c099a8f3d2a8b9ac8c258" compoundref="misc_8c" startline="1435" endline="1458">ssh_match_group</referencedby>
+        <referencedby refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" compoundref="curve25519__ref_8c" startline="26" endline="38">sub</referencedby>
+        <referencedby refid="fe25519_8c_1acabe8dcb967f15f5980ce40506a2697a" compoundref="fe25519_8c" startline="33" endline="36">times19</referencedby>
+        <referencedby refid="fe25519_8c_1a40b3af8e026df09b9bb2c28cc40e7f18" compoundref="fe25519_8c" startline="38" endline="41">times38</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacegenerate" refkind="compound"><highlight class="comment">#!/usr/bin/python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="3" refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" refkind="member"><highlight class="normal">a=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>xrange(4096):</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>a+=chr(i<sp/>%<sp/>256);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.write(1,a)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(0)</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/tests/generate.py"/>
+  </compounddef>
+</doxygen>

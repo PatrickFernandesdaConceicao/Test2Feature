@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pkd__util_8h" kind="file" language="C++">
+    <compoundname>pkd_util.h</compoundname>
+    <includedby refid="pkd__hello_8c" local="yes">libssh-mirror/tests/pkd/pkd_hello.c</includedby>
+    <includedby refid="pkd__keyutil_8c" local="yes">libssh-mirror/tests/pkd/pkd_keyutil.c</includedby>
+    <includedby refid="pkd__util_8c" local="yes">libssh-mirror/tests/pkd/pkd_util.c</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>libssh-mirror/tests/pkd/pkd_util.c</label>
+        <link refid="pkd__util_8c"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/tests/pkd/pkd_util.h</label>
+        <link refid="pkd__util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/tests/pkd/pkd_keyutil.c</label>
+        <link refid="pkd__keyutil_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pkd__util_8h_1acf65e484ea127f4b225184a90bb678d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int system_checked</definition>
+        <argsstring>(const char *cmd)</argsstring>
+        <name>system_checked</name>
+        <param>
+          <type>const char *</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+<para>runs system(3); exits if that is interrupted with SIGINT/QUIT </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 upon success, non-zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_util.h" line="10" column="5" bodyfile="libssh-mirror/tests/pkd/pkd_util.c" bodystart="22" bodyend="35" declfile="libssh-mirror/tests/pkd/pkd_util.h" declline="10" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" compoundref="pkd__util_8c" startline="37" endline="41">bin_exists</referencedby>
+        <referencedby refid="pkd__hello_8c_1a7222dcdba7d5c75f19ab7f7a01f4c3b5" compoundref="pkd__hello_8c" startline="961" endline="965">pkd_rmfiles</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a6d0bc762949147235629d6284381f36b" compoundref="pkd__keyutil_8c" startline="202" endline="209">setup_dropbear_client_rsa_key</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a3ae4d39c9a615e4437e8813bf9d8b087" compoundref="pkd__keyutil_8c" startline="54" endline="72">setup_ecdsa_keys</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a0ef31e42db803b76cf938cf5004d796b" compoundref="pkd__keyutil_8c" startline="34" endline="41">setup_ed25519_key</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a5fea363e4e2b008230b5c1f1b2c2ab45" compoundref="pkd__keyutil_8c" startline="94" endline="185">setup_openssh_client_keys</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a8771b1145156761f8c375cb182205b4a" compoundref="pkd__keyutil_8c" startline="25" endline="32">setup_rsa_key</referencedby>
+        <referencedby refid="pkd__hello_8c_1a309149b5cc3377b93dcb9d7557d42340" compoundref="pkd__hello_8c" startline="576" endline="595">torture_pkd_runtest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pkd__util_8h_1a6cd34e17c578b6d8588ff89683fd4770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int is_openssh_client_enabled</definition>
+        <argsstring>(void)</argsstring>
+        <name>is_openssh_client_enabled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_util.h" line="13" column="5" bodyfile="libssh-mirror/tests/pkd/pkd_util.c" bodystart="105" bodyend="109" declfile="libssh-mirror/tests/pkd/pkd_util.h" declline="13" declcolumn="5"/>
+        <references refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" compoundref="pkd__util_8c" startline="37" endline="41">bin_exists</references>
+        <references refid="pkd__util_8c_1a6ab56c35a836c6015f70ee35a59b3b66" compoundref="pkd__util_8c" startline="43" endline="103">is_openssh_client_new_enough</references>
+        <references refid="pkd__client_8h_1a5b07caeb6fb0f0b8c36e2951431f3157" compoundref="pkd__client_8h" startline="16">OPENSSH_BINARY</references>
+        <references refid="pkd__client_8h_1a517638571aacce544defbd9c2632f7a0" compoundref="pkd__client_8h" startline="17">OPENSSH_KEYGEN</references>
+        <referencedby refid="pkd__hello_8c_1a5e7c1318bf40ef5dbeda5e1d1b910398" compoundref="pkd__hello_8c" startline="760" endline="924">pkd_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pkd__util_8h_1ab60e11a5644a040e4130e74e6212572e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int is_dropbear_client_enabled</definition>
+        <argsstring>(void)</argsstring>
+        <name>is_dropbear_client_enabled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_util.h" line="14" column="5" bodyfile="libssh-mirror/tests/pkd/pkd_util.c" bodystart="111" bodyend="113" declfile="libssh-mirror/tests/pkd/pkd_util.h" declline="14" declcolumn="5"/>
+        <references refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" compoundref="pkd__util_8c" startline="37" endline="41">bin_exists</references>
+        <references refid="pkd__client_8h_1aa3d1b80969b8e5163470eaa3d586e243" compoundref="pkd__client_8h" startline="64">DROPBEAR_BINARY</references>
+        <references refid="pkd__client_8h_1a2d4973448bae5cfd801f709bc7343b2c" compoundref="pkd__client_8h" startline="65">DROPBEAR_KEYGEN</references>
+        <referencedby refid="pkd__hello_8c_1a5e7c1318bf40ef5dbeda5e1d1b910398" compoundref="pkd__hello_8c" startline="760" endline="924">pkd_run_tests</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>pkd_keyutil.h<sp/>--</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>(c)<sp/>2014<sp/>Jon<sp/>Simons</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__PKD_UTIL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PKD_UTIL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8h_1acf65e484ea127f4b225184a90bb678d3" kindref="member">system_checked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*cmd);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Is<sp/>client<sp/>&apos;X&apos;<sp/>enabled?<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8h_1a6cd34e17c578b6d8588ff89683fd4770" kindref="member">is_openssh_client_enabled</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8h_1ab60e11a5644a040e4130e74e6212572e" kindref="member">is_dropbear_client_enabled</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__PKD_UTIL_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/tests/pkd/pkd_util.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="torture__pki_8c" kind="file" language="C++">
+    <compoundname>torture_pki.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes refid="torture__pki_8h" local="yes">torture_pki.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="12">
+        <label>sys/select.h</label>
+      </node>
+      <node id="6">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17">
+        <label>fcntl.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>netdb.h</label>
+      </node>
+      <node id="11">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="1">
+        <label>tests/torture_pki.c</label>
+        <link refid="torture__pki_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>torture_pki.h</label>
+        <link refid="torture__pki_8h"/>
+      </node>
+      <node id="9">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="torture__pki_8c_1a5d49720f3282d89456bd689195b5a6dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* torture_pki_read_file</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>torture_pki_read_file</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/torture_pki.c" line="22" column="6" bodyfile="tests/torture_pki.c" bodystart="22" bodyend="60"/>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="torture__threads__pki__rsa_8c_1a772735aa4bc0d085025c43ec601e131f" compoundref="torture__threads__pki__rsa_8c" startline="255" endline="285">thread_pki_rsa_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a363d69aeff024124f249836eba17de2a" compoundref="torture__pki__ecdsa_8c" startline="221" endline="242">torture_pki_ecdsa_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a66d1fea9a02a99198d49a0bab8137bb2" compoundref="torture__pki__ecdsa_8c" startline="244" endline="273">torture_pki_ecdsa_import_privkey_base64_comment</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a287d309a6e9d25d2c57ee4fd7cb3d83c" compoundref="torture__pki__ecdsa_8c" startline="275" endline="304">torture_pki_ecdsa_import_privkey_base64_whitespace</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1af0543a9b7a50843b7d949e810d4f8efe" compoundref="torture__pki__ecdsa_8c" startline="353" endline="393">torture_pki_ecdsa_publickey_base64</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a678bb5fc3cb7cdb348b28871b4235fee" compoundref="torture__pki__ecdsa_8c" startline="307" endline="331">torture_pki_ecdsa_publickey_from_privatekey</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3fb35e2d5a1771b2634293d9d98ba2b8" compoundref="torture__pki__ed25519_8c" startline="121" endline="150">torture_pki_ed25519_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3ec02b604003a154dcd2f5f9ca3510f5" compoundref="torture__pki__ed25519_8c" startline="152" endline="189">torture_pki_ed25519_import_privkey_base64_comment</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1acee4117de89206b23a3accf8f1fe0f2f" compoundref="torture__pki__ed25519_8c" startline="191" endline="228">torture_pki_ed25519_import_privkey_base64_whitespace</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1a0d1a8451a47db3e614c4bc227919b7df" compoundref="torture__pki__rsa_8c" startline="186" endline="214">torture_pki_rsa_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1a2c3889e8423e999f51c8ff8aa0a4122a" compoundref="torture__pki__rsa_8c" startline="216" endline="252">torture_pki_rsa_import_privkey_base64_comment</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1a7b62bc1a850c745fbd59f75b4f934a72" compoundref="torture__pki__rsa_8c" startline="254" endline="290">torture_pki_rsa_import_privkey_base64_whitespace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__pki_8c_1acd426033c68a568e2cc262fa84b7abe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int torture_read_one_line</definition>
+        <argsstring>(const char *filename, char *buffer, size_t len)</argsstring>
+        <name>torture_read_one_line</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/torture_pki.c" line="62" column="5" bodyfile="tests/torture_pki.c" bodystart="62" bodyend="82"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <referencedby refid="torture__pki__dsa_8c_1a7a8dc756ca36c97ff595b7920e78141a" compoundref="torture__pki__dsa_8c" startline="699" endline="739">torture_pki_dsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a22ba49e4dec6d610c2e484ae909fb205" compoundref="torture__pki__ecdsa_8c" startline="395" endline="438">torture_pki_ecdsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ecdsa__uri_8c_1a009cf2bdaeaeb2d0645e7ef26aa0f68a" compoundref="torture__pki__ecdsa__uri_8c" startline="159" endline="217">torture_pki_ecdsa_publickey_from_privatekey_uri</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3cd812d589795ecc52564cbfb198c12f" compoundref="torture__pki__ed25519_8c" startline="376" endline="415">torture_pki_ed25519_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1af09fa6043d2157e4244c66bd9e964cbf" compoundref="torture__pki__rsa_8c" startline="443" endline="482">torture_pki_rsa_generate_pubkey_from_privkey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__pki_8c_1a0afdc77a108f75aaa1e2afc38f584149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t torture_pubkey_len</definition>
+        <argsstring>(const char *pubkey)</argsstring>
+        <name>torture_pubkey_len</name>
+        <param>
+          <type>const char *</type>
+          <declname>pubkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/torture_pki.c" line="89" column="8" bodyfile="tests/torture_pki.c" bodystart="89" bodyend="102"/>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <referencedby refid="torture__pki__dsa_8c_1a7a8dc756ca36c97ff595b7920e78141a" compoundref="torture__pki__dsa_8c" startline="699" endline="739">torture_pki_dsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a22ba49e4dec6d610c2e484ae909fb205" compoundref="torture__pki__ecdsa_8c" startline="395" endline="438">torture_pki_ecdsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3cd812d589795ecc52564cbfb198c12f" compoundref="torture__pki__ed25519_8c" startline="376" endline="415">torture_pki_ed25519_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1af09fa6043d2157e4244c66bd9e964cbf" compoundref="torture__pki__rsa_8c" startline="443" endline="482">torture_pki_rsa_generate_pubkey_from_privkey</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_UNISTD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(defined<sp/>_WIN32)<sp/>||<sp/>(defined<sp/>_WIN64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>read<sp/>_read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>open<sp/>_open</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>write<sp/>_write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>close<sp/>_close</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="torture__pki_8h" kindref="compound">torture_pki.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="torture__pki_8c_1a5d49720f3282d89456bd689195b5a6dc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture__pki_8c_1a5d49720f3282d89456bd689195b5a6dc" kindref="member">torture_pki_read_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/>sb;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename<sp/>==<sp/>NULL<sp/>||<sp/>filename[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>fd<sp/>=<sp/>open(filename,<sp/>O_RDONLY);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fd<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>fstat(fd,<sp/>&amp;sb);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(fd);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref><sp/>=<sp/>malloc(sb.st_size<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(fd);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>size<sp/>=<sp/>read(fd,<sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/>sb.st_size);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>close(fd);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>sb.st_size)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>[size]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="torture__pki_8c_1acd426033c68a568e2cc262fa84b7abe2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__pki_8c_1acd426033c68a568e2cc262fa84b7abe2" kindref="member">torture_read_one_line</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fp;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nmemb;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>fp<sp/>=<sp/>fopen(filename,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fp<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>nmemb<sp/>=<sp/>fread(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>len<sp/>-<sp/>2,<sp/>1,<sp/>fp);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nmemb<sp/>!=<sp/>0<sp/>||<sp/>ferror(fp))<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(fp);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>[len<sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fp);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="torture__pki_8c_1a0afdc77a108f75aaa1e2afc38f584149" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="torture__pki_8c_1a0afdc77a108f75aaa1e2afc38f584149" kindref="member">torture_pubkey_len</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/>strchr(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref>,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/>strchr(ptr<sp/>+<sp/>1,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr<sp/>-<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/torture_pki.c"/>
+  </compounddef>
+</doxygen>

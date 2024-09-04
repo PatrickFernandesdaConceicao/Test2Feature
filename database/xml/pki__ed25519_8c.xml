@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pki__ed25519_8c" kind="file" language="C++">
+    <compoundname>pki_ed25519.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="pki_8h" local="yes">libssh/pki.h</includes>
+    <includes refid="pki__priv_8h" local="yes">libssh/pki_priv.h</includes>
+    <includes refid="ed25519_8h" local="yes">libssh/ed25519.h</includes>
+    <includes refid="buffer_8h" local="yes">libssh/buffer.h</includes>
+    <incdepgraph>
+      <node id="17">
+        <label>stdbool.h</label>
+      </node>
+      <node id="29">
+        <label>stdarg.h</label>
+      </node>
+      <node id="12">
+        <label>sys/select.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="22">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libssh/buffer.h</label>
+        <link refid="buffer_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>netdb.h</label>
+      </node>
+      <node id="23">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sys/types.h</label>
+      </node>
+      <node id="20">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="16">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh/ed25519.h</label>
+        <link refid="ed25519_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="27">
+        <label>libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pki__ed25519_8c_1a08830f907d6f7ca2a577c51cab017cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pki_key_generate_ed25519</definition>
+        <argsstring>(ssh_key key)</argsstring>
+        <name>pki_key_generate_ed25519</name>
+        <param>
+          <type><ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/pki_ed25519.c" line="31" column="5" bodyfile="libssh-mirror/src/pki_ed25519.c" bodystart="31" bodyend="57"/>
+        <references refid="ed25519_8h_1ae5330fec885b0158d0d8317ddd130790">crypto_sign_ed25519_keypair</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="group__libssh__pki_1gae038fa1b34f9427c7ba84082a1a20bad" compoundref="pki_8c" startline="1898" endline="1978">ssh_pki_generate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pki__ed25519_8c_1a456b31fe92a5fc2fabcd8a5ec2c87e3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pki_ed25519_sign</definition>
+        <argsstring>(const ssh_key privkey, ssh_signature sig, const unsigned char *hash, size_t hlen)</argsstring>
+        <name>pki_ed25519_sign</name>
+        <param>
+          <type>const <ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+          <declname>privkey</declname>
+        </param>
+        <param>
+          <type><ref refid="pki_8h_1af2cbee5e6f291ad4fd495e486110cec8" kindref="member">ssh_signature</ref></type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/pki_ed25519.c" line="59" column="5" bodyfile="libssh-mirror/src/pki_ed25519.c" bodystart="59" bodyend="99"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="ed25519_8h_1ab98e74bb8d20c0ef0ea09ac49ba53686">crypto_sign_ed25519</references>
+        <references refid="structssh__signature__struct_1a0db76bdace1284059dd5c5ce33b6c767" compoundref="pki_8h" startline="102">ssh_signature_struct::ed25519_sig</references>
+        <references refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" compoundref="ed25519_8h" startline="34">ED25519_SIG_LEN</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a5d18fd02a76effa0a15b1decb554cc12" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="96">privkey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="pki__priv_8h_1a5d01210942950f8d6bb14c242c7f8478" compoundref="pki__crypto_8c" startline="2495" endline="2526">pki_do_sign_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pki__ed25519_8c_1abb580d92eaeac82f200b332bb09043dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pki_ed25519_verify</definition>
+        <argsstring>(const ssh_key pubkey, ssh_signature sig, const unsigned char *hash, size_t hlen)</argsstring>
+        <name>pki_ed25519_verify</name>
+        <param>
+          <type>const <ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+          <declname>pubkey</declname>
+        </param>
+        <param>
+          <type><ref refid="pki_8h_1af2cbee5e6f291ad4fd495e486110cec8" kindref="member">ssh_signature</ref></type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/pki_ed25519.c" line="101" column="5" bodyfile="libssh-mirror/src/pki_ed25519.c" bodystart="101" bodyend="149"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="ed25519_8h_1a107219495257f944892f54d7fe0212f0">crypto_sign_ed25519_open</references>
+        <references refid="structssh__signature__struct_1a0db76bdace1284059dd5c5ce33b6c767" compoundref="pki_8h" startline="102">ssh_signature_struct::ed25519_sig</references>
+        <references refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" compoundref="ed25519_8h" startline="34">ED25519_SIG_LEN</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="pki__priv_8h_1a2ceb3135ff3591acd8db9f48fcbccec3" compoundref="pki__crypto_8c" startline="2294" endline="2407">pki_verify_data_signature</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>pki_ed25519<sp/>.c<sp/>-<sp/>PKI<sp/>infrastructure<sp/>using<sp/>ed25519</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2014<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pki_8h" kindref="compound">libssh/pki.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pki__priv_8h" kindref="compound">libssh/pki_priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ed25519_8h" kindref="compound">libssh/ed25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_8h" kindref="compound">libssh/buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="pki__priv_8h_1a08830f907d6f7ca2a577c51cab017cba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pki__ed25519_8c_1a08830f907d6f7ca2a577c51cab017cba" kindref="member">pki_key_generate_ed25519</ref>(<ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_privkey<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(<ref refid="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" kindref="member">ed25519_privkey</ref>));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_privkey<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_pubkey<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(<ref refid="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" kindref="member">ed25519_pubkey</ref>));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_pubkey<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="ed25519_8h_1ae5330fec885b0158d0d8317ddd130790" kindref="member">crypto_sign_ed25519_keypair</ref>(*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_pubkey,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_privkey);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_privkey);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>-&gt;ed25519_pubkey);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="pki__priv_8h_1a456b31fe92a5fc2fabcd8a5ec2c87e3c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pki__ed25519_8c_1a456b31fe92a5fc2fabcd8a5ec2c87e3c" kindref="member">pki_ed25519_sign</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a5d18fd02a76effa0a15b1decb554cc12" kindref="member">privkey</ref>,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structssh__signature__struct" kindref="compound">ssh_signature</ref><sp/>sig,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hlen)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>dlen<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>=<sp/>malloc(hlen<sp/>+<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="ed25519_8h_1ab98e74bb8d20c0ef0ea09ac49ba53686" kindref="member">crypto_sign_ed25519</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;dlen,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hash,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hlen,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a5d18fd02a76effa0a15b1decb554cc12" kindref="member">privkey</ref>-&gt;ed25519_privkey);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>shouldn&apos;t<sp/>happen<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dlen<sp/>-<sp/>hlen<sp/>!=<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>sig-&gt;<ref refid="structssh__signature__struct_1a0db76bdace1284059dd5c5ce33b6c767" kindref="member">ed25519_sig</ref><sp/>=<sp/>malloc(<ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sig-&gt;<ref refid="structssh__signature__struct_1a0db76bdace1284059dd5c5ce33b6c767" kindref="member">ed25519_sig</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(sig-&gt;<ref refid="structssh__signature__struct_1a0db76bdace1284059dd5c5ce33b6c767" kindref="member">ed25519_sig</ref>,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="pki__priv_8h_1abb580d92eaeac82f200b332bb09043dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pki__ed25519_8c_1abb580d92eaeac82f200b332bb09043dd" kindref="member">pki_ed25519_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref>,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structssh__signature__struct" kindref="compound">ssh_signature</ref><sp/>sig,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hlen)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>mlen<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*buffer2;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref><sp/>==<sp/>NULL<sp/>||<sp/>sig<sp/>==<sp/>NULL<sp/>||</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hash<sp/>==<sp/>NULL<sp/>||<sp/>sig-&gt;<ref refid="structssh__signature__struct_1a0db76bdace1284059dd5c5ce33b6c767" kindref="member">ed25519_sig</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>=<sp/>malloc(hlen<sp/>+<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer2<sp/>=<sp/>malloc(hlen<sp/>+<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buffer2<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>sig-&gt;<ref refid="structssh__signature__struct_1a0db76bdace1284059dd5c5ce33b6c767" kindref="member">ed25519_sig</ref>,<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>+<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>,<sp/>hash,<sp/>hlen);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="ed25519_8h_1a107219495257f944892f54d7fe0212f0" kindref="member">crypto_sign_ed25519_open</ref>(buffer2,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;mlen,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hlen<sp/>+<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref>-&gt;ed25519_pubkey);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" kindref="member">explicit_bzero</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>hlen<sp/>+<sp/><ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" kindref="member">explicit_bzero</ref>(buffer2,<sp/>hlen);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(buffer2);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(buffer2);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/pki_ed25519.c"/>
+  </compounddef>
+</doxygen>

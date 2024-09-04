@@ -1,0 +1,879 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="benchmarks_8c" kind="file" language="C++">
+    <compoundname>benchmarks.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="benchmarks_8h" local="yes">benchmarks.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>sys/select.h</label>
+      </node>
+      <node id="12">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="13">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>netdb.h</label>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/tests/benchmarks/benchmarks.c</label>
+        <link refid="benchmarks_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>benchmarks.h</label>
+        <link refid="benchmarks_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structbenchmark" kindref="compound">benchmark</ref></type>
+        <definition>struct benchmark benchmarks[]</definition>
+        <argsstring>[]</argsstring>
+        <name>benchmarks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="1" column="0" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="30" bodyend="-1"/>
+        <referencedby refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" compoundref="benchmarks_8c" startline="317" endline="345">do_benchmarks</referencedby>
+        <referencedby refid="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="benchmarks_8c" startline="349" endline="399">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="347" column="6" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="347" bodyend="-1"/>
+        <referencedby refid="group__libssh__buffer_1ga20c9686b0f64ec4e20811c8dc19b287a" compoundref="buffer_8c" startline="1047" endline="1072">_ssh_buffer_pack</referencedby>
+        <referencedby refid="group__libssh__buffer_1gaa610051755070ecc05792cfb590e10c4" compoundref="buffer_8c" startline="1345" endline="1357">_ssh_buffer_unpack</referencedby>
+        <referencedby refid="group__libssh__log_1gac8bd5378e8af9c6af0ebc198ae6dd2ed" compoundref="log_8c" startline="117" endline="130">_ssh_log</referencedby>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+        <referencedby refid="priv_8h_1aa9b1bdd62db42c91b1b203f6850adadf" compoundref="base64_8c" startline="60" endline="173">base64_to_bin</referencedby>
+        <referencedby refid="ssh__client_8c_1a8b8ff3289e057f1b391476c5c4b71178" compoundref="ssh__client_8c" startline="290" endline="316">batch_shell</referencedby>
+        <referencedby refid="bench__sftp_8c_1a5d05a4e9603ff04353b637065dacf28c" compoundref="bench__sftp_8c" startline="159" endline="239">benchmarks_async_sftp_down</referencedby>
+        <referencedby refid="bench__raw_8c_1afd64b09e9ae3ce2136328be2cd0bac89" compoundref="bench__raw_8c" startline="227" endline="285">benchmarks_raw_down</referencedby>
+        <referencedby refid="bench__raw_8c_1a070a579a7a62c222e5f28c9e074c0df7" compoundref="bench__raw_8c" startline="107" endline="182">benchmarks_raw_up</referencedby>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="bench__sftp_8c_1aea73fc2575a832d79f09c7b3fa25cac9" compoundref="bench__sftp_8c" startline="97" endline="149">benchmarks_sync_sftp_down</referencedby>
+        <referencedby refid="bench__sftp_8c_1acef09f85489fe47862edb8378a22af82" compoundref="bench__sftp_8c" startline="41" endline="87">benchmarks_sync_sftp_up</referencedby>
+        <referencedby refid="legacy_8h_1a0d2e18ae46c3b5c36a0b6988c9e4d59c" compoundref="legacy_8c" startline="145" endline="147">buffer_free</referencedby>
+        <referencedby refid="legacy_8h_1aef9ac9378dc7bfe3e3c3f7c55e5a98f5" compoundref="legacy_8c" startline="148" endline="150">buffer_get</referencedby>
+        <referencedby refid="legacy_8h_1aa0cd1cfbd77a218c13583c23a11e0d22" compoundref="legacy_8c" startline="151" endline="153">buffer_get_len</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae0e221aeee158e4762f95207c7f31a68" compoundref="buffer_8c" startline="226" endline="247">buffer_shift</referencedby>
+        <referencedby refid="client_8c_1a4c4c9ace93a9791515090ebc197dd736" compoundref="client_8c" startline="96" endline="164">callback_receive_banner</referencedby>
+        <referencedby refid="group__libssh__channel_1gab391f5c978cb1bc8df3ebd061f38e8c5" compoundref="channels_8c" startline="2731" endline="2790">channel_read_buffer</referencedby>
+        <referencedby refid="group__libssh__channel_1gaee35ccabe6998568d138d35f538765d9" compoundref="channels_8c" startline="1698" endline="1780">channel_request</referencedby>
+        <referencedby refid="scp__download_8c_1abf8ad844320270e1c0b49e510c9bb4a0" compoundref="scp__download_8c" startline="61" endline="100">create_files</referencedby>
+        <referencedby refid="test__tunnel_8c_1acbd4f6c4ecc68d1c4cc45223741be81c" compoundref="test__tunnel_8c" startline="10" endline="63">do_connect</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="classssh_1_1Session_1a00ef8e842d49d238122cbdd3dece60a1" compoundref="libsshpp_8hpp" startline="371" endline="379">ssh::Session::log</referencedby>
+        <referencedby refid="exec_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="exec_8c" startline="7" endline="66">main</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="pki__crypto_8c_1a817708f53a64f50b665d647b6d9745c2" compoundref="pki__crypto_8c" startline="1392" endline="1471">pki_dsa_signature_to_blob</referencedby>
+        <referencedby refid="pki__priv_8h_1aa3663627890dacf870e2b9874c51e712" compoundref="pki__ed25519__common_8c" startline="189" endline="203">pki_ed25519_public_key_to_blob</referencedby>
+        <referencedby refid="pki__priv_8h_1a456b31fe92a5fc2fabcd8a5ec2c87e3c" compoundref="pki__ed25519_8c" startline="59" endline="99">pki_ed25519_sign</referencedby>
+        <referencedby refid="pki__priv_8h_1abb580d92eaeac82f200b332bb09043dd" compoundref="pki__ed25519_8c" startline="101" endline="149">pki_ed25519_verify</referencedby>
+        <referencedby refid="group__libssh__pki_1ga129b5d5a3dcdb907c9ccedd838e15caf" compoundref="pki_8c" startline="1460" endline="1546">pki_import_cert_buffer</referencedby>
+        <referencedby refid="group__libssh__pki_1ga12fb8e3141837c332165568530a1d29a" compoundref="pki_8c" startline="1100" endline="1278">pki_import_privkey_buffer</referencedby>
+        <referencedby refid="group__libssh__pki_1ga47e989e47acf6d577c805910e688a21f" compoundref="pki_8c" startline="1280" endline="1458">pki_import_pubkey_buffer</referencedby>
+        <referencedby refid="group__libssh__pki_1gae31fc9d1d7202ca99b444d6b8159cabb" compoundref="pki__container__openssh_8c" startline="404" endline="426">pki_openssh_export_privkey_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1gae8b8a710eea5b5c36c9e2416cc0734d7" compoundref="pki__container__openssh_8c" startline="101" endline="222">pki_private_key_decrypt</referencedby>
+        <referencedby refid="pki__priv_8h_1aa2d53615fe67402faa649f5cb6160e91" compoundref="pki__crypto_8c" startline="1182" endline="1390">pki_publickey_to_blob</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" compoundref="buffer_8c" startline="181" endline="220">realloc_buffer</referencedby>
+        <referencedby refid="sshnetcat_8c_1a38ba4d370f756491ce0d55e0c320d08b" compoundref="sshnetcat_8c" startline="77" endline="175">select_loop</referencedby>
+        <referencedby refid="torture__buffer_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__buffer_8c" startline="11" endline="22">setup</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga73c21faa0fedad3e83f2da8b7a0fb3c5" compoundref="buffer_8c" startline="565" endline="578">ssh_buffer_add_buffer</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gac880d4f0dad2902ec586cfac4809a25c" compoundref="buffer_8c" startline="403" endline="417">ssh_buffer_add_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae368cb8086f35d53bb18c586f9a28625" compoundref="buffer_8c" startline="453" endline="463">ssh_buffer_add_u16</referencedby>
+        <referencedby refid="group__libssh__buffer_1gada0ffde58ce6834889fe7a94bd038458" compoundref="buffer_8c" startline="430" endline="440">ssh_buffer_add_u32</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae6449fcf12f189067f6587888c5b1022" compoundref="buffer_8c" startline="476" endline="486">ssh_buffer_add_u64</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6e7a241701add756f1093aa6fdc08db" compoundref="buffer_8c" startline="499" endline="509">ssh_buffer_add_u8</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad4991b9eadf8b81401c032bf38ab7094" compoundref="buffer_8c" startline="366" endline="390">ssh_buffer_allocate</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" compoundref="buffer_8c" startline="335" endline="352">ssh_buffer_allocate_size</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga608cf73226454f21e8b2f9f1d838c5fc" compoundref="buffer_8c" startline="149" endline="166">ssh_buffer_free</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3577f5f4102e8010b281837b7812f261" compoundref="buffer_8c" startline="589" endline="591">ssh_buffer_get</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad1594908ed57799f4a84066f47c3e7c0" compoundref="buffer_8c" startline="602" endline="605">ssh_buffer_get_len</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3976e75d6d9c08438a3be49164ec64ed" compoundref="buffer_8c" startline="762" endline="792">ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga87e8b550cc80266bcc6484e7287a46e8" compoundref="buffer_8c" startline="715" endline="717">ssh_buffer_get_u32</referencedby>
+        <referencedby refid="group__libssh__buffer_1gaf41a6b3418aeeeebf63dee15c453f1a6" compoundref="buffer_8c" startline="730" endline="732">ssh_buffer_get_u64</referencedby>
+        <referencedby refid="group__libssh__buffer_1gac8b0753ba4dcc4e5b140f48af0485d39" compoundref="buffer_8c" startline="700" endline="702">ssh_buffer_get_u8</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga190a1c9ac2a48d23412ab75f2fd805e6" compoundref="buffer_8c" startline="810" endline="904">ssh_buffer_pack_allocate_va</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga78a03bd2576567c33858754601b2b619" compoundref="buffer_8c" startline="620" endline="635">ssh_buffer_pass_bytes</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga14f9ecddaad320dbc98c7462117be8b0" compoundref="buffer_8c" startline="648" endline="658">ssh_buffer_pass_bytes_end</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga2b52225e65c36ae1f1585f005a454f24" compoundref="buffer_8c" startline="524" endline="551">ssh_buffer_prepend_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad877da63fd8d9a0ee00859bfbacf1eda" compoundref="buffer_8c" startline="259" endline="287">ssh_buffer_reinit</referencedby>
+        <referencedby refid="group__libssh__buffer_1gade0108b17f43b5269b92456a785df126" compoundref="buffer_8c" startline="176" endline="179">ssh_buffer_set_secure</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga49d552059803b03f1c305619cba34e24" compoundref="buffer_8c" startline="743" endline="750">ssh_buffer_validate_length</referencedby>
+        <referencedby refid="group__libssh__channel_1ga3bff751afc5ecb5bbf9d6447e4e5370f" compoundref="channels_8c" startline="2447" endline="2476">ssh_channel_cancel_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1gaf5d55c90f3d98c583df23d21905c1127" compoundref="channels_8c" startline="1880" endline="1907">ssh_channel_change_pty_size</referencedby>
+        <referencedby refid="group__libssh__channel_1ga758cda957227751870c8772df46e5b39" compoundref="channels_8c" startline="2365" endline="2404">ssh_channel_listen_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1ga7aede2f9af4c494ff9e41fc08a4572f1" compoundref="channels_8c" startline="2498" endline="2535">ssh_channel_request_env</referencedby>
+        <referencedby refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" compoundref="channels_8c" startline="2568" endline="2603">ssh_channel_request_exec</referencedby>
+        <referencedby refid="group__libssh__channel_1gabb175414352256e1602286e0ab50886c" compoundref="channels_8c" startline="1798" endline="1847">ssh_channel_request_pty_size</referencedby>
+        <referencedby refid="group__libssh__channel_1gaef198ad0dcf0968aa2a449c8898d985e" compoundref="channels_8c" startline="2684" endline="2709">ssh_channel_request_send_break</referencedby>
+        <referencedby refid="group__libssh__channel_1gaa98315fca818b561970a6950683f4053" compoundref="channels_8c" startline="2638" endline="2666">ssh_channel_request_send_signal</referencedby>
+        <referencedby refid="group__libssh__channel_1ga06024b070f9b2a3d6964b79ae36695b7" compoundref="channels_8c" startline="1941" endline="1976">ssh_channel_request_subsystem</referencedby>
+        <referencedby refid="group__libssh__channel_1gadfa34624c28164bd73453cd04aa64c1f" compoundref="channels_8c" startline="2042" endline="2091">ssh_channel_request_x11</referencedby>
+        <referencedby refid="connector_8c_1a4cc7de304441a1cdb59c3656ad1a1678" compoundref="connector_8c" startline="513" endline="563">ssh_connector_channel_write_wontblock_cb</referencedby>
+        <referencedby refid="connector_8c_1a83806fe46fe887adb695eeca7f35682a" compoundref="connector_8c" startline="243" endline="322">ssh_connector_fd_in_cb</referencedby>
+        <referencedby refid="connector_8c_1ad13c8d29eb297a425c51a53379450dd1" compoundref="connector_8c" startline="327" endline="370">ssh_connector_fd_out_cb</referencedby>
+        <referencedby refid="connector_8c_1a9d10a96cbda381bccc2fee5f2d5904c5" compoundref="connector_8c" startline="713" endline="726">ssh_connector_fd_read</referencedby>
+        <referencedby refid="connector_8c_1a2c034263a1c5bab38564d40cbfc67631" compoundref="connector_8c" startline="734" endline="752">ssh_connector_fd_write</referencedby>
+        <referencedby refid="group__libssh__misc_1gaecdd455fe4f0feb2781ffddf179f38ba" compoundref="misc_8c" startline="283" endline="298">ssh_dir_writeable</referencedby>
+        <referencedby refid="group__libssh__session_1ga16eb5c500a1beaf18821c6ce51b7b965" compoundref="known__hosts_8c" startline="430" endline="493">ssh_dump_knownhost</referencedby>
+        <referencedby refid="group__libssh__session_1ga1be0cba6d1c27a46361d91b84263d382" compoundref="known__hosts_8c" startline="73" endline="130">ssh_get_knownhost_line</referencedby>
+        <referencedby refid="group__libssh__channel_1ga814cf8a82b4098b8994f9029fed572c0" compoundref="channels_8c" startline="2256" endline="2341">ssh_global_request</referencedby>
+        <referencedby refid="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" compoundref="callbacks_8c" startline="34" endline="46">ssh_legacy_log_callback</referencedby>
+        <referencedby refid="group__libssh__log_1ga0bb252b81e0c497fc559c9e4007cf6c5" compoundref="log_8c" startline="134" endline="147">ssh_log</referencedby>
+        <referencedby refid="group__libssh__log_1gacfb35fd4c7d3dafdbbfaa2c255022ddc" compoundref="log_8c" startline="155" endline="169">ssh_log_common</referencedby>
+        <referencedby refid="group__libssh__log_1ga28de9ecb422e9b2ffcd5dcb5b7ec13e1" compoundref="log_8c" startline="97" endline="115">ssh_log_function</referencedby>
+        <referencedby refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" compoundref="misc_8c" startline="467" endline="627">ssh_log_hexdump</referencedby>
+        <referencedby refid="group__libssh__log_1ga04874b7c2777229ef8ec669886ee10bd" compoundref="log_8c" startline="80" endline="95">ssh_log_stderr</referencedby>
+        <referencedby refid="group__libssh__pki_1gac8d7d3fa88b93d8b059b6b5b2f457913" compoundref="pki_8c" startline="1562" endline="1593">ssh_pki_import_pubkey_base64</referencedby>
+        <referencedby refid="group__libssh__pki_1ga942b96ee72b13655952c87efe938e6ee" compoundref="pki_8c" startline="1610" endline="1661">ssh_pki_import_pubkey_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1gabadb73a1db275add212f6b72d059bcfb" compoundref="pki__container__openssh_8c" startline="230" endline="381">ssh_pki_openssh_import</referencedby>
+        <referencedby refid="pki__priv_8h_1a0a1b01b666de3e4f433660761c7658ad" compoundref="pki__container__openssh_8c" startline="534" endline="722">ssh_pki_openssh_privkey_export</referencedby>
+        <referencedby refid="legacy_8h_1aa4de432e122c76302e4190041fee6945" compoundref="legacy_8c" startline="575" endline="641">ssh_publickey_to_file</referencedby>
+        <referencedby refid="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" compoundref="scp_8c" startline="918" endline="944">ssh_scp_accept_request</referencedby>
+        <referencedby refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" compoundref="scp_8c" startline="241" endline="277">ssh_scp_close</referencedby>
+        <referencedby refid="group__libssh__scp_1gad36438c6b1e235d96cec43ca350e9b4f" compoundref="scp_8c" startline="882" endline="907">ssh_scp_deny_request</referencedby>
+        <referencedby refid="group__libssh__scp_1ga2ca698c1e49612c083d9f8a72df52188" compoundref="scp_8c" startline="409" endline="436">ssh_scp_leave_directory</referencedby>
+        <referencedby refid="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" compoundref="scp_8c" startline="770" endline="869">ssh_scp_pull_request</referencedby>
+        <referencedby refid="group__libssh__scp_1gaa584f03d4e3d582ac10a3a19818ec56d" compoundref="scp_8c" startline="320" endline="399">ssh_scp_push_directory</referencedby>
+        <referencedby refid="group__libssh__scp_1ga50b701b9c8923011d4fc6489c9c7eaae" compoundref="scp_8c" startline="456" endline="540">ssh_scp_push_file64</referencedby>
+        <referencedby refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" compoundref="scp_8c" startline="956" endline="1014">ssh_scp_read</referencedby>
+        <referencedby refid="group__libssh__scp_1ga0be44d8a450767d92668d36d1beb43b9" compoundref="scp_8c" startline="718" endline="748">ssh_scp_read_string</referencedby>
+        <referencedby refid="group__libssh__scp_1ga8772a6523a2a21a06e3986dbcc02118f" compoundref="scp_8c" startline="1095" endline="1100">ssh_scp_string_mode</referencedby>
+        <referencedby refid="group__libssh__scp_1ga11f48e2cf62bcec20d9232ed3ca41752" compoundref="scp_8c" startline="642" endline="702">ssh_scp_write</referencedby>
+        <referencedby refid="priv_8h_1aacb791f6b4bb44f93327dee7ab138717" compoundref="client_8c" startline="175" endline="237">ssh_send_banner</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+        <referencedby refid="socket_8c_1a6949167d4df3919f169f151e1c904a80" compoundref="socket_8c" startline="533" endline="559">ssh_socket_unbuffered_read</referencedby>
+        <referencedby refid="socket_8c_1a830a3625d6dd3a649a6f94380d4ecb82" compoundref="socket_8c" startline="564" endline="600">ssh_socket_unbuffered_write</referencedby>
+        <referencedby refid="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" compoundref="socket_8c" startline="637" endline="648">ssh_socket_write</referencedby>
+        <referencedby refid="group__libssh__session_1gaf61a9cfdc40c76ffce9f9a8543755d36" compoundref="known__hosts_8c" startline="499" endline="565">ssh_write_knownhost</referencedby>
+        <referencedby refid="torture__callbacks_8c_1ada0ae0e0b5b42f381f264e325c47b2f2" compoundref="torture__callbacks_8c" startline="73" endline="85">test_mock_ssh_logging_callback</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1ad792cdb2f22ab8009ea8bc430b059271" compoundref="torture__threads__buffer_8c" startline="476" endline="517">thread_buffer_pack_badformat</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a59e5543aaa48c7f2cffae38b4b8aa109" compoundref="torture__threads__buffer_8c" startline="162" endline="203">thread_buffer_prepend</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aec2d29aca1bc11a74c28dc0c9a45a9f8" compoundref="torture__threads__buffer_8c" startline="65" endline="92">thread_growing_buffer</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2a8a76df41ddfaadcc76c8db2cb45f16" compoundref="torture__threads__buffer_8c" startline="109" endline="146">thread_growing_buffer_shifting</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2f29726eaa600a181d39bdc877fdee23" compoundref="torture__threads__buffer_8c" startline="270" endline="324">thread_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a6cd746fcd5d2247a25f1e9afa3397390" compoundref="torture__threads__buffer_8c" startline="336" endline="402">thread_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aada376ffd60bb46e2232b036fae5728f" compoundref="torture__threads__buffer_8c" startline="415" endline="463">thread_ssh_buffer_get_format_error</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a507db24a756e383887921fe13f9bc20e" compoundref="torture__threads__buffer_8c" startline="219" endline="258">thread_ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="torture__buffer_8c_1acca75050aecb4fa6d7d8a0a4481f8f54" compoundref="torture__buffer_8c" startline="236" endline="260">torture_buffer_pack_badformat</referencedby>
+        <referencedby refid="torture__buffer_8c_1a266a6405d0d6e3ad583ad64873638567" compoundref="torture__buffer_8c" startline="74" endline="99">torture_buffer_prepend</referencedby>
+        <referencedby refid="torture__buffer_8c_1a8934aec188a50d6fa6d3bf8915141db5" compoundref="torture__buffer_8c" startline="34" endline="46">torture_growing_buffer</referencedby>
+        <referencedby refid="torture__buffer_8c_1a2317a69c8eb7a247ad8279d17ffdf7e6" compoundref="torture__buffer_8c" startline="52" endline="69">torture_growing_buffer_shifting</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1a5aa5170ce1bb16886fd54b737bc72aed" compoundref="torture__knownhosts_8c" startline="97" endline="152">torture_knownhosts_port</referencedby>
+        <referencedby refid="torture__callbacks_8c_1a417de1456aab235a265edcc4212e890e" compoundref="torture__callbacks_8c" startline="87" endline="106">torture_log_callback</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+        <referencedby refid="torture__rand_8c_1a725105eae5bf8ba0bec58639cc79f4f3" compoundref="torture__rand_8c" startline="40" endline="54">torture_rand_thread</referencedby>
+        <referencedby refid="torture__pki_8c_1acd426033c68a568e2cc262fa84b7abe2" compoundref="torture__pki_8c" startline="62" endline="82">torture_read_one_line</referencedby>
+        <referencedby refid="torture__request__env_8c_1af673d397cb089d358c279e3e6e082388" compoundref="torture__request__env_8c" startline="78" endline="118">torture_request_env</referencedby>
+        <referencedby refid="torture__buffer_8c_1aa5cce47bb186a19d068d8ae76bd83acd" compoundref="torture__buffer_8c" startline="136" endline="165">torture_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__buffer_8c_1a65473b3f9a634cf3f3261a61a8caca05" compoundref="torture__buffer_8c" startline="167" endline="209">torture_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__buffer_8c_1a8b6c2558161b5a41762c0f44b2f0bcee" compoundref="torture__buffer_8c" startline="211" endline="234">torture_ssh_buffer_get_format_error</referencedby>
+        <referencedby refid="torture__buffer_8c_1a61af67c27c79501074300baad8637fa2" compoundref="torture__buffer_8c" startline="104" endline="134">torture_ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="torture__misc_8c_1a181933ed646695542ff693fb5546964f" compoundref="torture__misc_8c" startline="367" endline="410">torture_ssh_dir_writeable</referencedby>
+        <referencedby refid="torture__misc_8c_1a3fc4093e1bd00dbd7dedd1abd5f0c258" compoundref="torture__misc_8c" startline="412" endline="502">torture_ssh_mkdirs</referencedby>
+        <referencedby refid="torture__misc_8c_1aeafe803e2a63f22130674c32a006326c" compoundref="torture__misc_8c" startline="640" endline="656">torture_ssh_newline_vis</referencedby>
+        <referencedby refid="torture__misc_8c_1aa5be6dded4c0979bd47da4aa4d1ad225" compoundref="torture__misc_8c" startline="504" endline="638">torture_ssh_quote_file_name</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="benchmarks_8c_1a512ff14aa9ea74805822108d853133ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void cmdline_parse</definition>
+        <argsstring>(int argc, char **argv, struct argument_s *arguments)</argsstring>
+        <name>cmdline_parse</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="254" column="13" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="254" bodyend="267"/>
+        <references refid="keygen2_8c_1ab70c96531b1b652d70c221cfaf3207f3" compoundref="keygen2_8c" startline="290">argp</references>
+        <references refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" compoundref="benchmarks_8h" startline="44">argument_s::hosts</references>
+        <references refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" compoundref="benchmarks_8h" startline="46">argument_s::nhosts</references>
+        <referencedby refid="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="benchmarks_8c" startline="349" endline="399">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8c_1a202d3e1d740fa4ec133438ce5641f3c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void arguments_init</definition>
+        <argsstring>(struct argument_s *arguments)</argsstring>
+        <name>arguments_init</name>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="269" column="13" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="269" bodyend="274"/>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a21831b211ab5a2887c12228411fd8154" compoundref="benchmarks_8h" startline="50">argument_s::concurrent_requests</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <referencedby refid="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="benchmarks_8c" startline="349" endline="399">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8c_1aa10487258ce1df1ef42bee98693a777a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+        <definition>static ssh_session connect_host</definition>
+        <argsstring>(const char *host, int verbose, char *cipher)</argsstring>
+        <name>connect_host</name>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>cipher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="276" column="20" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="276" bodyend="299"/>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca68b35bccdc3c62a9806c961af8dbcd1f" compoundref="libssh_8h" startline="396">SSH_OPTIONS_CIPHERS_C_S</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca41d6ad083136f9109d767deaf4cd9b3b" compoundref="libssh_8h" startline="397">SSH_OPTIONS_CIPHERS_S_C</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca6560e124c042153de507732d489e5564" compoundref="libssh_8h" startline="381">SSH_OPTIONS_HOST</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46caaad9d185338d90669d96cfee24cce677" compoundref="libssh_8h" startline="394">SSH_OPTIONS_LOG_VERBOSITY</references>
+        <references refid="group__libssh__session_1ga82371e723260c7572ea061edecc2e9f1" compoundref="options_8c" startline="1375" endline="1418">ssh_options_parse_config</references>
+        <references refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" compoundref="options_8c" startline="474" endline="1039">ssh_options_set</references>
+        <references refid="legacy_8h_1aebc0160212f355d57e4c331e4650d53c" compoundref="legacy_8c" startline="97" endline="99">ssh_userauth_autopubkey</references>
+        <referencedby refid="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="benchmarks_8c" startline="349" endline="399">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8c_1a313e93a43f1f13433c9a8d821e31ce59" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>static char* network_speed</definition>
+        <argsstring>(float bps)</argsstring>
+        <name>network_speed</name>
+        <param>
+          <type>float</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="301" column="13" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="301" bodyend="315"/>
+        <referencedby refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" compoundref="benchmarks_8c" startline="317" endline="345">do_benchmarks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void do_benchmarks</definition>
+        <argsstring>(ssh_session session, struct argument_s *arguments, const char *hostname)</argsstring>
+        <name>do_benchmarks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="317" column="13" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="317" bodyend="345"/>
+        <references refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" compoundref="benchmarks_8h" startline="40">BENCHMARK_NUMBER</references>
+        <references refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" compoundref="benchmarks_8c" startline="30">benchmarks</references>
+        <references refid="benchmarks_8h_1a33a30ecb04e95771eb40760397d2cc40" compoundref="latency_8c" startline="42" endline="85">benchmarks_ping_latency</references>
+        <references refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" compoundref="latency_8c" startline="119" endline="148">benchmarks_ssh_latency</references>
+        <references refid="structbenchmark_1a23f1f9188e0f5877d3b6aee4218fdb04" compoundref="benchmarks_8h" startline="62">benchmark::enabled</references>
+        <references refid="structbenchmark_1af766d17ca54928d54f763cd09867246b" compoundref="benchmarks_8h" startline="61">benchmark::fct</references>
+        <references refid="structbenchmark_1a8594089f20ef467a2c6e8cc01c653b21" compoundref="benchmarks_8h" startline="60">benchmark::name</references>
+        <references refid="benchmarks_8c_1a313e93a43f1f13433c9a8d821e31ce59" compoundref="benchmarks_8c" startline="301" endline="315">network_speed</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+        <referencedby refid="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="benchmarks_8c" startline="349" endline="399">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/benchmarks.c" line="349" column="5" bodyfile="libssh-mirror/tests/benchmarks/benchmarks.c" bodystart="349" bodyend="399"/>
+        <references refid="benchmarks_8c_1a202d3e1d740fa4ec133438ce5641f3c1" compoundref="benchmarks_8c" startline="269" endline="274">arguments_init</references>
+        <references refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" compoundref="benchmarks_8h" startline="40">BENCHMARK_NUMBER</references>
+        <references refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" compoundref="benchmarks_8c" startline="30">benchmarks</references>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a09d39c40b5f2f7de7d381fefcac05456" compoundref="benchmarks_8h" startline="51">argument_s::cipher</references>
+        <references refid="benchmarks_8c_1a512ff14aa9ea74805822108d853133ea" compoundref="benchmarks_8c" startline="254" endline="267">cmdline_parse</references>
+        <references refid="benchmarks_8c_1aa10487258ce1df1ef42bee98693a777a" compoundref="benchmarks_8c" startline="276" endline="299">connect_host</references>
+        <references refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" compoundref="benchmarks_8c" startline="317" endline="345">do_benchmarks</references>
+        <references refid="structbenchmark_1a23f1f9188e0f5877d3b6aee4218fdb04" compoundref="benchmarks_8h" startline="62">benchmark::enabled</references>
+        <references refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" compoundref="benchmarks_8h" startline="44">argument_s::hosts</references>
+        <references refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" compoundref="samplesshd-kbdint_8c" startline="186">name</references>
+        <references refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" compoundref="benchmarks_8h" startline="46">argument_s::nhosts</references>
+        <references refid="structargument__s_1af04c45026e2f5a808d83e290bc78f89b" compoundref="benchmarks_8h" startline="47">argument_s::ntests</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</references>
+        <references refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="benchmarks_8h" kindref="compound">benchmarks.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbenchmark" kindref="compound">benchmark</ref><sp/><ref refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" kindref="member">benchmarks</ref>[]=<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structbenchmark_1a8594089f20ef467a2c6e8cc01c653b21" kindref="member">name</ref>=</highlight><highlight class="stringliteral">&quot;benchmark_raw_upload&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fct=<ref refid="bench__raw_8c_1a070a579a7a62c222e5f28c9e074c0df7" kindref="member">benchmarks_raw_up</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.enabled=0</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.name=</highlight><highlight class="stringliteral">&quot;benchmark_raw_download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fct=<ref refid="bench__raw_8c_1afd64b09e9ae3ce2136328be2cd0bac89" kindref="member">benchmarks_raw_down</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.enabled=0</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.name=</highlight><highlight class="stringliteral">&quot;benchmark_scp_upload&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fct=<ref refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" kindref="member">benchmarks_scp_up</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.enabled=0</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.name=</highlight><highlight class="stringliteral">&quot;benchmark_scp_download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fct=<ref refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" kindref="member">benchmarks_scp_down</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.enabled=0</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.name=</highlight><highlight class="stringliteral">&quot;benchmark_sync_sftp_upload&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fct=<ref refid="bench__sftp_8c_1acef09f85489fe47862edb8378a22af82" kindref="member">benchmarks_sync_sftp_up</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.enabled=0</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.name=</highlight><highlight class="stringliteral">&quot;benchmark_sync_sftp_download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fct=<ref refid="bench__sftp_8c_1aea73fc2575a832d79f09c7b3fa25cac9" kindref="member">benchmarks_sync_sftp_down</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.enabled=0</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.name=</highlight><highlight class="stringliteral">&quot;benchmark_async_sftp_download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fct=<ref refid="bench__sftp_8c_1a5d05a4e9603ff04353b637065dacf28c" kindref="member">benchmarks_async_sftp_down</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.enabled=0</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_ARGP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;argp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argp_program_version<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;libssh<sp/>benchmarks<sp/>2011-08-28&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argp_program_bug_address<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Aris<sp/>Adamantiadis<sp/>&lt;aris@0xbadc0de.be&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**cmdline;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Program<sp/>documentation.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="keygen2_8c_1af6164deb8a824f8cb2b9147cfc3174f5" kindref="member">doc</ref>[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;libssh<sp/>benchmarks&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>options<sp/>we<sp/>understand.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">argp_option<sp/><ref refid="structoptions" kindref="compound">options</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;verbose&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;v&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Make<sp/>libssh<sp/>benchmark<sp/>more<sp/>verbose&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;raw-upload&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Upload<sp/>raw<sp/>data<sp/>using<sp/>channel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;raw-download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Download<sp/>raw<sp/>data<sp/>using<sp/>channel&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;scp-upload&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Upload<sp/>data<sp/>using<sp/>SCP&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;scp-download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Download<sp/>data<sp/>using<sp/>SCP&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sync-sftp-upload&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Upload<sp/>data<sp/>using<sp/>synchronous<sp/>SFTP&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sync-sftp-download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;6&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Download<sp/>data<sp/>using<sp/>synchronous<sp/>SFTP<sp/>(slow)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;async-sftp-download&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;7&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Download<sp/>data<sp/>using<sp/>asynchronous<sp/>SFTP<sp/>(fast)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;host&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;HOST&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Add<sp/>a<sp/>host<sp/>to<sp/>connect<sp/>for<sp/>benchmark<sp/>(format<sp/>user@hostname)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;size&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MBYTES&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MBytes<sp/>of<sp/>data<sp/>to<sp/>send/receive<sp/>per<sp/>test&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;chunk&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;bytes&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;size<sp/>of<sp/>data<sp/>chunks<sp/>to<sp/>send/receive&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;prequests&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;p&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;number<sp/>[20]&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;[async<sp/>SFTP]<sp/>number<sp/>of<sp/>concurrent<sp/>requests&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cipher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>.key<sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>.arg<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cipher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>.flags<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>.doc<sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Cryptographic<sp/>cipher<sp/>to<sp/>be<sp/>used&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>.group<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>},</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>{NULL,<sp/>0,<sp/>NULL,<sp/>0,<sp/>NULL,<sp/>0}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Parse<sp/>a<sp/>single<sp/>option.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>error_t<sp/><ref refid="keygen2_8c_1a35ee63236273ebb9325c444cacf00159" kindref="member">parse_opt</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*arg,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>argp_state<sp/>*state)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>the<sp/>input<sp/>argument<sp/>from<sp/>argp_parse,<sp/>which<sp/>we</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/>*<sp/>know<sp/>is<sp/>a<sp/>pointer<sp/>to<sp/>our<sp/>arguments<sp/>structure.</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*arguments<sp/>=<sp/>state-&gt;input;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>arg<sp/>is<sp/>currently<sp/>not<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>(void)<sp/>arg;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;5&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;6&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;7&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" kindref="member">benchmarks</ref>[<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref><sp/>-<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">].<ref refid="structbenchmark_1a23f1f9188e0f5877d3b6aee4218fdb04" kindref="member">enabled</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1af04c45026e2f5a808d83e290bc78f89b" kindref="member">ntests</ref><sp/>++;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;v&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref>++;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" kindref="member">datasize</ref><sp/>=<sp/>atoi(arg);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;p&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a21831b211ab5a2887c12228411fd8154" kindref="member">concurrent_requests</ref><sp/>=<sp/>atoi(arg);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref><sp/>=<sp/>atoi(arg);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a09d39c40b5f2f7de7d381fefcac05456" kindref="member">cipher</ref><sp/>=<sp/>arg;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(arguments-&gt;<ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref><sp/>&gt;=<sp/><ref refid="benchmarks_8h_1af4d9e57372bcd6cd117f6022befb7245" kindref="member">MAX_HOSTS_CONNECT</ref>){</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Too<sp/>much<sp/>hosts\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ARGP_ERR_UNKNOWN;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" kindref="member">hosts</ref>[arguments-&gt;<ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref>]=arg;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref>++;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ARGP_KEY_ARG:</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>End<sp/>processing<sp/>here.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cmdline<sp/>=<sp/>&amp;state-&gt;argv<sp/>[state-&gt;next<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;next<sp/>=<sp/>state-&gt;argc;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ARGP_ERR_UNKNOWN;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Our<sp/>argp<sp/>parser.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="keygen2_8c_1ab70c96531b1b652d70c221cfaf3207f3" kindref="member">argp</ref><sp/><ref refid="keygen2_8c_1ab70c96531b1b652d70c221cfaf3207f3" kindref="member">argp</ref><sp/>=<sp/>{<ref refid="test__ssh__bind__accept__fd_8c_1ae9872726570c0d0d80fd77fd4b1de0b1" kindref="member">options</ref>,<sp/><ref refid="keygen2_8c_1a35ee63236273ebb9325c444cacf00159" kindref="member">parse_opt</ref>,<sp/>NULL,<sp/><ref refid="keygen2_8c_1af6164deb8a824f8cb2b9147cfc3174f5" kindref="member">doc</ref>,<sp/>NULL,<sp/>NULL,<sp/>NULL};</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_ARGP_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="benchmarks_8c_1a512ff14aa9ea74805822108d853133ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1a512ff14aa9ea74805822108d853133ea" kindref="member">cmdline_parse</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*arguments)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Parse<sp/>our<sp/>arguments;<sp/>every<sp/>option<sp/>seen<sp/>by<sp/>parse_opt<sp/>will</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/>*<sp/>be<sp/>reflected<sp/>in<sp/>arguments.</highlight></codeline>
+<codeline lineno="258"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_ARGP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>argp_parse(&amp;<ref refid="keygen2_8c_1ab70c96531b1b652d70c221cfaf3207f3" kindref="member">argp</ref>,<sp/>argc,<sp/>argv,<sp/>0,<sp/>0,<sp/>arguments);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>HAVE_ARGP_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>(void)<sp/>argc;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>(void)<sp/>argv;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" kindref="member">hosts</ref>[0]=</highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref>=1;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_ARGP_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="benchmarks_8c_1a202d3e1d740fa4ec133438ce5641f3c1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1a202d3e1d740fa4ec133438ce5641f3c1" kindref="member">arguments_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*arguments){</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>memset(arguments,0,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*arguments));</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref>=32758;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a21831b211ab5a2887c12228411fd8154" kindref="member">concurrent_requests</ref>=20;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>arguments-&gt;<ref refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" kindref="member">datasize</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="benchmarks_8c_1aa10487258ce1df1ef42bee98693a777a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="benchmarks_8c_1aa10487258ce1df1ef42bee98693a777a" kindref="member">connect_host</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*cipher){</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>=<ref refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" kindref="member">ssh_new</ref>();</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>==NULL)</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca6560e124c042153de507732d489e5564" kindref="member">SSH_OPTIONS_HOST</ref>,<sp/><ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>)&lt;0)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46caaad9d185338d90669d96cfee24cce677" kindref="member">SSH_OPTIONS_LOG_VERBOSITY</ref>,<sp/>&amp;verbose);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cipher<sp/>!=<sp/>NULL){</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca68b35bccdc3c62a9806c961af8dbcd1f" kindref="member">SSH_OPTIONS_CIPHERS_C_S</ref>,<sp/>cipher)<sp/>||</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca41d6ad083136f9109d767deaf4cd9b3b" kindref="member">SSH_OPTIONS_CIPHERS_S_C</ref>,<sp/>cipher)){</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__session_1ga82371e723260c7572ea061edecc2e9f1" kindref="member">ssh_options_parse_config</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" kindref="member">ssh_connect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>)==<ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="legacy_8h_1aebc0160212f355d57e4c331e4650d53c" kindref="member">ssh_userauth_autopubkey</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,NULL)<sp/>!=<sp/><ref refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" kindref="member">SSH_AUTH_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Error<sp/>connecting<sp/>to<sp/>\&quot;%s\&quot;:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" kindref="member">ssh_free</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="benchmarks_8c_1a313e93a43f1f13433c9a8d821e31ce59" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="benchmarks_8c_1a313e93a43f1f13433c9a8d821e31ce59" kindref="member">network_speed</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>bps){</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[128];</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bps<sp/>&gt;<sp/>1000*1000*1000){</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Gbps<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),</highlight><highlight class="stringliteral">&quot;%f<sp/>Gbps&quot;</highlight><highlight class="normal">,bps/(1000*1000*1000));</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bps<sp/>&gt;<sp/>1000*1000){</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Mbps<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),</highlight><highlight class="stringliteral">&quot;%f<sp/>Mbps&quot;</highlight><highlight class="normal">,bps/(1000*1000));</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bps<sp/>&gt;<sp/>1000){</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),</highlight><highlight class="stringliteral">&quot;%f<sp/>Kbps&quot;</highlight><highlight class="normal">,bps/1000);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),</highlight><highlight class="stringliteral">&quot;%f<sp/>bps&quot;</highlight><highlight class="normal">,bps);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buf;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" kindref="member">do_benchmarks</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*arguments,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname){</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ping_rtt=0.0;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ssh_rtt=0.0;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>bps=0.0;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbenchmark" kindref="compound">benchmark</ref><sp/>*b;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(arguments-&gt;<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref>&gt;0)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;Testing<sp/>ICMP<sp/>RTT\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/>err=<ref refid="benchmarks_8h_1a33a30ecb04e95771eb40760397d2cc40" kindref="member">benchmarks_ping_latency</ref>(hostname,<sp/>&amp;ping_rtt);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;ping<sp/>RTT<sp/>:<sp/>%f<sp/>ms\n&quot;</highlight><highlight class="normal">,ping_rtt);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/>err=<ref refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" kindref="member">benchmarks_ssh_latency</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>&amp;ssh_rtt);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err==0){</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,<sp/></highlight><highlight class="stringliteral">&quot;SSH<sp/>RTT<sp/>:<sp/>%f<sp/>ms.<sp/>Theoretical<sp/>max<sp/>BW<sp/>(win=128K)<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,ssh_rtt,<ref refid="benchmarks_8c_1a313e93a43f1f13433c9a8d821e31ce59" kindref="member">network_speed</ref>(128000.0/(ssh_rtt<sp/>/<sp/>1000.0)));</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0<sp/>;<sp/>i&lt;<ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" kindref="member">BENCHMARK_NUMBER</ref><sp/>;<sp/>++i){</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>&amp;<ref refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" kindref="member">benchmarks</ref>[i];</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(b-&gt;<ref refid="structbenchmark_1a23f1f9188e0f5877d3b6aee4218fdb04" kindref="member">enabled</ref>){</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>err=b-&gt;<ref refid="structbenchmark_1af766d17ca54928d54f763cd09867246b" kindref="member">fct</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,arguments,&amp;bps);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err==0){</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>:<sp/>%s<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,hostname,<sp/>b-&gt;<ref refid="structbenchmark_1a8594089f20ef467a2c6e8cc01c653b21" kindref="member">name</ref>,<sp/><ref refid="benchmarks_8c_1a313e93a43f1f13433c9a8d821e31ce59" kindref="member">network_speed</ref>(bps));</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347" refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349" refid="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv){</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>arguments;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><ref refid="benchmarks_8c_1a202d3e1d740fa4ec133438ce5641f3c1" kindref="member">arguments_init</ref>(&amp;arguments);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><ref refid="benchmarks_8c_1a512ff14aa9ea74805822108d853133ea" kindref="member">cmdline_parse</ref>(argc,<sp/>argv,<sp/>&amp;arguments);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arguments.<ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref>==0){</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;At<sp/>least<sp/>one<sp/>host<sp/>(-h)<sp/>must<sp/>be<sp/>specified\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arguments.<ref refid="structargument__s_1af04c45026e2f5a808d83e290bc78f89b" kindref="member">ntests</ref>==0){</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;<sp/>i<sp/>&lt;<sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" kindref="member">BENCHMARK_NUMBER</ref><sp/>;<sp/>++i){</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" kindref="member">benchmarks</ref>[i].<ref refid="structbenchmark_1a23f1f9188e0f5877d3b6aee4218fdb04" kindref="member">enabled</ref>=1;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>arguments.<ref refid="structargument__s_1af04c45026e2f5a808d83e290bc78f89b" kindref="member">ntests</ref>=<ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" kindref="member">BENCHMARK_NUMBER</ref>;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>=malloc(arguments.<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref><sp/>&gt;<sp/>1024<sp/>?<sp/>arguments.<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref><sp/>:<sp/>1024);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Allocation<sp/>of<sp/>chunk<sp/>buffer<sp/>failed\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arguments.<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref><sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,<sp/></highlight><highlight class="stringliteral">&quot;Will<sp/>try<sp/>hosts<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;arguments.<ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref>;++i){</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;\&quot;%s\&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/>arguments.<ref refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" kindref="member">hosts</ref>[i]);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;with<sp/>benchmarks<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;<ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" kindref="member">BENCHMARK_NUMBER</ref>;++i){</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" kindref="member">benchmarks</ref>[i].enabled)</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;\&quot;%s\&quot;<sp/>&quot;</highlight><highlight class="normal">,<ref refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" kindref="member">benchmarks</ref>[i].<ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;<sp/>i&lt;arguments.<ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref>;++i){</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(arguments.<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;Connecting<sp/>to<sp/>\&quot;%s\&quot;...\n&quot;</highlight><highlight class="normal">,arguments.<ref refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" kindref="member">hosts</ref>[i]);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>=<ref refid="benchmarks_8c_1aa10487258ce1df1ef42bee98693a777a" kindref="member">connect_host</ref>(arguments.<ref refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" kindref="member">hosts</ref>[i],<sp/>arguments.<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref>,<sp/>arguments.<ref refid="structargument__s_1a09d39c40b5f2f7de7d381fefcac05456" kindref="member">cipher</ref>);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>arguments.<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;Success\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Errors<sp/>occurred,<sp/>stopping\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" kindref="member">do_benchmarks</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>&amp;arguments,<sp/>arguments.<ref refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" kindref="member">hosts</ref>[i]);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" kindref="member">ssh_free</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="399"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/tests/benchmarks/benchmarks.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__libssh__threads" kind="group">
+    <compoundname>libssh_threads</compoundname>
+    <title>The SSH threading functions.</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" prot="public" static="yes" mutable="no">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+        <definition>struct ssh_threads_callbacks_struct* user_callbacks</definition>
+        <argsstring></argsstring>
+        <name>user_callbacks</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads.c" line="36" column="42" bodyfile="src/threads.c" bodystart="36" bodyend="-1"/>
+        <referencedby refid="group__libssh__threads_1gac9431f068584276377498dea938cf951" compoundref="threads_8c" startline="87" endline="93">ssh_threads_get_type</referencedby>
+        <referencedby refid="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" compoundref="threads_8c" startline="42" endline="64">ssh_threads_init</referencedby>
+        <referencedby refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" compoundref="threads_8c" startline="71" endline="85">ssh_threads_set_callbacks</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_threads_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads.c" line="42" column="5" bodyfile="src/threads.c" bodystart="42" bodyend="64"/>
+        <references refid="threads_8h_1afd0bbff265662efc9c2d58696c1ab964" compoundref="threads_2libcrypto_8c" startline="69" endline="108">crypto_thread_init</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="callbacks_8h_1a25ff5f57d28805c38a3b3c2a0195294f" compoundref="noop_8c" startline="65" endline="68">ssh_threads_get_default</references>
+        <references refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" compoundref="threads_8c" startline="36">user_callbacks</references>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__threads_1ga892b23f2f4ffe4e33290a83802faa265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_threads_finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads.c" line="66" column="6" bodyfile="src/threads.c" bodystart="66" bodyend="69"/>
+        <references refid="threads_8h_1a0dd4a730d1a2d370ea7e10392d2abc70" compoundref="threads_2libcrypto_8c" startline="110" endline="131">crypto_thread_finalize</references>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_threads_set_callbacks</definition>
+        <argsstring>(struct ssh_threads_callbacks_struct *cb)</argsstring>
+        <name>ssh_threads_set_callbacks</name>
+        <param>
+          <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the thread callbacks structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is necessary if your program is using libssh in a multithreaded fashion. This function must be called first, outside of any threading context (in your <ref refid="exec_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main()</ref> function for instance), before you call <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> structure, which contains the different callbacks to be set.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns SSH_OK.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> </para>
+</simplesect>
+<simplesect kind="see"><para>SSH_THREADS_PTHREAD </para>
+</simplesect>
+<xrefsect id="bug_1_bug000001"><xreftitle>Bug</xreftitle><xrefdescription><para>libgcrypt 1.6 and bigger backend does not support custom callback. Using anything else than pthreads here will fail. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads.c" line="71" column="5" bodyfile="src/threads.c" bodystart="71" bodyend="85"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="threads_8h_1a0dd4a730d1a2d370ea7e10392d2abc70" compoundref="threads_2libcrypto_8c" startline="110" endline="131">crypto_thread_finalize</references>
+        <references refid="threads_8h_1afd0bbff265662efc9c2d58696c1ab964" compoundref="threads_2libcrypto_8c" startline="69" endline="108">crypto_thread_init</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" compoundref="threads_8c" startline="36">user_callbacks</references>
+        <referencedby refid="pkd__daemon_8c_1a4765530f94b7b2c34f4861c906607ca7" compoundref="pkd__daemon_8c" startline="79" endline="83">pkd_init_libssh</referencedby>
+        <referencedby refid="torture__rand_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__rand_8c" startline="18" endline="30">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__threads_1gac9431f068584276377498dea938cf951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_threads_get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_get_type</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads.c" line="87" column="12" bodyfile="src/threads.c" bodystart="87" bodyend="93"/>
+        <references refid="structssh__threads__callbacks__struct_1a2def4dea77cca2a4e12db84c42590a0c" compoundref="callbacks_8h" startline="928">ssh_threads_callbacks_struct::type</references>
+        <references refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" compoundref="threads_8c" startline="36">user_callbacks</references>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Threading with libssh </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

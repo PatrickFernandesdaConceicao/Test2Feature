@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="keygen_8c" kind="file" language="C++">
+    <compoundname>keygen.c</compoundname>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>sys/select.h</label>
+      </node>
+      <node id="8">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="1">
+        <label>examples/keygen.c</label>
+        <link refid="keygen_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>netdb.h</label>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="2">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="keygen_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/keygen.c" line="21" column="5" bodyfile="examples/keygen.c" bodystart="21" bodyend="41"/>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="libssh_8h_1a244b017e5993fde29fe9e9b1f04a7bcea237671d46fa2c7f139963e154d5430bf" compoundref="libssh_8h" startline="297">SSH_KEYTYPE_ED25519</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__pki_1ga3b294c44e2280c935cb0b82ede5c42ee" compoundref="pki_8c" startline="1001" endline="1048">ssh_pki_export_privkey_file</references>
+        <references refid="group__libssh__pki_1gae038fa1b34f9427c7ba84082a1a20bad" compoundref="pki_8c" startline="1898" endline="1978">ssh_pki_generate</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>keygen.c</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Sample<sp/>implementation<sp/>of<sp/>ssh-keygen<sp/>using<sp/>libssh</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">Copyright<sp/>2019<sp/>Red<sp/>Hat,<sp/>Inc.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">Author:<sp/>Jakub<sp/>Jelen<sp/>&lt;jjelen@redhat.com&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">You<sp/>are<sp/>free<sp/>to<sp/>copy<sp/>this<sp/>file,<sp/>modify<sp/>it<sp/>in<sp/>any<sp/>way,<sp/>consider<sp/>it<sp/>being<sp/>public</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">domain.<sp/>This<sp/>does<sp/>not<sp/>apply<sp/>to<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>library<sp/>though,<sp/>but<sp/>it<sp/>is</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">allowed<sp/>to<sp/>cut-and-paste<sp/>working<sp/>code<sp/>from<sp/>this<sp/>file<sp/>to<sp/>any<sp/>license<sp/>of</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">program.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="keygen_8c_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="keygen_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rv;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Generate<sp/>a<sp/>new<sp/>ED25519<sp/>private<sp/>key<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>rv<sp/>=<sp/><ref refid="group__libssh__pki_1gae038fa1b34f9427c7ba84082a1a20bad" kindref="member">ssh_pki_generate</ref>(<ref refid="libssh_8h_1a244b017e5993fde29fe9e9b1f04a7bcea237671d46fa2c7f139963e154d5430bf" kindref="member">SSH_KEYTYPE_ED25519</ref>,<sp/>0,<sp/>&amp;<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rv<sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>generate<sp/>private<sp/>key&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>it<sp/>to<sp/>a<sp/>file<sp/>testkey<sp/>in<sp/>the<sp/>current<sp/>dirrectory<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>rv<sp/>=<sp/><ref refid="group__libssh__pki_1ga3b294c44e2280c935cb0b82ede5c42ee" kindref="member">ssh_pki_export_privkey_file</ref>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/>NULL,<sp/>NULL,<sp/>NULL,<sp/></highlight><highlight class="stringliteral">&quot;testkey&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rv<sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>write<sp/>private<sp/>key<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="examples/keygen.c"/>
+  </compounddef>
+</doxygen>

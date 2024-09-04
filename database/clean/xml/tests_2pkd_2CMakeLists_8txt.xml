@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="tests_2pkd_2CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>CMakeLists.txt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tests_2pkd_2CMakeLists_8txt_1a1b5034a7889baa995fbcb9f1f12bb516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>project</definition>
+        <argsstring>(pkd C) if(WITH_SERVER AND UNIX AND NOT WIN32) include_directories($</argsstring>
+        <name>project</name>
+        <param>
+          <type>pkd</type>
+          <declname>C</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/CMakeLists.txt" line="1" column="1" bodyfile="tests/pkd/CMakeLists.txt" bodystart="1" bodyend="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="tests_2pkd_2CMakeLists_8txt_1a1b5034a7889baa995fbcb9f1f12bb516" refkind="member"><highlight class="normal"><ref refid="examples_2CMakeLists_8txt_1a3901ba16c737e186448fe169f89bb169" kindref="member">project</ref>(pkd<sp/>C)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WITH_SERVER<sp/>AND<sp/>UNIX<sp/>AND<sp/>NOT<sp/>WIN32)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>include_directories(${libssh_SOURCE_DIR}/<ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMOCKA_INCLUDE_DIR}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${ZLIB_INCLUDE_DIR}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_BINARY_DIR}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${libssh_SOURCE_DIR}/src</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_CURRENT_SOURCE_DIR})</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(pkd_hello_src</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>pkd_daemon.c</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>pkd_hello.c</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>pkd_keyutil.c</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>pkd_util.c</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(pkd_libs</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>${CMOCKA_LIBRARY}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh::static</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>${ARGP_LIBRARIES}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">add_executable(pkd_hello<sp/>${pkd_hello_src})</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">target_compile_options(pkd_hello<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">target_link_libraries(pkd_hello<sp/>${pkd_libs})</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">#</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">#<sp/>pkd_hello_i1<sp/>runs<sp/>only<sp/>one<sp/>iteration<sp/>per<sp/>algorithm<sp/>combination<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">#<sp/>sake<sp/>of<sp/>speeding<sp/>up<sp/>overall<sp/><ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref><sp/>run<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a64e3b3da47d2dcb5585763c1a7036884" kindref="member">time</ref>.<sp/><sp/>More<sp/>iterations<sp/>can<sp/>be</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">#<sp/>specified<sp/>with<sp/>`-i`<sp/>and<sp/>may<sp/>be<sp/>helpful<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>chasing<sp/>down<sp/>bugs<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a26896e674acdc47650fdef7a65b57886" kindref="member">that</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">#<sp/>are<sp/>not<sp/>100%<sp/>reproducible.</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">#</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">add_test(pkd_hello_i1<sp/>${CMAKE_CURRENT_BINARY_DIR}/pkd_hello<sp/>-e<sp/>-o<sp/>-i1<sp/>-w<sp/>/tmp/pkd_socket_wrapper_XXXXXX)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">#</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">#<sp/>pkd_hello_rekey<sp/>is<sp/>used<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/><ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref><sp/>server-side<sp/>implementation<sp/>of<sp/>rekeying.</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">#</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">add_test(pkd_hello_rekey<sp/>${CMAKE_CURRENT_BINARY_DIR}/pkd_hello<sp/>-t<sp/>torture_pkd_openssh_rsa_rsa_default<sp/>-i1<sp/>--rekey=16<sp/>-v<sp/>-v<sp/>-v<sp/>-w<sp/>/tmp/pkd_socket_wrapper_XXXXXX)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">#</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">#<sp/>Configure<sp/>environment<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>cwrap<sp/>socket<sp/>wrapper.</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">#</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">find_package(socket_wrapper<sp/>1.1.5<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(OSX)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(PKD_ENVIRONMENT<sp/></highlight><highlight class="stringliteral">&quot;DYLD_FORCE_FLAT_NAMESPACE=1;DYLD_INSERT_LIBRARIES=${SOCKET_WRAPPER_LIBRARY}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(PKD_ENVIRONMENT<sp/></highlight><highlight class="stringliteral">&quot;LD_PRELOAD=${SOCKET_WRAPPER_LIBRARY}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">message(STATUS<sp/>&quot;PKD_ENVIRONMENT=${PKD_ENVIRONMENT}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral">set_property(TEST<sp/>pkd_hello_i1<sp/>PROPERTY<sp/>ENVIRONMENT<sp/>${PKD_ENVIRONMENT})</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral">endif<sp/>(WITH_SERVER<sp/>AND<sp/>UNIX<sp/>AND<sp/>NOT<sp/>WIN32)</highlight></codeline>
+    </programlisting>
+    <location file="tests/pkd/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

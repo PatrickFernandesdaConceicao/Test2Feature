@@ -1,0 +1,1910 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="packet_8h" kind="file" language="C++">
+    <compoundname>packet.h</compoundname>
+    <includes refid="wrapper_8h" local="yes">libssh/wrapper.h</includes>
+    <includedby refid="session_8h" local="yes">include/libssh/session.h</includedby>
+    <includedby refid="auth_8c" local="yes">src/auth.c</includedby>
+    <includedby refid="channels_8c" local="yes">src/channels.c</includedby>
+    <includedby refid="client_8c" local="yes">src/client.c</includedby>
+    <includedby refid="messages_8c" local="yes">src/messages.c</includedby>
+    <includedby refid="packet_8c" local="yes">src/packet.c</includedby>
+    <includedby refid="packet__cb_8c" local="yes">src/packet_cb.c</includedby>
+    <includedby refid="server_8c" local="yes">src/server.c</includedby>
+    <includedby refid="session_8c" local="yes">src/session.c</includedby>
+    <includedby refid="torture__packet__filter_8c" local="yes">tests/unittests/torture_packet_filter.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="9">
+        <label>sys/select.h</label>
+      </node>
+      <node id="11">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="12">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>netdb.h</label>
+      </node>
+      <node id="14">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>sys/types.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>unistd.h</label>
+      </node>
+      <node id="5">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/channels.c</label>
+        <link refid="channels_8c"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>tests/client/torture_connect.c</label>
+        <link refid="torture__connect_8c"/>
+      </node>
+      <node id="43">
+        <label>tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="86">
+        <label>tests/client/torture_forward.c</label>
+        <link refid="torture__forward_8c"/>
+      </node>
+      <node id="68">
+        <label>tests/client/torture_sftp_dir.c</label>
+        <link refid="torture__sftp__dir_8c"/>
+      </node>
+      <node id="93">
+        <label>tests/pkd/pkd_daemon.c</label>
+        <link refid="pkd__daemon_8c"/>
+      </node>
+      <node id="18">
+        <label>src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="52">
+        <label>src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>tests/client/torture_client_global_requests.c</label>
+        <link refid="torture__client__global__requests_8c"/>
+      </node>
+      <node id="11">
+        <label>tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="114">
+        <label>tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="106">
+        <label>tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="9">
+        <label>src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="58">
+        <label>tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="80">
+        <label>tests/server/torture_server.c</label>
+        <link refid="torture__server_8c"/>
+      </node>
+      <node id="55">
+        <label>tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="22">
+        <label>src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>tests/client/torture_proxycommand.c</label>
+        <link refid="torture__proxycommand_8c"/>
+      </node>
+      <node id="71">
+        <label>tests/client/torture_sftp_read.c</label>
+        <link refid="torture__sftp__read_8c"/>
+      </node>
+      <node id="3">
+        <label>include/libssh/bind.h</label>
+        <link refid="bind_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="65">
+        <label>src/sftp.c</label>
+        <link refid="sftp_8c"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>tests/unittests/torture_init.c</label>
+        <link refid="torture__init_8c"/>
+      </node>
+      <node id="96">
+        <label>tests/torture.c</label>
+        <link refid="torture_8c"/>
+      </node>
+      <node id="84">
+        <label>tests/torture.h</label>
+        <link refid="torture_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>tests/unittests/torture_push_pop_dir.c</label>
+        <link refid="torture__push__pop__dir_8c"/>
+      </node>
+      <node id="42">
+        <label>src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>tests/torture_key.c</label>
+        <link refid="torture__key_8c"/>
+      </node>
+      <node id="94">
+        <label>tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+      <node id="91">
+        <label>tests/client/torture_scp.c</label>
+        <link refid="torture__scp_8c"/>
+      </node>
+      <node id="17">
+        <label>tests/unittests/torture_channel.c</label>
+        <link refid="torture__channel_8c"/>
+      </node>
+      <node id="97">
+        <label>tests/torture_cmocka.c</label>
+        <link refid="torture__cmocka_8c"/>
+      </node>
+      <node id="83">
+        <label>tests/torture_cmocka.h</label>
+        <link refid="torture__cmocka_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>tests/unittests/torture_list.c</label>
+        <link refid="torture__list_8c"/>
+      </node>
+      <node id="74">
+        <label>src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="110">
+        <label>tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="51">
+        <label>src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="36">
+        <label>src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="26">
+        <label>src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="56">
+        <label>tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="69">
+        <label>tests/client/torture_sftp_ext.c</label>
+        <link refid="torture__sftp__ext_8c"/>
+      </node>
+      <node id="54">
+        <label>tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="79">
+        <label>tests/client/torture_session.c</label>
+        <link refid="torture__session_8c"/>
+      </node>
+      <node id="53">
+        <label>tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="29">
+        <label>src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="48">
+        <label>src/misc.c</label>
+        <link refid="misc_8c"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="82">
+        <label>tests/server/torture_server_config.c</label>
+        <link refid="torture__server__config_8c"/>
+      </node>
+      <node id="45">
+        <label>src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="115">
+        <label>tests/unittests/torture_threads_init.c</label>
+        <link refid="torture__threads__init_8c"/>
+      </node>
+      <node id="13">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="66">
+        <label>tests/client/torture_sftp_benchmark.c</label>
+        <link refid="torture__sftp__benchmark_8c"/>
+      </node>
+      <node id="60">
+        <label>tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="47">
+        <label>src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="109">
+        <label>tests/unittests/torture_server_x11.c</label>
+        <link refid="torture__server__x11_8c"/>
+      </node>
+      <node id="87">
+        <label>tests/client/torture_hostkey.c</label>
+        <link refid="torture__hostkey_8c"/>
+      </node>
+      <node id="76">
+        <label>tests/client/torture_client_config.c</label>
+        <link refid="torture__client__config_8c"/>
+      </node>
+      <node id="44">
+        <label>src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="90">
+        <label>tests/client/torture_request_env.c</label>
+        <link refid="torture__request__env_8c"/>
+      </node>
+      <node id="19">
+        <label>src/config.c</label>
+        <link refid="config_8c"/>
+      </node>
+      <node id="57">
+        <label>tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="12">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>src/poll.c</label>
+        <link refid="poll_8c"/>
+      </node>
+      <node id="23">
+        <label>tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="27">
+        <label>src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="20">
+        <label>src/connect.c</label>
+        <link refid="connect_8c"/>
+      </node>
+      <node id="5">
+        <label>src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="63">
+        <label>src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="101">
+        <label>tests/unittests/torture_callbacks.c</label>
+        <link refid="torture__callbacks_8c"/>
+      </node>
+      <node id="88">
+        <label>tests/client/torture_knownhosts_verify.c</label>
+        <link refid="torture__knownhosts__verify_8c"/>
+      </node>
+      <node id="108">
+        <label>tests/unittests/torture_rand.c</label>
+        <link refid="torture__rand_8c"/>
+      </node>
+      <node id="59">
+        <label>tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="21">
+        <label>src/connector.c</label>
+        <link refid="connector_8c"/>
+      </node>
+      <node id="4">
+        <label>src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="70">
+        <label>tests/client/torture_sftp_fsync.c</label>
+        <link refid="torture__sftp__fsync_8c"/>
+      </node>
+      <node id="35">
+        <label>tests/unittests/torture_misc.c</label>
+        <link refid="torture__misc_8c"/>
+      </node>
+      <node id="31">
+        <label>src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="49">
+        <label>src/options.c</label>
+        <link refid="options_8c"/>
+      </node>
+      <node id="32">
+        <label>src/error.c</label>
+        <link refid="error_8c"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/callbacks.c</label>
+        <link refid="callbacks_8c"/>
+      </node>
+      <node id="37">
+        <label>src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="112">
+        <label>tests/unittests/torture_temp_file.c</label>
+        <link refid="torture__temp__file_8c"/>
+      </node>
+      <node id="75">
+        <label>tests/client/torture_algorithms.c</label>
+        <link refid="torture__algorithms_8c"/>
+      </node>
+      <node id="105">
+        <label>tests/unittests/torture_knownhosts_parsing.c</label>
+        <link refid="torture__knownhosts__parsing_8c"/>
+      </node>
+      <node id="14">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="99">
+        <label>tests/unittests/torture_buffer.c</label>
+        <link refid="torture__buffer_8c"/>
+      </node>
+      <node id="25">
+        <label>tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="113">
+        <label>tests/unittests/torture_threads_buffer.c</label>
+        <link refid="torture__threads__buffer_8c"/>
+      </node>
+      <node id="64">
+        <label>src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>tests/unittests/torture_temp_dir.c</label>
+        <link refid="torture__temp__dir_8c"/>
+      </node>
+      <node id="50">
+        <label>src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="72">
+        <label>src/socket.c</label>
+        <link refid="socket_8c"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="6">
+        <label>tests/unittests/torture_bind_config.c</label>
+        <link refid="torture__bind__config_8c"/>
+      </node>
+      <node id="67">
+        <label>tests/client/torture_sftp_canonicalize_path.c</label>
+        <link refid="torture__sftp__canonicalize__path_8c"/>
+      </node>
+      <node id="41">
+        <label>src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="38">
+        <label>src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="73">
+        <label>tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="95">
+        <label>tests/pkd/pkd_keyutil.c</label>
+        <link refid="pkd__keyutil_8c"/>
+      </node>
+      <node id="7">
+        <label>include/libssh/gssapi.h</label>
+        <link refid="gssapi_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>tests/server/torture_server_auth_kbdint.c</label>
+        <link refid="torture__server__auth__kbdint_8c"/>
+      </node>
+      <node id="28">
+        <label>src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="102">
+        <label>tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+      <node id="33">
+        <label>tests/unittests/torture_isipaddr.c</label>
+        <link refid="torture__isipaddr_8c"/>
+      </node>
+      <node id="8">
+        <label>src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="92">
+        <label>tests/cmdline.c</label>
+        <link refid="cmdline_8c"/>
+      </node>
+      <node id="40">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="100">
+        <label>tests/unittests/torture_bytearray.c</label>
+        <link refid="torture__bytearray_8c"/>
+      </node>
+      <node id="116">
+        <label>tests/unittests/torture_tokens.c</label>
+        <link refid="torture__tokens_8c"/>
+      </node>
+      <node id="2">
+        <label>include/libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+      <node id="46">
+        <label>src/log.c</label>
+        <link refid="log_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpacket__struct" prot="public">packet_struct</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="packet_8h_1acec1023e26d01be724eb18fa104c3b86" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_packet_state_e</name>
+        <enumvalue id="packet_8h_1acec1023e26d01be724eb18fa104c3b86a1444df7be43fcfb6c1773b1e7e191340" prot="public">
+          <name>PACKET_STATE_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Packet not initialized, must read the size of packet </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41c80441cffae62d2fa695a1026becab" prot="public">
+          <name>PACKET_STATE_SIZEREAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Size was read, waiting for the rest of data </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41359dd99639d2309767e0d897607b53" prot="public">
+          <name>PACKET_STATE_PROCESSING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Full packet was read and callbacks are being called. Future packets should wait for the end of the callback. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>different state of packet reading. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="36" column="1" bodyfile="include/libssh/packet.h" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="enum" id="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_packet_filter_result_e</name>
+        <enumvalue id="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a618311af9fd8fd9bc61f4e382eca379f" prot="public">
+          <name>SSH_PACKET_UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a26cdb95e1d219acce014eb9ad06e0817" prot="public">
+          <name>SSH_PACKET_ALLOWED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a35e878ca14fd8367a03797f3a6f9ebbe" prot="public">
+          <name>SSH_PACKET_DENIED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="46" column="1" bodyfile="include/libssh/packet.h" bodystart="46" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="packet_8h_1a42c5e79123f934fcbd27e95e89e87274" prot="public" static="no">
+        <type>struct <ref refid="structpacket__struct" kindref="compound">packet_struct</ref></type>
+        <definition>typedef struct packet_struct PACKET</definition>
+        <argsstring></argsstring>
+        <name>PACKET</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="33" column="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_send</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_packet_send</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="52" column="5" bodyfile="src/packet.c" bodystart="1761" bodyend="1843" declfile="include/libssh/packet.h" declline="52" declcolumn="5"/>
+        <references refid="structssh__iterator_1a4cc4eb8c8599a487e7e3321d32a9e9cd" compoundref="misc_8h" startline="46">ssh_iterator::data</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5ff90d3dd515b46369142e0c75307be5" compoundref="session_8h" startline="141">ssh_session_struct::out_queue</references>
+        <references refid="packet_8c_1a1128b705f0ac99d1f2f8f4242a717902" compoundref="packet_8c" startline="1593" endline="1738">packet_send2</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a11a39eb26f7ea2110507e5acddbc7032" compoundref="ssh2_8h" startline="13">SSH2_MSG_NEWKEYS</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__misc_1ga4590c6ff62f0e6feb59e2e3152a6721f" compoundref="misc_8c" startline="724" endline="745">ssh_list_append</references>
+        <references refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" compoundref="misc_8c" startline="682" endline="686">ssh_list_get_iterator</references>
+        <references refid="misc_8h_1a8221bf821961617b90566035eb1a7760" compoundref="misc_8h" startline="81">ssh_list_pop_head</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="packet_8c_1a3e8caca6fe77588da415d5234e021404" compoundref="packet_8c" startline="1752" endline="1759">ssh_packet_in_rekey</references>
+        <references refid="packet_8c_1a2002b3a48e6d83016c0e741291fb0f07" compoundref="packet_8c" startline="1741" endline="1749">ssh_packet_is_kex</references>
+        <references refid="packet_8c_1ac428e05e42c8ce6fc90963d991c2e560" compoundref="packet_8c" startline="981" endline="1045">ssh_packet_need_rekey</references>
+        <references refid="kex_8h_1afc99d352c1a9c57936a7d13c4304e6e7" compoundref="kex_8c" startline="867" endline="912">ssh_send_rekex</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <referencedby refid="group__libssh__channel_1gaa3d6d7d4ab8191f8b8eb14464b0f0e1e" compoundref="channels_8c" startline="285" endline="367">channel_open</referencedby>
+        <referencedby refid="group__libssh__channel_1gaee35ccabe6998568d138d35f538765d9" compoundref="channels_8c" startline="1698" endline="1780">channel_request</referencedby>
+        <referencedby refid="group__libssh__channel_1ga918e9bde297309e977a872bc62c0d260" compoundref="channels_8c" startline="1376" endline="1517">channel_write_common</referencedby>
+        <referencedby refid="group__libssh__channel_1gac4fc789667578e8f0e2614f5274c9b5f" compoundref="channels_8c" startline="395" endline="440">grow_window</referencedby>
+        <referencedby refid="group__libssh__server_1gaa8a38b0ea0e5ee2bce17eab77dfc850c" compoundref="server_8c" startline="570" endline="620">ssh_auth_reply_default</referencedby>
+        <referencedby refid="group__libssh__server_1gace0de62d8bdae327069fd81fdb1861d5" compoundref="server_8c" startline="953" endline="994">ssh_auth_reply_success</referencedby>
+        <referencedby refid="group__libssh__channel_1ga238f07e0455456a5bfd8a49ead917732" compoundref="channels_8c" startline="1285" endline="1336">ssh_channel_close</referencedby>
+        <referencedby refid="group__libssh__channel_1ga072f82fdf3e50514f747653af2c99004" compoundref="channels_8c" startline="1224" endline="1270">ssh_channel_send_eof</referencedby>
+        <referencedby refid="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" compoundref="dh_8c" startline="310" endline="343">ssh_client_dh_init</referencedby>
+        <referencedby refid="dh-gex_8h_1a57cee2e32a1b20a5c188123e6a785094" compoundref="dh-gex_8c" startline="64" endline="98">ssh_client_dhgex_init</referencedby>
+        <referencedby refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</referencedby>
+        <referencedby refid="group__libssh__channel_1ga814cf8a82b4098b8994f9029fed572c0" compoundref="channels_8c" startline="2256" endline="2341">ssh_global_request</referencedby>
+        <referencedby refid="gssapi_8c_1a0d968052d37bd7b553c2f8de21fbe647" compoundref="gssapi_8c" startline="605" endline="634">ssh_gssapi_send_auth_mic</referencedby>
+        <referencedby refid="gssapi_8c_1a1fe21725a49d1d94598c783a7d951f5f" compoundref="gssapi_8c" startline="905" endline="945">ssh_gssapi_send_mic</referencedby>
+        <referencedby refid="group__libssh__server_1gaacbc31ce3b39ac93061164feec822c77" compoundref="server_8c" startline="847" endline="951">ssh_message_auth_interactive_request</referencedby>
+        <referencedby refid="group__libssh__server_1ga2ce88786e073b36991fc96c8f6b58c09" compoundref="server_8c" startline="1003" endline="1021">ssh_message_auth_reply_pk_ok</referencedby>
+        <referencedby refid="group__libssh__messages_1gabf37c510c2ba4f05bfc201b652af896c" compoundref="messages_8c" startline="1238" endline="1276">ssh_message_channel_request_open_reply_accept_channel</referencedby>
+        <referencedby refid="group__libssh__server_1gaf7984c469e61e9d5f05c80d967970a1c" compoundref="server_8c" startline="622" endline="641">ssh_message_channel_request_open_reply_default</referencedby>
+        <referencedby refid="group__libssh__server_1ga79d82cfe686f9389bc74b95533f976d7" compoundref="server_8c" startline="643" endline="668">ssh_message_channel_request_reply_default</referencedby>
+        <referencedby refid="group__libssh__messages_1ga4e277170f19e464918281cfe177df7e0" compoundref="messages_8c" startline="1441" endline="1471">ssh_message_channel_request_reply_success</referencedby>
+        <referencedby refid="group__libssh__server_1ga518a6b12d13cb2f4d74e261e43fc0129" compoundref="server_8c" startline="733" endline="749">ssh_message_global_request_reply_default</referencedby>
+        <referencedby refid="group__libssh__server_1ga9c09466e299aff371b2fba996054a6a2" compoundref="server_8c" startline="699" endline="731">ssh_message_global_request_reply_success</referencedby>
+        <referencedby refid="group__libssh__messages_1gacabc8164832ebb80ee2168b8c19c8a49" compoundref="messages_8c" startline="85" endline="96">ssh_message_reply_default</referencedby>
+        <referencedby refid="group__libssh__server_1gad0bd348b84300149f017f5abbaff38f5" compoundref="server_8c" startline="675" endline="697">ssh_message_service_reply_success</referencedby>
+        <referencedby refid="group__libssh__channel_1ga04a182f13550058a18b9ba97d8d63ded" compoundref="channels_8c" startline="692" endline="839">SSH_PACKET_CALLBACK</referencedby>
+        <referencedby refid="packet_8h_1ad89893827ccd1b738a1a3c3ee72d3b0b" compoundref="packet_8c" startline="1517" endline="1531">ssh_packet_send_unimplemented</referencedby>
+        <referencedby refid="group__libssh__session_1ga5ffa2201152e29cc680c4b8e4a3f4fdf" compoundref="session_8c" startline="905" endline="928">ssh_send_debug</referencedby>
+        <referencedby refid="group__libssh__session_1gab8827415fd19cf6cb64e7fc83c09e423" compoundref="session_8c" startline="870" endline="892">ssh_send_ignore</referencedby>
+        <referencedby refid="kex_8h_1a6c4425f4b80fc393d0c71ef488c240ba" compoundref="kex_8c" startline="805" endline="861">ssh_send_kex</referencedby>
+        <referencedby refid="group__libssh__server_1ga3d13039ae1fd46aa8c028401b62bd0af" compoundref="server_8c" startline="212" endline="248">ssh_server_send_extensions</referencedby>
+        <referencedby refid="libssh_8h_1abf8db7680a5214da800ad02d8599f073" compoundref="client_8c" startline="325" endline="370">ssh_service_request</referencedby>
+        <referencedby refid="group__libssh__auth_1ga691078be9ea2a55fed97c7488395af5a" compoundref="auth_8c" startline="726" endline="825">ssh_userauth_agent_publickey</referencedby>
+        <referencedby refid="group__libssh__auth_1gac689d3761c0dc4ebee9971ecc482d9a4" compoundref="auth_8c" startline="1424" endline="1480">ssh_userauth_kbdint_init</referencedby>
+        <referencedby refid="group__libssh__auth_1gaaa68e6aec2da509b246b7cba071408d3" compoundref="auth_8c" startline="1493" endline="1542">ssh_userauth_kbdint_send</referencedby>
+        <referencedby refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" compoundref="auth_8c" startline="406" endline="459">ssh_userauth_none</referencedby>
+        <referencedby refid="group__libssh__auth_1ga50c0c150f8c4703e7ee49b3e3e3ca215" compoundref="auth_8c" startline="1246" endline="1307">ssh_userauth_password</referencedby>
+        <referencedby refid="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" compoundref="auth_8c" startline="609" endline="723">ssh_userauth_publickey</referencedby>
+        <referencedby refid="group__libssh__auth_1ga592f673c4d417a6a46cd4876ac8287aa" compoundref="auth_8c" startline="489" endline="584">ssh_userauth_try_publickey</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a12119889d49098de21e9f348c6306eca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_unimplemented)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_unimplemented</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="54" column="1" bodyfile="src/packet.c" bodystart="1536" bodyend="1554" declfile="include/libssh/packet.h" declline="54" declcolumn="1"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="buffer_8h_1ab51014ef9a47e7cdbd235af3e62b81ee" compoundref="buffer_8h" startline="59">ssh_buffer_unpack</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a1c08cc9177a5598e0675abfb833d2993" compoundref="libssh_8h" startline="358">SSH_LOG_RARE</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a12e6bbab0c5a667e259e2f9599a72550" compoundref="libssh_8h" startline="346">SSH_LOG_WARNING</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1aa9b244813ff6d3c64845e6cf31354ecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_disconnect_callback)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_disconnect_callback</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="55" column="1" bodyfile="src/packet_cb.c" bodystart="48" bodyend="78" declfile="include/libssh/packet.h" declline="55" declcolumn="1"/>
+        <references refid="structssh__session__struct_1a729d3c7f6ae20cb5a00ac7cd28a630f7" compoundref="session_8h" startline="124">ssh_session_struct::alive</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__session__struct_1a6f74d1a1eb6ed715b1073b67caa18460" compoundref="session_8h" startline="147">ssh_session_struct::session_state</references>
+        <references refid="structssh__session__struct_1a3e64318ee32b9880aafbded46fabf81d" compoundref="session_8h" startline="111">ssh_session_struct::socket</references>
+        <references refid="buffer_8h_1ae9ba83ddeaf673b2d15be5312495ed7e">ssh_buffer_get_ssh_string</references>
+        <references refid="buffer_8h_1a71d2508b2ed54654c2fae5f0e4422a8f">ssh_buffer_get_u32</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="session_8h_1a9bbd1d5ae11485e27279be6ad461992ca855474fc84a2fb170fcb72546af8eeb8" compoundref="session_8h" startline="46">SSH_SESSION_STATE_ERROR</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="socket_8h_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="libssh_8h_1aa1070301a131ac0943da581a3ca6f71b">ssh_string_to_char</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1ae14823d082801bd94dc1bd0720da5338" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_ignore_callback)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_ignore_callback</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="56" column="1" bodyfile="src/packet_cb.c" bodystart="85" bodyend="93" declfile="include/libssh/packet.h" declline="56" declcolumn="1"/>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1ae42b1760b1580aa1e22b64b75cfb0bc9" compoundref="ssh2_8h" startline="5">SSH2_MSG_IGNORE</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1ad5d3d606b943f1dcfa3bb7fc2d157766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_dh_reply)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_dh_reply</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="57" column="1" declfile="include/libssh/packet.h" declline="57" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a0b1288dcd70b5599427dade8e4c26c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_newkeys)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_newkeys</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="58" column="1" bodyfile="src/packet_cb.c" bodystart="95" bodyend="175" declfile="include/libssh/packet.h" declline="58" declcolumn="1"/>
+        <references refid="structssh__session__struct_1a6a94fa11eb06ca18d3c0ac22a153f97f" compoundref="session_8h" startline="149">ssh_session_struct::dh_handshake_state</references>
+        <references refid="structssh__crypto__struct_1a53a57a0eaf6a4b1dfe3f0f6ab177f84d" compoundref="crypto_8h" startline="126">ssh_crypto_struct::dh_server_signature</references>
+        <references refid="session_8h_1a52a640f6094e9b3d1a88c7da7d08c802a01abdeced4b17007ee1ffdb54f5d70e2" compoundref="session_8h" startline="56">DH_STATE_FINISHED</references>
+        <references refid="session_8h_1a52a640f6094e9b3d1a88c7da7d08c802acdc6747ed91e2aa051a384618a831897" compoundref="session_8h" startline="55">DH_STATE_NEWKEYS_SENT</references>
+        <references refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" compoundref="crypto_8h" startline="127">ssh_crypto_struct::digest_len</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" compoundref="session_8h" startline="173">ssh_session_struct::next_crypto</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__crypto__struct_1af8fb6bb0ce4c2900556647dcaf6c377a" compoundref="crypto_8h" startline="129">ssh_crypto_struct::secret_hash</references>
+        <references refid="structssh__session__struct_1a755d8de10c092df25b802e357ee7d652" compoundref="session_8h" startline="115">ssh_session_struct::server</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__session__struct_1a6f74d1a1eb6ed715b1073b67caa18460" compoundref="session_8h" startline="147">ssh_session_struct::session_state</references>
+        <references refid="structssh__session__struct_1a4fdde3f498bcf3e0f118335278a8ec5a" compoundref="session_8h" startline="199">ssh_session_struct::ssh_connection_callback</references>
+        <references refid="group__libssh__session_1ga97ba6b7567dfd3814742a063e0d951e6" compoundref="dh_8c" startline="650" endline="653">ssh_dh_get_next_server_publickey</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa642dda9838782d3808b70c6e943c7a57" compoundref="libssh_8h" startline="145">SSH_HOSTKEYS</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="group__libssh__misc_1gaf3cfcc97538c099a8f3d2a8b9ac8c258" compoundref="misc_8c" startline="1435" endline="1458">ssh_match_group</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="packet_8h_1ab8efa43ad331ae38c5a72bea6b5f6a14" compoundref="packet_8c" startline="1877" endline="1994">ssh_packet_set_newkeys</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="group__libssh__pki_1ga02ef62122b1d2c3065e86413cc673704" compoundref="pki_8c" startline="2241" endline="2311">ssh_pki_import_signature_blob</references>
+        <references refid="group__libssh__pki_1gaf78ebf6bac541ad8a6de9b6509dc0fff" compoundref="pki_8c" startline="2403" endline="2484">ssh_pki_signature_verify</references>
+        <references refid="session_8h_1a9bbd1d5ae11485e27279be6ad461992ca1dcace0fedd97312d6829ecc526d3606" compoundref="session_8h" startline="43">SSH_SESSION_STATE_DH</references>
+        <references refid="session_8h_1a9bbd1d5ae11485e27279be6ad461992ca855474fc84a2fb170fcb72546af8eeb8" compoundref="session_8h" startline="46">SSH_SESSION_STATE_ERROR</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="group__libssh__pki_1ga428f0c9a085999e3e28e672d23a5bc55" compoundref="pki_8c" startline="705" endline="760">ssh_signature_free</references>
+        <references refid="libssh_8h_1a288b7786a401d82aa14f95bcaa10930b">ssh_string_burn</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="structssh__signature__struct_1a6b446edf211c74aae51004e5f07aeee7" compoundref="pki_8h" startline="92">ssh_signature_struct::type_c</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+        <references refid="structssh__session__struct_1a6023ca7ba47bbed4837f72bf9dde5948" compoundref="session_8h" startline="216">ssh_session_struct::wanted_methods</references>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a30ebdda521faf5818fb34111ab88e177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_service_accept)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_service_accept</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="59" column="1" bodyfile="src/packet_cb.c" bodystart="182" bodyend="192" declfile="include/libssh/packet.h" declline="59" declcolumn="1"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aab7e09fc6a20a6d7a91a3dfca3f2e0ad" compoundref="session_8h" startline="155">ssh_session_struct::service_state</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="auth_8h_1a6bb5186805ab418bffe24b2aee8b7bc7ab2152d82682a2dee4be662de238afc04" compoundref="auth_8h" startline="98">SSH_AUTH_SERVICE_ACCEPTED</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a68cb210a33a2415c35ebf75a9376ab56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_ext_info)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_ext_info</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="60" column="1" bodyfile="src/packet_cb.c" bodystart="199" bodyend="250" declfile="include/libssh/packet.h" declline="60" declcolumn="1"/>
+        <references refid="structssh__session__struct_1a2881b30666809faf781755e3ba827418" compoundref="session_8h" startline="132">ssh_session_struct::extensions</references>
+        <references refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" compoundref="samplesshd-kbdint_8c" startline="186">name</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="buffer_8h_1a71d2508b2ed54654c2fae5f0e4422a8f">ssh_buffer_get_u32</references>
+        <references refid="buffer_8h_1ab51014ef9a47e7cdbd235af3e62b81ee" compoundref="buffer_8h" startline="59">ssh_buffer_unpack</references>
+        <references refid="session_8h_1a047e80f4290d0129301e4dbf10903c40" compoundref="session_8h" startline="99">SSH_EXT_SIG_RSA_SHA256</references>
+        <references refid="session_8h_1a4002e4f8ce4c956ef89c3335f36c9c8e" compoundref="session_8h" startline="100">SSH_EXT_SIG_RSA_SHA512</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="group__libssh__misc_1gaf3cfcc97538c099a8f3d2a8b9ac8c258" compoundref="misc_8c" startline="1435" endline="1458">ssh_match_group</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1ad89893827ccd1b738a1a3c3ee72d3b0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_send_unimplemented</definition>
+        <argsstring>(ssh_session session, uint32_t seqnum)</argsstring>
+        <name>ssh_packet_send_unimplemented</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>seqnum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="66" column="5" bodyfile="src/packet.c" bodystart="1517" bodyend="1531" declfile="include/libssh/packet.h" declline="66" declcolumn="5"/>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a46d43adb3ea457b1d3f51fc9d5ac9787" compoundref="ssh2_8h" startline="6">SSH2_MSG_UNIMPLEMENTED</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="packet_8c_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <referencedby refid="packet_8h_1a2aab95b1998dbe9a6c525ba265768f52" compoundref="packet_8c" startline="1461" endline="1509">ssh_packet_process</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a4ec4b01a4f8c4c15be76894c9837552b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_parse_type</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_packet_parse_type</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="67" column="5" declfile="include/libssh/packet.h" declline="67" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_socket_callback</definition>
+        <argsstring>(const void *data, size_t len, void *user)</argsstring>
+        <name>ssh_packet_socket_callback</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="70" column="5" bodyfile="src/packet.c" bodystart="1059" bodyend="1389" declfile="include/libssh/packet.h" declline="70" declcolumn="5"/>
+        <references refid="structssh__cipher__struct_1ae84941eebb4663ebdd2847512a5ff7be" compoundref="crypto_8h" startline="185">ssh_cipher_struct::blocks</references>
+        <references refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" compoundref="crypto_8h" startline="159">ssh_cipher_struct::blocksize</references>
+        <references refid="priv_8h_1a24b7c78b84d04a0850b20cd70770b20c" compoundref="gzip_8c" startline="212" endline="232">decompress_buffer</references>
+        <references refid="structssh__crypto__struct_1a9322f181b21f808d19918940335ecf40" compoundref="crypto_8h" startline="143">ssh_crypto_struct::do_compress_in</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="priv_8h_1a38dadd06badcc5b7cca444a551604399" compoundref="priv_8h" startline="404">FALL_THROUGH</references>
+        <references refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" compoundref="wrapper_8c" startline="76" endline="93">hmac_digest_len</references>
+        <references refid="structssh__session__struct_1a0fdb53c794a3173557463030583b2079" compoundref="session_8h" startline="138">ssh_session_struct::in_buffer</references>
+        <references refid="structssh__counter__struct_1a4fb86ab2536688750c960f58ac414c79" compoundref="libssh_8h" startline="109">ssh_counter_struct::in_bytes</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="structssh__crypto__struct_1ad913f3f3dc8a8a699a28a8f575ebb73c" compoundref="crypto_8h" startline="139">ssh_crypto_struct::in_hmac_etm</references>
+        <references refid="structssh__session__struct_1a99003e5c5ec1ee11774a4b2d1b563ff9" compoundref="session_8h" startline="139">ssh_session_struct::in_packet</references>
+        <references refid="structssh__counter__struct_1ad8cc316b7f0602f928d8b7bd11871228" compoundref="libssh_8h" startline="111">ssh_counter_struct::in_packets</references>
+        <references refid="structpacket__struct_1a238e1d59ddf72bcb508d0c78334ea43e" compoundref="packet_8h" startline="31">packet_struct::len</references>
+        <references refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" compoundref="crypto_8h" startline="161">ssh_cipher_struct::lenfield_blocksize</references>
+        <references refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" compoundref="torture__packet_8c" startline="21">mac</references>
+        <references refid="priv_8h_1a65f2af54195a74dd91a96ddb0254dbf8" compoundref="priv_8h" startline="176">MAX_PACKET_LEN</references>
+        <references refid="structssh__session__struct_1ac4d0cca7d0f856b16d7c42f2c16d4aab" compoundref="session_8h" startline="148">ssh_session_struct::packet_state</references>
+        <references refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a1444df7be43fcfb6c1773b1e7e191340" compoundref="packet_8h" startline="38">PACKET_STATE_INIT</references>
+        <references refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41359dd99639d2309767e0d897607b53" compoundref="packet_8h" startline="43">PACKET_STATE_PROCESSING</references>
+        <references refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41c80441cffae62d2fa695a1026becab" compoundref="packet_8h" startline="40">PACKET_STATE_SIZEREAD</references>
+        <references refid="structssh__cipher__struct_1a6890988b9566b6be4bf43ef1e7241d43" compoundref="crypto_8h" startline="184">ssh_cipher_struct::packets</references>
+        <references refid="priv_8h_1a9a1a185142f0e05d19758ac524f862e2" compoundref="priv_8h" startline="165">PRIdS</references>
+        <references refid="bytearray_8h_1a57d4b95f40e0911596700b72c15698f3" compoundref="bytearray_8h" startline="70">PULL_BE_U32</references>
+        <references refid="structssh__session__struct_1ae076d146578d5505d0581fe5334aaa7c" compoundref="session_8h" startline="238">ssh_session_struct::raw_counter</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" compoundref="session_8h" startline="119">ssh_session_struct::recv_seq</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__session__struct_1a6f74d1a1eb6ed715b1073b67caa18460" compoundref="session_8h" startline="147">ssh_session_struct::session_state</references>
+        <references refid="group__libssh__buffer_1gad4991b9eadf8b81401c032bf38ab7094" compoundref="buffer_8c" startline="366" endline="390">ssh_buffer_allocate</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="buffer_8h_1ad47ec3aec619c88af7bc8fcf641235d8">ssh_buffer_get_u8</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="buffer_8h_1a226d198c4274fac7c354b6a340049d47">ssh_buffer_pass_bytes</references>
+        <references refid="buffer_8h_1a78b91f9aa24560b1ab384ba0f98ca795">ssh_buffer_pass_bytes_end</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a26cdb95e1d219acce014eb9ad06e0817" compoundref="packet_8h" startline="48">SSH_PACKET_ALLOWED</references>
+        <references refid="packet_8h_1aa19ecc7edefcb9b60f1ec4da8ace2f44" compoundref="packet__crypt_8c" startline="92" endline="131">ssh_packet_decrypt</references>
+        <references refid="packet_8h_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" compoundref="packet__crypt_8c" startline="52" endline="84">ssh_packet_decrypt_len</references>
+        <references refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a35e878ca14fd8367a03797f3a6f9ebbe" compoundref="packet_8h" startline="49">SSH_PACKET_DENIED</references>
+        <references refid="packet_8c_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <references refid="packet_8h_1ac2d06d0933eb913e406778647fd6d28a">ssh_packet_hmac_verify</references>
+        <references refid="packet_8c_1af26b1a85a19956076cdc3304ab5fcac4" compoundref="packet_8c" startline="140" endline="931">ssh_packet_incoming_filter</references>
+        <references refid="packet_8c_1ac428e05e42c8ce6fc90963d991c2e560" compoundref="packet_8c" startline="981" endline="1045">ssh_packet_need_rekey</references>
+        <references refid="packet_8c_1ab88f1118936e7dfb2f9ed8fbbf278c35" compoundref="packet_8c" startline="1559" endline="1577">ssh_packet_parse_type</references>
+        <references refid="packet_8c_1a2aab95b1998dbe9a6c525ba265768f52" compoundref="packet_8c" startline="1461" endline="1509">ssh_packet_process</references>
+        <references refid="packet_8c_1ad89893827ccd1b738a1a3c3ee72d3b0b" compoundref="packet_8c" startline="1517" endline="1531">ssh_packet_send_unimplemented</references>
+        <references refid="packet_8c_1a87399b1febdbb634eb88c722f71e2829" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</references>
+        <references refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a618311af9fd8fd9bc61f4e382eca379f" compoundref="packet_8h" startline="47">SSH_PACKET_UNKNOWN</references>
+        <references refid="kex_8h_1afc99d352c1a9c57936a7d13c4304e6e7" compoundref="kex_8c" startline="867" endline="912">ssh_send_rekex</references>
+        <references refid="session_8h_1a9bbd1d5ae11485e27279be6ad461992ca855474fc84a2fb170fcb72546af8eeb8" compoundref="session_8h" startline="46">SSH_SESSION_STATE_ERROR</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structpacket__struct_1a58b2b75a88370a343bcc3bd12c09e6b8" compoundref="packet_8h" startline="32">packet_struct::type</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+        <referencedby refid="packet_8c_1a2b98f7c23a7c0a673c3b34190bc4a9a9" compoundref="packet_8c" startline="1415" endline="1421">ssh_packet_register_socket_callback</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+        <referencedby refid="group__libssh__server_1ga6b0057a0346a87ddd9b57bfbbc580d4d" compoundref="server_8c" startline="338" endline="449">ssh_server_connection_callback</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1aca955bacc5c633c212bdb61e1b43a1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_packet_register_socket_callback</definition>
+        <argsstring>(ssh_session session, struct ssh_socket_struct *s)</argsstring>
+        <name>ssh_packet_register_socket_callback</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="71" column="6" declfile="include/libssh/packet.h" declline="71" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1gafa8d153635a261e97870ab71d570149a" compoundref="client_8c" startline="384" endline="478">ssh_client_connection_callback</referencedby>
+        <referencedby refid="group__libssh__server_1ga6b0057a0346a87ddd9b57bfbbc580d4d" compoundref="server_8c" startline="338" endline="449">ssh_server_connection_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a6799ed6886c75279d61dcacd83b71102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_packet_set_callbacks</definition>
+        <argsstring>(ssh_session session, ssh_packet_callbacks callbacks)</argsstring>
+        <name>ssh_packet_set_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1ga054d78af294e4464447de75aceaffc8a" kindref="member">ssh_packet_callbacks</ref></type>
+          <declname>callbacks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="72" column="6" bodyfile="src/packet.c" bodystart="1426" bodyend="1433" declfile="include/libssh/packet.h" declline="72" declcolumn="6"/>
+        <references refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" compoundref="test__socket_8c" startline="63">callbacks</references>
+        <references refid="structssh__session__struct_1aa8015dc026c4aee3133a6f0f9e31c9dd" compoundref="session_8h" startline="201">ssh_session_struct::packet_callbacks</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__misc_1ga4590c6ff62f0e6feb59e2e3152a6721f" compoundref="misc_8c" startline="724" endline="745">ssh_list_append</references>
+        <references refid="group__libssh__misc_1ga4c696e6fd38257737962971fa0362435" compoundref="misc_8c" startline="661" endline="667">ssh_list_new</references>
+        <referencedby refid="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" compoundref="dh_8c" startline="310" endline="343">ssh_client_dh_init</referencedby>
+        <referencedby refid="dh-gex_8h_1a57cee2e32a1b20a5c188123e6a785094" compoundref="dh-gex_8c" startline="64" endline="98">ssh_client_dhgex_init</referencedby>
+        <referencedby refid="packet_8h_1a2e88eac5d0547fdb7f03830adce9c4d2" compoundref="packet_8c" startline="1449" endline="1455">ssh_packet_set_default_callbacks</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a5316a06c44092abfd23e925958291724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_packet_remove_callbacks</definition>
+        <argsstring>(ssh_session session, ssh_packet_callbacks callbacks)</argsstring>
+        <name>ssh_packet_remove_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1ga054d78af294e4464447de75aceaffc8a" kindref="member">ssh_packet_callbacks</ref></type>
+          <declname>callbacks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="73" column="6" bodyfile="src/packet.c" bodystart="1438" bodyend="1444" declfile="include/libssh/packet.h" declline="73" declcolumn="6"/>
+        <references refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" compoundref="test__socket_8c" startline="63">callbacks</references>
+        <references refid="structssh__session__struct_1aa8015dc026c4aee3133a6f0f9e31c9dd" compoundref="session_8h" startline="201">ssh_session_struct::packet_callbacks</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__misc_1ga7a929a68f02650d474604a10252afd68" compoundref="misc_8c" startline="688" endline="694">ssh_list_find</references>
+        <references refid="group__libssh__misc_1gac862429660a1f93dcf625d08f407b85e" compoundref="misc_8c" startline="771" endline="798">ssh_list_remove</references>
+        <referencedby refid="dh-gex_8c_1ad98b52f0ed8073797ee1a72b60591822" compoundref="dh-gex_8c" startline="241" endline="300">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a2e88eac5d0547fdb7f03830adce9c4d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_packet_set_default_callbacks</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_packet_set_default_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="74" column="6" bodyfile="src/packet.c" bodystart="1449" bodyend="1455" declfile="include/libssh/packet.h" declline="74" declcolumn="6"/>
+        <references refid="structssh__packet__callbacks__struct_1a7a8584b3767b61599429dbb00b414c8e" compoundref="callbacks_8h" startline="539">ssh_packet_callbacks_struct::callbacks</references>
+        <references refid="structssh__session__struct_1aa587e9a68614904353e14d7beb6fe2e7" compoundref="session_8h" startline="200">ssh_session_struct::default_packet_callbacks</references>
+        <references refid="packet_8c_1a31fe2a377778c28e5b958b2192db843b" compoundref="packet_8c" startline="53">default_packet_handlers</references>
+        <references refid="structssh__packet__callbacks__struct_1ac397c97bcc42cf8086284c41bcce6f41" compoundref="callbacks_8h" startline="537">ssh_packet_callbacks_struct::n_callbacks</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="packet_8c_1a6799ed6886c75279d61dcacd83b71102" compoundref="packet_8c" startline="1426" endline="1433">ssh_packet_set_callbacks</references>
+        <references refid="structssh__packet__callbacks__struct_1a201c7e7d4e51e22d2367b7266baa8ba6" compoundref="callbacks_8h" startline="535">ssh_packet_callbacks_struct::start</references>
+        <references refid="structssh__packet__callbacks__struct_1a97ff2eac26aa772d8cbdb4efa7f94d1d" compoundref="callbacks_8h" startline="543">ssh_packet_callbacks_struct::user</references>
+        <referencedby refid="group__libssh__session_1gafa8d153635a261e97870ab71d570149a" compoundref="client_8c" startline="384" endline="478">ssh_client_connection_callback</referencedby>
+        <referencedby refid="group__libssh__server_1ga6b0057a0346a87ddd9b57bfbbc580d4d" compoundref="server_8c" startline="338" endline="449">ssh_server_connection_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a2aab95b1998dbe9a6c525ba265768f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_packet_process</definition>
+        <argsstring>(ssh_session session, uint8_t type)</argsstring>
+        <name>ssh_packet_process</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="75" column="6" bodyfile="src/packet.c" bodystart="1461" bodyend="1509" declfile="include/libssh/packet.h" declline="75" declcolumn="6"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="structssh__session__struct_1a0fdb53c794a3173557463030583b2079" compoundref="session_8h" startline="138">ssh_session_struct::in_buffer</references>
+        <references refid="structssh__iterator_1a7fd7219325e56f365796ad59c8443ee5" compoundref="misc_8h" startline="45">ssh_iterator::next</references>
+        <references refid="structssh__session__struct_1aa8015dc026c4aee3133a6f0f9e31c9dd" compoundref="session_8h" startline="201">ssh_session_struct::packet_callbacks</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" compoundref="session_8h" startline="119">ssh_session_struct::recv_seq</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="misc_8h_1a1f44c71b6f7ba10a4a543f73a07a85aa" compoundref="misc_8h" startline="73">ssh_iterator_value</references>
+        <references refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" compoundref="misc_8c" startline="682" endline="686">ssh_list_get_iterator</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="libssh_8h_1a1c08cc9177a5598e0675abfb833d2993" compoundref="libssh_8h" startline="358">SSH_LOG_RARE</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__callbacks_1ga4766917128a12b646a8aee7ebc019f8c" compoundref="callbacks_8h" startline="520">SSH_PACKET_NOT_USED</references>
+        <references refid="packet_8c_1ad89893827ccd1b738a1a3c3ee72d3b0b" compoundref="packet_8c" startline="1517" endline="1531">ssh_packet_send_unimplemented</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ssh_packet_decrypt_len</definition>
+        <argsstring>(ssh_session session, uint8_t *destination, uint8_t *source)</argsstring>
+        <name>ssh_packet_decrypt_len</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="78" column="10" bodyfile="src/packet_crypt.c" bodystart="52" bodyend="84" declfile="include/libssh/packet.h" declline="78" declcolumn="10"/>
+        <references refid="structssh__cipher__struct_1a5c04d29dfbff7827a8262519ac39f186" compoundref="crypto_8h" startline="201">ssh_cipher_struct::aead_decrypt_length</references>
+        <references refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" compoundref="crypto_8h" startline="159">ssh_cipher_struct::blocksize</references>
+        <references refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" compoundref="libssh__scp_8c" startline="27">destination</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" compoundref="crypto_8h" startline="161">ssh_cipher_struct::lenfield_blocksize</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" compoundref="session_8h" startline="119">ssh_session_struct::recv_seq</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="packet__crypt_8c_1aa19ecc7edefcb9b60f1ec4da8ace2f44" compoundref="packet__crypt_8c" startline="92" endline="131">ssh_packet_decrypt</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1aa19ecc7edefcb9b60f1ec4da8ace2f44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_decrypt</definition>
+        <argsstring>(ssh_session session, uint8_t *destination, uint8_t *source, size_t start, size_t encrypted_size)</argsstring>
+        <name>ssh_packet_decrypt</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>encrypted_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="79" column="5" bodyfile="src/packet_crypt.c" bodystart="92" bodyend="131" declfile="include/libssh/packet.h" declline="79" declcolumn="5"/>
+        <references refid="structssh__cipher__struct_1adedafb388df68e105e05626aca1bf1fb" compoundref="crypto_8h" startline="203">ssh_cipher_struct::aead_decrypt</references>
+        <references refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" compoundref="crypto_8h" startline="159">ssh_cipher_struct::blocksize</references>
+        <references refid="structssh__cipher__struct_1a6f5ac62ef491ca0caa5950573d344e3d" compoundref="crypto_8h" startline="195">ssh_cipher_struct::decrypt</references>
+        <references refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" compoundref="libssh__scp_8c" startline="27">destination</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="priv_8h_1a9a1a185142f0e05d19758ac524f862e2" compoundref="priv_8h" startline="165">PRIdS</references>
+        <references refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" compoundref="session_8h" startline="119">ssh_session_struct::recv_seq</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="packet_8h_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" compoundref="packet__crypt_8c" startline="52" endline="84">ssh_packet_decrypt_len</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1acc1815c6b07c5bca47d51f5c38e98738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ssh_packet_encrypt</definition>
+        <argsstring>(ssh_session session, void *packet, unsigned int len)</argsstring>
+        <name>ssh_packet_encrypt</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>packet</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="81" column="15" declfile="include/libssh/packet.h" declline="81" declcolumn="15"/>
+        <referencedby refid="packet_8c_1a1128b705f0ac99d1f2f8f4242a717902" compoundref="packet_8c" startline="1593" endline="1738">packet_send2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1ac2d06d0933eb913e406778647fd6d28a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_hmac_verify</definition>
+        <argsstring>(ssh_session session, const void *data, size_t len, unsigned char *mac, enum ssh_hmac_e type)</argsstring>
+        <name>ssh_packet_hmac_verify</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>mac</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="84" column="5" declfile="include/libssh/packet.h" declline="84" declcolumn="5"/>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1ab8efa43ad331ae38c5a72bea6b5f6a14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_set_newkeys</definition>
+        <argsstring>(ssh_session session, enum ssh_crypto_direction_e direction)</argsstring>
+        <name>ssh_packet_set_newkeys</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" kindref="member">ssh_crypto_direction_e</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="86" column="5" bodyfile="src/packet.c" bodystart="1877" bodyend="1994" declfile="include/libssh/packet.h" declline="86" declcolumn="5"/>
+        <references refid="structssh__session__struct_1a069c421febb9eb1346a9117b5ec2b166" compoundref="session_8h" startline="116">ssh_session_struct::client</references>
+        <references refid="wrapper_8h_1aa5c258d97a1e3278fdc43a09a4970fab" compoundref="wrapper_8c" startline="379" endline="382">crypt_set_algorithms_client</references>
+        <references refid="wrapper_8h_1a9cea366077f4498746e7e448cf21ac0d" compoundref="wrapper_8c" startline="161" endline="231">crypto_free</references>
+        <references refid="wrapper_8h_1a0a3d255d6f354747a39476981074b8f3" compoundref="wrapper_8c" startline="150" endline="159">crypto_new</references>
+        <references refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" compoundref="session_8h" startline="172">ssh_session_struct::current_crypto</references>
+        <references refid="structssh__crypto__struct_1aa8fb59be5dd1a66f39429dd322fd6daa" compoundref="crypto_8h" startline="131">ssh_crypto_struct::decryptIV</references>
+        <references refid="structssh__crypto__struct_1abb583ba8e6dfc2e927a6af51dd450f3a" compoundref="crypto_8h" startline="132">ssh_crypto_struct::decryptkey</references>
+        <references refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" compoundref="crypto_8h" startline="127">ssh_crypto_struct::digest_len</references>
+        <references refid="structssh__crypto__struct_1af61cb0b00eb8b0e312e161754f7fffc5" compoundref="crypto_8h" startline="130">ssh_crypto_struct::encryptIV</references>
+        <references refid="structssh__crypto__struct_1aac421535e1ea3e781710d3e659f692f2" compoundref="crypto_8h" startline="133">ssh_crypto_struct::encryptkey</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="structssh__session__struct_1afb7bfa279757e16ea0ddd8b486e94541" compoundref="session_8h" startline="120">ssh_session_struct::last_rekey_time</references>
+        <references refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" compoundref="session_8h" startline="173">ssh_session_struct::next_crypto</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" compoundref="crypto_8h" startline="137">ssh_crypto_struct::out_cipher</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__session__struct_1ab76b763f42370c169e5a7fbf478ae189" compoundref="session_8h" startline="234">ssh_session_struct::rekey_time</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__crypto__struct_1aedb3b1ec9ca06a1c4c82d965b7ef0577" compoundref="crypto_8h" startline="128">ssh_crypto_struct::session_id</references>
+        <references refid="structssh__cipher__struct_1a0d68a1551beb7cfc87dafc4baa55afc4" compoundref="crypto_8h" startline="190">ssh_cipher_struct::set_decrypt_key</references>
+        <references refid="structssh__cipher__struct_1a8da59bd29bd79509cb37e0fa20fb91ac" compoundref="crypto_8h" startline="189">ssh_cipher_struct::set_encrypt_key</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9af69cd5e570bff317e82374ba8100e2d4" compoundref="wrapper_8h" startline="62">SSH_DIRECTION_BOTH</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" compoundref="wrapper_8h" startline="61">SSH_DIRECTION_OUT</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="kex_8h_1ad66e7a0891466620e0722fe19aaff9f8" compoundref="kex_8c" startline="1281" endline="1411">ssh_generate_session_keys</references>
+        <references refid="packet_8c_1a0375fc0b2f8e59aee186315dd331f348" compoundref="packet_8c" startline="1846" endline="1870">ssh_init_rekey_state</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a12e6bbab0c5a667e259e2f9599a72550" compoundref="libssh_8h" startline="346">SSH_LOG_WARNING</references>
+        <references refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="group__libssh__misc_1gaaa0c97f49044d29f2a3b5b3ae82979ff" compoundref="misc_8c" startline="1324" endline="1335">ssh_timestamp_init</references>
+        <references refid="structssh__crypto__struct_1a6f46e71537e628ed33cdc3719df9a3ad" compoundref="crypto_8h" startline="154">ssh_crypto_struct::used</references>
+        <referencedby refid="packet_8c_1a1128b705f0ac99d1f2f8f4242a717902" compoundref="packet_8c" startline="1593" endline="1738">packet_send2</referencedby>
+        <referencedby refid="packet_8h_1a0b1288dcd70b5599427dade8e4c26c91" compoundref="packet__cb_8c" startline="95" endline="175">SSH_PACKET_CALLBACK</referencedby>
+        <referencedby refid="group__libssh__server_1ga6b0057a0346a87ddd9b57bfbbc580d4d" compoundref="server_8c" startline="338" endline="449">ssh_server_connection_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+        <definition>struct ssh_crypto_struct* ssh_packet_get_current_crypto</definition>
+        <argsstring>(ssh_session session, enum ssh_crypto_direction_e direction)</argsstring>
+        <name>ssh_packet_get_current_crypto</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" kindref="member">ssh_crypto_direction_e</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/packet.h" line="88" column="24" bodyfile="src/packet.c" bodystart="939" bodyend="977" declfile="include/libssh/packet.h" declline="88" declcolumn="24"/>
+        <references refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" compoundref="session_8h" startline="172">ssh_session_struct::current_crypto</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" compoundref="session_8h" startline="173">ssh_session_struct::next_crypto</references>
+        <references refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" compoundref="crypto_8h" startline="137">ssh_crypto_struct::out_cipher</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9af69cd5e570bff317e82374ba8100e2d4" compoundref="wrapper_8h" startline="62">SSH_DIRECTION_BOTH</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" compoundref="wrapper_8h" startline="61">SSH_DIRECTION_OUT</references>
+        <references refid="structssh__crypto__struct_1a6f46e71537e628ed33cdc3719df9a3ad" compoundref="crypto_8h" startline="154">ssh_crypto_struct::used</references>
+        <referencedby refid="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" compoundref="gzip_8c" startline="58" endline="107">gzip_compress</referencedby>
+        <referencedby refid="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" compoundref="gzip_8c" startline="153" endline="210">gzip_decompress</referencedby>
+        <referencedby refid="packet_8c_1a1128b705f0ac99d1f2f8f4242a717902" compoundref="packet_8c" startline="1593" endline="1738">packet_send2</referencedby>
+        <referencedby refid="group__libssh__server_1gace0de62d8bdae327069fd81fdb1861d5" compoundref="server_8c" startline="953" endline="994">ssh_auth_reply_success</referencedby>
+        <referencedby refid="gssapi_8c_1ab20687e6a2c7c3d2c0871b39fba02564" compoundref="gssapi_8c" startline="449" endline="481">ssh_gssapi_build_mic</referencedby>
+        <referencedby refid="group__libssh__auth_1gadbd916c2423b2097647263645e0dd422" compoundref="auth_8c" startline="286" endline="317">SSH_PACKET_CALLBACK</referencedby>
+        <referencedby refid="packet_8h_1aa19ecc7edefcb9b60f1ec4da8ace2f44" compoundref="packet__crypt_8c" startline="92" endline="131">ssh_packet_decrypt</referencedby>
+        <referencedby refid="packet_8h_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" compoundref="packet__crypt_8c" startline="52" endline="84">ssh_packet_decrypt_len</referencedby>
+        <referencedby refid="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" compoundref="packet__crypt_8c" startline="133" endline="213">ssh_packet_encrypt</referencedby>
+        <referencedby refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" compoundref="packet__crypt_8c" startline="239" endline="283">ssh_packet_hmac_verify</referencedby>
+        <referencedby refid="packet_8c_1ac428e05e42c8ce6fc90963d991c2e560" compoundref="packet_8c" startline="981" endline="1045">ssh_packet_need_rekey</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+        <referencedby refid="group__libssh__pki_1gab366c5e63b468061d201397939bc6a82" compoundref="pki_8c" startline="2511" endline="2582">ssh_pki_do_sign</referencedby>
+        <referencedby refid="group__libssh__pki_1ga030b5e767d97bd26053a5644b083c133" compoundref="pki_8c" startline="2585" endline="2633">ssh_pki_do_sign_agent</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PACKET_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PACKET_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wrapper_8h" kindref="compound">libssh/wrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>this<sp/>structure<sp/>should<sp/>go<sp/>someday<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structpacket__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpacket__struct" kindref="compound">packet_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="structpacket__struct_1ae2c939b6c24306d9f85a22298df3cc10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpacket__struct_1ae2c939b6c24306d9f85a22298df3cc10" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="31" refid="structpacket__struct_1a238e1d59ddf72bcb508d0c78334ea43e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpacket__struct_1a238e1d59ddf72bcb508d0c78334ea43e" kindref="member">len</ref>;</highlight></codeline>
+<codeline lineno="32" refid="structpacket__struct_1a58b2b75a88370a343bcc3bd12c09e6b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structpacket__struct_1a58b2b75a88370a343bcc3bd12c09e6b8" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="33" refid="packet_8h_1a42c5e79123f934fcbd27e95e89e87274" refkind="member"><highlight class="normal">}<sp/><ref refid="packet_8h_1a42c5e79123f934fcbd27e95e89e87274" kindref="member">PACKET</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86" kindref="member">ssh_packet_state_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a1444df7be43fcfb6c1773b1e7e191340" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a1444df7be43fcfb6c1773b1e7e191340" kindref="member">PACKET_STATE_INIT</ref>,</highlight></codeline>
+<codeline lineno="40" refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41c80441cffae62d2fa695a1026becab" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41c80441cffae62d2fa695a1026becab" kindref="member">PACKET_STATE_SIZEREAD</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41359dd99639d2309767e0d897607b53" kindref="member">PACKET_STATE_PROCESSING</ref></highlight></codeline>
+<codeline lineno="44" refid="packet_8h_1acec1023e26d01be724eb18fa104c3b86a41359dd99639d2309767e0d897607b53" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865" kindref="member">ssh_packet_filter_result_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="47" refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a618311af9fd8fd9bc61f4e382eca379f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a618311af9fd8fd9bc61f4e382eca379f" kindref="member">SSH_PACKET_UNKNOWN</ref>,</highlight></codeline>
+<codeline lineno="48" refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a26cdb95e1d219acce014eb9ad06e0817" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a26cdb95e1d219acce014eb9ad06e0817" kindref="member">SSH_PACKET_ALLOWED</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a35e878ca14fd8367a03797f3a6f9ebbe" kindref="member">SSH_PACKET_DENIED</ref></highlight></codeline>
+<codeline lineno="50" refid="packet_8h_1aa7a364fe95de9c66d364e3c09e31b865a35e878ca14fd8367a03797f3a6f9ebbe" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" kindref="member">ssh_packet_send</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_unimplemented);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_disconnect_callback);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_ignore_callback);</highlight></codeline>
+<codeline lineno="57" refid="packet_8h_1ad5d3d606b943f1dcfa3bb7fc2d157766" refkind="member"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_dh_reply);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_newkeys);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_service_accept);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_ext_info);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_SERVER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="packet_8h_1a12119889d49098de21e9f348c6306eca" kindref="member">SSH_PACKET_CALLBACK</ref>(ssh_packet_kexdh_init);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1ad89893827ccd1b738a1a3c3ee72d3b0b" kindref="member">ssh_packet_send_unimplemented</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>uint32_t<sp/>seqnum);</highlight></codeline>
+<codeline lineno="67" refid="packet_8h_1a4ec4b01a4f8c4c15be76894c9837552b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1a4ec4b01a4f8c4c15be76894c9837552b" kindref="member">ssh_packet_parse_type</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//int<sp/>packet_flush(ssh_session<sp/>session,<sp/>int<sp/>enforce_blocking);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" kindref="member">ssh_packet_socket_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>);</highlight></codeline>
+<codeline lineno="71" refid="packet_8h_1aca955bacc5c633c212bdb61e1b43a1a2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1aca955bacc5c633c212bdb61e1b43a1a2" kindref="member">ssh_packet_register_socket_callback</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref><sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1a6799ed6886c75279d61dcacd83b71102" kindref="member">ssh_packet_set_callbacks</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__packet__callbacks__struct" kindref="compound">ssh_packet_callbacks</ref><sp/><ref refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" kindref="member">callbacks</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1a5316a06c44092abfd23e925958291724" kindref="member">ssh_packet_remove_callbacks</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__packet__callbacks__struct" kindref="compound">ssh_packet_callbacks</ref><sp/><ref refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" kindref="member">callbacks</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1a2e88eac5d0547fdb7f03830adce9c4d2" kindref="member">ssh_packet_set_default_callbacks</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1a2aab95b1998dbe9a6c525ba265768f52" kindref="member">ssh_packet_process</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>uint8_t<sp/>type);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PACKET<sp/>CRYPT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">uint32_t<sp/><ref refid="packet_8h_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" kindref="member">ssh_packet_decrypt_len</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>uint8_t<sp/>*<ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,<sp/>uint8_t<sp/>*source);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1aa19ecc7edefcb9b60f1ec4da8ace2f44" kindref="member">ssh_packet_decrypt</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>uint8_t<sp/>*<ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,<sp/>uint8_t<sp/>*source,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>encrypted_size);</highlight></codeline>
+<codeline lineno="81" refid="packet_8h_1acc1815c6b07c5bca47d51f5c38e98738" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="packet_8h_1acc1815c6b07c5bca47d51f5c38e98738" kindref="member">ssh_packet_encrypt</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*packet,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="84" refid="packet_8h_1ac2d06d0933eb913e406778647fd6d28a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1ac2d06d0933eb913e406778647fd6d28a" kindref="member">ssh_packet_hmac_verify</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>type);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet_8h_1ab8efa43ad331ae38c5a72bea6b5f6a14" kindref="member">ssh_packet_set_newkeys</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" kindref="member">ssh_crypto_direction_e</ref><sp/>direction);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*<ref refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" kindref="member">ssh_packet_get_current_crypto</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" kindref="member">ssh_crypto_direction_e</ref><sp/>direction);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PACKET_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/packet.h"/>
+  </compounddef>
+</doxygen>

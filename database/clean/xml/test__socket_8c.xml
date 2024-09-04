@@ -1,0 +1,658 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="test__socket_8c" kind="file" language="C++">
+    <compoundname>test_socket.c</compoundname>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes refid="callbacks_8h" local="no">libssh/callbacks.h</includes>
+    <includes refid="socket_8h" local="no">libssh/socket.h</includes>
+    <includes refid="poll_8h" local="no">libssh/poll.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>sys/select.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="14">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tests/test_socket.c</label>
+        <link refid="test__socket_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>netdb.h</label>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="2">
+        <label>unistd.h</label>
+      </node>
+      <node id="16">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int stop</definition>
+        <argsstring></argsstring>
+        <name>stop</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="33" column="5" bodyfile="tests/test_socket.c" bodystart="33" bodyend="-1"/>
+        <referencedby refid="test__socket_8c_1a3503f27f26034445ce38baa5e0ac3e8c" compoundref="test__socket_8c" startline="49" endline="52">exception</referencedby>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" prot="public" static="no" mutable="no">
+        <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+        <definition>ssh_socket s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="34" column="12" bodyfile="tests/test_socket.c" bodystart="34" bodyend="-1"/>
+        <referencedby refid="torture__auth_8c_1abf2a7fa8bf5a32f9035b1fd98dc146bb" compoundref="torture__auth_8c" startline="103" endline="155">agent_setup</referencedby>
+        <referencedby refid="torture__client__global__requests_8c_1af5545d548930acf58deb2c6d1d830cf9" compoundref="torture__client__global__requests_8c" startline="91" endline="107">authenticate</referencedby>
+        <referencedby refid="ssh__client_8c_1a8b8ff3289e057f1b391476c5c4b71178" compoundref="ssh__client_8c" startline="290" endline="316">batch_shell</referencedby>
+        <referencedby refid="group__libssh__server_1ga4992f5130d84651db66d220c69faa7f1" compoundref="bind_8c" startline="74" endline="131">bind_socket</referencedby>
+        <referencedby refid="blf_8h_1a0c2a87e3c379917708b27c9632089655" compoundref="blowfish_8c" startline="98" endline="120">Blowfish_decipher</referencedby>
+        <referencedby refid="blf_8h_1a77b4333c7dc134d1c3941e4a4e5faf7f" compoundref="blowfish_8c" startline="73" endline="95">Blowfish_encipher</referencedby>
+        <referencedby refid="curve25519__ref_8c_1a33a8ca2f22cf40eb4eebbbfd21d9a640" compoundref="curve25519__ref_8c" startline="116" endline="128">c_select</referencedby>
+        <referencedby refid="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" compoundref="ed25519_8c" startline="113" endline="174">crypto_sign_ed25519</referencedby>
+        <referencedby refid="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" compoundref="test__socket_8c" startline="36" endline="43">data_rcv</referencedby>
+        <referencedby refid="libcrypto-compat_8c_1ab0c6d53ab9db0c963c2bdd85e81d26e6" compoundref="libcrypto-compat_8c" startline="207" endline="216">DSA_SIG_set0</referencedby>
+        <referencedby refid="libcrypto-compat_8c_1ae2f28de42b8345422b7ac3b28f330b9b" compoundref="libcrypto-compat_8c" startline="226" endline="235">ECDSA_SIG_set0</referencedby>
+        <referencedby refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</referencedby>
+        <referencedby refid="ge25519_8c_1a7beb2c4e34e16deb83ba47135a16a9a7" compoundref="ge25519_8c" startline="354" endline="369">ge25519_scalarmult_base</referencedby>
+        <referencedby refid="group__libssh__channel_1gad14fc6d15d825654af4312764a970d04" compoundref="channels_8c" startline="1997" endline="2015">generate_cookie</referencedby>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+        <referencedby refid="curve25519__ref_8c_1affef7ff5b3e87c52042333c772bffd48" compoundref="curve25519__ref_8c" startline="130" endline="184">mainloop</referencedby>
+        <referencedby refid="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" compoundref="match_8c" startline="52" endline="122">match_pattern</referencedby>
+        <referencedby refid="pkd__daemon_8c_1a0ea051ed9df22544091f74435f55d685" compoundref="pkd__daemon_8c" startline="177" endline="194">pkd_auth_pubkey_cb</referencedby>
+        <referencedby refid="pkd__daemon_8c_1a072176a3f00730d8fefe327d7110426b" compoundref="pkd__daemon_8c" startline="205" endline="230">pkd_channel_openreq_cb</referencedby>
+        <referencedby refid="pkd__daemon_8c_1abe87875a523cecd013d848c7c9c5ba22" compoundref="pkd__daemon_8c" startline="238" endline="475">pkd_exec_hello</referencedby>
+        <referencedby refid="pki__crypto_8c_1a817708f53a64f50b665d647b6d9745c2" compoundref="pki__crypto_8c" startline="1392" endline="1471">pki_dsa_signature_to_blob</referencedby>
+        <referencedby refid="pki__crypto_8c_1a3f8e0c3d950862426b9900704ad64a28" compoundref="pki__crypto_8c" startline="1473" endline="1554">pki_ecdsa_signature_to_blob</referencedby>
+        <referencedby refid="pki__crypto_8c_1a0f1df403c735a5e15982a028f1540024" compoundref="pki__crypto_8c" startline="1656" endline="1773">pki_signature_from_dsa_blob</referencedby>
+        <referencedby refid="pki__crypto_8c_1ae3a66a820cd45b733f5ff75f898a0f33" compoundref="pki__crypto_8c" startline="1775" endline="1911">pki_signature_from_ecdsa_blob</referencedby>
+        <referencedby refid="sc25519_8h_1a52d22fbda714e5d0eb5fe75456c2618f" compoundref="sc25519_8c" startline="286" endline="321">sc25519_window3</referencedby>
+        <referencedby refid="sc25519_8h_1a0cc1b2ced4d0b2439f4bd019526d2c2a" compoundref="sc25519_8c" startline="323" endline="358">sc25519_window5</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a4c842d8a0ce0e842445303734e0b97fe" compoundref="torture__algorithms_8c" startline="48" endline="71">session_setup</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a7ac7f33ff2ba0f163d3da1f54f253811" compoundref="torture__algorithms_8c" startline="73" endline="81">session_teardown</referencedby>
+        <referencedby refid="torture__client__config_8c_1addbd98b07c96dc8546c2a3b053bbcf4e" compoundref="torture__client__config_8c" startline="31" endline="60">setup_config_files</referencedby>
+        <referencedby refid="torture__server_8c_1a9ed0fa82496e6fd08dff180c6744ea49" compoundref="torture__server_8c" startline="53" endline="224">setup_default_server</referencedby>
+        <referencedby refid="torture__server__config_8c_1ad595fcef92757dab7dcde08c0445c557" compoundref="torture__server__config_8c" startline="60" endline="135">setup_files</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a9590dbfecb55deab25a850e3b0202e2e" compoundref="torture__server__auth__kbdint_8c" startline="517" endline="609">setup_kbdint_server</referencedby>
+        <referencedby refid="torture__auth__pkcs11_8c_1afeb3d6183547c9567d793d96fada4641" compoundref="torture__auth__pkcs11_8c" startline="107" endline="146">setup_session</referencedby>
+        <referencedby refid="torture__server__config_8c_1a25aee4ec843bf2138fae9c721f98f2df" compoundref="torture__server__config_8c" startline="154" endline="177">setup_temp_dir</referencedby>
+        <referencedby refid="torture__auth__pkcs11_8c_1ab86ca969a46be6e4d8bf340676da771c" compoundref="torture__auth__pkcs11_8c" startline="52" endline="67">setup_tokens</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga1c024542ae420f85bc146c20c19bedda" compoundref="sftpserver_8c" startline="425" endline="455">sftp_reply_status</referencedby>
+        <referencedby refid="group__libssh__misc_1ga83b053a8bdf80eea5ebc662e5098a52b" compoundref="misc_8c" startline="902" endline="940">ssh_basename</referencedby>
+        <referencedby refid="bind__config_8c_1a776c5b828c6b7f65751146ae165c7d1f" compoundref="bind__config_8c" startline="271" endline="603">ssh_bind_config_parse_line</referencedby>
+        <referencedby refid="group__libssh__channel_1ga7e90618e682963ae420321a16102d213" compoundref="channels_8c" startline="2798" endline="2806">ssh_channel_read_termination</referencedby>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+        <referencedby refid="config_8c_1a9d8669375c734bad778bb45a26c39f37" compoundref="config_8c" startline="421" endline="505">ssh_config_parse_proxy_jump</referencedby>
+        <referencedby refid="priv_8h_1a3a806e36fb02fc4f205e32206fc6d18c" compoundref="connect_8c" startline="165" endline="269">ssh_connect_host_nonblocking</referencedby>
+        <referencedby refid="connect_8c_1adfb0b325a50b5490a141da5c0d120d34" compoundref="connect_8c" startline="105" endline="112">ssh_connect_socket_close</referencedby>
+        <referencedby refid="connector_8c_1a7a60e4126deea02a1dac73121e321245" compoundref="connector_8c" startline="667" endline="705">ssh_connector_fd_is_socket</referencedby>
+        <referencedby refid="group__libssh__channel_1gad181aa43648dc1a380051d55f53855ad" compoundref="channels_8c" startline="2228" endline="2235">ssh_global_request_termination</referencedby>
+        <referencedby refid="group__libssh__messages_1ga0cfad25d199cf155b3f6f90cd421f855" compoundref="messages_8c" startline="494" endline="504">ssh_message_termination</referencedby>
+        <referencedby refid="packet_8c_1a2b98f7c23a7c0a673c3b34190bc4a9a9" compoundref="packet_8c" startline="1415" endline="1421">ssh_packet_register_socket_callback</referencedby>
+        <referencedby refid="group__libssh__misc_1gabee03cec7d5ba668885bd1a47e9650ea" compoundref="misc_8c" startline="1106" endline="1207">ssh_path_expand_escape</referencedby>
+        <referencedby refid="group__libssh__misc_1ga85622306848fd7e735d5843747f6eb28" compoundref="misc_8c" startline="1037" endline="1093">ssh_path_expand_tilde</referencedby>
+        <referencedby refid="group__libssh__poll_1ga4aa3ef276370adbb4afb284947dc8005" compoundref="poll_8c" startline="605" endline="616">ssh_poll_ctx_add_socket</referencedby>
+        <referencedby refid="group__libssh__server_1gaa18bae911e9533e48b33f63ac0c24cb6" compoundref="server_8c" startline="510" endline="518">ssh_server_kex_termination</referencedby>
+        <referencedby refid="client_8c_1a326e54a6c281a97fc1e4fedacaa8997e" compoundref="client_8c" startline="301" endline="308">ssh_service_request_termination</referencedby>
+        <referencedby refid="socket_8h_1ab1da50ceb561300f26b250da9e197c86" compoundref="socket_8c" startline="759" endline="766">ssh_socket_buffered_write_bytes</referencedby>
+        <referencedby refid="socket_8h_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</referencedby>
+        <referencedby refid="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" compoundref="socket_8c" startline="839" endline="859">ssh_socket_connect</referencedby>
+        <referencedby refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" compoundref="socket_8c" startline="914" endline="948">ssh_socket_connect_proxycommand</referencedby>
+        <referencedby refid="socket_8h_1a7b6d96bfb71ce6b9d5a4dc8406874691" compoundref="socket_8c" startline="744" endline="747">ssh_socket_data_available</referencedby>
+        <referencedby refid="socket_8h_1ac9d2595a2e7ce42c7319d1dce077260c" compoundref="socket_8c" startline="749" endline="752">ssh_socket_data_writable</referencedby>
+        <referencedby refid="socket_8h_1a1335d3cd58897c1e1672ca3d75d405ea" compoundref="socket_8c" startline="605" endline="611">ssh_socket_fd_isset</referencedby>
+        <referencedby refid="socket_8h_1a42847e318531b31eb35a7d5df8a0cfa7" compoundref="socket_8c" startline="617" endline="630">ssh_socket_fd_set</referencedby>
+        <referencedby refid="socket_8h_1aa035e463e9a96923d81e01bfcf140d8d" compoundref="socket_8c" startline="398" endline="407">ssh_socket_free</referencedby>
+        <referencedby refid="socket_8h_1ae2a8e654afdc3bdeedf335bdc254401c" compoundref="socket_8c" startline="517" endline="520">ssh_socket_get_fd</referencedby>
+        <referencedby refid="socket_8h_1a2d1f155a930ca6784cbcb44935ce58ef" compoundref="socket_8c" startline="788" endline="798">ssh_socket_get_poll_flags</referencedby>
+        <referencedby refid="socket_8h_1a5af4852b3910014440f36032ec76d785" compoundref="socket_8c" startline="386" endline="393">ssh_socket_get_poll_handle</referencedby>
+        <referencedby refid="socket_8h_1a4944a315eb3379d72e5d1863994a745f" compoundref="socket_8c" startline="769" endline="786">ssh_socket_get_status</referencedby>
+        <referencedby refid="socket_8h_1a29176fb6f348985227454a3f5daec745" compoundref="socket_8c" startline="525" endline="528">ssh_socket_is_open</referencedby>
+        <referencedby refid="socket_8h_1ae616d257d1f37fcaf60f6d243fe4e964" compoundref="socket_8c" startline="148" endline="180">ssh_socket_new</referencedby>
+        <referencedby refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+        <referencedby refid="socket_8h_1a4f4b2a1a8e54b3c6406a60c1b031de18" compoundref="socket_8c" startline="187" endline="202">ssh_socket_reset</referencedby>
+        <referencedby refid="socket_8h_1a15a69b474244317cc9401a9a404e7bcc" compoundref="socket_8c" startline="212" endline="215">ssh_socket_set_callbacks</referencedby>
+        <referencedby refid="socket_8h_1aee43f4cb991640176f1d43ef5b00c744" compoundref="socket_8c" startline="739" endline="742">ssh_socket_set_except</referencedby>
+        <referencedby refid="socket_8h_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</referencedby>
+        <referencedby refid="socket_8h_1a8c75ff63e98886df2b9e3de35095314d" compoundref="socket_8c" startline="734" endline="737">ssh_socket_set_read_wontblock</referencedby>
+        <referencedby refid="socket_8h_1a6d635344343af4fe2b372b01e59299ba" compoundref="socket_8c" startline="729" endline="732">ssh_socket_set_write_wontblock</referencedby>
+        <referencedby refid="socket_8c_1a6949167d4df3919f169f151e1c904a80" compoundref="socket_8c" startline="533" endline="559">ssh_socket_unbuffered_read</referencedby>
+        <referencedby refid="socket_8c_1a830a3625d6dd3a649a6f94380d4ecb82" compoundref="socket_8c" startline="564" endline="600">ssh_socket_unbuffered_write</referencedby>
+        <referencedby refid="socket_8h_1ab9221de828e2d8110a891a72e99529b2" compoundref="socket_8c" startline="410" endline="441">ssh_socket_unix</referencedby>
+        <referencedby refid="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" compoundref="socket_8c" startline="637" endline="648">ssh_socket_write</referencedby>
+        <referencedby refid="group__libssh__string_1gaca1c58e13e7bdb72ea8410592fa0cbf6" compoundref="string_8c" startline="249" endline="255">ssh_string_burn</referencedby>
+        <referencedby refid="group__libssh__string_1gac71b531c19ead0990fd23d0b28d92e02" compoundref="string_8c" startline="221" endline="242">ssh_string_copy</referencedby>
+        <referencedby refid="group__libssh__string_1gaf01673d22adbff92c88bcb6e30946ea6" compoundref="string_8c" startline="264" endline="270">ssh_string_data</referencedby>
+        <referencedby refid="group__libssh__string_1gad5626768334f4837c4a31e5b4a68d130" compoundref="string_8c" startline="87" endline="96">ssh_string_fill</referencedby>
+        <referencedby refid="group__libssh__string_1gacd9c4eb69f7ecfdcf709deb8dde6a5a8" compoundref="string_8c" startline="277" endline="279">ssh_string_free</referencedby>
+        <referencedby refid="group__libssh__string_1gafc10700722d6cafc468c2ee97585449a" compoundref="string_8c" startline="209" endline="211">ssh_string_free_char</referencedby>
+        <referencedby refid="group__libssh__string_1gaf867504fb528c32bf9e5e1459321cf59" compoundref="string_8c" startline="160" endline="168">ssh_string_get_char</referencedby>
+        <referencedby refid="group__libssh__string_1ga331553369afbfcb4f5300729ed65d0fe" compoundref="string_8c" startline="136" endline="149">ssh_string_len</referencedby>
+        <referencedby refid="group__libssh__string_1ga65cbd5f2c5f02599c1c285efd1f06351" compoundref="string_8c" startline="181" endline="202">ssh_string_to_char</referencedby>
+        <referencedby refid="group__libssh__channel_1gae8a61c46f07fc2b242a8b8cee0c50596" compoundref="channels_8c" startline="1352" endline="1362">ssh_waitsession_unblocked</referencedby>
+        <referencedby refid="torture__scp_8c_1a9042484aeda28abe7a51a647be729761" compoundref="torture__scp_8c" startline="47" endline="63">sshd_setup</referencedby>
+        <referencedby refid="torture__auth__pkcs11_8c_1aeb821b0f71542bb8ed9265a6c9eaf2fc" compoundref="torture__auth__pkcs11_8c" startline="157" endline="179">sshd_teardown</referencedby>
+        <referencedby refid="torture__server__config_8c_1a2394d8f8505cec93141a9f6fd7dcf57a" compoundref="torture__server__config_8c" startline="240" endline="272">start_server</referencedby>
+        <referencedby refid="torture__server__config_8c_1aca7f21d2efb689e9b5aea53e02360bab" compoundref="torture__server__config_8c" startline="274" endline="295">stop_server</referencedby>
+        <referencedby refid="group__libssh__misc_1ga8b860ba32fef12da8acd4507c059e509" compoundref="misc_8c" startline="1478" endline="1495">strndup</referencedby>
+        <referencedby refid="torture__client__config_8c_1a199383cdaf56acd2611400b9bb125142" compoundref="torture__client__config_8c" startline="62" endline="81">teardown</referencedby>
+        <referencedby refid="torture__server_8c_1a756711216ba1c7855c33f314006fc1cd" compoundref="torture__server_8c" startline="226" endline="249">teardown_default_server</referencedby>
+        <referencedby refid="torture__server__config_8c_1a19882852c55b736cca7e1a72c65714c6" compoundref="torture__server__config_8c" startline="137" endline="152">teardown_files</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a6b91d654d3aa911bdea83498b5c3c3c9" compoundref="torture__server__auth__kbdint_8c" startline="611" endline="634">teardown_kbdint_server</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2f29726eaa600a181d39bdc877fdee23" compoundref="torture__threads__buffer_8c" startline="270" endline="324">thread_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a6cd746fcd5d2247a25f1e9afa3397390" compoundref="torture__threads__buffer_8c" startline="336" endline="402">thread_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aada376ffd60bb46e2232b036fae5728f" compoundref="torture__threads__buffer_8c" startline="415" endline="463">thread_ssh_buffer_get_format_error</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a280bd315e45cf08f2262c03474650e32" compoundref="torture__algorithms_8c" startline="415" endline="423">torture_algorithms_3des_cbc_hmac_sha1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1aba9431e0855745cfe20bce625d555bc8" compoundref="torture__algorithms_8c" startline="445" endline="453">torture_algorithms_3des_cbc_hmac_sha1_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a5d41fd3856fb615cba5b914daff2fa7c" compoundref="torture__algorithms_8c" startline="425" endline="433">torture_algorithms_3des_cbc_hmac_sha2_256</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ae51ba6fdba2222625b08e4004ca85675" compoundref="torture__algorithms_8c" startline="455" endline="463">torture_algorithms_3des_cbc_hmac_sha2_256_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a5856371188bb0d0bee52690ac972bef2" compoundref="torture__algorithms_8c" startline="435" endline="443">torture_algorithms_3des_cbc_hmac_sha2_512</referencedby>
+        <referencedby refid="torture__algorithms_8c_1aaaeca94a514b076376ef8ebf0a6b5cc6" compoundref="torture__algorithms_8c" startline="465" endline="473">torture_algorithms_3des_cbc_hmac_sha2_512_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ad37eeaa0ffa28226e65a12b00a52f416" compoundref="torture__algorithms_8c" startline="137" endline="141">torture_algorithms_aes128_cbc_hmac_sha1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a5ab45ba121df39b9c710ca0fe45ef9f3" compoundref="torture__algorithms_8c" startline="155" endline="159">torture_algorithms_aes128_cbc_hmac_sha1_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a5ccc28343101c1d6b2dd444c69fa1d8e" compoundref="torture__algorithms_8c" startline="143" endline="147">torture_algorithms_aes128_cbc_hmac_sha2_256</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a243abd0f297d58fa987cd89006b692a4" compoundref="torture__algorithms_8c" startline="161" endline="165">torture_algorithms_aes128_cbc_hmac_sha2_256_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ada79a98e6de0925717cbe669b6892992" compoundref="torture__algorithms_8c" startline="149" endline="153">torture_algorithms_aes128_cbc_hmac_sha2_512</referencedby>
+        <referencedby refid="torture__algorithms_8c_1afc39eb1375b383d0cb8957c39d2b409a" compoundref="torture__algorithms_8c" startline="167" endline="171">torture_algorithms_aes128_cbc_hmac_sha2_512_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ada09a1d98914b014e51a09cd1191565f" compoundref="torture__algorithms_8c" startline="269" endline="273">torture_algorithms_aes128_ctr_hmac_sha1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a5fb593031ca4fe584993d559dc71bc1c" compoundref="torture__algorithms_8c" startline="287" endline="291">torture_algorithms_aes128_ctr_hmac_sha1_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a35807d28af82d142bd7b07f3a1720561" compoundref="torture__algorithms_8c" startline="275" endline="279">torture_algorithms_aes128_ctr_hmac_sha2_256</referencedby>
+        <referencedby refid="torture__algorithms_8c_1adf2230db9cdb6adcd7b7f220dec7a126" compoundref="torture__algorithms_8c" startline="293" endline="297">torture_algorithms_aes128_ctr_hmac_sha2_256_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ae01257227e6ed69ba6d7f1f5ac87e558" compoundref="torture__algorithms_8c" startline="281" endline="285">torture_algorithms_aes128_ctr_hmac_sha2_512</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a39dc6f30357167513864e6477a490e7b" compoundref="torture__algorithms_8c" startline="299" endline="303">torture_algorithms_aes128_ctr_hmac_sha2_512_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a6715ed08668abc6c332200d7e4a028a5" compoundref="torture__algorithms_8c" startline="401" endline="406">torture_algorithms_aes128_gcm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ae083bbd4e4a9975063164d70025fab9b" compoundref="torture__algorithms_8c" startline="173" endline="181">torture_algorithms_aes192_cbc_hmac_sha1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a5f66eeb62de8159bba5afab4801bed7e" compoundref="torture__algorithms_8c" startline="203" endline="211">torture_algorithms_aes192_cbc_hmac_sha1_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ac2526944d01c3d519c00c39b979dd1df" compoundref="torture__algorithms_8c" startline="183" endline="191">torture_algorithms_aes192_cbc_hmac_sha2_256</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ae27f572f7cdd0e6652e02f2098fdb016" compoundref="torture__algorithms_8c" startline="213" endline="221">torture_algorithms_aes192_cbc_hmac_sha2_256_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a41efc597a398583a31865f5c9f07cea4" compoundref="torture__algorithms_8c" startline="193" endline="201">torture_algorithms_aes192_cbc_hmac_sha2_512</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ae9f211cdac278925afa625f462ccbe3e" compoundref="torture__algorithms_8c" startline="223" endline="231">torture_algorithms_aes192_cbc_hmac_sha2_512_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ae2887bd0015c76bc157390eea1008139" compoundref="torture__algorithms_8c" startline="305" endline="313">torture_algorithms_aes192_ctr_hmac_sha1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ace838ab142485156b576d7b03296af39" compoundref="torture__algorithms_8c" startline="335" endline="343">torture_algorithms_aes192_ctr_hmac_sha1_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a6869c6f4057306e251bc791a6ab62e08" compoundref="torture__algorithms_8c" startline="315" endline="323">torture_algorithms_aes192_ctr_hmac_sha2_256</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a79be11115e764cc67ded6d3cdc262e68" compoundref="torture__algorithms_8c" startline="345" endline="353">torture_algorithms_aes192_ctr_hmac_sha2_256_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1ab9c208b68702549acaf2a2746fb25328" compoundref="torture__algorithms_8c" startline="325" endline="333">torture_algorithms_aes192_ctr_hmac_sha2_512</referencedby>
+        <referencedby refid="torture__algorithms_8c_1aaa5e394f7630b1b3f3f88a11395dff23" compoundref="torture__algorithms_8c" startline="355" endline="363">torture_algorithms_aes192_ctr_hmac_sha2_512_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1acfa2b2fb060a38c42c200f261ed83399" compoundref="torture__algorithms_8c" startline="233" endline="237">torture_algorithms_aes256_cbc_hmac_sha1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a871182483f5e5ca5846f6c7ae85cf140" compoundref="torture__algorithms_8c" startline="251" endline="255">torture_algorithms_aes256_cbc_hmac_sha1_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a5faecb33b0832d88a2d6c9befb74fda9" compoundref="torture__algorithms_8c" startline="239" endline="243">torture_algorithms_aes256_cbc_hmac_sha2_256</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a4a1fc338f77086fd2ab9d25d63a40d1a" compoundref="torture__algorithms_8c" startline="257" endline="261">torture_algorithms_aes256_cbc_hmac_sha2_256_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a98259223b45ee697232ceadac7abe28a" compoundref="torture__algorithms_8c" startline="245" endline="249">torture_algorithms_aes256_cbc_hmac_sha2_512</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a37fa5f916935d5228b77fa8898bf3da5" compoundref="torture__algorithms_8c" startline="263" endline="267">torture_algorithms_aes256_cbc_hmac_sha2_512_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a790e4f48c41d03d9fb127ad773b13a3a" compoundref="torture__algorithms_8c" startline="365" endline="369">torture_algorithms_aes256_ctr_hmac_sha1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a96b2181068d646c6155f081c21066423" compoundref="torture__algorithms_8c" startline="383" endline="387">torture_algorithms_aes256_ctr_hmac_sha1_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a24d7384166bc41754cee422db426d5ef" compoundref="torture__algorithms_8c" startline="371" endline="375">torture_algorithms_aes256_ctr_hmac_sha2_256</referencedby>
+        <referencedby refid="torture__algorithms_8c_1af9ff16e26d3ade4d413f5b813ca7ed25" compoundref="torture__algorithms_8c" startline="389" endline="393">torture_algorithms_aes256_ctr_hmac_sha2_256_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1addcb46a0a103d170ebe45b3da1e99bc2" compoundref="torture__algorithms_8c" startline="377" endline="381">torture_algorithms_aes256_ctr_hmac_sha2_512</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a436f388e3e4e4003ed1a8a88529474ba" compoundref="torture__algorithms_8c" startline="395" endline="399">torture_algorithms_aes256_ctr_hmac_sha2_512_etm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a26308bd23aba30b6bbc51e08683a1729" compoundref="torture__algorithms_8c" startline="408" endline="413">torture_algorithms_aes256_gcm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a093d5a8f437751f33f9f4efa452e3d71" compoundref="torture__algorithms_8c" startline="674" endline="682">torture_algorithms_dh_group1</referencedby>
+        <referencedby refid="torture__algorithms_8c_1add1121aae4a72c58ef4922594c1082ee" compoundref="torture__algorithms_8c" startline="684" endline="692">torture_algorithms_dh_group14</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a52bdfe94cedafe754274845496c7b494" compoundref="torture__algorithms_8c" startline="694" endline="698">torture_algorithms_dh_group16</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a8e7e1c0422ff7878455286e15600d0e5" compoundref="torture__algorithms_8c" startline="700" endline="704">torture_algorithms_dh_group18</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a09eb7c5ef70408a9d0a2771bdfa48c7a" compoundref="torture__algorithms_8c" startline="553" endline="589">torture_algorithms_zlib</referencedby>
+        <referencedby refid="torture__algorithms_8c_1af4b1201c7c4184336c8ce8b13b8052c6" compoundref="torture__algorithms_8c" startline="591" endline="628">torture_algorithms_zlib_openssh</referencedby>
+        <referencedby refid="torture__auth_8c_1add171176cc97a54d8bf7a3a9fcbd49c8" compoundref="torture__auth_8c" startline="440" endline="465">torture_auth_agent</referencedby>
+        <referencedby refid="torture__auth_8c_1aa6d389ef47fa997235443b6739784260" compoundref="torture__auth_8c" startline="546" endline="570">torture_auth_agent_cert</referencedby>
+        <referencedby refid="torture__auth_8c_1a341a4a270e1382bc9392bd665a58af91" compoundref="torture__auth_8c" startline="572" endline="595">torture_auth_agent_cert_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1ac1e47567b2530e7c7c17d7f3367db43c" compoundref="torture__auth_8c" startline="467" endline="496">torture_auth_agent_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a1bc4253d4b7389acb38fa5e5ffc3cf51" compoundref="torture__auth_8c" startline="253" endline="275">torture_auth_autopubkey</referencedby>
+        <referencedby refid="torture__auth_8c_1a2fc459f58be2d4e235c5ef4397fa8b4b" compoundref="torture__auth_8c" startline="277" endline="305">torture_auth_autopubkey_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a3dc15f1542313d7536ea949a57ed8d0b" compoundref="torture__auth_8c" startline="498" endline="544">torture_auth_cert</referencedby>
+        <referencedby refid="torture__auth_8c_1a4b7c297eeeae3bb821a5480574439b78" compoundref="torture__auth_8c" startline="307" endline="340">torture_auth_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a8c1979b9feebe5c34354456ff4260ee4" compoundref="torture__auth_8c" startline="342" endline="384">torture_auth_kbdint_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a71d7b34d984879dbfaf6afb2870233ec" compoundref="torture__auth_8c" startline="207" endline="225">torture_auth_none</referencedby>
+        <referencedby refid="torture__auth_8c_1a5836d87eecde023390a0acf40b7160c6" compoundref="torture__auth_8c" startline="227" endline="251">torture_auth_none_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1acab4c789da42f078db39e0e8dec81bc4" compoundref="torture__auth_8c" startline="386" endline="407">torture_auth_password</referencedby>
+        <referencedby refid="torture__auth_8c_1a144cbca03a69c33a0137bbcbd69873cf" compoundref="torture__auth_8c" startline="409" endline="438">torture_auth_password_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a1e1c5e9d0352de375c56cf27921d00f6" compoundref="torture__auth_8c" startline="597" endline="632">torture_auth_pubkey_types</referencedby>
+        <referencedby refid="torture__auth_8c_1a30fc01934c5dc0343d91dc6b90cbabac" compoundref="torture__auth_8c" startline="634" endline="670">torture_auth_pubkey_types_ecdsa</referencedby>
+        <referencedby refid="torture__auth_8c_1aaefb1835a46af27a36149a89c3308825" compoundref="torture__auth_8c" startline="777" endline="822">torture_auth_pubkey_types_ecdsa_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1aef29b45c88fd31e623e989959a72a434" compoundref="torture__auth_8c" startline="672" endline="728">torture_auth_pubkey_types_ed25519</referencedby>
+        <referencedby refid="torture__auth_8c_1a6f2cc3f2514eaf5b14e030490d6993f3" compoundref="torture__auth_8c" startline="824" endline="888">torture_auth_pubkey_types_ed25519_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a6c870e5368b648dc01f643bbc52a62f4" compoundref="torture__auth_8c" startline="730" endline="775">torture_auth_pubkey_types_nonblocking</referencedby>
+        <referencedby refid="torture__session_8c_1a99c33d74eaa8af7ac88d2b2ffe1299ca" compoundref="torture__session_8c" startline="83" endline="119">torture_channel_read_error</referencedby>
+        <referencedby refid="torture__client__config_8c_1a998e063beed07ef6165fe0e62b49e68e" compoundref="torture__client__config_8c" startline="182" endline="192">torture_client_config_autoparse</referencedby>
+        <referencedby refid="torture__client__config_8c_1a9e7c020c14631166e6fa3869074a80eb" compoundref="torture__client__config_8c" startline="136" endline="178">torture_client_config_emulate</referencedby>
+        <referencedby refid="torture__client__config_8c_1a31b9fa3a6e6f420305f9d6e61e9b96b2" compoundref="torture__client__config_8c" startline="197" endline="211">torture_client_config_suppress</referencedby>
+        <referencedby refid="torture__client__config_8c_1acf21db1ec2ec21fbd9ba7e4af570f108" compoundref="torture__client__config_8c" startline="90" endline="127">torture_client_config_system</referencedby>
+        <referencedby refid="torture__connect_8c_1ab0349d215eb26fab23b32d29877a1ff6" compoundref="torture__connect_8c" startline="133" endline="148">torture_connect_double</referencedby>
+        <referencedby refid="torture__connect_8c_1af6a5fdaa34eb8b38a556ed295c33d75b" compoundref="torture__connect_8c" startline="150" endline="160">torture_connect_failure</referencedby>
+        <referencedby refid="torture__connect_8c_1aceba71bae2eb45662c7723fde9b6fc1b" compoundref="torture__connect_8c" startline="86" endline="101">torture_connect_nonblocking</referencedby>
+        <referencedby refid="torture__connect_8c_1a80ca992de13d83656f95514fd50bdd0b" compoundref="torture__connect_8c" startline="162" endline="184">torture_connect_socket</referencedby>
+        <referencedby refid="torture__hostkey_8c_1ac5b1551957655d2e330912bbc8b91692" compoundref="torture__hostkey_8c" startline="107" endline="128">torture_hostkey_ed25519</referencedby>
+        <referencedby refid="torture__hostkey_8c_1ae73c12e15a44ab43321442da6d82c842" compoundref="torture__hostkey_8c" startline="84" endline="105">torture_hostkey_rsa</referencedby>
+        <referencedby refid="torture__hostkey_8c_1a97dbd5e99350883af4f1af630ea59f2d" compoundref="torture__hostkey_8c" startline="175" endline="192">torture_hostkey_rsa_sha256</referencedby>
+        <referencedby refid="torture__hostkey_8c_1aafc5459be5b7726b0a653910fe0a15d5" compoundref="torture__hostkey_8c" startline="194" endline="211">torture_hostkey_rsa_sha512</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1a34627e027c28c600974cdcd7180fce16" compoundref="torture__knownhosts_8c" startline="364" endline="427">torture_knownhosts_conflict</referencedby>
+        <referencedby refid="torture__knownhosts__verify_8c_1a440a79f135a76bbdc5cd40590ec30765" compoundref="torture__knownhosts__verify_8c" startline="216" endline="270">torture_knownhosts_duplicate</referencedby>
+        <referencedby refid="torture__knownhosts__verify_8c_1a3c720aacddf802500f74cbba91d224f2" compoundref="torture__knownhosts__verify_8c" startline="106" endline="127">torture_knownhosts_export</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1a4313d19977cea3b3498e49992a3b8686" compoundref="torture__knownhosts_8c" startline="230" endline="265">torture_knownhosts_fail</referencedby>
+        <referencedby refid="torture__knownhosts__verify_8c_1a1bec6abbbade54d9fe77c1c944c89cbf" compoundref="torture__knownhosts__verify_8c" startline="446" endline="481">torture_knownhosts_new_file</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1ad7fb1fdd720acfe6c69b365fb780cb8a" compoundref="torture__knownhosts_8c" startline="429" endline="467">torture_knownhosts_no_hostkeychecking</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1ad850aa1f10a4696e6c967764883ebab9" compoundref="torture__knownhosts_8c" startline="267" endline="302">torture_knownhosts_other</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1afb7c18605219993054369cdd25b2bc92" compoundref="torture__knownhosts_8c" startline="304" endline="362">torture_knownhosts_other_auto</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1a5aa5170ce1bb16886fd54b737bc72aed" compoundref="torture__knownhosts_8c" startline="97" endline="152">torture_knownhosts_port</referencedby>
+        <referencedby refid="torture__knownhosts__verify_8c_1ac1c0973d318a3572507db80d43277613" compoundref="torture__knownhosts__verify_8c" startline="146" endline="214">torture_knownhosts_precheck</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1a800aa883cf6921f7899c9f220784e381" compoundref="torture__knownhosts_8c" startline="192" endline="228">torture_knownhosts_standard_port</referencedby>
+        <referencedby refid="torture__knownhosts__verify_8c_1afb37fd40f16e338074ad9e46ba9db619" compoundref="torture__knownhosts__verify_8c" startline="312" endline="374">torture_knownhosts_unknown</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1a06fcbd73ef9cb590180cfa3759594575" compoundref="torture__knownhosts_8c" startline="154" endline="190">torture_knownhosts_wildcard</referencedby>
+        <referencedby refid="torture__knownhosts__verify_8c_1ae3cab897764a701f2ee10f0de7b7ee65" compoundref="torture__knownhosts__verify_8c" startline="129" endline="144">torture_knownhosts_write_and_verify</referencedby>
+        <referencedby refid="torture__proxycommand_8c_1ad9476c8560eaa74ade11ed1c79d2f2a2" compoundref="torture__proxycommand_8c" startline="103" endline="113">torture_options_set_proxycommand_notexist</referencedby>
+        <referencedby refid="torture__proxycommand_8c_1a0f3c36e817257e7cb989981c244dd7d2" compoundref="torture__proxycommand_8c" startline="115" endline="137">torture_options_set_proxycommand_ssh</referencedby>
+        <referencedby refid="torture__proxycommand_8c_1aaf528fafa536dcd4436ac0d75ce3be8e" compoundref="torture__proxycommand_8c" startline="139" endline="162">torture_options_set_proxycommand_ssh_stderr</referencedby>
+        <referencedby refid="torture__misc_8c_1ad25e0c3cb23b78605e692b99fe754665" compoundref="torture__misc_8c" startline="169" endline="182">torture_path_expand_escape</referencedby>
+        <referencedby refid="torture__rekey_8c_1aaaaeedb730227e8f31cb1fe13bbcb881" compoundref="torture__rekey_8c" startline="104" endline="145">torture_rekey_default</referencedby>
+        <referencedby refid="torture__rekey_8c_1a75d0cca74861337645286b4d42e57006" compoundref="torture__rekey_8c" startline="150" endline="209">torture_rekey_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a3c7d816b41acf84841eb39ec72475998" compoundref="torture__rekey_8c" startline="393" endline="440">torture_rekey_server_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a83928e03d85a04fd06d4c4a0ca9c7394" compoundref="torture__rekey_8c" startline="324" endline="388">torture_rekey_time</referencedby>
+        <referencedby refid="torture_8c_1a223c3d964cbb98d5a8d18b1c6de7d26c" compoundref="torture_8c" startline="908" endline="934">torture_reload_sshd_server</referencedby>
+        <referencedby refid="torture__request__env_8c_1af673d397cb089d358c279e3e6e082388" compoundref="torture__request__env_8c" startline="78" endline="118">torture_request_env</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+        <referencedby refid="torture__scp_8c_1ae84c81f735a3f0cf4f3085bd6a016962" compoundref="torture__scp_8c" startline="149" endline="210">torture_scp_upload</referencedby>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a1ae155752732ad519ce76bedf8b2a5b7" compoundref="torture__server__auth__kbdint_8c" startline="686" endline="746">torture_server_auth_kbdint</referencedby>
+        <referencedby refid="torture__server_8c_1a45fb3c9d4948a2e1428a5d00f28d47b6" compoundref="torture__server_8c" startline="325" endline="353">torture_server_auth_none</referencedby>
+        <referencedby refid="torture__server_8c_1a209f1dfc209f45f52226ee57825f596b" compoundref="torture__server_8c" startline="355" endline="390">torture_server_auth_password</referencedby>
+        <referencedby refid="torture__server_8c_1a73fb9c5aabcb0550f2bdee3cfd7ef346" compoundref="torture__server_8c" startline="392" endline="424">torture_server_auth_pubkey</referencedby>
+        <referencedby refid="torture__server_8c_1addf40aeb91f2224a5baf6488d42560c7" compoundref="torture__server_8c" startline="426" endline="474">torture_server_hostkey_mismatch</referencedby>
+        <referencedby refid="torture__server_8c_1a65c15130edce6143731c7bff27153650" compoundref="torture__server_8c" startline="476" endline="518">torture_server_unknown_global_request</referencedby>
+        <referencedby refid="torture_8c_1a4804ce5694a475b336b090bddab4802a" compoundref="torture_8c" startline="587" endline="808">torture_setup_create_sshd_config</referencedby>
+        <referencedby refid="torture_8c_1affdccbdf5fdd3f67811b1d5d9517de32" compoundref="torture_8c" startline="526" endline="585">torture_setup_socket_dir</referencedby>
+        <referencedby refid="torture_8c_1a1f8a42a557d5ee6c53932df5d63aa01c" compoundref="torture_8c" startline="828" endline="856">torture_setup_sshd_server</referencedby>
+        <referencedby refid="torture__sftp__benchmark_8c_1a2be35acb15f4e68328710975445fff91" compoundref="torture__sftp__benchmark_8c" startline="64" endline="115">torture_sftp_benchmark_write_read</referencedby>
+        <referencedby refid="torture__sftp__canonicalize__path_8c_1a5887ab4ca161d692dbe13ac4c9b7cb32" compoundref="torture__sftp__canonicalize__path_8c" startline="62" endline="78">torture_sftp_canonicalize_path</referencedby>
+        <referencedby refid="torture__sftp__fsync_8c_1a499c44fb7f7c8c0032a50d59b52e95d4" compoundref="torture__sftp__fsync_8c" startline="64" endline="120">torture_sftp_fsync</referencedby>
+        <referencedby refid="torture__sftp__dir_8c_1a00ab1e949cc222ed1f1021042cba2ceb" compoundref="torture__sftp__dir_8c" startline="62" endline="86">torture_sftp_mkdir</referencedby>
+        <referencedby refid="torture__sftp__read_8c_1abc5e4047a1cb578ad32671e11e25ffae" compoundref="torture__sftp__read_8c" startline="64" endline="97">torture_sftp_read_blocking</referencedby>
+        <referencedby refid="torture__buffer_8c_1aa5cce47bb186a19d068d8ae76bd83acd" compoundref="torture__buffer_8c" startline="136" endline="165">torture_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__buffer_8c_1a65473b3f9a634cf3f3261a61a8caca05" compoundref="torture__buffer_8c" startline="167" endline="209">torture_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__buffer_8c_1a8b6c2558161b5a41762c0f44b2f0bcee" compoundref="torture__buffer_8c" startline="211" endline="234">torture_ssh_buffer_get_format_error</referencedby>
+        <referencedby refid="torture__forward_8c_1a8f1d1bddae7902259b1b169d0439fe2f" compoundref="torture__forward_8c" startline="78" endline="99">torture_ssh_forward</referencedby>
+        <referencedby refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</referencedby>
+        <referencedby refid="torture_8c_1a7236b84dfdf3b1f630b49ec5f440a620" compoundref="torture_8c" startline="875" endline="905">torture_teardown_socket_dir</referencedby>
+        <referencedby refid="torture_8c_1ae339de34ed36023e6e838440315a835d" compoundref="torture_8c" startline="963" endline="974">torture_teardown_sshd_server</referencedby>
+        <referencedby refid="torture__client__global__requests_8c_1a32462a357527b0302ce677bab88c3cf2" compoundref="torture__client__global__requests_8c" startline="109" endline="135">torture_unknown_request</referencedby>
+        <referencedby refid="torture_8c_1ab6e8f9eb471d90ff0991192af2a6dca7" compoundref="torture_8c" startline="942" endline="960">torture_update_sshd_config</referencedby>
+        <referencedby refid="torture__server__config_8c_1a5de50eda837b8f94dcf6d18a765d0dc8" compoundref="torture__server__config_8c" startline="350" endline="423">try_config_content</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structssh__socket__callbacks__struct" kindref="compound">ssh_socket_callbacks_struct</ref></type>
+        <definition>struct ssh_socket_callbacks_struct callbacks</definition>
+        <argsstring></argsstring>
+        <name>callbacks</name>
+        <initializer>={
+		<ref refid="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" kindref="member">data_rcv</ref>,
+		<ref refid="test__socket_8c_1a447e02865b0e9e6bb2c8c706ae9754ec" kindref="member">controlflow</ref>,
+		<ref refid="test__socket_8c_1a3503f27f26034445ce38baa5e0ac3e8c" kindref="member">exception</ref>,
+		<ref refid="test__socket_8c_1a98cfb3ef0de2edd3aa1f882197e66a42" kindref="member">connected</ref>,
+		NULL
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="54" column="13" bodyfile="tests/test_socket.c" bodystart="63" bodyend="-1"/>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+        <referencedby refid="group__libssh__server_1gaaa9bf406809735d4afc75ecd482ba89d" compoundref="bind_8c" startline="302" endline="319">ssh_bind_set_callbacks</referencedby>
+        <referencedby refid="packet_8h_1a5316a06c44092abfd23e925958291724" compoundref="packet_8c" startline="1438" endline="1444">ssh_packet_remove_callbacks</referencedby>
+        <referencedby refid="packet_8h_1a6799ed6886c75279d61dcacd83b71102" compoundref="packet_8c" startline="1426" endline="1433">ssh_packet_set_callbacks</referencedby>
+        <referencedby refid="socket_8h_1a15a69b474244317cc9401a9a404e7bcc" compoundref="socket_8c" startline="212" endline="215">ssh_socket_set_callbacks</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int data_rcv</definition>
+        <argsstring>(const void *data, size_t len, void *user)</argsstring>
+        <name>data_rcv</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="36" column="12" bodyfile="tests/test_socket.c" bodystart="36" bodyend="43"/>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</references>
+        <references refid="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" compoundref="socket_8c" startline="637" endline="648">ssh_socket_write</references>
+      </memberdef>
+      <memberdef kind="function" id="test__socket_8c_1a447e02865b0e9e6bb2c8c706ae9754ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void controlflow</definition>
+        <argsstring>(int code, void *user)</argsstring>
+        <name>controlflow</name>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="45" column="13" bodyfile="tests/test_socket.c" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="test__socket_8c_1a3503f27f26034445ce38baa5e0ac3e8c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void exception</definition>
+        <argsstring>(int code, int errno_code, void *user)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errno_code</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="49" column="13" bodyfile="tests/test_socket.c" bodystart="49" bodyend="52"/>
+        <references refid="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" compoundref="test__socket_8c" startline="33">stop</references>
+      </memberdef>
+      <memberdef kind="function" id="test__socket_8c_1a98cfb3ef0de2edd3aa1f882197e66a42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void connected</definition>
+        <argsstring>(int code, int errno_code, void *user)</argsstring>
+        <name>connected</name>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errno_code</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="54" column="13" bodyfile="tests/test_socket.c" bodystart="54" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_socket.c" line="70" column="5" bodyfile="tests/test_socket.c" bodystart="70" bodyend="93"/>
+        <references refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" compoundref="test__socket_8c" startline="63">callbacks</references>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" compoundref="init_8c" startline="147" endline="149">ssh_init</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a926c933f61d1afa64003c1cc66f6a01c" compoundref="libssh_8h" startline="355">SSH_LOG_FUNCTIONS</references>
+        <references refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46caaad9d185338d90669d96cfee24cce677" compoundref="libssh_8h" startline="394">SSH_OPTIONS_LOG_VERBOSITY</references>
+        <references refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" compoundref="options_8c" startline="474" endline="1039">ssh_options_set</references>
+        <references refid="poll_8h_1a6882b1291053d52ef4cc435321395a2f">ssh_poll_ctx_add_socket</references>
+        <references refid="group__libssh__poll_1ga6c0f6d3c677838181df5cd03a755fd7c" compoundref="poll_8c" startline="663" endline="721">ssh_poll_ctx_dopoll</references>
+        <references refid="group__libssh__poll_1ga5364b3fb8ae1cb44e3ec09c8c10cb5fa" compoundref="poll_8c" startline="498" endline="514">ssh_poll_ctx_new</references>
+        <references refid="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" compoundref="socket_8c" startline="839" endline="859">ssh_socket_connect</references>
+        <references refid="socket_8h_1ae616d257d1f37fcaf60f6d243fe4e964" compoundref="socket_8c" startline="148" endline="180">ssh_socket_new</references>
+        <references refid="socket_8h_1a15a69b474244317cc9401a9a404e7bcc" compoundref="socket_8c" startline="212" endline="215">ssh_socket_set_callbacks</references>
+        <references refid="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" compoundref="test__socket_8c" startline="33">stop</references>
+        <references refid="libssh__scp_8c_1a1bdcfae3209cbd96db35a2ae356fa15e" compoundref="libssh__scp_8c" startline="28">verbosity</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Simple<sp/>test<sp/>for<sp/>the<sp/>socket<sp/>callbacks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="socket_8h" kindref="compound">libssh/socket.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="poll_8h" kindref="compound">libssh/poll.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" kindref="member">stop</ref>=0;</highlight></codeline>
+<codeline lineno="34" refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" refkind="member"><highlight class="normal"><ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" kindref="member">data_rcv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Received<sp/>data:<sp/>&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(data,1,len,stdout);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;&apos;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" kindref="member">ssh_socket_write</ref>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,</highlight><highlight class="stringliteral">&quot;Hello<sp/>you<sp/>!\n&quot;</highlight><highlight class="normal">,12);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" kindref="member">ssh_socket_nonblocking_flush</ref>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="test__socket_8c_1a447e02865b0e9e6bb2c8c706ae9754ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__socket_8c_1a447e02865b0e9e6bb2c8c706ae9754ec" kindref="member">controlflow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Control<sp/>flow:<sp/>%x\n&quot;</highlight><highlight class="normal">,code);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="test__socket_8c_1a3503f27f26034445ce38baa5e0ac3e8c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__socket_8c_1a3503f27f26034445ce38baa5e0ac3e8c" kindref="member">exception</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errno_code,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>){</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Exception:<sp/>%d<sp/>(%d)\n&quot;</highlight><highlight class="normal">,code,errno_code);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" kindref="member">stop</ref>=1;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="test__socket_8c_1a98cfb3ef0de2edd3aa1f882197e66a42" kindref="member">connected</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errno_code,</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(code<sp/>==<sp/><ref refid="group__libssh__callbacks_1ga777321b241841b09620e4c948520b753" kindref="member">SSH_SOCKET_CONNECTED_OK</ref>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Connected:<sp/>%d<sp/>(%d)\n&quot;</highlight><highlight class="normal">,code,<sp/>errno_code);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>while<sp/>connecting:(%d,<sp/>%d:%s)\n&quot;</highlight><highlight class="normal">,code,errno_code,strerror(errno_code));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" kindref="member">stop</ref>=1;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__socket__callbacks__struct" kindref="compound">ssh_socket_callbacks_struct</ref><sp/><ref refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" kindref="member">callbacks</ref>={</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" kindref="member">data_rcv</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1a447e02865b0e9e6bb2c8c706ae9754ec" kindref="member">controlflow</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1a3503f27f26034445ce38baa5e0ac3e8c" kindref="member">exception</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1a98cfb3ef0de2edd3aa1f882197e66a42" kindref="member">connected</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70" refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv){</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libssh__scp_8c_1a1bdcfae3209cbd96db35a2ae356fa15e" kindref="member">verbosity</ref>=<ref refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a926c933f61d1afa64003c1cc66f6a01c" kindref="member">SSH_LOG_FUNCTIONS</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(argc<sp/>&lt;<sp/>3){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Usage<sp/>:<sp/>%s<sp/>host<sp/>port\n&quot;</highlight><highlight class="normal">,<sp/>argv[0]);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>=<ref refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" kindref="member">ssh_new</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46caaad9d185338d90669d96cfee24cce677" kindref="member">SSH_OPTIONS_LOG_VERBOSITY</ref>,&amp;<ref refid="libssh__scp_8c_1a1bdcfae3209cbd96db35a2ae356fa15e" kindref="member">verbosity</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>=<ref refid="socket_8h_1ae616d257d1f37fcaf60f6d243fe4e964" kindref="member">ssh_socket_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>=<ref refid="group__libssh__poll_1ga5364b3fb8ae1cb44e3ec09c8c10cb5fa" kindref="member">ssh_poll_ctx_new</ref>(2);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="socket_8h_1a15a69b474244317cc9401a9a404e7bcc" kindref="member">ssh_socket_set_callbacks</ref>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/>&amp;<ref refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" kindref="member">callbacks</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="poll_8h_1a6882b1291053d52ef4cc435321395a2f" kindref="member">ssh_poll_ctx_add_socket</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" kindref="member">ssh_socket_connect</ref>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,argv[1],atoi(argv[2]),NULL)<sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>){</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;ssh_socket_connect:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!<ref refid="test__socket_8c_1a6c0af9f2e97842405fb15ed952ef2976" kindref="member">stop</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1ga6c0f6d3c677838181df5cd03a755fd7c" kindref="member">ssh_poll_ctx_dopoll</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,-1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;finished\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/test_socket.c"/>
+  </compounddef>
+</doxygen>

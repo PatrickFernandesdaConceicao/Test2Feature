@@ -1,0 +1,825 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="torture__server__x11_8c" kind="file" language="C++">
+    <compoundname>torture_server_x11.c</compoundname>
+    <includes local="no">errno.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes refid="torture_8h" local="yes">torture.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="29">
+        <label>libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>stdbool.h</label>
+      </node>
+      <node id="15">
+        <label>stdarg.h</label>
+      </node>
+      <node id="10">
+        <label>sys/select.h</label>
+      </node>
+      <node id="18">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="19">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17">
+        <label>setjmp.h</label>
+      </node>
+      <node id="13">
+        <label>torture.h</label>
+        <link refid="torture_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>libssh/misc.h</label>
+        <link refid="misc_8h"/>
+      </node>
+      <node id="2">
+        <label>errno.h</label>
+      </node>
+      <node id="25">
+        <label>torture_cmocka.h</label>
+        <link refid="torture__cmocka_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/sftp.h</label>
+        <link refid="sftp_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stddef.h</label>
+      </node>
+      <node id="11">
+        <label>netdb.h</label>
+      </node>
+      <node id="28">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tests/unittests/torture_server_x11.c</label>
+        <link refid="torture__server__x11_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>libssh/pcap.h</label>
+        <link refid="pcap_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>libssh/channels.h</label>
+        <link refid="channels_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pthread.h</label>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="33">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="38">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libssh/server.h</label>
+        <link refid="server_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>cmocka.h</label>
+      </node>
+      <node id="7">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="36">
+        <label>libssh/auth.h</label>
+        <link refid="auth_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>tests_config.h</label>
+      </node>
+      <node id="14">
+        <label>stdio.h</label>
+      </node>
+      <node id="26">
+        <label>libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structhostkey__state" prot="public">hostkey_state</innerclass>
+    <innerclass refid="structchannel__data" prot="public">channel_data</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="torture__server__x11_8c_1a2e84c73592c2992fdc0b2593524f3b18" prot="public" static="no">
+        <name>LIBSSH_STATIC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="1" column="9" bodyfile="tests/unittests/torture_server_x11.c" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="torture__server__x11_8c_1a7d6d7e49d431b3ee244f5fb0643d5447" prot="public" static="no">
+        <name>TEST_SERVER_PORT</name>
+        <initializer>2222</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="12" column="9" bodyfile="tests/unittests/torture_server_x11.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="torture__server__x11_8c_1ae90dafe12ca6eea16049e26433619c52" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t x11_screen_number</definition>
+        <argsstring></argsstring>
+        <name>x11_screen_number</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="67" column="23" bodyfile="tests/unittests/torture_server_x11.c" bodystart="67" bodyend="-1"/>
+        <referencedby refid="torture__server__x11_8c_1abb575a0d8644debf193b257c748c0ce1" compoundref="torture__server__x11_8c" startline="69" endline="96">client_thread</referencedby>
+        <referencedby refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="torture__server__x11_8c_1ab3743688c369a6a63ebea4512080e9fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int setup</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>setup</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="21" column="12" bodyfile="tests/unittests/torture_server_x11.c" bodystart="21" bodyend="51"/>
+        <references refid="torture_8h_1a01b1cdf914375792da469b53466c6ddb" compoundref="torture_8h" startline="48">assert_return_code</references>
+        <references refid="structhostkey__state_1ad9f57e5ffa46ee154556531110bcdb6d" compoundref="torture__server__x11_8c" startline="18">hostkey_state::fd</references>
+        <references refid="structhostkey__state_1a117a5ebf1027b5855e58759d62f0cbbd" compoundref="torture__server__x11_8c" startline="15">hostkey_state::hostkey</references>
+        <references refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" compoundref="torture__server__x11_8c" startline="16">hostkey_state::hostkey_path</references>
+        <references refid="structhostkey__state_1a4d92812586b49023ddc57435563f63de" compoundref="torture__server__x11_8c" startline="17">hostkey_state::key_type</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" compoundref="init_8c" startline="147" endline="149">ssh_init</references>
+        <references refid="libssh_8h_1a244b017e5993fde29fe9e9b1f04a7bcea1f244a10b34e2f9dd3627edbef5166ed" compoundref="libssh_8h" startline="300">SSH_KEYTYPE_ECDSA_P256</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="callbacks_8h_1a117f2dff40905608871165129de1fbf7" compoundref="pthread_8c" startline="137" endline="140">ssh_threads_get_pthread</references>
+        <references refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" compoundref="threads_8c" startline="71" endline="85">ssh_threads_set_callbacks</references>
+        <references refid="torture__key_8c_1a9f6c3b15c97c1c06ce867837c2a3956d" compoundref="torture__key_8c" startline="844" endline="852">torture_get_testkey</references>
+        <references refid="torture_8c_1a5019f4db58d345fbdf7f2c1b9952c769" compoundref="torture_8c" startline="1333" endline="1348">torture_write_file</references>
+        <referencedby refid="torture__server__x11_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__server__x11_8c" startline="223" endline="233">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__server__x11_8c_1a199383cdaf56acd2611400b9bb125142" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int teardown</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>teardown</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="53" column="12" bodyfile="tests/unittests/torture_server_x11.c" bodystart="53" bodyend="63"/>
+        <references refid="structhostkey__state_1a117a5ebf1027b5855e58759d62f0cbbd" compoundref="torture__server__x11_8c" startline="15">hostkey_state::hostkey</references>
+        <references refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" compoundref="torture__server__x11_8c" startline="16">hostkey_state::hostkey_path</references>
+        <references refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</references>
+        <referencedby refid="torture__server__x11_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__server__x11_8c" startline="223" endline="233">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__server__x11_8c_1abb575a0d8644debf193b257c748c0ce1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>static void* client_thread</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>client_thread</name>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="69" column="13" bodyfile="tests/unittests/torture_server_x11.c" bodystart="69" bodyend="96"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" compoundref="channels_8c" startline="920" endline="930">ssh_channel_open_session</references>
+        <references refid="group__libssh__channel_1gadfa34624c28164bd73453cd04aa64c1f" compoundref="channels_8c" startline="2042" endline="2091">ssh_channel_request_x11</references>
+        <references refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="torture__server__x11_8c_1a7d6d7e49d431b3ee244f5fb0643d5447" compoundref="torture__server__x11_8c" startline="12">TEST_SERVER_PORT</references>
+        <references refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</references>
+        <references refid="torture__server__x11_8c_1ae90dafe12ca6eea16049e26433619c52" compoundref="torture__server__x11_8c" startline="67">x11_screen_number</references>
+        <referencedby refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__server__x11_8c_1ae0b607880f117f85738067b513956e7d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int auth_password_accept</definition>
+        <argsstring>(ssh_session session, const char *user, const char *password, void *userdata)</argsstring>
+        <name>auth_password_accept</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="98" column="12" bodyfile="tests/unittests/torture_server_x11.c" bodystart="98" bodyend="109"/>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+        <referencedby refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__server__x11_8c_1ab89397afed98f146946b3c08c77fb462" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssh_channel_x11_req</definition>
+        <argsstring>(ssh_session session, ssh_channel channel, int single_connection, const char *auth_protocol, const char *auth_cookie, uint32_t screen_number, void *userdata)</argsstring>
+        <name>ssh_channel_x11_req</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>single_connection</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>auth_protocol</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>auth_cookie</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>screen_number</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="116" column="13" bodyfile="tests/unittests/torture_server_x11.c" bodystart="116" bodyend="135"/>
+        <references refid="structchannel__data_1a6aa8bff05c61638a9f16107c1cca6ed4" compoundref="torture__server__x11_8c" startline="112">channel_data::req_seen</references>
+        <references refid="structchannel__data_1af14c8d5b01227147d48ebbfd30f19f55" compoundref="torture__server__x11_8c" startline="113">channel_data::screen_number</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <referencedby refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__server__x11_8c_1abe10df22f22204a031b0ee56aa0b81bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+        <definition>static ssh_channel channel_open</definition>
+        <argsstring>(ssh_session session, void *userdata)</argsstring>
+        <name>channel_open</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="137" column="20" bodyfile="tests/unittests/torture_server_x11.c" bodystart="137" bodyend="152"/>
+        <references refid="proxy_8c_1ab1ac2a91d14c557598f168f66ba130eb" compoundref="proxy_8c" startline="94">channel_cb</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" compoundref="callbacks_8c" startline="104" endline="107">ssh_set_channel_callbacks</references>
+        <referencedby refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void test_ssh_channel_request_x11</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>test_ssh_channel_request_x11</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="154" column="13" bodyfile="tests/unittests/torture_server_x11.c" bodystart="154" bodyend="221"/>
+        <references refid="torture_8h_1a01b1cdf914375792da469b53466c6ddb" compoundref="torture_8h" startline="48">assert_return_code</references>
+        <references refid="torture__server__x11_8c_1ae0b607880f117f85738067b513956e7d" compoundref="torture__server__x11_8c" startline="98" endline="109">auth_password_accept</references>
+        <references refid="proxy_8c_1ab1ac2a91d14c557598f168f66ba130eb" compoundref="proxy_8c" startline="94">channel_cb</references>
+        <references refid="torture__server__x11_8c_1abe10df22f22204a031b0ee56aa0b81bf" compoundref="torture__server__x11_8c" startline="137" endline="152">channel_open</references>
+        <references refid="torture__server__x11_8c_1abb575a0d8644debf193b257c748c0ce1" compoundref="torture__server__x11_8c" startline="69" endline="96">client_thread</references>
+        <references refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" compoundref="torture__server__x11_8c" startline="16">hostkey_state::hostkey_path</references>
+        <references refid="structhostkey__state_1a4d92812586b49023ddc57435563f63de" compoundref="torture__server__x11_8c" startline="17">hostkey_state::key_type</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structchannel__data_1a6aa8bff05c61638a9f16107c1cca6ed4" compoundref="torture__server__x11_8c" startline="112">channel_data::req_seen</references>
+        <references refid="structchannel__data_1af14c8d5b01227147d48ebbfd30f19f55" compoundref="torture__server__x11_8c" startline="113">channel_data::screen_number</references>
+        <references refid="group__libssh__server_1ga6609243446f1650243101e0a779dc822" compoundref="bind_8c" startline="553" endline="581">ssh_bind_accept</references>
+        <references refid="group__libssh__server_1gaa7650d22d982a82bf328345c04948cdf" compoundref="bind_8c" startline="382" endline="421">ssh_bind_free</references>
+        <references refid="group__libssh__callbacks_1gafe09b81e5346f0babe288dc38113d289" compoundref="callbacks_8h" startline="423">ssh_callbacks_init</references>
+        <references refid="torture__server__x11_8c_1ab89397afed98f146946b3c08c77fb462" compoundref="torture__server__x11_8c" startline="116" endline="135">ssh_channel_x11_req</references>
+        <references refid="group__libssh__poll_1ga51af38de4cc3adbd5566ec1f1b91983d" compoundref="poll_8c" startline="884" endline="923">ssh_event_add_session</references>
+        <references refid="group__libssh__poll_1gada90c0ca6919271708ba1ea0352632cb" compoundref="poll_8c" startline="957" endline="965">ssh_event_dopoll</references>
+        <references refid="group__libssh__poll_1ga101388903c74d53ed550574b587449cd" compoundref="poll_8c" startline="1089" endline="1118">ssh_event_free</references>
+        <references refid="group__libssh__poll_1ga406895f99b6b486c4b65536e5399ff96" compoundref="poll_8c" startline="760" endline="785">ssh_event_new</references>
+        <references refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</references>
+        <references refid="group__libssh__server_1gab60c37350653eb3b65a99ac089c55830" compoundref="server_8c" startline="528" endline="563">ssh_handle_key_exchange</references>
+        <references refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__callbacks_1gaa321f33172cfa54eb50baaa963457a17" compoundref="callbacks_8c" startline="133" endline="147">ssh_set_server_callbacks</references>
+        <references refid="torture__server__x11_8c_1a7d6d7e49d431b3ee244f5fb0643d5447" compoundref="torture__server__x11_8c" startline="12">TEST_SERVER_PORT</references>
+        <references refid="torture_8h_1a6016799f09f5dd99c3a468fdd9bc2563">torture_ssh_bind</references>
+        <references refid="structssh__server__callbacks__struct_1ae9c5d78a7486a4a91c0ae0e863b2f776" compoundref="callbacks_8h" startline="310">ssh_server_callbacks_struct::userdata</references>
+        <references refid="structssh__channel__callbacks__struct_1ae7a7877dfb4eca2a39e5f281832c15f0" compoundref="callbacks_8h" startline="789">ssh_channel_callbacks_struct::userdata</references>
+        <references refid="torture__server__x11_8c_1ae90dafe12ca6eea16049e26433619c52" compoundref="torture__server__x11_8c" startline="67">x11_screen_number</references>
+        <referencedby refid="torture__server__x11_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__server__x11_8c" startline="223" endline="233">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__server__x11_8c_1a18fee75b27727bcf11e18cceef200834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int torture_run_tests</definition>
+        <argsstring>(void)</argsstring>
+        <name>torture_run_tests</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Expect fail on these negative test cases</para>
+        </inbodydescription>
+        <location file="tests/unittests/torture_server_x11.c" line="223" column="5" bodyfile="tests/unittests/torture_server_x11.c" bodystart="223" bodyend="233"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__server__x11_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__server__x11_8c" startline="21" endline="51">setup</references>
+        <references refid="torture__server__x11_8c_1a199383cdaf56acd2611400b9bb125142" compoundref="torture__server__x11_8c" startline="53" endline="63">teardown</references>
+        <references refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="torture__server__x11_8c_1a2e84c73592c2992fdc0b2593524f3b18" refkind="member"><highlight class="preprocessor">#define<sp/>LIBSSH_STATIC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="torture_8h" kindref="compound">torture.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="torture__server__x11_8c_1a7d6d7e49d431b3ee244f5fb0643d5447" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_SERVER_PORT<sp/>2222</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structhostkey__state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhostkey__state" kindref="compound">hostkey_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="structhostkey__state_1a117a5ebf1027b5855e58759d62f0cbbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structhostkey__state_1a117a5ebf1027b5855e58759d62f0cbbd" kindref="member">hostkey</ref>;</highlight></codeline>
+<codeline lineno="16" refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" kindref="member">hostkey_path</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a244b017e5993fde29fe9e9b1f04a7bce" kindref="member">ssh_keytypes_e</ref><sp/><ref refid="structhostkey__state_1a4d92812586b49023ddc57435563f63de" kindref="member">key_type</ref>;</highlight></codeline>
+<codeline lineno="18" refid="structhostkey__state_1ad9f57e5ffa46ee154556531110bcdb6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structhostkey__state_1ad9f57e5ffa46ee154556531110bcdb6d" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="torture__server__x11_8c_1ab3743688c369a6a63ebea4512080e9fe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__server__x11_8c_1ab3743688c369a6a63ebea4512080e9fe" kindref="member">setup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhostkey__state" kindref="compound">hostkey_state</ref><sp/>*h;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>mode_t<sp/>mask;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" kindref="member">ssh_threads_set_callbacks</ref>(<ref refid="callbacks_8h_1a117f2dff40905608871165129de1fbf7" kindref="member">ssh_threads_get_pthread</ref>());</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>h<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structhostkey__state" kindref="compound">hostkey_state</ref>));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(h);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>h-&gt;<ref refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" kindref="member">hostkey_path</ref><sp/>=<sp/>strdup(</highlight><highlight class="stringliteral">&quot;/tmp/libssh_hostkey_XXXXXX&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>mask<sp/>=<sp/>umask(S_IRWXO<sp/>|<sp/>S_IRWXG);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>h-&gt;<ref refid="structhostkey__state_1ad9f57e5ffa46ee154556531110bcdb6d" kindref="member">fd</ref><sp/>=<sp/>mkstemp(h-&gt;<ref refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" kindref="member">hostkey_path</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>umask(mask);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture_8h_1a01b1cdf914375792da469b53466c6ddb" kindref="member">assert_return_code</ref>(h-&gt;<ref refid="structhostkey__state_1ad9f57e5ffa46ee154556531110bcdb6d" kindref="member">fd</ref>,<sp/>errno);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>close(h-&gt;<ref refid="structhostkey__state_1ad9f57e5ffa46ee154556531110bcdb6d" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>h-&gt;<ref refid="structhostkey__state_1a4d92812586b49023ddc57435563f63de" kindref="member">key_type</ref><sp/>=<sp/><ref refid="libssh_8h_1a244b017e5993fde29fe9e9b1f04a7bcea1f244a10b34e2f9dd3627edbef5166ed" kindref="member">SSH_KEYTYPE_ECDSA_P256</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>h-&gt;<ref refid="structhostkey__state_1a117a5ebf1027b5855e58759d62f0cbbd" kindref="member">hostkey</ref><sp/>=<sp/><ref refid="torture__key_8c_1a9f6c3b15c97c1c06ce867837c2a3956d" kindref="member">torture_get_testkey</ref>(h-&gt;<ref refid="structhostkey__state_1a4d92812586b49023ddc57435563f63de" kindref="member">key_type</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture_8c_1a5019f4db58d345fbdf7f2c1b9952c769" kindref="member">torture_write_file</ref>(h-&gt;<ref refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" kindref="member">hostkey_path</ref>,<sp/>h-&gt;<ref refid="structhostkey__state_1a117a5ebf1027b5855e58759d62f0cbbd" kindref="member">hostkey</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>*state<sp/>=<sp/>h;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="torture__server__x11_8c_1a199383cdaf56acd2611400b9bb125142" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__server__x11_8c_1a199383cdaf56acd2611400b9bb125142" kindref="member">teardown</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhostkey__state" kindref="compound">hostkey_state</ref><sp/>*h<sp/>=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhostkey__state" kindref="compound">hostkey_state</ref><sp/>*)*state;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>unlink(h-&gt;<ref refid="structhostkey__state_1a117a5ebf1027b5855e58759d62f0cbbd" kindref="member">hostkey</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>free(h-&gt;<ref refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" kindref="member">hostkey_path</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>free(h);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>For<sp/>x11_screen_number,<sp/>need<sp/>something<sp/>that<sp/>is<sp/>not<sp/>equal<sp/>to<sp/>htonl</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/>itself<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="torture__server__x11_8c_1ae90dafe12ca6eea16049e26433619c52" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="torture__server__x11_8c_1ae90dafe12ca6eea16049e26433619c52" kindref="member">x11_screen_number</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="torture__server__x11_8c_1abb575a0d8644debf193b257c748c0ce1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__server__x11_8c_1abb575a0d8644debf193b257c748c0ce1" kindref="member">client_thread</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>test_port<sp/>=<sp/><ref refid="torture__server__x11_8c_1a7d6d7e49d431b3ee244f5fb0643d5447" kindref="member">TEST_SERVER_PORT</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)arg;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(200);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/><ref refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" kindref="member">torture_ssh_session</ref>(NULL,<sp/></highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;test_port,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;foo&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;bar&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>channel<sp/>=<sp/><ref refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" kindref="member">ssh_channel_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(channel);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" kindref="member">ssh_channel_open_session</ref>(channel);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1gadfa34624c28164bd73453cd04aa64c1f" kindref="member">ssh_channel_request_x11</ref>(channel,<sp/>0,<sp/>NULL,<sp/>NULL,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint32_t)<ref refid="torture__server__x11_8c_1ae90dafe12ca6eea16049e26433619c52" kindref="member">x11_screen_number</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" kindref="member">ssh_free</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="torture__server__x11_8c_1ae0b607880f117f85738067b513956e7d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__server__x11_8c_1ae0b607880f117f85738067b513956e7d" kindref="member">auth_password_accept</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)password;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)userdata;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" kindref="member">SSH_AUTH_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="structchannel__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchannel__data" kindref="compound">channel_data</ref><sp/>{</highlight></codeline>
+<codeline lineno="112" refid="structchannel__data_1a6aa8bff05c61638a9f16107c1cca6ed4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structchannel__data_1a6aa8bff05c61638a9f16107c1cca6ed4" kindref="member">req_seen</ref>;</highlight></codeline>
+<codeline lineno="113" refid="structchannel__data_1af14c8d5b01227147d48ebbfd30f19f55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structchannel__data_1af14c8d5b01227147d48ebbfd30f19f55" kindref="member">screen_number</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="torture__server__x11_8c_1ab89397afed98f146946b3c08c77fb462" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__server__x11_8c_1ab89397afed98f146946b3c08c77fb462" kindref="member">ssh_channel_x11_req</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>single_connection,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*auth_protocol,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*auth_cookie,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>screen_number,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchannel__data" kindref="compound">channel_data</ref><sp/>*<ref refid="structchannel__data" kindref="compound">channel_data</ref><sp/>=<sp/>userdata;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)channel;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)single_connection;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)auth_protocol;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)auth_cookie;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We&apos;ve<sp/>seen<sp/>an<sp/>x11<sp/>request.<sp/><sp/>Record<sp/>the<sp/>screen<sp/>number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structchannel__data" kindref="compound">channel_data</ref>-&gt;<ref refid="structchannel__data_1a6aa8bff05c61638a9f16107c1cca6ed4" kindref="member">req_seen</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structchannel__data" kindref="compound">channel_data</ref>-&gt;<ref refid="structchannel__data_1af14c8d5b01227147d48ebbfd30f19f55" kindref="member">screen_number</ref><sp/>=<sp/><ref refid="structchannel__data_1af14c8d5b01227147d48ebbfd30f19f55" kindref="member">screen_number</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="torture__server__x11_8c_1abe10df22f22204a031b0ee56aa0b81bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/><ref refid="torture__server__x11_8c_1abe10df22f22204a031b0ee56aa0b81bf" kindref="member">channel_open</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__channel__callbacks__struct" kindref="compound">ssh_channel_callbacks</ref><sp/><ref refid="proxy_8c_1ab1ac2a91d14c557598f168f66ba130eb" kindref="member">channel_cb</ref><sp/>=<sp/>userdata;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)userdata;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>channel<sp/>=<sp/><ref refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" kindref="member">ssh_channel_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" kindref="member">ssh_set_channel_callbacks</ref>(channel,<sp/><ref refid="proxy_8c_1ab1ac2a91d14c557598f168f66ba130eb" kindref="member">channel_cb</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/>out:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>channel;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" kindref="member">test_ssh_channel_request_x11</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhostkey__state" kindref="compound">hostkey_state</ref><sp/>*h<sp/>=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhostkey__state" kindref="compound">hostkey_state</ref><sp/>*)*state;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/>event_rc;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_t<sp/>client_pthread;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__bind__struct" kindref="compound">ssh_bind</ref><sp/>sshbind;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/>server;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__event__struct" kindref="compound">ssh_event</ref><sp/>event;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchannel__data" kindref="compound">channel_data</ref><sp/><ref refid="structchannel__data" kindref="compound">channel_data</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__channel__callbacks__struct" kindref="compound">ssh_channel_callbacks_struct</ref><sp/><ref refid="proxy_8c_1ab1ac2a91d14c557598f168f66ba130eb" kindref="member">channel_cb</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structssh__channel__callbacks__struct_1ae7a7877dfb4eca2a39e5f281832c15f0" kindref="member">userdata</ref><sp/>=<sp/>&amp;<ref refid="structchannel__data" kindref="compound">channel_data</ref>,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.channel_x11_req_function<sp/>=<sp/><ref refid="torture__server__x11_8c_1ab89397afed98f146946b3c08c77fb462" kindref="member">ssh_channel_x11_req</ref></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__server__callbacks__struct" kindref="compound">ssh_server_callbacks_struct</ref><sp/>server_cb<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structssh__server__callbacks__struct_1ae9c5d78a7486a4a91c0ae0e863b2f776" kindref="member">userdata</ref><sp/>=<sp/>&amp;<ref refid="proxy_8c_1ab1ac2a91d14c557598f168f66ba130eb" kindref="member">channel_cb</ref>,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.auth_password_function<sp/>=<sp/><ref refid="torture__server__x11_8c_1ae0b607880f117f85738067b513956e7d" kindref="member">auth_password_accept</ref>,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.channel_open_request_session_function<sp/>=<sp/><ref refid="torture__server__x11_8c_1abe10df22f22204a031b0ee56aa0b81bf" kindref="member">channel_open</ref></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;<ref refid="structchannel__data" kindref="compound">channel_data</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structchannel__data" kindref="compound">channel_data</ref>));</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1gafe09b81e5346f0babe288dc38113d289" kindref="member">ssh_callbacks_init</ref>(&amp;<ref refid="proxy_8c_1ab1ac2a91d14c557598f168f66ba130eb" kindref="member">channel_cb</ref>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1gafe09b81e5346f0babe288dc38113d289" kindref="member">ssh_callbacks_init</ref>(&amp;server_cb);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>server<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>sshbind<sp/>=<sp/><ref refid="torture_8h_1a6016799f09f5dd99c3a468fdd9bc2563" kindref="member">torture_ssh_bind</ref>(</highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__server__x11_8c_1a7d6d7e49d431b3ee244f5fb0643d5447" kindref="member">TEST_SERVER_PORT</ref>,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h-&gt;<ref refid="structhostkey__state_1a4d92812586b49023ddc57435563f63de" kindref="member">key_type</ref>,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h-&gt;<ref refid="structhostkey__state_1abb4e0d83183f855848c519141575965e" kindref="member">hostkey_path</ref>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(sshbind);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>client<sp/>to<sp/>connect<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>pthread_create(&amp;client_pthread,<sp/>NULL,<sp/><ref refid="torture__server__x11_8c_1abb575a0d8644debf193b257c748c0ce1" kindref="member">client_thread</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture_8h_1a01b1cdf914375792da469b53466c6ddb" kindref="member">assert_return_code</ref>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/>errno);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>server<sp/>=<sp/><ref refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" kindref="member">ssh_new</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(server);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__server_1ga6609243446f1650243101e0a779dc822" kindref="member">ssh_bind_accept</ref>(sshbind,<sp/>server);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Handle<sp/>client<sp/>connection<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1gaa321f33172cfa54eb50baaa963457a17" kindref="member">ssh_set_server_callbacks</ref>(server,<sp/>&amp;server_cb);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__server_1gab60c37350653eb3b65a99ac089c55830" kindref="member">ssh_handle_key_exchange</ref>(server);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/><ref refid="group__libssh__poll_1ga406895f99b6b486c4b65536e5399ff96" kindref="member">ssh_event_new</ref>();</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(event);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1ga51af38de4cc3adbd5566ec1f1b91983d" kindref="member">ssh_event_add_session</ref>(event,<sp/>server);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>event_rc<sp/>=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="structchannel__data" kindref="compound">channel_data</ref>.<ref refid="structchannel__data_1a6aa8bff05c61638a9f16107c1cca6ed4" kindref="member">req_seen</ref><sp/>&amp;&amp;<sp/>event_rc<sp/>==<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>event_rc<sp/>=<sp/><ref refid="group__libssh__poll_1gada90c0ca6919271708ba1ea0352632cb" kindref="member">ssh_event_dopoll</ref>(event,<sp/>-1);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cleanup<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1ga101388903c74d53ed550574b587449cd" kindref="member">ssh_event_free</ref>(event);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" kindref="member">ssh_free</ref>(server);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__server_1gaa7650d22d982a82bf328345c04948cdf" kindref="member">ssh_bind_free</ref>(sshbind);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>pthread_join(client_pthread,<sp/>NULL);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_true(<ref refid="structchannel__data" kindref="compound">channel_data</ref>.<ref refid="structchannel__data_1a6aa8bff05c61638a9f16107c1cca6ed4" kindref="member">req_seen</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="structchannel__data" kindref="compound">channel_data</ref>.<ref refid="structchannel__data_1af14c8d5b01227147d48ebbfd30f19f55" kindref="member">screen_number</ref>,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__server__x11_8c_1ae90dafe12ca6eea16049e26433619c52" kindref="member">x11_screen_number</ref>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="torture__server__x11_8c_1a18fee75b27727bcf11e18cceef200834" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__server__x11_8c_1a18fee75b27727bcf11e18cceef200834" kindref="member">torture_run_tests</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">CMUnitTest<sp/>tests[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test_setup_teardown(<ref refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" kindref="member">test_ssh_channel_request_x11</ref>,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__server__x11_8c_1ab3743688c369a6a63ebea4512080e9fe" kindref="member">setup</ref>,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__server__x11_8c_1a199383cdaf56acd2611400b9bb125142" kindref="member">teardown</ref>)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>cmocka_run_group_tests(tests,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tests/unittests/torture_server_x11.c"/>
+  </compounddef>
+</doxygen>

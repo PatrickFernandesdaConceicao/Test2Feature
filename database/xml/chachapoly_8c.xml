@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="chachapoly_8c" kind="file" language="C++">
+    <compoundname>chachapoly.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="libssh_8h" local="yes">libssh/libssh.h</includes>
+    <includes refid="crypto_8h" local="yes">libssh/crypto.h</includes>
+    <includes refid="chacha_8h" local="yes">libssh/chacha.h</includes>
+    <includes refid="poly1305_8h" local="yes">libssh/poly1305.h</includes>
+    <includes refid="misc_8h" local="yes">libssh/misc.h</includes>
+    <includes refid="chacha20-poly1305-common_8h" local="yes">libssh/chacha20-poly1305-common.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>stdbool.h</label>
+      </node>
+      <node id="7">
+        <label>sys/select.h</label>
+      </node>
+      <node id="27">
+        <label>libssh/chacha20-poly1305-common.h</label>
+        <link refid="chacha20-poly1305-common_8h"/>
+      </node>
+      <node id="20">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="21">
+        <label>stdint.h</label>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>stdlib.h</label>
+      </node>
+      <node id="28">
+        <label>libssh/misc.h</label>
+        <link refid="misc_8h"/>
+      </node>
+      <node id="16">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>netdb.h</label>
+      </node>
+      <node id="17">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>libssh/chacha.h</label>
+        <link refid="chacha_8h"/>
+      </node>
+      <node id="26">
+        <label>libssh/poly1305.h</label>
+        <link refid="poly1305_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>sys/types.h</label>
+      </node>
+      <node id="14">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="10">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structchacha20__poly1305__keysched" prot="public">chacha20_poly1305_keysched</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t zero_block_counter[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>zero_block_counter</name>
+        <initializer>= {0, 0, 0, 0, 0, 0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="38" column="22" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="38" bodyend="-1"/>
+        <referencedby refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" compoundref="chachapoly_8c" startline="133" endline="180">chacha20_poly1305_aead_decrypt</referencedby>
+        <referencedby refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" compoundref="chachapoly_8c" startline="111" endline="131">chacha20_poly1305_aead_decrypt_length</referencedby>
+        <referencedby refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" compoundref="chachapoly_8c" startline="71" endline="109">chacha20_poly1305_aead_encrypt</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="chachapoly_8c_1a7eaf48ec1080a1d7be911697a7634f83" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t payload_block_counter[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>payload_block_counter</name>
+        <initializer>= {1, 0, 0, 0, 0, 0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="39" column="22" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="39" bodyend="-1"/>
+        <referencedby refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" compoundref="chachapoly_8c" startline="133" endline="180">chacha20_poly1305_aead_decrypt</referencedby>
+        <referencedby refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" compoundref="chachapoly_8c" startline="71" endline="109">chacha20_poly1305_aead_encrypt</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="chachapoly_8c_1a245e5e6bb684bf949880264a7998f967" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref></type>
+        <definition>const struct ssh_cipher_struct chacha20poly1305_cipher</definition>
+        <argsstring></argsstring>
+        <name>chacha20poly1305_cipher</name>
+        <initializer>= {
+    .ciphertype = <ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32aa209e4c66d588b71664f209c4806fb41" kindref="member">SSH_AEAD_CHACHA20_POLY1305</ref>,
+    .<ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref> = &quot;chacha20-poly1305@openssh.com&quot;,
+    .blocksize = 8,
+    .lenfield_blocksize = 4,
+    .keylen = sizeof(struct <ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref>),
+    .keysize = 512,
+    .tag_size = <ref refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" kindref="member">POLY1305_TAGLEN</ref>,
+    .set_encrypt_key = <ref refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" kindref="member">chacha20_set_encrypt_key</ref>,
+    .set_decrypt_key = <ref refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" kindref="member">chacha20_set_encrypt_key</ref>,
+    .aead_encrypt = <ref refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" kindref="member">chacha20_poly1305_aead_encrypt</ref>,
+    .aead_decrypt_length = <ref refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" kindref="member">chacha20_poly1305_aead_decrypt_length</ref>,
+    .aead_decrypt = <ref refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" kindref="member">chacha20_poly1305_aead_decrypt</ref>,
+    .cleanup = <ref refid="chachapoly_8c_1a515fc6613260af0d8b4488c8fd7245db" kindref="member">chacha20_cleanup</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="182" column="13" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int chacha20_set_encrypt_key</definition>
+        <argsstring>(struct ssh_cipher_struct *cipher, void *key, void *IV)</argsstring>
+        <name>chacha20_set_encrypt_key</name>
+        <param>
+          <type>struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>IV</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="41" column="12" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="41" bodyend="63"/>
+        <references refid="chacha20-poly1305-common_8h_1aeec6d2e554796dc5d0927c0833fb7164" compoundref="chacha20-poly1305-common_8h" startline="33">CHACHA20_KEYLEN</references>
+        <references refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" compoundref="crypto_8h" startline="180">ssh_cipher_struct::chacha20_schedule</references>
+        <references refid="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" compoundref="chacha_8c" startline="53" endline="75">chacha_keysetup</references>
+        <references refid="torture__crypto_8c_1ae9b145408effbad6400533a736404baf" compoundref="torture__crypto_8c" startline="14">IV</references>
+        <references refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" compoundref="chachapoly_8c" startline="33">chacha20_poly1305_keysched::k1</references>
+        <references refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" compoundref="chachapoly_8c" startline="35">chacha20_poly1305_keysched::k2</references>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+      </memberdef>
+      <memberdef kind="function" id="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void chacha20_poly1305_aead_encrypt</definition>
+        <argsstring>(struct ssh_cipher_struct *cipher, void *in, void *out, size_t len, uint8_t *tag, uint64_t seq)</argsstring>
+        <name>chacha20_poly1305_aead_encrypt</name>
+        <param>
+          <type>struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>seq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="71" column="13" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="71" bodyend="109"/>
+        <references refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" compoundref="crypto_8h" startline="180">ssh_cipher_struct::chacha20_schedule</references>
+        <references refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" compoundref="chacha_8c" startline="87" endline="216">chacha_encrypt_bytes</references>
+        <references refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" compoundref="chacha_8c" startline="78" endline="84">chacha_ivsetup</references>
+        <references refid="priv_8h_1a9f4bf0773c45ad9a9753a1b784a13fbb" compoundref="priv_8h" startline="386">htonll</references>
+        <references refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" compoundref="chachapoly_8c" startline="33">chacha20_poly1305_keysched::k1</references>
+        <references refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" compoundref="chachapoly_8c" startline="35">chacha20_poly1305_keysched::k2</references>
+        <references refid="structssh__packet__header_1a1eb98c53b0c6e0a35454cae464f62459" compoundref="chacha20-poly1305-common_8h" startline="43">ssh_packet_header::length</references>
+        <references refid="structssh__packet__header_1a5791c8fc2f22ab8348e8f712ec4ad562" compoundref="chacha20-poly1305-common_8h" startline="44">ssh_packet_header::payload</references>
+        <references refid="chachapoly_8c_1a7eaf48ec1080a1d7be911697a7634f83" compoundref="chachapoly_8c" startline="39">payload_block_counter</references>
+        <references refid="poly1305_8h_1ad357be8d0b5eda7684181550ee67adc1">poly1305_auth</references>
+        <references refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" compoundref="chacha20-poly1305-common_8h" startline="37">POLY1305_KEYLEN</references>
+        <references refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" compoundref="chachapoly_8c" startline="38">zero_block_counter</references>
+      </memberdef>
+      <memberdef kind="function" id="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int chacha20_poly1305_aead_decrypt_length</definition>
+        <argsstring>(struct ssh_cipher_struct *cipher, void *in, uint8_t *out, size_t len, uint64_t seq)</argsstring>
+        <name>chacha20_poly1305_aead_decrypt_length</name>
+        <param>
+          <type>struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>seq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="111" column="12" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="111" bodyend="131"/>
+        <references refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" compoundref="crypto_8h" startline="180">ssh_cipher_struct::chacha20_schedule</references>
+        <references refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" compoundref="chacha_8c" startline="87" endline="216">chacha_encrypt_bytes</references>
+        <references refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" compoundref="chacha_8c" startline="78" endline="84">chacha_ivsetup</references>
+        <references refid="priv_8h_1a9f4bf0773c45ad9a9753a1b784a13fbb" compoundref="priv_8h" startline="386">htonll</references>
+        <references refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" compoundref="chachapoly_8c" startline="33">chacha20_poly1305_keysched::k1</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" compoundref="chachapoly_8c" startline="38">zero_block_counter</references>
+      </memberdef>
+      <memberdef kind="function" id="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int chacha20_poly1305_aead_decrypt</definition>
+        <argsstring>(struct ssh_cipher_struct *cipher, void *complete_packet, uint8_t *out, size_t encrypted_size, uint64_t seq)</argsstring>
+        <name>chacha20_poly1305_aead_decrypt</name>
+        <param>
+          <type>struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>complete_packet</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>encrypted_size</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>seq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="133" column="12" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="133" bodyend="180"/>
+        <references refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" compoundref="crypto_8h" startline="180">ssh_cipher_struct::chacha20_schedule</references>
+        <references refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" compoundref="chacha_8c" startline="87" endline="216">chacha_encrypt_bytes</references>
+        <references refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" compoundref="chacha_8c" startline="78" endline="84">chacha_ivsetup</references>
+        <references refid="priv_8h_1a9f4bf0773c45ad9a9753a1b784a13fbb" compoundref="priv_8h" startline="386">htonll</references>
+        <references refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" compoundref="chachapoly_8c" startline="35">chacha20_poly1305_keysched::k2</references>
+        <references refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" compoundref="torture__packet_8c" startline="21">mac</references>
+        <references refid="chachapoly_8c_1a7eaf48ec1080a1d7be911697a7634f83" compoundref="chachapoly_8c" startline="39">payload_block_counter</references>
+        <references refid="poly1305_8h_1ad357be8d0b5eda7684181550ee67adc1">poly1305_auth</references>
+        <references refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" compoundref="chacha20-poly1305-common_8h" startline="37">POLY1305_KEYLEN</references>
+        <references refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" compoundref="chacha20-poly1305-common_8h" startline="35">POLY1305_TAGLEN</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" compoundref="misc_8c" startline="467" endline="627">ssh_log_hexdump</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" compoundref="chachapoly_8c" startline="38">zero_block_counter</references>
+        <references refid="examples__common_8h_1a01c647179ba7270ccbc9a5253846b3d2" compoundref="examples__common_8h" startline="19">ZERO_STRUCT</references>
+      </memberdef>
+      <memberdef kind="function" id="chachapoly_8c_1a515fc6613260af0d8b4488c8fd7245db" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void chacha20_cleanup</definition>
+        <argsstring>(struct ssh_cipher_struct *cipher)</argsstring>
+        <name>chacha20_cleanup</name>
+        <param>
+          <type>struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+          <declname>cipher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="182" column="13" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="182" bodyend="184"/>
+        <references refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" compoundref="crypto_8h" startline="180">ssh_cipher_struct::chacha20_schedule</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+      </memberdef>
+      <memberdef kind="function" id="chachapoly_8c_1aa802812ad2d58e8c5e835af4b56571b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+        <definition>const struct ssh_cipher_struct* ssh_get_chacha20poly1305_cipher</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_get_chacha20poly1305_cipher</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/chachapoly.c" line="202" column="30" bodyfile="libssh-mirror/src/chachapoly.c" bodystart="202" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2015<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">libssh/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="chacha_8h" kindref="compound">libssh/chacha.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="poly1305_8h" kindref="compound">libssh/poly1305.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="misc_8h" kindref="compound">libssh/misc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="chacha20-poly1305-common_8h" kindref="compound">libssh/chacha20-poly1305-common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="structchacha20__poly1305__keysched" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>key<sp/>used<sp/>for<sp/>encrypting<sp/>the<sp/>length<sp/>field*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/><ref refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" kindref="member">k1</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>key<sp/>used<sp/>for<sp/>encrypting<sp/>the<sp/>packets<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/><ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" kindref="member">zero_block_counter</ref>[8]<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="39" refid="chachapoly_8c_1a7eaf48ec1080a1d7be911697a7634f83" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="chachapoly_8c_1a7eaf48ec1080a1d7be911697a7634f83" kindref="member">payload_block_counter</ref>[8]<sp/>=<sp/>{1,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" kindref="member">chacha20_set_encrypt_key</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1ae9b145408effbad6400533a736404baf" kindref="member">IV</ref>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref><sp/>*sched;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*u8key<sp/>=<sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="torture__crypto_8c_1ae9b145408effbad6400533a736404baf" kindref="member">IV</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cipher-&gt;<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sched<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*sched);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sched<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sched<sp/>=<sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" kindref="member">chacha_keysetup</ref>(&amp;sched-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,<sp/>u8key,<sp/><ref refid="chacha20-poly1305-common_8h_1aeec6d2e554796dc5d0927c0833fb7164" kindref="member">CHACHA20_KEYLEN</ref><sp/>*<sp/>8);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" kindref="member">chacha_keysetup</ref>(&amp;sched-&gt;<ref refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" kindref="member">k1</ref>,<sp/>u8key<sp/>+<sp/><ref refid="chacha20-poly1305-common_8h_1aeec6d2e554796dc5d0927c0833fb7164" kindref="member">CHACHA20_KEYLEN</ref>,<sp/><ref refid="chacha20-poly1305-common_8h_1aeec6d2e554796dc5d0927c0833fb7164" kindref="member">CHACHA20_KEYLEN</ref><sp/>*<sp/>8);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref><sp/>=<sp/>sched;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" kindref="member">chacha20_poly1305_aead_encrypt</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*tag,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>seq)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__packet__header" kindref="compound">ssh_packet_header</ref><sp/>*in_packet<sp/>=<sp/>in,<sp/>*out_packet<sp/>=<sp/>out;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>poly1305_ctx[<ref refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" kindref="member">POLY1305_KEYLEN</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref><sp/>*keys<sp/>=<sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>seq<sp/>=<sp/><ref refid="priv_8h_1a9f4bf0773c45ad9a9753a1b784a13fbb" kindref="member">htonll</ref>(seq);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>step<sp/>1,<sp/>prepare<sp/>the<sp/>poly1305<sp/>key<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" kindref="member">chacha_ivsetup</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,<sp/>(uint8_t<sp/>*)&amp;seq,<sp/><ref refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" kindref="member">zero_block_counter</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" kindref="member">chacha_encrypt_bytes</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>poly1305_ctx,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>poly1305_ctx,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" kindref="member">POLY1305_KEYLEN</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>step<sp/>2,<sp/>encrypt<sp/>length<sp/>field<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" kindref="member">chacha_ivsetup</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" kindref="member">k1</ref>,<sp/>(uint8_t<sp/>*)&amp;seq,<sp/><ref refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" kindref="member">zero_block_counter</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" kindref="member">chacha_encrypt_bytes</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" kindref="member">k1</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)&amp;in_packet-&gt;<ref refid="structssh__packet__header_1a1eb98c53b0c6e0a35454cae464f62459" kindref="member">length</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)&amp;out_packet-&gt;length,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t));</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>step<sp/>3,<sp/>encrypt<sp/>packet<sp/>payload<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" kindref="member">chacha_ivsetup</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,<sp/>(uint8_t<sp/>*)&amp;seq,<sp/><ref refid="chachapoly_8c_1a7eaf48ec1080a1d7be911697a7634f83" kindref="member">payload_block_counter</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" kindref="member">chacha_encrypt_bytes</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in_packet-&gt;<ref refid="structssh__packet__header_1a5791c8fc2f22ab8348e8f712ec4ad562" kindref="member">payload</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out_packet-&gt;payload,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>-<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t));</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ssh_log_hexdump(&quot;poly1305_ctx&quot;,<sp/>poly1305_ctx,<sp/>sizeof(poly1305_ctx));<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>step<sp/>4,<sp/>compute<sp/>the<sp/>MAC<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="poly1305_8h_1ad357be8d0b5eda7684181550ee67adc1" kindref="member">poly1305_auth</ref>(tag,<sp/>(uint8_t<sp/>*)out_packet,<sp/>len,<sp/>poly1305_ctx);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ssh_log_hexdump(&quot;poly1305<sp/>src&quot;,<sp/>(uint8_t<sp/>*)out_packet,<sp/>len);</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>ssh_log_hexdump(&quot;poly1305<sp/>tag&quot;,<sp/>tag,<sp/>POLY1305_TAGLEN);<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" kindref="member">chacha20_poly1305_aead_decrypt_length</ref>(</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*out,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>seq)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref><sp/>*keys<sp/>=<sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t))<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>seq<sp/>=<sp/><ref refid="priv_8h_1a9f4bf0773c45ad9a9753a1b784a13fbb" kindref="member">htonll</ref>(seq);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" kindref="member">chacha_ivsetup</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" kindref="member">k1</ref>,<sp/>(uint8_t<sp/>*)&amp;seq,<sp/><ref refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" kindref="member">zero_block_counter</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" kindref="member">chacha_encrypt_bytes</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" kindref="member">k1</ref>,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)out,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" kindref="member">chacha20_poly1305_aead_decrypt</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*complete_packet,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*out,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>encrypted_size,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>seq)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>poly1305_ctx[<ref refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" kindref="member">POLY1305_KEYLEN</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>tag[<ref refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" kindref="member">POLY1305_TAGLEN</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref><sp/>*keys<sp/>=<sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref><sp/>=<sp/>(uint8_t<sp/>*)complete_packet<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t)<sp/>+<sp/>encrypted_size;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cmp;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>seq<sp/>=<sp/><ref refid="priv_8h_1a9f4bf0773c45ad9a9753a1b784a13fbb" kindref="member">htonll</ref>(seq);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="examples__common_8h_1a01c647179ba7270ccbc9a5253846b3d2" kindref="member">ZERO_STRUCT</ref>(poly1305_ctx);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" kindref="member">chacha_ivsetup</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,<sp/>(uint8_t<sp/>*)&amp;seq,<sp/><ref refid="chachapoly_8c_1a0aa386af8da68c91e6ca83f310dbaa5b" kindref="member">zero_block_counter</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" kindref="member">chacha_encrypt_bytes</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>poly1305_ctx,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>poly1305_ctx,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" kindref="member">POLY1305_KEYLEN</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;poly1305_ctx&quot;</highlight><highlight class="normal">,<sp/>poly1305_ctx,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(poly1305_ctx));</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="poly1305_8h_1ad357be8d0b5eda7684181550ee67adc1" kindref="member">poly1305_auth</ref>(tag,<sp/>(uint8_t<sp/>*)complete_packet,<sp/>encrypted_size<sp/>+</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t),<sp/>poly1305_ctx);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;poly1305<sp/>src&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t*)complete_packet,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>encrypted_size<sp/>+<sp/>4);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;poly1305<sp/>tag&quot;</highlight><highlight class="normal">,<sp/>tag,<sp/><ref refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" kindref="member">POLY1305_TAGLEN</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;received<sp/>tag&quot;</highlight><highlight class="normal">,<sp/><ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,<sp/><ref refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" kindref="member">POLY1305_TAGLEN</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>cmp<sp/>=<sp/>memcmp(tag,<sp/><ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,<sp/><ref refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" kindref="member">POLY1305_TAGLEN</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cmp<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>mac<sp/>error<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" kindref="member">SSH_LOG</ref>(<ref refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" kindref="member">SSH_LOG_PACKET</ref>,</highlight><highlight class="stringliteral">&quot;poly1305<sp/>verify<sp/>error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" kindref="member">chacha_ivsetup</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,<sp/>(uint8_t<sp/>*)&amp;seq,<sp/><ref refid="chachapoly_8c_1a7eaf48ec1080a1d7be911697a7634f83" kindref="member">payload_block_counter</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" kindref="member">chacha_encrypt_bytes</ref>(&amp;keys-&gt;<ref refid="structchacha20__poly1305__keysched_1a3b6721bbd6399d11e997dc595ed6c6ef" kindref="member">k2</ref>,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t<sp/>*)complete_packet<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t),</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>encrypted_size);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="chachapoly_8c_1a515fc6613260af0d8b4488c8fd7245db" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="chachapoly_8c_1a515fc6613260af0d8b4488c8fd7245db" kindref="member">chacha20_cleanup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(cipher-&gt;<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/><ref refid="chachapoly_8c_1a245e5e6bb684bf949880264a7998f967" kindref="member">chacha20poly1305_cipher</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structssh__cipher__struct_1ad56b850d5dd3894b47930e8b20bd8afe" kindref="member">ciphertype</ref><sp/>=<sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32aa209e4c66d588b71664f209c4806fb41" kindref="member">SSH_AEAD_CHACHA20_POLY1305</ref>,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>.name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;chacha20-poly1305@openssh.com&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>.blocksize<sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>.lenfield_blocksize<sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>.keylen<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref>),</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>.keysize<sp/>=<sp/>512,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>.tag_size<sp/>=<sp/><ref refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" kindref="member">POLY1305_TAGLEN</ref>,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>.set_encrypt_key<sp/>=<sp/><ref refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" kindref="member">chacha20_set_encrypt_key</ref>,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>.set_decrypt_key<sp/>=<sp/><ref refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" kindref="member">chacha20_set_encrypt_key</ref>,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>.aead_encrypt<sp/>=<sp/><ref refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" kindref="member">chacha20_poly1305_aead_encrypt</ref>,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>.aead_decrypt_length<sp/>=<sp/><ref refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" kindref="member">chacha20_poly1305_aead_decrypt_length</ref>,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>.aead_decrypt<sp/>=<sp/><ref refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" kindref="member">chacha20_poly1305_aead_decrypt</ref>,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>.cleanup<sp/>=<sp/><ref refid="chachapoly_8c_1a515fc6613260af0d8b4488c8fd7245db" kindref="member">chacha20_cleanup</ref></highlight></codeline>
+<codeline lineno="200"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="structchacha20__poly1305__keysched_1afe74bcc8ab1e3d2068b6dfb2a0b30211" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*<ref refid="chachapoly_8c_1aa802812ad2d58e8c5e835af4b56571b7" kindref="member">ssh_get_chacha20poly1305_cipher</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="chachapoly_8c_1a245e5e6bb684bf949880264a7998f967" kindref="member">chacha20poly1305_cipher</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/chachapoly.c"/>
+  </compounddef>
+</doxygen>

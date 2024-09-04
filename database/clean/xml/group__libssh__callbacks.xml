@@ -1,0 +1,2054 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__libssh__callbacks" kind="group">
+    <compoundname>libssh_callbacks</compoundname>
+    <title>The libssh callbacks</title>
+    <innerclass refid="structssh__callbacks__struct" prot="public">ssh_callbacks_struct</innerclass>
+    <innerclass refid="structssh__server__callbacks__struct" prot="public">ssh_server_callbacks_struct</innerclass>
+    <innerclass refid="structssh__socket__callbacks__struct" prot="public">ssh_socket_callbacks_struct</innerclass>
+    <innerclass refid="structssh__packet__callbacks__struct" prot="public">ssh_packet_callbacks_struct</innerclass>
+    <innerclass refid="structssh__channel__callbacks__struct" prot="public">ssh_channel_callbacks_struct</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga47b833f21a2b7145e421e63cad14b3d4" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_callback_int) (int code, void *user)</definition>
+        <argsstring>)(int code, void *user)</argsstring>
+        <name>ssh_callback_int</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="49" column="9" bodyfile="include/libssh/callbacks.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaf06fe7d0b8cd8a5aab0a19ad7c6140b9" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_callback_data) (const void *data, size_t len, void *user)</definition>
+        <argsstring>)(const void *data, size_t len, void *user)</argsstring>
+        <name>ssh_callback_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="59" column="9" bodyfile="include/libssh/callbacks.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaec19974b49541c787f7825e523849436" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_callback_int_int) (int code, int errno_code, void *user)</definition>
+        <argsstring>)(int code, int errno_code, void *user)</argsstring>
+        <name>ssh_callback_int_int</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="61" column="9" bodyfile="include/libssh/callbacks.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaf6fd77dd8566d8bd0d87be9d4b7c4243" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_message_callback) (ssh_session, ssh_message message, void *user)</definition>
+        <argsstring>)(ssh_session, ssh_message message, void *user)</argsstring>
+        <name>ssh_message_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="63" column="9" bodyfile="include/libssh/callbacks.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gabb4a1fe7cde149c5064f3b36d0a3a94f" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_callback_int) (ssh_channel channel, int code, void *user)</definition>
+        <argsstring>)(ssh_channel channel, int code, void *user)</argsstring>
+        <name>ssh_channel_callback_int</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="64" column="9" bodyfile="include/libssh/callbacks.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaa1b8a1768e5bb4904c74e9a0ba0b6874" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_callback_data) (ssh_channel channel, int code, void *data, size_t len, void *user)</definition>
+        <argsstring>)(ssh_channel channel, int code, void *data, size_t len, void *user)</argsstring>
+        <name>ssh_channel_callback_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="65" column="9" bodyfile="include/libssh/callbacks.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga9057cbb0dc4ad1939cf6e03f36eaae9f" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_log_callback) (ssh_session session, int priority, const char *message, void *userdata)</definition>
+        <argsstring>)(ssh_session session, int priority, const char *message, void *userdata)</argsstring>
+        <name>ssh_log_callback</name>
+        <briefdescription>
+<para>SSH log callback. All logging messages will go through this callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Priority of the log, the smaller being the more important </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="74" column="9" bodyfile="include/libssh/callbacks.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gab6eedc77c07dde0c6baf9c29e7700a99" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_logging_callback) (int priority, const char *function, const char *buffer, void *userdata)</definition>
+        <argsstring>)(int priority, const char *function, const char *buffer, void *userdata)</argsstring>
+        <name>ssh_logging_callback</name>
+        <briefdescription>
+<para>SSH log callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>All logging messages will go through this callback.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Priority of the log, the smaller being the more important.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function name calling the the logging fucntions.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual message</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="90" column="9" bodyfile="include/libssh/callbacks.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gabd1e46f073ad992ae8642d8ebcde45a3" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_status_callback) (ssh_session session, float status, void *userdata)</definition>
+        <argsstring>)(ssh_session session, float status, void *userdata)</argsstring>
+        <name>ssh_status_callback</name>
+        <briefdescription>
+<para>SSH Connection status callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage of connection status, going from 0.0 to 1.0 once connection is done. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="102" column="9" bodyfile="include/libssh/callbacks.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaeeb75ac372db669157bba96c22e6df85" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_global_request_callback) (ssh_session session, ssh_message message, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_message message, void *userdata)</argsstring>
+        <name>ssh_global_request_callback</name>
+        <briefdescription>
+<para>SSH global request callback. All global request will go through this callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="112" column="9" bodyfile="include/libssh/callbacks.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga6fc88f06d2eaa263d3336621edea0dcc" prot="public" static="no">
+        <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref>(*</type>
+        <definition>typedef ssh_channel(* ssh_channel_open_request_x11_callback) (ssh_session session, const char *originator_address, int originator_port, void *userdata)</definition>
+        <argsstring>)(ssh_session session, const char *originator_address, int originator_port, void *userdata)</argsstring>
+        <name>ssh_channel_open_request_x11_callback</name>
+        <briefdescription>
+<para>Handles an SSH new channel open X11 request. This happens when the server sends back an X11 connection attempt. This is a client-side API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a valid ssh_channel handle if the request is to be allowed </para>
+</simplesect>
+<simplesect kind="return"><para>NULL if the request should not be allowed </para>
+</simplesect>
+<simplesect kind="warning"><para>The channel pointer returned by this callback must be closed by the application. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="124" column="9" bodyfile="include/libssh/callbacks.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaaa21f6a1afe26a81e1b20a714bbfdec0" prot="public" static="no">
+        <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref>(*</type>
+        <definition>typedef ssh_channel(* ssh_channel_open_request_auth_agent_callback) (ssh_session session, void *userdata)</definition>
+        <argsstring>)(ssh_session session, void *userdata)</argsstring>
+        <name>ssh_channel_open_request_auth_agent_callback</name>
+        <briefdescription>
+<para>Handles an SSH new channel open &quot;auth-agent&quot; request. This happens when the server sends back an &quot;auth-agent&quot; connection attempt. This is a client-side API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a valid ssh_channel handle if the request is to be allowed </para>
+</simplesect>
+<simplesect kind="return"><para>NULL if the request should not be allowed </para>
+</simplesect>
+<simplesect kind="warning"><para>The channel pointer returned by this callback must be closed by the application. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="136" column="9" bodyfile="include/libssh/callbacks.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga46fded0a609e103977640d2a4d1bbfb6" prot="public" static="no">
+        <type>struct <ref refid="structssh__callbacks__struct" kindref="compound">ssh_callbacks_struct</ref> *</type>
+        <definition>typedef struct ssh_callbacks_struct* ssh_callbacks</definition>
+        <argsstring></argsstring>
+        <name>ssh_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="173" column="35" bodyfile="include/libssh/callbacks.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gad32c421f392ad47275446378339f59c6" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_auth_password_callback) (ssh_session session, const char *user, const char *password, void *userdata)</definition>
+        <argsstring>)(ssh_session session, const char *user, const char *password, void *userdata)</argsstring>
+        <name>ssh_auth_password_callback</name>
+        <briefdescription>
+<para>SSH authentication callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are callbacks used specifically in SSH servers. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User that wants to authenticate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password used for authentication </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_SUCCESS Authentication is accepted. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_PARTIAL Partial authentication, more authentication means are needed. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_DENIED Authentication failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="188" column="9" bodyfile="include/libssh/callbacks.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga8d98e68f8a2362bbcb5490211a4a62de" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_auth_none_callback) (ssh_session session, const char *user, void *userdata)</definition>
+        <argsstring>)(ssh_session session, const char *user, void *userdata)</argsstring>
+        <name>ssh_auth_none_callback</name>
+        <briefdescription>
+<para>SSH authentication callback. Tries to authenticates user with the &quot;none&quot; method which is anonymous or passwordless. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User that wants to authenticate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_SUCCESS Authentication is accepted. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_PARTIAL Partial authentication, more authentication means are needed. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_DENIED Authentication failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="201" column="9" bodyfile="include/libssh/callbacks.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaadd49614879c70e0aaab096fd52cf2ab" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_auth_gssapi_mic_callback) (ssh_session session, const char *user, const char *principal, void *userdata)</definition>
+        <argsstring>)(ssh_session session, const char *user, const char *principal, void *userdata)</argsstring>
+        <name>ssh_auth_gssapi_mic_callback</name>
+        <briefdescription>
+<para>SSH authentication callback. Tries to authenticates user with the &quot;gssapi-with-mic&quot; method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Username of the user (can be spoofed) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>principal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Authenticated principal of the user, including realm. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_SUCCESS Authentication is accepted. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_PARTIAL Partial authentication, more authentication means are needed. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_DENIED Authentication failed. </para>
+</simplesect>
+<simplesect kind="warning"><para>Implementations should verify that parameter user matches in some way the principal. user and principal can be different. Only the latter is guaranteed to be safe. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="215" column="9" bodyfile="include/libssh/callbacks.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga68f74aa25d6a193c5fcf016d6d1bdc51" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_auth_pubkey_callback) (ssh_session session, const char *user, struct ssh_key_struct *pubkey, char signature_state, void *userdata)</definition>
+        <argsstring>)(ssh_session session, const char *user, struct ssh_key_struct *pubkey, char signature_state, void *userdata)</argsstring>
+        <name>ssh_auth_pubkey_callback</name>
+        <briefdescription>
+<para>SSH authentication callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User that wants to authenticate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pubkey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>public key used for authentication </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SSH_PUBLICKEY_STATE_NONE if the key is not signed (simple public key probe), SSH_PUBLICKEY_STATE_VALID if the signature is valid. Others values should be replied with a SSH_AUTH_DENIED. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_SUCCESS Authentication is accepted. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_PARTIAL Partial authentication, more authentication means are needed. </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_AUTH_DENIED Authentication failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="231" column="9" bodyfile="include/libssh/callbacks.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaa1866ffc041b50c341f9cba866a8055c" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_service_request_callback) (ssh_session session, const char *service, void *userdata)</definition>
+        <argsstring>)(ssh_session session, const char *service, void *userdata)</argsstring>
+        <name>ssh_service_request_callback</name>
+        <briefdescription>
+<para>Handles an SSH service request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>service</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the service (e.g. &quot;ssh-userauth&quot;) requested </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the request is to be allowed </para>
+</simplesect>
+<simplesect kind="return"><para>-1 if the request should not be allowed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="244" column="9" bodyfile="include/libssh/callbacks.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gac63a4cc91d8c2a1465770ca5f6c0a436" prot="public" static="no">
+        <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref>(*</type>
+        <definition>typedef ssh_channel(* ssh_channel_open_request_session_callback) (ssh_session session, void *userdata)</definition>
+        <argsstring>)(ssh_session session, void *userdata)</argsstring>
+        <name>ssh_channel_open_request_session_callback</name>
+        <briefdescription>
+<para>Handles an SSH new channel open session request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a valid ssh_channel handle if the request is to be allowed </para>
+</simplesect>
+<simplesect kind="return"><para>NULL if the request should not be allowed </para>
+</simplesect>
+<simplesect kind="warning"><para>The channel pointer returned by this callback must be closed by the application. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="254" column="9" bodyfile="include/libssh/callbacks.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaf5fa4522517284e010b4e3624356e4a4" prot="public" static="no">
+        <type><ref refid="libssh_8h_1a27e04455dbb0a80b6fed70b30772717b" kindref="member">ssh_string</ref>(*</type>
+        <definition>typedef ssh_string(* ssh_gssapi_select_oid_callback) (ssh_session session, const char *user, int n_oid, ssh_string *oids, void *userdata)</definition>
+        <argsstring>)(ssh_session session, const char *user, int n_oid, ssh_string *oids, void *userdata)</argsstring>
+        <name>ssh_gssapi_select_oid_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="267" column="9" bodyfile="include/libssh/callbacks.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaacc4a1270f919717917e8960dabd1af3" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_gssapi_accept_sec_ctx_callback) (ssh_session session, ssh_string input_token, ssh_string *output_token, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_string input_token, ssh_string *output_token, void *userdata)</argsstring>
+        <name>ssh_gssapi_accept_sec_ctx_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="282" column="9" bodyfile="include/libssh/callbacks.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga043d34d7436d150a9b8cd5ceb70ec19e" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_gssapi_verify_mic_callback) (ssh_session session, ssh_string mic, void *mic_buffer, size_t mic_buffer_size, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_string mic, void *mic_buffer, size_t mic_buffer_size, void *userdata)</argsstring>
+        <name>ssh_gssapi_verify_mic_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="296" column="9" bodyfile="include/libssh/callbacks.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga163bc0f3f3492cc8cfc4aa3102bc8b2e" prot="public" static="no">
+        <type>struct <ref refid="structssh__server__callbacks__struct" kindref="compound">ssh_server_callbacks_struct</ref> *</type>
+        <definition>typedef struct ssh_server_callbacks_struct* ssh_server_callbacks</definition>
+        <argsstring></argsstring>
+        <name>ssh_server_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="349" column="42" bodyfile="include/libssh/callbacks.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga2e7d10bc4ef1f67b4f79a83bf4a40f9a" prot="public" static="no">
+        <type>struct <ref refid="structssh__socket__callbacks__struct" kindref="compound">ssh_socket_callbacks_struct</ref> *</type>
+        <definition>typedef struct ssh_socket_callbacks_struct* ssh_socket_callbacks</definition>
+        <argsstring></argsstring>
+        <name>ssh_socket_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="404" column="42" bodyfile="include/libssh/callbacks.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga6b8722467c98b73a7d78c0ec055e740d" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_packet_callback) (ssh_session session, uint8_t type, ssh_buffer packet, void *user)</definition>
+        <argsstring>)(ssh_session session, uint8_t type, ssh_buffer packet, void *user)</argsstring>
+        <name>ssh_packet_callback</name>
+        <briefdescription>
+<para>Prototype for a packet callback, to be called when a new packet arrives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current session of the packet </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>packet type (see <ref refid="ssh2_8h" kindref="compound">ssh2.h</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer containing the packet, excluding size, type and padding fields </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user argument to the callback and are called each time a packet shows up </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_PACKET_USED Packet was parsed and used </para>
+</simplesect>
+<simplesect kind="return"><para>SSH_PACKET_NOT_USED Packet was not used or understood, processing must continue </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="513" column="9" bodyfile="include/libssh/callbacks.h" bodystart="513" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga054d78af294e4464447de75aceaffc8a" prot="public" static="no">
+        <type>struct <ref refid="structssh__packet__callbacks__struct" kindref="compound">ssh_packet_callbacks_struct</ref> *</type>
+        <definition>typedef struct ssh_packet_callbacks_struct* ssh_packet_callbacks</definition>
+        <argsstring></argsstring>
+        <name>ssh_packet_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="546" column="42" bodyfile="include/libssh/callbacks.h" bodystart="546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga4f34cc77aa9d47e506cbae679ddd54a5" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_data_callback) (ssh_session session, ssh_channel channel, void *data, uint32_t len, int is_stderr, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, void *data, uint32_t len, int is_stderr, void *userdata)</argsstring>
+        <name>ssh_channel_data_callback</name>
+        <briefdescription>
+<para>SSH channel data callback. Called when data is available on a channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data that has been read on the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the length of the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>is_stderr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is 0 for stdout or 1 for stderr </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes processed by the callee. The remaining bytes will be sent in the next callback message, when more data is available. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="585" column="9" bodyfile="include/libssh/callbacks.h" bodystart="585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga54351aff7adba9f84621069aff982c27" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_channel_eof_callback) (ssh_session session, ssh_channel channel, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, void *userdata)</argsstring>
+        <name>ssh_channel_eof_callback</name>
+        <briefdescription>
+<para>SSH channel eof callback. Called when a channel receives EOF. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="598" column="9" bodyfile="include/libssh/callbacks.h" bodystart="598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga58672dfbf52812e72946a3d6d8c74279" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_channel_close_callback) (ssh_session session, ssh_channel channel, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, void *userdata)</argsstring>
+        <name>ssh_channel_close_callback</name>
+        <briefdescription>
+<para>SSH channel close callback. Called when a channel is closed by remote peer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="608" column="9" bodyfile="include/libssh/callbacks.h" bodystart="608" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga62cc19678bef2caa53808ef5776e08fa" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_channel_signal_callback) (ssh_session session, ssh_channel channel, const char *signal, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, const char *signal, void *userdata)</argsstring>
+        <name>ssh_channel_signal_callback</name>
+        <briefdescription>
+<para>SSH channel signal callback. Called when a channel has received a signal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the signal name (without the SIG prefix) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="619" column="9" bodyfile="include/libssh/callbacks.h" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga6f834b43c812f871c7252bfbbb4ef6f4" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_channel_exit_status_callback) (ssh_session session, ssh_channel channel, int exit_status, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, int exit_status, void *userdata)</argsstring>
+        <name>ssh_channel_exit_status_callback</name>
+        <briefdescription>
+<para>SSH channel exit status callback. Called when a channel has received an exit status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="630" column="9" bodyfile="include/libssh/callbacks.h" bodystart="630" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gace982803d01abe445379b9c360a1a43d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_channel_exit_signal_callback) (ssh_session session, ssh_channel channel, const char *signal, int core, const char *errmsg, const char *lang, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, const char *signal, int core, const char *errmsg, const char *lang, void *userdata)</argsstring>
+        <name>ssh_channel_exit_signal_callback</name>
+        <briefdescription>
+<para>SSH channel exit signal callback. Called when a channel has received an exit signal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current session handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the signal name (without the SIG prefix) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>core</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a boolean telling wether a core has been dumped or not </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errmsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the description of the exception </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lang</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the language of the description (format: RFC 3066) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="645" column="9" bodyfile="include/libssh/callbacks.h" bodystart="645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga2c740320a613c207ee4032f8ee93fde8" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_pty_request_callback) (ssh_session session, ssh_channel channel, const char *term, int width, int height, int pxwidth, int pwheight, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, const char *term, int width, int height, int pxwidth, int pwheight, void *userdata)</argsstring>
+        <name>ssh_channel_pty_request_callback</name>
+        <briefdescription>
+<para>SSH channel PTY request from a client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of terminal emulation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the terminal, in characters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the terminal, in characters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pxwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the terminal, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pxheight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the terminal, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the pty request is accepted </para>
+</simplesect>
+<simplesect kind="return"><para>-1 if the request is denied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="665" column="9" bodyfile="include/libssh/callbacks.h" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga4d93fd06cb58478c40c9d1d1627881d9" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_shell_request_callback) (ssh_session session, ssh_channel channel, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, void *userdata)</argsstring>
+        <name>ssh_channel_shell_request_callback</name>
+        <briefdescription>
+<para>SSH channel Shell request from a client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the shell request is accepted </para>
+</simplesect>
+<simplesect kind="return"><para>1 if the request is denied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="679" column="9" bodyfile="include/libssh/callbacks.h" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gafbbd34a8b28db875055485e24d2149d0" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_channel_auth_agent_req_callback) (ssh_session session, ssh_channel channel, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, void *userdata)</argsstring>
+        <name>ssh_channel_auth_agent_req_callback</name>
+        <briefdescription>
+<para>SSH auth-agent-request from the client. This request is sent by a client when agent forwarding is available. Server is free to ignore this callback, no answer is expected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="689" column="9" bodyfile="include/libssh/callbacks.h" bodystart="689" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga4a0df3bb8a201fc52925595356806852" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ssh_channel_x11_req_callback) (ssh_session session, ssh_channel channel, int single_connection, const char *auth_protocol, const char *auth_cookie, uint32_t screen_number, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, int single_connection, const char *auth_protocol, const char *auth_cookie, uint32_t screen_number, void *userdata)</argsstring>
+        <name>ssh_channel_x11_req_callback</name>
+        <briefdescription>
+<para>SSH X11 request from the client. This request is sent by a client when X11 forwarding is requested(and available). Server is free to ignore this callback, no answer is expected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="700" column="9" bodyfile="include/libssh/callbacks.h" bodystart="700" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga3614f21f6afbe6f498cdaa9b28c0f003" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_pty_window_change_callback) (ssh_session session, ssh_channel channel, int width, int height, int pxwidth, int pwheight, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, int width, int height, int pxwidth, int pwheight, void *userdata)</argsstring>
+        <name>ssh_channel_pty_window_change_callback</name>
+        <briefdescription>
+<para>SSH channel PTY windows change (terminal size) from a client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the terminal, in characters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the terminal, in characters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pxwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width of the terminal, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pxheight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height of the terminal, in pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the pty request is accepted </para>
+</simplesect>
+<simplesect kind="return"><para>-1 if the request is denied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="718" column="9" bodyfile="include/libssh/callbacks.h" bodystart="718" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1ga41ccf4a20d30e7c5ccd87ac25f580f9d" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_exec_request_callback) (ssh_session session, ssh_channel channel, const char *command, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, const char *command, void *userdata)</argsstring>
+        <name>ssh_channel_exec_request_callback</name>
+        <briefdescription>
+<para>SSH channel Exec request from a client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the shell command to be executed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the exec request is accepted </para>
+</simplesect>
+<simplesect kind="return"><para>1 if the request is denied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="732" column="9" bodyfile="include/libssh/callbacks.h" bodystart="732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gae816543864b633ab89d20cdf39d69225" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_env_request_callback) (ssh_session session, ssh_channel channel, const char *env_name, const char *env_value, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, const char *env_name, const char *env_value, void *userdata)</argsstring>
+        <name>ssh_channel_env_request_callback</name>
+        <briefdescription>
+<para>SSH channel environment request from a client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>env_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the environment value to be set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>env_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of the environment value to be set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the env request is accepted </para>
+</simplesect>
+<simplesect kind="return"><para>1 if the request is denied </para>
+</simplesect>
+<simplesect kind="warning"><para>some environment variables can be dangerous if changed (e.g. LD_PRELOAD) and should not be fulfilled. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="748" column="9" bodyfile="include/libssh/callbacks.h" bodystart="748" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gafeee5298cbdb0ed0b607560322448bfd" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_subsystem_request_callback) (ssh_session session, ssh_channel channel, const char *subsystem, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, const char *subsystem, void *userdata)</argsstring>
+        <name>ssh_channel_subsystem_request_callback</name>
+        <briefdescription>
+<para>SSH channel subsystem request from a client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subsystem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subsystem required </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the subsystem request is accepted </para>
+</simplesect>
+<simplesect kind="return"><para>1 if the request is denied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="761" column="9" bodyfile="include/libssh/callbacks.h" bodystart="761" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gaa1a0c58d08e39756e30dce3ea98de3fe" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_channel_write_wontblock_callback) (ssh_session session, ssh_channel channel, size_t bytes, void *userdata)</definition>
+        <argsstring>)(ssh_session session, ssh_channel channel, size_t bytes, void *userdata)</argsstring>
+        <name>ssh_channel_write_wontblock_callback</name>
+        <briefdescription>
+<para>SSH channel write will not block (flow control). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the remote window in bytes. Writing as much data will not block.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 default return value (other return codes may be added in future). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="778" column="9" bodyfile="include/libssh/callbacks.h" bodystart="778" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" prot="public" static="no">
+        <type>struct <ref refid="structssh__channel__callbacks__struct" kindref="compound">ssh_channel_callbacks_struct</ref> *</type>
+        <definition>typedef struct ssh_channel_callbacks_struct* ssh_channel_callbacks</definition>
+        <argsstring></argsstring>
+        <name>ssh_channel_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="852" column="43" bodyfile="include/libssh/callbacks.h" bodystart="852" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__callbacks_1gaa321f33172cfa54eb50baaa963457a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a2ba7f29ac0f2b5ef7134243d24888ac5" kindref="member">LIBSSH_API</ref> int</type>
+        <definition>LIBSSH_API int ssh_set_server_callbacks</definition>
+        <argsstring>(ssh_session session, ssh_server_callbacks cb)</argsstring>
+        <name>ssh_set_server_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1ga163bc0f3f3492cc8cfc4aa3102bc8b2e" kindref="member">ssh_server_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the session server callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This functions sets the callback structure to use your own callback functions for user authentication, new channels and requests.</para>
+<para>Note, that the structure is not copied to the session structure so it needs to be valid for the whole session lifetime.</para>
+<para><programlisting><codeline><highlight class="normal">struct<sp/>ssh_server_callbacks_struct<sp/>cb<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.userdata<sp/>=<sp/>data,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.auth_password_function<sp/>=<sp/>my_auth_function</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">ssh_callbacks_init(&amp;cb);</highlight></codeline>
+<codeline><highlight class="normal">ssh_set_server_callbacks(session,<sp/>&amp;cb);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="375" column="16" bodyfile="src/callbacks.c" bodystart="133" bodyend="147" declfile="include/libssh/callbacks.h" declline="375" declcolumn="16"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" compoundref="callbacks_8c" startline="30">is_callback_valid</references>
+        <references refid="structssh__session__struct_1a58da29c0a953ba17e094b5e4d4cb9163" compoundref="session_8h" startline="198">ssh_session_struct::server_callbacks</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="default__cb_8c_1a1c4ec691e0189bd2ff9c7acd3399895b" compoundref="default__cb_8c" startline="783" endline="995">default_handle_session_cb</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a845bb2d262ac6cb3c7acfaeb394641ee" compoundref="torture__server__auth__kbdint_8c" startline="333" endline="515">handle_kbdint_session_cb</referencedby>
+        <referencedby refid="ssh__server__fork_8c_1a2094e558ae17a16e444d40f575063102" compoundref="ssh__server__fork_8c" startline="536" endline="679">handle_session</referencedby>
+        <referencedby refid="proxy_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="proxy_8c" startline="215" endline="346">main</referencedby>
+        <referencedby refid="pkd__daemon_8c_1abe87875a523cecd013d848c7c9c5ba22" compoundref="pkd__daemon_8c" startline="238" endline="475">pkd_exec_hello</referencedby>
+        <referencedby refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1ga2e4b0507c738748a3f10e43fe201fe09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a2ba7f29ac0f2b5ef7134243d24888ac5" kindref="member">LIBSSH_API</ref> int</type>
+        <definition>LIBSSH_API int ssh_set_callbacks</definition>
+        <argsstring>(ssh_session session, ssh_callbacks cb)</argsstring>
+        <name>ssh_set_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1ga46fded0a609e103977640d2a4d1bbfb6" kindref="member">ssh_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the session callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This functions sets the callback structure to use your own callback functions for auth, logging and status.</para>
+<para>Note, that the callback structure is not copied into the session so it needs to be valid for the whole session lifetime.</para>
+<para><programlisting><codeline><highlight class="normal">struct<sp/>ssh_callbacks_struct<sp/>cb<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.userdata<sp/>=<sp/>data,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.auth_function<sp/>=<sp/>my_auth_function</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">ssh_callbacks_init(&amp;cb);</highlight></codeline>
+<codeline><highlight class="normal">ssh_set_callbacks(session,<sp/>&amp;cb);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="572" column="16" bodyfile="src/callbacks.c" bodystart="48" bodyend="68" declfile="include/libssh/callbacks.h" declline="572" declcolumn="16"/>
+        <references refid="structssh__common__struct_1a2f42939ea278698d861c7617b7529eb7" compoundref="session_8h" startline="105">ssh_common_struct::callbacks</references>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="structssh__session__struct_1acad23ad6d8bee359da41b9ed0faa6eaa" compoundref="session_8h" startline="110">ssh_session_struct::common</references>
+        <references refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" compoundref="callbacks_8c" startline="30">is_callback_valid</references>
+        <references refid="structssh__callbacks__struct_1a409f4218537c3224e42d35b28ae93f7a" compoundref="callbacks_8h" startline="156">ssh_callbacks_struct::log_function</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__log_1ga0f795c820547d058dbbfa80cd4fe9a4e" compoundref="log_8c" startline="210" endline="212">ssh_get_log_callback</references>
+        <references refid="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" compoundref="callbacks_8c" startline="34" endline="46">ssh_legacy_log_callback</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="group__libssh__log_1ga6accdc08b7d8c4234750ef30c4854b9e" compoundref="log_8c" startline="200" endline="208">ssh_set_log_callback</references>
+        <references refid="group__libssh__log_1ga0addd5c29922f40e9f842a43e0cb0b27" compoundref="log_8c" startline="235" endline="240">ssh_set_log_userdata</references>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+        <referencedby refid="ssh__client_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="ssh__client_8c" startline="397" endline="425">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a2ba7f29ac0f2b5ef7134243d24888ac5" kindref="member">LIBSSH_API</ref> int</type>
+        <definition>LIBSSH_API int ssh_set_channel_callbacks</definition>
+        <argsstring>(ssh_channel channel, ssh_channel_callbacks cb)</argsstring>
+        <name>ssh_set_channel_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" kindref="member">ssh_channel_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the channel callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This functions sets the callback structure to use your own callback functions for channel data and exceptions.</para>
+<para>Note, that the structure is not copied to the channel structure so it needs to be valid as for the whole life of the channel or until it is removed with <ref refid="group__libssh__callbacks_1gae564352175e887c346a2e062f8124282" kindref="member">ssh_remove_channel_callbacks()</ref>.</para>
+<para><programlisting><codeline><highlight class="normal">struct<sp/>ssh_channel_callbacks_struct<sp/>cb<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.userdata<sp/>=<sp/>data,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.channel_data_function<sp/>=<sp/>my_channel_data_function</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">ssh_callbacks_init(&amp;cb);</highlight></codeline>
+<codeline><highlight class="normal">ssh_set_channel_callbacks(channel,<sp/>&amp;cb);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+<simplesect kind="warning"><para>this function will not replace existing callbacks but set the new one atop of them. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="881" column="16" bodyfile="src/callbacks.c" bodystart="104" bodyend="107" declfile="include/libssh/callbacks.h" declline="881" declcolumn="16"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" compoundref="callbacks_8c" startline="70" endline="102">ssh_add_set_channel_callbacks</references>
+        <referencedby refid="torture__server__x11_8c_1abe10df22f22204a031b0ee56aa0b81bf" compoundref="torture__server__x11_8c" startline="137" endline="152">channel_open</referencedby>
+        <referencedby refid="default__cb_8c_1a1c4ec691e0189bd2ff9c7acd3399895b" compoundref="default__cb_8c" startline="783" endline="995">default_handle_session_cb</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a845bb2d262ac6cb3c7acfaeb394641ee" compoundref="torture__server__auth__kbdint_8c" startline="333" endline="515">handle_kbdint_session_cb</referencedby>
+        <referencedby refid="ssh__server__fork_8c_1a2094e558ae17a16e444d40f575063102" compoundref="ssh__server__fork_8c" startline="536" endline="679">handle_session</referencedby>
+        <referencedby refid="sshd__direct-tcpip_8c_1a7943ace595a03c4155238686010419ce" compoundref="sshd__direct-tcpip_8c" startline="431" endline="486">message_callback</referencedby>
+        <referencedby refid="proxy_8c_1a68b21024dfd044e4f41dcd2c03fd1c0f" compoundref="proxy_8c" startline="99" endline="109">new_session_channel</referencedby>
+        <referencedby refid="pkd__daemon_8c_1a072176a3f00730d8fefe327d7110426b" compoundref="pkd__daemon_8c" startline="205" endline="230">pkd_channel_openreq_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1ga2fd83df19998902f84f951fc47def83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a2ba7f29ac0f2b5ef7134243d24888ac5" kindref="member">LIBSSH_API</ref> int</type>
+        <definition>LIBSSH_API int ssh_add_channel_callbacks</definition>
+        <argsstring>(ssh_channel channel, ssh_channel_callbacks cb)</argsstring>
+        <name>ssh_add_channel_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" kindref="member">ssh_channel_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Add channel callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will add channel callback functions to the channel callback list. Callbacks missing from a callback structure will be probed in the next on the list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" kindref="member">ssh_set_channel_callbacks</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="900" column="16" bodyfile="src/callbacks.c" bodystart="109" bodyend="112" declfile="include/libssh/callbacks.h" declline="900" declcolumn="16"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" compoundref="callbacks_8c" startline="70" endline="102">ssh_add_set_channel_callbacks</references>
+        <referencedby refid="libssh_8h_1a43ca9065044b48afdede3e9fd9f1f86a" compoundref="connector_8c" startline="153" endline="167">ssh_connector_set_in_channel</referencedby>
+        <referencedby refid="libssh_8h_1a9545174e1a2727b15a620f09b7e8b348" compoundref="connector_8c" startline="169" endline="183">ssh_connector_set_out_channel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1gae564352175e887c346a2e062f8124282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a2ba7f29ac0f2b5ef7134243d24888ac5" kindref="member">LIBSSH_API</ref> int</type>
+        <definition>LIBSSH_API int ssh_remove_channel_callbacks</definition>
+        <argsstring>(ssh_channel channel, ssh_channel_callbacks cb)</argsstring>
+        <name>ssh_remove_channel_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" kindref="member">ssh_channel_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Remove a channel callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The channel has been added with ssh_add_channel_callbacks or ssh_set_channel_callbacks in this case.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to remove the callback structure from.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure to remove</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="915" column="16" bodyfile="src/callbacks.c" bodystart="114" bodyend="130" declfile="include/libssh/callbacks.h" declline="915" declcolumn="16"/>
+        <references refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" compoundref="channels_8h" startline="81">ssh_channel_struct::callbacks</references>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__misc_1ga7a929a68f02650d474604a10252afd68" compoundref="misc_8c" startline="688" endline="694">ssh_list_find</references>
+        <references refid="group__libssh__misc_1gac862429660a1f93dcf625d08f407b85e" compoundref="misc_8c" startline="771" endline="798">ssh_list_remove</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="sshd__direct-tcpip_8c_1a1d108777de8e248073f748300f01226c" compoundref="sshd__direct-tcpip_8c" startline="95" endline="132">do_cleanup</referencedby>
+        <referencedby refid="libssh_8h_1ae082e4d35591a2f2f3074f28049ff993" compoundref="connector_8c" startline="125" endline="151">ssh_connector_free</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__libssh__callbacks_1ga1f68a25a8da56bb1b930cec98d539f4d" prot="public" static="no">
+        <name>SSH_SOCKET_FLOW_WRITEWILLBLOCK</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="406" column="9" bodyfile="include/libssh/callbacks.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1gab50359ff09370deb71808b135af21961" prot="public" static="no">
+        <name>SSH_SOCKET_FLOW_WRITEWONTBLOCK</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="407" column="9" bodyfile="include/libssh/callbacks.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1gadc333c5dedfa61e2a0725428bd3aab89" prot="public" static="no">
+        <name>SSH_SOCKET_EXCEPTION_EOF</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="409" column="9" bodyfile="include/libssh/callbacks.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga37ab1ae01d34ff9b5a2b1b4ae334fd6f" prot="public" static="no">
+        <name>SSH_SOCKET_EXCEPTION_ERROR</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="410" column="9" bodyfile="include/libssh/callbacks.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga777321b241841b09620e4c948520b753" prot="public" static="no">
+        <name>SSH_SOCKET_CONNECTED_OK</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="412" column="9" bodyfile="include/libssh/callbacks.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga3121a6449b4f59f96dd1196e8fd87b2b" prot="public" static="no">
+        <name>SSH_SOCKET_CONNECTED_ERROR</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="413" column="9" bodyfile="include/libssh/callbacks.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga17ef78f0410af7b1c4d52e4bfacffcfa" prot="public" static="no">
+        <name>SSH_SOCKET_CONNECTED_TIMEOUT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="414" column="9" bodyfile="include/libssh/callbacks.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1gafe09b81e5346f0babe288dc38113d289" prot="public" static="no">
+        <name>ssh_callbacks_init</name>
+        <param><defname>p</defname></param>
+        <initializer>	do {\
+	(p)-&gt;size=sizeof(*(p)); \
+} while(0);</initializer>
+        <briefdescription>
+<para>Initializes an <ref refid="structssh__callbacks__struct" kindref="compound">ssh_callbacks_struct</ref> A call to this macro is mandatory when you have set a new ssh_callback_struct structure. Its goal is to maintain the binary compatibility with future versions of libssh as the structure evolves with time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="423" column="9" bodyfile="include/libssh/callbacks.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga60a6fe85408a17ce8ef24c31a76d4a46" prot="public" static="no">
+        <name>ssh_callbacks_exists</name>
+        <param><defname>p</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>  (\
+  (p != NULL) &amp;&amp; ( (char *)&amp;((p)-&gt; c) &lt; (char *)(p) + (p)-&gt;size ) &amp;&amp; \
+  ((p)-&gt; c != NULL) \
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="436" column="9" bodyfile="include/libssh/callbacks.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga4dc546e7406ce5642a2278aaad3b1e35" prot="public" static="no">
+        <name>ssh_callbacks_execute_list</name>
+        <param><defname>list</defname></param>
+        <param><defname>cbtype</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>    do {                                                      \
+        struct <ref refid="structssh__iterator" kindref="compound">ssh_iterator</ref> *i = <ref refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" kindref="member">ssh_list_get_iterator</ref>(list); \
+        cbtype <ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>;                                            \
+        while (i != NULL){                                    \
+            <ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref> = <ref refid="misc_8h_1a1f44c71b6f7ba10a4a543f73a07a85aa" kindref="member">ssh_iterator_value</ref>(cbtype, i);               \
+            <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (<ref refid="group__libssh__callbacks_1ga60a6fe85408a17ce8ef24c31a76d4a46" kindref="member">ssh_callbacks_exists</ref>(<ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>, c))                  \
+                <ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>-&gt; c (__VA_ARGS__, <ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>-&gt;userdata);           \
+            i = i-&gt;next;                                      \
+        }                                                     \
+    } while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="457" column="9" bodyfile="include/libssh/callbacks.h" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1gaaba68eea7a3cfbe8ea8038841861a412" prot="public" static="no">
+        <name>ssh_callbacks_iterate</name>
+        <param><defname>_cb_list</defname></param>
+        <param><defname>_cb_type</defname></param>
+        <param><defname>_cb_name</defname></param>
+        <initializer>    do {                                                              \
+        struct <ref refid="structssh__iterator" kindref="compound">ssh_iterator</ref> *_cb_i = <ref refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" kindref="member">ssh_list_get_iterator</ref>(_cb_list); \
+        _cb_type _cb;                                                 \
+        for (; _cb_i != NULL; _cb_i = _cb_i-&gt;next) {                  \
+            _cb = <ref refid="misc_8h_1a1f44c71b6f7ba10a4a543f73a07a85aa" kindref="member">ssh_iterator_value</ref>(_cb_type, _cb_i);                \
+            <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (<ref refid="group__libssh__callbacks_1ga60a6fe85408a17ce8ef24c31a76d4a46" kindref="member">ssh_callbacks_exists</ref>(_cb, _cb_name))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="489" column="9" bodyfile="include/libssh/callbacks.h" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga805c03a07f2d9e1f1f6daaaf9aaccf07" prot="public" static="no">
+        <name>ssh_callbacks_iterate_exec</name>
+        <param><defname>_cb_name</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>                _cb-&gt;_cb_name(__VA_ARGS__, _cb-&gt;userdata)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="497" column="9" bodyfile="include/libssh/callbacks.h" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1gab814c9f6d54a92a304577d67b8db726b" prot="public" static="no">
+        <name>ssh_callbacks_iterate_end</name>
+        <param></param>
+        <initializer>        }                           \
+    } while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="500" column="9" bodyfile="include/libssh/callbacks.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" prot="public" static="no">
+        <name>SSH_PACKET_USED</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return values for a ssh_packet_callback Packet was used and should not be parsed by another callback </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="517" column="9" bodyfile="include/libssh/callbacks.h" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga4766917128a12b646a8aee7ebc019f8c" prot="public" static="no">
+        <name>SSH_PACKET_NOT_USED</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packet was not used and should be passed to any other callback available </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="520" column="9" bodyfile="include/libssh/callbacks.h" bodystart="520" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__libssh__callbacks_1ga8fd26956f4e2b9bc57cfef26c50e321b" prot="public" static="no">
+        <name>SSH_PACKET_CALLBACK</name>
+        <param><defname>name</defname></param>
+        <initializer>	int <ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref> (<ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref> <ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>, uint8_t type, <ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref> packet, void *<ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>)</initializer>
+        <briefdescription>
+<para>This macro declares a packet callback handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">SSH_PACKET_CALLBACK(mycallback){</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/callbacks.h" line="530" column="9" bodyfile="include/libssh/callbacks.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Callback which can be replaced in libssh. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

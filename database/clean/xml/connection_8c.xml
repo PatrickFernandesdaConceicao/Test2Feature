@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="connection_8c" kind="file" language="C++">
+    <compoundname>connection.c</compoundname>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="tests_8h" local="yes">tests.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>tests/connection.c</label>
+        <link refid="connection_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>sys/select.h</label>
+      </node>
+      <node id="8">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>netdb.h</label>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="10">
+        <label>tests.h</label>
+        <link refid="tests_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="connection_8c_1a25a3aad3a9f299bd164bd15e04b05845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SSH_OPTIONS *</type>
+        <definition>SSH_OPTIONS* set_opts</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>set_opts</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/connection.c" line="9" column="13" bodyfile="tests/connection.c" bodystart="9" bodyend="31"/>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="test__ssh__bind__accept__fd_8c_1ae9872726570c0d0d80fd77fd4b1de0b1">options</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__session_1ga93f7f7159893f3ce62c9b178724eff75" compoundref="options_8c" startline="1193" endline="1357">ssh_options_getopt</references>
+        <referencedby refid="test__exec_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__exec_8c" startline="51" endline="62">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">This<sp/>file<sp/>is<sp/>distributed<sp/>in<sp/>public<sp/>domain.<sp/>You<sp/>can<sp/>do<sp/>whatever<sp/>you<sp/>want</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">with<sp/>its<sp/>content.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tests_8h" kindref="compound">tests.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="connection_8c_1a25a3aad3a9f299bd164bd15e04b05845" refkind="member"><highlight class="normal">SSH_OPTIONS<sp/>*<ref refid="connection_8c_1a25a3aad3a9f299bd164bd15e04b05845" kindref="member">set_opts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>SSH_OPTIONS<sp/>*<ref refid="structoptions" kindref="compound">options</ref>=ssh_options_new();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>=NULL;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__session_1ga93f7f7159893f3ce62c9b178724eff75" kindref="member">ssh_options_getopt</ref>(<ref refid="structoptions" kindref="compound">options</ref>,&amp;argc,<sp/>argv)){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;error<sp/>parsing<sp/>command<sp/>line<sp/>:%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="structoptions" kindref="compound">options</ref>));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((i=getopt(argc,argv,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">))!=-1){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(i){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;unknown<sp/>option<sp/>%c\n&quot;</highlight><highlight class="normal">,optopt);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(optind<sp/>&lt;<sp/>argc)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>=argv[optind++];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>==NULL){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;must<sp/>provide<sp/>an<sp/>host<sp/>name\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh_options_set_host(<ref refid="structoptions" kindref="compound">options</ref>,<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="test__ssh__bind__accept__fd_8c_1ae9872726570c0d0d80fd77fd4b1de0b1" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/connection.c"/>
+  </compounddef>
+</doxygen>

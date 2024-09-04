@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="tests_8h" kind="file" language="C++">
+    <compoundname>tests.h</compoundname>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includedby refid="tests_2authentication_8c" local="yes">tests/authentication.c</includedby>
+    <includedby refid="connection_8c" local="yes">tests/connection.c</includedby>
+    <includedby refid="test__exec_8c" local="yes">tests/test_exec.c</includedby>
+    <includedby refid="test__tunnel_8c" local="yes">tests/test_tunnel.c</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>sys/select.h</label>
+      </node>
+      <node id="8">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>netdb.h</label>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="1">
+        <label>tests/tests.h</label>
+        <link refid="tests_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>tests/connection.c</label>
+        <link refid="connection_8c"/>
+      </node>
+      <node id="5">
+        <label>tests/test_tunnel.c</label>
+        <link refid="test__tunnel_8c"/>
+      </node>
+      <node id="2">
+        <label>tests/authentication.c</label>
+        <link refid="tests_2authentication_8c"/>
+      </node>
+      <node id="1">
+        <label>tests/tests.h</label>
+        <link refid="tests_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tests/test_exec.c</label>
+        <link refid="test__exec_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tests_8h_1a91e95146a766cad292c79cca6b169f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int authenticate</definition>
+        <argsstring>(SSH_SESSION *session)</argsstring>
+        <name>authenticate</name>
+        <param>
+          <type>SSH_SESSION *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests.h" line="6" column="5" bodyfile="tests/authentication.c" bodystart="49" bodyend="74" declfile="tests/tests.h" declline="6" declcolumn="5"/>
+        <references refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="legacy_8h_1aebc0160212f355d57e4c331e4650d53c" compoundref="legacy_8c" startline="97" endline="99">ssh_userauth_autopubkey</references>
+        <references refid="group__libssh__auth_1ga50c0c150f8c4703e7ee49b3e3e3ca215" compoundref="auth_8c" startline="1246" endline="1307">ssh_userauth_password</references>
+      </memberdef>
+      <memberdef kind="function" id="tests_8h_1a25a3aad3a9f299bd164bd15e04b05845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SSH_OPTIONS *</type>
+        <definition>SSH_OPTIONS* set_opts</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>set_opts</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/tests.h" line="7" column="13" bodyfile="tests/connection.c" bodystart="9" bodyend="31" declfile="tests/tests.h" declline="7" declcolumn="13"/>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="test__ssh__bind__accept__fd_8c_1ae9872726570c0d0d80fd77fd4b1de0b1">options</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__session_1ga93f7f7159893f3ce62c9b178724eff75" compoundref="options_8c" startline="1193" endline="1357">ssh_options_getopt</references>
+        <referencedby refid="test__exec_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__exec_8c" startline="51" endline="62">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">This<sp/>file<sp/>is<sp/>distributed<sp/>in<sp/>public<sp/>domain.<sp/>You<sp/>can<sp/>do<sp/>whatever<sp/>you<sp/>want</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">with<sp/>its<sp/>content.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tests_8h_1a91e95146a766cad292c79cca6b169f3d" kindref="member">authenticate</ref><sp/>(SSH_SESSION<sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">SSH_OPTIONS<sp/>*<ref refid="tests_8h_1a25a3aad3a9f299bd164bd15e04b05845" kindref="member">set_opts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tests/tests.h"/>
+  </compounddef>
+</doxygen>

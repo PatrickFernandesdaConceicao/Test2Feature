@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ssh__client__fuzzer_8cpp" kind="file" language="C++">
+    <compoundname>ssh_client_fuzzer.cpp</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes refid="callbacks_8h" local="no">libssh/callbacks.h</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>sys/select.h</label>
+      </node>
+      <node id="2">
+        <label>assert.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="16">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>netdb.h</label>
+      </node>
+      <node id="9">
+        <label>sys/types.h</label>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="5">
+        <label>signal.h</label>
+      </node>
+      <node id="6">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tests/fuzz/ssh_client_fuzzer.cpp</label>
+        <link refid="ssh__client__fuzzer_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ssh__client__fuzzer_8cpp_1a2e84c73592c2992fdc0b2593524f3b18" prot="public" static="no">
+        <name>LIBSSH_STATIC</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fuzz/ssh_client_fuzzer.cpp" line="22" column="9" bodyfile="tests/fuzz/ssh_client_fuzzer.cpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structssh__callbacks__struct" kindref="compound">ssh_callbacks_struct</ref></type>
+        <definition>struct ssh_callbacks_struct cb</definition>
+        <argsstring></argsstring>
+        <name>cb</name>
+        <initializer>= {
+    .auth_function = <ref refid="ssh__client__fuzzer_8cpp_1a3bcf6ffc0c2c09238e1a7bc6f65aff7c" kindref="member">auth_callback</ref>,
+    .userdata = NULL,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fuzz/ssh_client_fuzzer.cpp" line="26" column="12" bodyfile="tests/fuzz/ssh_client_fuzzer.cpp" bodystart="42" bodyend="-1"/>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ssh__client__fuzzer_8cpp_1a3bcf6ffc0c2c09238e1a7bc6f65aff7c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int auth_callback</definition>
+        <argsstring>(const char *prompt, char *buf, size_t len, int echo, int verify, void *userdata)</argsstring>
+        <name>auth_callback</name>
+        <param>
+          <type>const char *</type>
+          <declname>prompt</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>echo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>verify</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fuzz/ssh_client_fuzzer.cpp" line="26" column="12" bodyfile="tests/fuzz/ssh_client_fuzzer.cpp" bodystart="26" bodyend="40"/>
+        <references refid="samplesshd-kbdint_8c_1aed50069385b2de326e5bbed79b19affd" compoundref="samplesshd-kbdint_8c" startline="189">echo</references>
+      </memberdef>
+      <memberdef kind="function" id="ssh__client__fuzzer_8cpp_1a38ba4d370f756491ce0d55e0c320d08b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void select_loop</definition>
+        <argsstring>(ssh_session session, ssh_channel channel)</argsstring>
+        <name>select_loop</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fuzz/ssh_client_fuzzer.cpp" line="47" column="13" bodyfile="tests/fuzz/ssh_client_fuzzer.cpp" bodystart="47" bodyend="83"/>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1gaaafcda943c96ddb91e5c28c0bdee7045" compoundref="channels_8c" startline="1566" endline="1571">ssh_channel_is_open</references>
+        <references refid="libssh_8h_1ae082e4d35591a2f2f3074f28049ff993" compoundref="connector_8c" startline="125" endline="151">ssh_connector_free</references>
+        <references refid="libssh_8h_1abe75f2d91dee85a3834ee50a69b64385" compoundref="connector_8c" startline="96" endline="123">ssh_connector_new</references>
+        <references refid="libssh_8h_1a43ca9065044b48afdede3e9fd9f1f86a" compoundref="connector_8c" startline="153" endline="167">ssh_connector_set_in_channel</references>
+        <references refid="libssh_8h_1ab5763a5e739e0fcf1857f5ca24b0716b" compoundref="connector_8c" startline="185" endline="190">ssh_connector_set_in_fd</references>
+        <references refid="libssh_8h_1a9545174e1a2727b15a620f09b7e8b348" compoundref="connector_8c" startline="169" endline="183">ssh_connector_set_out_channel</references>
+        <references refid="libssh_8h_1a83638a551468a2a6ef0ff38784bb6697" compoundref="connector_8c" startline="192" endline="197">ssh_connector_set_out_fd</references>
+        <references refid="libssh_8h_1a1b16de6e3d7453108e91d9e3a6608536a8990d435585796e3aecf7426e6041408" compoundref="libssh_8h" startline="450">SSH_CONNECTOR_STDERR</references>
+        <references refid="libssh_8h_1a1b16de6e3d7453108e91d9e3a6608536abc07fcb188c74661393d19b895ef8e5e" compoundref="libssh_8h" startline="448">SSH_CONNECTOR_STDINOUT</references>
+        <references refid="group__libssh__poll_1gae1f53a6ce420a41ae06ffb962f477f99" compoundref="poll_8c" startline="936" endline="938">ssh_event_add_connector</references>
+        <references refid="group__libssh__poll_1gada90c0ca6919271708ba1ea0352632cb" compoundref="poll_8c" startline="957" endline="965">ssh_event_dopoll</references>
+        <references refid="group__libssh__poll_1ga101388903c74d53ed550574b587449cd" compoundref="poll_8c" startline="1089" endline="1118">ssh_event_free</references>
+        <references refid="group__libssh__poll_1ga406895f99b6b486c4b65536e5399ff96" compoundref="poll_8c" startline="760" endline="785">ssh_event_new</references>
+        <references refid="group__libssh__poll_1gae120116df5a1da09ee9edd42e6a63397" compoundref="poll_8c" startline="1076" endline="1079">ssh_event_remove_connector</references>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LLVMFuzzerTestOneInput</definition>
+        <argsstring>(const uint8_t *data, size_t size)</argsstring>
+        <name>LLVMFuzzerTestOneInput</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/fuzz/ssh_client_fuzzer.cpp" line="85" column="16" bodyfile="tests/fuzz/ssh_client_fuzzer.cpp" bodystart="85" bodyend="158"/>
+        <references refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client__fuzzer_8cpp" startline="42">cb</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="ssh__client__fuzzer_8cpp_1a38ba4d370f756491ce0d55e0c320d08b" compoundref="ssh__client__fuzzer_8cpp" startline="47" endline="83">select_loop</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__callbacks__struct_1ac29d6727c165e28748cfa442d7a292b9" compoundref="callbacks_8h" startline="144">ssh_callbacks_struct::size</references>
+        <references refid="group__libssh__callbacks_1gafe09b81e5346f0babe288dc38113d289" compoundref="callbacks_8h" startline="423">ssh_callbacks_init</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" compoundref="channels_8c" startline="920" endline="930">ssh_channel_open_session</references>
+        <references refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" compoundref="channels_8c" startline="2568" endline="2603">ssh_channel_request_exec</references>
+        <references refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</references>
+        <references refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</references>
+        <references refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</references>
+        <references refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</references>
+        <references refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" compoundref="init_8c" startline="147" endline="149">ssh_init</references>
+        <references refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca66d8a74748f5ce744c7475876b7195cd" compoundref="libssh_8h" startline="384">SSH_OPTIONS_FD</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca6560e124c042153de507732d489e5564" compoundref="libssh_8h" startline="381">SSH_OPTIONS_HOST</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca35b7834ff7585ccbb28a141c060fa724" compoundref="libssh_8h" startline="395">SSH_OPTIONS_LOG_VERBOSITY_STR</references>
+        <references refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" compoundref="options_8c" startline="474" endline="1039">ssh_options_set</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca41a41401297578b6a88df70b50a3cd21" compoundref="libssh_8h" startline="385">SSH_OPTIONS_USER</references>
+        <references refid="group__libssh__callbacks_1ga2e4b0507c738748a3f10e43fe201fe09" compoundref="callbacks_8c" startline="48" endline="68">ssh_set_callbacks</references>
+        <references refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" compoundref="auth_8c" startline="406" endline="459">ssh_userauth_none</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2019<sp/>Andreas<sp/>Schneider<sp/>&lt;asn@cryptomilk.org&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="ssh__client__fuzzer_8cpp_1a2e84c73592c2992fdc0b2593524f3b18" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBSSH_STATIC<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="ssh__client__fuzzer_8cpp_1a3bcf6ffc0c2c09238e1a7bc6f65aff7c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssh__client__fuzzer_8cpp_1a3bcf6ffc0c2c09238e1a7bc6f65aff7c" kindref="member">auth_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*prompt,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="samplesshd-kbdint_8c_1aed50069385b2de326e5bbed79b19affd" kindref="member">echo</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verify,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)prompt;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="samplesshd-kbdint_8c_1aed50069385b2de326e5bbed79b19affd" kindref="member">echo</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)userdata;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,<sp/>len,<sp/></highlight><highlight class="stringliteral">&quot;secret&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__callbacks__struct" kindref="compound">ssh_callbacks_struct</ref><sp/><ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structssh__callbacks__struct_1a5f79b2d36329d0ce6e9ac2cd3b77b046" kindref="member">auth_function</ref><sp/>=<sp/><ref refid="ssh__client__fuzzer_8cpp_1a3bcf6ffc0c2c09238e1a7bc6f65aff7c" kindref="member">auth_callback</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>.userdata<sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="ssh__client__fuzzer_8cpp_1a38ba4d370f756491ce0d55e0c320d08b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssh__client__fuzzer_8cpp_1a38ba4d370f756491ce0d55e0c320d08b" kindref="member">select_loop</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__connector__struct" kindref="compound">ssh_connector</ref><sp/>connector_in,<sp/>connector_out,<sp/>connector_err;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__event__struct" kindref="compound">ssh_event</ref><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/><ref refid="group__libssh__poll_1ga406895f99b6b486c4b65536e5399ff96" kindref="member">ssh_event_new</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>stdin<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>connector_in<sp/>=<sp/><ref refid="libssh_8h_1abe75f2d91dee85a3834ee50a69b64385" kindref="member">ssh_connector_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a9545174e1a2727b15a620f09b7e8b348" kindref="member">ssh_connector_set_out_channel</ref>(connector_in,<sp/>channel,<sp/><ref refid="libssh_8h_1a1b16de6e3d7453108e91d9e3a6608536abc07fcb188c74661393d19b895ef8e5e" kindref="member">SSH_CONNECTOR_STDINOUT</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1ab5763a5e739e0fcf1857f5ca24b0716b" kindref="member">ssh_connector_set_in_fd</ref>(connector_in,<sp/>0);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1gae1f53a6ce420a41ae06ffb962f477f99" kindref="member">ssh_event_add_connector</ref>(event,<sp/>connector_in);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>stdout<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>connector_out<sp/>=<sp/><ref refid="libssh_8h_1abe75f2d91dee85a3834ee50a69b64385" kindref="member">ssh_connector_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a83638a551468a2a6ef0ff38784bb6697" kindref="member">ssh_connector_set_out_fd</ref>(connector_out,<sp/>1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a43ca9065044b48afdede3e9fd9f1f86a" kindref="member">ssh_connector_set_in_channel</ref>(connector_out,<sp/>channel,<sp/><ref refid="libssh_8h_1a1b16de6e3d7453108e91d9e3a6608536abc07fcb188c74661393d19b895ef8e5e" kindref="member">SSH_CONNECTOR_STDINOUT</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1gae1f53a6ce420a41ae06ffb962f477f99" kindref="member">ssh_event_add_connector</ref>(event,<sp/>connector_out);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>stderr<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>connector_err<sp/>=<sp/><ref refid="libssh_8h_1abe75f2d91dee85a3834ee50a69b64385" kindref="member">ssh_connector_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a83638a551468a2a6ef0ff38784bb6697" kindref="member">ssh_connector_set_out_fd</ref>(connector_err,<sp/>2);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a43ca9065044b48afdede3e9fd9f1f86a" kindref="member">ssh_connector_set_in_channel</ref>(connector_err,<sp/>channel,<sp/><ref refid="libssh_8h_1a1b16de6e3d7453108e91d9e3a6608536a8990d435585796e3aecf7426e6041408" kindref="member">SSH_CONNECTOR_STDERR</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1gae1f53a6ce420a41ae06ffb962f477f99" kindref="member">ssh_event_add_connector</ref>(event,<sp/>connector_err);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__channel_1gaaafcda943c96ddb91e5c28c0bdee7045" kindref="member">ssh_channel_is_open</ref>(channel))<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1gada90c0ca6919271708ba1ea0352632cb" kindref="member">ssh_event_dopoll</ref>(event,<sp/>60000);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1gae120116df5a1da09ee9edd42e6a63397" kindref="member">ssh_event_remove_connector</ref>(event,<sp/>connector_in);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1gae120116df5a1da09ee9edd42e6a63397" kindref="member">ssh_event_remove_connector</ref>(event,<sp/>connector_out);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1gae120116df5a1da09ee9edd42e6a63397" kindref="member">ssh_event_remove_connector</ref>(event,<sp/>connector_err);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1ae082e4d35591a2f2f3074f28049ff993" kindref="member">ssh_connector_free</ref>(connector_in);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1ae082e4d35591a2f2f3074f28049ff993" kindref="member">ssh_connector_free</ref>(connector_out);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1ae082e4d35591a2f2f3074f28049ff993" kindref="member">ssh_connector_free</ref>(connector_err);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__poll_1ga101388903c74d53ed550574b587449cd" kindref="member">ssh_event_free</ref>(event);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" kindref="member">LLVMFuzzerTestOneInput</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structssh__callbacks__struct_1ac29d6727c165e28748cfa442d7a292b9" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*banner<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*env<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket_fds[2]<sp/>=<sp/>{-1,<sp/>-1};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>ssize_t<sp/>nwritten;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>up<sp/>the<sp/>socket<sp/>to<sp/>send<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>socketpair(AF_UNIX,<sp/>SOCK_STREAM,<sp/>0,<sp/>socket_fds);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>nwritten<sp/>=<sp/>send(socket_fds[1],<sp/>data,<sp/><ref refid="structssh__callbacks__struct_1ac29d6727c165e28748cfa442d7a292b9" kindref="member">size</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(nwritten<sp/>==<sp/><ref refid="structssh__callbacks__struct_1ac29d6727c165e28748cfa442d7a292b9" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>shutdown(socket_fds[1],<sp/>SHUT_WR);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/><ref refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" kindref="member">ssh_new</ref>();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>env<sp/>=<sp/>getenv(</highlight><highlight class="stringliteral">&quot;LIBSSH_VERBOSITY&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(env<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>strlen(env)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca35b7834ff7585ccbb28a141c060fa724" kindref="member">SSH_OPTIONS_LOG_VERBOSITY_STR</ref>,<sp/>env);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca66d8a74748f5ce744c7475876b7195cd" kindref="member">SSH_OPTIONS_FD</ref>,<sp/>&amp;socket_fds[0]);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca6560e124c042153de507732d489e5564" kindref="member">SSH_OPTIONS_HOST</ref>,<sp/></highlight><highlight class="stringliteral">&quot;127.0.0.1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca41a41401297578b6a88df70b50a3cd21" kindref="member">SSH_OPTIONS_USER</ref>,<sp/></highlight><highlight class="stringliteral">&quot;alice&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1gafe09b81e5346f0babe288dc38113d289" kindref="member">ssh_callbacks_init</ref>(&amp;<ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1ga2e4b0507c738748a3f10e43fe201fe09" kindref="member">ssh_set_callbacks</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>&amp;<ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" kindref="member">ssh_connect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" kindref="member">ssh_userauth_none</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>channel<sp/>=<sp/><ref refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" kindref="member">ssh_channel_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(channel<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" kindref="member">ssh_channel_open_session</ref>(channel);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" kindref="member">ssh_channel_request_exec</ref>(channel,<sp/></highlight><highlight class="stringliteral">&quot;ls&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssh__client__fuzzer_8cpp_1a38ba4d370f756491ce0d55e0c320d08b" kindref="member">select_loop</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>channel);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">out:</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" kindref="member">ssh_channel_free</ref>(channel);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" kindref="member">ssh_free</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>close(socket_fds[0]);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>close(socket_fds[1]);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/fuzz/ssh_client_fuzzer.cpp"/>
+  </compounddef>
+</doxygen>

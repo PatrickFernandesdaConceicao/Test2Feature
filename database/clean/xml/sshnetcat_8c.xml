@@ -1,0 +1,694 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="sshnetcat_8c" kind="file" language="C++">
+    <compoundname>sshnetcat.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">sys/select.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <includes local="no">sys/ioctl.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes refid="callbacks_8h" local="no">libssh/callbacks.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes refid="sftp_8h" local="no">libssh/sftp.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes refid="examples__common_8h" local="yes">examples_common.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>sys/select.h</label>
+      </node>
+      <node id="6">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="18">
+        <label>errno.h</label>
+      </node>
+      <node id="20">
+        <label>fcntl.h</label>
+      </node>
+      <node id="17">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="19">
+        <label>libssh/sftp.h</label>
+        <link refid="sftp_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>netdb.h</label>
+      </node>
+      <node id="11">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1">
+        <label>examples/sshnetcat.c</label>
+        <link refid="sshnetcat_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="16">
+        <label>sys/time.h</label>
+      </node>
+      <node id="9">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="21">
+        <label>examples_common.h</label>
+        <link refid="examples__common_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* host</definition>
+        <argsstring></argsstring>
+        <name>host</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="37" column="6" bodyfile="examples/sshnetcat.c" bodystart="37" bodyend="-1"/>
+        <referencedby refid="benchmarks_8h_1a33a30ecb04e95771eb40760397d2cc40" compoundref="latency_8c" startline="42" endline="85">benchmarks_ping_latency</referencedby>
+        <referencedby refid="sshnetcat_8c_1a0d3591711bd7d6cb03d42294115721bb" compoundref="sshnetcat_8c" startline="189" endline="217">client</referencedby>
+        <referencedby refid="benchmarks_8c_1aa10487258ce1df1ef42bee98693a777a" compoundref="benchmarks_8c" startline="276" endline="299">connect_host</referencedby>
+        <referencedby refid="connect__ssh_8c_1ada855ebf4aac69d9a59afb23a8e338f4" compoundref="connect__ssh_8c" startline="24" endline="67">connect_ssh</referencedby>
+        <referencedby refid="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" compoundref="sftp__stress_2main_8c" startline="31" endline="45">docycle</referencedby>
+        <referencedby refid="connect_8c_1af29ed5be889a5c2ecf972f5ae6203ef3" compoundref="connect_8c" startline="114" endline="143">getai</referencedby>
+        <referencedby refid="proxy_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="proxy_8c" startline="215" endline="346">main</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="group__libssh__session_1gaf7b7c8e6b973ad5cb1c30c6f31f849c5" compoundref="src_2knownhosts_8c" startline="72" endline="136">match_hashed_hostname</referencedby>
+        <referencedby refid="priv_8h_1a0e8d71766ba54ed5a5020997663bfd21" compoundref="match_8c" startline="195" endline="197">match_hostname</referencedby>
+        <referencedby refid="sshd__direct-tcpip_8c_1af849eda558f35e50c507ec3f2a08cb6f" compoundref="sshd__direct-tcpip_8c" startline="390" endline="429">open_tcp_socket</referencedby>
+        <referencedby refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" compoundref="sshnetcat_8c" startline="52" endline="75">opts</referencedby>
+        <referencedby refid="connection_8c_1a25a3aad3a9f299bd164bd15e04b05845" compoundref="connection_8c" startline="9" endline="31">set_opts</referencedby>
+        <referencedby refid="group__libssh__server_1gaee5406f486d73aad765cab4c445f2f63" compoundref="bind_8c" startline="251" endline="300">ssh_bind_listen</referencedby>
+        <referencedby refid="priv_8h_1a3a806e36fb02fc4f205e32206fc6d18c" compoundref="connect_8c" startline="165" endline="269">ssh_connect_host_nonblocking</referencedby>
+        <referencedby refid="group__libssh__session_1ga16eb5c500a1beaf18821c6ce51b7b965" compoundref="known__hosts_8c" startline="430" endline="493">ssh_dump_knownhost</referencedby>
+        <referencedby refid="group__libssh__misc_1gaa8ec4fa8a47283d9a7fd8920e84f8fc1" compoundref="misc_8c" startline="371" endline="389">ssh_hostport</referencedby>
+        <referencedby refid="group__libssh__session_1ga6f37e3d7bb6b938b44d6a34a76fdfa0b" compoundref="known__hosts_8c" startline="288" endline="424">ssh_is_server_known</referencedby>
+        <referencedby refid="group__libssh__misc_1gabee03cec7d5ba668885bd1a47e9650ea" compoundref="misc_8c" startline="1106" endline="1207">ssh_path_expand_escape</referencedby>
+        <referencedby refid="group__libssh__pki_1ga576cb3a5c7f40a0e20a88b14a023613d" compoundref="pki_8c" startline="2086" endline="2142">ssh_pki_export_pubkey_file</referencedby>
+        <referencedby refid="legacy_8h_1aa4de432e122c76302e4190041fee6945" compoundref="legacy_8c" startline="575" endline="641">ssh_publickey_to_file</referencedby>
+        <referencedby refid="group__libssh__session_1ga519c3985c8803c67d24ce9f937e3da9a" compoundref="src_2knownhosts_8c" startline="892" endline="952">ssh_session_export_known_hosts_entry</referencedby>
+        <referencedby refid="group__libssh__session_1gae8571ad5d4a9490badba8606e9942ec2" compoundref="src_2knownhosts_8c" startline="302" endline="334">ssh_session_get_host_port</referencedby>
+        <referencedby refid="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" compoundref="socket_8c" startline="839" endline="859">ssh_socket_connect</referencedby>
+        <referencedby refid="torture__options_8c_1aff71b28ae657ef05e88fc1c524747ea7" compoundref="torture__options_8c" startline="282" endline="295">torture_options_get_host</referencedby>
+        <referencedby refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="sshnetcat_8c_1ad64521677e81de832bf6a2475e2fe1cb" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* desthost</definition>
+        <argsstring></argsstring>
+        <name>desthost</name>
+        <initializer>=&quot;localhost&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="38" column="12" bodyfile="examples/sshnetcat.c" bodystart="38" bodyend="-1"/>
+        <referencedby refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" compoundref="sshnetcat_8c" startline="177" endline="187">forwarding</referencedby>
+        <referencedby refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" compoundref="sshnetcat_8c" startline="52" endline="75">opts</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <initializer>=&quot;22&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="39" column="12" bodyfile="examples/sshnetcat.c" bodystart="39" bodyend="-1"/>
+        <referencedby refid="group__libssh__server_1ga4992f5130d84651db66d220c69faa7f1" compoundref="bind_8c" startline="74" endline="131">bind_socket</referencedby>
+        <referencedby refid="classssh_1_1Session_1a70f29e5f12fea442dfd0bff3ec51d3a8" compoundref="libsshpp_8hpp" startline="426" endline="430">ssh::Session::cancelForward</referencedby>
+        <referencedby refid="legacy_8h_1a061861c2fd7ab1ae018c006c4d29a3e4" compoundref="legacy_8c" startline="174" endline="176">channel_forward_cancel</referencedby>
+        <referencedby refid="legacy_8h_1a0ef44f268f77a091d52f39d3b02b1ad1" compoundref="legacy_8c" startline="178" endline="181">channel_forward_listen</referencedby>
+        <referencedby refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" compoundref="sshnetcat_8c" startline="177" endline="187">forwarding</referencedby>
+        <referencedby refid="connect_8c_1af29ed5be889a5c2ecf972f5ae6203ef3" compoundref="connect_8c" startline="114" endline="143">getai</referencedby>
+        <referencedby refid="classssh_1_1Session_1aa4ab8dfd40f13bb72ef8ef65a48be861" compoundref="libsshpp_8hpp" startline="432" endline="437">ssh::Session::listenForward</referencedby>
+        <referencedby refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" compoundref="sshnetcat_8c" startline="52" endline="75">opts</referencedby>
+        <referencedby refid="pkd__daemon_8c_1acd8f8163d4bf5bc42e03e512e8d16f94" compoundref="pkd__daemon_8c" startline="85" endline="121">pkd_init_server_fd</referencedby>
+        <referencedby refid="group__libssh__channel_1ga3bff751afc5ecb5bbf9d6447e4e5370f" compoundref="channels_8c" startline="2447" endline="2476">ssh_channel_cancel_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1ga758cda957227751870c8772df46e5b39" compoundref="channels_8c" startline="2365" endline="2404">ssh_channel_listen_forward</referencedby>
+        <referencedby refid="config_8c_1a9d8669375c734bad778bb45a26c39f37" compoundref="config_8c" startline="421" endline="505">ssh_config_parse_proxy_jump</referencedby>
+        <referencedby refid="config__parser_8h_1a45ac269803783babc1fc14db0b8fc732" compoundref="config__parser_8c" startline="159" endline="262">ssh_config_parse_uri</referencedby>
+        <referencedby refid="priv_8h_1a3a806e36fb02fc4f205e32206fc6d18c" compoundref="connect_8c" startline="165" endline="269">ssh_connect_host_nonblocking</referencedby>
+        <referencedby refid="group__libssh__channel_1gac474d071d80e725c8b5633cb1d35c010" compoundref="channels_8c" startline="2479" endline="2481">ssh_forward_cancel</referencedby>
+        <referencedby refid="group__libssh__channel_1ga041a495f0230bb017cdf7459e6773664" compoundref="channels_8c" startline="2407" endline="2409">ssh_forward_listen</referencedby>
+        <referencedby refid="group__libssh__misc_1gaa8ec4fa8a47283d9a7fd8920e84f8fc1" compoundref="misc_8c" startline="371" endline="389">ssh_hostport</referencedby>
+        <referencedby refid="group__libssh__session_1ga93f7f7159893f3ce62c9b178724eff75" compoundref="options_8c" startline="1193" endline="1357">ssh_options_getopt</referencedby>
+        <referencedby refid="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" compoundref="socket_8c" startline="839" endline="859">ssh_socket_connect</referencedby>
+        <referencedby refid="torture__options_8c_1a9e113018949fa3a16bfc0c27145ea2bd" compoundref="torture__options_8c" startline="297" endline="315">torture_options_set_port</referencedby>
+        <referencedby refid="torture_8c_1a832db2b9318bbced981bebe2c7c013c7" compoundref="torture_8c" startline="483" endline="496">torture_server_port</referencedby>
+        <referencedby refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void usage</definition>
+        <argsstring>(void)</argsstring>
+        <name>usage</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="46" column="13" bodyfile="examples/sshnetcat.c" bodystart="46" bodyend="50"/>
+        <referencedby refid="sshnetcat_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="sshnetcat_8c" startline="242" endline="267">main</referencedby>
+        <referencedby refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" compoundref="sshnetcat_8c" startline="52" endline="75">opts</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int opts</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>opts</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="52" column="12" bodyfile="examples/sshnetcat.c" bodystart="52" bodyend="75"/>
+        <references refid="sshnetcat_8c_1ad64521677e81de832bf6a2475e2fe1cb" compoundref="sshnetcat_8c" startline="38">desthost</references>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="ssh__client_8c_1a6c01d4272dd21e4cd0006557b836ec41" compoundref="ssh__client_8c" startline="52">pcap_file</references>
+        <references refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" compoundref="sshnetcat_8c" startline="39">port</references>
+        <references refid="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" compoundref="sshnetcat_8c" startline="46" endline="50">usage</references>
+        <referencedby refid="sshnetcat_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="sshnetcat_8c" startline="242" endline="267">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sshnetcat_8c_1a38ba4d370f756491ce0d55e0c320d08b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void select_loop</definition>
+        <argsstring>(ssh_session session, ssh_channel channel)</argsstring>
+        <name>select_loop</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="77" column="13" bodyfile="examples/sshnetcat.c" bodystart="77" bodyend="175"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__channel_1gab2720b44cb7f1dfe2b38ffe07c2f45c7" compoundref="channels_8c" startline="1582" endline="1587">ssh_channel_is_closed</references>
+        <references refid="group__libssh__channel_1gaaafcda943c96ddb91e5c28c0bdee7045" compoundref="channels_8c" startline="1566" endline="1571">ssh_channel_is_open</references>
+        <references refid="group__libssh__channel_1ga157f7d1df5de07ec6c6976e2034ba6e2" compoundref="channels_8c" startline="3038" endline="3069">ssh_channel_poll</references>
+        <references refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" compoundref="channels_8c" startline="2831" endline="2838">ssh_channel_read</references>
+        <references refid="group__libssh__channel_1ga072f82fdf3e50514f747653af2c99004" compoundref="channels_8c" startline="1224" endline="1270">ssh_channel_send_eof</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a09a5d3ff30c0ab7c5798eb2ea98354e4" compoundref="libssh_8h" startline="287">SSH_EINTR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__session_1gafe509fcea47714b5cd277d1e35e83276" compoundref="session_8c" startline="566" endline="572">ssh_get_fd</references>
+        <references refid="group__libssh__session_1ga86cbf041bced56d18a2a5248c46cecb4" compoundref="connect_8c" startline="316" endline="395">ssh_select</references>
+        <references refid="examples__common_8h_1a01c647179ba7270ccbc9a5253846b3d2" compoundref="examples__common_8h" startline="19">ZERO_STRUCT</references>
+        <referencedby refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" compoundref="sshnetcat_8c" startline="177" endline="187">forwarding</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void forwarding</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>forwarding</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="177" column="13" bodyfile="examples/sshnetcat.c" bodystart="177" bodyend="187"/>
+        <references refid="sshnetcat_8c_1ad64521677e81de832bf6a2475e2fe1cb" compoundref="sshnetcat_8c" startline="38">desthost</references>
+        <references refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" compoundref="sshnetcat_8c" startline="39">port</references>
+        <references refid="sshnetcat_8c_1a38ba4d370f756491ce0d55e0c320d08b" compoundref="sshnetcat_8c" startline="77" endline="175">select_loop</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gae86b0704a1f2bdebb268b55567f7f47b" compoundref="channels_8c" startline="985" endline="1031">ssh_channel_open_forward</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <referencedby refid="sshnetcat_8c_1a0d3591711bd7d6cb03d42294115721bb" compoundref="sshnetcat_8c" startline="189" endline="217">client</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sshnetcat_8c_1a0d3591711bd7d6cb03d42294115721bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int client</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>client</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="189" column="12" bodyfile="examples/sshnetcat.c" bodystart="189" bodyend="217"/>
+        <references refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</references>
+        <references refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" compoundref="sshnetcat_8c" startline="177" endline="187">forwarding</references>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__session_1ga89864d4d5cc6d3d6ef1c39652f2a688f" compoundref="client_8c" startline="632" endline="638">ssh_get_issue_banner</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca6560e124c042153de507732d489e5564" compoundref="libssh_8h" startline="381">SSH_OPTIONS_HOST</references>
+        <references refid="group__libssh__session_1ga82371e723260c7572ea061edecc2e9f1" compoundref="options_8c" startline="1375" endline="1418">ssh_options_parse_config</references>
+        <references refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" compoundref="options_8c" startline="474" endline="1039">ssh_options_set</references>
+        <references refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" compoundref="auth_8c" startline="406" endline="459">ssh_userauth_none</references>
+        <references refid="examples__common_8h_1ad5d8ab97d3635ecaf8fa78225cb960fb" compoundref="examples_2knownhosts_8c" startline="35" endline="117">verify_knownhost</references>
+        <referencedby refid="sshnetcat_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="sshnetcat_8c" startline="242" endline="267">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sshnetcat_8c_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/sshnetcat.c" line="242" column="5" bodyfile="examples/sshnetcat.c" bodystart="242" bodyend="267"/>
+        <references refid="ssh__client_8c_1a640f3c55c8e63434a2ae0b67f72ab262" compoundref="ssh__client_8c" startline="389" endline="395">cleanup_pcap</references>
+        <references refid="sshnetcat_8c_1a0d3591711bd7d6cb03d42294115721bb" compoundref="sshnetcat_8c" startline="189" endline="217">client</references>
+        <references refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" compoundref="sshnetcat_8c" startline="52" endline="75">opts</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh__client_8c_1a3ea85a9a747087d08426003509b49943" compoundref="ssh__client_8c" startline="369" endline="387">set_pcap</references>
+        <references refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</references>
+        <references refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</references>
+        <references refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</references>
+        <references refid="group__libssh__session_1ga93f7f7159893f3ce62c9b178724eff75" compoundref="options_8c" startline="1193" endline="1357">ssh_options_getopt</references>
+        <references refid="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" compoundref="sshnetcat_8c" startline="46" endline="50">usage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>2010<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">You<sp/>are<sp/>free<sp/>to<sp/>copy<sp/>this<sp/>file,<sp/>modify<sp/>it<sp/>in<sp/>any<sp/>way,<sp/>consider<sp/>it<sp/>being<sp/>public</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">domain.<sp/>This<sp/>does<sp/>not<sp/>apply<sp/>to<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>library<sp/>though,<sp/>but<sp/>it<sp/>is</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">allowed<sp/>to<sp/>cut-and-paste<sp/>working<sp/>code<sp/>from<sp/>this<sp/>file<sp/>to<sp/>any<sp/>license<sp/>of</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">program.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">The<sp/>goal<sp/>is<sp/>to<sp/>show<sp/>the<sp/>API<sp/>in<sp/>action.<sp/>It&apos;s<sp/>not<sp/>a<sp/>reference<sp/>on<sp/>how<sp/>terminal</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">clients<sp/>must<sp/>be<sp/>made<sp/>or<sp/>how<sp/>a<sp/>client<sp/>should<sp/>react.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_TERMIOS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;termios.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_UNISTD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/select.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/ioctl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="sftp_8h" kindref="compound">libssh/sftp.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="examples__common_8h" kindref="compound">examples_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>;</highlight></codeline>
+<codeline lineno="38" refid="sshnetcat_8c_1ad64521677e81de832bf6a2475e2fe1cb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1ad64521677e81de832bf6a2475e2fe1cb" kindref="member">desthost</ref>=</highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39" refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" kindref="member">port</ref>=</highlight><highlight class="stringliteral">&quot;22&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_PCAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="pcap_8h" kindref="compound">libssh/pcap.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ssh__client_8c_1a6c01d4272dd21e4cd0006557b836ec41" kindref="member">pcap_file</ref>=NULL;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" kindref="member">usage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Usage<sp/>:<sp/>sshnetcat<sp/>[user@]host<sp/>forwarded_host<sp/>forwarded_port\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" kindref="member">opts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((i=getopt(argc,argv,</highlight><highlight class="stringliteral">&quot;P:&quot;</highlight><highlight class="normal">))!=-1){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(i){</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_PCAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;P&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ssh__client_8c_1a6c01d4272dd21e4cd0006557b836ec41" kindref="member">pcap_file</ref>=optarg;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;unknown<sp/>option<sp/>%c\n&quot;</highlight><highlight class="normal">,optopt);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" kindref="member">usage</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(optind<sp/>&lt;<sp/>argc)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>=argv[optind++];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(optind<sp/>&lt;<sp/>argc)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1ad64521677e81de832bf6a2475e2fe1cb" kindref="member">desthost</ref>=argv[optind++];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(optind<sp/>&lt;<sp/>argc)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" kindref="member">port</ref>=argv[optind++];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>==NULL)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" kindref="member">usage</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="sshnetcat_8c_1a38ba4d370f756491ce0d55e0c320d08b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sshnetcat_8c_1a38ba4d370f756491ce0d55e0c320d08b" kindref="member">select_loop</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>fd_set<sp/>fds;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>timeout;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>[4096];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>channels<sp/>will<sp/>be<sp/>set<sp/>to<sp/>the<sp/>channels<sp/>to<sp/>poll.</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>outchannels<sp/>will<sp/>contain<sp/>the<sp/>result<sp/>of<sp/>the<sp/>poll</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channels[2],<sp/>outchannels[2];</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lus;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eof=0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxfd;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(channel){</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="examples__common_8h_1a01c647179ba7270ccbc9a5253846b3d2" kindref="member">ZERO_STRUCT</ref>(fds);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FD_ZERO(&amp;fds);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!eof)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FD_SET(0,&amp;fds);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout.tv_sec=30;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout.tv_usec=0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd<sp/>=<sp/><ref refid="group__libssh__session_1gafe509fcea47714b5cd277d1e35e83276" kindref="member">ssh_get_fd</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fd<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>getting<sp/>the<sp/>session<sp/>file<sp/>descriptor:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FD_SET(fd,<sp/>&amp;fds);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxfd<sp/>=<sp/>fd<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channels[0]=channel;<sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>first<sp/>channel<sp/>we<sp/>want<sp/>to<sp/>read<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channels[1]=NULL;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret=<ref refid="group__libssh__session_1ga86cbf041bced56d18a2a5248c46cecb4" kindref="member">ssh_select</ref>(channels,outchannels,maxfd,&amp;fds,&amp;timeout);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ret==EINTR)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(FD_ISSET(0,&amp;fds)){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lus=read(0,<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lus)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" kindref="member">ssh_channel_write</ref>(channel,<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,lus);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eof=1;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1ga072f82fdf3e50514f747653af2c99004" kindref="member">ssh_channel_send_eof</ref>(channel);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(channel<sp/>&amp;&amp;<sp/><ref refid="group__libssh__channel_1gab2720b44cb7f1dfe2b38ffe07c2f45c7" kindref="member">ssh_channel_is_closed</ref>(channel)){</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" kindref="member">ssh_channel_free</ref>(channel);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channel=NULL;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channels[0]=NULL;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(outchannels[0]){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(channel<sp/>&amp;&amp;<sp/><ref refid="group__libssh__channel_1gaaafcda943c96ddb91e5c28c0bdee7045" kindref="member">ssh_channel_is_open</ref>(channel)<sp/>&amp;&amp;<sp/><ref refid="group__libssh__channel_1ga157f7d1df5de07ec6c6976e2034ba6e2" kindref="member">ssh_channel_poll</ref>(channel,0)){</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lus<sp/>=<sp/><ref refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" kindref="member">ssh_channel_read</ref>(channel,<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>),0);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lus==-1){</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>reading<sp/>channel:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lus==0){</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" kindref="member">ssh_channel_free</ref>(channel);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channel=channels[0]=NULL;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>write(1,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>lus);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>writing<sp/>to<sp/>stdin:<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(channel<sp/>&amp;&amp;<sp/><ref refid="group__libssh__channel_1gaaafcda943c96ddb91e5c28c0bdee7045" kindref="member">ssh_channel_is_open</ref>(channel)<sp/>&amp;&amp;<sp/><ref refid="group__libssh__channel_1ga157f7d1df5de07ec6c6976e2034ba6e2" kindref="member">ssh_channel_poll</ref>(channel,1)){<sp/></highlight><highlight class="comment">/*<sp/>stderr<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lus<sp/>=<sp/><ref refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" kindref="member">ssh_channel_read</ref>(channel,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>),<sp/>1);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lus==-1){</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>reading<sp/>channel:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(lus==0){</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" kindref="member">ssh_channel_free</ref>(channel);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channel=channels[0]=NULL;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>write(2,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>lus);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>writing<sp/>to<sp/>stderr:<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(channel<sp/>&amp;&amp;<sp/><ref refid="group__libssh__channel_1gab2720b44cb7f1dfe2b38ffe07c2f45c7" kindref="member">ssh_channel_is_closed</ref>(channel)){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" kindref="member">ssh_channel_free</ref>(channel);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channel=NULL;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(ret==EINTR<sp/>||<sp/>ret==<ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a09a5d3ff30c0ab7c5798eb2ea98354e4" kindref="member">SSH_EINTR</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" kindref="member">forwarding</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>){</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>channel<sp/>=<sp/><ref refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" kindref="member">ssh_channel_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>r<sp/>=<sp/><ref refid="group__libssh__channel_1gae86b0704a1f2bdebb268b55567f7f47b" kindref="member">ssh_channel_open_forward</ref>(channel,<sp/><ref refid="sshnetcat_8c_1ad64521677e81de832bf6a2475e2fe1cb" kindref="member">desthost</ref>,<sp/>atoi(<ref refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" kindref="member">port</ref>),<sp/></highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">,<sp/>22);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(r&lt;0)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;error<sp/>forwarding<sp/>port<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1a38ba4d370f756491ce0d55e0c320d08b" kindref="member">select_loop</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,channel);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="sshnetcat_8c_1a0d3591711bd7d6cb03d42294115721bb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sshnetcat_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>){</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>auth=0;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*banner;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca6560e124c042153de507732d489e5564" kindref="member">SSH_OPTIONS_HOST</ref><sp/>,<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__session_1ga82371e723260c7572ea061edecc2e9f1" kindref="member">ssh_options_parse_config</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" kindref="member">ssh_connect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>)){</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Connection<sp/>failed<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>state=<ref refid="examples__common_8h_1ad5d8ab97d3635ecaf8fa78225cb960fb" kindref="member">verify_knownhost</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" kindref="member">ssh_userauth_none</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>banner=<ref refid="group__libssh__session_1ga89864d4d5cc6d3d6ef1c39652f2a688f" kindref="member">ssh_get_issue_banner</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(banner){</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,banner);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>free(banner);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>auth=<ref refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" kindref="member">authenticate_console</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(auth<sp/>!=<sp/><ref refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" kindref="member">SSH_AUTH_SUCCESS</ref>){</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" kindref="member">forwarding</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_PCAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><ref refid="libssh_8h_1a476c4b8079f7b8ac30be4cc2c8f9d456" kindref="member">ssh_pcap_file</ref><sp/><ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssh__client_8c_1a3ea85a9a747087d08426003509b49943" kindref="member">set_pcap</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssh__client_8c_1a3ea85a9a747087d08426003509b49943" kindref="member">set_pcap</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>){</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="ssh__client_8c_1a6c01d4272dd21e4cd0006557b836ec41" kindref="member">pcap_file</ref>)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>=<ref refid="libssh_8h_1a91d9077fc6395d321e6490a6e5f1455c" kindref="member">ssh_pcap_file_new</ref>();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="libssh_8h_1ace720476b72056b7faaec7bab504aaa0" kindref="member">ssh_pcap_file_open</ref>(<ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>,<ref refid="ssh__client_8c_1a6c01d4272dd21e4cd0006557b836ec41" kindref="member">pcap_file</ref>)<sp/>==<sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>){</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>opening<sp/>pcap<sp/>file\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a0e4cc21bf5453220b57612f278758f3c" kindref="member">ssh_pcap_file_free</ref>(<ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>=NULL;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1af5dd887de46c89e3c57d990bb37097cd" kindref="member">ssh_set_pcap_file</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssh__client_8c_1a640f3c55c8e63434a2ae0b67f72ab262" kindref="member">cleanup_pcap</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssh__client_8c_1a640f3c55c8e63434a2ae0b67f72ab262" kindref="member">cleanup_pcap</ref>(){</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a0e4cc21bf5453220b57612f278758f3c" kindref="member">ssh_pcap_file_free</ref>(<ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssh__client_8c_1ad52ca26e0f83f73a95659419669bd8bb" kindref="member">pcap</ref>=NULL;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="sshnetcat_8c_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sshnetcat_8c_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv){</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/><ref refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" kindref="member">ssh_new</ref>();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__session_1ga93f7f7159893f3ce62c9b178724eff75" kindref="member">ssh_options_getopt</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>&amp;argc,<sp/>argv))<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;error<sp/>parsing<sp/>command<sp/>line<sp/>:%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" kindref="member">usage</ref>();</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1a661b14d2cd5d6df5790276ddb9bcda0e" kindref="member">opts</ref>(argc,argv);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_PCAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssh__client_8c_1a3ea85a9a747087d08426003509b49943" kindref="member">set_pcap</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshnetcat_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" kindref="member">ssh_free</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_PCAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssh__client_8c_1a640f3c55c8e63434a2ae0b67f72ab262" kindref="member">cleanup_pcap</ref>();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="examples/sshnetcat.c"/>
+  </compounddef>
+</doxygen>

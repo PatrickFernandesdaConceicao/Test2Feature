@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libssh_tutor_threads" kind="page">
+    <compoundname>libssh_tutor_threads</compoundname>
+    <title>Chapter 8: Threads with libssh</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="libssh_tutor_threads_1threads_with_libssh">
+<title>How to use libssh with threads</title>
+<para>libssh may be used in multithreaded applications, but under several conditions :<itemizedlist>
+<listitem><para>Your system must support libpthread or, in Windows environment, CriticalSection based mutex control.</para>
+</listitem><listitem><para>Since version 0.8.0, threads initialization is called automatically in the library constructor if libssh is dynamically linked. This means it is no longer necessary to call <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref>/ssh_finalize().</para>
+</listitem><listitem><para>If libssh is statically linked, threading must be initialized by calling <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref> before using any of libssh provided functions. This initialization must be done outside of any threading context. Don&apos;t forget to call <ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize()</ref> to avoid memory leak</para>
+</listitem><listitem><para>At all times, you may use different sessions inside threads, make parallel connections, read/write on different sessions and so on. You <emphasis>cannot</emphasis> use a single session (or channels for a single session) in several threads at the same time. This will most likely lead to internal state corruption. This limitation is being worked out and will maybe disappear later.</para>
+</listitem></itemizedlist>
+</para>
+<sect2 id="libssh_tutor_threads_1threads_init">
+<title>Initialization of threads</title>
+<para>Since version 0.8.0, it is no longer necessary to call <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref>/ssh_finalize() if libssh is dynamically linked.</para>
+<para>If libssh is statically linked, call <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref> before using any of libssh provided functions.</para>
+</sect2>
+<sect2 id="libssh_tutor_threads_1threads_pthread">
+<title>Using libpthread with libssh</title>
+<para>Since version 0.8.0, libpthread is the default threads library used by libssh.</para>
+<para>To use libpthread, simply link it to you application.</para>
+<para>If you are using libssh statically linked, don&apos;t forget to call <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref> before using any of libssh provided functions (and <ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize()</ref> in the end).</para>
+</sect2>
+<sect2 id="libssh_tutor_threads_1threads_other">
+<title>Using another threading library</title>
+<para>Since version 0.8.0, libssh does not support custom threading libraries. The change makes sense since the newer versions for libcrypto (OpenSSL) and libgcrypt don&apos;t support custom threading libraries.</para>
+<para>The default used threading library is libpthread. Alternatively, in Windows environment, CriticalSection based mutex control can be used.</para>
+<para>If your system does not support libpthread nor CriticalSection based mutex control, unfortunately, you cannot use libssh in multithreaded scenarios.</para>
+<para>Good luck ! </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="doc/threading.dox"/>
+  </compounddef>
+</doxygen>

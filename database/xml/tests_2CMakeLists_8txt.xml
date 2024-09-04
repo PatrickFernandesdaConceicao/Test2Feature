@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="tests_2CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>CMakeLists.txt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tests_2CMakeLists_8txt_1ab462345fafe33a86b6af574ec3cc3206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>project</definition>
+        <argsstring>(libssh-tests C) if(BSD OR SOLARIS OR OSX) find_package(Argp) endif(BSD OR SOLARIS OR OSX) set(TORTURE_LIBRARY torture) include_directories($</argsstring>
+        <name>project</name>
+        <param>
+          <type>libssh-tests</type>
+          <declname>C</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/CMakeLists.txt" line="1" column="1" bodyfile="libssh-mirror/tests/CMakeLists.txt" bodystart="1" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="tests_2CMakeLists_8txt_1ab462345fafe33a86b6af574ec3cc3206" refkind="member"><highlight class="normal"><ref refid="examples_2CMakeLists_8txt_1a3901ba16c737e186448fe169f89bb169" kindref="member">project</ref>(libssh-tests<sp/>C)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(BSD<sp/>OR<sp/>SOLARIS<sp/>OR<sp/>OSX)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>find_package(Argp)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(BSD<sp/>OR<sp/>SOLARIS<sp/>OR<sp/>OSX)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(TORTURE_LIBRARY<sp/>torture)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">include_directories(${OPENSSL_INCLUDE_DIR}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMOCKA_INCLUDE_DIR}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${ZLIB_INCLUDE_DIR}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${libssh_BINARY_DIR}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${libssh_SOURCE_DIR}/src</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_CURRENT_SOURCE_DIR}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_BINARY_DIR}/tests)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(TORTURE_LINK_LIBRARIES</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>${CMOCKA_LIBRARY}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>ssh::static)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">#<sp/>create<sp/><ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref><sp/>library</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">add_library(${TORTURE_LIBRARY}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STATIC</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmdline.c</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>torture.c</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>torture_key.c</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>torture_pki.c</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>torture_cmocka.c)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">target_link_libraries(${TORTURE_LIBRARY}<sp/>${TORTURE_LINK_LIBRARIES})</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">target_compile_options(${TORTURE_LIBRARY}<sp/>PRIVATE</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-DSSH_PING_EXECUTABLE=</highlight><highlight class="stringliteral">&quot;${CMAKE_CURRENT_BINARY_DIR}/ssh_ping&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ARGP_LIBRARY)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>target_link_libraries(${TORTURE_LIBRARY}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${ARGP_LIBRARY}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(TEST_TARGET_LIBRARIES</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>${TORTURE_LIBRARY}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>${TORTURE_LINK_LIBRARIES}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" kindref="member">add_subdirectory</ref>(unittests)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>OpenSSH<sp/>Capabilities<sp/>are<sp/>required<sp/>for<sp/>all<sp/>unit<sp/>tests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">find_program(SSH_EXECUTABLE<sp/>NAMES<sp/><ref refid="namespacessh" kindref="compound">ssh</ref>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(SSH_EXECUTABLE)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${SSH_EXECUTABLE}<sp/>-V<sp/>ERROR_VARIABLE<sp/>OPENSSH_VERSION_STR)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(REGEX<sp/>REPLACE<sp/></highlight><highlight class="stringliteral">&quot;^.*OpenSSH_([0-9]).[0-9].*$&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;\\1&quot;</highlight><highlight class="normal"><sp/>OPENSSH_VERSION_MAJOR<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_VERSION_STR}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>string(REGEX<sp/>REPLACE<sp/></highlight><highlight class="stringliteral">&quot;^.*OpenSSH_[0-9].([0-9]).*$&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;\\1&quot;</highlight><highlight class="normal"><sp/>OPENSSH_VERSION_MINOR<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_VERSION_STR}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(OPENSSH_VERSION<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_VERSION_MAJOR}.${OPENSSH_VERSION_MINOR}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="stringliteral">&quot;${OPENSSH_VERSION}&quot;</highlight><highlight class="normal"><sp/>VERSION_LESS<sp/></highlight><highlight class="stringliteral">&quot;6.3&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>ssh<sp/>-<sp/>Q<sp/>was<sp/>introduced<sp/>in<sp/>6.3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message(</highlight><highlight class="stringliteral">&quot;Version<sp/>less<sp/>than<sp/>6.3,<sp/>hardcoding<sp/>cipher<sp/>list&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(OPENSSH_CIPHERS<sp/>&quot;aes128-ctr\naes192-ctr\naes256-ctr\narcfour256\narcfour128\naes128-gcm@openssh.com\naes256-gcm@openssh.com\naes128-cbc\n3des-cbc\nblowfish-cbc\ncast128-cbc\naes192-cbc\naes256-cbc\narcfour\nrijndael-cbc@lysator.liu.se\n&quot;)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(OPENSSH_MACS<sp/>&quot;hmac-md5-etm@openssh.com\nhmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>-etm@openssh.com\numac-64-etm@openssh.com\numac-128-etm@openssh.com\nhmac-sha2-256-etm@openssh.com\nhmac-sha2-512-etm@openssh.com\nhmac-ripemd160-etm@openssh.com\nhmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>-96-etm@openssh.com\nhmac-md5-96-etm@openssh.com\nhmac-md5\nhmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>\numac-64@openssh.com\numac-128@openssh.com\nhmac-sha2-256\nhmac-sha2-512\nhmac-ripemd160\nhmac-ripemd160@openssh.com\nhmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>-96\nhmac-md5-96\n&quot;)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(OPENSSH_KEX<sp/>&quot;ecdh-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a07b9ac3e448ab0a42d433d7251f330ba" kindref="member">nistp256</ref>\necdh-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1aa517abbee5069a3b99935baae6851fa6" kindref="member">nistp384</ref>\necdh-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1ab01877beeb6018acf9b92439e90dc34d" kindref="member">nistp521</ref>\ndiffie-hellman-group-exchange-<ref refid="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" kindref="member">sha256</ref>\ndiffie-hellman-group-exchange-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>\ndiffie-hellman-group14-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>\ndiffie-hellman-group1-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>\n&quot;)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(OPENSSH_KEYS<sp/>&quot;<ref refid="namespacessh" kindref="compound">ssh</ref>-rsa\nssh-dss\necdsa-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a07b9ac3e448ab0a42d433d7251f330ba" kindref="member">nistp256</ref>\n&quot;)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>else()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${SSH_EXECUTABLE}<sp/>-Q<sp/>cipher<sp/>OUTPUT_VARIABLE<sp/>OPENSSH_CIPHERS)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${SSH_EXECUTABLE}<sp/>-Q<sp/><ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref><sp/>OUTPUT_VARIABLE<sp/>OPENSSH_MACS)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${SSH_EXECUTABLE}<sp/>-Q<sp/>kex<sp/>OUTPUT_VARIABLE<sp/>OPENSSH_KEX)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${SSH_EXECUTABLE}<sp/>-Q<sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref><sp/>OUTPUT_VARIABLE<sp/>OPENSSH_KEYS)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${SSH_EXECUTABLE}<sp/>-Q<sp/>sig<sp/>OUTPUT_VARIABLE<sp/>OPENSSH_SIGS<sp/>ERROR_QUIET)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>We<sp/>need<sp/>both<sp/>of<sp/>them,<sp/>but<sp/>lets<sp/>get<sp/>rid<sp/>of<sp/>duplicate<sp/>items<sp/>presented<sp/>in<sp/>both<sp/>lists</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/>avoid<sp/>processing<sp/>too<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>arguments<sp/>in<sp/>pkd</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(OPENSSH_KEYS<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_KEYS}${OPENSSH_SIGS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string(REPLACE<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;;&quot;</highlight><highlight class="normal"><sp/>OPENSSH_KEYS<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_KEYS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list(REMOVE_DUPLICATES<sp/>OPENSSH_KEYS)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string(REPLACE<sp/></highlight><highlight class="stringliteral">&quot;;&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>OPENSSH_KEYS<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_KEYS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(SSH_ALGORITHMS</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3des-cbc<sp/>aes128-cbc<sp/>aes192-cbc<sp/>aes256-cbc<sp/>rijndael-cbc@lysator.liu.se<sp/>aes128-ctr<sp/>aes192-ctr</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aes256-ctr<sp/>aes128-gcm@openssh.com<sp/>aes256-gcm@openssh.com<sp/>chacha20-poly1305@openssh.com</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref><sp/>hmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>-96<sp/>hmac-sha2-256<sp/>hmac-sha2-512<sp/>hmac-md5<sp/>hmac-md5-96<sp/>umac-64@openssh.com</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>umac-128@openssh.com<sp/>hmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>-etm@openssh.com<sp/>hmac-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>-96-etm@openssh.com</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hmac-sha2-256-etm@openssh.com<sp/>hmac-sha2-512-etm@openssh.com<sp/>hmac-md5-etm@openssh.com</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hmac-md5-96-etm@openssh.com<sp/>umac-64-etm@openssh.com<sp/>umac-128-etm@openssh.com</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffie-hellman-group1-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref><sp/>diffie-hellman-group14-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref><sp/>diffie-hellman-group14-<ref refid="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" kindref="member">sha256</ref></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffie-hellman-group16-<ref refid="wrapper_8h_1ae89b582acc2fcf9f268e244908bec33c" kindref="member">sha512</ref><sp/>diffie-hellman-group18-<ref refid="wrapper_8h_1ae89b582acc2fcf9f268e244908bec33c" kindref="member">sha512</ref><sp/>diffie-hellman-group-exchange-<ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diffie-hellman-group-exchange-<ref refid="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" kindref="member">sha256</ref><sp/>ecdh-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a07b9ac3e448ab0a42d433d7251f330ba" kindref="member">nistp256</ref><sp/>ecdh-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1aa517abbee5069a3b99935baae6851fa6" kindref="member">nistp384</ref><sp/>ecdh-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1ab01877beeb6018acf9b92439e90dc34d" kindref="member">nistp521</ref></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curve25519-<ref refid="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" kindref="member">sha256</ref><sp/>curve25519-<ref refid="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" kindref="member">sha256</ref>@libssh.org</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacessh" kindref="compound">ssh</ref>-ed25519<sp/><ref refid="namespacessh" kindref="compound">ssh</ref>-ed25519-cert-v01@openssh.com<sp/><ref refid="namespacessh" kindref="compound">ssh</ref>-rsa<sp/><ref refid="namespacessh" kindref="compound">ssh</ref>-dss</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ecdsa-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a07b9ac3e448ab0a42d433d7251f330ba" kindref="member">nistp256</ref><sp/>ecdsa-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1aa517abbee5069a3b99935baae6851fa6" kindref="member">nistp384</ref><sp/>ecdsa-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1ab01877beeb6018acf9b92439e90dc34d" kindref="member">nistp521</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacessh" kindref="compound">ssh</ref>-rsa-cert-v01@openssh.com<sp/><ref refid="namespacessh" kindref="compound">ssh</ref>-dss-cert-v01@openssh.com</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ecdsa-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a07b9ac3e448ab0a42d433d7251f330ba" kindref="member">nistp256</ref>-cert-v01@openssh.com<sp/>ecdsa-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1aa517abbee5069a3b99935baae6851fa6" kindref="member">nistp384</ref>-cert-v01@openssh.com</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ecdsa-sha2-<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1ab01877beeb6018acf9b92439e90dc34d" kindref="member">nistp521</ref>-cert-v01@openssh.com</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>foreach(ALGORITHM<sp/>${SSH_ALGORITHMS})</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(TOUPPER<sp/>${ALGORITHM}<sp/>VARNAME)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(REGEX<sp/>REPLACE<sp/></highlight><highlight class="stringliteral">&quot;[-@.]&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal"><sp/>VARNAME<sp/></highlight><highlight class="stringliteral">&quot;OPENSSH_${VARNAME}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#<sp/>Match<sp/>the<sp/>current<sp/>algorithm<sp/>into<sp/>the<sp/>complete<sp/>list<sp/>of<sp/>OpenSSH<sp/>supported<sp/>algorithms.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>If<sp/>matching,<sp/>create<sp/>an<sp/>OPENSSH_CIPHER_NAME<sp/>variable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string(REGEX<sp/>MATCH<sp/></highlight><highlight class="stringliteral">&quot;.*${ALGORITHM}\n&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;${VARNAME}&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_CIPHERS}${OPENSSH_MACS}${OPENSSH_KEX}${OPENSSH_KEYS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>endforeach(ALGORITHM)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>string(STRIP<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_CIPHERS}&quot;</highlight><highlight class="normal"><sp/>OPENSSH_CIPHERS)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>string(STRIP<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_MACS}&quot;</highlight><highlight class="normal"><sp/>OPENSSH_MACS)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>string(STRIP<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_KEX}&quot;</highlight><highlight class="normal"><sp/>OPENSSH_KEX)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>string(STRIP<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_KEYS}&quot;</highlight><highlight class="normal"><sp/>OPENSSH_KEYS)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>string(REPLACE<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>OPENSSH_CIPHERS<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_CIPHERS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>string(REPLACE<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>OPENSSH_MACS<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_MACS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>string(REPLACE<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>OPENSSH_KEX<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_KEX}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>string(REPLACE<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>OPENSSH_KEYS<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_KEYS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">find_program(SSHD_EXECUTABLE</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAME</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sshd</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PATHS</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/sbin</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/usr/sbin</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/usr/local/sbin)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(CLIENT_TESTING<sp/>OR<sp/>SERVER_TESTING)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>find_package(socket_wrapper<sp/>1.1.5<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>find_package(nss_wrapper<sp/>1.1.2<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>find_package(uid_wrapper<sp/>1.2.0<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>find_package(pam_wrapper<sp/>1.0.1<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(NOT<sp/>SSHD_EXECUTABLE)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message(SEND_ERROR<sp/>&quot;Could<sp/>not<sp/>find<sp/>sshd<sp/>which<sp/>is<sp/>required<sp/>for<sp/><ref refid="ssh__client_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref><sp/>testing&quot;)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>find_program(NC_EXECUTABLE</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAME</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nc</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PATHS</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/bin</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/usr/bin</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/usr/local/bin)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(WITH_PKCS11_URI)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>find_package(softhsm)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(NOT<sp/>SOFTHSM_FOUND)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message(SEND_ERROR<sp/>&quot;Could<sp/>not<sp/>find<sp/>softhsm<sp/>module!&quot;)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(NOT<sp/>SOFTHSM_FOUND)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(WITH_PKCS11_URI)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>find_program(SSH_EXECUTABLE<sp/>NAMES<sp/><ref refid="namespacessh" kindref="compound">ssh</ref>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(SSH_EXECUTABLE)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${SSH_EXECUTABLE}<sp/>-V<sp/>ERROR_VARIABLE<sp/>OPENSSH_VERSION_STR)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(REGEX<sp/>REPLACE<sp/></highlight><highlight class="stringliteral">&quot;^.*OpenSSH_([0-9]).[0-9].*$&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;\\1&quot;</highlight><highlight class="normal"><sp/>OPENSSH_VERSION_MAJOR<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_VERSION_STR}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string(REGEX<sp/>REPLACE<sp/></highlight><highlight class="stringliteral">&quot;^.*OpenSSH_[0-9].([0-9]).*$&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;\\1&quot;</highlight><highlight class="normal"><sp/>OPENSSH_VERSION_MINOR<sp/></highlight><highlight class="stringliteral">&quot;${OPENSSH_VERSION_STR}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_definitions(-DOPENSSH_VERSION_MAJOR=${OPENSSH_VERSION_MAJOR}<sp/>-DOPENSSH_VERSION_MINOR=${OPENSSH_VERSION_MINOR})</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(LOCAL_USER<sp/>&quot;nobody&quot;)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(LOCAL_UID<sp/>&quot;65533&quot;)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>find_program(ID_EXECUTABLE<sp/>NAMES<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>find_program(WHO_EXECUTABLE<sp/>NAMES<sp/>whoami)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(ID_EXECUTABLE<sp/>AND<sp/>WHO_EXECUTABLE)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${WHO_EXECUTABLE}<sp/>OUTPUT_VARIABLE<sp/>LOCAL_USER<sp/>OUTPUT_STRIP_TRAILING_WHITESPACE)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute_process(COMMAND<sp/>${ID_EXECUTABLE}<sp/>-u<sp/>OUTPUT_VARIABLE<sp/>LOCAL_UID<sp/>OUTPUT_STRIP_TRAILING_WHITESPACE)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#<sp/>chroot_wrapper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>add_library(chroot_wrapper<sp/>SHARED<sp/>chroot_wrapper.c)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(CHROOT_WRAPPER_LIBRARY<sp/>${libssh_BINARY_DIR}/lib/${CMAKE_SHARED_LIBRARY_PREFIX}chroot_wrapper${CMAKE_SHARED_LIBRARY_SUFFIX})</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(TEST_TARGET_LIBRARIES</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${TEST_TARGET_LIBRARIES}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chroot_wrapper</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>ssh_ping</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>add_executable(ssh_ping<sp/>ssh_ping.c)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>target_compile_options(ssh_ping<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>target_link_libraries(ssh_ping<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#<sp/>homedir<sp/>will<sp/>be<sp/>used<sp/>in<sp/>passwd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(HOMEDIR<sp/>${CMAKE_CURRENT_BINARY_DIR}/home)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>###<sp/>Setup<sp/>nss_wrapper</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>configure_file(etc/passwd.in<sp/>${CMAKE_CURRENT_BINARY_DIR}/etc/passwd<sp/>@ONLY)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>configure_file(etc/shadow.in<sp/>${CMAKE_CURRENT_BINARY_DIR}/etc/shadow<sp/>@ONLY)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>configure_file(etc/group.in<sp/>${CMAKE_CURRENT_BINARY_DIR}/etc/group<sp/>@ONLY)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>configure_file(etc/<ref refid="sftp__stress_2main_8c_1a2e9645f39096cbfe1926297b89f4fe82" kindref="member">hosts</ref>.in<sp/>${CMAKE_CURRENT_BINARY_DIR}/etc/<ref refid="sftp__stress_2main_8c_1a2e9645f39096cbfe1926297b89f4fe82" kindref="member">hosts</ref><sp/>@ONLY)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">###<sp/>Setup<sp/>pam_wrapper</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>configure_file(etc/pam_matrix_passdb.in<sp/>${CMAKE_CURRENT_BINARY_DIR}/etc/pam_matrix_passdb<sp/>@ONLY)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>configure_file(etc/pam.d/sshd.in<sp/>${CMAKE_CURRENT_BINARY_DIR}/etc/pam.d/sshd<sp/>@ONLY)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(TORTURE_ENVIRONMENT<sp/></highlight><highlight class="stringliteral">&quot;LD_PRELOAD=${SOCKET_WRAPPER_LIBRARY}:${NSS_WRAPPER_LIBRARY}:${UID_WRAPPER_LIBRARY}:${PAM_WRAPPER_LIBRARY}:${CHROOT_WRAPPER_LIBRARY}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>list(APPEND<sp/>TORTURE_ENVIRONMENT<sp/>UID_WRAPPER=1<sp/>UID_WRAPPER_ROOT=1)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>list(APPEND<sp/>TORTURE_ENVIRONMENT<sp/>NSS_WRAPPER_PASSWD=${CMAKE_CURRENT_BINARY_DIR}/etc/passwd)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>list(APPEND<sp/>TORTURE_ENVIRONMENT<sp/>NSS_WRAPPER_SHADOW=${CMAKE_CURRENT_BINARY_DIR}/etc/shadow)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>list(APPEND<sp/>TORTURE_ENVIRONMENT<sp/>NSS_WRAPPER_GROUP=${CMAKE_CURRENT_BINARY_DIR}/etc/group)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>list(APPEND<sp/>TORTURE_ENVIRONMENT<sp/>PAM_WRAPPER_SERVICE_DIR=${CMAKE_CURRENT_BINARY_DIR}/etc/pam.d)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>Give<sp/>bob<sp/>some<sp/>keys</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/id_rsa<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/id_rsa.pub<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/id_ecdsa<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/id_ecdsa.pub<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/id_ed25519<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/id_ed25519.pub<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>Allow<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/>auth<sp/>with<sp/>bob</highlight><highlight class="stringliteral">&apos;s<sp/>public<sp/>keys<sp/>on<sp/>alice<sp/>account</highlight></codeline>
+<codeline lineno="205"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>configure_file(keys/id_rsa.pub<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/alice/.ssh/authorized_keys<sp/>@ONLY)</highlight></codeline>
+<codeline lineno="206"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="207"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>append<sp/>ECDSA<sp/>public<sp/>key</highlight></codeline>
+<codeline lineno="208"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(READ<sp/>keys/id_ecdsa.pub<sp/>CONTENTS)</highlight></codeline>
+<codeline lineno="209"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(APPEND<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/alice/.ssh/authorized_keys<sp/>&quot;${CONTENTS}&quot;)</highlight></codeline>
+<codeline lineno="210"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="211"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>append<sp/>ed25519<sp/>public<sp/>key</highlight></codeline>
+<codeline lineno="212"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(READ<sp/>keys/id_ed25519.pub<sp/>CONTENTS)</highlight></codeline>
+<codeline lineno="213"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(APPEND<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/alice/.ssh/authorized_keys<sp/>&quot;${CONTENTS}&quot;)</highlight></codeline>
+<codeline lineno="214"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="215"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>Allow<sp/>to<sp/>auth<sp/>with<sp/>bob<sp/>his<sp/>public<sp/>keys<sp/>on<sp/>charlie<sp/>account</highlight></codeline>
+<codeline lineno="216"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>configure_file(keys/pkcs11/id_pkcs11_rsa_openssh.pub<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/charlie/.ssh/authorized_keys<sp/>@ONLY)</highlight></codeline>
+<codeline lineno="217"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="218"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>append<sp/>ECDSA<sp/>public<sp/>key</highlight></codeline>
+<codeline lineno="219"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(READ<sp/>keys/pkcs11/id_pkcs11_ecdsa_256_openssh.pub<sp/>CONTENTS)</highlight></codeline>
+<codeline lineno="220"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(APPEND<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/charlie/.ssh/authorized_keys<sp/>&quot;${CONTENTS}&quot;)</highlight></codeline>
+<codeline lineno="221"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="222"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(READ<sp/>keys/pkcs11/id_pkcs11_ecdsa_384_openssh.pub<sp/>CONTENTS)</highlight></codeline>
+<codeline lineno="223"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(APPEND<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/charlie/.ssh/authorized_keys<sp/>&quot;${CONTENTS}&quot;)</highlight></codeline>
+<codeline lineno="224"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="225"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(READ<sp/>keys/pkcs11/id_pkcs11_ecdsa_521_openssh.pub<sp/>CONTENTS)</highlight></codeline>
+<codeline lineno="226"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(APPEND<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/charlie/.ssh/authorized_keys<sp/>&quot;${CONTENTS}&quot;)</highlight></codeline>
+<codeline lineno="227"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="228"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>Copy<sp/>the<sp/>signed<sp/>key<sp/>to<sp/>an<sp/>alternative<sp/>directory<sp/>in<sp/>bob&apos;</highlight><highlight class="normal"><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref><sp/>homedir.</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/certauth/id_rsa<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh_cert/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/certauth/id_rsa.pub<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh_cert/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>keys/certauth/id_rsa-cert.pub<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/home/bob/.ssh_cert/<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>#Copy<sp/>the<sp/>script<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/><ref refid="torture__buffer_8c_1ab3743688c369a6a63ebea4512080e9fe" kindref="member">setup</ref><sp/>PKCS11<sp/>tokens</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>file(COPY<sp/>pkcs11/<ref refid="torture__buffer_8c_1ab3743688c369a6a63ebea4512080e9fe" kindref="member">setup</ref>-softhsm-tokens.sh<sp/>DESTINATION<sp/>${CMAKE_CURRENT_BINARY_DIR}/pkcs11<sp/>FILE_PERMISSIONS<sp/>OWNER_READ<sp/>OWNER_WRITE<sp/>OWNER_EXECUTE)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>message(STATUS<sp/></highlight><highlight class="stringliteral">&quot;TORTURE_ENVIRONMENT=${TORTURE_ENVIRONMENT}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>()</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">configure_file(tests_config.h.cmake<sp/>${CMAKE_CURRENT_BINARY_DIR}/tests_config.h)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WITH_BENCHMARKS)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" kindref="member">add_subdirectory</ref>(<ref refid="benchmarks_8c_1adecce0e898c4df0e8492729573752be6" kindref="member">benchmarks</ref>)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>()</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(CLIENT_TESTING)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" kindref="member">add_subdirectory</ref>(<ref refid="ssh__client_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref>)</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>()</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(WITH_SERVER<sp/>AND<sp/>SERVER_TESTING)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" kindref="member">add_subdirectory</ref>(pkd)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" kindref="member">add_subdirectory</ref>(server)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>()</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><ref refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" kindref="member">if</ref><sp/>(FUZZ_TESTING)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" kindref="member">add_subdirectory</ref>(fuzz)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/tests/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

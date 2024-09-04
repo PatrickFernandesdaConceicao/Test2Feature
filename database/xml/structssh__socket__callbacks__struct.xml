@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structssh__socket__callbacks__struct" kind="struct" language="C++" prot="public">
+    <compoundname>ssh_socket_callbacks_struct</compoundname>
+    <includes refid="callbacks_8h" local="no">callbacks.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structssh__socket__callbacks__struct_1a21680bc94721a1507e1382e06f731aef" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* ssh_socket_callbacks_struct::userdata</definition>
+        <argsstring></argsstring>
+        <name>userdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>User-provided data. User is free to set anything he wants here </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/callbacks.h" line="385" column="8" bodyfile="libssh-mirror/include/libssh/callbacks.h" bodystart="385" bodyend="-1"/>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+        <referencedby refid="group__libssh__server_1gab60c37350653eb3b65a99ac089c55830" compoundref="server_8c" startline="528" endline="563">ssh_handle_key_exchange</referencedby>
+        <referencedby refid="packet_8c_1a2b98f7c23a7c0a673c3b34190bc4a9a9" compoundref="packet_8c" startline="1415" endline="1421">ssh_packet_register_socket_callback</referencedby>
+        <referencedby refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" compoundref="socket_8c" startline="914" endline="948">ssh_socket_connect_proxycommand</referencedby>
+        <referencedby refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structssh__socket__callbacks__struct_1a73d09c1b2ae438da96c4b3bbfb99c9ad" prot="public" static="no" mutable="no">
+        <type><ref refid="group__libssh__callbacks_1gaf06fe7d0b8cd8a5aab0a19ad7c6140b9" kindref="member">ssh_callback_data</ref></type>
+        <definition>ssh_callback_data ssh_socket_callbacks_struct::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called each time data appears on socket. The data not consumed will appear on the next data event. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/callbacks.h" line="390" column="21" bodyfile="libssh-mirror/include/libssh/callbacks.h" bodystart="390" bodyend="-1"/>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+        <referencedby refid="group__libssh__server_1gab60c37350653eb3b65a99ac089c55830" compoundref="server_8c" startline="528" endline="563">ssh_handle_key_exchange</referencedby>
+        <referencedby refid="packet_8c_1a2b98f7c23a7c0a673c3b34190bc4a9a9" compoundref="packet_8c" startline="1415" endline="1421">ssh_packet_register_socket_callback</referencedby>
+        <referencedby refid="group__libssh__server_1ga6b0057a0346a87ddd9b57bfbbc580d4d" compoundref="server_8c" startline="338" endline="449">ssh_server_connection_callback</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structssh__socket__callbacks__struct_1aad1bb53264cd71badae09bd3a0f561eb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__libssh__callbacks_1ga47b833f21a2b7145e421e63cad14b3d4" kindref="member">ssh_callback_int</ref></type>
+        <definition>ssh_callback_int ssh_socket_callbacks_struct::controlflow</definition>
+        <argsstring></argsstring>
+        <name>controlflow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called each time a controlflow state changes, i.e. the socket is available for reading or writing. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/callbacks.h" line="394" column="20" bodyfile="libssh-mirror/include/libssh/callbacks.h" bodystart="394" bodyend="-1"/>
+        <referencedby refid="packet_8c_1a2b98f7c23a7c0a673c3b34190bc4a9a9" compoundref="packet_8c" startline="1415" endline="1421">ssh_packet_register_socket_callback</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structssh__socket__callbacks__struct_1ae642ee58e72973ee0802820e46cb777b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__libssh__callbacks_1gaec19974b49541c787f7825e523849436" kindref="member">ssh_callback_int_int</ref></type>
+        <definition>ssh_callback_int_int ssh_socket_callbacks_struct::exception</definition>
+        <argsstring></argsstring>
+        <name>exception</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called each time an exception appears on socket. An exception can be a socket problem (timeout, ...) or an end-of-file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/callbacks.h" line="398" column="24" bodyfile="libssh-mirror/include/libssh/callbacks.h" bodystart="398" bodyend="-1"/>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+        <referencedby refid="group__libssh__server_1gab60c37350653eb3b65a99ac089c55830" compoundref="server_8c" startline="528" endline="563">ssh_handle_key_exchange</referencedby>
+        <referencedby refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structssh__socket__callbacks__struct_1a905f6e0260fd5891d4afa9ed229b8479" prot="public" static="no" mutable="no">
+        <type><ref refid="group__libssh__callbacks_1gaec19974b49541c787f7825e523849436" kindref="member">ssh_callback_int_int</ref></type>
+        <definition>ssh_callback_int_int ssh_socket_callbacks_struct::connected</definition>
+        <argsstring></argsstring>
+        <name>connected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called when the ssh_socket_connect was used on the socket on nonblocking state, and the connection successed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/callbacks.h" line="402" column="24" bodyfile="libssh-mirror/include/libssh/callbacks.h" bodystart="402" bodyend="-1"/>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+        <referencedby refid="packet_8c_1a2b98f7c23a7c0a673c3b34190bc4a9a9" compoundref="packet_8c" startline="1415" endline="1421">ssh_packet_register_socket_callback</referencedby>
+        <referencedby refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" compoundref="socket_8c" startline="914" endline="948">ssh_socket_connect_proxycommand</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>These are the callbacks exported by the socket structure They are called by the socket module when a socket event appears </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ssh_socket_callbacks_struct</label>
+        <link refid="structssh__socket__callbacks__struct"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>const</label>
+      </node>
+    </collaborationgraph>
+    <location file="libssh-mirror/include/libssh/callbacks.h" line="381" column="1" bodyfile="libssh-mirror/include/libssh/callbacks.h" bodystart="381" bodyend="403"/>
+    <listofallmembers>
+      <member refid="structssh__socket__callbacks__struct_1a905f6e0260fd5891d4afa9ed229b8479" prot="public" virt="non-virtual"><scope>ssh_socket_callbacks_struct</scope><name>connected</name></member>
+      <member refid="structssh__socket__callbacks__struct_1aad1bb53264cd71badae09bd3a0f561eb" prot="public" virt="non-virtual"><scope>ssh_socket_callbacks_struct</scope><name>controlflow</name></member>
+      <member refid="structssh__socket__callbacks__struct_1a73d09c1b2ae438da96c4b3bbfb99c9ad" prot="public" virt="non-virtual"><scope>ssh_socket_callbacks_struct</scope><name>data</name></member>
+      <member refid="structssh__socket__callbacks__struct_1ae642ee58e72973ee0802820e46cb777b" prot="public" virt="non-virtual"><scope>ssh_socket_callbacks_struct</scope><name>exception</name></member>
+      <member refid="structssh__socket__callbacks__struct_1a21680bc94721a1507e1382e06f731aef" prot="public" virt="non-virtual"><scope>ssh_socket_callbacks_struct</scope><name>userdata</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

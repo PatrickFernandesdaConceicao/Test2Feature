@@ -1,0 +1,718 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="gzip_8c" kind="file" language="C++">
+    <compoundname>gzip.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">zlib.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="buffer_8h" local="yes">libssh/buffer.h</includes>
+    <includes refid="crypto_8h" local="yes">libssh/crypto.h</includes>
+    <includes refid="session_8h" local="yes">libssh/session.h</includes>
+    <incdepgraph>
+      <node id="29">
+        <label>libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>stdbool.h</label>
+      </node>
+      <node id="17">
+        <label>stdarg.h</label>
+      </node>
+      <node id="11">
+        <label>sys/select.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="34">
+        <label>libssh/misc.h</label>
+        <link refid="misc_8h"/>
+      </node>
+      <node id="24">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/gzip.c</label>
+        <link refid="gzip_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>libssh/buffer.h</label>
+        <link refid="buffer_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>netdb.h</label>
+      </node>
+      <node id="25">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>libssh/pcap.h</label>
+        <link refid="pcap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>libssh/channels.h</label>
+        <link refid="channels_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>sys/types.h</label>
+      </node>
+      <node id="22">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="18">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="31">
+        <label>libssh/auth.h</label>
+        <link refid="auth_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>zlib.h</label>
+      </node>
+      <node id="28">
+        <label>libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="gzip_8c_1afcf795f5a96fd55561abe69f56224630" prot="public" static="no">
+        <name>BLOCKSIZE</name>
+        <initializer>4092</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/gzip.c" line="36" column="9" bodyfile="libssh-mirror/src/gzip.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gzip_8c_1ab8146f814f1d1f29ae552df9c8d35704" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>z_stream *</type>
+        <definition>static z_stream* initcompress</definition>
+        <argsstring>(ssh_session session, int level)</argsstring>
+        <name>initcompress</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/gzip.c" line="38" column="17" bodyfile="libssh-mirror/src/gzip.c" bodystart="38" bodyend="56"/>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" compoundref="gzip_8c" startline="58" endline="107">gzip_compress</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+        <definition>static ssh_buffer gzip_compress</definition>
+        <argsstring>(ssh_session session, ssh_buffer source, int level)</argsstring>
+        <name>gzip_compress</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/gzip.c" line="58" column="19" bodyfile="libssh-mirror/src/gzip.c" bodystart="58" bodyend="107"/>
+        <references refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" compoundref="gzip_8c" startline="36">BLOCKSIZE</references>
+        <references refid="structssh__crypto__struct_1ab28a40b61da2c674b89dc97123deee17" compoundref="crypto_8h" startline="146">ssh_crypto_struct::compress_out_ctx</references>
+        <references refid="gzip_8c_1ab8146f814f1d1f29ae552df9c8d35704" compoundref="gzip_8c" startline="38" endline="56">initcompress</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" compoundref="wrapper_8h" startline="61">SSH_DIRECTION_OUT</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="priv_8h_1aba55f0e295f00c07dab01a01ddfdafab" compoundref="gzip_8c" startline="109" endline="129">compress_buffer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="gzip_8c_1aba55f0e295f00c07dab01a01ddfdafab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int compress_buffer</definition>
+        <argsstring>(ssh_session session, ssh_buffer buf)</argsstring>
+        <name>compress_buffer</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/gzip.c" line="109" column="5" bodyfile="libssh-mirror/src/gzip.c" bodystart="109" bodyend="129"/>
+        <references refid="structssh__session__struct_1a33200f25a192fb69b2a02c7ed0efd893" compoundref="session_8h" startline="225">ssh_session_struct::compressionlevel</references>
+        <references refid="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" compoundref="gzip_8c" startline="58" endline="107">gzip_compress</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <referencedby refid="packet_8c_1a1128b705f0ac99d1f2f8f4242a717902" compoundref="packet_8c" startline="1593" endline="1738">packet_send2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="gzip_8c_1adfcbfa6fd29bea4cdf3c94ba4e8e50af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>z_stream *</type>
+        <definition>static z_stream* initdecompress</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>initdecompress</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/gzip.c" line="133" column="17" bodyfile="libssh-mirror/src/gzip.c" bodystart="133" bodyend="151"/>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" compoundref="gzip_8c" startline="153" endline="210">gzip_decompress</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+        <definition>static ssh_buffer gzip_decompress</definition>
+        <argsstring>(ssh_session session, ssh_buffer source, size_t maxlen)</argsstring>
+        <name>gzip_decompress</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/gzip.c" line="153" column="19" bodyfile="libssh-mirror/src/gzip.c" bodystart="153" bodyend="210"/>
+        <references refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" compoundref="gzip_8c" startline="36">BLOCKSIZE</references>
+        <references refid="structssh__crypto__struct_1a81fd4d5d3caf9d2ea0e5f17d27ccc6a3" compoundref="crypto_8h" startline="147">ssh_crypto_struct::compress_in_ctx</references>
+        <references refid="gzip_8c_1adfcbfa6fd29bea4cdf3c94ba4e8e50af" compoundref="gzip_8c" startline="133" endline="151">initdecompress</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="priv_8h_1a24b7c78b84d04a0850b20cd70770b20c" compoundref="gzip_8c" startline="212" endline="232">decompress_buffer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="gzip_8c_1a24b7c78b84d04a0850b20cd70770b20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int decompress_buffer</definition>
+        <argsstring>(ssh_session session, ssh_buffer buf, size_t maxlen)</argsstring>
+        <name>decompress_buffer</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/gzip.c" line="212" column="5" bodyfile="libssh-mirror/src/gzip.c" bodystart="212" bodyend="232"/>
+        <references refid="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" compoundref="gzip_8c" startline="153" endline="210">gzip_decompress</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>gzip.c<sp/>-<sp/>hooks<sp/>for<sp/>compression<sp/>of<sp/>packets</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2003<sp/><sp/><sp/><sp/><sp/><sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/><sp/><sp/><sp/><sp/><sp/>by<sp/>Andreas<sp/>Schneider<sp/>&lt;asn@cryptomilk.org&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_8h" kindref="compound">libssh/buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">libssh/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="session_8h" kindref="compound">libssh/session.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLOCKSIZE<sp/>4092</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="gzip_8c_1ab8146f814f1d1f29ae552df9c8d35704" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>z_stream<sp/>*<ref refid="gzip_8c_1ab8146f814f1d1f29ae552df9c8d35704" kindref="member">initcompress</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>z_stream<sp/>*stream<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>stream<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(z_stream));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stream<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>status<sp/>=<sp/>deflateInit(stream,<sp/>level);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>Z_OK)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(stream);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;status<sp/>%d<sp/>inititalising<sp/>zlib<sp/>deflate&quot;</highlight><highlight class="normal">,<sp/>status);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/><ref refid="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" kindref="member">gzip_compress</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>source,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>z_stream<sp/>*zout<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in_ptr<sp/>=<sp/><ref refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee" kindref="member">ssh_buffer_get</ref>(source);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>in_size<sp/>=<sp/><ref refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc" kindref="member">ssh_buffer_get_len</ref>(source);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>dest<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>out_buf[<ref refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" kindref="member">BLOCKSIZE</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>crypto<sp/>=<sp/><ref refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" kindref="member">ssh_packet_get_current_crypto</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" kindref="member">SSH_DIRECTION_OUT</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crypto<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>zout<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1ab28a40b61da2c674b89dc97123deee17" kindref="member">compress_out_ctx</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zout<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>zout<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1ab28a40b61da2c674b89dc97123deee17" kindref="member">compress_out_ctx</ref><sp/>=<sp/><ref refid="gzip_8c_1ab8146f814f1d1f29ae552df9c8d35704" kindref="member">initcompress</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>level);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zout<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>dest<sp/>=<sp/><ref refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" kindref="member">ssh_buffer_new</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dest<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>zout-&gt;next_out<sp/>=<sp/>out_buf;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>zout-&gt;next_in<sp/>=<sp/>in_ptr;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>zout-&gt;avail_in<sp/>=<sp/>in_size;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>zout-&gt;avail_out<sp/>=<sp/><ref refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" kindref="member">BLOCKSIZE</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>deflate(zout,<sp/>Z_PARTIAL_FLUSH);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>Z_OK)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;status<sp/>%d<sp/>deflating<sp/>zlib<sp/>packet&quot;</highlight><highlight class="normal">,<sp/>status);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>len<sp/>=<sp/><ref refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" kindref="member">BLOCKSIZE</ref><sp/>-<sp/>zout-&gt;avail_out;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(dest,<sp/>out_buf,<sp/>len)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>zout-&gt;next_out<sp/>=<sp/>out_buf;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(zout-&gt;avail_out<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dest;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="priv_8h_1aba55f0e295f00c07dab01a01ddfdafab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gzip_8c_1aba55f0e295f00c07dab01a01ddfdafab" kindref="member">compress_buffer</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>buf)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>dest<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>dest<sp/>=<sp/><ref refid="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" kindref="member">gzip_compress</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>buf,<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e" kindref="member">opts</ref>.<ref refid="structssh__session__struct_1a33200f25a192fb69b2a02c7ed0efd893" kindref="member">compressionlevel</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dest<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740" kindref="member">ssh_buffer_reinit</ref>(buf)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(buf,<sp/><ref refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee" kindref="member">ssh_buffer_get</ref>(dest),<sp/><ref refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc" kindref="member">ssh_buffer_get_len</ref>(dest))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>decompression<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="gzip_8c_1adfcbfa6fd29bea4cdf3c94ba4e8e50af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>z_stream<sp/>*<ref refid="gzip_8c_1adfcbfa6fd29bea4cdf3c94ba4e8e50af" kindref="member">initdecompress</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>z_stream<sp/>*stream<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>stream<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(z_stream));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stream<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>status<sp/>=<sp/>inflateInit(stream);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>Z_OK)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(stream);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Status<sp/>=<sp/>%d<sp/>initiating<sp/>inflate<sp/>context!&quot;</highlight><highlight class="normal">,<sp/>status);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/><ref refid="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" kindref="member">gzip_decompress</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>source,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxlen)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>z_stream<sp/>*zin<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in_ptr<sp/>=<sp/><ref refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee" kindref="member">ssh_buffer_get</ref>(source);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>in_size<sp/>=<sp/><ref refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc" kindref="member">ssh_buffer_get_len</ref>(source);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>out_buf[<ref refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" kindref="member">BLOCKSIZE</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>dest<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>crypto<sp/>=<sp/><ref refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" kindref="member">ssh_packet_get_current_crypto</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" kindref="member">SSH_DIRECTION_IN</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crypto<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>zin<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a81fd4d5d3caf9d2ea0e5f17d27ccc6a3" kindref="member">compress_in_ctx</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zin<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>zin<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a81fd4d5d3caf9d2ea0e5f17d27ccc6a3" kindref="member">compress_in_ctx</ref><sp/>=<sp/><ref refid="gzip_8c_1adfcbfa6fd29bea4cdf3c94ba4e8e50af" kindref="member">initdecompress</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(zin<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>dest<sp/>=<sp/><ref refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" kindref="member">ssh_buffer_new</ref>();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dest<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>zin-&gt;next_out<sp/>=<sp/>out_buf;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>zin-&gt;next_in<sp/>=<sp/>in_ptr;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>zin-&gt;avail_in<sp/>=<sp/>in_size;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>zin-&gt;avail_out<sp/>=<sp/><ref refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" kindref="member">BLOCKSIZE</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>status<sp/>=<sp/>inflate(zin,<sp/>Z_PARTIAL_FLUSH);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(status<sp/>!=<sp/>Z_OK<sp/>&amp;&amp;<sp/>status<sp/>!=<sp/>Z_BUF_ERROR)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;status<sp/>%d<sp/>inflating<sp/>zlib<sp/>packet&quot;</highlight><highlight class="normal">,<sp/>status);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>len<sp/>=<sp/><ref refid="gzip_8c_1afcf795f5a96fd55561abe69f56224630" kindref="member">BLOCKSIZE</ref><sp/>-<sp/>zin-&gt;avail_out;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(dest,out_buf,len)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc" kindref="member">ssh_buffer_get_len</ref>(dest)<sp/>&gt;<sp/>maxlen){</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Size<sp/>of<sp/>packet<sp/>exceeded,<sp/>avoid<sp/>a<sp/>denial<sp/>of<sp/>service<sp/>attack<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>zin-&gt;next_out<sp/>=<sp/>out_buf;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(zin-&gt;avail_out<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dest;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="priv_8h_1a24b7c78b84d04a0850b20cd70770b20c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gzip_8c_1a24b7c78b84d04a0850b20cd70770b20c" kindref="member">decompress_buffer</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxlen){</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>dest<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>dest<sp/>=<sp/><ref refid="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" kindref="member">gzip_decompress</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,buf,<sp/>maxlen);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dest<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740" kindref="member">ssh_buffer_reinit</ref>(buf)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(buf,<sp/><ref refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee" kindref="member">ssh_buffer_get</ref>(dest),<sp/><ref refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc" kindref="member">ssh_buffer_get_len</ref>(dest))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(dest);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/gzip.c"/>
+  </compounddef>
+</doxygen>

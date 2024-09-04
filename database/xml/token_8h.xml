@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="token_8h" kind="file" language="C++">
+    <compoundname>token.h</compoundname>
+    <includedby refid="bind_8c" local="yes">libssh-mirror/src/bind.c</includedby>
+    <includedby refid="kex_8c" local="yes">libssh-mirror/src/kex.c</includedby>
+    <includedby refid="known__hosts_8c" local="yes">libssh-mirror/src/known_hosts.c</includedby>
+    <includedby refid="src_2knownhosts_8c" local="yes">libssh-mirror/src/knownhosts.c</includedby>
+    <includedby refid="server_8c" local="yes">libssh-mirror/src/server.c</includedby>
+    <includedby refid="token_8c" local="yes">libssh-mirror/src/token.c</includedby>
+    <includedby refid="torture__server__config_8c" local="yes">libssh-mirror/tests/server/torture_server_config.c</includedby>
+    <includedby refid="torture__tokens_8c" local="yes">libssh-mirror/tests/unittests/torture_tokens.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/token.h</label>
+        <link refid="token_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libssh-mirror/src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libssh-mirror/tests/server/torture_server_config.c</label>
+        <link refid="torture__server__config_8c"/>
+      </node>
+      <node id="7">
+        <label>libssh-mirror/src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="8">
+        <label>libssh-mirror/src/token.c</label>
+        <link refid="token_8c"/>
+      </node>
+      <node id="6">
+        <label>libssh-mirror/src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="5">
+        <label>libssh-mirror/tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="10">
+        <label>libssh-mirror/tests/unittests/torture_tokens.c</label>
+        <link refid="torture__tokens_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structssh__tokens__st" prot="public">ssh_tokens_st</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="token_8h_1a98b7455ad7c245538d341174928de888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__tokens__st" kindref="compound">ssh_tokens_st</ref> *</type>
+        <definition>struct ssh_tokens_st* ssh_tokenize</definition>
+        <argsstring>(const char *chain, char separator)</argsstring>
+        <name>ssh_tokenize</name>
+        <param>
+          <type>const char *</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>separator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/token.h" line="34" column="20" bodyfile="libssh-mirror/src/token.c" bodystart="73" bodyend="140" declfile="libssh-mirror/include/libssh/token.h" declline="34" declcolumn="20"/>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="token_8c_1aaea36e878feebb28b8497eb8bf2bdd1f" compoundref="token_8c" startline="42" endline="58">ssh_tokens_free</references>
+        <references refid="structssh__tokens__st_1acba9eb7dd57b818df8ac7d36250d6329" compoundref="token_8h" startline="31">ssh_tokens_st::tokens</references>
+        <referencedby refid="token_8h_1a650915f2f817e8ed7e5a151dee467d5e" compoundref="token_8c" startline="206" endline="263">ssh_find_all_matching</referencedby>
+        <referencedby refid="kex_8h_1a745878fd9dca9cce3583c9172e91731e" compoundref="token_8c" startline="155" endline="190">ssh_find_matching</referencedby>
+        <referencedby refid="group__libssh__session_1ga1be0cba6d1c27a46361d91b84263d382" compoundref="known__hosts_8c" startline="73" endline="130">ssh_get_knownhost_line</referencedby>
+        <referencedby refid="token_8h_1afaab89e7c5cf75e6874da23ce9434255" compoundref="token_8c" startline="276" endline="357">ssh_remove_duplicates</referencedby>
+        <referencedby refid="torture__tokens_8c_1a02a026ba708b53226e5a049f87c06595" compoundref="torture__tokens_8c" startline="100" endline="128">tokenize_compare_expected</referencedby>
+        <referencedby refid="torture__server__config_8c_1a85c6ed479d2dc18e7ec2561ea72f91b3" compoundref="torture__server__config_8c" startline="476" endline="529">torture_server_config_ciphers</referencedby>
+        <referencedby refid="torture__server__config_8c_1a82a42c57f040a99c903dce459bded7ed" compoundref="torture__server__config_8c" startline="586" endline="639">torture_server_config_kex</referencedby>
+        <referencedby refid="torture__server__config_8c_1ab3aca8f56a7c71b59b20bb555a682349" compoundref="torture__server__config_8c" startline="531" endline="584">torture_server_config_macs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="token_8h_1aaea36e878feebb28b8497eb8bf2bdd1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_tokens_free</definition>
+        <argsstring>(struct ssh_tokens_st *tokens)</argsstring>
+        <name>ssh_tokens_free</name>
+        <param>
+          <type>struct <ref refid="structssh__tokens__st" kindref="compound">ssh_tokens_st</ref> *</type>
+          <declname>tokens</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/token.h" line="36" column="6" bodyfile="libssh-mirror/src/token.c" bodystart="42" bodyend="58" declfile="libssh-mirror/include/libssh/token.h" declline="36" declcolumn="6"/>
+        <references refid="structssh__tokens__st_1a2aa98f2f6f7fbe4c56028fc55bd40b59" compoundref="token_8h" startline="30">ssh_tokens_st::buffer</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__tokens__st_1acba9eb7dd57b818df8ac7d36250d6329" compoundref="token_8h" startline="31">ssh_tokens_st::tokens</references>
+        <referencedby refid="token_8h_1a650915f2f817e8ed7e5a151dee467d5e" compoundref="token_8c" startline="206" endline="263">ssh_find_all_matching</referencedby>
+        <referencedby refid="kex_8h_1a745878fd9dca9cce3583c9172e91731e" compoundref="token_8c" startline="155" endline="190">ssh_find_matching</referencedby>
+        <referencedby refid="group__libssh__session_1ga1be0cba6d1c27a46361d91b84263d382" compoundref="known__hosts_8c" startline="73" endline="130">ssh_get_knownhost_line</referencedby>
+        <referencedby refid="group__libssh__session_1ga6f37e3d7bb6b938b44d6a34a76fdfa0b" compoundref="known__hosts_8c" startline="288" endline="424">ssh_is_server_known</referencedby>
+        <referencedby refid="token_8h_1afaab89e7c5cf75e6874da23ce9434255" compoundref="token_8c" startline="276" endline="357">ssh_remove_duplicates</referencedby>
+        <referencedby refid="token_8h_1a98b7455ad7c245538d341174928de888" compoundref="token_8c" startline="73" endline="140">ssh_tokenize</referencedby>
+        <referencedby refid="torture__tokens_8c_1a02a026ba708b53226e5a049f87c06595" compoundref="torture__tokens_8c" startline="100" endline="128">tokenize_compare_expected</referencedby>
+        <referencedby refid="torture__server__config_8c_1a85c6ed479d2dc18e7ec2561ea72f91b3" compoundref="torture__server__config_8c" startline="476" endline="529">torture_server_config_ciphers</referencedby>
+        <referencedby refid="torture__server__config_8c_1a82a42c57f040a99c903dce459bded7ed" compoundref="torture__server__config_8c" startline="586" endline="639">torture_server_config_kex</referencedby>
+        <referencedby refid="torture__server__config_8c_1ab3aca8f56a7c71b59b20bb555a682349" compoundref="torture__server__config_8c" startline="531" endline="584">torture_server_config_macs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="token_8h_1a91834a3677a6e260e3ab61feb2996bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_find_matching</definition>
+        <argsstring>(const char *available_d, const char *preferred_d)</argsstring>
+        <name>ssh_find_matching</name>
+        <param>
+          <type>const char *</type>
+          <declname>available_d</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>preferred_d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/token.h" line="38" column="6" bodyfile="libssh-mirror/src/token.c" bodystart="155" bodyend="190" declfile="libssh-mirror/include/libssh/token.h" declline="38" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="token_8h_1a650915f2f817e8ed7e5a151dee467d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_find_all_matching</definition>
+        <argsstring>(const char *available_d, const char *preferred_d)</argsstring>
+        <name>ssh_find_all_matching</name>
+        <param>
+          <type>const char *</type>
+          <declname>available_d</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>preferred_d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/token.h" line="41" column="6" bodyfile="libssh-mirror/src/token.c" bodystart="206" bodyend="263" declfile="libssh-mirror/include/libssh/token.h" declline="41" declcolumn="6"/>
+        <references refid="priv_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" compoundref="priv_8h" startline="310">MAX</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="token_8c_1a98b7455ad7c245538d341174928de888" compoundref="token_8c" startline="73" endline="140">ssh_tokenize</references>
+        <references refid="token_8c_1aaea36e878feebb28b8497eb8bf2bdd1f" compoundref="token_8c" startline="42" endline="58">ssh_tokens_free</references>
+        <references refid="structssh__tokens__st_1acba9eb7dd57b818df8ac7d36250d6329" compoundref="token_8h" startline="31">ssh_tokens_st::tokens</references>
+        <referencedby refid="group__libssh__server_1gac8dda51f6f008e42e60d824e2ef2e453" compoundref="server_8c" startline="84" endline="195">server_set_kex</referencedby>
+        <referencedby refid="group__libssh__server_1ga142f1e2f79f6623f14dcfa40dccaa061" compoundref="bind_8c" startline="423" endline="551">ssh_bind_accept_fd</referencedby>
+        <referencedby refid="kex_8h_1a5e4f1c90323e182066cfe75a5153c111" compoundref="kex_8c" startline="570" endline="657">ssh_client_select_hostkeys</referencedby>
+        <referencedby refid="kex_8h_1a5f9fa3e2a3fd13d8dfd753b647e7d294" compoundref="kex_8c" startline="937" endline="944">ssh_keep_fips_algos</referencedby>
+        <referencedby refid="kex_8h_1acd8064e0435ae07a1e27d4e71201c44e" compoundref="kex_8c" startline="916" endline="923">ssh_keep_known_algos</referencedby>
+        <referencedby refid="torture__tokens_8c_1a2cbe0e35f4a70c49b45f95705c165253" compoundref="torture__tokens_8c" startline="67" endline="98">torture_find_all_matching</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="token_8h_1afaab89e7c5cf75e6874da23ce9434255" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_remove_duplicates</definition>
+        <argsstring>(const char *list)</argsstring>
+        <name>ssh_remove_duplicates</name>
+        <param>
+          <type>const char *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/token.h" line="44" column="6" bodyfile="libssh-mirror/src/token.c" bodystart="276" bodyend="357" declfile="libssh-mirror/include/libssh/token.h" declline="44" declcolumn="6"/>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="token_8c_1a98b7455ad7c245538d341174928de888" compoundref="token_8c" startline="73" endline="140">ssh_tokenize</references>
+        <references refid="token_8c_1aaea36e878feebb28b8497eb8bf2bdd1f" compoundref="token_8c" startline="42" endline="58">ssh_tokens_free</references>
+        <references refid="structssh__tokens__st_1acba9eb7dd57b818df8ac7d36250d6329" compoundref="token_8h" startline="31">ssh_tokens_st::tokens</references>
+        <referencedby refid="token_8h_1acadef7da29382ae27da46d6ad38a7e89" compoundref="token_8c" startline="374" endline="412">ssh_append_without_duplicates</referencedby>
+        <referencedby refid="group__libssh__session_1gad36769864e0a5247edffd6e428e34e8a" compoundref="src_2knownhosts_8c" startline="504" endline="593">ssh_known_hosts_get_algorithms_names</referencedby>
+        <referencedby refid="torture__tokens_8c_1a96be13e3786e4536f2a421dc2877a7b2" compoundref="torture__tokens_8c" startline="149" endline="184">torture_remove_duplicate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="token_8h_1acadef7da29382ae27da46d6ad38a7e89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_append_without_duplicates</definition>
+        <argsstring>(const char *list, const char *appended_list)</argsstring>
+        <name>ssh_append_without_duplicates</name>
+        <param>
+          <type>const char *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>appended_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/token.h" line="46" column="6" bodyfile="libssh-mirror/src/token.c" bodystart="374" bodyend="412" declfile="libssh-mirror/include/libssh/token.h" declline="46" declcolumn="6"/>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="token_8c_1afaab89e7c5cf75e6874da23ce9434255" compoundref="token_8c" startline="276" endline="357">ssh_remove_duplicates</references>
+        <referencedby refid="kex_8h_1a5e4f1c90323e182066cfe75a5153c111" compoundref="kex_8c" startline="570" endline="657">ssh_client_select_hostkeys</referencedby>
+        <referencedby refid="torture__tokens_8c_1a82f32f07b85f08c157afa69b8160cfce" compoundref="torture__tokens_8c" startline="186" endline="266">torture_append_without_duplicate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>token.h<sp/>-<sp/>Tokens<sp/>list<sp/>handling</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2019<sp/>by<sp/>Red<sp/>Hat,<sp/>Inc.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Anderson<sp/>Toshiyuki<sp/>Sasaki<sp/>&lt;ansasaki@redhat.com&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOKEN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOKEN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structssh__tokens__st" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__tokens__st" kindref="compound">ssh_tokens_st</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="structssh__tokens__st_1a2aa98f2f6f7fbe4c56028fc55bd40b59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__tokens__st_1a2aa98f2f6f7fbe4c56028fc55bd40b59" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="31" refid="structssh__tokens__st_1acba9eb7dd57b818df8ac7d36250d6329" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structssh__tokens__st_1acba9eb7dd57b818df8ac7d36250d6329" kindref="member">tokens</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__tokens__st" kindref="compound">ssh_tokens_st</ref><sp/>*<ref refid="token_8h_1a98b7455ad7c245538d341174928de888" kindref="member">ssh_tokenize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*chain,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>separator);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="token_8h_1aaea36e878feebb28b8497eb8bf2bdd1f" kindref="member">ssh_tokens_free</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__tokens__st" kindref="compound">ssh_tokens_st</ref><sp/>*<ref refid="structssh__tokens__st_1acba9eb7dd57b818df8ac7d36250d6329" kindref="member">tokens</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="token_8h_1a91834a3677a6e260e3ab61feb2996bfd" kindref="member">ssh_find_matching</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*available_d,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*preferred_d);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="token_8h_1a650915f2f817e8ed7e5a151dee467d5e" kindref="member">ssh_find_all_matching</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*available_d,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*preferred_d);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="token_8h_1afaab89e7c5cf75e6874da23ce9434255" kindref="member">ssh_remove_duplicates</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*list);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="token_8h_1acadef7da29382ae27da46d6ad38a7e89" kindref="member">ssh_append_without_duplicates</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*list,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*appended_list);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOKEN_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/token.h"/>
+  </compounddef>
+</doxygen>

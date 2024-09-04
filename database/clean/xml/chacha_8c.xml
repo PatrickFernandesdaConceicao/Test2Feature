@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="chacha_8c" kind="file" language="C++">
+    <compoundname>chacha.c</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes refid="chacha_8h" local="yes">libssh/chacha.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>libssh/chacha.h</label>
+        <link refid="chacha_8h"/>
+      </node>
+      <node id="4">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1">
+        <label>src/external/chacha.c</label>
+        <link refid="chacha_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="chacha_8c_1a61d1884881116e5e7d8fa716dfdaeba0" prot="public" static="no">
+        <name>U8C</name>
+        <param><defname>v</defname></param>
+        <initializer>(v##U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="15" column="9" bodyfile="src/external/chacha.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1aa3579709cbb028e7188b835528c55491" prot="public" static="no">
+        <name>U32C</name>
+        <param><defname>v</defname></param>
+        <initializer>(v##U)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="16" column="9" bodyfile="src/external/chacha.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1aab501c9399de1068d6ebc7539bad05aa" prot="public" static="no">
+        <name>U8V</name>
+        <param><defname>v</defname></param>
+        <initializer>((uint8_t)(v) &amp; <ref refid="chacha_8c_1a61d1884881116e5e7d8fa716dfdaeba0" kindref="member">U8C</ref>(0xFF))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="18" column="9" bodyfile="src/external/chacha.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1a3dc98e26a13496cfbee7feb403a50a9d" prot="public" static="no">
+        <name>U32V</name>
+        <param><defname>v</defname></param>
+        <initializer>((uint32_t)(v) &amp; <ref refid="chacha_8c_1aa3579709cbb028e7188b835528c55491" kindref="member">U32C</ref>(0xFFFFFFFF))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="19" column="9" bodyfile="src/external/chacha.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1a453d6c05303385256d9893904b125483" prot="public" static="no">
+        <name>ROTL32</name>
+        <param><defname>v</defname></param>
+        <param><defname>n</defname></param>
+        <initializer>        (<ref refid="chacha_8c_1a3dc98e26a13496cfbee7feb403a50a9d" kindref="member">U32V</ref>((v) &lt;&lt; (n)) | ((v) &gt;&gt; (32 - (n))))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="21" column="9" bodyfile="src/external/chacha.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1ab6814964f967bf82f117707f50749af1" prot="public" static="no">
+        <name>U8TO32_LITTLE</name>
+        <param><defname>p</defname></param>
+        <initializer>        (((uint32_t)((p)[0])      ) | \
+         ((uint32_t)((p)[1]) &lt;&lt;  8) | \
+         ((uint32_t)((p)[2]) &lt;&lt; 16) | \
+         ((uint32_t)((p)[3]) &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="24" column="9" bodyfile="src/external/chacha.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" prot="public" static="no">
+        <name>U32TO8_LITTLE</name>
+        <param><defname>p</defname></param>
+        <param><defname>v</defname></param>
+        <initializer>        do { \
+            (p)[0] = <ref refid="chacha_8c_1aab501c9399de1068d6ebc7539bad05aa" kindref="member">U8V</ref>((v)      ); \
+            (p)[1] = <ref refid="chacha_8c_1aab501c9399de1068d6ebc7539bad05aa" kindref="member">U8V</ref>((v) &gt;&gt;  8); \
+            (p)[2] = <ref refid="chacha_8c_1aab501c9399de1068d6ebc7539bad05aa" kindref="member">U8V</ref>((v) &gt;&gt; 16); \
+            (p)[3] = <ref refid="chacha_8c_1aab501c9399de1068d6ebc7539bad05aa" kindref="member">U8V</ref>((v) &gt;&gt; 24); \
+        } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="30" column="9" bodyfile="src/external/chacha.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1a0c6257aa90a00e0744a9cb67d1ec6ce3" prot="public" static="no">
+        <name>ROTATE</name>
+        <param><defname>v</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>(<ref refid="chacha_8c_1a453d6c05303385256d9893904b125483" kindref="member">ROTL32</ref>(v,c))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="38" column="9" bodyfile="src/external/chacha.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" prot="public" static="no">
+        <name>XOR</name>
+        <param><defname>v</defname></param>
+        <param><defname>w</defname></param>
+        <initializer>((v) ^ (w))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="39" column="9" bodyfile="src/external/chacha.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" prot="public" static="no">
+        <name>PLUS</name>
+        <param><defname>v</defname></param>
+        <param><defname>w</defname></param>
+        <initializer>(<ref refid="chacha_8c_1a3dc98e26a13496cfbee7feb403a50a9d" kindref="member">U32V</ref>((v) + (w)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="40" column="9" bodyfile="src/external/chacha.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1ae5e745942efa0b278e4b7cad31a5cde3" prot="public" static="no">
+        <name>PLUSONE</name>
+        <param><defname>v</defname></param>
+        <initializer>(<ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>((v),1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="41" column="9" bodyfile="src/external/chacha.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" prot="public" static="no">
+        <name>QUARTERROUND</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>d</defname></param>
+        <initializer>        a = <ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(a,b); d = <ref refid="chacha_8c_1a0c6257aa90a00e0744a9cb67d1ec6ce3" kindref="member">ROTATE</ref>(<ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(d,a),16); \
+        c = <ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(c,d); b = <ref refid="chacha_8c_1a0c6257aa90a00e0744a9cb67d1ec6ce3" kindref="member">ROTATE</ref>(<ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(b,c),12); \
+        a = <ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(a,b); d = <ref refid="chacha_8c_1a0c6257aa90a00e0744a9cb67d1ec6ce3" kindref="member">ROTATE</ref>(<ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(d,a), 8); \
+        c = <ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(c,d); b = <ref refid="chacha_8c_1a0c6257aa90a00e0744a9cb67d1ec6ce3" kindref="member">ROTATE</ref>(<ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(b,c), 7);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="43" column="9" bodyfile="src/external/chacha.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="chacha_8c_1aa8a0fc58eaed718f5e83e15bce1e7a33" prot="public" static="no">
+        <type>struct <ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref></type>
+        <definition>typedef struct chacha_ctx chacha_ctx</definition>
+        <argsstring></argsstring>
+        <name>chacha_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="1" column="0" bodyfile="src/external/chacha.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="chacha_8c_1ade928329eca26a3dbf27fb5784bb9745" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char sigma[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>sigma</name>
+        <initializer>= &quot;expand 32-byte <ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref>&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="49" column="19" bodyfile="src/external/chacha.c" bodystart="49" bodyend="-1"/>
+        <referencedby refid="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" compoundref="chacha_8c" startline="53" endline="75">chacha_keysetup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="chacha_8c_1a23b55cec94fb1c8a44322b9a6dca18d5" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char tau[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>tau</name>
+        <initializer>= &quot;expand 16-byte <ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref>&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="50" column="19" bodyfile="src/external/chacha.c" bodystart="50" bodyend="-1"/>
+        <referencedby refid="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" compoundref="chacha_8c" startline="53" endline="75">chacha_keysetup</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="chacha_8c_1ab4b3cf0a93a147b87e4c9adc7d0c6a3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chacha_keysetup</definition>
+        <argsstring>(chacha_ctx *x, const uint8_t *k, uint32_t kbits)</argsstring>
+        <name>chacha_keysetup</name>
+        <param>
+          <type><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>kbits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="53" column="1" bodyfile="src/external/chacha.c" bodystart="53" bodyend="75"/>
+        <references refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" compoundref="chacha_8h" startline="13">chacha_ctx::input</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="105">k</references>
+        <references refid="chacha_8c_1ade928329eca26a3dbf27fb5784bb9745" compoundref="chacha_8c" startline="49">sigma</references>
+        <references refid="chacha_8c_1a23b55cec94fb1c8a44322b9a6dca18d5" compoundref="chacha_8c" startline="50">tau</references>
+        <references refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" compoundref="chacha_8c" startline="24">U8TO32_LITTLE</references>
+        <referencedby refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" compoundref="chachapoly_8c" startline="41" endline="63">chacha20_set_encrypt_key</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="chacha_8c_1aeba6e918b669fac7c02b5c3097a87d3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chacha_ivsetup</definition>
+        <argsstring>(chacha_ctx *x, const uint8_t *iv, const uint8_t *counter)</argsstring>
+        <name>chacha_ivsetup</name>
+        <param>
+          <type><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>counter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="78" column="1" bodyfile="src/external/chacha.c" bodystart="78" bodyend="84"/>
+        <references refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" compoundref="chacha_8h" startline="13">chacha_ctx::input</references>
+        <references refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" compoundref="torture__packet_8c" startline="20">iv</references>
+        <references refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" compoundref="chacha_8c" startline="24">U8TO32_LITTLE</references>
+        <referencedby refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" compoundref="chachapoly_8c" startline="133" endline="180">chacha20_poly1305_aead_decrypt</referencedby>
+        <referencedby refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" compoundref="chachapoly_8c" startline="111" endline="131">chacha20_poly1305_aead_decrypt_length</referencedby>
+        <referencedby refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" compoundref="chachapoly_8c" startline="71" endline="109">chacha20_poly1305_aead_encrypt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="chacha_8c_1a79efd30107bc577d248037758b5cce85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chacha_encrypt_bytes</definition>
+        <argsstring>(chacha_ctx *x, const uint8_t *m, uint8_t *c, uint32_t bytes)</argsstring>
+        <name>chacha_encrypt_bytes</name>
+        <param>
+          <type><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/chacha.c" line="87" column="1" bodyfile="src/external/chacha.c" bodystart="87" bodyend="216"/>
+        <references refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" compoundref="chacha_8h" startline="13">chacha_ctx::input</references>
+        <references refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" compoundref="sc25519_8c" startline="14">m</references>
+        <references refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" compoundref="chacha_8c" startline="40">PLUS</references>
+        <references refid="chacha_8c_1ae5e745942efa0b278e4b7cad31a5cde3" compoundref="chacha_8c" startline="41">PLUSONE</references>
+        <references refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" compoundref="chacha_8c" startline="43">QUARTERROUND</references>
+        <references refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" compoundref="chacha_8c" startline="30">U32TO8_LITTLE</references>
+        <references refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" compoundref="chacha_8c" startline="24">U8TO32_LITTLE</references>
+        <references refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" compoundref="chacha_8c" startline="39">XOR</references>
+        <referencedby refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" compoundref="chachapoly_8c" startline="133" endline="180">chacha20_poly1305_aead_decrypt</referencedby>
+        <referencedby refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" compoundref="chachapoly_8c" startline="111" endline="131">chacha20_poly1305_aead_decrypt_length</referencedby>
+        <referencedby refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" compoundref="chachapoly_8c" startline="71" endline="109">chacha20_poly1305_aead_encrypt</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="chacha_8c_1aa8a0fc58eaed718f5e83e15bce1e7a33" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">chacha-merged.c<sp/>version<sp/>20080118</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">D.<sp/>J.<sp/>Bernstein</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Public<sp/>domain.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="chacha_8h" kindref="compound">libssh/chacha.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="chacha_8c_1a61d1884881116e5e7d8fa716dfdaeba0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U8C(v)<sp/>(v##U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="chacha_8c_1aa3579709cbb028e7188b835528c55491" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U32C(v)<sp/>(v##U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="chacha_8c_1aab501c9399de1068d6ebc7539bad05aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U8V(v)<sp/>((uint8_t)(v)<sp/>&amp;<sp/>U8C(0xFF))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="chacha_8c_1a3dc98e26a13496cfbee7feb403a50a9d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U32V(v)<sp/>((uint32_t)(v)<sp/>&amp;<sp/>U32C(0xFFFFFFFF))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="chacha_8c_1a453d6c05303385256d9893904b125483" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROTL32(v,<sp/>n)<sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(U32V((v)<sp/>&lt;&lt;<sp/>(n))<sp/>|<sp/>((v)<sp/>&gt;&gt;<sp/>(32<sp/>-<sp/>(n))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U8TO32_LITTLE(p)<sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((uint32_t)((p)[0])<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)((p)[1])<sp/>&lt;&lt;<sp/><sp/>8)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)((p)[2])<sp/>&lt;&lt;<sp/>16)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((uint32_t)((p)[3])<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U32TO8_LITTLE(p,<sp/>v)<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[0]<sp/>=<sp/>U8V((v)<sp/><sp/><sp/><sp/><sp/><sp/>);<sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[1]<sp/>=<sp/>U8V((v)<sp/>&gt;&gt;<sp/><sp/>8);<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[2]<sp/>=<sp/>U8V((v)<sp/>&gt;&gt;<sp/>16);<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[3]<sp/>=<sp/>U8V((v)<sp/>&gt;&gt;<sp/>24);<sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="chacha_8c_1a0c6257aa90a00e0744a9cb67d1ec6ce3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROTATE(v,c)<sp/>(ROTL32(v,c))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XOR(v,w)<sp/>((v)<sp/>^<sp/>(w))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLUS(v,w)<sp/>(U32V((v)<sp/>+<sp/>(w)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="chacha_8c_1ae5e745942efa0b278e4b7cad31a5cde3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLUSONE(v)<sp/>(PLUS((v),1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>QUARTERROUND(a,b,c,d)<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>PLUS(a,b);<sp/>d<sp/>=<sp/>ROTATE(XOR(d,a),16);<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>PLUS(c,d);<sp/>b<sp/>=<sp/>ROTATE(XOR(b,c),12);<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>PLUS(a,b);<sp/>d<sp/>=<sp/>ROTATE(XOR(d,a),<sp/>8);<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>PLUS(c,d);<sp/>b<sp/>=<sp/>ROTATE(XOR(b,c),<sp/>7);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="chacha_8c_1ade928329eca26a3dbf27fb5784bb9745" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="chacha_8c_1ade928329eca26a3dbf27fb5784bb9745" kindref="member">sigma</ref>[16]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;expand<sp/>32-byte<sp/>k&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50" refid="chacha_8c_1a23b55cec94fb1c8a44322b9a6dca18d5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="chacha_8c_1a23b55cec94fb1c8a44322b9a6dca18d5" kindref="member">tau</ref>[16]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;expand<sp/>16-byte<sp/>k&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" refkind="member"><highlight class="normal"><ref refid="chacha_8c_1ab4b3cf0a93a147b87e4c9adc7d0c6a3e" kindref="member">chacha_keysetup</ref>(<ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/>*x,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref>,uint32_t<sp/>kbits)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*constants;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[4]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[5]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>4);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[6]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>8);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[7]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>12);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kbits<sp/>==<sp/>256)<sp/>{<sp/></highlight><highlight class="comment">/*<sp/>recommended<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+=<sp/>16;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constants<sp/>=<sp/><ref refid="chacha_8c_1ade928329eca26a3dbf27fb5784bb9745" kindref="member">sigma</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">/*<sp/>kbits<sp/>==<sp/>128<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constants<sp/>=<sp/><ref refid="chacha_8c_1a23b55cec94fb1c8a44322b9a6dca18d5" kindref="member">tau</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[8]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>0);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[9]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>4);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[10]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>8);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[11]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref><sp/>+<sp/>12);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[0]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(constants<sp/>+<sp/>0);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[1]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(constants<sp/>+<sp/>4);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[2]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(constants<sp/>+<sp/>8);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[3]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(constants<sp/>+<sp/>12);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" refkind="member"><highlight class="normal"><ref refid="chacha_8c_1aeba6e918b669fac7c02b5c3097a87d3c" kindref="member">chacha_ivsetup</ref>(<ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/>*x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*counter)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[12]<sp/>=<sp/>counter<sp/>==<sp/>NULL<sp/>?<sp/>0<sp/>:<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(counter<sp/>+<sp/>0);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[13]<sp/>=<sp/>counter<sp/>==<sp/>NULL<sp/>?<sp/>0<sp/>:<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(counter<sp/>+<sp/>4);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[14]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref><sp/>+<sp/>0);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[15]<sp/>=<sp/><ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref><sp/>+<sp/>4);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" refkind="member"><highlight class="normal"><ref refid="chacha_8c_1a79efd30107bc577d248037758b5cce85" kindref="member">chacha_encrypt_bytes</ref>(<ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/>*x,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,uint8_t<sp/>*c,uint32_t<sp/>bytes)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>x0,<sp/>x1,<sp/>x2,<sp/>x3,<sp/>x4,<sp/>x5,<sp/>x6,<sp/>x7,<sp/>x8,<sp/>x9,<sp/>x10,<sp/>x11,<sp/>x12,<sp/>x13,<sp/>x14,<sp/>x15;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>j0,<sp/>j1,<sp/>j2,<sp/>j3,<sp/>j4,<sp/>j5,<sp/>j6,<sp/>j7,<sp/>j8,<sp/>j9,<sp/>j10,<sp/>j11,<sp/>j12,<sp/>j13,<sp/>j14,<sp/>j15;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*ctarget<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>tmp[64];</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>i;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!bytes)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>j0<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[0];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>j1<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[1];</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>j2<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[2];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>j3<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[3];</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>j4<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[4];</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>j5<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[5];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>j6<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[6];</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>j7<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[7];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>j8<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[8];</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>j9<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[9];</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>j10<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[10];</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>j11<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[11];</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>j12<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[12];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>j13<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[13];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>j14<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[14];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>j15<sp/>=<sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[15];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&lt;<sp/>64)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;i<sp/>&lt;<sp/>bytes;++i)<sp/>tmp[i]<sp/>=<sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>[i];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctarget<sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x0<sp/>=<sp/>j0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>j1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>j2;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x3<sp/>=<sp/>j3;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x4<sp/>=<sp/>j4;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x5<sp/>=<sp/>j5;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x6<sp/>=<sp/>j6;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x7<sp/>=<sp/>j7;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x8<sp/>=<sp/>j8;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x9<sp/>=<sp/>j9;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x10<sp/>=<sp/>j10;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x11<sp/>=<sp/>j11;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x12<sp/>=<sp/>j12;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x13<sp/>=<sp/>j13;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x14<sp/>=<sp/>j14;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x15<sp/>=<sp/>j15;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>20;i<sp/>&gt;<sp/>0;i<sp/>-=<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x0,<sp/>x4,<sp/>x8,x12)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x1,<sp/>x5,<sp/>x9,x13)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x2,<sp/>x6,x10,x14)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x3,<sp/>x7,x11,x15)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x0,<sp/>x5,x10,x15)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x1,<sp/>x6,x11,x12)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x2,<sp/>x7,<sp/>x8,x13)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" kindref="member">QUARTERROUND</ref>(<sp/>x3,<sp/>x4,<sp/>x9,x14)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x0<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x0,j0);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x1,j1);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x2,j2);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x3<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x3,j3);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x4<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x4,j4);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x5<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x5,j5);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x6<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x6,j6);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x7<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x7,j7);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x8<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x8,j8);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x9<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x9,j9);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x10<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x10,j10);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x11<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x11,j11);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x12<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x12,j12);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x13<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x13,j13);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x14<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x14,j14);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x15<sp/>=<sp/><ref refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" kindref="member">PLUS</ref>(x15,j15);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x0<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x0,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>0));</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x1,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>4));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x2,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>8));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x3<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x3,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>12));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x4<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x4,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>16));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x5<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x5,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>20));</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x6<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x6,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>24));</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x7<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x7,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>28));</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x8<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x8,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>32));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x9<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x9,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>36));</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x10<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x10,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>40));</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x11<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x11,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>44));</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x12<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x12,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>48));</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x13<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x13,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>52));</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x14<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x14,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>56));</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x15<sp/>=<sp/><ref refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" kindref="member">XOR</ref>(x15,<ref refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" kindref="member">U8TO32_LITTLE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+<sp/>60));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j12<sp/>=<sp/><ref refid="chacha_8c_1ae5e745942efa0b278e4b7cad31a5cde3" kindref="member">PLUSONE</ref>(j12);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!j12)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j13<sp/>=<sp/><ref refid="chacha_8c_1ae5e745942efa0b278e4b7cad31a5cde3" kindref="member">PLUSONE</ref>(j13);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>stopping<sp/>at<sp/>2^70<sp/>bytes<sp/>per<sp/>nonce<sp/>is<sp/>user&apos;s<sp/>responsibility<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>0,x0);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>4,x1);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>8,x2);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>12,x3);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>16,x4);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>20,x5);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>24,x6);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>28,x7);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>32,x8);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>36,x9);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>40,x10);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>44,x11);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>48,x12);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>52,x13);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>56,x14);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" kindref="member">U32TO8_LITTLE</ref>(c<sp/>+<sp/>60,x15);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&lt;=<sp/>64)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&lt;<sp/>64)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;i<sp/>&lt;<sp/>bytes;++i)<sp/>ctarget[i]<sp/>=<sp/>c[i];</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[12]<sp/>=<sp/>j12;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[13]<sp/>=<sp/>j13;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bytes<sp/>-=<sp/>64;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>+=<sp/>64;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+=<sp/>64;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/external/chacha.c"/>
+  </compounddef>
+</doxygen>

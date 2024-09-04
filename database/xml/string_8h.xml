@@ -1,0 +1,1961 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="string_8h" kind="file" language="C++">
+    <compoundname>string.h</compoundname>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includedby refid="examples_2authentication_8c" local="no">libssh-mirror/examples/authentication.c</includedby>
+    <includedby refid="keygen2_8c" local="no">libssh-mirror/examples/keygen2.c</includedby>
+    <includedby refid="examples_2knownhosts_8c" local="no">libssh-mirror/examples/knownhosts.c</includedby>
+    <includedby refid="libssh__scp_8c" local="no">libssh-mirror/examples/libssh_scp.c</includedby>
+    <includedby refid="proxy_8c" local="no">libssh-mirror/examples/proxy.c</includedby>
+    <includedby refid="samplesftp_8c" local="no">libssh-mirror/examples/samplesftp.c</includedby>
+    <includedby refid="samplesshd-cb_8c" local="no">libssh-mirror/examples/samplesshd-cb.c</includedby>
+    <includedby refid="samplesshd-kbdint_8c" local="no">libssh-mirror/examples/samplesshd-kbdint.c</includedby>
+    <includedby refid="scp__download_8c" local="no">libssh-mirror/examples/scp_download.c</includedby>
+    <includedby refid="ssh__client_8c" local="no">libssh-mirror/examples/ssh_client.c</includedby>
+    <includedby refid="sshd__direct-tcpip_8c" local="no">libssh-mirror/examples/sshd_direct-tcpip.c</includedby>
+    <includedby refid="sshnetcat_8c" local="no">libssh-mirror/examples/sshnetcat.c</includedby>
+    <includedby refid="callbacks_8h" local="no">libssh-mirror/include/libssh/callbacks.h</includedby>
+    <includedby refid="priv_8h" local="no">libssh-mirror/include/libssh/priv.h</includedby>
+    <includedby refid="agent_8c" local="no">libssh-mirror/src/agent.c</includedby>
+    <includedby refid="auth_8c" local="no">libssh-mirror/src/auth.c</includedby>
+    <includedby refid="bignum_8c" local="yes">libssh-mirror/src/bignum.c</includedby>
+    <includedby refid="bind_8c" local="no">libssh-mirror/src/bind.c</includedby>
+    <includedby refid="bind__config_8c" local="no">libssh-mirror/src/bind_config.c</includedby>
+    <includedby refid="config_8c" local="no">libssh-mirror/src/config.c</includedby>
+    <includedby refid="config__parser_8c" local="no">libssh-mirror/src/config_parser.c</includedby>
+    <includedby refid="connect_8c" local="no">libssh-mirror/src/connect.c</includedby>
+    <includedby refid="dh-gex_8c" local="no">libssh-mirror/src/dh-gex.c</includedby>
+    <includedby refid="getpass_8c" local="no">libssh-mirror/src/getpass.c</includedby>
+    <includedby refid="gssapi_8c" local="no">libssh-mirror/src/gssapi.c</includedby>
+    <includedby refid="gzip_8c" local="no">libssh-mirror/src/gzip.c</includedby>
+    <includedby refid="kdf_8c" local="no">libssh-mirror/src/kdf.c</includedby>
+    <includedby refid="kex_8c" local="no">libssh-mirror/src/kex.c</includedby>
+    <includedby refid="known__hosts_8c" local="yes">libssh-mirror/src/known_hosts.c</includedby>
+    <includedby refid="libcrypto-compat_8c" local="no">libssh-mirror/src/libcrypto-compat.c</includedby>
+    <includedby refid="libcrypto_8c" local="no">libssh-mirror/src/libcrypto.c</includedby>
+    <includedby refid="libgcrypt_8c" local="no">libssh-mirror/src/libgcrypt.c</includedby>
+    <includedby refid="log_8c" local="no">libssh-mirror/src/log.c</includedby>
+    <includedby refid="messages_8c" local="no">libssh-mirror/src/messages.c</includedby>
+    <includedby refid="misc_8c" local="no">libssh-mirror/src/misc.c</includedby>
+    <includedby refid="options_8c" local="no">libssh-mirror/src/options.c</includedby>
+    <includedby refid="packet_8c" local="no">libssh-mirror/src/packet.c</includedby>
+    <includedby refid="packet__crypt_8c" local="no">libssh-mirror/src/packet_crypt.c</includedby>
+    <includedby refid="pki__container__openssh_8c" local="no">libssh-mirror/src/pki_container_openssh.c</includedby>
+    <includedby refid="scp_8c" local="no">libssh-mirror/src/scp.c</includedby>
+    <includedby refid="server_8c" local="no">libssh-mirror/src/server.c</includedby>
+    <includedby refid="session_8c" local="no">libssh-mirror/src/session.c</includedby>
+    <includedby refid="string_8c" local="yes">libssh-mirror/src/string.c</includedby>
+    <includedby refid="token_8c" local="no">libssh-mirror/src/token.c</includedby>
+    <includedby refid="wrapper_8c" local="no">libssh-mirror/src/wrapper.c</includedby>
+    <includedby refid="tests_2authentication_8c" local="no">libssh-mirror/tests/authentication.c</includedby>
+    <includedby refid="bench__raw_8c" local="no">libssh-mirror/tests/benchmarks/bench_raw.c</includedby>
+    <includedby refid="benchmarks_8c" local="no">libssh-mirror/tests/benchmarks/benchmarks.c</includedby>
+    <includedby refid="latency_8c" local="no">libssh-mirror/tests/benchmarks/latency.c</includedby>
+    <includedby refid="ssh__server__fuzzer_8cpp" local="no">libssh-mirror/tests/fuzz/ssh_server_fuzzer.cpp</includedby>
+    <includedby refid="pkd__keyutil_8c" local="no">libssh-mirror/tests/pkd/pkd_keyutil.c</includedby>
+    <includedby refid="pkd__util_8c" local="no">libssh-mirror/tests/pkd/pkd_util.c</includedby>
+    <includedby refid="default__cb_8c" local="no">libssh-mirror/tests/server/test_server/default_cb.c</includedby>
+    <includedby refid="server_2test__server_2main_8c" local="no">libssh-mirror/tests/server/test_server/main.c</includedby>
+    <includedby refid="test__server_8c" local="no">libssh-mirror/tests/server/test_server/test_server.c</includedby>
+    <includedby refid="test__exec_8c" local="no">libssh-mirror/tests/test_exec.c</includedby>
+    <includedby refid="test__pcap_8c" local="no">libssh-mirror/tests/test_pcap.c</includedby>
+    <includedby refid="test__tunnel_8c" local="no">libssh-mirror/tests/test_tunnel.c</includedby>
+    <includedby refid="torture__pki_8c" local="no">libssh-mirror/tests/torture_pki.c</includedby>
+    <includedby refid="torture__pki__dsa_8c" local="no">libssh-mirror/tests/unittests/torture_pki_dsa.c</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>sys/select.h</label>
+      </node>
+      <node id="2">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>netdb.h</label>
+      </node>
+      <node id="8">
+        <label>sys/types.h</label>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="6">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="181">
+        <label>libssh-mirror/tests/fuzz/ssh_server_fuzzer.cpp</label>
+        <link refid="ssh__server__fuzzer_8cpp"/>
+      </node>
+      <node id="31">
+        <label>libssh-mirror/src/channels.c</label>
+        <link refid="channels_8c"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>libssh-mirror/src/pki_ed25519_common.c</label>
+        <link refid="pki__ed25519__common_8c"/>
+      </node>
+      <node id="179">
+        <label>libssh-mirror/src/threads/winlocks.c</label>
+        <link refid="winlocks_8c"/>
+      </node>
+      <node id="25">
+        <label>libssh-mirror/src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>libssh-mirror/src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>libssh-mirror/tests/client/torture_connect.c</label>
+        <link refid="torture__connect_8c"/>
+      </node>
+      <node id="156">
+        <label>libssh-mirror/src/external/fe25519.c</label>
+        <link refid="fe25519_8c"/>
+      </node>
+      <node id="58">
+        <label>libssh-mirror/tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="172">
+        <label>libssh-mirror/tests/server/test_server/main.c</label>
+        <link refid="server_2test__server_2main_8c"/>
+      </node>
+      <node id="136">
+        <label>libssh-mirror/include/libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>libssh-mirror/tests/client/torture_forward.c</label>
+        <link refid="torture__forward_8c"/>
+      </node>
+      <node id="83">
+        <label>libssh-mirror/tests/client/torture_sftp_dir.c</label>
+        <link refid="torture__sftp__dir_8c"/>
+      </node>
+      <node id="108">
+        <label>libssh-mirror/tests/pkd/pkd_daemon.c</label>
+        <link refid="pkd__daemon_8c"/>
+      </node>
+      <node id="33">
+        <label>libssh-mirror/src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="67">
+        <label>libssh-mirror/src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>libssh-mirror/tests/client/torture_client_global_requests.c</label>
+        <link refid="torture__client__global__requests_8c"/>
+      </node>
+      <node id="26">
+        <label>libssh-mirror/tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="129">
+        <label>libssh-mirror/tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="121">
+        <label>libssh-mirror/tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="24">
+        <label>libssh-mirror/src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="167">
+        <label>libssh-mirror/src/scp.c</label>
+        <link refid="scp_8c"/>
+      </node>
+      <node id="189">
+        <label>libssh-mirror/tests/pkd/pkd_util.c</label>
+        <link refid="pkd__util_8c"/>
+      </node>
+      <node id="9">
+        <label>libssh-mirror/examples/samplesshd-kbdint.c</label>
+        <link refid="samplesshd-kbdint_8c"/>
+      </node>
+      <node id="149">
+        <label>libssh-mirror/include/libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="95">
+        <label>libssh-mirror/tests/server/torture_server.c</label>
+        <link refid="torture__server_8c"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="37">
+        <label>libssh-mirror/src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>libssh-mirror/tests/client/torture_proxycommand.c</label>
+        <link refid="torture__proxycommand_8c"/>
+      </node>
+      <node id="86">
+        <label>libssh-mirror/tests/client/torture_sftp_read.c</label>
+        <link refid="torture__sftp__read_8c"/>
+      </node>
+      <node id="142">
+        <label>libssh-mirror/src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="18">
+        <label>libssh-mirror/include/libssh/bind.h</label>
+        <link refid="bind_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>libssh-mirror/src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>libssh-mirror/src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="139">
+        <label>libssh-mirror/src/pki_container_openssh.c</label>
+        <link refid="pki__container__openssh_8c"/>
+      </node>
+      <node id="154">
+        <label>libssh-mirror/include/libssh/ge25519.h</label>
+        <link refid="ge25519_8h"/>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>libssh-mirror/src/sftp.c</label>
+        <link refid="sftp_8c"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>libssh-mirror/tests/unittests/torture_init.c</label>
+        <link refid="torture__init_8c"/>
+      </node>
+      <node id="111">
+        <label>libssh-mirror/tests/torture.c</label>
+        <link refid="torture_8c"/>
+      </node>
+      <node id="99">
+        <label>libssh-mirror/tests/torture.h</label>
+        <link refid="torture_8h"/>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>libssh-mirror/tests/unittests/torture_push_pop_dir.c</label>
+        <link refid="torture__push__pop__dir_8c"/>
+      </node>
+      <node id="158">
+        <label>libssh-mirror/src/bignum.c</label>
+        <link refid="bignum_8c"/>
+      </node>
+      <node id="57">
+        <label>libssh-mirror/src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>libssh-mirror/tests/torture_key.c</label>
+        <link refid="torture__key_8c"/>
+      </node>
+      <node id="109">
+        <label>libssh-mirror/tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+      <node id="174">
+        <label>libssh-mirror/include/libssh/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>libssh-mirror/tests/client/torture_scp.c</label>
+        <link refid="torture__scp_8c"/>
+      </node>
+      <node id="32">
+        <label>libssh-mirror/tests/unittests/torture_channel.c</label>
+        <link refid="torture__channel_8c"/>
+      </node>
+      <node id="161">
+        <label>libssh-mirror/src/external/sc25519.c</label>
+        <link refid="sc25519_8c"/>
+      </node>
+      <node id="112">
+        <label>libssh-mirror/tests/torture_cmocka.c</label>
+        <link refid="torture__cmocka_8c"/>
+      </node>
+      <node id="98">
+        <label>libssh-mirror/tests/torture_cmocka.h</label>
+        <link refid="torture__cmocka_8h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>libssh-mirror/tests/unittests/torture_list.c</label>
+        <link refid="torture__list_8c"/>
+      </node>
+      <node id="134">
+        <label>libssh-mirror/include/libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>libssh-mirror/src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="135">
+        <label>libssh-mirror/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="125">
+        <label>libssh-mirror/tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="6">
+        <label>libssh-mirror/examples/proxy.c</label>
+        <link refid="proxy_8c"/>
+      </node>
+      <node id="155">
+        <label>libssh-mirror/src/external/ge25519.c</label>
+        <link refid="ge25519_8c"/>
+      </node>
+      <node id="66">
+        <label>libssh-mirror/src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="51">
+        <label>libssh-mirror/src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="41">
+        <label>libssh-mirror/src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="186">
+        <label>libssh-mirror/tests/benchmarks/bench_raw.c</label>
+        <link refid="bench__raw_8c"/>
+      </node>
+      <node id="175">
+        <label>libssh-mirror/tests/test_socket.c</label>
+        <link refid="test__socket_8c"/>
+      </node>
+      <node id="71">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="140">
+        <label>libssh-mirror/src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+      </node>
+      <node id="138">
+        <label>libssh-mirror/src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+      <node id="84">
+        <label>libssh-mirror/tests/client/torture_sftp_ext.c</label>
+        <link refid="torture__sftp__ext_8c"/>
+      </node>
+      <node id="69">
+        <label>libssh-mirror/tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="14">
+        <label>libssh-mirror/include/libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>libssh-mirror/tests/client/torture_session.c</label>
+        <link refid="torture__session_8c"/>
+      </node>
+      <node id="68">
+        <label>libssh-mirror/tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="192">
+        <label>libssh-mirror/tests/test_tunnel.c</label>
+        <link refid="test__tunnel_8c"/>
+      </node>
+      <node id="44">
+        <label>libssh-mirror/src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="63">
+        <label>libssh-mirror/src/misc.c</label>
+        <link refid="misc_8c"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>libssh-mirror/tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="171">
+        <label>libssh-mirror/tests/server/test_server/default_cb.c</label>
+        <link refid="default__cb_8c"/>
+      </node>
+      <node id="7">
+        <label>libssh-mirror/examples/samplesftp.c</label>
+        <link refid="samplesftp_8c"/>
+      </node>
+      <node id="97">
+        <label>libssh-mirror/tests/server/torture_server_config.c</label>
+        <link refid="torture__server__config_8c"/>
+      </node>
+      <node id="182">
+        <label>libssh-mirror/tests/server/test_server/default_cb.h</label>
+        <link refid="default__cb_8h"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>libssh-mirror/src/pcap.c</label>
+        <link refid="pcap_8c"/>
+      </node>
+      <node id="60">
+        <label>libssh-mirror/src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="130">
+        <label>libssh-mirror/tests/unittests/torture_threads_init.c</label>
+        <link refid="torture__threads__init_8c"/>
+      </node>
+      <node id="173">
+        <label>libssh-mirror/tests/server/test_server/test_server.c</label>
+        <link refid="test__server_8c"/>
+      </node>
+      <node id="28">
+        <label>libssh-mirror/tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="81">
+        <label>libssh-mirror/tests/client/torture_sftp_benchmark.c</label>
+        <link refid="torture__sftp__benchmark_8c"/>
+      </node>
+      <node id="75">
+        <label>libssh-mirror/tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="183">
+        <label>libssh-mirror/tests/server/test_server/test_server.h</label>
+        <link refid="test__server_8h"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>libssh-mirror/src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="184">
+        <label>libssh-mirror/src/libcrypto-compat.c</label>
+        <link refid="libcrypto-compat_8c"/>
+      </node>
+      <node id="132">
+        <label>libssh-mirror/include/libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>libssh-mirror/include/libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>libssh-mirror/tests/unittests/torture_server_x11.c</label>
+        <link refid="torture__server__x11_8c"/>
+      </node>
+      <node id="187">
+        <label>libssh-mirror/tests/benchmarks/benchmarks.c</label>
+        <link refid="benchmarks_8c"/>
+      </node>
+      <node id="102">
+        <label>libssh-mirror/tests/client/torture_hostkey.c</label>
+        <link refid="torture__hostkey_8c"/>
+      </node>
+      <node id="185">
+        <label>libssh-mirror/tests/authentication.c</label>
+        <link refid="tests_2authentication_8c"/>
+      </node>
+      <node id="159">
+        <label>libssh-mirror/src/buffer.c</label>
+        <link refid="buffer_8c"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>libssh-mirror/tests/client/torture_client_config.c</label>
+        <link refid="torture__client__config_8c"/>
+      </node>
+      <node id="150">
+        <label>libssh-mirror/include/libssh/channels.h</label>
+        <link refid="channels_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>libssh-mirror/src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="105">
+        <label>libssh-mirror/tests/client/torture_request_env.c</label>
+        <link refid="torture__request__env_8c"/>
+      </node>
+      <node id="146">
+        <label>libssh-mirror/src/threads/mbedtls.c</label>
+        <link refid="mbedtls_8c"/>
+      </node>
+      <node id="34">
+        <label>libssh-mirror/src/config.c</label>
+        <link refid="config_8c"/>
+      </node>
+      <node id="147">
+        <label>libssh-mirror/src/threads.c</label>
+        <link refid="threads_8c"/>
+      </node>
+      <node id="72">
+        <label>libssh-mirror/tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="27">
+        <label>libssh-mirror/src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>libssh-mirror/src/poll.c</label>
+        <link refid="poll_8c"/>
+      </node>
+      <node id="38">
+        <label>libssh-mirror/tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="42">
+        <label>libssh-mirror/src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="11">
+        <label>libssh-mirror/examples/ssh_client.c</label>
+        <link refid="ssh__client_8c"/>
+      </node>
+      <node id="145">
+        <label>libssh-mirror/src/threads/libgcrypt.c</label>
+        <link refid="threads_2libgcrypt_8c"/>
+      </node>
+      <node id="35">
+        <label>libssh-mirror/src/connect.c</label>
+        <link refid="connect_8c"/>
+      </node>
+      <node id="8">
+        <label>libssh-mirror/examples/samplesshd-cb.c</label>
+        <link refid="samplesshd-cb_8c"/>
+      </node>
+      <node id="143">
+        <label>libssh-mirror/src/libmbedcrypto.c</label>
+        <link refid="libmbedcrypto_8c"/>
+      </node>
+      <node id="13">
+        <label>libssh-mirror/examples/sshnetcat.c</label>
+        <link refid="sshnetcat_8c"/>
+      </node>
+      <node id="20">
+        <label>libssh-mirror/src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="78">
+        <label>libssh-mirror/src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="116">
+        <label>libssh-mirror/tests/unittests/torture_callbacks.c</label>
+        <link refid="torture__callbacks_8c"/>
+      </node>
+      <node id="103">
+        <label>libssh-mirror/tests/client/torture_knownhosts_verify.c</label>
+        <link refid="torture__knownhosts__verify_8c"/>
+      </node>
+      <node id="123">
+        <label>libssh-mirror/tests/unittests/torture_rand.c</label>
+        <link refid="torture__rand_8c"/>
+      </node>
+      <node id="15">
+        <label>libssh-mirror/examples/ssh_server_fork.c</label>
+        <link refid="ssh__server__fork_8c"/>
+      </node>
+      <node id="133">
+        <label>libssh-mirror/include/libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="144">
+        <label>libssh-mirror/src/threads/libcrypto.c</label>
+        <link refid="threads_2libcrypto_8c"/>
+      </node>
+      <node id="36">
+        <label>libssh-mirror/src/connector.c</label>
+        <link refid="connector_8c"/>
+      </node>
+      <node id="19">
+        <label>libssh-mirror/src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/examples/authentication.c</label>
+        <link refid="examples_2authentication_8c"/>
+      </node>
+      <node id="193">
+        <label>libssh-mirror/tests/torture_pki.c</label>
+        <link refid="torture__pki_8c"/>
+      </node>
+      <node id="165">
+        <label>libssh-mirror/src/mbedcrypto_missing.c</label>
+        <link refid="mbedcrypto__missing_8c"/>
+      </node>
+      <node id="85">
+        <label>libssh-mirror/tests/client/torture_sftp_fsync.c</label>
+        <link refid="torture__sftp__fsync_8c"/>
+      </node>
+      <node id="50">
+        <label>libssh-mirror/tests/unittests/torture_misc.c</label>
+        <link refid="torture__misc_8c"/>
+      </node>
+      <node id="46">
+        <label>libssh-mirror/src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="169">
+        <label>libssh-mirror/src/string.c</label>
+        <link refid="string_8c"/>
+      </node>
+      <node id="64">
+        <label>libssh-mirror/src/options.c</label>
+        <link refid="options_8c"/>
+      </node>
+      <node id="152">
+        <label>libssh-mirror/src/external/ed25519.c</label>
+        <link refid="ed25519_8c"/>
+      </node>
+      <node id="47">
+        <label>libssh-mirror/src/error.c</label>
+        <link refid="error_8c"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>libssh-mirror/src/callbacks.c</label>
+        <link refid="callbacks_8c"/>
+      </node>
+      <node id="160">
+        <label>libssh-mirror/src/config_parser.c</label>
+        <link refid="config__parser_8c"/>
+      </node>
+      <node id="52">
+        <label>libssh-mirror/src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="157">
+        <label>libssh-mirror/src/base64.c</label>
+        <link refid="base64_8c"/>
+      </node>
+      <node id="127">
+        <label>libssh-mirror/tests/unittests/torture_temp_file.c</label>
+        <link refid="torture__temp__file_8c"/>
+      </node>
+      <node id="4">
+        <label>libssh-mirror/examples/knownhosts.c</label>
+        <link refid="examples_2knownhosts_8c"/>
+      </node>
+      <node id="90">
+        <label>libssh-mirror/tests/client/torture_algorithms.c</label>
+        <link refid="torture__algorithms_8c"/>
+      </node>
+      <node id="120">
+        <label>libssh-mirror/tests/unittests/torture_knownhosts_parsing.c</label>
+        <link refid="torture__knownhosts__parsing_8c"/>
+      </node>
+      <node id="151">
+        <label>libssh-mirror/include/libssh/ed25519.h</label>
+        <link refid="ed25519_8h"/>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>libssh-mirror/tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="10">
+        <label>libssh-mirror/examples/scp_download.c</label>
+        <link refid="scp__download_8c"/>
+      </node>
+      <node id="178">
+        <label>libssh-mirror/src/threads/pthread.c</label>
+        <link refid="pthread_8c"/>
+      </node>
+      <node id="114">
+        <label>libssh-mirror/tests/unittests/torture_buffer.c</label>
+        <link refid="torture__buffer_8c"/>
+      </node>
+      <node id="40">
+        <label>libssh-mirror/tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="163">
+        <label>libssh-mirror/src/getpass.c</label>
+        <link refid="getpass_8c"/>
+      </node>
+      <node id="128">
+        <label>libssh-mirror/tests/unittests/torture_threads_buffer.c</label>
+        <link refid="torture__threads__buffer_8c"/>
+      </node>
+      <node id="79">
+        <label>libssh-mirror/src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh-mirror/examples/sshd_direct-tcpip.c</label>
+        <link refid="sshd__direct-tcpip_8c"/>
+      </node>
+      <node id="164">
+        <label>libssh-mirror/src/match.c</label>
+        <link refid="match_8c"/>
+        <childnode refid="117" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libssh-mirror/examples/libssh_scp.c</label>
+        <link refid="libssh__scp_8c"/>
+      </node>
+      <node id="126">
+        <label>libssh-mirror/tests/unittests/torture_temp_dir.c</label>
+        <link refid="torture__temp__dir_8c"/>
+      </node>
+      <node id="65">
+        <label>libssh-mirror/src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="87">
+        <label>libssh-mirror/src/socket.c</label>
+        <link refid="socket_8c"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>libssh-mirror/tests/fuzz/ssh_client_fuzzer.cpp</label>
+        <link refid="ssh__client__fuzzer_8cpp"/>
+      </node>
+      <node id="170">
+        <label>libssh-mirror/src/token.c</label>
+        <link refid="token_8c"/>
+      </node>
+      <node id="118">
+        <label>libssh-mirror/tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="21">
+        <label>libssh-mirror/tests/unittests/torture_bind_config.c</label>
+        <link refid="torture__bind__config_8c"/>
+      </node>
+      <node id="82">
+        <label>libssh-mirror/tests/client/torture_sftp_canonicalize_path.c</label>
+        <link refid="torture__sftp__canonicalize__path_8c"/>
+      </node>
+      <node id="56">
+        <label>libssh-mirror/src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="53">
+        <label>libssh-mirror/src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="16">
+        <label>libssh-mirror/include/libssh/auth.h</label>
+        <link refid="auth_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>libssh-mirror/tests/test_exec.c</label>
+        <link refid="test__exec_8c"/>
+      </node>
+      <node id="188">
+        <label>libssh-mirror/tests/benchmarks/latency.c</label>
+        <link refid="latency_8c"/>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/examples/keygen2.c</label>
+        <link refid="keygen2_8c"/>
+      </node>
+      <node id="88">
+        <label>libssh-mirror/tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="176">
+        <label>libssh-mirror/include/libssh/threads.h</label>
+        <link refid="threads_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>libssh-mirror/tests/pkd/pkd_keyutil.c</label>
+        <link refid="pkd__keyutil_8c"/>
+      </node>
+      <node id="22">
+        <label>libssh-mirror/include/libssh/gssapi.h</label>
+        <link refid="gssapi_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>libssh-mirror/tests/server/torture_server_auth_kbdint.c</label>
+        <link refid="torture__server__auth__kbdint_8c"/>
+      </node>
+      <node id="137">
+        <label>libssh-mirror/include/libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>libssh-mirror/src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="153">
+        <label>libssh-mirror/include/libssh/fe25519.h</label>
+        <link refid="fe25519_8h"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>libssh-mirror/tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+      <node id="48">
+        <label>libssh-mirror/tests/unittests/torture_isipaddr.c</label>
+        <link refid="torture__isipaddr_8c"/>
+      </node>
+      <node id="23">
+        <label>libssh-mirror/src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="107">
+        <label>libssh-mirror/tests/cmdline.c</label>
+        <link refid="cmdline_8c"/>
+      </node>
+      <node id="55">
+        <label>libssh-mirror/tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="115">
+        <label>libssh-mirror/tests/unittests/torture_bytearray.c</label>
+        <link refid="torture__bytearray_8c"/>
+      </node>
+      <node id="131">
+        <label>libssh-mirror/tests/unittests/torture_tokens.c</label>
+        <link refid="torture__tokens_8c"/>
+      </node>
+      <node id="17">
+        <label>libssh-mirror/include/libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>libssh-mirror/src/gcrypt_missing.c</label>
+        <link refid="gcrypt__missing_8c"/>
+      </node>
+      <node id="76">
+        <label>libssh-mirror/src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+      <node id="177">
+        <label>libssh-mirror/src/threads/noop.c</label>
+        <link refid="noop_8c"/>
+      </node>
+      <node id="168">
+        <label>libssh-mirror/src/sftpserver.c</label>
+        <link refid="sftpserver_8c"/>
+      </node>
+      <node id="61">
+        <label>libssh-mirror/src/log.c</label>
+        <link refid="log_8c"/>
+      </node>
+      <node id="191">
+        <label>libssh-mirror/tests/test_pcap.c</label>
+        <link refid="test__pcap_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structssh__string__struct" prot="public">ssh_string_struct</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STRING_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STRING_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>must<sp/>be<sp/>32<sp/>bits<sp/>number<sp/>+<sp/>immediately<sp/>our<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structssh__string__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__string__struct" kindref="compound">ssh_string_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="structssh__string__struct_1af24fdc7ed311a959c67ee9123f3fa8b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structssh__string__struct_1af24fdc7ed311a959c67ee9123f3fa8b4" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="31" refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" kindref="member">data</ref>[1];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">__attribute__<sp/>((packed))</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>STRING_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/string.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="latency_8c" kind="file" language="C++">
+    <compoundname>latency.c</compoundname>
+    <includes refid="benchmarks_8h" local="yes">benchmarks.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>sys/select.h</label>
+      </node>
+      <node id="12">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="13">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>errno.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>netdb.h</label>
+      </node>
+      <node id="2">
+        <label>benchmarks.h</label>
+        <link refid="benchmarks_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>sys/types.h</label>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="17">
+        <label>sys/time.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/tests/benchmarks/latency.c</label>
+        <link refid="latency_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="latency_8c_1a1c663c58f7081ea97a7ca14d8278c6a0" prot="public" static="no">
+        <name>PING_PROGRAM</name>
+        <initializer>&quot;/bin/ping&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/latency.c" line="31" column="9" bodyfile="libssh-mirror/tests/benchmarks/latency.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="latency_8c_1a33a30ecb04e95771eb40760397d2cc40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_ping_latency</definition>
+        <argsstring>(const char *host, float *average)</argsstring>
+        <name>benchmarks_ping_latency</name>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>average</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/latency.c" line="42" column="5" bodyfile="libssh-mirror/tests/benchmarks/latency.c" bodystart="42" bodyend="85"/>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="latency_8c_1a1c663c58f7081ea97a7ca14d8278c6a0" compoundref="latency_8c" startline="31">PING_PROGRAM</references>
+        <referencedby refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" compoundref="benchmarks_8c" startline="317" endline="345">do_benchmarks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="latency_8c_1ad5966bfd9ad01311a474472dbddcbcab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timestamp_init</definition>
+        <argsstring>(struct timestamp_struct *ts)</argsstring>
+        <name>timestamp_init</name>
+        <param>
+          <type>struct <ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref> *</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/latency.c" line="91" column="6" bodyfile="libssh-mirror/tests/benchmarks/latency.c" bodystart="91" bodyend="93"/>
+        <references refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" compoundref="benchmarks_8h" startline="68">timestamp_struct::timestamp</references>
+        <referencedby refid="bench__sftp_8c_1a5d05a4e9603ff04353b637065dacf28c" compoundref="bench__sftp_8c" startline="159" endline="239">benchmarks_async_sftp_down</referencedby>
+        <referencedby refid="bench__raw_8c_1afd64b09e9ae3ce2136328be2cd0bac89" compoundref="bench__raw_8c" startline="227" endline="285">benchmarks_raw_down</referencedby>
+        <referencedby refid="bench__raw_8c_1a070a579a7a62c222e5f28c9e074c0df7" compoundref="bench__raw_8c" startline="107" endline="182">benchmarks_raw_up</referencedby>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" compoundref="latency_8c" startline="119" endline="148">benchmarks_ssh_latency</referencedby>
+        <referencedby refid="bench__sftp_8c_1aea73fc2575a832d79f09c7b3fa25cac9" compoundref="bench__sftp_8c" startline="97" endline="149">benchmarks_sync_sftp_down</referencedby>
+        <referencedby refid="bench__sftp_8c_1acef09f85489fe47862edb8378a22af82" compoundref="bench__sftp_8c" startline="41" endline="87">benchmarks_sync_sftp_up</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="latency_8c_1a9a290a799ef77fe179d811d1a41fd423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float elapsed_time</definition>
+        <argsstring>(struct timestamp_struct *ts)</argsstring>
+        <name>elapsed_time</name>
+        <param>
+          <type>struct <ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref> *</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/latency.c" line="100" column="7" bodyfile="libssh-mirror/tests/benchmarks/latency.c" bodystart="100" bodyend="110"/>
+        <references refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" compoundref="benchmarks_8h" startline="68">timestamp_struct::timestamp</references>
+        <referencedby refid="bench__sftp_8c_1a5d05a4e9603ff04353b637065dacf28c" compoundref="bench__sftp_8c" startline="159" endline="239">benchmarks_async_sftp_down</referencedby>
+        <referencedby refid="bench__raw_8c_1afd64b09e9ae3ce2136328be2cd0bac89" compoundref="bench__raw_8c" startline="227" endline="285">benchmarks_raw_down</referencedby>
+        <referencedby refid="bench__raw_8c_1a070a579a7a62c222e5f28c9e074c0df7" compoundref="bench__raw_8c" startline="107" endline="182">benchmarks_raw_up</referencedby>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" compoundref="latency_8c" startline="119" endline="148">benchmarks_ssh_latency</referencedby>
+        <referencedby refid="bench__sftp_8c_1aea73fc2575a832d79f09c7b3fa25cac9" compoundref="bench__sftp_8c" startline="97" endline="149">benchmarks_sync_sftp_down</referencedby>
+        <referencedby refid="bench__sftp_8c_1acef09f85489fe47862edb8378a22af82" compoundref="bench__sftp_8c" startline="41" endline="87">benchmarks_sync_sftp_up</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="latency_8c_1a166dab0266f920174e138f1039ca1773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_ssh_latency</definition>
+        <argsstring>(ssh_session session, float *average)</argsstring>
+        <name>benchmarks_ssh_latency</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>average</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/benchmarks/latency.c" line="119" column="5" bodyfile="libssh-mirror/tests/benchmarks/latency.c" bodystart="119" bodyend="148"/>
+        <references refid="latency_8c_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1ga238f07e0455456a5bfd8a49ead917732" compoundref="channels_8c" startline="1285" endline="1336">ssh_channel_close</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" compoundref="channels_8c" startline="920" endline="930">ssh_channel_open_session</references>
+        <references refid="group__libssh__channel_1ga7aede2f9af4c494ff9e41fc08a4572f1" compoundref="channels_8c" startline="2498" endline="2535">ssh_channel_request_env</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__error_1ga036433b7bf3d4ca94206253f58d136f9" compoundref="error_8c" startline="148" endline="152">ssh_get_error_code</references>
+        <references refid="latency_8c_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <referencedby refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" compoundref="benchmarks_8c" startline="317" endline="345">do_benchmarks</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="benchmarks_8h" kindref="compound">benchmarks.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="latency_8c_1a1c663c58f7081ea97a7ca14d8278c6a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PING_PROGRAM<sp/>&quot;/bin/ping&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="benchmarks_8h_1a33a30ecb04e95771eb40760397d2cc40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="latency_8c_1a33a30ecb04e95771eb40760397d2cc40" kindref="member">benchmarks_ping_latency</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*average){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cmd[256];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>line[1024];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>FILE<sp/>*fd;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>found=0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>strip<sp/>out<sp/>the<sp/>hostname<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>ptr=strchr(<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,</highlight><highlight class="charliteral">&apos;@&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ptr)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr++;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr=<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>snprintf(cmd,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cmd),</highlight><highlight class="stringliteral">&quot;%s<sp/>-n<sp/>-q<sp/>-c3<sp/>%s&quot;</highlight><highlight class="normal">,<ref refid="latency_8c_1a1c663c58f7081ea97a7ca14d8278c6a0" kindref="member">PING_PROGRAM</ref>,<sp/>ptr);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>fd=popen(cmd,</highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fd==NULL){</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Error<sp/>executing<sp/>command<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!found<sp/>&amp;&amp;<sp/>fgets(line,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(line),fd)!=NULL){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strstr(line,</highlight><highlight class="stringliteral">&quot;rtt&quot;</highlight><highlight class="normal">)){</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ptr=strchr(line,</highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ptr==NULL)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>parseerror;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ptr=strchr(ptr,</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ptr==NULL)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>parseerror;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*average=strtof(ptr+1,NULL);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>found=1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!found)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>parseerror;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>pclose(fd);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">parseerror:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Parse<sp/>error<sp/>:<sp/>couldn&apos;t<sp/>locate<sp/>average<sp/>in<sp/>%s&quot;</highlight><highlight class="normal">,line);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>pclose(fd);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="latency_8c_1ad5966bfd9ad01311a474472dbddcbcab" kindref="member">timestamp_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>*ts){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>gettimeofday(&amp;ts-&gt;<ref refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" kindref="member">timestamp</ref>,NULL);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="latency_8c_1a9a290a799ef77fe179d811d1a41fd423" kindref="member">elapsed_time</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>*ts){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>now;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>time_t<sp/>secdiff;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>usecdiff;<sp/></highlight><highlight class="comment">/*<sp/>may<sp/>be<sp/>negative<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>gettimeofday(&amp;now,NULL);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>secdiff=now.tv_sec<sp/>-<sp/>ts-&gt;<ref refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" kindref="member">timestamp</ref>.tv_sec;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>usecdiff=now.tv_usec<sp/>-<sp/>ts-&gt;<ref refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" kindref="member">timestamp</ref>.tv_usec;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//printf(&quot;%d<sp/>sec<sp/>diff,<sp/>%d<sp/>usec<sp/>diff\n&quot;,secdiff,<sp/>usecdiff);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>(secdiff*1000)<sp/>+<sp/>((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)usecdiff)/1000;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="latency_8c_1a166dab0266f920174e138f1039ca1773" kindref="member">benchmarks_ssh_latency</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*average){</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>times[3];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>ts;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>channel=<ref refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" kindref="member">ssh_channel_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(channel==NULL)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" kindref="member">ssh_channel_open_session</ref>(channel)==<ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;3;++i){</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="latency_8c_1ad5966bfd9ad01311a474472dbddcbcab" kindref="member">timestamp_init</ref>(&amp;ts);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__channel_1ga7aede2f9af4c494ff9e41fc08a4572f1" kindref="member">ssh_channel_request_env</ref>(channel,</highlight><highlight class="stringliteral">&quot;TEST&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;test&quot;</highlight><highlight class="normal">)==<ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__error_1ga036433b7bf3d4ca94206253f58d136f9" kindref="member">ssh_get_error_code</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>)==<ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>times[i]=<ref refid="latency_8c_1a9a290a799ef77fe179d811d1a41fd423" kindref="member">elapsed_time</ref>(&amp;ts);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__channel_1ga238f07e0455456a5bfd8a49ead917732" kindref="member">ssh_channel_close</ref>(channel);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" kindref="member">ssh_channel_free</ref>(channel);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>channel=NULL;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;SSH<sp/>request<sp/>times<sp/>:<sp/>%f<sp/>ms<sp/>;<sp/>%f<sp/>ms<sp/>;<sp/>%f<sp/>ms\n&quot;</highlight><highlight class="normal">,<sp/>times[0],<sp/>times[1],<sp/>times[2]);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>*average=(times[0]+times[1]+times[2])/3;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Error<sp/>calculating<sp/>SSH<sp/>latency<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(channel)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" kindref="member">ssh_channel_free</ref>(channel);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/tests/benchmarks/latency.c"/>
+  </compounddef>
+</doxygen>

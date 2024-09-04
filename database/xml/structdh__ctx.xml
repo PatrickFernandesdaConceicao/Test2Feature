@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdh__ctx" kind="struct" language="C++" prot="public">
+    <compoundname>dh_ctx</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdh__ctx_1a23e1755c8d3b47c7bae7ef96ec45d83e" prot="public" static="no" mutable="no">
+        <type>DH *</type>
+        <definition>DH* dh_ctx::keypair[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>keypair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/dh_crypto.c" line="41" column="8" bodyfile="libssh-mirror/src/dh_crypto.c" bodystart="41" bodyend="-1"/>
+        <referencedby refid="dh_8h_1a347b19702042c40983c7b0be299502a5" compoundref="dh__crypto_8c" startline="201" endline="209">ssh_dh_cleanup</referencedby>
+        <referencedby refid="dh_8h_1a9a743a5adcfc7d5fbc25c44c6119eb59" compoundref="dh__crypto_8c" startline="245" endline="286">ssh_dh_compute_shared_secret</referencedby>
+        <referencedby refid="dh_8h_1a89e83519e2e86409708679ae9d3f10d8" compoundref="dh__crypto_8c" startline="220" endline="232">ssh_dh_keypair_gen_keys</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structdh__ctx_1ad263104a2d73a7b55527fd3c4bf666ab" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structdh__keypair" kindref="compound">dh_keypair</ref></type>
+        <definition>struct dh_keypair dh_ctx::keypair[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>keypair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/dh_key.c" line="53" column="12" bodyfile="libssh-mirror/src/dh_key.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdh__ctx_1a039237cb80e30af2a66ff3fd008d1c07" prot="public" static="no" mutable="no">
+        <type>bignum</type>
+        <definition>bignum dh_ctx::generator</definition>
+        <argsstring></argsstring>
+        <name>generator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/dh_key.c" line="59" column="12" bodyfile="libssh-mirror/src/dh_key.c" bodystart="59" bodyend="-1"/>
+        <referencedby refid="dh__key_8c_1ad90769620d45d2750b3ab7844edd4996" compoundref="dh__key_8c" startline="63" endline="83">ssh_dh_debug_crypto</referencedby>
+        <referencedby refid="dh__key_8c_1ab1fc518c9b0da142d693620c58f8da71" compoundref="dh__key_8c" startline="295" endline="339">ssh_dh_keypair_gen_keys</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" prot="public" static="no" mutable="no">
+        <type>bignum</type>
+        <definition>bignum dh_ctx::modulus</definition>
+        <argsstring></argsstring>
+        <name>modulus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/dh_key.c" line="60" column="12" bodyfile="libssh-mirror/src/dh_key.c" bodystart="60" bodyend="-1"/>
+        <referencedby refid="dh__key_8c_1a710dc9a59fcf63a2cfa6dd8295872402" compoundref="dh__key_8c" startline="348" endline="375">ssh_dh_compute_shared_secret</referencedby>
+        <referencedby refid="dh__key_8c_1ad90769620d45d2750b3ab7844edd4996" compoundref="dh__key_8c" startline="63" endline="83">ssh_dh_debug_crypto</referencedby>
+        <referencedby refid="dh__key_8c_1ab1fc518c9b0da142d693620c58f8da71" compoundref="dh__key_8c" startline="295" endline="339">ssh_dh_keypair_gen_keys</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>dh_keypair</label>
+        <link refid="structdh__keypair"/>
+      </node>
+      <node id="1">
+        <label>dh_ctx</label>
+        <link refid="structdh__ctx"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>keypair</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libssh-mirror/src/dh_crypto.c" line="40" column="1" bodyfile="libssh-mirror/src/dh_crypto.c" bodystart="40" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structdh__ctx_1a039237cb80e30af2a66ff3fd008d1c07" prot="public" virt="non-virtual"><scope>dh_ctx</scope><name>generator</name></member>
+      <member refid="structdh__ctx_1a23e1755c8d3b47c7bae7ef96ec45d83e" prot="public" virt="non-virtual"><scope>dh_ctx</scope><name>keypair</name></member>
+      <member refid="structdh__ctx_1ad263104a2d73a7b55527fd3c4bf666ab" prot="public" virt="non-virtual"><scope>dh_ctx</scope><name>keypair</name></member>
+      <member refid="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" prot="public" virt="non-virtual"><scope>dh_ctx</scope><name>modulus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

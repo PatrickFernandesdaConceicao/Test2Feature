@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pkd__client_8h" kind="file" language="C++">
+    <compoundname>pkd_client.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="yes">tests_config.h</includes>
+    <includedby refid="pkd__hello_8c" local="yes">libssh-mirror/tests/pkd/pkd_hello.c</includedby>
+    <includedby refid="pkd__keyutil_8c" local="yes">libssh-mirror/tests/pkd/pkd_keyutil.c</includedby>
+    <includedby refid="pkd__util_8c" local="yes">libssh-mirror/tests/pkd/pkd_util.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>libssh-mirror/tests/pkd/pkd_client.h</label>
+        <link refid="pkd__client_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="3">
+        <label>tests_config.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>libssh-mirror/tests/pkd/pkd_util.c</label>
+        <link refid="pkd__util_8c"/>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/tests/pkd/pkd_client.h</label>
+        <link refid="pkd__client_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/tests/pkd/pkd_keyutil.c</label>
+        <link refid="pkd__keyutil_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pkd__client_8h_1a5b07caeb6fb0f0b8c36e2951431f3157" prot="public" static="no">
+        <name>OPENSSH_BINARY</name>
+        <initializer>SSH_EXECUTABLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="16" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a517638571aacce544defbd9c2632f7a0" prot="public" static="no">
+        <name>OPENSSH_KEYGEN</name>
+        <initializer>&quot;ssh-keygen&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="17" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" prot="public" static="no">
+        <name>OPENSSH_HOSTKEY_ALGOS</name>
+        <initializer>  &quot;-o HostKeyAlgorithms=&quot;        \
+  OPENSSH_KEYS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="19" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1af670bac6f2bdfb7788eb06d56f6d1c18" prot="public" static="no">
+        <name>OPENSSH_PKACCEPTED_TYPES</name>
+        <initializer>  &quot;-o PubkeyAcceptedKeyTypes=&quot;  \
+  OPENSSH_KEYS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="23" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" prot="public" static="no">
+        <name>OPENSSH_CMD_START</name>
+        <param><defname>hostkey_algos</defname></param>
+        <initializer>    <ref refid="pkd__client_8h_1a5b07caeb6fb0f0b8c36e2951431f3157" kindref="member">OPENSSH_BINARY</ref> &quot; &quot;                  \
+    &quot;-o UserKnownHostsFile=/dev/null &quot;  \
+    &quot;-o StrictHostKeyChecking=no &quot;      \
+    &quot;-<ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref> /dev/null &quot;                     \
+    hostkey_algos &quot; &quot;                   \
+    <ref refid="pkd__client_8h_1af670bac6f2bdfb7788eb06d56f6d1c18" kindref="member">OPENSSH_PKACCEPTED_TYPES</ref> &quot; &quot;        \
+    &quot;-i &quot; CLIENT_ID_FILE &quot; &quot;            \
+    &quot;1&gt; %s.out &quot;                        \
+    &quot;2&gt; %s.err &quot;                        \
+    &quot;-vvv &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="27" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a890e45ff3bb0dd8a86b2ac034eec4a36" prot="public" static="no">
+        <name>OPENSSH_CMD_END</name>
+        <initializer>&quot;-p 1234 localhost ls&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="39" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1acd0c930b1fc2e5498201eedc89284427" prot="public" static="no">
+        <name>OPENSSH_CMD</name>
+        <initializer>    <ref refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" kindref="member">OPENSSH_CMD_START</ref>(<ref refid="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" kindref="member">OPENSSH_HOSTKEY_ALGOS</ref>) <ref refid="pkd__client_8h_1a890e45ff3bb0dd8a86b2ac034eec4a36" kindref="member">OPENSSH_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="41" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1ae38190bb2e850c9e47a8841dc401acae" prot="public" static="no">
+        <name>OPENSSH_KEX_CMD</name>
+        <param><defname>kexalgo</defname></param>
+        <initializer>    <ref refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" kindref="member">OPENSSH_CMD_START</ref>(<ref refid="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" kindref="member">OPENSSH_HOSTKEY_ALGOS</ref>) &quot;-o KexAlgorithms=&quot; kexalgo &quot; &quot; <ref refid="pkd__client_8h_1a890e45ff3bb0dd8a86b2ac034eec4a36" kindref="member">OPENSSH_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="44" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1af9e7270bf16c826002a60ef48c75635f" prot="public" static="no">
+        <name>OPENSSH_CIPHER_CMD</name>
+        <param><defname>ciphers</defname></param>
+        <initializer>    <ref refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" kindref="member">OPENSSH_CMD_START</ref>(<ref refid="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" kindref="member">OPENSSH_HOSTKEY_ALGOS</ref>) &quot;-c &quot; ciphers &quot; &quot; <ref refid="pkd__client_8h_1a890e45ff3bb0dd8a86b2ac034eec4a36" kindref="member">OPENSSH_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="47" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a398afbdd94840f94a0d8ba7c6ddc45d1" prot="public" static="no">
+        <name>OPENSSH_MAC_CMD</name>
+        <param><defname>macs</defname></param>
+        <initializer>    <ref refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" kindref="member">OPENSSH_CMD_START</ref>(<ref refid="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" kindref="member">OPENSSH_HOSTKEY_ALGOS</ref>) &quot;-c aes128-ctr,aes192-ctr,aes256-ctr,aes256-cbc,aes192-cbc,aes128-cbc -o MACs=&quot; macs &quot; &quot; <ref refid="pkd__client_8h_1a890e45ff3bb0dd8a86b2ac034eec4a36" kindref="member">OPENSSH_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="50" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1ac7800179d2fc5dc8d82da52a48485070" prot="public" static="no">
+        <name>OPENSSH_HOSTKEY_CMD</name>
+        <param><defname>hostkeyalgo</defname></param>
+        <initializer>    <ref refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" kindref="member">OPENSSH_CMD_START</ref>(&quot;-o HostKeyAlgorithms=&quot; hostkeyalgo &quot; &quot;) <ref refid="pkd__client_8h_1a890e45ff3bb0dd8a86b2ac034eec4a36" kindref="member">OPENSSH_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="53" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a3db87f24e66d656f83f8fc7b402180fe" prot="public" static="no">
+        <name>OPENSSH_CERT_CMD</name>
+        <initializer>    <ref refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" kindref="member">OPENSSH_CMD_START</ref>(<ref refid="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" kindref="member">OPENSSH_HOSTKEY_ALGOS</ref>) &quot;-o CertificateFile=&quot; CLIENT_ID_FILE &quot;-cert.pub &quot; OPENSSH_CMD_END</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="56" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1ae68bebd40bd621768da120e1a5efd661" prot="public" static="no">
+        <name>OPENSSH_SHA256_CERT_CMD</name>
+        <initializer>    <ref refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" kindref="member">OPENSSH_CMD_START</ref>(<ref refid="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" kindref="member">OPENSSH_HOSTKEY_ALGOS</ref>) &quot;-o CertificateFile=&quot; CLIENT_ID_FILE &quot;-sha256-cert.pub &quot; OPENSSH_CMD_END</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="59" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1aa3d1b80969b8e5163470eaa3d586e243" prot="public" static="no">
+        <name>DROPBEAR_BINARY</name>
+        <initializer>&quot;dbclient&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="64" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a2d4973448bae5cfd801f709bc7343b2c" prot="public" static="no">
+        <name>DROPBEAR_KEYGEN</name>
+        <initializer>&quot;dropbearkey&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="65" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a617cb4a8496dac536c3b4eee39f9ab98" prot="public" static="no">
+        <name>DROPBEAR_CMD_START</name>
+        <initializer>    <ref refid="pkd__client_8h_1aa3d1b80969b8e5163470eaa3d586e243" kindref="member">DROPBEAR_BINARY</ref> &quot; &quot;      \
+    &quot;-y -y &quot;                 \
+    &quot;-i &quot; CLIENT_ID_FILE &quot; &quot; \
+    &quot;1&gt; %s.out &quot;             \
+    &quot;2&gt; %s.err &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="67" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1aef223b6cf429658d32c46cc577da9c31" prot="public" static="no">
+        <name>DROPBEAR_CMD_END</name>
+        <initializer>&quot;-p 1234 localhost ls&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="74" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1acd29bc606476871a7f2f4408ef0aecea" prot="public" static="no">
+        <name>DROPBEAR_CMD</name>
+        <initializer>    <ref refid="pkd__client_8h_1a617cb4a8496dac536c3b4eee39f9ab98" kindref="member">DROPBEAR_CMD_START</ref> <ref refid="pkd__client_8h_1aef223b6cf429658d32c46cc577da9c31" kindref="member">DROPBEAR_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="76" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a5510937fe8263cd7784f227d66b18bf0" prot="public" static="no">
+        <name>DROPBEAR_CIPHER_CMD</name>
+        <param><defname>ciphers</defname></param>
+        <initializer>    <ref refid="pkd__client_8h_1a617cb4a8496dac536c3b4eee39f9ab98" kindref="member">DROPBEAR_CMD_START</ref> &quot;-c &quot; ciphers &quot; &quot; <ref refid="pkd__client_8h_1aef223b6cf429658d32c46cc577da9c31" kindref="member">DROPBEAR_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="84" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkd__client_8h_1a3ca710a065268e37baa704a248d59350" prot="public" static="no">
+        <name>DROPBEAR_MAC_CMD</name>
+        <param><defname>macs</defname></param>
+        <initializer>    <ref refid="pkd__client_8h_1a617cb4a8496dac536c3b4eee39f9ab98" kindref="member">DROPBEAR_CMD_START</ref> &quot;-m &quot; macs &quot; &quot; <ref refid="pkd__client_8h_1aef223b6cf429658d32c46cc577da9c31" kindref="member">DROPBEAR_CMD_END</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/pkd/pkd_client.h" line="87" column="9" bodyfile="libssh-mirror/tests/pkd/pkd_client.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>pkd_client.h<sp/>--<sp/>macros<sp/>for<sp/>generating<sp/>client-specific<sp/>command</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>invocations<sp/>for<sp/>use<sp/>with<sp/>pkd<sp/>testing</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>(c)<sp/>2014,<sp/>2018<sp/>Jon<sp/>Simons<sp/>&lt;jon@jonsimons.org&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__PKD_CLIENT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PKD_CLIENT_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tests_config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>OpenSSH<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="pkd__client_8h_1a5b07caeb6fb0f0b8c36e2951431f3157" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_BINARY<sp/>SSH_EXECUTABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="pkd__client_8h_1a517638571aacce544defbd9c2632f7a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_KEYGEN<sp/>&quot;ssh-keygen&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="pkd__client_8h_1a3b5f2953c18acd30d245de698788e9d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_HOSTKEY_ALGOS<sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/>&quot;-o<sp/>HostKeyAlgorithms=&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>OPENSSH_KEYS</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="pkd__client_8h_1af670bac6f2bdfb7788eb06d56f6d1c18" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_PKACCEPTED_TYPES<sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/>&quot;-o<sp/>PubkeyAcceptedKeyTypes=&quot;</highlight><highlight class="normal"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>OPENSSH_KEYS</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="pkd__client_8h_1a4d42ac265beb91c122758363d541aee2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_CMD_START(hostkey_algos)<sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_BINARY<sp/>&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;-o<sp/>UserKnownHostsFile=/dev/null<sp/>&quot;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;-o<sp/>StrictHostKeyChecking=no<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;-F<sp/>/dev/null<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>hostkey_algos<sp/>&quot;<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>OPENSSH_PKACCEPTED_TYPES<sp/>&quot;<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;-i<sp/>&quot;<sp/>CLIENT_ID_FILE<sp/>&quot;<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;1&gt;<sp/>%s.out<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;2&gt;<sp/>%s.err<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;-vvv<sp/>&quot;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="pkd__client_8h_1a890e45ff3bb0dd8a86b2ac034eec4a36" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_CMD_END<sp/>&quot;-p<sp/>1234<sp/>localhost<sp/>ls&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="pkd__client_8h_1acd0c930b1fc2e5498201eedc89284427" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_CMD<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_CMD_START(OPENSSH_HOSTKEY_ALGOS)<sp/>OPENSSH_CMD_END</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="pkd__client_8h_1ae38190bb2e850c9e47a8841dc401acae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_KEX_CMD(kexalgo)<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_CMD_START(OPENSSH_HOSTKEY_ALGOS)<sp/>&quot;-o<sp/>KexAlgorithms=&quot;</highlight><highlight class="normal"><sp/>kexalgo<sp/>&quot;<sp/>&quot;<sp/>OPENSSH_CMD_END</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="pkd__client_8h_1af9e7270bf16c826002a60ef48c75635f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_CIPHER_CMD(ciphers)<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_CMD_START(OPENSSH_HOSTKEY_ALGOS)<sp/>&quot;-c<sp/>&quot;</highlight><highlight class="normal"><sp/>ciphers<sp/>&quot;<sp/>&quot;<sp/>OPENSSH_CMD_END</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="pkd__client_8h_1a398afbdd94840f94a0d8ba7c6ddc45d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_MAC_CMD(macs)<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_CMD_START(OPENSSH_HOSTKEY_ALGOS)<sp/>&quot;-c<sp/>aes128-ctr,aes192-ctr,aes256-ctr,aes256-cbc,aes192-cbc,aes128-cbc<sp/>-o<sp/>MACs=&quot;</highlight><highlight class="normal"><sp/>macs<sp/>&quot;<sp/>&quot;<sp/>OPENSSH_CMD_END</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="pkd__client_8h_1ac7800179d2fc5dc8d82da52a48485070" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_HOSTKEY_CMD(hostkeyalgo)<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_CMD_START(&quot;-o<sp/>HostKeyAlgorithms=&quot;</highlight><highlight class="normal"><sp/>hostkeyalgo<sp/>&quot;<sp/>&quot;)<sp/>OPENSSH_CMD_END</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="pkd__client_8h_1a3db87f24e66d656f83f8fc7b402180fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_CERT_CMD<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_CMD_START(OPENSSH_HOSTKEY_ALGOS)<sp/>&quot;-o<sp/>CertificateFile=&quot;</highlight><highlight class="normal"><sp/>CLIENT_ID_FILE<sp/>&quot;-cert.pub<sp/>&quot;<sp/>OPENSSH_CMD_END</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="pkd__client_8h_1ae68bebd40bd621768da120e1a5efd661" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENSSH_SHA256_CERT_CMD<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>OPENSSH_CMD_START(OPENSSH_HOSTKEY_ALGOS)<sp/>&quot;-o<sp/>CertificateFile=&quot;</highlight><highlight class="normal"><sp/>CLIENT_ID_FILE<sp/>&quot;-sha256-cert.pub<sp/>&quot;<sp/>OPENSSH_CMD_END</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Dropbear<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="pkd__client_8h_1aa3d1b80969b8e5163470eaa3d586e243" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_BINARY<sp/>&quot;dbclient&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="pkd__client_8h_1a2d4973448bae5cfd801f709bc7343b2c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_KEYGEN<sp/>&quot;dropbearkey&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="pkd__client_8h_1a617cb4a8496dac536c3b4eee39f9ab98" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_CMD_START<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DROPBEAR_BINARY<sp/>&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;-y<sp/>-y<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;-i<sp/>&quot;<sp/>CLIENT_ID_FILE<sp/>&quot;<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;1&gt;<sp/>%s.out<sp/>&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;2&gt;<sp/>%s.err<sp/>&quot;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="pkd__client_8h_1aef223b6cf429658d32c46cc577da9c31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_CMD_END<sp/>&quot;-p<sp/>1234<sp/>localhost<sp/>ls&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="pkd__client_8h_1acd29bc606476871a7f2f4408ef0aecea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_CMD<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DROPBEAR_CMD_START<sp/>DROPBEAR_CMD_END</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0<sp/></highlight><highlight class="comment">/*<sp/>dbclient<sp/>does<sp/>not<sp/>expose<sp/>control<sp/>over<sp/>kex<sp/>algo<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_KEX_CMD(kexalgo)<sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DROPBEAR_CMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="pkd__client_8h_1a5510937fe8263cd7784f227d66b18bf0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_CIPHER_CMD(ciphers)<sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DROPBEAR_CMD_START<sp/>&quot;-c<sp/>&quot;</highlight><highlight class="normal"><sp/>ciphers<sp/>&quot;<sp/>&quot;<sp/>DROPBEAR_CMD_END</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="pkd__client_8h_1a3ca710a065268e37baa704a248d59350" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DROPBEAR_MAC_CMD(macs)<sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DROPBEAR_CMD_START<sp/>&quot;-m<sp/>&quot;</highlight><highlight class="normal"><sp/>macs<sp/>&quot;<sp/>&quot;<sp/>DROPBEAR_CMD_END</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__PKD_CLIENT_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/tests/pkd/pkd_client.h"/>
+  </compounddef>
+</doxygen>

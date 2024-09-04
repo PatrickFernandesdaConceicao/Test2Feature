@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="tests_2server_2CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>CMakeLists.txt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tests_2server_2CMakeLists_8txt_1a27919ddf205b5c7d5f05e35376500273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>project</definition>
+        <argsstring>(servertests C) if(WITH_SERVER AND UNIX AND NOT WIN32) find_package(socket_wrapper) add_subdirectory(test_server) set(LIBSSH_SERVER_TESTS torture_server torture_server_auth_kbdint torture_server_config) include_directories($</argsstring>
+        <name>project</name>
+        <param>
+          <type>servertests</type>
+          <declname>C</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/tests/server/CMakeLists.txt" line="1" column="1" bodyfile="libssh-mirror/tests/server/CMakeLists.txt" bodystart="1" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="tests_2server_2CMakeLists_8txt_1a27919ddf205b5c7d5f05e35376500273" refkind="member"><highlight class="normal"><ref refid="examples_2CMakeLists_8txt_1a3901ba16c737e186448fe169f89bb169" kindref="member">project</ref>(servertests<sp/>C)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WITH_SERVER<sp/>AND<sp/>UNIX<sp/>AND<sp/>NOT<sp/>WIN32)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">find_package(socket_wrapper)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" kindref="member">add_subdirectory</ref>(test_server)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(LIBSSH_SERVER_TESTS</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>torture_server</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__server__auth__kbdint_8c_1a1ae155752732ad519ce76bedf8b2a5b7" kindref="member">torture_server_auth_kbdint</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>torture_server_config</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">include_directories(${libssh_SOURCE_DIR}/<ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${libssh_BINARY_DIR}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>test_server)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ARGP_INCLUDE_DIR)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>include_directories(${ARGP_INCLUDE_DIR})</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">foreach(_SRV_TEST<sp/>${LIBSSH_SERVER_TESTS})</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tests_2unittests_2CMakeLists_8txt_1a68d7f1bdb9561c7e16dd12d0176fba99" kindref="member">add_cmocka_test</ref>(${_SRV_TEST}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SOURCES<sp/>${_SRV_TEST}.c</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMPILE_OPTIONS<sp/>${DEFAULT_C_COMPILE_FLAGS}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LINK_LIBRARIES<sp/>${TORTURE_LIBRARY}<sp/>testserver<sp/>util</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(OSX)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_property(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${_SRV_TEST}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROPERTY</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ENVIRONMENT<sp/>DYLD_FORCE_FLAT_NAMESPACE=1;DYLD_INSERT_LIBRARIES=${SOCKET_WRAPPER_LIBRARY})</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_property(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${_SRV_TEST}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROPERTY</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ENVIRONMENT<sp/>${TORTURE_ENVIRONMENT})</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">endforeach()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(WITH_SERVER<sp/>AND<sp/>UNIX<sp/>AND<sp/>NOT<sp/>WIN32)</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/tests/server/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

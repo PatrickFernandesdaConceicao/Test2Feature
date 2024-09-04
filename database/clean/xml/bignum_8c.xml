@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="bignum_8c" kind="file" language="C++">
+    <compoundname>bignum.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="bignum_8h" local="yes">libssh/bignum.h</includes>
+    <includes refid="string_8h" local="yes">libssh/string.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>sys/select.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>libssh/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/bignum.c</label>
+        <link refid="bignum_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>netdb.h</label>
+      </node>
+      <node id="19">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sys/types.h</label>
+      </node>
+      <node id="18">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="9">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bignum_8c_1a40cd92d707d2f965c852f218406420c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a27e04455dbb0a80b6fed70b30772717b" kindref="member">ssh_string</ref></type>
+        <definition>ssh_string ssh_make_bignum_string</definition>
+        <argsstring>(bignum num)</argsstring>
+        <name>ssh_make_bignum_string</name>
+        <param>
+          <type>bignum</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/bignum.c" line="30" column="12" bodyfile="src/bignum.c" bodystart="30" bodyend="64"/>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="69">bits</references>
+        <references refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" compoundref="string_8h" startline="31">ssh_string_struct::data</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <references refid="group__libssh__string_1gaedd3d6073cee901aaa288712896d0f28" compoundref="string_8c" startline="56" endline="74">ssh_string_new</references>
+        <referencedby refid="pki__crypto_8c_1a817708f53a64f50b665d647b6d9745c2" compoundref="pki__crypto_8c" startline="1392" endline="1471">pki_dsa_signature_to_blob</referencedby>
+        <referencedby refid="pki__crypto_8c_1a3f8e0c3d950862426b9900704ad64a28" compoundref="pki__crypto_8c" startline="1473" endline="1554">pki_ecdsa_signature_to_blob</referencedby>
+        <referencedby refid="pki__priv_8h_1aa2d53615fe67402faa649f5cb6160e91" compoundref="pki__crypto_8c" startline="1182" endline="1390">pki_publickey_to_blob</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+        <referencedby refid="kex_8h_1ad66e7a0891466620e0722fe19aaff9f8" compoundref="kex_8c" startline="1281" endline="1411">ssh_generate_session_keys</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bignum_8c_1aa8d793df34b2069dd183bc633ab0d95f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bignum</type>
+        <definition>bignum ssh_make_string_bn</definition>
+        <argsstring>(ssh_string string)</argsstring>
+        <name>ssh_make_string_bn</name>
+        <param>
+          <type><ref refid="libssh_8h_1a27e04455dbb0a80b6fed70b30772717b" kindref="member">ssh_string</ref></type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/bignum.c" line="66" column="8" bodyfile="src/bignum.c" bodystart="66" bodyend="80"/>
+        <references refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" compoundref="string_8h" startline="31">ssh_string_struct::data</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <references refid="libssh_8h_1aad7b2fc092973a478df54a40af69abf2">ssh_string_len</references>
+        <referencedby refid="pki__priv_8h_1aa18a4a0bdf5ec4b3e8ae3f21875b66aa" compoundref="pki__crypto_8c" startline="1018" endline="1059">pki_privkey_build_dss</referencedby>
+        <referencedby refid="pki__crypto_8c_1a474b53790bc129ac893791abe793209e" compoundref="pki__crypto_8c" startline="1101" endline="1151">pki_privkey_build_rsa</referencedby>
+        <referencedby refid="pki__priv_8h_1a44ea17f443978628be6498fed45f4f3d" compoundref="pki__crypto_8c" startline="1061" endline="1099">pki_pubkey_build_dss</referencedby>
+        <referencedby refid="pki__priv_8h_1ae2aeca92ffa38cd14e96fabba963389e" compoundref="pki__crypto_8c" startline="1153" endline="1180">pki_pubkey_build_rsa</referencedby>
+        <referencedby refid="pki__crypto_8c_1a0f1df403c735a5e15982a028f1540024" compoundref="pki__crypto_8c" startline="1656" endline="1773">pki_signature_from_dsa_blob</referencedby>
+        <referencedby refid="pki__crypto_8c_1ae3a66a820cd45b733f5ff75f898a0f33" compoundref="pki__crypto_8c" startline="1775" endline="1911">pki_signature_from_ecdsa_blob</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+        <referencedby refid="torture__session__keys_8c_1aac6afef6791f64ad36bd3de386fc33b2" compoundref="torture__session__keys_8c" startline="65" endline="85">torture_session_keys</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bignum_8c_1a40655727ef5d94d4702f1a4daba1749c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_print_bignum</definition>
+        <argsstring>(const char *name, const_bignum num)</argsstring>
+        <name>ssh_print_bignum</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const_bignum</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/bignum.c" line="83" column="6" bodyfile="src/bignum.c" bodystart="83" bodyend="97"/>
+        <references refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" compoundref="samplesshd-kbdint_8c" startline="186">name</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <referencedby refid="dh_8h_1ad90769620d45d2750b3ab7844edd4996" compoundref="dh__crypto_8c" startline="44" endline="63">ssh_dh_debug_crypto</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2014<sp/>by<sp/>Aris<sp/>Adamantiadis<sp/>&lt;aris@badcode.be&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bignum_8h" kindref="compound">libssh/bignum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8h" kindref="compound">libssh/string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="bignum_8h_1a40cd92d707d2f965c852f218406420c2" refkind="member"><highlight class="normal"><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/><ref refid="bignum_8c_1a40cd92d707d2f965c852f218406420c2" kindref="member">ssh_make_bignum_string</ref>(bignum<sp/>num)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/>ptr<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pad<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>bignum_num_bytes(num);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" kindref="member">bits</ref><sp/>=<sp/>bignum_num_bits(num);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>the<sp/>first<sp/>bit<sp/>is<sp/>set<sp/>we<sp/>have<sp/>a<sp/>negative<sp/>number<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" kindref="member">bits</ref><sp/>%<sp/>8)<sp/>&amp;&amp;<sp/>bignum_is_bit_set(num,<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" kindref="member">bits</ref><sp/>-<sp/>1))<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>pad++;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_CRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" kindref="member">SSH_LOG</ref>(<ref refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" kindref="member">SSH_LOG_TRACE</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%zu<sp/>bits,<sp/>%zu<sp/>bytes,<sp/>%zu<sp/>padding\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" kindref="member">bits</ref>,<sp/>len,<sp/>pad);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DEBUG_CRYPTO<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>ptr<sp/>=<sp/><ref refid="group__libssh__string_1gaedd3d6073cee901aaa288712896d0f28" kindref="member">ssh_string_new</ref>(len<sp/>+<sp/>pad);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>have<sp/>a<sp/>negative<sp/>number<sp/>so<sp/>we<sp/>need<sp/>a<sp/>leading<sp/>zero<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pad)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr-&gt;<ref refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" kindref="member">data</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>bignum_bn2bin(num,<sp/>len,<sp/>ptr-&gt;<ref refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" kindref="member">data</ref><sp/>+<sp/>pad);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="bignum_8h_1aa8d793df34b2069dd183bc633ab0d95f" refkind="member"><highlight class="normal">bignum<sp/><ref refid="bignum_8c_1aa8d793df34b2069dd183bc633ab0d95f" kindref="member">ssh_make_string_bn</ref>(<ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>bignum<sp/>bn<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len<sp/>=<sp/><ref refid="libssh_8h_1aad7b2fc092973a478df54a40af69abf2" kindref="member">ssh_string_len</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_CRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" kindref="member">SSH_LOG</ref>(<ref refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" kindref="member">SSH_LOG_TRACE</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Importing<sp/>a<sp/>%zu<sp/>bits,<sp/>%zu<sp/>bytes<sp/>object<sp/>...\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>*<sp/>8,<sp/>len);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DEBUG_CRYPTO<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>bignum_bin2bn(string-&gt;<ref refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" kindref="member">data</ref>,<sp/>len,<sp/>&amp;bn);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bn;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>prints<sp/>the<sp/>bignum<sp/>on<sp/>stderr<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="bignum_8h_1a49e4571656a51c97ee2c990c8a06f144" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bignum_8c_1a40655727ef5d94d4702f1a4daba1749c" kindref="member">ssh_print_bignum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>,<sp/>const_bignum<sp/>num)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hex<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bignum_bn2hex(num,<sp/>&amp;hex);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;%s<sp/>value:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>,<sp/>(hex<sp/>==<sp/>NULL)<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;(null)&quot;</highlight><highlight class="normal"><sp/>:<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>hex);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_LIBGCRYPT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(hex);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>HAVE_LIBCRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>OPENSSL_free(hex);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>HAVE_LIBMBEDCRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(hex);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/bignum.c"/>
+  </compounddef>
+</doxygen>

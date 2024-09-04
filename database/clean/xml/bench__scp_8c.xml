@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="bench__scp_8c" kind="file" language="C++">
+    <compoundname>bench_scp.c</compoundname>
+    <includes refid="benchmarks_8h" local="yes">benchmarks.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>sys/select.h</label>
+      </node>
+      <node id="9">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="8">
+        <label>netdb.h</label>
+      </node>
+      <node id="1">
+        <label>tests/benchmarks/bench_scp.c</label>
+        <link refid="bench__scp_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>benchmarks.h</label>
+        <link refid="benchmarks_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>sys/types.h</label>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" prot="public" static="no">
+        <name>SCPDIR</name>
+        <initializer>&quot;/tmp/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/bench_scp.c" line="27" column="9" bodyfile="tests/benchmarks/bench_scp.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" prot="public" static="no">
+        <name>SCPFILE</name>
+        <initializer>&quot;scpbenchmark&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/bench_scp.c" line="28" column="9" bodyfile="tests/benchmarks/bench_scp.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_scp_up</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_scp_up</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/bench_scp.c" line="38" column="5" bodyfile="tests/benchmarks/bench_scp.c" bodystart="38" bodyend="82"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" compoundref="bench__scp_8c" startline="27">SCPDIR</references>
+        <references refid="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" compoundref="bench__scp_8c" startline="28">SCPFILE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" compoundref="scp_8c" startline="241" endline="277">ssh_scp_close</references>
+        <references refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" compoundref="scp_8c" startline="286" endline="304">ssh_scp_free</references>
+        <references refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" compoundref="scp_8c" startline="119" endline="230">ssh_scp_init</references>
+        <references refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" compoundref="scp_8c" startline="61" endline="108">ssh_scp_new</references>
+        <references refid="group__libssh__scp_1ga544f4b9c525071910110ada94148adc6" compoundref="scp_8c" startline="557" endline="560">ssh_scp_push_file</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5a869c4d02c7a4b9ece1e5134dc1724061" compoundref="libssh_8h" startline="426">SSH_SCP_WRITE</references>
+        <references refid="group__libssh__scp_1ga11f48e2cf62bcec20d9232ed3ca41752" compoundref="scp_8c" startline="642" endline="702">ssh_scp_write</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_scp_down</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_scp_down</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/bench_scp.c" line="92" column="5" bodyfile="tests/benchmarks/bench_scp.c" bodystart="92" bodyend="150"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" compoundref="bench__scp_8c" startline="27">SCPDIR</references>
+        <references refid="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" compoundref="bench__scp_8c" startline="28">SCPFILE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" compoundref="scp_8c" startline="918" endline="944">ssh_scp_accept_request</references>
+        <references refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" compoundref="scp_8c" startline="241" endline="277">ssh_scp_close</references>
+        <references refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" compoundref="scp_8c" startline="286" endline="304">ssh_scp_free</references>
+        <references refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" compoundref="scp_8c" startline="119" endline="230">ssh_scp_init</references>
+        <references refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" compoundref="scp_8c" startline="61" endline="108">ssh_scp_new</references>
+        <references refid="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" compoundref="scp_8c" startline="770" endline="869">ssh_scp_pull_request</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5aa2d96fd7ece9f3b0c17359746867e4df" compoundref="libssh_8h" startline="428">SSH_SCP_READ</references>
+        <references refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" compoundref="scp_8c" startline="956" endline="1014">ssh_scp_read</references>
+        <references refid="group__libssh__scp_1ga8b6f736a5b5af73cf59c7825d7e61966" compoundref="scp_8c" startline="1054" endline="1060">ssh_scp_request_get_size</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaab15eaf3f0bd4918a9d73c1202596bc60" compoundref="libssh_8h" startline="436">SSH_SCP_REQUEST_NEWFILE</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>bench_scp.c</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="benchmarks_8h" kindref="compound">benchmarks.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCPDIR<sp/>&quot;/tmp/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCPFILE<sp/>&quot;scpbenchmark&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" kindref="member">benchmarks_scp_up</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>bytes;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>ts;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ms=0.0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>total=0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="structssh__scp__struct" kindref="compound">ssh_scp</ref><sp/>scp;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>bytes<sp/>=<sp/>args-&gt;<ref refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" kindref="member">datasize</ref><sp/>*<sp/>1024<sp/>*<sp/>1024;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>scp<sp/>=<sp/><ref refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" kindref="member">ssh_scp_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5a869c4d02c7a4b9ece1e5134dc1724061" kindref="member">SSH_SCP_WRITE</ref>,<ref refid="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" kindref="member">SCPDIR</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(scp<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" kindref="member">ssh_scp_init</ref>(scp)==<ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__scp_1ga544f4b9c525071910110ada94148adc6" kindref="member">ssh_scp_push_file</ref>(scp,<ref refid="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" kindref="member">SCPFILE</ref>,bytes,0777)<sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(args-&gt;<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref>&gt;0)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;Starting<sp/>upload<sp/>of<sp/>%lu<sp/>bytes<sp/>now\n&quot;</highlight><highlight class="normal">,bytes);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" kindref="member">timestamp_init</ref>(&amp;ts);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(total<sp/>&lt;<sp/>bytes){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>towrite<sp/>=<sp/>bytes<sp/>-<sp/>total;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(towrite<sp/>&gt;<sp/>args-&gt;<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref>)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>towrite<sp/>=<sp/>args-&gt;<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>w=<ref refid="group__libssh__scp_1ga11f48e2cf62bcec20d9232ed3ca41752" kindref="member">ssh_scp_write</ref>(scp,<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,towrite);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w<sp/>==<sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>total<sp/>+=<sp/>towrite;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>ms=<ref refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" kindref="member">elapsed_time</ref>(&amp;ts);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>*bps=8000<sp/>*<sp/>(float)bytes<sp/>/<sp/>ms;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(args-&gt;<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;Upload<sp/>took<sp/>%f<sp/>ms<sp/>for<sp/>%lu<sp/>bytes,<sp/>at<sp/>%f<sp/>bps\n&quot;</highlight><highlight class="normal">,ms,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bytes,*bps);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" kindref="member">ssh_scp_close</ref>(scp);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" kindref="member">ssh_scp_free</ref>(scp);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Error<sp/>during<sp/>scp<sp/>upload<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(scp){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" kindref="member">ssh_scp_close</ref>(scp);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" kindref="member">ssh_scp_free</ref>(scp);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" kindref="member">benchmarks_scp_down</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>bytes;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>ts;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ms=0.0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>total=0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="structssh__scp__struct" kindref="compound">ssh_scp</ref><sp/>scp;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>bytes<sp/>=<sp/>args-&gt;<ref refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" kindref="member">datasize</ref><sp/>*<sp/>1024<sp/>*<sp/>1024;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>scp<sp/>=<sp/><ref refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" kindref="member">ssh_scp_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5aa2d96fd7ece9f3b0c17359746867e4df" kindref="member">SSH_SCP_READ</ref>,<ref refid="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" kindref="member">SCPDIR</ref><sp/><ref refid="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" kindref="member">SCPFILE</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(scp<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" kindref="member">ssh_scp_init</ref>(scp)==<ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>r=<ref refid="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" kindref="member">ssh_scp_pull_request</ref>(scp);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(r<sp/>==<sp/><ref refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaab15eaf3f0bd4918a9d73c1202596bc60" kindref="member">SSH_SCP_REQUEST_NEWFILE</ref>){</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>size=<ref refid="group__libssh__scp_1ga8b6f736a5b5af73cf59c7825d7e61966" kindref="member">ssh_scp_request_get_size</ref>(scp);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bytes<sp/>&gt;<sp/>size){</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Only<sp/>%zd<sp/>bytes<sp/>available<sp/>(on<sp/>%lu<sp/>requested).\n&quot;</highlight><highlight class="normal">,size,bytes);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bytes<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(size<sp/>&gt;<sp/>bytes){</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;File<sp/>is<sp/>%zd<sp/>bytes<sp/>(on<sp/>%lu<sp/>requested).<sp/>Will<sp/>cut<sp/>the<sp/>end\n&quot;</highlight><highlight class="normal">,size,bytes);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(args-&gt;<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref>&gt;0)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;Starting<sp/>download<sp/>of<sp/>%lu<sp/>bytes<sp/>now\n&quot;</highlight><highlight class="normal">,bytes);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" kindref="member">timestamp_init</ref>(&amp;ts);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" kindref="member">ssh_scp_accept_request</ref>(scp);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(total<sp/>&lt;<sp/>bytes){</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>toread<sp/>=<sp/>bytes<sp/>-<sp/>total;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(toread<sp/>&gt;<sp/>args-&gt;<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref>)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toread<sp/>=<sp/>args-&gt;<ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>r=<ref refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" kindref="member">ssh_scp_read</ref>(scp,<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,toread);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(r<sp/>==<sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref><sp/>||<sp/>r<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>total<sp/>+=<sp/>r;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>ms=<ref refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" kindref="member">elapsed_time</ref>(&amp;ts);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>*bps=8000<sp/>*<sp/>(float)bytes<sp/>/<sp/>ms;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(args-&gt;<ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stdout,</highlight><highlight class="stringliteral">&quot;download<sp/>took<sp/>%f<sp/>ms<sp/>for<sp/>%lu<sp/>bytes,<sp/>at<sp/>%f<sp/>bps\n&quot;</highlight><highlight class="normal">,ms,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bytes,*bps);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Expected<sp/>SSH_SCP_REQUEST_NEWFILE,<sp/>got<sp/>%d\n&quot;</highlight><highlight class="normal">,r);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" kindref="member">ssh_scp_close</ref>(scp);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" kindref="member">ssh_scp_free</ref>(scp);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Error<sp/>during<sp/>scp<sp/>download<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(scp){</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" kindref="member">ssh_scp_close</ref>(scp);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" kindref="member">ssh_scp_free</ref>(scp);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/benchmarks/bench_scp.c"/>
+  </compounddef>
+</doxygen>

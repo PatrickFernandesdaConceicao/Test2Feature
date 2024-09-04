@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="winlocks_8c" kind="file" language="C++">
+    <compoundname>winlocks.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="threads_8h" local="yes">libssh/threads.h</includes>
+    <includes refid="callbacks_8h" local="no">libssh/callbacks.h</includes>
+    <includes local="no">windows.h</includes>
+    <includes local="no">winbase.h</includes>
+    <includes local="no">errno.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>sys/select.h</label>
+      </node>
+      <node id="1">
+        <label>src/threads/winlocks.c</label>
+        <link refid="winlocks_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>windows.h</label>
+      </node>
+      <node id="17">
+        <label>winbase.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="14">
+        <label>stdint.h</label>
+      </node>
+      <node id="15">
+        <label>stdlib.h</label>
+      </node>
+      <node id="18">
+        <label>errno.h</label>
+      </node>
+      <node id="11">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>netdb.h</label>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="3">
+        <label>libssh/threads.h</label>
+        <link refid="threads_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="winlocks_8c_1a5582a77620a83e2e3ba8969a4130e61c" prot="public" static="yes" mutable="no">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref></type>
+        <definition>struct ssh_threads_callbacks_struct ssh_threads_winlock</definition>
+        <argsstring></argsstring>
+        <name>ssh_threads_winlock</name>
+        <initializer>=
+{
+    .type = &quot;threads_winlock&quot;,
+    .mutex_init = <ref refid="winlocks_8c_1ab245fdaed74fd6a6f334e688187ef466" kindref="member">ssh_winlock_mutex_init</ref>,
+    .mutex_destroy = <ref refid="winlocks_8c_1a5301b95d05f3ca1cd1bf6da0555c93ed" kindref="member">ssh_winlock_mutex_destroy</ref>,
+    .mutex_lock = <ref refid="winlocks_8c_1a4d1be01dabca93dbd4af474daca60409" kindref="member">ssh_winlock_mutex_lock</ref>,
+    .mutex_unlock = <ref refid="winlocks_8c_1a0d80978b19c6c744c75a4d501705f482" kindref="member">ssh_winlock_mutex_unlock</ref>,
+    .thread_id = <ref refid="winlocks_8c_1aef4c368bc40da70e1c100d6df3e3bf89" kindref="member">ssh_winlock_thread_id</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="65" column="22" bodyfile="src/threads/winlocks.c" bodystart="70" bodyend="-1"/>
+        <referencedby refid="winlocks_8c_1ae82446dfb825a472a4fbff79d305b213" compoundref="winlocks_8c" startline="120" endline="123">ssh_threads_get_default</referencedby>
+        <referencedby refid="winlocks_8c_1ab6f1ef235237698cf245c1e006a809dc" compoundref="winlocks_8c" startline="115" endline="118">ssh_threads_get_winlock</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="winlocks_8c_1ab245fdaed74fd6a6f334e688187ef466" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_winlock_mutex_init</definition>
+        <argsstring>(void **priv)</argsstring>
+        <name>ssh_winlock_mutex_init</name>
+        <param>
+          <type>void **</type>
+          <declname>priv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="30" column="12" bodyfile="src/threads/winlocks.c" bodystart="30" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1a5301b95d05f3ca1cd1bf6da0555c93ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_winlock_mutex_destroy</definition>
+        <argsstring>(void **lock)</argsstring>
+        <name>ssh_winlock_mutex_destroy</name>
+        <param>
+          <type>void **</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="45" column="12" bodyfile="src/threads/winlocks.c" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1a4d1be01dabca93dbd4af474daca60409" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_winlock_mutex_lock</definition>
+        <argsstring>(void **lock)</argsstring>
+        <name>ssh_winlock_mutex_lock</name>
+        <param>
+          <type>void **</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="53" column="12" bodyfile="src/threads/winlocks.c" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1a0d80978b19c6c744c75a4d501705f482" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_winlock_mutex_unlock</definition>
+        <argsstring>(void **lock)</argsstring>
+        <name>ssh_winlock_mutex_unlock</name>
+        <param>
+          <type>void **</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="59" column="12" bodyfile="src/threads/winlocks.c" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1aef4c368bc40da70e1c100d6df3e3bf89" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>static unsigned long ssh_winlock_thread_id</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_winlock_thread_id</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="65" column="22" bodyfile="src/threads/winlocks.c" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_mutex_lock</definition>
+        <argsstring>(SSH_MUTEX *mutex)</argsstring>
+        <name>ssh_mutex_lock</name>
+        <param>
+          <type><ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="82" column="6" bodyfile="src/threads/winlocks.c" bodystart="82" bodyend="108"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1a0bddf62c454d664389e5b672eb94270d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_mutex_unlock</definition>
+        <argsstring>(SSH_MUTEX *mutex)</argsstring>
+        <name>ssh_mutex_unlock</name>
+        <param>
+          <type><ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="110" column="6" bodyfile="src/threads/winlocks.c" bodystart="110" bodyend="113"/>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1ab6f1ef235237698cf245c1e006a809dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+        <definition>struct ssh_threads_callbacks_struct* ssh_threads_get_winlock</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_get_winlock</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="115" column="35" bodyfile="src/threads/winlocks.c" bodystart="115" bodyend="118"/>
+        <references refid="winlocks_8c_1a5582a77620a83e2e3ba8969a4130e61c" compoundref="winlocks_8c" startline="70">ssh_threads_winlock</references>
+      </memberdef>
+      <memberdef kind="function" id="winlocks_8c_1ae82446dfb825a472a4fbff79d305b213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+        <definition>struct ssh_threads_callbacks_struct* ssh_threads_get_default</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_get_default</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns a pointer to the appropriate callbacks structure for the environment, to be used with ssh_threads_set_callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to a <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> to be used with ssh_threads_set_callbacks.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" kindref="member">ssh_threads_set_callbacks</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/winlocks.c" line="120" column="35" bodyfile="src/threads/winlocks.c" bodystart="120" bodyend="123"/>
+        <references refid="noop_8c_1a3381df5358757a32636727fb0081976c" compoundref="noop_8c" startline="38">ssh_threads_noop</references>
+        <references refid="winlocks_8c_1a5582a77620a83e2e3ba8969a4130e61c" compoundref="winlocks_8c" startline="70">ssh_threads_winlock</references>
+        <referencedby refid="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" compoundref="threads_8c" startline="42" endline="64">ssh_threads_init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2018<sp/>by<sp/>Anderson<sp/>Toshiyuki<sp/>Sasaki</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threads_8h" kindref="compound">libssh/threads.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;winbase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="winlocks_8c_1ab245fdaed74fd6a6f334e688187ef466" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="winlocks_8c_1ab245fdaed74fd6a6f334e688187ef466" kindref="member">ssh_winlock_mutex_init</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**priv)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>CRITICAL_SECTION<sp/>*lock<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(CRITICAL_SECTION));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lock<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ENOMEM;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>InitializeCriticalSection(lock);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>*priv<sp/>=<sp/>lock;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="winlocks_8c_1a5301b95d05f3ca1cd1bf6da0555c93ed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="winlocks_8c_1a5301b95d05f3ca1cd1bf6da0555c93ed" kindref="member">ssh_winlock_mutex_destroy</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**lock)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>DeleteCriticalSection((CRITICAL_SECTION<sp/>*)<sp/>*lock);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*lock);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="winlocks_8c_1a4d1be01dabca93dbd4af474daca60409" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="winlocks_8c_1a4d1be01dabca93dbd4af474daca60409" kindref="member">ssh_winlock_mutex_lock</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**lock)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>EnterCriticalSection((CRITICAL_SECTION<sp/>*)<sp/>*lock);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="winlocks_8c_1a0d80978b19c6c744c75a4d501705f482" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="winlocks_8c_1a0d80978b19c6c744c75a4d501705f482" kindref="member">ssh_winlock_mutex_unlock</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**lock)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>LeaveCriticalSection((CRITICAL_SECTION<sp/>*)<sp/>*lock);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="winlocks_8c_1a5582a77620a83e2e3ba8969a4130e61c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="winlocks_8c_1aef4c368bc40da70e1c100d6df3e3bf89" kindref="member">ssh_winlock_thread_id</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>GetCurrentThreadId();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/><ref refid="winlocks_8c_1a5582a77620a83e2e3ba8969a4130e61c" kindref="member">ssh_threads_winlock</ref><sp/>=</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structssh__threads__callbacks__struct_1a2def4dea77cca2a4e12db84c42590a0c" kindref="member">type</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;threads_winlock&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_init<sp/>=<sp/><ref refid="winlocks_8c_1ab245fdaed74fd6a6f334e688187ef466" kindref="member">ssh_winlock_mutex_init</ref>,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_destroy<sp/>=<sp/><ref refid="winlocks_8c_1a5301b95d05f3ca1cd1bf6da0555c93ed" kindref="member">ssh_winlock_mutex_destroy</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_lock<sp/>=<sp/><ref refid="winlocks_8c_1a4d1be01dabca93dbd4af474daca60409" kindref="member">ssh_winlock_mutex_lock</ref>,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_unlock<sp/>=<sp/><ref refid="winlocks_8c_1a0d80978b19c6c744c75a4d501705f482" kindref="member">ssh_winlock_mutex_unlock</ref>,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>.thread_id<sp/>=<sp/><ref refid="winlocks_8c_1aef4c368bc40da70e1c100d6df3e3bf89" kindref="member">ssh_winlock_thread_id</ref></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Threads<sp/>interface<sp/>implementation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="winlocks_8c_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="winlocks_8c_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" kindref="member">ssh_mutex_lock</ref>(<ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref><sp/>*mutex)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>CRITICAL_SECTION<sp/>*mutex_tmp<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*mutex<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mutex_tmp<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(CRITICAL_SECTION));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mutex_tmp<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(ENOMEM);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitializeCriticalSection(mutex_tmp);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>InterlockedCompareExchangePointer((PVOID*)mutex,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PVOID)mutex_tmp,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DeleteCriticalSection(mutex_tmp);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(mutex_tmp);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(ENOMEM);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>EnterCriticalSection(*mutex);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="winlocks_8c_1a0bddf62c454d664389e5b672eb94270d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="winlocks_8c_1a0bddf62c454d664389e5b672eb94270d" kindref="member">ssh_mutex_unlock</ref>(<ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref><sp/>*mutex)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>LeaveCriticalSection(*mutex);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="winlocks_8c_1ab6f1ef235237698cf245c1e006a809dc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/>*<ref refid="winlocks_8c_1ab6f1ef235237698cf245c1e006a809dc" kindref="member">ssh_threads_get_winlock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="winlocks_8c_1a5582a77620a83e2e3ba8969a4130e61c" kindref="member">ssh_threads_winlock</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="winlocks_8c_1ae82446dfb825a472a4fbff79d305b213" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/>*<ref refid="winlocks_8c_1ae82446dfb825a472a4fbff79d305b213" kindref="member">ssh_threads_get_default</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="winlocks_8c_1a5582a77620a83e2e3ba8969a4130e61c" kindref="member">ssh_threads_winlock</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/threads/winlocks.c"/>
+  </compounddef>
+</doxygen>

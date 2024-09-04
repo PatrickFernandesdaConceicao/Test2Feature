@@ -1,0 +1,1055 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ge25519_8c" kind="file" language="C++">
+    <compoundname>ge25519.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="fe25519_8h" local="yes">libssh/fe25519.h</includes>
+    <includes refid="sc25519_8h" local="yes">libssh/sc25519.h</includes>
+    <includes refid="ge25519_8h" local="yes">libssh/ge25519.h</includes>
+    <includes local="yes">ge25519_base.data</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>sys/select.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17">
+        <label>libssh/ge25519.h</label>
+        <link refid="ge25519_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>libssh/sc25519.h</label>
+        <link refid="sc25519_8h"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/external/ge25519.c</label>
+        <link refid="ge25519_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>netdb.h</label>
+      </node>
+      <node id="11">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="18">
+        <label>ge25519_base.data</label>
+      </node>
+      <node id="9">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="3">
+        <label>libssh/fe25519.h</label>
+        <link refid="fe25519_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structge25519__p1p1" prot="public">ge25519_p1p1</innerclass>
+    <innerclass refid="structge25519__p2" prot="public">ge25519_p2</innerclass>
+    <innerclass refid="structge25519__aff" prot="public">ge25519_aff</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" prot="public" static="no">
+        <name>ge25519_p3</name>
+        <initializer><ref refid="structge25519" kindref="compound">ge25519</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="45" column="9" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ge25519_8c_1af3df95655c423281819dcef054ac5eb0" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structfe25519" kindref="compound">fe25519</ref></type>
+        <definition>const fe25519 ge25519_ecd</definition>
+        <argsstring></argsstring>
+        <name>ge25519_ecd</name>
+        <initializer>= {
+    {0xA3, 0x78, 0x59, 0x13, 0xCA, 0x4D, 0xEB, 0x75,
+     0xAB, 0xD8, 0x41, 0x41, 0x4D, 0x0A, 0x70, 0x00,
+     0x98, 0xE8, 0x79, 0x77, 0x79, 0x40, 0xC7, 0x8C,
+     0x73, 0xFE, 0x6F, 0x2B, 0xEE, 0x6C, 0x03, 0x52}
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="22" column="22" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="22" bodyend="-1"/>
+        <referencedby refid="ge25519_8c_1ad010d20878201e4b383fc9124f2c8da0" compoundref="ge25519_8c" startline="228" endline="278">ge25519_unpackneg_vartime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="ge25519_8c_1af318da5614ea49610929b8e33dbac008" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structfe25519" kindref="compound">fe25519</ref></type>
+        <definition>const fe25519 ge25519_ec2d</definition>
+        <argsstring></argsstring>
+        <name>ge25519_ec2d</name>
+        <initializer>= {
+    {0x59, 0xF1, 0xB2, 0x26, 0x94, 0x9B, 0xD6, 0xEB,
+     0x56, 0xB1, 0x83, 0x82, 0x9A, 0x14, 0xE0, 0x00,
+     0x30, 0xD1, 0xF3, 0xEE, 0xF2, 0x80, 0x8E, 0x19,
+     0xE7, 0xFC, 0xDF, 0x56, 0xDC, 0xD9, 0x06, 0x24}
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="30" column="22" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="30" bodyend="-1"/>
+        <referencedby refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" compoundref="ge25519_8c" startline="127" endline="145">add_p1p1</referencedby>
+        <referencedby refid="ge25519_8c_1a27bbd9c4c5f968bf6b2fa9ae8698d6a7" compoundref="ge25519_8c" startline="104" endline="125">ge25519_mixadd2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="ge25519_8c_1a58e9dee67bf51a0c6044d62b80764860" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structfe25519" kindref="compound">fe25519</ref></type>
+        <definition>const fe25519 ge25519_sqrtm1</definition>
+        <argsstring></argsstring>
+        <name>ge25519_sqrtm1</name>
+        <initializer>= {
+    {0xB0, 0xA0, 0x0E, 0x4A, 0x27, 0x1B, 0xEE, 0xC4,
+     0x78, 0xE4, 0x2F, 0xAD, 0x06, 0x18, 0x43, 0x2F,
+     0xA7, 0xD7, 0xFB, 0x3D, 0x99, 0x00, 0x4D, 0x2B,
+     0x0B, 0xDF, 0xC1, 0x4F, 0x80, 0x24, 0x83, 0x2B}
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="38" column="22" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="38" bodyend="-1"/>
+        <referencedby refid="ge25519_8c_1ad010d20878201e4b383fc9124f2c8da0" compoundref="ge25519_8c" startline="228" endline="278">ge25519_unpackneg_vartime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="ge25519_8c_1abdae649b447c46df34addbc646dbcfde" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structge25519" kindref="compound">ge25519</ref></type>
+        <definition>const ge25519 ge25519_base</definition>
+        <argsstring></argsstring>
+        <name>ge25519_base</name>
+        <initializer>= {
+    {{0x1A, 0xD5, 0x25, 0x8F, 0x60, 0x2D, 0x56, 0xC9,
+      0xB2, 0xA7, 0x25, 0x95, 0x60, 0xC7, 0x2C, 0x69,
+      0x5C, 0xDC, 0xD6, 0xFD, 0x31, 0xE2, 0xA4, 0xC0,
+      0xFE, 0x53, 0x6E, 0xCD, 0xD3, 0x36, 0x69, 0x21}},
+    {{0x58, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66,
+      0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66,
+      0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66,
+      0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66}},
+    {{0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}},
+    {{0xA3, 0xDD, 0xB7, 0xA5, 0xB3, 0x8A, 0xDE, 0x6D,
+      0xF5, 0x52, 0x51, 0x77, 0x80, 0x9F, 0xF0, 0x20,
+      0x7D, 0xE3, 0xAB, 0x64, 0x8E, 0x4E, 0xEA, 0x66,
+      0x65, 0x76, 0x8B, 0xD7, 0x0F, 0x5F, 0x87, 0x67}}
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="67" column="15" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref></type>
+        <definition>const ge25519_aff ge25519_base_multiples_affine[425]</definition>
+        <argsstring>[425]</argsstring>
+        <name>ge25519_base_multiples_affine</name>
+        <initializer>= {
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="87" column="26" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="87" bodyend="-1"/>
+        <referencedby refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" compoundref="ge25519_8c" startline="195" endline="213">choose_t</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void p1p1_to_p2</definition>
+        <argsstring>(ge25519_p2 *r, const ge25519_p1p1 *p)</argsstring>
+        <name>p1p1_to_p2</name>
+        <param>
+          <type><ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="91" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="91" bodyend="96"/>
+        <references refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" compoundref="fe25519_8h" startline="27">fe25519_mul</references>
+        <references refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" compoundref="ge25519_8c" startline="51">ge25519_p1p1::t</references>
+        <references refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" compoundref="ge25519_8c" startline="48">ge25519_p1p1::x</references>
+        <references refid="structge25519__p2_1a76b03ccffd33751fc3de57808976095c" compoundref="ge25519_8c" startline="55">ge25519_p2::x</references>
+        <references refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" compoundref="ge25519_8c" startline="50">ge25519_p1p1::y</references>
+        <references refid="structge25519__p2_1a5c2e394f99e45cb857e02a65fa5c1276" compoundref="ge25519_8c" startline="56">ge25519_p2::y</references>
+        <references refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" compoundref="ge25519_8c" startline="49">ge25519_p1p1::z</references>
+        <references refid="structge25519__p2_1aad2ccc057c6cfb1e53da810d8f98f4e7" compoundref="ge25519_8c" startline="57">ge25519_p2::z</references>
+        <referencedby refid="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" compoundref="ge25519_8c" startline="308" endline="352">ge25519_double_scalarmult_vartime</referencedby>
+        <referencedby refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" compoundref="ge25519_8c" startline="98" endline="102">p1p1_to_p3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void p1p1_to_p3</definition>
+        <argsstring>(ge25519_p3 *r, const ge25519_p1p1 *p)</argsstring>
+        <name>p1p1_to_p3</name>
+        <param>
+          <type><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="98" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="98" bodyend="102"/>
+        <references refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" compoundref="fe25519_8h" startline="27">fe25519_mul</references>
+        <references refid="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" compoundref="ge25519_8c" startline="91" endline="96">p1p1_to_p2</references>
+        <references refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" compoundref="ge25519_8c" startline="48">ge25519_p1p1::x</references>
+        <references refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" compoundref="ge25519_8c" startline="50">ge25519_p1p1::y</references>
+        <referencedby refid="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" compoundref="ge25519_8c" startline="308" endline="352">ge25519_double_scalarmult_vartime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1a27bbd9c4c5f968bf6b2fa9ae8698d6a7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ge25519_mixadd2</definition>
+        <argsstring>(ge25519_p3 *r, const ge25519_aff *q)</argsstring>
+        <name>ge25519_mixadd2</name>
+        <param>
+          <type><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="104" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="104" bodyend="125"/>
+        <references refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" compoundref="generate_8py" startline="3">generate.a</references>
+        <references refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" compoundref="fe25519_8h" startline="25">fe25519_add</references>
+        <references refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" compoundref="fe25519_8h" startline="27">fe25519_mul</references>
+        <references refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" compoundref="fe25519_8h" startline="26">fe25519_sub</references>
+        <references refid="ge25519_8c_1af318da5614ea49610929b8e33dbac008" compoundref="ge25519_8c" startline="30">ge25519_ec2d</references>
+        <references refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" compoundref="ge25519_8c" startline="61">ge25519_aff::x</references>
+        <references refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" compoundref="ge25519_8c" startline="62">ge25519_aff::y</references>
+        <referencedby refid="ge25519_8c_1a7beb2c4e34e16deb83ba47135a16a9a7" compoundref="ge25519_8c" startline="354" endline="369">ge25519_scalarmult_base</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void add_p1p1</definition>
+        <argsstring>(ge25519_p1p1 *r, const ge25519_p3 *p, const ge25519_p3 *q)</argsstring>
+        <name>add_p1p1</name>
+        <param>
+          <type><ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="127" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="127" bodyend="145"/>
+        <references refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" compoundref="generate_8py" startline="3">generate.a</references>
+        <references refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" compoundref="fe25519_8h" startline="25">fe25519_add</references>
+        <references refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" compoundref="fe25519_8h" startline="27">fe25519_mul</references>
+        <references refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" compoundref="fe25519_8h" startline="26">fe25519_sub</references>
+        <references refid="ge25519_8c_1af318da5614ea49610929b8e33dbac008" compoundref="ge25519_8c" startline="30">ge25519_ec2d</references>
+        <references refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" compoundref="ge25519_8c" startline="51">ge25519_p1p1::t</references>
+        <references refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" compoundref="ge25519_8c" startline="48">ge25519_p1p1::x</references>
+        <references refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" compoundref="ge25519_8c" startline="50">ge25519_p1p1::y</references>
+        <references refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" compoundref="ge25519_8c" startline="49">ge25519_p1p1::z</references>
+        <referencedby refid="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" compoundref="ge25519_8c" startline="308" endline="352">ge25519_double_scalarmult_vartime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dbl_p1p1</definition>
+        <argsstring>(ge25519_p1p1 *r, const ge25519_p2 *p)</argsstring>
+        <name>dbl_p1p1</name>
+        <param>
+          <type><ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="148" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="148" bodyend="164"/>
+        <references refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" compoundref="generate_8py" startline="3">generate.a</references>
+        <references refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" compoundref="fe25519_8h" startline="25">fe25519_add</references>
+        <references refid="fe25519_8h_1a0ed862868cf794764bf5abe4234a80cc" compoundref="fe25519_8h" startline="23">fe25519_neg</references>
+        <references refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" compoundref="fe25519_8h" startline="28">fe25519_square</references>
+        <references refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" compoundref="fe25519_8h" startline="26">fe25519_sub</references>
+        <references refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" compoundref="ge25519_8c" startline="51">ge25519_p1p1::t</references>
+        <references refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" compoundref="ge25519_8c" startline="48">ge25519_p1p1::x</references>
+        <references refid="structge25519__p2_1a76b03ccffd33751fc3de57808976095c" compoundref="ge25519_8c" startline="55">ge25519_p2::x</references>
+        <references refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" compoundref="ge25519_8c" startline="50">ge25519_p1p1::y</references>
+        <references refid="structge25519__p2_1a5c2e394f99e45cb857e02a65fa5c1276" compoundref="ge25519_8c" startline="56">ge25519_p2::y</references>
+        <references refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" compoundref="ge25519_8c" startline="49">ge25519_p1p1::z</references>
+        <references refid="structge25519__p2_1aad2ccc057c6cfb1e53da810d8f98f4e7" compoundref="ge25519_8c" startline="57">ge25519_p2::z</references>
+        <referencedby refid="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" compoundref="ge25519_8c" startline="308" endline="352">ge25519_double_scalarmult_vartime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1a1291725e17b1b13d833686177f440076" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void cmov_aff</definition>
+        <argsstring>(ge25519_aff *r, const ge25519_aff *p, unsigned char b)</argsstring>
+        <name>cmov_aff</name>
+        <param>
+          <type><ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="167" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="167" bodyend="171"/>
+        <references refid="fe25519_8h_1a74a6f02a12e96a065c067865bc38bb3a" compoundref="fe25519_8h" startline="20">fe25519_cmov</references>
+        <references refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" compoundref="ge25519_8c" startline="61">ge25519_aff::x</references>
+        <references refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" compoundref="ge25519_8c" startline="62">ge25519_aff::y</references>
+        <referencedby refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" compoundref="ge25519_8c" startline="195" endline="213">choose_t</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char equal</definition>
+        <argsstring>(signed char b, signed char c)</argsstring>
+        <name>equal</name>
+        <param>
+          <type>signed char</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>signed char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="173" column="22" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="173" bodyend="184"/>
+        <referencedby refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" compoundref="ge25519_8c" startline="195" endline="213">choose_t</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1a2c198b7247bcbfbd086c9c96000843df" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char negative</definition>
+        <argsstring>(signed char b)</argsstring>
+        <name>negative</name>
+        <param>
+          <type>signed char</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="186" column="22" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="186" bodyend="193"/>
+        <referencedby refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" compoundref="ge25519_8c" startline="195" endline="213">choose_t</referencedby>
+        <referencedby refid="curve25519__ref_8c_1ad08a0cb116d5133fdb813c83b884d67f" compoundref="curve25519__ref_8c" startline="56" endline="66">freeze</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void choose_t</definition>
+        <argsstring>(ge25519_aff *t, unsigned long long pos, signed char b)</argsstring>
+        <name>choose_t</name>
+        <param>
+          <type><ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>unsigned long long</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>signed char</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="195" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="195" bodyend="213"/>
+        <references refid="ge25519_8c_1a1291725e17b1b13d833686177f440076" compoundref="ge25519_8c" startline="167" endline="171">cmov_aff</references>
+        <references refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" compoundref="ge25519_8c" startline="173" endline="184">equal</references>
+        <references refid="fe25519_8h_1a74a6f02a12e96a065c067865bc38bb3a" compoundref="fe25519_8h" startline="20">fe25519_cmov</references>
+        <references refid="fe25519_8h_1a0ed862868cf794764bf5abe4234a80cc" compoundref="fe25519_8h" startline="23">fe25519_neg</references>
+        <references refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" compoundref="ge25519_8c" startline="87">ge25519_base_multiples_affine</references>
+        <references refid="ge25519_8c_1a2c198b7247bcbfbd086c9c96000843df" compoundref="ge25519_8c" startline="186" endline="193">negative</references>
+        <references refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" compoundref="ge25519_8c" startline="61">ge25519_aff::x</references>
+        <referencedby refid="ge25519_8c_1a7beb2c4e34e16deb83ba47135a16a9a7" compoundref="ge25519_8c" startline="354" endline="369">ge25519_scalarmult_base</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1a3ec59467204a5458932c9c2b888344b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setneutral</definition>
+        <argsstring>(ge25519 *r)</argsstring>
+        <name>setneutral</name>
+        <param>
+          <type><ref refid="structge25519" kindref="compound">ge25519</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="215" column="13" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="215" bodyend="221"/>
+        <references refid="fe25519_8h_1a4121daa7c30838f3d9760a036a049e7d" compoundref="fe25519_8h" startline="21">fe25519_setone</references>
+        <references refid="fe25519_8h_1a78e186fed5d005b273cac4161e7d839e" compoundref="fe25519_8h" startline="22">fe25519_setzero</references>
+        <references refid="structge25519_1af137cd235a9f0dfd0d93b215d85c10a7" compoundref="ge25519_8h" startline="28">ge25519::t</references>
+        <references refid="structge25519_1ae20af6ae8ded4207d2ac56523112cf0f" compoundref="ge25519_8h" startline="25">ge25519::x</references>
+        <references refid="structge25519_1a7fce1bc860a583e9b61f9fa82ded135d" compoundref="ge25519_8h" startline="26">ge25519::y</references>
+        <references refid="structge25519_1a7ac511ed017948633ceef6c1ad012df7" compoundref="ge25519_8h" startline="27">ge25519::z</references>
+        <referencedby refid="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" compoundref="ge25519_8c" startline="308" endline="352">ge25519_double_scalarmult_vartime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1ad010d20878201e4b383fc9124f2c8da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ge25519_unpackneg_vartime</definition>
+        <argsstring>(ge25519_p3 *r, const unsigned char p[32])</argsstring>
+        <name>ge25519_unpackneg_vartime</name>
+        <param>
+          <type><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>p</declname>
+          <array>[32]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="228" column="5" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="228" bodyend="278"/>
+        <references refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" compoundref="fe25519_8h" startline="25">fe25519_add</references>
+        <references refid="fe25519_8h_1ab6a6a3dcc9f4a02b1415d146d3c7e776" compoundref="fe25519_8h" startline="24">fe25519_getparity</references>
+        <references refid="fe25519_8h_1a1306fd16ef05987a1fd349978c01b6b5" compoundref="fe25519_8h" startline="19">fe25519_iseq_vartime</references>
+        <references refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" compoundref="fe25519_8h" startline="27">fe25519_mul</references>
+        <references refid="fe25519_8h_1a0ed862868cf794764bf5abe4234a80cc" compoundref="fe25519_8h" startline="23">fe25519_neg</references>
+        <references refid="fe25519_8h_1a9fc2a73bc7f7ca559c6b05eb4822bcc4" compoundref="fe25519_8h" startline="30">fe25519_pow2523</references>
+        <references refid="fe25519_8h_1a4121daa7c30838f3d9760a036a049e7d" compoundref="fe25519_8h" startline="21">fe25519_setone</references>
+        <references refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" compoundref="fe25519_8h" startline="28">fe25519_square</references>
+        <references refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" compoundref="fe25519_8h" startline="26">fe25519_sub</references>
+        <references refid="fe25519_8h_1aab48f89784561aa6d2155b42719f0d70" compoundref="fe25519_8h" startline="16">fe25519_unpack</references>
+        <references refid="ge25519_8c_1af3df95655c423281819dcef054ac5eb0" compoundref="ge25519_8c" startline="22">ge25519_ecd</references>
+        <references refid="ge25519_8c_1a58e9dee67bf51a0c6044d62b80764860" compoundref="ge25519_8c" startline="38">ge25519_sqrtm1</references>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1af939dc48302a5751af4a3f14ea811623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ge25519_pack</definition>
+        <argsstring>(unsigned char r[32], const ge25519_p3 *p)</argsstring>
+        <name>ge25519_pack</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>r</declname>
+          <array>[32]</array>
+        </param>
+        <param>
+          <type>const <ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="280" column="6" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="280" bodyend="290"/>
+        <references refid="fe25519_8h_1ab6a6a3dcc9f4a02b1415d146d3c7e776" compoundref="fe25519_8h" startline="24">fe25519_getparity</references>
+        <references refid="fe25519_8h_1a5611f85509bec04709f66940fe014c5a" compoundref="fe25519_8h" startline="29">fe25519_invert</references>
+        <references refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" compoundref="fe25519_8h" startline="27">fe25519_mul</references>
+        <references refid="fe25519_8h_1af883bdb3d2a3bdaf048472b4e0bd2efe" compoundref="fe25519_8h" startline="17">fe25519_pack</references>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1ac6330ac24819c07a95e29d950b2be529" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ge25519_isneutral_vartime</definition>
+        <argsstring>(const ge25519_p3 *p)</argsstring>
+        <name>ge25519_isneutral_vartime</name>
+        <param>
+          <type>const <ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="292" column="5" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="292" bodyend="305"/>
+        <references refid="fe25519_8h_1a1306fd16ef05987a1fd349978c01b6b5" compoundref="fe25519_8h" startline="19">fe25519_iseq_vartime</references>
+        <references refid="fe25519_8h_1aeb83382622d6b0787f0e3b8b465913f8" compoundref="fe25519_8h" startline="18">fe25519_iszero</references>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ge25519_double_scalarmult_vartime</definition>
+        <argsstring>(ge25519_p3 *r, const ge25519_p3 *p1, const sc25519 *s1, const ge25519_p3 *p2, const sc25519 *s2)</argsstring>
+        <name>ge25519_double_scalarmult_vartime</name>
+        <param>
+          <type><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsc25519" kindref="compound">sc25519</ref> *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsc25519" kindref="compound">sc25519</ref> *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="308" column="6" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="308" bodyend="352"/>
+        <references refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" compoundref="ge25519_8c" startline="127" endline="145">add_p1p1</references>
+        <references refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" compoundref="ge25519_8c" startline="148" endline="164">dbl_p1p1</references>
+        <references refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" compoundref="ge25519_8c" startline="45">ge25519_p3</references>
+        <references refid="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" compoundref="ge25519_8c" startline="91" endline="96">p1p1_to_p2</references>
+        <references refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" compoundref="ge25519_8c" startline="98" endline="102">p1p1_to_p3</references>
+        <references refid="sc25519_8h_1a63ec42e0036fa0470511634ff76459b3" compoundref="sc25519_8h" startline="28">sc25519_2interleave2</references>
+        <references refid="ge25519_8c_1a3ec59467204a5458932c9c2b888344b6" compoundref="ge25519_8c" startline="215" endline="221">setneutral</references>
+      </memberdef>
+      <memberdef kind="function" id="ge25519_8c_1a7beb2c4e34e16deb83ba47135a16a9a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ge25519_scalarmult_base</definition>
+        <argsstring>(ge25519_p3 *r, const sc25519 *s)</argsstring>
+        <name>ge25519_scalarmult_base</name>
+        <param>
+          <type><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsc25519" kindref="compound">sc25519</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/ge25519.c" line="354" column="6" bodyfile="libssh-mirror/src/external/ge25519.c" bodystart="354" bodyend="369"/>
+        <references refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" compoundref="ge25519_8c" startline="195" endline="213">choose_t</references>
+        <references refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" compoundref="fe25519_8h" startline="27">fe25519_mul</references>
+        <references refid="fe25519_8h_1a4121daa7c30838f3d9760a036a049e7d" compoundref="fe25519_8h" startline="21">fe25519_setone</references>
+        <references refid="ge25519_8c_1a27bbd9c4c5f968bf6b2fa9ae8698d6a7" compoundref="ge25519_8c" startline="104" endline="125">ge25519_mixadd2</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="sc25519_8h_1a3474419db3d04efd98c958cc99aed2e2" compoundref="sc25519_8h" startline="26">sc25519_window3</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$OpenBSD:<sp/>ge25519.c,v<sp/>1.3<sp/>2013/12/09<sp/>11:03:45<sp/>markus<sp/>Exp<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Public<sp/>Domain,<sp/>Authors:<sp/>Daniel<sp/>J.<sp/>Bernstein,<sp/>Niels<sp/>Duif,<sp/>Tanja<sp/>Lange,</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Peter<sp/>Schwabe,<sp/>Bo-Yin<sp/>Yang.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copied<sp/>from<sp/>supercop-20130419/crypto_sign/ed25519/ref/ge25519.c</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fe25519_8h" kindref="compound">libssh/fe25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sc25519_8h" kindref="compound">libssh/sc25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ge25519_8h" kindref="compound">libssh/ge25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>Arithmetic<sp/>on<sp/>the<sp/>twisted<sp/>Edwards<sp/>curve<sp/>-x^2<sp/>+<sp/>y^2<sp/>=<sp/>1<sp/>+<sp/>dx^2y^2</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>with<sp/>d<sp/>=<sp/>-(121665/121666)<sp/>=<sp/>37095705934669439343138083508754565189542113879843219016388785533085940283555</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Base<sp/>point:<sp/>(15112221349535400772501151409588531511454012693041857206046113283949847762202,46316835694926478169428394003475163141307993866256225615783033603165251855960);</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>d<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="ge25519_8c_1af3df95655c423281819dcef054ac5eb0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="ge25519_8c_1af3df95655c423281819dcef054ac5eb0" kindref="member">ge25519_ecd</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{0xA3,<sp/>0x78,<sp/>0x59,<sp/>0x13,<sp/>0xCA,<sp/>0x4D,<sp/>0xEB,<sp/>0x75,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0xAB,<sp/>0xD8,<sp/>0x41,<sp/>0x41,<sp/>0x4D,<sp/>0x0A,<sp/>0x70,<sp/>0x00,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0x98,<sp/>0xE8,<sp/>0x79,<sp/>0x77,<sp/>0x79,<sp/>0x40,<sp/>0xC7,<sp/>0x8C,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0x73,<sp/>0xFE,<sp/>0x6F,<sp/>0x2B,<sp/>0xEE,<sp/>0x6C,<sp/>0x03,<sp/>0x52}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>2*d<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="ge25519_8c_1af318da5614ea49610929b8e33dbac008" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="ge25519_8c_1af318da5614ea49610929b8e33dbac008" kindref="member">ge25519_ec2d</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{0x59,<sp/>0xF1,<sp/>0xB2,<sp/>0x26,<sp/>0x94,<sp/>0x9B,<sp/>0xD6,<sp/>0xEB,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0x56,<sp/>0xB1,<sp/>0x83,<sp/>0x82,<sp/>0x9A,<sp/>0x14,<sp/>0xE0,<sp/>0x00,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0x30,<sp/>0xD1,<sp/>0xF3,<sp/>0xEE,<sp/>0xF2,<sp/>0x80,<sp/>0x8E,<sp/>0x19,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0xE7,<sp/>0xFC,<sp/>0xDF,<sp/>0x56,<sp/>0xDC,<sp/>0xD9,<sp/>0x06,<sp/>0x24}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>sqrt(-1)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="ge25519_8c_1a58e9dee67bf51a0c6044d62b80764860" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="ge25519_8c_1a58e9dee67bf51a0c6044d62b80764860" kindref="member">ge25519_sqrtm1</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{0xB0,<sp/>0xA0,<sp/>0x0E,<sp/>0x4A,<sp/>0x27,<sp/>0x1B,<sp/>0xEE,<sp/>0xC4,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0x78,<sp/>0xE4,<sp/>0x2F,<sp/>0xAD,<sp/>0x06,<sp/>0x18,<sp/>0x43,<sp/>0x2F,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0xA7,<sp/>0xD7,<sp/>0xFB,<sp/>0x3D,<sp/>0x99,<sp/>0x00,<sp/>0x4D,<sp/>0x2B,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0x0B,<sp/>0xDF,<sp/>0xC1,<sp/>0x4F,<sp/>0x80,<sp/>0x24,<sp/>0x83,<sp/>0x2B}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ge25519_p3<sp/>ge25519</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="structge25519__p1p1" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" kindref="member">t</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/><ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structge25519__p2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="structge25519__p2_1a76b03ccffd33751fc3de57808976095c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__p2_1a76b03ccffd33751fc3de57808976095c" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structge25519__p2_1a5c2e394f99e45cb857e02a65fa5c1276" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__p2_1a5c2e394f99e45cb857e02a65fa5c1276" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="57" refid="structge25519__p2_1aad2ccc057c6cfb1e53da810d8f98f4e7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__p2_1aad2ccc057c6cfb1e53da810d8f98f4e7" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structge25519__aff" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61" refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="62" refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/><ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Packed<sp/>coordinates<sp/>of<sp/>the<sp/>base<sp/>point<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="ge25519_8h_1abdae649b447c46df34addbc646dbcfde" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structge25519" kindref="compound">ge25519</ref><sp/><ref refid="ge25519_8c_1abdae649b447c46df34addbc646dbcfde" kindref="member">ge25519_base</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{{0x1A,<sp/>0xD5,<sp/>0x25,<sp/>0x8F,<sp/>0x60,<sp/>0x2D,<sp/>0x56,<sp/>0xC9,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0xB2,<sp/>0xA7,<sp/>0x25,<sp/>0x95,<sp/>0x60,<sp/>0xC7,<sp/>0x2C,<sp/>0x69,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x5C,<sp/>0xDC,<sp/>0xD6,<sp/>0xFD,<sp/>0x31,<sp/>0xE2,<sp/>0xA4,<sp/>0xC0,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0xFE,<sp/>0x53,<sp/>0x6E,<sp/>0xCD,<sp/>0xD3,<sp/>0x36,<sp/>0x69,<sp/>0x21}},</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{{0x58,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66,<sp/>0x66}},</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{{0x01,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00,<sp/>0x00}},</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{{0xA3,<sp/>0xDD,<sp/>0xB7,<sp/>0xA5,<sp/>0xB3,<sp/>0x8A,<sp/>0xDE,<sp/>0x6D,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0xF5,<sp/>0x52,<sp/>0x51,<sp/>0x77,<sp/>0x80,<sp/>0x9F,<sp/>0xF0,<sp/>0x20,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x7D,<sp/>0xE3,<sp/>0xAB,<sp/>0x64,<sp/>0x8E,<sp/>0x4E,<sp/>0xEA,<sp/>0x66,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0x65,<sp/>0x76,<sp/>0x8B,<sp/>0xD7,<sp/>0x0F,<sp/>0x5F,<sp/>0x87,<sp/>0x67}}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Multiples<sp/>of<sp/>the<sp/>base<sp/>point<sp/>in<sp/>affine<sp/>representation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref><sp/><ref refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" kindref="member">ge25519_base_multiples_affine</ref>[425]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ge25519_base.data&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" kindref="member">p1p1_to_p2</ref>(<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref><sp/>*p)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;<ref refid="structge25519__p2_1a76b03ccffd33751fc3de57808976095c" kindref="member">x</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" kindref="member">t</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;<ref refid="structge25519__p2_1a5c2e394f99e45cb857e02a65fa5c1276" kindref="member">y</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" kindref="member">y</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;<ref refid="structge25519__p2_1aad2ccc057c6cfb1e53da810d8f98f4e7" kindref="member">z</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" kindref="member">z</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" kindref="member">t</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref><sp/>*p)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" kindref="member">p1p1_to_p2</ref>((<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)r,<sp/>p);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;t,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="ge25519_8c_1a27bbd9c4c5f968bf6b2fa9ae8698d6a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a27bbd9c4c5f968bf6b2fa9ae8698d6a7" kindref="member">ge25519_mixadd2</ref>(<ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref><sp/>*q)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,b,t1,t2,c,d,e,f,g,h,qt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;qt,<sp/>&amp;q-&gt;<ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>,<sp/>&amp;q-&gt;<ref refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>&amp;r-&gt;y,<sp/>&amp;r-&gt;x);<sp/></highlight><highlight class="comment">/*<sp/>A<sp/>=<sp/>(Y1-X1)*(Y2-X2)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;b,<sp/>&amp;r-&gt;y,<sp/>&amp;r-&gt;x);<sp/></highlight><highlight class="comment">/*<sp/>B<sp/>=<sp/>(Y1+X1)*(Y2+X2)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;t1,<sp/>&amp;q-&gt;<ref refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" kindref="member">y</ref>,<sp/>&amp;q-&gt;<ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;t2,<sp/>&amp;q-&gt;<ref refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" kindref="member">y</ref>,<sp/>&amp;q-&gt;<ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>&amp;t1);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;b,<sp/>&amp;b,<sp/>&amp;t2);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;e,<sp/>&amp;b,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>);<sp/></highlight><highlight class="comment">/*<sp/>E<sp/>=<sp/>B-A<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;h,<sp/>&amp;b,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>);<sp/></highlight><highlight class="comment">/*<sp/>H<sp/>=<sp/>B+A<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;c,<sp/>&amp;r-&gt;t,<sp/>&amp;qt);<sp/></highlight><highlight class="comment">/*<sp/>C<sp/>=<sp/>T1*k*T2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;c,<sp/>&amp;c,<sp/>&amp;<ref refid="ge25519_8c_1af318da5614ea49610929b8e33dbac008" kindref="member">ge25519_ec2d</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;d,<sp/>&amp;r-&gt;z,<sp/>&amp;r-&gt;z);<sp/></highlight><highlight class="comment">/*<sp/>D<sp/>=<sp/>Z1*2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;f,<sp/>&amp;d,<sp/>&amp;c);<sp/></highlight><highlight class="comment">/*<sp/>F<sp/>=<sp/>D-C<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;g,<sp/>&amp;d,<sp/>&amp;c);<sp/></highlight><highlight class="comment">/*<sp/>G<sp/>=<sp/>D+C<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;x,<sp/>&amp;e,<sp/>&amp;f);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;y,<sp/>&amp;h,<sp/>&amp;g);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;z,<sp/>&amp;g,<sp/>&amp;f);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;t,<sp/>&amp;e,<sp/>&amp;h);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(<ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*q)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>b,<sp/>c,<sp/>d,<sp/>t;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>&amp;p-&gt;y,<sp/>&amp;p-&gt;x);<sp/></highlight><highlight class="comment">/*<sp/>A<sp/>=<sp/>(Y1-X1)*(Y2-X2)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;t,<sp/>&amp;q-&gt;y,<sp/>&amp;q-&gt;x);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>&amp;t);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;b,<sp/>&amp;p-&gt;x,<sp/>&amp;p-&gt;y);<sp/></highlight><highlight class="comment">/*<sp/>B<sp/>=<sp/>(Y1+X1)*(Y2+X2)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;t,<sp/>&amp;q-&gt;x,<sp/>&amp;q-&gt;y);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;b,<sp/>&amp;b,<sp/>&amp;t);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;c,<sp/>&amp;p-&gt;t,<sp/>&amp;q-&gt;t);<sp/></highlight><highlight class="comment">/*<sp/>C<sp/>=<sp/>T1*k*T2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;c,<sp/>&amp;c,<sp/>&amp;<ref refid="ge25519_8c_1af318da5614ea49610929b8e33dbac008" kindref="member">ge25519_ec2d</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;d,<sp/>&amp;p-&gt;z,<sp/>&amp;q-&gt;z);<sp/></highlight><highlight class="comment">/*<sp/>D<sp/>=<sp/>Z1*2*Z2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;d,<sp/>&amp;d,<sp/>&amp;d);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;b,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>);<sp/></highlight><highlight class="comment">/*<sp/>E<sp/>=<sp/>B-A<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" kindref="member">t</ref>,<sp/>&amp;d,<sp/>&amp;c);<sp/></highlight><highlight class="comment">/*<sp/>F<sp/>=<sp/>D-C<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" kindref="member">z</ref>,<sp/>&amp;d,<sp/>&amp;c);<sp/></highlight><highlight class="comment">/*<sp/>G<sp/>=<sp/>D+C<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" kindref="member">y</ref>,<sp/>&amp;b,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>);<sp/></highlight><highlight class="comment">/*<sp/>H<sp/>=<sp/>B+A<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>See<sp/>http://www.hyperelliptic.org/EFD/g1p/auto-twisted-extended-1.html#doubling-dbl-2008-hwcd<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" kindref="member">dbl_p1p1</ref>(<ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*p)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,b,c,d;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p2_1a76b03ccffd33751fc3de57808976095c" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;b,<sp/>&amp;p-&gt;<ref refid="structge25519__p2_1a5c2e394f99e45cb857e02a65fa5c1276" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;c,<sp/>&amp;p-&gt;<ref refid="structge25519__p2_1aad2ccc057c6cfb1e53da810d8f98f4e7" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;c,<sp/>&amp;c,<sp/>&amp;c);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a0ed862868cf794764bf5abe4234a80cc" kindref="member">fe25519_neg</ref>(&amp;d,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p2_1a76b03ccffd33751fc3de57808976095c" kindref="member">x</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__p2_1a5c2e394f99e45cb857e02a65fa5c1276" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;<ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;r-&gt;<ref refid="structge25519__p1p1_1a676b74bbde705cbc32a84023648c03b5" kindref="member">x</ref>,<sp/>&amp;b);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" kindref="member">z</ref>,<sp/>&amp;d,<sp/>&amp;b);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a9f86cd2d8a5ab3111cfbd010cdc863fc" kindref="member">t</ref>,<sp/>&amp;r-&gt;<ref refid="structge25519__p1p1_1aa62e942d5b1508072b9c5997d27b21c7" kindref="member">z</ref>,<sp/>&amp;c);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;r-&gt;<ref refid="structge25519__p1p1_1a8c98f3d0affa3d5351d72d627eab88dd" kindref="member">y</ref>,<sp/>&amp;d,<sp/>&amp;b);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Constant-time<sp/>version<sp/>of:<sp/>if(b)<sp/>r<sp/>=<sp/>p<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="ge25519_8c_1a1291725e17b1b13d833686177f440076" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a1291725e17b1b13d833686177f440076" kindref="member">cmov_aff</ref>(<ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref><sp/>*p,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a74a6f02a12e96a065c067865bc38bb3a" kindref="member">fe25519_cmov</ref>(&amp;r-&gt;<ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>,<sp/>b);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a74a6f02a12e96a065c067865bc38bb3a" kindref="member">fe25519_cmov</ref>(&amp;r-&gt;<ref refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" kindref="member">y</ref>,<sp/>&amp;p-&gt;<ref refid="structge25519__aff_1ab9a15feff0edbb3a131ff532f1899cd0" kindref="member">y</ref>,<sp/>b);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b,</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ub<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>uc<sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>ub<sp/>^<sp/>uc;<sp/></highlight><highlight class="comment">/*<sp/>0:<sp/>yes;<sp/>1..255:<sp/>no<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>y<sp/>=<sp/>x;<sp/></highlight><highlight class="comment">/*<sp/>0:<sp/>yes;<sp/>1..255:<sp/>no<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>-=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>4294967295:<sp/>yes;<sp/>0..254:<sp/>no<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>&gt;&gt;=<sp/>31;<sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>yes;<sp/>0:<sp/>no<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="ge25519_8c_1a2c198b7247bcbfbd086c9c96000843df" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a2c198b7247bcbfbd086c9c96000843df" kindref="member">negative</ref>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>b;<sp/></highlight><highlight class="comment">/*<sp/>18446744073709551361..18446744073709551615:<sp/>yes;<sp/>0..255:<sp/>no<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>&gt;&gt;=<sp/>63;<sp/></highlight><highlight class="comment">/*<sp/>1:<sp/>yes;<sp/>0:<sp/>no<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" kindref="member">choose_t</ref>(<ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref><sp/>*t,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>constant<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/>v;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>*t<sp/>=<sp/><ref refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" kindref="member">ge25519_base_multiples_affine</ref>[5<sp/>*<sp/>pos<sp/>+<sp/>0];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a1291725e17b1b13d833686177f440076" kindref="member">cmov_aff</ref>(t,<sp/>&amp;<ref refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" kindref="member">ge25519_base_multiples_affine</ref>[5<sp/>*<sp/>pos<sp/>+<sp/>1],</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(b,1)<sp/>|<sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(b,-1));</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a1291725e17b1b13d833686177f440076" kindref="member">cmov_aff</ref>(t,<sp/>&amp;<ref refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" kindref="member">ge25519_base_multiples_affine</ref>[5<sp/>*<sp/>pos<sp/>+<sp/>2],</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(b,2)<sp/>|<sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(b,-2));</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a1291725e17b1b13d833686177f440076" kindref="member">cmov_aff</ref>(t,<sp/>&amp;<ref refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" kindref="member">ge25519_base_multiples_affine</ref>[5<sp/>*<sp/>pos<sp/>+<sp/>3],</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(b,3)<sp/>|<sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(b,-3));</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a1291725e17b1b13d833686177f440076" kindref="member">cmov_aff</ref>(t,<sp/>&amp;<ref refid="ge25519_8c_1a24a3942d020aa1b0b4ebc2544b34ae36" kindref="member">ge25519_base_multiples_affine</ref>[5<sp/>*<sp/>pos<sp/>+<sp/>4],</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1aeea220203a9ea342ccc4a6b76d81b51b" kindref="member">equal</ref>(b,-4));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a0ed862868cf794764bf5abe4234a80cc" kindref="member">fe25519_neg</ref>(&amp;v,<sp/>&amp;t-&gt;<ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a74a6f02a12e96a065c067865bc38bb3a" kindref="member">fe25519_cmov</ref>(&amp;t-&gt;<ref refid="structge25519__aff_1a467f1918507d1bca42ca1d6003db7544" kindref="member">x</ref>,<sp/>&amp;v,<sp/><ref refid="ge25519_8c_1a2c198b7247bcbfbd086c9c96000843df" kindref="member">negative</ref>(b));</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="ge25519_8c_1a3ec59467204a5458932c9c2b888344b6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a3ec59467204a5458932c9c2b888344b6" kindref="member">setneutral</ref>(<ref refid="structge25519" kindref="compound">ge25519</ref><sp/>*r)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a78e186fed5d005b273cac4161e7d839e" kindref="member">fe25519_setzero</ref>(&amp;r-&gt;<ref refid="structge25519_1ae20af6ae8ded4207d2ac56523112cf0f" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a4121daa7c30838f3d9760a036a049e7d" kindref="member">fe25519_setone</ref>(&amp;r-&gt;<ref refid="structge25519_1a7fce1bc860a583e9b61f9fa82ded135d" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a4121daa7c30838f3d9760a036a049e7d" kindref="member">fe25519_setone</ref>(&amp;r-&gt;<ref refid="structge25519_1a7ac511ed017948633ceef6c1ad012df7" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a78e186fed5d005b273cac4161e7d839e" kindref="member">fe25519_setzero</ref>(&amp;r-&gt;<ref refid="structge25519_1af137cd235a9f0dfd0d93b215d85c10a7" kindref="member">t</ref>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>********************************************************************</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EXPORTED<sp/>FUNCTIONS</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/>********************************************************************<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>return<sp/>0<sp/>on<sp/>success,<sp/>-1<sp/>otherwise<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="ge25519_8c_1ad010d20878201e4b383fc9124f2c8da0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1ad010d20878201e4b383fc9124f2c8da0" kindref="member">ge25519_unpackneg_vartime</ref>(<ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>p[32])</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>par;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/>t,<sp/>chk,<sp/>num,<sp/>den,<sp/>den2,<sp/>den4,<sp/>den6;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a4121daa7c30838f3d9760a036a049e7d" kindref="member">fe25519_setone</ref>(&amp;r-&gt;z);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>par<sp/>=<sp/>p[31]<sp/>&gt;&gt;<sp/>7;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1aab48f89784561aa6d2155b42719f0d70" kindref="member">fe25519_unpack</ref>(&amp;r-&gt;y,<sp/>p);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;num,<sp/>&amp;r-&gt;y);<sp/></highlight><highlight class="comment">/*<sp/>x<sp/>=<sp/>y^2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;den,<sp/>&amp;num,<sp/>&amp;<ref refid="ge25519_8c_1af3df95655c423281819dcef054ac5eb0" kindref="member">ge25519_ecd</ref>);<sp/></highlight><highlight class="comment">/*<sp/>den<sp/>=<sp/>dy^2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a75986239070fc2830085dac83709b8c7" kindref="member">fe25519_sub</ref>(&amp;num,<sp/>&amp;num,<sp/>&amp;r-&gt;z);<sp/></highlight><highlight class="comment">/*<sp/>x<sp/>=<sp/>y^2-1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1ac29f3761752fa351958edbc138dd2324" kindref="member">fe25519_add</ref>(&amp;den,<sp/>&amp;r-&gt;z,<sp/>&amp;den);<sp/></highlight><highlight class="comment">/*<sp/>den<sp/>=<sp/>dy^2+1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Computation<sp/>of<sp/>sqrt(num/den)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1.:<sp/>computation<sp/>of<sp/>num^((p-5)/8)*den^((7p-35)/8)<sp/>=<sp/>(num*den^7)^((p-5)/8)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;den2,<sp/>&amp;den);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;den4,<sp/>&amp;den2);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;den6,<sp/>&amp;den4,<sp/>&amp;den2);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;t,<sp/>&amp;den6,<sp/>&amp;num);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;t,<sp/>&amp;t,<sp/>&amp;den);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a9fc2a73bc7f7ca559c6b05eb4822bcc4" kindref="member">fe25519_pow2523</ref>(&amp;t,<sp/>&amp;t);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>2.<sp/>computation<sp/>of<sp/>r-&gt;x<sp/>=<sp/>t<sp/>*<sp/>num<sp/>*<sp/>den^3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;t,<sp/>&amp;t,<sp/>&amp;num);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;t,<sp/>&amp;t,<sp/>&amp;den);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;t,<sp/>&amp;t,<sp/>&amp;den);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;x,<sp/>&amp;t,<sp/>&amp;den);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>3.<sp/>Check<sp/>whether<sp/>sqrt<sp/>computation<sp/>gave<sp/>correct<sp/>result,<sp/>multiply<sp/>by<sp/>sqrt(-1)<sp/>if<sp/>not:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;chk,<sp/>&amp;r-&gt;x);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;chk,<sp/>&amp;chk,<sp/>&amp;den);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="fe25519_8h_1a1306fd16ef05987a1fd349978c01b6b5" kindref="member">fe25519_iseq_vartime</ref>(&amp;chk,<sp/>&amp;num))<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;x,<sp/>&amp;r-&gt;x,<sp/>&amp;<ref refid="ge25519_8c_1a58e9dee67bf51a0c6044d62b80764860" kindref="member">ge25519_sqrtm1</ref>);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>4.<sp/>Now<sp/>we<sp/>have<sp/>one<sp/>of<sp/>the<sp/>two<sp/>square<sp/>roots,<sp/>except<sp/>if<sp/>input<sp/>was<sp/>not<sp/>a<sp/>square<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a49dff9af8cfdb16948dfea311717ad6e" kindref="member">fe25519_square</ref>(&amp;chk,<sp/>&amp;r-&gt;x);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;chk,<sp/>&amp;chk,<sp/>&amp;den);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="fe25519_8h_1a1306fd16ef05987a1fd349978c01b6b5" kindref="member">fe25519_iseq_vartime</ref>(&amp;chk,<sp/>&amp;num))<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>5.<sp/>Choose<sp/>the<sp/>desired<sp/>square<sp/>root<sp/>according<sp/>to<sp/>parity:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="fe25519_8h_1ab6a6a3dcc9f4a02b1415d146d3c7e776" kindref="member">fe25519_getparity</ref>(&amp;r-&gt;x)<sp/>!=<sp/>(1-par))<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a0ed862868cf794764bf5abe4234a80cc" kindref="member">fe25519_neg</ref>(&amp;r-&gt;x,<sp/>&amp;r-&gt;x);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;t,<sp/>&amp;r-&gt;x,<sp/>&amp;r-&gt;y);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="ge25519_8c_1af939dc48302a5751af4a3f14ea811623" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1af939dc48302a5751af4a3f14ea811623" kindref="member">ge25519_pack</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>r[32],<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*p)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structfe25519" kindref="compound">fe25519</ref><sp/>tx,<sp/>ty,<sp/>zi;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a5611f85509bec04709f66940fe014c5a" kindref="member">fe25519_invert</ref>(&amp;zi,<sp/>&amp;p-&gt;z);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;tx,<sp/>&amp;p-&gt;x,<sp/>&amp;zi);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;ty,<sp/>&amp;p-&gt;y,<sp/>&amp;zi);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af883bdb3d2a3bdaf048472b4e0bd2efe" kindref="member">fe25519_pack</ref>(r,<sp/>&amp;ty);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>r[31]<sp/>^=<sp/><ref refid="fe25519_8h_1ab6a6a3dcc9f4a02b1415d146d3c7e776" kindref="member">fe25519_getparity</ref>(&amp;tx)<sp/>&lt;&lt;<sp/>7;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="ge25519_8c_1ac6330ac24819c07a95e29d950b2be529" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1ac6330ac24819c07a95e29d950b2be529" kindref="member">ge25519_isneutral_vartime</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*p)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="fe25519_8h_1aeb83382622d6b0787f0e3b8b465913f8" kindref="member">fe25519_iszero</ref>(&amp;p-&gt;x))<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="fe25519_8h_1a1306fd16ef05987a1fd349978c01b6b5" kindref="member">fe25519_iseq_vartime</ref>(&amp;p-&gt;y,<sp/>&amp;p-&gt;z))<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>computes<sp/>[s1]p1<sp/>+<sp/>[s2]p2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308" refid="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a1d05199a5e646a3dbf15588cdae42a1e" kindref="member">ge25519_double_scalarmult_vartime</ref>(<ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc25519" kindref="compound">sc25519</ref><sp/>*s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*p2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc25519" kindref="compound">sc25519</ref><sp/>*s2)</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structge25519__p1p1" kindref="compound">ge25519_p1p1</ref><sp/>tp1p1;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>pre[16];</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b[127];</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>precomputation<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s2<sp/>s1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a3ec59467204a5458932c9c2b888344b6" kindref="member">setneutral</ref>(pre);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>00<sp/>00<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>pre[1]<sp/>=<sp/>*p1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>00<sp/>01<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" kindref="member">dbl_p1p1</ref>(&amp;tp1p1,(<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)p1);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<sp/>&amp;pre[2],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>00<sp/>10<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[1],<sp/>&amp;pre[2]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<sp/>&amp;pre[3],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>00<sp/>11<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>pre[4]<sp/>=<sp/>*p2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>01<sp/>00<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[1],<sp/>&amp;pre[4]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<sp/>&amp;pre[5],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>01<sp/>01<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[2],<sp/>&amp;pre[4]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<sp/>&amp;pre[6],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>01<sp/>10<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[3],<sp/>&amp;pre[4]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<sp/>&amp;pre[7],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>01<sp/>11<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" kindref="member">dbl_p1p1</ref>(&amp;tp1p1,(<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)p2);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<sp/>&amp;pre[8],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>10<sp/>00<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[1],<sp/>&amp;pre[8]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(<sp/>&amp;pre[9],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>10<sp/>01<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" kindref="member">dbl_p1p1</ref>(&amp;tp1p1,(<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)&amp;pre[5]);<sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(&amp;pre[10],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>10<sp/>10<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[3],<sp/>&amp;pre[8]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(&amp;pre[11],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>10<sp/>11<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[4],<sp/>&amp;pre[8]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(&amp;pre[12],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>11<sp/>00<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[1],&amp;pre[12]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(&amp;pre[13],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>11<sp/>01<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[2],&amp;pre[12]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(&amp;pre[14],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>11<sp/>10<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,&amp;pre[3],&amp;pre[12]);<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(&amp;pre[15],<sp/>&amp;tp1p1);<sp/></highlight><highlight class="comment">/*<sp/>11<sp/>11<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a63ec42e0036fa0470511634ff76459b3" kindref="member">sc25519_2interleave2</ref>(b,s1,s2);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>scalar<sp/>multiplication<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>*r<sp/>=<sp/>pre[b[126]];</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>125;<sp/>i<sp/>&gt;=<sp/>0;<sp/>i--)<sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" kindref="member">dbl_p1p1</ref>(&amp;tp1p1,<sp/>(<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)r);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" kindref="member">p1p1_to_p2</ref>((<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)<sp/>r,<sp/>&amp;tp1p1);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1ab5dd4f189f473a12dddd490e8aa793ba" kindref="member">dbl_p1p1</ref>(&amp;tp1p1,<sp/>(<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)r);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(b[i]<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(r,<sp/>&amp;tp1p1);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a939267543418bcb8f10f05c8eeaa1e9b" kindref="member">add_p1p1</ref>(&amp;tp1p1,<sp/>r,<sp/>&amp;pre[b[i]]);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a597d5655045315370011e0cd5fb244ae" kindref="member">p1p1_to_p2</ref>((<ref refid="structge25519__p2" kindref="compound">ge25519_p2</ref><sp/>*)r,<sp/>&amp;tp1p1);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1afd0cc76e1a7f310cf5eabb96547a24dc" kindref="member">p1p1_to_p3</ref>(r,<sp/>&amp;tp1p1);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="ge25519_8c_1a7beb2c4e34e16deb83ba47135a16a9a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ge25519_8c_1a7beb2c4e34e16deb83ba47135a16a9a7" kindref="member">ge25519_scalarmult_base</ref>(<ref refid="ge25519_8c_1aac84b97fe6d7593c3869fbaaea8db24a" kindref="member">ge25519_p3</ref><sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc25519" kindref="compound">sc25519</ref><sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>)</highlight></codeline>
+<codeline lineno="355"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>b[85];</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref><sp/>t;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a3474419db3d04efd98c958cc99aed2e2" kindref="member">sc25519_window3</ref>(b,<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" kindref="member">choose_t</ref>((<ref refid="structge25519__aff" kindref="compound">ge25519_aff</ref><sp/>*)r,<sp/>0,<sp/>b[0]);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1a4121daa7c30838f3d9760a036a049e7d" kindref="member">fe25519_setone</ref>(&amp;r-&gt;z);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fe25519_8h_1af5af5c582e3054744d39b6bd7439a349" kindref="member">fe25519_mul</ref>(&amp;r-&gt;t,<sp/>&amp;r-&gt;x,<sp/>&amp;r-&gt;y);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>85;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1aa5ac96897f7a90c64d89080e9d6f2232" kindref="member">choose_t</ref>(&amp;t,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)<sp/>i,<sp/>b[i]);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ge25519_8c_1a27bbd9c4c5f968bf6b2fa9ae8698d6a7" kindref="member">ge25519_mixadd2</ref>(r,<sp/>&amp;t);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/external/ge25519.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="options_8h" kind="file" language="C++">
+    <compoundname>options.h</compoundname>
+    <includedby refid="bind__config_8c" local="yes">src/bind_config.c</includedby>
+    <includedby refid="client_8c" local="yes">src/client.c</includedby>
+    <includedby refid="config_8c" local="yes">src/config.c</includedby>
+    <includedby refid="known__hosts_8c" local="yes">src/known_hosts.c</includedby>
+    <includedby refid="src_2knownhosts_8c" local="yes">src/knownhosts.c</includedby>
+    <includedby refid="legacy_8c" local="yes">src/legacy.c</includedby>
+    <includedby refid="options_8c" local="yes">src/options.c</includedby>
+    <includedby refid="server_8c" local="yes">src/server.c</includedby>
+    <includedby refid="torture__config_8c" local="yes">tests/unittests/torture_config.c</includedby>
+    <includedby refid="torture__options_8c" local="no">tests/unittests/torture_options.c</includedby>
+    <invincdepgraph>
+      <node id="10">
+        <label>tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="3">
+        <label>src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="14">
+        <label>tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="5">
+        <label>src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/config.c</label>
+        <link refid="config_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/options.h</label>
+        <link refid="options_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="12">
+        <label>src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="11">
+        <label>src/options.c</label>
+        <link refid="options_8c"/>
+      </node>
+      <node id="9">
+        <label>tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="7">
+        <label>src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="13">
+        <label>tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+      <node id="6">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="options_8h_1ab6d001793aeda6f5a652ba8c22cad9f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_config_parse_file</definition>
+        <argsstring>(ssh_session session, const char *filename)</argsstring>
+        <name>ssh_config_parse_file</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/options.h" line="24" column="5" bodyfile="src/config.c" bodystart="1143" bodyend="1169" declfile="include/libssh/options.h" declline="24" declcolumn="5"/>
+        <references refid="config_8c_1a706068f562dd5c64a8b7bbd4b2298dd1" compoundref="config_8c" startline="51">MAX_LINE_SIZE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <referencedby refid="group__libssh__session_1ga82371e723260c7572ea061edecc2e9f1" compoundref="options_8c" startline="1375" endline="1418">ssh_options_parse_config</referencedby>
+        <referencedby refid="torture__config_8c_1a6015128681c19a643585501c81f24636" compoundref="torture__config_8c" startline="367" endline="418">torture_config_auth_methods</referencedby>
+        <referencedby refid="torture__config_8c_1a315173ccf4b12800f5642d47a8ee5745" compoundref="torture__config_8c" startline="296" endline="300">torture_config_double_ports</referencedby>
+        <referencedby refid="torture__config_8c_1a2d3b6ad539259bcfeeb316b2464869b8" compoundref="torture__config_8c" startline="226" endline="291">torture_config_from_file</referencedby>
+        <referencedby refid="torture__config_8c_1a37ec240a39eca051b7c2595a8cf7bc3c" compoundref="torture__config_8c" startline="302" endline="329">torture_config_glob</referencedby>
+        <referencedby refid="torture__config_8c_1afbd8ffc0723658bbf9cf2d88380ddf0e" compoundref="torture__config_8c" startline="442" endline="647">torture_config_match</referencedby>
+        <referencedby refid="torture__config_8c_1abe1bb761c19cb153ed98178def65678d" compoundref="torture__config_8c" startline="334" endline="362">torture_config_new</referencedby>
+        <referencedby refid="torture__config_8c_1a13446f6a29e86e2ce2fcdaad08ec9449" compoundref="torture__config_8c" startline="652" endline="856">torture_config_proxyjump</referencedby>
+        <referencedby refid="torture__config_8c_1a5e379449a4b6f7ca5c113e877c643816" compoundref="torture__config_8c" startline="935" endline="952">torture_config_pubkeyacceptedkeytypes</referencedby>
+        <referencedby refid="torture__config_8c_1a18d01691cc3601e05a66bc113be2a488" compoundref="torture__config_8c" startline="862" endline="930">torture_config_rekey</referencedby>
+        <referencedby refid="torture__config_8c_1a6783e84d251ca9de7dba909fd643ff66" compoundref="torture__config_8c" startline="424" endline="435">torture_config_unknown</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1gab88261ef1a07c42d7e2759d7af164047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_options_set_algo</definition>
+        <argsstring>(ssh_session session, enum ssh_kex_types_e algo, const char *list)</argsstring>
+        <name>ssh_options_set_algo</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02f" kindref="member">ssh_kex_types_e</ref></type>
+          <declname>algo</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/options.h" line="25" column="5" bodyfile="src/options.c" bodystart="220" bodyend="243" declfile="include/libssh/options.h" declline="25" declcolumn="5"/>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="kex_8h_1a5f9fa3e2a3fd13d8dfd753b647e7d294" compoundref="kex_8c" startline="937" endline="944">ssh_keep_fips_algos</references>
+        <references refid="kex_8h_1acd8064e0435ae07a1e27d4e71201c44e" compoundref="kex_8c" startline="916" endline="923">ssh_keep_known_algos</references>
+        <references refid="kex_8h_1a31bfb02d11f6dbf284e3fe6cc685829d" compoundref="kex_8c" startline="274" endline="280">ssh_kex_get_description</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__session__struct_1a6023ca7ba47bbed4837f72bf9dde5948" compoundref="session_8h" startline="216">ssh_session_struct::wanted_methods</references>
+        <referencedby refid="group__libssh__server_1gac8dda51f6f008e42e60d824e2ef2e453" compoundref="server_8c" startline="84" endline="195">server_set_kex</referencedby>
+        <referencedby refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" compoundref="options_8c" startline="474" endline="1039">ssh_options_set</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1ga882e56c9ac92b2e860f055ac903e9c07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_options_apply</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_options_apply</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/options.h" line="28" column="5" bodyfile="src/options.c" bodystart="1420" bodyend="1490" declfile="include/libssh/options.h" declline="28" declcolumn="5"/>
+        <references refid="structssh__iterator_1a4cc4eb8c8599a487e7e3321d32a9e9cd" compoundref="misc_8h" startline="46">ssh_iterator::data</references>
+        <references refid="structssh__session__struct_1af35a02eebf952e900f35a88867029047" compoundref="session_8h" startline="215">ssh_session_struct::global_knownhosts</references>
+        <references refid="structssh__session__struct_1aab5ecfb12d53a23b21dbf61790aa7e94" compoundref="session_8h" startline="209">ssh_session_struct::identity</references>
+        <references refid="doc_2CMakeLists_8txt_1a8ac464f14522528c145064f01020e23e" compoundref="doc_2CMakeLists_8txt" startline="4" endline="9">if</references>
+        <references refid="structssh__session__struct_1ae2c7b3b1e40963af7e7dcd2544867539" compoundref="session_8h" startline="214">ssh_session_struct::knownhosts</references>
+        <references refid="structssh__iterator_1a7fd7219325e56f365796ad59c8443ee5" compoundref="misc_8h" startline="45">ssh_iterator::next</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__session__struct_1a988d47dd297709a12a1b74d35b2b79fb" compoundref="session_8h" startline="218">ssh_session_struct::ProxyCommand</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" compoundref="misc_8c" startline="682" endline="686">ssh_list_get_iterator</references>
+        <references refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" compoundref="options_8c" startline="474" endline="1039">ssh_options_set</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46cab6f7ef3b251c5f7398ec3de73d881218" compoundref="libssh_8h" startline="386">SSH_OPTIONS_SSH_DIR</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46ca41a41401297578b6a88df70b50a3cd21" compoundref="libssh_8h" startline="385">SSH_OPTIONS_USER</references>
+        <references refid="group__libssh__misc_1gabee03cec7d5ba668885bd1a47e9650ea" compoundref="misc_8c" startline="1106" endline="1207">ssh_path_expand_escape</references>
+        <references refid="structssh__session__struct_1a61b53e777c7069d7b086b71b31d8925b" compoundref="session_8h" startline="213">ssh_session_struct::sshdir</references>
+        <references refid="structssh__session__struct_1a8ed5d5d3116679fd7b8f2c0e1db92726" compoundref="session_8h" startline="210">ssh_session_struct::username</references>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+        <referencedby refid="group__libssh__session_1ga6f37e3d7bb6b938b44d6a34a76fdfa0b" compoundref="known__hosts_8c" startline="288" endline="424">ssh_is_server_known</referencedby>
+        <referencedby refid="group__libssh__session_1gad10b597ab0b641a469c0190e5fe904a8" compoundref="src_2knownhosts_8c" startline="1041" endline="1103">ssh_known_hosts_check_server_key</referencedby>
+        <referencedby refid="group__libssh__session_1ga95043df5a4378cc43ed13ba7ac5b4d01" compoundref="src_2knownhosts_8c" startline="347" endline="453">ssh_known_hosts_get_algorithms</referencedby>
+        <referencedby refid="group__libssh__session_1gad36769864e0a5247edffd6e428e34e8a" compoundref="src_2knownhosts_8c" startline="504" endline="593">ssh_known_hosts_get_algorithms_names</referencedby>
+        <referencedby refid="legacy_8h_1a95d74e70186ea1e485de70f75ba7bf5c" compoundref="legacy_8c" startline="643" endline="706">ssh_try_publickey_from_file</referencedby>
+        <referencedby refid="group__libssh__session_1gaf61a9cfdc40c76ffce9f9a8543755d36" compoundref="known__hosts_8c" startline="499" endline="565">ssh_write_knownhost</referencedby>
+        <referencedby refid="torture__options_8c_1a8b7ef3e2e8eb46e63baad1e61416468b" compoundref="torture__options_8c" startline="465" endline="486">torture_options_set_knownhosts</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/><sp/><sp/><sp/><sp/><sp/>Andreas<sp/>Schneider<sp/>&lt;asn@cryptomilk.org&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="options_8h_1ab6d001793aeda6f5a652ba8c22cad9f1" kindref="member">ssh_config_parse_file</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__session_1gab88261ef1a07c42d7e2759d7af164047" kindref="member">ssh_options_set_algo</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02f" kindref="member">ssh_kex_types_e</ref><sp/>algo,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*list);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__session_1ga882e56c9ac92b2e860f055ac903e9c07" kindref="member">ssh_options_apply</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_OPTIONS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/options.h"/>
+  </compounddef>
+</doxygen>

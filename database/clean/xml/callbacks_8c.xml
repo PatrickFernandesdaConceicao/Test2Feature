@@ -1,0 +1,745 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="callbacks_8c" kind="file" language="C++">
+    <compoundname>callbacks.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="callbacks_8h" local="yes">libssh/callbacks.h</includes>
+    <includes refid="session_8h" local="yes">libssh/session.h</includes>
+    <includes refid="misc_8h" local="yes">libssh/misc.h</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stdbool.h</label>
+      </node>
+      <node id="8">
+        <label>sys/select.h</label>
+      </node>
+      <node id="12">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="13">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>stdlib.h</label>
+      </node>
+      <node id="27">
+        <label>libssh/misc.h</label>
+        <link refid="misc_8h"/>
+      </node>
+      <node id="20">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>netdb.h</label>
+      </node>
+      <node id="17">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/pcap.h</label>
+        <link refid="pcap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>libssh/channels.h</label>
+        <link refid="channels_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="21">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="26">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/callbacks.c</label>
+        <link refid="callbacks_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="24">
+        <label>libssh/auth.h</label>
+        <link refid="auth_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" prot="public" static="no">
+        <name>is_callback_valid</name>
+        <param><defname>session</defname></param>
+        <param><defname>cb</defname></param>
+        <initializer>    (<ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>-&gt;size &lt;= 0 || <ref refid="ssh__client__fuzzer_8cpp_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>-&gt;size &gt; 1024 * sizeof(void *))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="30" column="9" bodyfile="src/callbacks.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssh_legacy_log_callback</definition>
+        <argsstring>(int priority, const char *function, const char *buffer, void *userdata)</argsstring>
+        <name>ssh_legacy_log_callback</name>
+        <param>
+          <type>int</type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="34" column="13" bodyfile="src/callbacks.c" bodystart="34" bodyend="46"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__common__struct_1a2f42939ea278698d861c7617b7529eb7" compoundref="session_8h" startline="105">ssh_common_struct::callbacks</references>
+        <references refid="structssh__session__struct_1acad23ad6d8bee359da41b9ed0faa6eaa" compoundref="session_8h" startline="110">ssh_session_struct::common</references>
+        <references refid="structssh__callbacks__struct_1a409f4218537c3224e42d35b28ae93f7a" compoundref="callbacks_8h" startline="156">ssh_callbacks_struct::log_function</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__callbacks__struct_1aa5cdca2ba78d7582d8eff77ef7995700" compoundref="callbacks_8h" startline="148">ssh_callbacks_struct::userdata</references>
+        <referencedby refid="group__libssh__callbacks_1ga2e4b0507c738748a3f10e43fe201fe09" compoundref="callbacks_8c" startline="48" endline="68">ssh_set_callbacks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1ga2e4b0507c738748a3f10e43fe201fe09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_set_callbacks</definition>
+        <argsstring>(ssh_session session, ssh_callbacks cb)</argsstring>
+        <name>ssh_set_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1ga46fded0a609e103977640d2a4d1bbfb6" kindref="member">ssh_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the session callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This functions sets the callback structure to use your own callback functions for auth, logging and status.</para>
+<para>Note, that the callback structure is not copied into the session so it needs to be valid for the whole session lifetime.</para>
+<para><programlisting><codeline><highlight class="normal">struct<sp/>ssh_callbacks_struct<sp/>cb<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.userdata<sp/>=<sp/>data,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.auth_function<sp/>=<sp/>my_auth_function</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">ssh_callbacks_init(&amp;cb);</highlight></codeline>
+<codeline><highlight class="normal">ssh_set_callbacks(session,<sp/>&amp;cb);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="48" column="5" bodyfile="src/callbacks.c" bodystart="48" bodyend="68"/>
+        <references refid="structssh__common__struct_1a2f42939ea278698d861c7617b7529eb7" compoundref="session_8h" startline="105">ssh_common_struct::callbacks</references>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="structssh__session__struct_1acad23ad6d8bee359da41b9ed0faa6eaa" compoundref="session_8h" startline="110">ssh_session_struct::common</references>
+        <references refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" compoundref="callbacks_8c" startline="30">is_callback_valid</references>
+        <references refid="structssh__callbacks__struct_1a409f4218537c3224e42d35b28ae93f7a" compoundref="callbacks_8h" startline="156">ssh_callbacks_struct::log_function</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__log_1ga0f795c820547d058dbbfa80cd4fe9a4e" compoundref="log_8c" startline="210" endline="212">ssh_get_log_callback</references>
+        <references refid="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" compoundref="callbacks_8c" startline="34" endline="46">ssh_legacy_log_callback</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="group__libssh__log_1ga6accdc08b7d8c4234750ef30c4854b9e" compoundref="log_8c" startline="200" endline="208">ssh_set_log_callback</references>
+        <references refid="group__libssh__log_1ga0addd5c29922f40e9f842a43e0cb0b27" compoundref="log_8c" startline="235" endline="240">ssh_set_log_userdata</references>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+        <referencedby refid="ssh__client_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="ssh__client_8c" startline="397" endline="425">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_add_set_channel_callbacks</definition>
+        <argsstring>(ssh_channel channel, ssh_channel_callbacks cb, int prepend)</argsstring>
+        <name>ssh_add_set_channel_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" kindref="member">ssh_channel_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prepend</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="70" column="12" bodyfile="src/callbacks.c" bodystart="70" bodyend="102"/>
+        <references refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" compoundref="channels_8h" startline="81">ssh_channel_struct::callbacks</references>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" compoundref="callbacks_8c" startline="30">is_callback_valid</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__channel__struct_1a0832dc830d09accd2f3a8f8349c3faf2" compoundref="channels_8h" startline="63">ssh_channel_struct::session</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__misc_1ga4590c6ff62f0e6feb59e2e3152a6721f" compoundref="misc_8c" startline="724" endline="745">ssh_list_append</references>
+        <references refid="group__libssh__misc_1ga4c696e6fd38257737962971fa0362435" compoundref="misc_8c" startline="661" endline="667">ssh_list_new</references>
+        <references refid="group__libssh__misc_1ga7f1c23a518f3ca0b63189763b64141c4" compoundref="misc_8c" startline="747" endline="769">ssh_list_prepend</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <referencedby refid="group__libssh__callbacks_1ga2fd83df19998902f84f951fc47def83e" compoundref="callbacks_8c" startline="109" endline="112">ssh_add_channel_callbacks</referencedby>
+        <referencedby refid="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" compoundref="callbacks_8c" startline="104" endline="107">ssh_set_channel_callbacks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_set_channel_callbacks</definition>
+        <argsstring>(ssh_channel channel, ssh_channel_callbacks cb)</argsstring>
+        <name>ssh_set_channel_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" kindref="member">ssh_channel_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the channel callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This functions sets the callback structure to use your own callback functions for channel data and exceptions.</para>
+<para>Note, that the structure is not copied to the channel structure so it needs to be valid as for the whole life of the channel or until it is removed with <ref refid="group__libssh__callbacks_1gae564352175e887c346a2e062f8124282" kindref="member">ssh_remove_channel_callbacks()</ref>.</para>
+<para><programlisting><codeline><highlight class="normal">struct<sp/>ssh_channel_callbacks_struct<sp/>cb<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.userdata<sp/>=<sp/>data,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.channel_data_function<sp/>=<sp/>my_channel_data_function</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">ssh_callbacks_init(&amp;cb);</highlight></codeline>
+<codeline><highlight class="normal">ssh_set_channel_callbacks(channel,<sp/>&amp;cb);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+<simplesect kind="warning"><para>this function will not replace existing callbacks but set the new one atop of them. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="104" column="5" bodyfile="src/callbacks.c" bodystart="104" bodyend="107"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" compoundref="callbacks_8c" startline="70" endline="102">ssh_add_set_channel_callbacks</references>
+        <referencedby refid="torture__server__x11_8c_1abe10df22f22204a031b0ee56aa0b81bf" compoundref="torture__server__x11_8c" startline="137" endline="152">channel_open</referencedby>
+        <referencedby refid="default__cb_8c_1a1c4ec691e0189bd2ff9c7acd3399895b" compoundref="default__cb_8c" startline="783" endline="995">default_handle_session_cb</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a845bb2d262ac6cb3c7acfaeb394641ee" compoundref="torture__server__auth__kbdint_8c" startline="333" endline="515">handle_kbdint_session_cb</referencedby>
+        <referencedby refid="ssh__server__fork_8c_1a2094e558ae17a16e444d40f575063102" compoundref="ssh__server__fork_8c" startline="536" endline="679">handle_session</referencedby>
+        <referencedby refid="sshd__direct-tcpip_8c_1a7943ace595a03c4155238686010419ce" compoundref="sshd__direct-tcpip_8c" startline="431" endline="486">message_callback</referencedby>
+        <referencedby refid="proxy_8c_1a68b21024dfd044e4f41dcd2c03fd1c0f" compoundref="proxy_8c" startline="99" endline="109">new_session_channel</referencedby>
+        <referencedby refid="pkd__daemon_8c_1a072176a3f00730d8fefe327d7110426b" compoundref="pkd__daemon_8c" startline="205" endline="230">pkd_channel_openreq_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1ga2fd83df19998902f84f951fc47def83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_add_channel_callbacks</definition>
+        <argsstring>(ssh_channel channel, ssh_channel_callbacks cb)</argsstring>
+        <name>ssh_add_channel_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" kindref="member">ssh_channel_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Add channel callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will add channel callback functions to the channel callback list. Callbacks missing from a callback structure will be probed in the next on the list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" kindref="member">ssh_set_channel_callbacks</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="109" column="5" bodyfile="src/callbacks.c" bodystart="109" bodyend="112"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" compoundref="callbacks_8c" startline="70" endline="102">ssh_add_set_channel_callbacks</references>
+        <referencedby refid="libssh_8h_1a43ca9065044b48afdede3e9fd9f1f86a" compoundref="connector_8c" startline="153" endline="167">ssh_connector_set_in_channel</referencedby>
+        <referencedby refid="libssh_8h_1a9545174e1a2727b15a620f09b7e8b348" compoundref="connector_8c" startline="169" endline="183">ssh_connector_set_out_channel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1gae564352175e887c346a2e062f8124282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_remove_channel_callbacks</definition>
+        <argsstring>(ssh_channel channel, ssh_channel_callbacks cb)</argsstring>
+        <name>ssh_remove_channel_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1aca32be8db7c865697a3de381dc7e9fc3" kindref="member">ssh_channel</ref></type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1gadb05a398aaa34ad16eb00fc13d4bcc3f" kindref="member">ssh_channel_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Remove a channel callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The channel has been added with ssh_add_channel_callbacks or ssh_set_channel_callbacks in this case.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel to remove the callback structure from.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure to remove</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="114" column="5" bodyfile="src/callbacks.c" bodystart="114" bodyend="130"/>
+        <references refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" compoundref="channels_8h" startline="81">ssh_channel_struct::callbacks</references>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__misc_1ga7a929a68f02650d474604a10252afd68" compoundref="misc_8c" startline="688" endline="694">ssh_list_find</references>
+        <references refid="group__libssh__misc_1gac862429660a1f93dcf625d08f407b85e" compoundref="misc_8c" startline="771" endline="798">ssh_list_remove</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="sshd__direct-tcpip_8c_1a1d108777de8e248073f748300f01226c" compoundref="sshd__direct-tcpip_8c" startline="95" endline="132">do_cleanup</referencedby>
+        <referencedby refid="libssh_8h_1ae082e4d35591a2f2f3074f28049ff993" compoundref="connector_8c" startline="125" endline="151">ssh_connector_free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__callbacks_1gaa321f33172cfa54eb50baaa963457a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_set_server_callbacks</definition>
+        <argsstring>(ssh_session session, ssh_server_callbacks cb)</argsstring>
+        <name>ssh_set_server_callbacks</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1ga163bc0f3f3492cc8cfc4aa3102bc8b2e" kindref="member">ssh_server_callbacks</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the session server callback functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This functions sets the callback structure to use your own callback functions for user authentication, new channels and requests.</para>
+<para>Note, that the structure is not copied to the session structure so it needs to be valid for the whole session lifetime.</para>
+<para><programlisting><codeline><highlight class="normal">struct<sp/>ssh_server_callbacks_struct<sp/>cb<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.userdata<sp/>=<sp/>data,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>.auth_password_function<sp/>=<sp/>my_auth_function</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline><highlight class="normal">ssh_callbacks_init(&amp;cb);</highlight></codeline>
+<codeline><highlight class="normal">ssh_set_server_callbacks(session,<sp/>&amp;cb);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session to set the callback structure.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback structure itself.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/callbacks.c" line="133" column="5" bodyfile="src/callbacks.c" bodystart="133" bodyend="147"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" compoundref="callbacks_8c" startline="30">is_callback_valid</references>
+        <references refid="structssh__session__struct_1a58da29c0a953ba17e094b5e4d4cb9163" compoundref="session_8h" startline="198">ssh_session_struct::server_callbacks</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="default__cb_8c_1a1c4ec691e0189bd2ff9c7acd3399895b" compoundref="default__cb_8c" startline="783" endline="995">default_handle_session_cb</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a845bb2d262ac6cb3c7acfaeb394641ee" compoundref="torture__server__auth__kbdint_8c" startline="333" endline="515">handle_kbdint_session_cb</referencedby>
+        <referencedby refid="ssh__server__fork_8c_1a2094e558ae17a16e444d40f575063102" compoundref="ssh__server__fork_8c" startline="536" endline="679">handle_session</referencedby>
+        <referencedby refid="proxy_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="proxy_8c" startline="215" endline="346">main</referencedby>
+        <referencedby refid="pkd__daemon_8c_1abe87875a523cecd013d848c7c9c5ba22" compoundref="pkd__daemon_8c" startline="238" endline="475">pkd_exec_hello</referencedby>
+        <referencedby refid="torture__server__x11_8c_1af793ec1fe611ecefae9f68db4f588c82" compoundref="torture__server__x11_8c" startline="154" endline="221">test_ssh_channel_request_x11</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>callbacks.c<sp/>-<sp/>callback<sp/>functions</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009-2013<sp/><sp/>by<sp/>Andreas<sp/>Schneider<sp/>&lt;asn@cryptomilk.org&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="session_8h" kindref="compound">libssh/session.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="misc_8h" kindref="compound">libssh/misc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>is_callback_valid(session,<sp/>cb)<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(cb-&gt;size<sp/>&lt;=<sp/>0<sp/>||<sp/>cb-&gt;size<sp/>&gt;<sp/>1024<sp/>*<sp/>sizeof(void<sp/>*))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>LEGACY<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" kindref="member">ssh_legacy_log_callback</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>priority,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">function</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/>(<ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref>)userdata;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1ga9057cbb0dc4ad1939cf6e03f36eaae9f" kindref="member">ssh_log_callback</ref><sp/>log_fn<sp/>=<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1acad23ad6d8bee359da41b9ed0faa6eaa" kindref="member">common</ref>.<ref refid="structssh__common__struct_1a2f42939ea278698d861c7617b7529eb7" kindref="member">callbacks</ref>-&gt;<ref refid="structssh__callbacks__struct_1a409f4218537c3224e42d35b28ae93f7a" kindref="member">log_function</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*log_data<sp/>=<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1acad23ad6d8bee359da41b9ed0faa6eaa" kindref="member">common</ref>.<ref refid="structssh__common__struct_1a2f42939ea278698d861c7617b7529eb7" kindref="member">callbacks</ref>-&gt;<ref refid="structssh__callbacks__struct_1aa5cdca2ba78d7582d8eff77ef7995700" kindref="member">userdata</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)</highlight><highlight class="keyword">function</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>log_fn(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>priority,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>log_data);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="group__libssh__callbacks_1ga2e4b0507c738748a3f10e43fe201fe09" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__callbacks_1ga2e4b0507c738748a3f10e43fe201fe09" kindref="member">ssh_set_callbacks</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__callbacks__struct" kindref="compound">ssh_callbacks</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>==<sp/>NULL<sp/>||<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" kindref="member">is_callback_valid</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>callback<sp/>passed<sp/>in<sp/>(badly<sp/>initialized)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1acad23ad6d8bee359da41b9ed0faa6eaa" kindref="member">common</ref>.<ref refid="structssh__common__struct_1a2f42939ea278698d861c7617b7529eb7" kindref="member">callbacks</ref><sp/>=<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>LEGACY<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__log_1ga0f795c820547d058dbbfa80cd4fe9a4e" kindref="member">ssh_get_log_callback</ref>()<sp/>==<sp/>NULL<sp/>&amp;&amp;<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>-&gt;<ref refid="structssh__callbacks__struct_1a409f4218537c3224e42d35b28ae93f7a" kindref="member">log_function</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__log_1ga6accdc08b7d8c4234750ef30c4854b9e" kindref="member">ssh_set_log_callback</ref>(<ref refid="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" kindref="member">ssh_legacy_log_callback</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__log_1ga0addd5c29922f40e9f842a43e0cb0b27" kindref="member">ssh_set_log_userdata</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" kindref="member">ssh_add_set_channel_callbacks</ref>(<ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structssh__channel__callbacks__struct" kindref="compound">ssh_channel_callbacks</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prepend)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/>NULL<sp/>||<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/>channel-&gt;<ref refid="structssh__channel__struct_1a0832dc830d09accd2f3a8f8349c3faf2" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" kindref="member">is_callback_valid</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>callback<sp/>passed<sp/>in<sp/>(badly<sp/>initialized)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref><sp/>=<sp/><ref refid="group__libssh__misc_1ga4c696e6fd38257737962971fa0362435" kindref="member">ssh_list_new</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref><sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" kindref="member">ssh_set_error_oom</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prepend)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__misc_1ga7f1c23a518f3ca0b63189763b64141c4" kindref="member">ssh_list_prepend</ref>(channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref>,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__misc_1ga4590c6ff62f0e6feb59e2e3152a6721f" kindref="member">ssh_list_append</ref>(channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref>,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__callbacks_1gacea52d1373970a4922bf60e6b1680919" kindref="member">ssh_set_channel_callbacks</ref>(<ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel,<sp/><ref refid="structssh__channel__callbacks__struct" kindref="compound">ssh_channel_callbacks</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" kindref="member">ssh_add_set_channel_callbacks</ref>(channel,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="group__libssh__callbacks_1ga2fd83df19998902f84f951fc47def83e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__callbacks_1ga2fd83df19998902f84f951fc47def83e" kindref="member">ssh_add_channel_callbacks</ref>(<ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel,<sp/><ref refid="structssh__channel__callbacks__struct" kindref="compound">ssh_channel_callbacks</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="callbacks_8c_1ad2b3310e2c1a9718912b3928c5fb76ef" kindref="member">ssh_add_set_channel_callbacks</ref>(channel,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="group__libssh__callbacks_1gae564352175e887c346a2e062f8124282" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__callbacks_1gae564352175e887c346a2e062f8124282" kindref="member">ssh_remove_channel_callbacks</ref>(<ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel,<sp/><ref refid="structssh__channel__callbacks__struct" kindref="compound">ssh_channel_callbacks</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__iterator" kindref="compound">ssh_iterator</ref><sp/>*it;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel<sp/>==<sp/>NULL<sp/>||<sp/>channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref><sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>=<sp/><ref refid="group__libssh__misc_1ga7a929a68f02650d474604a10252afd68" kindref="member">ssh_list_find</ref>(channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref>,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1gac862429660a1f93dcf625d08f407b85e" kindref="member">ssh_list_remove</ref>(channel-&gt;<ref refid="structssh__channel__struct_1ad526c0401837d1636e3f9075226f7cd9" kindref="member">callbacks</ref>,<sp/>it);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="group__libssh__callbacks_1gaa321f33172cfa54eb50baaa963457a17" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__callbacks_1gaa321f33172cfa54eb50baaa963457a17" kindref="member">ssh_set_server_callbacks</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__server__callbacks__struct" kindref="compound">ssh_server_callbacks</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>){</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>==<sp/>NULL<sp/>||<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="callbacks_8c_1a2ea43d9ee087c6b3ecb04aa4557d3eda" kindref="member">is_callback_valid</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>callback<sp/>passed<sp/>in<sp/>(badly<sp/>initialized)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a58da29c0a953ba17e094b5e4d4cb9163" kindref="member">server_callbacks</ref><sp/>=<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/callbacks.c"/>
+  </compounddef>
+</doxygen>

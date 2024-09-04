@@ -1,0 +1,1787 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__libssh__auth" kind="group">
+    <compoundname>libssh_auth</compoundname>
+    <title>The SSH authentication functions.</title>
+    <innerclass refid="structssh__agent__state__struct" prot="public">ssh_agent_state_struct</innerclass>
+    <innerclass refid="structssh__auth__auto__state__struct" prot="public">ssh_auth_auto_state_struct</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__libssh__auth_1ga288d00c21fe2d652607792379d90b7cf" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_agent_state_e</name>
+        <enumvalue id="group__libssh__auth_1gga288d00c21fe2d652607792379d90b7cfa5965e2ae4d759e633b54e038783fb118" prot="public">
+          <name>SSH_AGENT_STATE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__libssh__auth_1gga288d00c21fe2d652607792379d90b7cfa2c08668800684d1e8b900b73b6681bb6" prot="public">
+          <name>SSH_AGENT_STATE_PUBKEY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__libssh__auth_1gga288d00c21fe2d652607792379d90b7cfaadc9127e305c239a7e60de4bb569c89d" prot="public">
+          <name>SSH_AGENT_STATE_AUTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="827" column="1" bodyfile="src/auth.c" bodystart="827" bodyend="831"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__libssh__auth_1gac65f4923889fe6f2b91021872463b4c4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_auth_auto_state_e</name>
+        <enumvalue id="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4a7423bce4e2477ab036c8ce272fd7642f" prot="public">
+          <name>SSH_AUTH_AUTO_STATE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4a82677b8f55353fe73bdd8ddb9958d367" prot="public">
+          <name>SSH_AUTH_AUTO_STATE_PUBKEY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4a0f73343ecb44ed535c5d53cede05485a" prot="public">
+          <name>SSH_AUTH_AUTO_STATE_KEY_IMPORTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4ad484a042d380c408bc75ef844e8e0e9c" prot="public">
+          <name>SSH_AUTH_AUTO_STATE_PUBKEY_ACCEPTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="964" column="1" bodyfile="src/auth.c" bodystart="964" bodyend="969"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__auth_1ga812fb86c3dd4a6245bc7d01beaa9cfe8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_userauth_request_service</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_userauth_request_service</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="69" column="12" bodyfile="src/auth.c" bodystart="69" bodyend="79"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="libssh_8h_1abf8db7680a5214da800ad02d8599f073" compoundref="client_8c" startline="325" endline="370">ssh_service_request</references>
+        <referencedby refid="group__libssh__auth_1ga691078be9ea2a55fed97c7488395af5a" compoundref="auth_8c" startline="726" endline="825">ssh_userauth_agent_publickey</referencedby>
+        <referencedby refid="group__libssh__auth_1gac689d3761c0dc4ebee9971ecc482d9a4" compoundref="auth_8c" startline="1424" endline="1480">ssh_userauth_kbdint_init</referencedby>
+        <referencedby refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" compoundref="auth_8c" startline="406" endline="459">ssh_userauth_none</referencedby>
+        <referencedby refid="group__libssh__auth_1ga50c0c150f8c4703e7ee49b3e3e3ca215" compoundref="auth_8c" startline="1246" endline="1307">ssh_userauth_password</referencedby>
+        <referencedby refid="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" compoundref="auth_8c" startline="609" endline="723">ssh_userauth_publickey</referencedby>
+        <referencedby refid="group__libssh__auth_1ga592f673c4d417a6a46cd4876ac8287aa" compoundref="auth_8c" startline="489" endline="584">ssh_userauth_try_publickey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga4eba018b5d45cc32999cb76b06440c55" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_auth_response_termination</definition>
+        <argsstring>(void *user)</argsstring>
+        <name>ssh_auth_response_termination</name>
+        <param>
+          <type>void *</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="81" column="12" bodyfile="src/auth.c" bodystart="81" bodyend="97"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa1aebfec92e739cd95a40eafe1b468444" compoundref="auth_8h" startline="86">SSH_AUTH_STATE_AUTH_NONE_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefab046bd91ca00b04b47ce0c7b670423ba" compoundref="auth_8h" startline="78">SSH_AUTH_STATE_GSSAPI_MIC_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa12492663176bc8d81ec1f5f832ee7250" compoundref="auth_8h" startline="74">SSH_AUTH_STATE_GSSAPI_REQUEST_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa91300865963f77efc3044542fbd6ce36" compoundref="auth_8h" startline="76">SSH_AUTH_STATE_GSSAPI_TOKEN</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa6d785d00012593230e88f00debb19179" compoundref="auth_8h" startline="72">SSH_AUTH_STATE_KBDINT_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa3ec3c08deba889e791cdca82edeb2ce6" compoundref="auth_8h" startline="58">SSH_AUTH_STATE_NONE</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefaedccdf68a9f5857c7f31ac557b2a57b6" compoundref="auth_8h" startline="84">SSH_AUTH_STATE_PASSWORD_AUTH_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa867ade5fd7a5853b32a1935a47bd9776" compoundref="auth_8h" startline="82">SSH_AUTH_STATE_PUBKEY_AUTH_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefaeb9522ba4289c7bf7575802e7182cc3d" compoundref="auth_8h" startline="80">SSH_AUTH_STATE_PUBKEY_OFFER_SENT</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+        <referencedby refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gafd0aab143e9cce0a3781144fe74dd7ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char* ssh_auth_get_current_method</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_auth_get_current_method</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="99" column="19" bodyfile="src/auth.c" bodystart="99" bodyend="127"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1aa17667dad32ec77112a201b1b4b858e8" compoundref="libssh_8h" startline="177">SSH_AUTH_METHOD_GSSAPI_MIC</references>
+        <references refid="libssh_8h_1a47af3117d9ab19c61afeebfbfac8cfc4" compoundref="libssh_8h" startline="175">SSH_AUTH_METHOD_HOSTBASED</references>
+        <references refid="libssh_8h_1a4c64484fdce4756309799d0e2a4e926a" compoundref="libssh_8h" startline="176">SSH_AUTH_METHOD_INTERACTIVE</references>
+        <references refid="libssh_8h_1af37d502f88abb23d55e6c35aacc6b340" compoundref="libssh_8h" startline="172">SSH_AUTH_METHOD_NONE</references>
+        <references refid="libssh_8h_1ad10dd2f5826e2d92a30bd8af3404574d" compoundref="libssh_8h" startline="173">SSH_AUTH_METHOD_PASSWORD</references>
+        <references refid="libssh_8h_1aff27d66c1f5ba3871e72b5a61573f44a" compoundref="libssh_8h" startline="174">SSH_AUTH_METHOD_PUBLICKEY</references>
+        <referencedby refid="group__libssh__auth_1ga89e83a8f415d2d6783b25b5f96226208" compoundref="auth_8c" startline="222" endline="277">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_userauth_get_response</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_userauth_get_response</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="142" column="12" bodyfile="src/auth.c" bodystart="142" bodyend="186"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ac3d2d6d092a7adc147b7f859a0b252d2" compoundref="libssh_8h" startline="163">SSH_AUTH_DENIED</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a644612ea6c0e8413a3ff82547b74ce3a" compoundref="libssh_8h" startline="165">SSH_AUTH_INFO</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a3bb06206cff7b6f818099d6019418eea" compoundref="libssh_8h" startline="164">SSH_AUTH_PARTIAL</references>
+        <references refid="group__libssh__auth_1ga4eba018b5d45cc32999cb76b06440c55" compoundref="auth_8c" startline="81" endline="97">ssh_auth_response_termination</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa1aebfec92e739cd95a40eafe1b468444" compoundref="auth_8h" startline="86">SSH_AUTH_STATE_AUTH_NONE_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa331579d75bb0aa08050ca67a12861387" compoundref="auth_8h" startline="66">SSH_AUTH_STATE_ERROR</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa2274da14b3dc9f07b5fe6493045c356c" compoundref="auth_8h" startline="64">SSH_AUTH_STATE_FAILED</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefab046bd91ca00b04b47ce0c7b670423ba" compoundref="auth_8h" startline="78">SSH_AUTH_STATE_GSSAPI_MIC_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa12492663176bc8d81ec1f5f832ee7250" compoundref="auth_8h" startline="74">SSH_AUTH_STATE_GSSAPI_REQUEST_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa91300865963f77efc3044542fbd6ce36" compoundref="auth_8h" startline="76">SSH_AUTH_STATE_GSSAPI_TOKEN</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa97ddb5eeec18ad7d054ec5795e6e16d6" compoundref="auth_8h" startline="68">SSH_AUTH_STATE_INFO</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa6d785d00012593230e88f00debb19179" compoundref="auth_8h" startline="72">SSH_AUTH_STATE_KBDINT_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa3ec3c08deba889e791cdca82edeb2ce6" compoundref="auth_8h" startline="58">SSH_AUTH_STATE_NONE</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa36be1b8a3aec2b226f03077dc1e6f962" compoundref="auth_8h" startline="60">SSH_AUTH_STATE_PARTIAL</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefaedccdf68a9f5857c7f31ac557b2a57b6" compoundref="auth_8h" startline="84">SSH_AUTH_STATE_PASSWORD_AUTH_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa8d27800e44e1c7e3a5f30594443f78ef" compoundref="auth_8h" startline="70">SSH_AUTH_STATE_PK_OK</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa867ade5fd7a5853b32a1935a47bd9776" compoundref="auth_8h" startline="82">SSH_AUTH_STATE_PUBKEY_AUTH_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefaeb9522ba4289c7bf7575802e7182cc3d" compoundref="auth_8h" startline="80">SSH_AUTH_STATE_PUBKEY_OFFER_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa8e24c237c09404d0c93a1d3b5f8f3945" compoundref="auth_8h" startline="62">SSH_AUTH_STATE_SUCCESS</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__session_1ga4b84e1ae757c0d4007a5eefdf4651694" compoundref="session_8c" startline="692" endline="740">ssh_handle_packets_termination</references>
+        <references refid="session_8h_1a1d6b747c5003e24c3461096c76580b15" compoundref="session_8h" startline="82">SSH_TIMEOUT_USER</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <referencedby refid="group__libssh__auth_1ga691078be9ea2a55fed97c7488395af5a" compoundref="auth_8c" startline="726" endline="825">ssh_userauth_agent_publickey</referencedby>
+        <referencedby refid="group__libssh__auth_1gac689d3761c0dc4ebee9971ecc482d9a4" compoundref="auth_8c" startline="1424" endline="1480">ssh_userauth_kbdint_init</referencedby>
+        <referencedby refid="group__libssh__auth_1gaaa68e6aec2da509b246b7cba071408d3" compoundref="auth_8c" startline="1493" endline="1542">ssh_userauth_kbdint_send</referencedby>
+        <referencedby refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" compoundref="auth_8c" startline="406" endline="459">ssh_userauth_none</referencedby>
+        <referencedby refid="group__libssh__auth_1ga50c0c150f8c4703e7ee49b3e3e3ca215" compoundref="auth_8c" startline="1246" endline="1307">ssh_userauth_password</referencedby>
+        <referencedby refid="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" compoundref="auth_8c" startline="609" endline="723">ssh_userauth_publickey</referencedby>
+        <referencedby refid="group__libssh__auth_1ga592f673c4d417a6a46cd4876ac8287aa" compoundref="auth_8c" startline="489" endline="584">ssh_userauth_try_publickey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga1fc1f11c7ba0469c866c42956450ebf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_userauth_banner)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_userauth_banner</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="195" column="1" bodyfile="src/auth.c" bodystart="195" bodyend="213"/>
+        <references refid="structssh__session__struct_1a556cfe2037fb907bb21d1aa6a10a8944" compoundref="session_8h" startline="134">ssh_session_struct::banner</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="buffer_8h_1ae9ba83ddeaf673b2d15be5312495ed7e">ssh_buffer_get_ssh_string</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga89e83a8f415d2d6783b25b5f96226208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_userauth_failure)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_userauth_failure</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="222" column="1" bodyfile="src/auth.c" bodystart="222" bodyend="277"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__auth_1gafd0aab143e9cce0a3781144fe74dd7ab" compoundref="auth_8c" startline="99" endline="127">ssh_auth_get_current_method</references>
+        <references refid="libssh_8h_1aa17667dad32ec77112a201b1b4b858e8" compoundref="libssh_8h" startline="177">SSH_AUTH_METHOD_GSSAPI_MIC</references>
+        <references refid="libssh_8h_1a47af3117d9ab19c61afeebfbfac8cfc4" compoundref="libssh_8h" startline="175">SSH_AUTH_METHOD_HOSTBASED</references>
+        <references refid="libssh_8h_1a4c64484fdce4756309799d0e2a4e926a" compoundref="libssh_8h" startline="176">SSH_AUTH_METHOD_INTERACTIVE</references>
+        <references refid="libssh_8h_1ad10dd2f5826e2d92a30bd8af3404574d" compoundref="libssh_8h" startline="173">SSH_AUTH_METHOD_PASSWORD</references>
+        <references refid="libssh_8h_1aff27d66c1f5ba3871e72b5a61573f44a" compoundref="libssh_8h" startline="174">SSH_AUTH_METHOD_PUBLICKEY</references>
+        <references refid="libssh_8h_1aac3fef0944d87a778c92bd1dc9f3c153" compoundref="libssh_8h" startline="171">SSH_AUTH_METHOD_UNKNOWN</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa331579d75bb0aa08050ca67a12861387" compoundref="auth_8h" startline="66">SSH_AUTH_STATE_ERROR</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa2274da14b3dc9f07b5fe6493045c356c" compoundref="auth_8h" startline="64">SSH_AUTH_STATE_FAILED</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa36be1b8a3aec2b226f03077dc1e6f962" compoundref="auth_8h" startline="60">SSH_AUTH_STATE_PARTIAL</references>
+        <references refid="buffer_8h_1ab51014ef9a47e7cdbd235af3e62b81ee" compoundref="buffer_8h" startline="59">ssh_buffer_unpack</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a930fb852177813d4718c5d1911568740" compoundref="libssh_8h" startline="372">SSH_LOG_INFO</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="structssh__session__struct_1a3e967ac3134cae87dae1f6a794424073" compoundref="session_8h" startline="157">ssh_session_struct::supported_methods</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gadbd916c2423b2097647263645e0dd422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_userauth_success)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_userauth_success</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="286" column="1" bodyfile="src/auth.c" bodystart="286" bodyend="317"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="structssh__crypto__struct_1a264a702f7930c64683183b9334fa19d0" compoundref="crypto_8h" startline="144">ssh_crypto_struct::delayed_compress_in</references>
+        <references refid="structssh__crypto__struct_1a180198c8214743d490536a6855244355" compoundref="crypto_8h" startline="145">ssh_crypto_struct::delayed_compress_out</references>
+        <references refid="structssh__crypto__struct_1a9322f181b21f808d19918940335ecf40" compoundref="crypto_8h" startline="143">ssh_crypto_struct::do_compress_in</references>
+        <references refid="structssh__crypto__struct_1a2d1c6e8bd0458906a8dffa7ea982fa2d" compoundref="crypto_8h" startline="142">ssh_crypto_struct::do_compress_out</references>
+        <references refid="structssh__session__struct_1a997060832a3419d8fe884d3da855ef4c" compoundref="session_8h" startline="129">ssh_session_struct::flags</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__session__struct_1a6f74d1a1eb6ed715b1073b67caa18460" compoundref="session_8h" startline="147">ssh_session_struct::session_state</references>
+        <references refid="libssh_8h_1aac3fef0944d87a778c92bd1dc9f3c153" compoundref="libssh_8h" startline="171">SSH_AUTH_METHOD_UNKNOWN</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa8e24c237c09404d0c93a1d3b5f8f3945" compoundref="auth_8h" startline="62">SSH_AUTH_STATE_SUCCESS</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" compoundref="wrapper_8h" startline="61">SSH_DIRECTION_OUT</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="group__libssh__error_1gafa4e94327a2833d9e0eba2480a4988f7" compoundref="error_8c" startline="113" endline="119">ssh_reset_error</references>
+        <references refid="session_8h_1ae54e87f0565e24b25aed1372b3493a2b" compoundref="session_8h" startline="76">SSH_SESSION_FLAG_AUTHENTICATED</references>
+        <references refid="session_8h_1a9bbd1d5ae11485e27279be6ad461992caced7c62fd9f24fe8f6672d50b8219f60" compoundref="session_8h" startline="45">SSH_SESSION_STATE_AUTHENTICATED</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gabcd6b05236558e07e8dc564a68f0a4a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_userauth_pk_ok)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_userauth_pk_ok</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="327" column="1" bodyfile="src/auth.c" bodystart="327" bodyend="354"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa331579d75bb0aa08050ca67a12861387" compoundref="auth_8h" startline="66">SSH_AUTH_STATE_ERROR</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa12492663176bc8d81ec1f5f832ee7250" compoundref="auth_8h" startline="74">SSH_AUTH_STATE_GSSAPI_REQUEST_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa6d785d00012593230e88f00debb19179" compoundref="auth_8h" startline="72">SSH_AUTH_STATE_KBDINT_SENT</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa8d27800e44e1c7e3a5f30594443f78ef" compoundref="auth_8h" startline="70">SSH_AUTH_STATE_PK_OK</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefaeb9522ba4289c7bf7575802e7182cc3d" compoundref="auth_8h" startline="80">SSH_AUTH_STATE_PUBKEY_OFFER_SENT</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga35d44897a44b4bb3b7c01108c1812a37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_list</definition>
+        <argsstring>(ssh_session session, const char *username)</argsstring>
+        <name>ssh_userauth_list</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Get available authentication methods from the server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This requires the function <ref refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" kindref="member">ssh_userauth_none()</ref> to be called before the methods are available. The server MAY return a list of methods that may continue.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSH session.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Deprecated, set to NULL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A bitfield of the fllowing values:<itemizedlist>
+<listitem><para>SSH_AUTH_METHOD_PASSWORD</para>
+</listitem><listitem><para>SSH_AUTH_METHOD_PUBLICKEY</para>
+</listitem><listitem><para>SSH_AUTH_METHOD_HOSTBASED</para>
+</listitem><listitem><para>SSH_AUTH_METHOD_INTERACTIVE</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="warning"><para>Other reserved flags may appear in future versions. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" kindref="member">ssh_userauth_none()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="376" column="5" bodyfile="src/auth.c" bodystart="376" bodyend="385"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__session__struct_1a3e967ac3134cae87dae1f6a794424073" compoundref="session_8h" startline="157">ssh_session_struct::supported_methods</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <referencedby refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</referencedby>
+        <referencedby refid="classssh_1_1Session_1a08d70b5cdb5bd1a2a8f5f9ebbdf67b3b" compoundref="libsshpp_8hpp" startline="293" endline="297">ssh::Session::getAuthList</referencedby>
+        <referencedby refid="legacy_8h_1aba195cc3cbc63d4c688d65b3307c1e24" compoundref="legacy_8c" startline="44" endline="46">ssh_auth_list</referencedby>
+        <referencedby refid="torture__auth_8c_1add171176cc97a54d8bf7a3a9fcbd49c8" compoundref="torture__auth_8c" startline="440" endline="465">torture_auth_agent</referencedby>
+        <referencedby refid="torture__auth_8c_1ac1e47567b2530e7c7c17d7f3367db43c" compoundref="torture__auth_8c" startline="467" endline="496">torture_auth_agent_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a1bc4253d4b7389acb38fa5e5ffc3cf51" compoundref="torture__auth_8c" startline="253" endline="275">torture_auth_autopubkey</referencedby>
+        <referencedby refid="torture__auth_8c_1a2fc459f58be2d4e235c5ef4397fa8b4b" compoundref="torture__auth_8c" startline="277" endline="305">torture_auth_autopubkey_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a4b7c297eeeae3bb821a5480574439b78" compoundref="torture__auth_8c" startline="307" endline="340">torture_auth_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a8c1979b9feebe5c34354456ff4260ee4" compoundref="torture__auth_8c" startline="342" endline="384">torture_auth_kbdint_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1acab4c789da42f078db39e0e8dec81bc4" compoundref="torture__auth_8c" startline="386" endline="407">torture_auth_password</referencedby>
+        <referencedby refid="torture__auth_8c_1a144cbca03a69c33a0137bbcbd69873cf" compoundref="torture__auth_8c" startline="409" endline="438">torture_auth_password_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a1e1c5e9d0352de375c56cf27921d00f6" compoundref="torture__auth_8c" startline="597" endline="632">torture_auth_pubkey_types</referencedby>
+        <referencedby refid="torture__auth_8c_1a30fc01934c5dc0343d91dc6b90cbabac" compoundref="torture__auth_8c" startline="634" endline="670">torture_auth_pubkey_types_ecdsa</referencedby>
+        <referencedby refid="torture__auth_8c_1aaefb1835a46af27a36149a89c3308825" compoundref="torture__auth_8c" startline="777" endline="822">torture_auth_pubkey_types_ecdsa_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1aef29b45c88fd31e623e989959a72a434" compoundref="torture__auth_8c" startline="672" endline="728">torture_auth_pubkey_types_ed25519</referencedby>
+        <referencedby refid="torture__auth_8c_1a6f2cc3f2514eaf5b14e030490d6993f3" compoundref="torture__auth_8c" startline="824" endline="888">torture_auth_pubkey_types_ed25519_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a6c870e5368b648dc01f643bbc52a62f4" compoundref="torture__auth_8c" startline="730" endline="775">torture_auth_pubkey_types_nonblocking</referencedby>
+        <referencedby refid="torture__rekey_8c_1a75d0cca74861337645286b4d42e57006" compoundref="torture__rekey_8c" startline="150" endline="209">torture_rekey_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a3c7d816b41acf84841eb39ec72475998" compoundref="torture__rekey_8c" startline="393" endline="440">torture_rekey_server_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a83928e03d85a04fd06d4c4a0ca9c7394" compoundref="torture__rekey_8c" startline="324" endline="388">torture_rekey_time</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a1ae155752732ad519ce76bedf8b2a5b7" compoundref="torture__server__auth__kbdint_8c" startline="686" endline="746">torture_server_auth_kbdint</referencedby>
+        <referencedby refid="torture__server_8c_1a209f1dfc209f45f52226ee57825f596b" compoundref="torture__server_8c" startline="355" endline="390">torture_server_auth_password</referencedby>
+        <referencedby refid="torture__server_8c_1a73fb9c5aabcb0550f2bdee3cfd7ef346" compoundref="torture__server_8c" startline="392" endline="424">torture_server_auth_pubkey</referencedby>
+        <referencedby refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</referencedby>
+        <referencedby refid="torture__server__config_8c_1a5de50eda837b8f94dcf6d18a765d0dc8" compoundref="torture__server__config_8c" startline="350" endline="423">try_config_content</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_none</definition>
+        <argsstring>(ssh_session session, const char *username)</argsstring>
+        <name>ssh_userauth_none</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Try to authenticate through the &quot;none&quot; method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username, this SHOULD be NULL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened.<linebreak/>
+ SSH_AUTH_DENIED: Authentication failed: use another method<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method<linebreak/>
+ SSH_AUTH_SUCCESS: Authentication success<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later.</para>
+</simplesect>
+<simplesect kind="note"><para>Most server implementations do not permit changing the username during authentication. The username should only be set with <ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set()</ref> only before you connect to the server. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="406" column="5" bodyfile="src/auth.c" bodystart="406" bodyend="459"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a423ea81df02faff2d59b730af16ac59e" compoundref="ssh2_8h" startline="27">SSH2_MSG_USERAUTH_REQUEST</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1af37d502f88abb23d55e6c35aacc6b340" compoundref="libssh_8h" startline="172">SSH_AUTH_METHOD_NONE</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa1aebfec92e739cd95a40eafe1b468444" compoundref="auth_8h" startline="86">SSH_AUTH_STATE_AUTH_NONE_SENT</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a3ee5993b383a7d6a1bfd35e2e0ed3ed1" compoundref="session_8h" startline="62">SSH_PENDING_CALL_AUTH_NONE</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</references>
+        <references refid="group__libssh__auth_1ga812fb86c3dd4a6245bc7d01beaa9cfe8" compoundref="auth_8c" startline="69" endline="79">ssh_userauth_request_service</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <references refid="structssh__session__struct_1a8ed5d5d3116679fd7b8f2c0e1db92726" compoundref="session_8h" startline="210">ssh_session_struct::username</references>
+        <referencedby refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</referencedby>
+        <referencedby refid="ssh__client_8c_1a0d3591711bd7d6cb03d42294115721bb" compoundref="ssh__client_8c" startline="318" endline="366">client</referencedby>
+        <referencedby refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" compoundref="sftp__stress_2main_8c" startline="76" endline="135">connect_host</referencedby>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+        <referencedby refid="proxy_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="proxy_8c" startline="215" endline="346">main</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a15b3d1cac3aa670c3409b3bdc4c30223" compoundref="torture__algorithms_8c" startline="83" endline="135">test_algorithm</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a09eb7c5ef70408a9d0a2771bdfa48c7a" compoundref="torture__algorithms_8c" startline="553" endline="589">torture_algorithms_zlib</referencedby>
+        <referencedby refid="torture__algorithms_8c_1af4b1201c7c4184336c8ce8b13b8052c6" compoundref="torture__algorithms_8c" startline="591" endline="628">torture_algorithms_zlib_openssh</referencedby>
+        <referencedby refid="torture__auth_8c_1add171176cc97a54d8bf7a3a9fcbd49c8" compoundref="torture__auth_8c" startline="440" endline="465">torture_auth_agent</referencedby>
+        <referencedby refid="torture__auth_8c_1ac1e47567b2530e7c7c17d7f3367db43c" compoundref="torture__auth_8c" startline="467" endline="496">torture_auth_agent_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a1bc4253d4b7389acb38fa5e5ffc3cf51" compoundref="torture__auth_8c" startline="253" endline="275">torture_auth_autopubkey</referencedby>
+        <referencedby refid="torture__auth_8c_1a2fc459f58be2d4e235c5ef4397fa8b4b" compoundref="torture__auth_8c" startline="277" endline="305">torture_auth_autopubkey_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a4b7c297eeeae3bb821a5480574439b78" compoundref="torture__auth_8c" startline="307" endline="340">torture_auth_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a8c1979b9feebe5c34354456ff4260ee4" compoundref="torture__auth_8c" startline="342" endline="384">torture_auth_kbdint_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a71d7b34d984879dbfaf6afb2870233ec" compoundref="torture__auth_8c" startline="207" endline="225">torture_auth_none</referencedby>
+        <referencedby refid="torture__auth_8c_1a5836d87eecde023390a0acf40b7160c6" compoundref="torture__auth_8c" startline="227" endline="251">torture_auth_none_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1acab4c789da42f078db39e0e8dec81bc4" compoundref="torture__auth_8c" startline="386" endline="407">torture_auth_password</referencedby>
+        <referencedby refid="torture__auth_8c_1a144cbca03a69c33a0137bbcbd69873cf" compoundref="torture__auth_8c" startline="409" endline="438">torture_auth_password_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a1e1c5e9d0352de375c56cf27921d00f6" compoundref="torture__auth_8c" startline="597" endline="632">torture_auth_pubkey_types</referencedby>
+        <referencedby refid="torture__auth_8c_1a30fc01934c5dc0343d91dc6b90cbabac" compoundref="torture__auth_8c" startline="634" endline="670">torture_auth_pubkey_types_ecdsa</referencedby>
+        <referencedby refid="torture__auth_8c_1aaefb1835a46af27a36149a89c3308825" compoundref="torture__auth_8c" startline="777" endline="822">torture_auth_pubkey_types_ecdsa_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1aef29b45c88fd31e623e989959a72a434" compoundref="torture__auth_8c" startline="672" endline="728">torture_auth_pubkey_types_ed25519</referencedby>
+        <referencedby refid="torture__auth_8c_1a6f2cc3f2514eaf5b14e030490d6993f3" compoundref="torture__auth_8c" startline="824" endline="888">torture_auth_pubkey_types_ed25519_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a6c870e5368b648dc01f643bbc52a62f4" compoundref="torture__auth_8c" startline="730" endline="775">torture_auth_pubkey_types_nonblocking</referencedby>
+        <referencedby refid="torture__rekey_8c_1a75d0cca74861337645286b4d42e57006" compoundref="torture__rekey_8c" startline="150" endline="209">torture_rekey_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a3c7d816b41acf84841eb39ec72475998" compoundref="torture__rekey_8c" startline="393" endline="440">torture_rekey_server_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a83928e03d85a04fd06d4c4a0ca9c7394" compoundref="torture__rekey_8c" startline="324" endline="388">torture_rekey_time</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a1ae155752732ad519ce76bedf8b2a5b7" compoundref="torture__server__auth__kbdint_8c" startline="686" endline="746">torture_server_auth_kbdint</referencedby>
+        <referencedby refid="torture__server_8c_1a45fb3c9d4948a2e1428a5d00f28d47b6" compoundref="torture__server_8c" startline="325" endline="353">torture_server_auth_none</referencedby>
+        <referencedby refid="torture__server_8c_1a209f1dfc209f45f52226ee57825f596b" compoundref="torture__server_8c" startline="355" endline="390">torture_server_auth_password</referencedby>
+        <referencedby refid="torture__server_8c_1a73fb9c5aabcb0550f2bdee3cfd7ef346" compoundref="torture__server_8c" startline="392" endline="424">torture_server_auth_pubkey</referencedby>
+        <referencedby refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</referencedby>
+        <referencedby refid="torture__server__config_8c_1a5de50eda837b8f94dcf6d18a765d0dc8" compoundref="torture__server__config_8c" startline="350" endline="423">try_config_content</referencedby>
+        <referencedby refid="classssh_1_1Session_1a988398835fc131b0eb5a83a4adaec532" compoundref="libsshpp_8hpp" startline="192" endline="196">ssh::Session::userauthNone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga592f673c4d417a6a46cd4876ac8287aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_try_publickey</definition>
+        <argsstring>(ssh_session session, const char *username, const ssh_key pubkey)</argsstring>
+        <name>ssh_userauth_try_publickey</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const <ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+          <declname>pubkey</declname>
+        </param>
+        <briefdescription>
+<para>Try to authenticate with the given public key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To avoid unnecessary processing and user interaction, the following method is provided for querying whether authentication using the &apos;pubkey&apos; would be possible.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSH session.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username, this SHOULD be NULL.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pubkey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The public key to try.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened.<linebreak/>
+ SSH_AUTH_DENIED: The server doesn&apos;t accept that public key as an authentication token. Try another key or another method.<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method.<linebreak/>
+ SSH_AUTH_SUCCESS: The public key is accepted, you want now to use <ref refid="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" kindref="member">ssh_userauth_publickey()</ref>.<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later.</para>
+</simplesect>
+<simplesect kind="note"><para>Most server implementations do not permit changing the username during authentication. The username should only be set with <ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set()</ref> only before you connect to the server. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="489" column="5" bodyfile="src/auth.c" bodystart="489" bodyend="584"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a423ea81df02faff2d59b730af16ac59e" compoundref="ssh2_8h" startline="27">SSH2_MSG_USERAUTH_REQUEST</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ac3d2d6d092a7adc147b7f859a0b252d2" compoundref="libssh_8h" startline="163">SSH_AUTH_DENIED</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1aff27d66c1f5ba3871e72b5a61573f44a" compoundref="libssh_8h" startline="174">SSH_AUTH_METHOD_PUBLICKEY</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefaeb9522ba4289c7bf7575802e7182cc3d" compoundref="auth_8h" startline="80">SSH_AUTH_STATE_PUBKEY_OFFER_SENT</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__pki_1ga79010baa7b7ca9d4467910ff863e669d" compoundref="pki_8c" startline="371" endline="401">ssh_key_algorithm_allowed</references>
+        <references refid="group__libssh__pki_1ga7ad4109947adef7dbe7f9b8d1577cc88" compoundref="pki_8c" startline="483" endline="506">ssh_key_get_signature_algorithm</references>
+        <references refid="group__libssh__pki_1ga9bc688b5cbc400320ac44896eba21924" compoundref="pki_8c" startline="621" endline="627">ssh_key_is_public</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1acc1374f13198a1db57344b049d626c4a" compoundref="session_8h" startline="64">SSH_PENDING_CALL_AUTH_OFFER_PUBKEY</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="group__libssh__pki_1gaadeaf6dc35e99214de0af82c3c431649" compoundref="pki_8c" startline="2030" endline="2046">ssh_pki_export_pubkey_blob</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</references>
+        <references refid="group__libssh__auth_1ga812fb86c3dd4a6245bc7d01beaa9cfe8" compoundref="auth_8c" startline="69" endline="79">ssh_userauth_request_service</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <references refid="structssh__session__struct_1a8ed5d5d3116679fd7b8f2c0e1db92726" compoundref="session_8h" startline="210">ssh_session_struct::username</references>
+        <referencedby refid="examples_2authentication_8c_1a92d7c9e4306c6cab0efa38f402ce3d11" compoundref="examples_2authentication_8c" startline="103" endline="133">auth_keyfile</referencedby>
+        <referencedby refid="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" compoundref="auth_8c" startline="872" endline="961">ssh_userauth_agent</referencedby>
+        <referencedby refid="legacy_8h_1a34ad35b88d0117527c37a70d93fd1f51" compoundref="legacy_8c" startline="48" endline="66">ssh_userauth_offer_pubkey</referencedby>
+        <referencedby refid="group__libssh__auth_1ga53e6771b250c061463ed98b6e5b6e0af" compoundref="auth_8c" startline="1007" endline="1212">ssh_userauth_publickey_auto</referencedby>
+        <referencedby refid="torture__auth_8c_1a3dc15f1542313d7536ea949a57ed8d0b" compoundref="torture__auth_8c" startline="498" endline="544">torture_auth_cert</referencedby>
+        <referencedby refid="classssh_1_1Session_1afb635d7f84b000bbabb09a86ad5ad074" compoundref="libsshpp_8hpp" startline="271" endline="275">ssh::Session::userauthTryPublickey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_publickey</definition>
+        <argsstring>(ssh_session session, const char *username, const ssh_key privkey)</argsstring>
+        <name>ssh_userauth_publickey</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const <ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+          <declname>privkey</declname>
+        </param>
+        <briefdescription>
+<para>Authenticate with public/private key or certificate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSH session.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username, this SHOULD be NULL.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">privkey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The private key for authentication.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened.<linebreak/>
+ SSH_AUTH_DENIED: The server doesn&apos;t accept that public key as an authentication token. Try another key or another method.<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method.<linebreak/>
+ SSH_AUTH_SUCCESS: The public key is accepted.<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later.</para>
+</simplesect>
+<simplesect kind="note"><para>Most server implementations do not permit changing the username during authentication. The username should only be set with <ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set()</ref> only before you connect to the server. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="609" column="5" bodyfile="src/auth.c" bodystart="609" bodyend="723"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a5d18fd02a76effa0a15b1decb554cc12" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="96">privkey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a423ea81df02faff2d59b730af16ac59e" compoundref="ssh2_8h" startline="27">SSH2_MSG_USERAUTH_REQUEST</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ac3d2d6d092a7adc147b7f859a0b252d2" compoundref="libssh_8h" startline="163">SSH_AUTH_DENIED</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1aff27d66c1f5ba3871e72b5a61573f44a" compoundref="libssh_8h" startline="174">SSH_AUTH_METHOD_PUBLICKEY</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa867ade5fd7a5853b32a1935a47bd9776" compoundref="auth_8h" startline="82">SSH_AUTH_STATE_PUBKEY_AUTH_SENT</references>
+        <references refid="buffer_8h_1a75f9cd3d07f2039b0cd1821a7eb0d7f8">ssh_buffer_add_ssh_string</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__pki_1ga79010baa7b7ca9d4467910ff863e669d" compoundref="pki_8c" startline="371" endline="401">ssh_key_algorithm_allowed</references>
+        <references refid="group__libssh__pki_1ga7ad4109947adef7dbe7f9b8d1577cc88" compoundref="pki_8c" startline="483" endline="506">ssh_key_get_signature_algorithm</references>
+        <references refid="group__libssh__pki_1ga09de68aba0a7c4e31d8ba7df43b637c5" compoundref="pki_8c" startline="636" endline="642">ssh_key_is_private</references>
+        <references refid="group__libssh__pki_1ga10eb6e34355baea3a0dd8431188ca790" compoundref="pki_8c" startline="414" endline="471">ssh_key_type_to_hash</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a85ca960326af12df3bd2abca946f1617" compoundref="session_8h" startline="65">SSH_PENDING_CALL_AUTH_PUBKEY</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="group__libssh__pki_1gab366c5e63b468061d201397939bc6a82" compoundref="pki_8c" startline="2511" endline="2582">ssh_pki_do_sign</references>
+        <references refid="group__libssh__pki_1gaadeaf6dc35e99214de0af82c3c431649" compoundref="pki_8c" startline="2030" endline="2046">ssh_pki_export_pubkey_blob</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</references>
+        <references refid="group__libssh__auth_1ga812fb86c3dd4a6245bc7d01beaa9cfe8" compoundref="auth_8c" startline="69" endline="79">ssh_userauth_request_service</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <references refid="structssh__session__struct_1a8ed5d5d3116679fd7b8f2c0e1db92726" compoundref="session_8h" startline="210">ssh_session_struct::username</references>
+        <referencedby refid="examples_2authentication_8c_1a92d7c9e4306c6cab0efa38f402ce3d11" compoundref="examples_2authentication_8c" startline="103" endline="133">auth_keyfile</referencedby>
+        <referencedby refid="legacy_8h_1afb953cc1f6cccb9263b06543bfd30bba" compoundref="legacy_8c" startline="68" endline="95">ssh_userauth_pubkey</referencedby>
+        <referencedby refid="group__libssh__auth_1ga53e6771b250c061463ed98b6e5b6e0af" compoundref="auth_8c" startline="1007" endline="1212">ssh_userauth_publickey_auto</referencedby>
+        <referencedby refid="torture__auth_8c_1a3dc15f1542313d7536ea949a57ed8d0b" compoundref="torture__auth_8c" startline="498" endline="544">torture_auth_cert</referencedby>
+        <referencedby refid="torture__auth_8c_1aef29b45c88fd31e623e989959a72a434" compoundref="torture__auth_8c" startline="672" endline="728">torture_auth_pubkey_types_ed25519</referencedby>
+        <referencedby refid="torture__auth_8c_1a6f2cc3f2514eaf5b14e030490d6993f3" compoundref="torture__auth_8c" startline="824" endline="888">torture_auth_pubkey_types_ed25519_nonblocking</referencedby>
+        <referencedby refid="classssh_1_1Session_1a6dd49ee38bf24c31c5e0e28dc2af07b7" compoundref="libsshpp_8hpp" startline="282" endline="286">ssh::Session::userauthPublickey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga691078be9ea2a55fed97c7488395af5a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_userauth_agent_publickey</definition>
+        <argsstring>(ssh_session session, const char *username, ssh_key pubkey)</argsstring>
+        <name>ssh_userauth_agent_publickey</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+          <declname>pubkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="726" column="12" bodyfile="src/auth.c" bodystart="726" bodyend="825"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a423ea81df02faff2d59b730af16ac59e" compoundref="ssh2_8h" startline="27">SSH2_MSG_USERAUTH_REQUEST</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ac3d2d6d092a7adc147b7f859a0b252d2" compoundref="libssh_8h" startline="163">SSH_AUTH_DENIED</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1aff27d66c1f5ba3871e72b5a61573f44a" compoundref="libssh_8h" startline="174">SSH_AUTH_METHOD_PUBLICKEY</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa867ade5fd7a5853b32a1935a47bd9776" compoundref="auth_8h" startline="82">SSH_AUTH_STATE_PUBKEY_AUTH_SENT</references>
+        <references refid="buffer_8h_1a75f9cd3d07f2039b0cd1821a7eb0d7f8">ssh_buffer_add_ssh_string</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__pki_1ga79010baa7b7ca9d4467910ff863e669d" compoundref="pki_8c" startline="371" endline="401">ssh_key_algorithm_allowed</references>
+        <references refid="group__libssh__pki_1ga7ad4109947adef7dbe7f9b8d1577cc88" compoundref="pki_8c" startline="483" endline="506">ssh_key_get_signature_algorithm</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a099a4746aa5830db8c84495e1e0481e4" compoundref="session_8h" startline="66">SSH_PENDING_CALL_AUTH_AGENT</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="group__libssh__pki_1ga030b5e767d97bd26053a5644b083c133" compoundref="pki_8c" startline="2585" endline="2633">ssh_pki_do_sign_agent</references>
+        <references refid="group__libssh__pki_1gaadeaf6dc35e99214de0af82c3c431649" compoundref="pki_8c" startline="2030" endline="2046">ssh_pki_export_pubkey_blob</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</references>
+        <references refid="group__libssh__auth_1ga812fb86c3dd4a6245bc7d01beaa9cfe8" compoundref="auth_8c" startline="69" endline="79">ssh_userauth_request_service</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <references refid="structssh__session__struct_1a8ed5d5d3116679fd7b8f2c0e1db92726" compoundref="session_8h" startline="210">ssh_session_struct::username</references>
+        <referencedby refid="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" compoundref="auth_8c" startline="872" endline="961">ssh_userauth_agent</referencedby>
+        <referencedby refid="group__libssh__auth_1ga5cc49db459d6e27c8645a20bbd0f5f88" compoundref="auth_8c" startline="1311" endline="1336">ssh_userauth_agent_pubkey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga7d4487088981015ec0b1c66befc1c7dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_agent_state_free</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>ssh_agent_state_free</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="840" column="6" bodyfile="src/auth.c" bodystart="840" bodyend="848"/>
+        <references refid="group__libssh__pki_1ga08808beb83a42ccd6f1c710ddeb1b4c2" compoundref="pki_8c" startline="205" endline="210">ssh_key_free</references>
+        <references refid="libssh_8h_1a892d8251a4be8c99d31d0bb599174c0c" compoundref="libssh_8h" startline="798">SSH_STRING_FREE_CHAR</references>
+        <references refid="structssh__agent__state__struct_1aff904ec87c3104dfb7bb6915ef9a88b6" compoundref="auth_8c" startline="834">ssh_agent_state_struct::state</references>
+        <referencedby refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</referencedby>
+        <referencedby refid="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" compoundref="auth_8c" startline="872" endline="961">ssh_userauth_agent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_agent</definition>
+        <argsstring>(ssh_session session, const char *username)</argsstring>
+        <name>ssh_userauth_agent</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Try to do public key authentication with ssh agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username, this SHOULD be NULL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened.<linebreak/>
+ SSH_AUTH_DENIED: The server doesn&apos;t accept that public key as an authentication token. Try another key or another method.<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method.<linebreak/>
+ SSH_AUTH_SUCCESS: The public key is accepted, you want now to use <ref refid="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" kindref="member">ssh_userauth_publickey()</ref>.<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later.</para>
+</simplesect>
+<simplesect kind="note"><para>Most server implementations do not permit changing the username during authentication. The username should only be set with <ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set()</ref> only before you connect to the server. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="872" column="5" bodyfile="src/auth.c" bodystart="872" bodyend="961"/>
+        <references refid="structssh__session__struct_1a5c92e3c7c116f8162038fdca66361641" compoundref="session_8h" startline="151">ssh_session_struct::agent_state</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="agent_8h_1a470bb8d667532292562a8567cbd708de" compoundref="agent_8c" startline="398" endline="405">ssh_agent_get_first_ident</references>
+        <references refid="agent_8h_1a730a3c31e6bef0b7f88f0061dc5deb3f" compoundref="agent_8c" startline="408" endline="455">ssh_agent_get_next_ident</references>
+        <references refid="agent_8h_1a8ecb166e690f4b0bf35af42184f28407">ssh_agent_is_running</references>
+        <references refid="group__libssh__auth_1gga288d00c21fe2d652607792379d90b7cfaadc9127e305c239a7e60de4bb569c89d" compoundref="auth_8c" startline="830">SSH_AGENT_STATE_AUTH</references>
+        <references refid="group__libssh__auth_1ga7d4487088981015ec0b1c66befc1c7dd" compoundref="auth_8c" startline="840" endline="848">ssh_agent_state_free</references>
+        <references refid="group__libssh__auth_1gga288d00c21fe2d652607792379d90b7cfa5965e2ae4d759e633b54e038783fb118" compoundref="auth_8c" startline="828">SSH_AGENT_STATE_NONE</references>
+        <references refid="group__libssh__auth_1gga288d00c21fe2d652607792379d90b7cfa2c08668800684d1e8b900b73b6681bb6" compoundref="auth_8c" startline="829">SSH_AGENT_STATE_PUBKEY</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ac3d2d6d092a7adc147b7f859a0b252d2" compoundref="libssh_8h" startline="163">SSH_AUTH_DENIED</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a3bb06206cff7b6f818099d6019418eea" compoundref="libssh_8h" startline="164">SSH_AUTH_PARTIAL</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="group__libssh__pki_1ga08808beb83a42ccd6f1c710ddeb1b4c2" compoundref="pki_8c" startline="205" endline="210">ssh_key_free</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="libssh_8h_1a930fb852177813d4718c5d1911568740" compoundref="libssh_8h" startline="372">SSH_LOG_INFO</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="libssh_8h_1a892d8251a4be8c99d31d0bb599174c0c" compoundref="libssh_8h" startline="798">SSH_STRING_FREE_CHAR</references>
+        <references refid="group__libssh__auth_1ga691078be9ea2a55fed97c7488395af5a" compoundref="auth_8c" startline="726" endline="825">ssh_userauth_agent_publickey</references>
+        <references refid="group__libssh__auth_1ga592f673c4d417a6a46cd4876ac8287aa" compoundref="auth_8c" startline="489" endline="584">ssh_userauth_try_publickey</references>
+        <references refid="structssh__agent__state__struct_1aff904ec87c3104dfb7bb6915ef9a88b6" compoundref="auth_8c" startline="834">ssh_agent_state_struct::state</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <references refid="priv_8h_1a65e0a55b6af58e00b0a584d665af60ab" compoundref="priv_8h" startline="320">ZERO_STRUCTP</references>
+        <referencedby refid="group__libssh__auth_1ga53e6771b250c061463ed98b6e5b6e0af" compoundref="auth_8c" startline="1007" endline="1212">ssh_userauth_publickey_auto</referencedby>
+        <referencedby refid="torture__auth_8c_1add171176cc97a54d8bf7a3a9fcbd49c8" compoundref="torture__auth_8c" startline="440" endline="465">torture_auth_agent</referencedby>
+        <referencedby refid="torture__auth_8c_1ac1e47567b2530e7c7c17d7f3367db43c" compoundref="torture__auth_8c" startline="467" endline="496">torture_auth_agent_nonblocking</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga53e6771b250c061463ed98b6e5b6e0af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_publickey_auto</definition>
+        <argsstring>(ssh_session session, const char *username, const char *passphrase)</argsstring>
+        <name>ssh_userauth_publickey_auto</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+<para>Tries to automatically authenticate with public key and &quot;none&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It may fail, for instance it doesn&apos;t ask for a password and uses a default asker for passphrases (in case the private key is encrypted).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSH session.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username, this SHOULD be NULL.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">passphrase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Use this passphrase to unlock the privatekey. Use NULL if you don&apos;t want to use a passphrase or the user should be asked.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened.<linebreak/>
+ SSH_AUTH_DENIED: The server doesn&apos;t accept that public key as an authentication token. Try another key or another method.<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method.<linebreak/>
+ SSH_AUTH_SUCCESS: The public key is accepted, you want now to use <ref refid="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" kindref="member">ssh_userauth_publickey()</ref>.<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later.</para>
+</simplesect>
+<simplesect kind="note"><para>Most server implementations do not permit changing the username during authentication. The username should only be set with <ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set()</ref> only before you connect to the server. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1007" column="5" bodyfile="src/auth.c" bodystart="1007" bodyend="1212"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__callbacks__struct_1a5f79b2d36329d0ce6e9ac2cd3b77b046" compoundref="callbacks_8h" startline="152">ssh_callbacks_struct::auth_function</references>
+        <references refid="structssh__session__struct_1a704e97e502aaee91fc79507a3458a87d" compoundref="session_8h" startline="154">ssh_session_struct::auto_state</references>
+        <references refid="structssh__common__struct_1a2f42939ea278698d861c7617b7529eb7" compoundref="session_8h" startline="105">ssh_common_struct::callbacks</references>
+        <references refid="structssh__session__struct_1acad23ad6d8bee359da41b9ed0faa6eaa" compoundref="session_8h" startline="110">ssh_session_struct::common</references>
+        <references refid="structssh__session__struct_1a997060832a3419d8fe884d3da855ef4c" compoundref="session_8h" startline="129">ssh_session_struct::flags</references>
+        <references refid="structssh__session__struct_1aab5ecfb12d53a23b21dbf61790aa7e94" compoundref="session_8h" startline="209">ssh_session_struct::identity</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4a0f73343ecb44ed535c5d53cede05485a" compoundref="auth_8c" startline="967">SSH_AUTH_AUTO_STATE_KEY_IMPORTED</references>
+        <references refid="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4a7423bce4e2477ab036c8ce272fd7642f" compoundref="auth_8c" startline="965">SSH_AUTH_AUTO_STATE_NONE</references>
+        <references refid="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4a82677b8f55353fe73bdd8ddb9958d367" compoundref="auth_8c" startline="966">SSH_AUTH_AUTO_STATE_PUBKEY</references>
+        <references refid="group__libssh__auth_1ggac65f4923889fe6f2b91021872463b4c4ad484a042d380c408bc75ef844e8e0e9c" compoundref="auth_8c" startline="968">SSH_AUTH_AUTO_STATE_PUBKEY_ACCEPTED</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ac3d2d6d092a7adc147b7f859a0b252d2" compoundref="libssh_8h" startline="163">SSH_AUTH_DENIED</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1aff27d66c1f5ba3871e72b5a61573f44a" compoundref="libssh_8h" startline="174">SSH_AUTH_METHOD_PUBLICKEY</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a3bb06206cff7b6f818099d6019418eea" compoundref="libssh_8h" startline="164">SSH_AUTH_PARTIAL</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="libssh_8h_1a8f938067bd84c30bd28b7c2705a37beb" compoundref="libssh_8h" startline="332">SSH_EOF</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__pki_1ga08808beb83a42ccd6f1c710ddeb1b4c2" compoundref="pki_8c" startline="205" endline="210">ssh_key_free</references>
+        <references refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" compoundref="misc_8c" startline="682" endline="686">ssh_list_get_iterator</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="libssh_8h_1a930fb852177813d4718c5d1911568740" compoundref="libssh_8h" startline="372">SSH_LOG_INFO</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="session_8h_1a4a21bc2bfa096997458dcfccbda31434" compoundref="session_8h" startline="91">SSH_OPT_FLAG_PUBKEY_AUTH</references>
+        <references refid="group__libssh__pki_1ga5777bc537da6a447b2a9aa9eceff9877" compoundref="pki_8c" startline="1992" endline="2008">ssh_pki_export_privkey_to_pubkey</references>
+        <references refid="group__libssh__pki_1gaa94ec2542a8dc9fb32c0989680a1e20f" compoundref="pki_8c" startline="1693" endline="1702">ssh_pki_export_pub_uri_from_priv_uri</references>
+        <references refid="group__libssh__pki_1ga576cb3a5c7f40a0e20a88b14a023613d" compoundref="pki_8c" startline="2086" endline="2142">ssh_pki_export_pubkey_file</references>
+        <references refid="group__libssh__pki_1ga1c8f84137606b1585006302499100ee0" compoundref="pki_8c" startline="900" endline="982">ssh_pki_import_privkey_file</references>
+        <references refid="group__libssh__pki_1gaffb08168b870fb9e86cc7649c8987eb0" compoundref="pki_8c" startline="1717" endline="1823">ssh_pki_import_pubkey_file</references>
+        <references refid="group__libssh__pki_1ga991cafa534b76035ec5cc4c9c0367458" compoundref="pki_8c" startline="1672" endline="1682">ssh_pki_is_uri</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="group__libssh__auth_1ga7d84f3f89f65455b80b10e2643d80719" compoundref="auth_8c" startline="872" endline="961">ssh_userauth_agent</references>
+        <references refid="group__libssh__auth_1gaa38c4f3194ef36720da7eddb0aa99e23" compoundref="auth_8c" startline="609" endline="723">ssh_userauth_publickey</references>
+        <references refid="group__libssh__auth_1ga592f673c4d417a6a46cd4876ac8287aa" compoundref="auth_8c" startline="489" endline="584">ssh_userauth_try_publickey</references>
+        <references refid="structssh__auth__auto__state__struct_1ad79845cdd57294bad689bf52b1be697d" compoundref="auth_8c" startline="972">ssh_auth_auto_state_struct::state</references>
+        <references refid="structssh__session__struct_1a3e967ac3134cae87dae1f6a794424073" compoundref="session_8h" startline="157">ssh_session_struct::supported_methods</references>
+        <references refid="structssh__callbacks__struct_1aa5cdca2ba78d7582d8eff77ef7995700" compoundref="callbacks_8h" startline="148">ssh_callbacks_struct::userdata</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <referencedby refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</referencedby>
+        <referencedby refid="legacy_8h_1aebc0160212f355d57e4c331e4650d53c" compoundref="legacy_8c" startline="97" endline="99">ssh_userauth_autopubkey</referencedby>
+        <referencedby refid="torture__auth_8c_1a1bc4253d4b7389acb38fa5e5ffc3cf51" compoundref="torture__auth_8c" startline="253" endline="275">torture_auth_autopubkey</referencedby>
+        <referencedby refid="torture__auth_8c_1a2fc459f58be2d4e235c5ef4397fa8b4b" compoundref="torture__auth_8c" startline="277" endline="305">torture_auth_autopubkey_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a1e1c5e9d0352de375c56cf27921d00f6" compoundref="torture__auth_8c" startline="597" endline="632">torture_auth_pubkey_types</referencedby>
+        <referencedby refid="torture__auth_8c_1a30fc01934c5dc0343d91dc6b90cbabac" compoundref="torture__auth_8c" startline="634" endline="670">torture_auth_pubkey_types_ecdsa</referencedby>
+        <referencedby refid="torture__auth_8c_1aaefb1835a46af27a36149a89c3308825" compoundref="torture__auth_8c" startline="777" endline="822">torture_auth_pubkey_types_ecdsa_nonblocking</referencedby>
+        <referencedby refid="torture__auth_8c_1a6c870e5368b648dc01f643bbc52a62f4" compoundref="torture__auth_8c" startline="730" endline="775">torture_auth_pubkey_types_nonblocking</referencedby>
+        <referencedby refid="torture__rekey_8c_1a75d0cca74861337645286b4d42e57006" compoundref="torture__rekey_8c" startline="150" endline="209">torture_rekey_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a3c7d816b41acf84841eb39ec72475998" compoundref="torture__rekey_8c" startline="393" endline="440">torture_rekey_server_send</referencedby>
+        <referencedby refid="torture__rekey_8c_1a83928e03d85a04fd06d4c4a0ca9c7394" compoundref="torture__rekey_8c" startline="324" endline="388">torture_rekey_time</referencedby>
+        <referencedby refid="torture__server_8c_1a73fb9c5aabcb0550f2bdee3cfd7ef346" compoundref="torture__server_8c" startline="392" endline="424">torture_server_auth_pubkey</referencedby>
+        <referencedby refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</referencedby>
+        <referencedby refid="torture__server__config_8c_1a5de50eda837b8f94dcf6d18a765d0dc8" compoundref="torture__server__config_8c" startline="350" endline="423">try_config_content</referencedby>
+        <referencedby refid="classssh_1_1Session_1a651141f9bcf5792644f6d411ab2cc0c5" compoundref="libsshpp_8hpp" startline="180" endline="184">ssh::Session::userauthPublickeyAuto</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga50c0c150f8c4703e7ee49b3e3e3ca215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_password</definition>
+        <argsstring>(ssh_session session, const char *username, const char *password)</argsstring>
+        <name>ssh_userauth_password</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Try to authenticate by password. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This authentication method is normally disabled on SSHv2 server. You should use keyboard-interactive mode.</para>
+<para>The &apos;password&apos; value MUST be encoded UTF-8. It is up to the server how to interpret the password and validate it against the password database. However, if you read the password in some other encoding, you MUST convert the password to UTF-8.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username, this SHOULD be NULL.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password to authenticate in UTF-8.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened.<linebreak/>
+ SSH_AUTH_DENIED: Authentication failed: use another method<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method<linebreak/>
+ SSH_AUTH_SUCCESS: Authentication success<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later.</para>
+</simplesect>
+<simplesect kind="note"><para>Most server implementations do not permit changing the username during authentication. The username should only be set with <ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set()</ref> only before you connect to the server.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" kindref="member">ssh_userauth_none()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" kindref="member">ssh_userauth_kbdint()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1246" column="5" bodyfile="src/auth.c" bodystart="1246" bodyend="1307"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a423ea81df02faff2d59b730af16ac59e" compoundref="ssh2_8h" startline="27">SSH2_MSG_USERAUTH_REQUEST</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1ad10dd2f5826e2d92a30bd8af3404574d" compoundref="libssh_8h" startline="173">SSH_AUTH_METHOD_PASSWORD</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefaedccdf68a9f5857c7f31ac557b2a57b6" compoundref="auth_8h" startline="84">SSH_AUTH_STATE_PASSWORD_AUTH_SENT</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="group__libssh__buffer_1gade0108b17f43b5269b92456a785df126" compoundref="buffer_8c" startline="176" endline="179">ssh_buffer_set_secure</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a95e070b4edb4f7f647d8129c3c2782d3" compoundref="session_8h" startline="63">SSH_PENDING_CALL_AUTH_PASSWORD</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</references>
+        <references refid="group__libssh__auth_1ga812fb86c3dd4a6245bc7d01beaa9cfe8" compoundref="auth_8c" startline="69" endline="79">ssh_userauth_request_service</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <references refid="structssh__session__struct_1a8ed5d5d3116679fd7b8f2c0e1db92726" compoundref="session_8h" startline="210">ssh_session_struct::username</references>
+        <referencedby refid="tests_2authentication_8c_1a91e95146a766cad292c79cca6b169f3d" compoundref="tests_2authentication_8c" startline="49" endline="74">authenticate</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</referencedby>
+        <referencedby refid="torture__auth_8c_1acab4c789da42f078db39e0e8dec81bc4" compoundref="torture__auth_8c" startline="386" endline="407">torture_auth_password</referencedby>
+        <referencedby refid="torture__auth_8c_1a144cbca03a69c33a0137bbcbd69873cf" compoundref="torture__auth_8c" startline="409" endline="438">torture_auth_password_nonblocking</referencedby>
+        <referencedby refid="torture__server_8c_1a209f1dfc209f45f52226ee57825f596b" compoundref="torture__server_8c" startline="355" endline="390">torture_server_auth_password</referencedby>
+        <referencedby refid="torture__server_8c_1a65c15130edce6143731c7bff27153650" compoundref="torture__server_8c" startline="476" endline="518">torture_server_unknown_global_request</referencedby>
+        <referencedby refid="torture_8c_1aa1653e389922c4762e71dbd2ab2d7cda" compoundref="torture_8c" startline="262" endline="353">torture_ssh_session</referencedby>
+        <referencedby refid="classssh_1_1Session_1ac2d10826877bec6598961614eb62f0f7" compoundref="libsshpp_8hpp" startline="259" endline="263">ssh::Session::userauthPassword</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga5cc49db459d6e27c8645a20bbd0f5f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_agent_pubkey</definition>
+        <argsstring>(ssh_session session, const char *username, ssh_public_key publickey)</argsstring>
+        <name>ssh_userauth_agent_pubkey</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type><ref refid="legacy_8h_1a5720dd2559600d96da21266e7fd09ab4" kindref="member">ssh_public_key</ref></type>
+          <declname>publickey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1311" column="5" bodyfile="src/auth.c" bodystart="1311" bodyend="1336"/>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="pki_8h_1a916bbdaba2e1b30d69f34a2df20dc7b8" compoundref="pki_8h" startline="50">SSH_KEY_FLAG_PUBLIC</references>
+        <references refid="group__libssh__pki_1ga08808beb83a42ccd6f1c710ddeb1b4c2" compoundref="pki_8c" startline="205" endline="210">ssh_key_free</references>
+        <references refid="group__libssh__pki_1gabfebce03474a4d014aa779d5dbf057b0" compoundref="pki_8c" startline="123" endline="130">ssh_key_new</references>
+        <references refid="group__libssh__pki_1ga302919f046a4af504e5a2a9924b031c1" compoundref="pki_8c" startline="283" endline="326">ssh_key_type_to_char</references>
+        <references refid="group__libssh__auth_1ga691078be9ea2a55fed97c7488395af5a" compoundref="auth_8c" startline="726" endline="825">ssh_userauth_agent_publickey</references>
+        <references refid="structssh__public__key__struct_1a69d5a807f16ad377646d15c87886ae0e" compoundref="keys_8h" startline="29">ssh_public_key_struct::type</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gac17384e2e1723b50cd041d775c0175a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="auth_8h_1abd88982f6190217dbe437b339001286d" kindref="member">ssh_kbdint</ref></type>
+        <definition>ssh_kbdint ssh_kbdint_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_kbdint_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1339" column="12" bodyfile="src/auth.c" bodystart="1339" bodyend="1348"/>
+        <referencedby refid="group__libssh__server_1gaacbc31ce3b39ac93061164feec822c77" compoundref="server_8c" startline="847" endline="951">ssh_message_auth_interactive_request</referencedby>
+        <referencedby refid="group__libssh__auth_1ga09059b696a82df0fb633977d2749e10a" compoundref="auth_8c" startline="1550" endline="1635">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga43266010b4cc11e277658c4c6c4a5500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_kbdint_free</definition>
+        <argsstring>(ssh_kbdint kbd)</argsstring>
+        <name>ssh_kbdint_free</name>
+        <param>
+          <type><ref refid="auth_8h_1abd88982f6190217dbe437b339001286d" kindref="member">ssh_kbdint</ref></type>
+          <declname>kbd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1351" column="6" bodyfile="src/auth.c" bodystart="1351" bodyend="1385"/>
+        <references refid="structssh__kbdint__struct_1aae334dcc6b8fe544b25f4377360db554" compoundref="auth_8h" startline="44">ssh_kbdint_struct::answers</references>
+        <references refid="structssh__kbdint__struct_1a53c38b9a2468c1d79954408e9b7bc7aa" compoundref="auth_8h" startline="43">ssh_kbdint_struct::echo</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="structssh__kbdint__struct_1a22c149b9323116ac704fabc4c6a5caa6" compoundref="auth_8h" startline="41">ssh_kbdint_struct::instruction</references>
+        <references refid="structssh__kbdint__struct_1a8c7f5532d4b52ab7f81bacdf8394c51c" compoundref="auth_8h" startline="40">ssh_kbdint_struct::name</references>
+        <references refid="structssh__kbdint__struct_1af297b39443720d689feb400020c0988f" compoundref="auth_8h" startline="39">ssh_kbdint_struct::nanswers</references>
+        <references refid="structssh__kbdint__struct_1a316bac1f096accc10024c7e787e0e3d6" compoundref="auth_8h" startline="38">ssh_kbdint_struct::nprompts</references>
+        <references refid="structssh__kbdint__struct_1a3b528280ac48b0713c1f963ee9f3574b" compoundref="auth_8h" startline="42">ssh_kbdint_struct::prompts</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <referencedby refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</referencedby>
+        <referencedby refid="group__libssh__server_1gaacbc31ce3b39ac93061164feec822c77" compoundref="server_8c" startline="847" endline="951">ssh_message_auth_interactive_request</referencedby>
+        <referencedby refid="group__libssh__auth_1ga09059b696a82df0fb633977d2749e10a" compoundref="auth_8c" startline="1550" endline="1635">SSH_PACKET_CALLBACK</referencedby>
+        <referencedby refid="group__libssh__auth_1gaaa68e6aec2da509b246b7cba071408d3" compoundref="auth_8c" startline="1493" endline="1542">ssh_userauth_kbdint_send</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gac042e71960b1aa80d8245125feeb249a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_kbdint_clean</definition>
+        <argsstring>(ssh_kbdint kbd)</argsstring>
+        <name>ssh_kbdint_clean</name>
+        <param>
+          <type><ref refid="auth_8h_1abd88982f6190217dbe437b339001286d" kindref="member">ssh_kbdint</ref></type>
+          <declname>kbd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1387" column="6" bodyfile="src/auth.c" bodystart="1387" bodyend="1419"/>
+        <references refid="structssh__kbdint__struct_1aae334dcc6b8fe544b25f4377360db554" compoundref="auth_8h" startline="44">ssh_kbdint_struct::answers</references>
+        <references refid="structssh__kbdint__struct_1a53c38b9a2468c1d79954408e9b7bc7aa" compoundref="auth_8h" startline="43">ssh_kbdint_struct::echo</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="structssh__kbdint__struct_1a22c149b9323116ac704fabc4c6a5caa6" compoundref="auth_8h" startline="41">ssh_kbdint_struct::instruction</references>
+        <references refid="structssh__kbdint__struct_1a8c7f5532d4b52ab7f81bacdf8394c51c" compoundref="auth_8h" startline="40">ssh_kbdint_struct::name</references>
+        <references refid="structssh__kbdint__struct_1af297b39443720d689feb400020c0988f" compoundref="auth_8h" startline="39">ssh_kbdint_struct::nanswers</references>
+        <references refid="structssh__kbdint__struct_1a316bac1f096accc10024c7e787e0e3d6" compoundref="auth_8h" startline="38">ssh_kbdint_struct::nprompts</references>
+        <references refid="structssh__kbdint__struct_1a3b528280ac48b0713c1f963ee9f3574b" compoundref="auth_8h" startline="42">ssh_kbdint_struct::prompts</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <referencedby refid="group__libssh__server_1gaacbc31ce3b39ac93061164feec822c77" compoundref="server_8c" startline="847" endline="951">ssh_message_auth_interactive_request</referencedby>
+        <referencedby refid="group__libssh__auth_1ga09059b696a82df0fb633977d2749e10a" compoundref="auth_8c" startline="1550" endline="1635">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gac689d3761c0dc4ebee9971ecc482d9a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_userauth_kbdint_init</definition>
+        <argsstring>(ssh_session session, const char *username, const char *submethods)</argsstring>
+        <name>ssh_userauth_kbdint_init</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>submethods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1424" column="12" bodyfile="src/auth.c" bodystart="1424" bodyend="1480"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a423ea81df02faff2d59b730af16ac59e" compoundref="ssh2_8h" startline="27">SSH2_MSG_USERAUTH_REQUEST</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa6d785d00012593230e88f00debb19179" compoundref="auth_8h" startline="72">SSH_AUTH_STATE_KBDINT_SENT</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1afa2439f8a91fc9c57f773b3264a498fc" compoundref="session_8h" startline="67">SSH_PENDING_CALL_AUTH_KBDINT_INIT</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="priv_8h_1a351ea86857d33b3ba80b396e05c4517c" compoundref="priv_8h" startline="269">ssh_set_error_invalid</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</references>
+        <references refid="group__libssh__auth_1ga812fb86c3dd4a6245bc7d01beaa9cfe8" compoundref="auth_8c" startline="69" endline="79">ssh_userauth_request_service</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <references refid="structssh__session__struct_1a8ed5d5d3116679fd7b8f2c0e1db92726" compoundref="session_8h" startline="210">ssh_session_struct::username</references>
+        <referencedby refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" compoundref="auth_8c" startline="1664" endline="1694">ssh_userauth_kbdint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gaaa68e6aec2da509b246b7cba071408d3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_userauth_kbdint_send</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_userauth_kbdint_send</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1493" column="12" bodyfile="src/auth.c" bodystart="1493" bodyend="1542"/>
+        <references refid="structssh__kbdint__struct_1aae334dcc6b8fe544b25f4377360db554" compoundref="auth_8h" startline="44">ssh_kbdint_struct::answers</references>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__session__struct_1aa859857ac7a99808ffc537e08087e541" compoundref="session_8h" startline="158">ssh_session_struct::current_method</references>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="structssh__kbdint__struct_1a316bac1f096accc10024c7e787e0e3d6" compoundref="auth_8h" startline="38">ssh_kbdint_struct::nprompts</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1a084c04a458a6b7fba56d7bf6b2d3a58b" compoundref="ssh2_8h" startline="35">SSH2_MSG_USERAUTH_INFO_RESPONSE</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a0f166cff4fa03faf4e4c11ad854a4996" compoundref="libssh_8h" startline="166">SSH_AUTH_AGAIN</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1a4c64484fdce4756309799d0e2a4e926a" compoundref="libssh_8h" startline="176">SSH_AUTH_METHOD_INTERACTIVE</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa6d785d00012593230e88f00debb19179" compoundref="auth_8h" startline="72">SSH_AUTH_STATE_KBDINT_SENT</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__auth_1ga43266010b4cc11e277658c4c6c4a5500" compoundref="auth_8c" startline="1351" endline="1385">ssh_kbdint_free</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a964524d093fc2ba649020c4ce5460b94" compoundref="session_8h" startline="68">SSH_PENDING_CALL_AUTH_KBDINT_SEND</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="priv_8h_1a351ea86857d33b3ba80b396e05c4517c" compoundref="priv_8h" startline="269">ssh_set_error_invalid</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="group__libssh__auth_1gabff6b3898d3bf45b62cc3ed3774eaa83" compoundref="auth_8c" startline="142" endline="186">ssh_userauth_get_response</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <referencedby refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" compoundref="auth_8c" startline="1664" endline="1694">ssh_userauth_kbdint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga09059b696a82df0fb633977d2749e10a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SSH_PACKET_CALLBACK</definition>
+        <argsstring>(ssh_packet_userauth_info_request)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>ssh_packet_userauth_info_request</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1550" column="1" bodyfile="src/auth.c" bodystart="1550" bodyend="1635"/>
+        <references refid="structssh__session__struct_1a3d57e01582c0c9099f7f319513321fe8">ssh_session_struct::auth</references>
+        <references refid="structssh__kbdint__struct_1a53c38b9a2468c1d79954408e9b7bc7aa" compoundref="auth_8h" startline="43">ssh_kbdint_struct::echo</references>
+        <references refid="structssh__kbdint__struct_1a22c149b9323116ac704fabc4c6a5caa6" compoundref="auth_8h" startline="41">ssh_kbdint_struct::instruction</references>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="priv_8h_1a16b639610e39b29f5a1114e2dcf4ac6f" compoundref="priv_8h" startline="187">KBDINT_MAX_PROMPT</references>
+        <references refid="structssh__kbdint__struct_1a8c7f5532d4b52ab7f81bacdf8394c51c" compoundref="auth_8h" startline="40">ssh_kbdint_struct::name</references>
+        <references refid="structssh__kbdint__struct_1af297b39443720d689feb400020c0988f" compoundref="auth_8h" startline="39">ssh_kbdint_struct::nanswers</references>
+        <references refid="structssh__kbdint__struct_1a316bac1f096accc10024c7e787e0e3d6" compoundref="auth_8h" startline="38">ssh_kbdint_struct::nprompts</references>
+        <references refid="structssh__kbdint__struct_1a3b528280ac48b0713c1f963ee9f3574b" compoundref="auth_8h" startline="42">ssh_kbdint_struct::prompts</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="auth_8h_1a0d3114986a741a14dc3ac03f7d8eafefa97ddb5eeec18ad7d054ec5795e6e16d6" compoundref="auth_8h" startline="68">SSH_AUTH_STATE_INFO</references>
+        <references refid="buffer_8h_1ab51014ef9a47e7cdbd235af3e62b81ee" compoundref="buffer_8h" startline="59">ssh_buffer_unpack</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__auth_1gac042e71960b1aa80d8245125feeb249a" compoundref="auth_8c" startline="1387" endline="1419">ssh_kbdint_clean</references>
+        <references refid="group__libssh__auth_1ga43266010b4cc11e277658c4c6c4a5500" compoundref="auth_8c" startline="1351" endline="1385">ssh_kbdint_free</references>
+        <references refid="group__libssh__auth_1gac17384e2e1723b50cd041d775c0175a8" compoundref="auth_8c" startline="1339" endline="1348">ssh_kbdint_new</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__callbacks_1gac29df803aa1295d6a498c1b081f3b494" compoundref="callbacks_8h" startline="517">SSH_PACKET_USED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <references refid="structssh__session__struct_1af0805877d21d43e81423ead52345c64b" compoundref="session_8h" startline="156">ssh_session_struct::state</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_kbdint</definition>
+        <argsstring>(ssh_session session, const char *user, const char *submethods)</argsstring>
+        <name>ssh_userauth_kbdint</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>submethods</declname>
+        </param>
+        <briefdescription>
+<para>Try to authenticate through the &quot;keyboard-interactive&quot; method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The username to authenticate. You can specify NULL if ssh_option_set_username() has been used. You cannot try two different logins in a row.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">submethods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Undocumented. Set it to NULL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened<linebreak/>
+ SSH_AUTH_DENIED: Authentication failed : use another method<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method<linebreak/>
+ SSH_AUTH_SUCCESS: Authentication success<linebreak/>
+ SSH_AUTH_INFO: The server asked some questions. Use <ref refid="group__libssh__auth_1gacb996ff4979670db009a71a90172ece9" kindref="member">ssh_userauth_kbdint_getnprompts()</ref> and such.<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1gacb996ff4979670db009a71a90172ece9" kindref="member">ssh_userauth_kbdint_getnprompts()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1gaf920b6f8ed1e3c53cc2a683230098657" kindref="member">ssh_userauth_kbdint_getname()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1gaa757fbdbd4f95261bbbbc12b1ec33078" kindref="member">ssh_userauth_kbdint_getinstruction()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1ga4e7466c30852a3339003af7046fab396" kindref="member">ssh_userauth_kbdint_getprompt()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__auth_1ga75e44b1f27059a00080f80fac0107a20" kindref="member">ssh_userauth_kbdint_setanswer()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1664" column="5" bodyfile="src/auth.c" bodystart="1664" bodyend="1694"/>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="structssh__session__struct_1a5552665043089000065df39c5a5a7094" compoundref="session_8h" startline="146">ssh_session_struct::pending_call_state</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1afa2439f8a91fc9c57f773b3264a498fc" compoundref="session_8h" startline="67">SSH_PENDING_CALL_AUTH_KBDINT_INIT</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a964524d093fc2ba649020c4ce5460b94" compoundref="session_8h" startline="68">SSH_PENDING_CALL_AUTH_KBDINT_SEND</references>
+        <references refid="session_8h_1abb7a4342b889601983497b3f094957e1a33be3f7cd03fe7fced1eeacd369cad94" compoundref="session_8h" startline="60">SSH_PENDING_CALL_NONE</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="group__libssh__auth_1gac689d3761c0dc4ebee9971ecc482d9a4" compoundref="auth_8c" startline="1424" endline="1480">ssh_userauth_kbdint_init</references>
+        <references refid="group__libssh__auth_1gaaa68e6aec2da509b246b7cba071408d3" compoundref="auth_8c" startline="1493" endline="1542">ssh_userauth_kbdint_send</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+        <referencedby refid="torture_8c_1a0a74e450caa8d70e60a4c6304df20dcf" compoundref="torture_8c" startline="79" endline="115">_torture_auth_kbdint</referencedby>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a4b7c297eeeae3bb821a5480574439b78" compoundref="torture__auth_8c" startline="307" endline="340">torture_auth_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a8c1979b9feebe5c34354456ff4260ee4" compoundref="torture__auth_8c" startline="342" endline="384">torture_auth_kbdint_nonblocking</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a1ae155752732ad519ce76bedf8b2a5b7" compoundref="torture__server__auth__kbdint_8c" startline="686" endline="746">torture_server_auth_kbdint</referencedby>
+        <referencedby refid="classssh_1_1Session_1a0ea9676a938f2410177b2bfb3e8bf427" compoundref="libsshpp_8hpp" startline="214" endline="218">ssh::Session::userauthKbdint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gacb996ff4979670db009a71a90172ece9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_kbdint_getnprompts</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_userauth_kbdint_getnprompts</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of prompts (questions) the server has given. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Once you have called <ref refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" kindref="member">ssh_userauth_kbdint()</ref> and received SSH_AUTH_INFO return code, this function can be used to retrieve information about the keyboard interactive authentication questions sent by the remote host.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of prompts. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1707" column="5" bodyfile="src/auth.c" bodystart="1707" bodyend="1716"/>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="structssh__kbdint__struct_1a316bac1f096accc10024c7e787e0e3d6" compoundref="auth_8h" startline="38">ssh_kbdint_struct::nprompts</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="priv_8h_1a351ea86857d33b3ba80b396e05c4517c" compoundref="priv_8h" startline="269">ssh_set_error_invalid</references>
+        <referencedby refid="torture_8c_1a0a74e450caa8d70e60a4c6304df20dcf" compoundref="torture_8c" startline="79" endline="115">_torture_auth_kbdint</referencedby>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a4b7c297eeeae3bb821a5480574439b78" compoundref="torture__auth_8c" startline="307" endline="340">torture_auth_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a8c1979b9feebe5c34354456ff4260ee4" compoundref="torture__auth_8c" startline="342" endline="384">torture_auth_kbdint_nonblocking</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a1ae155752732ad519ce76bedf8b2a5b7" compoundref="torture__server__auth__kbdint_8c" startline="686" endline="746">torture_server_auth_kbdint</referencedby>
+        <referencedby refid="classssh_1_1Session_1a0bf86917b042bd96896768fe089c3f39" compoundref="libsshpp_8hpp" startline="224" endline="226">ssh::Session::userauthKbdintGetNPrompts</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gaf920b6f8ed1e3c53cc2a683230098657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_userauth_kbdint_getname</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_userauth_kbdint_getname</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Get the &quot;name&quot; of the message block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Once you have called <ref refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" kindref="member">ssh_userauth_kbdint()</ref> and received SSH_AUTH_INFO return code, this function can be used to retrieve information about the keyboard interactive authentication questions sent by the remote host.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the message block. Do not free it. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1729" column="12" bodyfile="src/auth.c" bodystart="1729" bodyend="1738"/>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="structssh__kbdint__struct_1a8c7f5532d4b52ab7f81bacdf8394c51c" compoundref="auth_8h" startline="40">ssh_kbdint_struct::name</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="priv_8h_1a351ea86857d33b3ba80b396e05c4517c" compoundref="priv_8h" startline="269">ssh_set_error_invalid</references>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1gaa757fbdbd4f95261bbbbc12b1ec33078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_userauth_kbdint_getinstruction</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_userauth_kbdint_getinstruction</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Get the &quot;instruction&quot; of the message block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Once you have called <ref refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" kindref="member">ssh_userauth_kbdint()</ref> and received SSH_AUTH_INFO return code, this function can be used to retrieve information about the keyboard interactive authentication questions sent by the remote host.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The instruction of the message block. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1752" column="12" bodyfile="src/auth.c" bodystart="1752" bodyend="1760"/>
+        <references refid="structssh__kbdint__struct_1a22c149b9323116ac704fabc4c6a5caa6" compoundref="auth_8h" startline="41">ssh_kbdint_struct::instruction</references>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="priv_8h_1a351ea86857d33b3ba80b396e05c4517c" compoundref="priv_8h" startline="269">ssh_set_error_invalid</references>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga4e7466c30852a3339003af7046fab396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_userauth_kbdint_getprompt</definition>
+        <argsstring>(ssh_session session, unsigned int i, char *echo)</argsstring>
+        <name>ssh_userauth_kbdint_getprompt</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>echo</declname>
+        </param>
+        <briefdescription>
+<para>Get a prompt from a message block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Once you have called <ref refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" kindref="member">ssh_userauth_kbdint()</ref> and received SSH_AUTH_INFO return code, this function can be used to retrieve information about the keyboard interactive authentication questions sent by the remote host.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index number of the i&apos;th prompt.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">echo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an optional variable. You can obtain a boolean if the user input should be echoed or hidden. For passwords it is usually hidden.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the prompt. Do not free it.</para>
+</simplesect>
+<programlisting><codeline><highlight class="normal">const<sp/>char<sp/>prompt;</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>echo;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">prompt<sp/>=<sp/>ssh_userauth_kbdint_getprompt(session,<sp/>0,<sp/>&amp;echo);</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(echo)<sp/>...</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1787" column="12" bodyfile="src/auth.c" bodystart="1787" bodyend="1805"/>
+        <references refid="samplesshd-kbdint_8c_1aed50069385b2de326e5bbed79b19affd" compoundref="samplesshd-kbdint_8c" startline="189">echo</references>
+        <references refid="structssh__kbdint__struct_1a53c38b9a2468c1d79954408e9b7bc7aa" compoundref="auth_8h" startline="43">ssh_kbdint_struct::echo</references>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="structssh__kbdint__struct_1a316bac1f096accc10024c7e787e0e3d6" compoundref="auth_8h" startline="38">ssh_kbdint_struct::nprompts</references>
+        <references refid="structssh__kbdint__struct_1a3b528280ac48b0713c1f963ee9f3574b" compoundref="auth_8h" startline="42">ssh_kbdint_struct::prompts</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="priv_8h_1a351ea86857d33b3ba80b396e05c4517c" compoundref="priv_8h" startline="269">ssh_set_error_invalid</references>
+        <referencedby refid="torture_8c_1a0a74e450caa8d70e60a4c6304df20dcf" compoundref="torture_8c" startline="79" endline="115">_torture_auth_kbdint</referencedby>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga75e44b1f27059a00080f80fac0107a20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_kbdint_setanswer</definition>
+        <argsstring>(ssh_session session, unsigned int i, const char *answer)</argsstring>
+        <name>ssh_userauth_kbdint_setanswer</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>answer</declname>
+        </param>
+        <briefdescription>
+<para>Set the answer for a question from a message block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If you have called <ref refid="group__libssh__auth_1ga6b3b1c2a045286d9476b0252791a07d2" kindref="member">ssh_userauth_kbdint()</ref> and got SSH_AUTH_INFO, this function returns the questions from the server.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index The number of the ith prompt.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">answer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The answer to give to the server. The answer MUST be encoded UTF-8. It is up to the server how to interpret the value and validate it. However, if you read the answer in some other encoding, you MUST convert it to UTF-8.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, &lt; 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1862" column="5" bodyfile="src/auth.c" bodystart="1862" bodyend="1894"/>
+        <references refid="structssh__kbdint__struct_1aae334dcc6b8fe544b25f4377360db554" compoundref="auth_8h" startline="44">ssh_kbdint_struct::answers</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="structssh__session__struct_1a9cba44c19f35693037bc9bb1e0651d17" compoundref="session_8h" startline="180">ssh_session_struct::kbdint</references>
+        <references refid="structssh__kbdint__struct_1a316bac1f096accc10024c7e787e0e3d6" compoundref="auth_8h" startline="38">ssh_kbdint_struct::nprompts</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="priv_8h_1a351ea86857d33b3ba80b396e05c4517c" compoundref="priv_8h" startline="269">ssh_set_error_invalid</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <referencedby refid="torture_8c_1a0a74e450caa8d70e60a4c6304df20dcf" compoundref="torture_8c" startline="79" endline="115">_torture_auth_kbdint</referencedby>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a4b7c297eeeae3bb821a5480574439b78" compoundref="torture__auth_8c" startline="307" endline="340">torture_auth_kbdint</referencedby>
+        <referencedby refid="torture__auth_8c_1a8c1979b9feebe5c34354456ff4260ee4" compoundref="torture__auth_8c" startline="342" endline="384">torture_auth_kbdint_nonblocking</referencedby>
+        <referencedby refid="torture__server__auth__kbdint_8c_1a1ae155752732ad519ce76bedf8b2a5b7" compoundref="torture__server__auth__kbdint_8c" startline="686" endline="746">torture_server_auth_kbdint</referencedby>
+        <referencedby refid="classssh_1_1Session_1a71ba225d12071f5290b49f8ac24c0f2d" compoundref="libsshpp_8hpp" startline="244" endline="249">ssh::Session::userauthKbdintSetAnswer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__auth_1ga2758b0e86a848fe0d1d3d263d2a34d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_userauth_gssapi</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_userauth_gssapi</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Try to authenticate through the &quot;gssapi-with-mic&quot; method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ssh session to use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_AUTH_ERROR: A serious error happened<linebreak/>
+ SSH_AUTH_DENIED: Authentication failed : use another method<linebreak/>
+ SSH_AUTH_PARTIAL: You&apos;ve been partially authenticated, you still have to use another method<linebreak/>
+ SSH_AUTH_SUCCESS: Authentication success<linebreak/>
+ SSH_AUTH_AGAIN: In nonblocking mode, you&apos;ve got to call this again later. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/auth.c" line="1909" column="5" bodyfile="src/auth.c" bodystart="1909" bodyend="1953"/>
+        <referencedby refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</referencedby>
+        <referencedby refid="proxy_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="proxy_8c" startline="215" endline="346">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Functions to authenticate with a server. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

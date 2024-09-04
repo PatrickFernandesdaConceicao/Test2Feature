@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="threads_8c" kind="file" language="C++">
+    <compoundname>threads.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="crypto_8h" local="yes">libssh/crypto.h</includes>
+    <includes refid="threads_8h" local="yes">libssh/threads.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>stdbool.h</label>
+      </node>
+      <node id="11">
+        <label>sys/select.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>netdb.h</label>
+      </node>
+      <node id="22">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/threads.c</label>
+        <link refid="threads_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>sys/types.h</label>
+      </node>
+      <node id="19">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="25">
+        <label>libssh/threads.h</label>
+        <link refid="threads_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" prot="public" static="yes" mutable="no">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+        <definition>struct ssh_threads_callbacks_struct* user_callbacks</definition>
+        <argsstring></argsstring>
+        <name>user_callbacks</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/threads.c" line="36" column="42" bodyfile="libssh-mirror/src/threads.c" bodystart="36" bodyend="-1"/>
+        <referencedby refid="group__libssh__threads_1gac9431f068584276377498dea938cf951" compoundref="threads_8c" startline="87" endline="93">ssh_threads_get_type</referencedby>
+        <referencedby refid="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" compoundref="threads_8c" startline="42" endline="64">ssh_threads_init</referencedby>
+        <referencedby refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" compoundref="threads_8c" startline="71" endline="85">ssh_threads_set_callbacks</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_threads_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/threads.c" line="42" column="5" bodyfile="libssh-mirror/src/threads.c" bodystart="42" bodyend="64"/>
+        <references refid="threads_8h_1afd0bbff265662efc9c2d58696c1ab964" compoundref="threads_2libcrypto_8c" startline="69" endline="108">crypto_thread_init</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="callbacks_8h_1a25ff5f57d28805c38a3b3c2a0195294f" compoundref="noop_8c" startline="65" endline="68">ssh_threads_get_default</references>
+        <references refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" compoundref="threads_8c" startline="36">user_callbacks</references>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__threads_1ga892b23f2f4ffe4e33290a83802faa265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_threads_finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/threads.c" line="66" column="6" bodyfile="libssh-mirror/src/threads.c" bodystart="66" bodyend="69"/>
+        <references refid="threads_8h_1a0dd4a730d1a2d370ea7e10392d2abc70" compoundref="threads_2libcrypto_8c" startline="110" endline="131">crypto_thread_finalize</references>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_threads_set_callbacks</definition>
+        <argsstring>(struct ssh_threads_callbacks_struct *cb)</argsstring>
+        <name>ssh_threads_set_callbacks</name>
+        <param>
+          <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+<para>Set the thread callbacks structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is necessary if your program is using libssh in a multithreaded fashion. This function must be called first, outside of any threading context (in your <ref refid="exec_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main()</ref> function for instance), before you call <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> structure, which contains the different callbacks to be set.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns SSH_OK.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> </para>
+</simplesect>
+<simplesect kind="see"><para>SSH_THREADS_PTHREAD </para>
+</simplesect>
+<xrefsect id="bug_1_bug000001"><xreftitle>Bug</xreftitle><xrefdescription><para>libgcrypt 1.6 and bigger backend does not support custom callback. Using anything else than pthreads here will fail. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/threads.c" line="71" column="5" bodyfile="libssh-mirror/src/threads.c" bodystart="71" bodyend="85"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="threads_8h_1a0dd4a730d1a2d370ea7e10392d2abc70" compoundref="threads_2libcrypto_8c" startline="110" endline="131">crypto_thread_finalize</references>
+        <references refid="threads_8h_1afd0bbff265662efc9c2d58696c1ab964" compoundref="threads_2libcrypto_8c" startline="69" endline="108">crypto_thread_init</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" compoundref="threads_8c" startline="36">user_callbacks</references>
+        <referencedby refid="pkd__daemon_8c_1a4765530f94b7b2c34f4861c906607ca7" compoundref="pkd__daemon_8c" startline="79" endline="83">pkd_init_libssh</referencedby>
+        <referencedby refid="torture__rand_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__rand_8c" startline="18" endline="30">setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__threads_1gac9431f068584276377498dea938cf951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_threads_get_type</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_get_type</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/threads.c" line="87" column="12" bodyfile="libssh-mirror/src/threads.c" bodystart="87" bodyend="93"/>
+        <references refid="structssh__threads__callbacks__struct_1a2def4dea77cca2a4e12db84c42590a0c" compoundref="callbacks_8h" startline="928">ssh_threads_callbacks_struct::type</references>
+        <references refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" compoundref="threads_8c" startline="36">user_callbacks</references>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">libssh/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threads_8h" kindref="compound">libssh/threads.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/>*<ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" kindref="member">ssh_threads_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>threads_initialized<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(threads_initialized)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>first<sp/>initialize<sp/>the<sp/>user_callbacks<sp/>with<sp/>our<sp/>default<sp/>handlers<sp/>if<sp/>not</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>already<sp/>the<sp/>case</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref><sp/>==<sp/>NULL){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref><sp/>=<sp/><ref refid="callbacks_8h_1a25ff5f57d28805c38a3b3c2a0195294f" kindref="member">ssh_threads_get_default</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Then<sp/>initialize<sp/>the<sp/>crypto<sp/>libraries<sp/>threading<sp/>callbacks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="threads_8h_1afd0bbff265662efc9c2d58696c1ab964" kindref="member">crypto_thread_init</ref>(<ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads_initialized<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="group__libssh__threads_1ga892b23f2f4ffe4e33290a83802faa265" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__threads_1ga892b23f2f4ffe4e33290a83802faa265" kindref="member">ssh_threads_finalize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="threads_8h_1a0dd4a730d1a2d370ea7e10392d2abc70" kindref="member">crypto_thread_finalize</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" kindref="member">ssh_threads_set_callbacks</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/>*<ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="threads_8h_1a0dd4a730d1a2d370ea7e10392d2abc70" kindref="member">crypto_thread_finalize</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref><sp/>=<sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="threads_8h_1afd0bbff265662efc9c2d58696c1ab964" kindref="member">crypto_thread_init</ref>(<ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="group__libssh__threads_1gac9431f068584276377498dea938cf951" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__libssh__threads_1gac9431f068584276377498dea938cf951" kindref="member">ssh_threads_get_type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libssh__threads_1gadb5d9b7e2606d95be69a5ad23fc4d073" kindref="member">user_callbacks</ref>-&gt;<ref refid="structssh__threads__callbacks__struct_1a2def4dea77cca2a4e12db84c42590a0c" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/threads.c"/>
+  </compounddef>
+</doxygen>

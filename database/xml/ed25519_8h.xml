@@ -1,0 +1,597 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ed25519_8h" kind="file" language="C++">
+    <compoundname>ed25519.h</compoundname>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includedby refid="pki_8h" local="yes">libssh-mirror/include/libssh/pki.h</includedby>
+    <includedby refid="ed25519_8c" local="yes">libssh-mirror/src/external/ed25519.c</includedby>
+    <includedby refid="pki__ed25519_8c" local="yes">libssh-mirror/src/pki_ed25519.c</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>sys/select.h</label>
+      </node>
+      <node id="2">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>netdb.h</label>
+      </node>
+      <node id="9">
+        <label>sys/types.h</label>
+      </node>
+      <node id="6">
+        <label>unistd.h</label>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/ed25519.h</label>
+        <link refid="ed25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="20">
+        <label>libssh-mirror/src/pki_ed25519_common.c</label>
+        <link refid="pki__ed25519__common_8c"/>
+      </node>
+      <node id="28">
+        <label>libssh-mirror/src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libssh-mirror/tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/include/libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>libssh-mirror/src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="8">
+        <label>libssh-mirror/src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>libssh-mirror/tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="14">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="11">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="37">
+        <label>libssh-mirror/src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>libssh-mirror/src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="17">
+        <label>libssh-mirror/src/pki_container_openssh.c</label>
+        <link refid="pki__container__openssh_8c"/>
+      </node>
+      <node id="5">
+        <label>libssh-mirror/src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>libssh-mirror/src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="29">
+        <label>libssh-mirror/src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="12">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="19">
+        <label>libssh-mirror/src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+      </node>
+      <node id="4">
+        <label>libssh-mirror/src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+      <node id="10">
+        <label>libssh-mirror/tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="9">
+        <label>libssh-mirror/tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="32">
+        <label>libssh-mirror/src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="23">
+        <label>libssh-mirror/tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="16">
+        <label>libssh-mirror/tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="40">
+        <label>libssh-mirror/src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="13">
+        <label>libssh-mirror/tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="22">
+        <label>libssh-mirror/src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>libssh-mirror/src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="42">
+        <label>libssh-mirror/src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="15">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="26">
+        <label>libssh-mirror/src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="34">
+        <label>libssh-mirror/src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="45">
+        <label>libssh-mirror/src/external/ed25519.c</label>
+        <link refid="ed25519_8c"/>
+      </node>
+      <node id="35">
+        <label>libssh-mirror/src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/ed25519.h</label>
+        <link refid="ed25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libssh-mirror/tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="6">
+        <label>libssh-mirror/tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="43">
+        <label>libssh-mirror/src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>libssh-mirror/src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="39">
+        <label>libssh-mirror/src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="36">
+        <label>libssh-mirror/src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/include/libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>libssh-mirror/src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="25">
+        <label>libssh-mirror/src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="38">
+        <label>libssh-mirror/tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="18">
+        <label>libssh-mirror/src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ed25519_8h_1a55a8b1aa02acee552f74f2365e6a2a82" prot="public" static="no">
+        <name>ED25519_PK_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="32" column="9" bodyfile="libssh-mirror/include/libssh/ed25519.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ed25519_8h_1af61fa052b5560c85247ec6049ac37452" prot="public" static="no">
+        <name>ED25519_SK_LEN</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="33" column="9" bodyfile="libssh-mirror/include/libssh/ed25519.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" prot="public" static="no">
+        <name>ED25519_SIG_LEN</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="34" column="9" bodyfile="libssh-mirror/include/libssh/ed25519.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t ed25519_pubkey[ED25519_PK_LEN]</definition>
+        <argsstring>[ED25519_PK_LEN]</argsstring>
+        <name>ed25519_pubkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="36" column="17" bodyfile="libssh-mirror/include/libssh/ed25519.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t ed25519_privkey[ED25519_SK_LEN]</definition>
+        <argsstring>[ED25519_SK_LEN]</argsstring>
+        <name>ed25519_privkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="37" column="17" bodyfile="libssh-mirror/include/libssh/ed25519.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ed25519_8h_1a6ee7b34c80810525f182f7c12288c478" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t ed25519_signature[ED25519_SIG_LEN]</definition>
+        <argsstring>[ED25519_SIG_LEN]</argsstring>
+        <name>ed25519_signature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="38" column="17" bodyfile="libssh-mirror/include/libssh/ed25519.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ed25519_8h_1ae5330fec885b0158d0d8317ddd130790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_sign_ed25519_keypair</definition>
+        <argsstring>(ed25519_pubkey pk, ed25519_privkey sk)</argsstring>
+        <name>crypto_sign_ed25519_keypair</name>
+        <param>
+          <type><ref refid="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" kindref="member">ed25519_pubkey</ref></type>
+          <declname>pk</declname>
+        </param>
+        <param>
+          <type><ref refid="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" kindref="member">ed25519_privkey</ref></type>
+          <declname>sk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="46" column="5" declfile="libssh-mirror/include/libssh/ed25519.h" declline="46" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1a08830f907d6f7ca2a577c51cab017cba" compoundref="pki__ed25519_8c" startline="31" endline="57">pki_key_generate_ed25519</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ed25519_8h_1ab98e74bb8d20c0ef0ea09ac49ba53686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_sign_ed25519</definition>
+        <argsstring>(unsigned char *sm, uint64_t *smlen, const unsigned char *m, uint64_t mlen, const ed25519_privkey sk)</argsstring>
+        <name>crypto_sign_ed25519</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sm</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>smlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>mlen</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" kindref="member">ed25519_privkey</ref></type>
+          <declname>sk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="58" column="5" declfile="libssh-mirror/include/libssh/ed25519.h" declline="58" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1a456b31fe92a5fc2fabcd8a5ec2c87e3c" compoundref="pki__ed25519_8c" startline="59" endline="99">pki_ed25519_sign</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ed25519_8h_1a107219495257f944892f54d7fe0212f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_sign_ed25519_open</definition>
+        <argsstring>(unsigned char *m, uint64_t *mlen, const unsigned char *sm, uint64_t smlen, const ed25519_pubkey pk)</argsstring>
+        <name>crypto_sign_ed25519_open</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>mlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sm</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>smlen</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" kindref="member">ed25519_pubkey</ref></type>
+          <declname>pk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/ed25519.h" line="73" column="5" declfile="libssh-mirror/include/libssh/ed25519.h" declline="73" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1abb580d92eaeac82f200b332bb09043dd" compoundref="pki__ed25519_8c" startline="101" endline="149">pki_ed25519_verify</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2014<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ED25519_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ED25519_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="ed25519_8h_1a55a8b1aa02acee552f74f2365e6a2a82" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ED25519_PK_LEN<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="ed25519_8h_1af61fa052b5560c85247ec6049ac37452" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ED25519_SK_LEN<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ED25519_SIG_LEN<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" kindref="member">ed25519_pubkey</ref>[<ref refid="ed25519_8h_1a55a8b1aa02acee552f74f2365e6a2a82" kindref="member">ED25519_PK_LEN</ref>];</highlight></codeline>
+<codeline lineno="37" refid="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" kindref="member">ed25519_privkey</ref>[<ref refid="ed25519_8h_1af61fa052b5560c85247ec6049ac37452" kindref="member">ED25519_SK_LEN</ref>];</highlight></codeline>
+<codeline lineno="38" refid="ed25519_8h_1a6ee7b34c80810525f182f7c12288c478" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ed25519_8h_1a6ee7b34c80810525f182f7c12288c478" kindref="member">ed25519_signature</ref>[<ref refid="ed25519_8h_1a369a7b16d2243125b55f87597bf6b9cb" kindref="member">ED25519_SIG_LEN</ref>];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="ed25519_8h_1ae5330fec885b0158d0d8317ddd130790" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ed25519_8h_1ae5330fec885b0158d0d8317ddd130790" kindref="member">crypto_sign_ed25519_keypair</ref>(<ref refid="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" kindref="member">ed25519_pubkey</ref><sp/>pk,<sp/><ref refid="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" kindref="member">ed25519_privkey</ref><sp/>sk);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="ed25519_8h_1ab98e74bb8d20c0ef0ea09ac49ba53686" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ed25519_8h_1ab98e74bb8d20c0ef0ea09ac49ba53686" kindref="member">crypto_sign_ed25519</ref>(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sm,<sp/>uint64_t<sp/>*smlen,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,<sp/>uint64_t<sp/>mlen,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ed25519_8h_1a30b0260309d9f98b87106d480e65c09f" kindref="member">ed25519_privkey</ref><sp/>sk);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="ed25519_8h_1a107219495257f944892f54d7fe0212f0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ed25519_8h_1a107219495257f944892f54d7fe0212f0" kindref="member">crypto_sign_ed25519_open</ref>(</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,<sp/>uint64_t<sp/>*mlen,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sm,<sp/>uint64_t<sp/>smlen,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ed25519_8h_1ae5f1956200e3cf7cabda9b209f4aa6db" kindref="member">ed25519_pubkey</ref><sp/>pk);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ED25519_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/ed25519.h"/>
+  </compounddef>
+</doxygen>

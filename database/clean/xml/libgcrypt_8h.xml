@@ -1,0 +1,1285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libgcrypt_8h" kind="file" language="C++">
+    <compoundname>libgcrypt.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includedby refid="bignum_8h" local="yes">include/libssh/bignum.h</includedby>
+    <includedby refid="wrapper_8h" local="yes">include/libssh/wrapper.h</includedby>
+    <includedby refid="ecdh__gcrypt_8c" local="yes">src/ecdh_gcrypt.c</includedby>
+    <includedby refid="gcrypt__missing_8c" local="yes">src/gcrypt_missing.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="75">
+        <label>include/libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>src/channels.c</label>
+        <link refid="channels_8c"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>src/pki_ed25519_common.c</label>
+        <link refid="pki__ed25519__common_8c"/>
+      </node>
+      <node id="32">
+        <label>src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>tests/client/torture_connect.c</label>
+        <link refid="torture__connect_8c"/>
+      </node>
+      <node id="30">
+        <label>tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="74">
+        <label>include/libssh/keys.h</label>
+        <link refid="keys_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>include/libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>tests/client/torture_forward.c</label>
+        <link refid="torture__forward_8c"/>
+      </node>
+      <node id="98">
+        <label>tests/client/torture_sftp_dir.c</label>
+        <link refid="torture__sftp__dir_8c"/>
+      </node>
+      <node id="120">
+        <label>tests/pkd/pkd_daemon.c</label>
+        <link refid="pkd__daemon_8c"/>
+      </node>
+      <node id="22">
+        <label>src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="40">
+        <label>src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>tests/client/torture_client_global_requests.c</label>
+        <link refid="torture__client__global__requests_8c"/>
+      </node>
+      <node id="33">
+        <label>tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="73">
+        <label>tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="52">
+        <label>tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="60">
+        <label>src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="46">
+        <label>tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="107">
+        <label>tests/server/torture_server.c</label>
+        <link refid="torture__server_8c"/>
+      </node>
+      <node id="43">
+        <label>tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="23">
+        <label>src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>tests/client/torture_proxycommand.c</label>
+        <link refid="torture__proxycommand_8c"/>
+      </node>
+      <node id="101">
+        <label>tests/client/torture_sftp_read.c</label>
+        <link refid="torture__sftp__read_8c"/>
+      </node>
+      <node id="59">
+        <label>src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="77">
+        <label>include/libssh/bind.h</label>
+        <link refid="bind_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="49">
+        <label>src/pki_container_openssh.c</label>
+        <link refid="pki__container__openssh_8c"/>
+      </node>
+      <node id="2">
+        <label>include/libssh/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>src/sftp.c</label>
+        <link refid="sftp_8c"/>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>tests/unittests/torture_init.c</label>
+        <link refid="torture__init_8c"/>
+      </node>
+      <node id="123">
+        <label>tests/torture.c</label>
+        <link refid="torture_8c"/>
+      </node>
+      <node id="111">
+        <label>tests/torture.h</label>
+        <link refid="torture_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>tests/unittests/torture_push_pop_dir.c</label>
+        <link refid="torture__push__pop__dir_8c"/>
+      </node>
+      <node id="3">
+        <label>src/bignum.c</label>
+        <link refid="bignum_8c"/>
+      </node>
+      <node id="29">
+        <label>src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>tests/torture_key.c</label>
+        <link refid="torture__key_8c"/>
+      </node>
+      <node id="121">
+        <label>tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+      <node id="118">
+        <label>tests/client/torture_scp.c</label>
+        <link refid="torture__scp_8c"/>
+      </node>
+      <node id="83">
+        <label>tests/unittests/torture_channel.c</label>
+        <link refid="torture__channel_8c"/>
+      </node>
+      <node id="124">
+        <label>tests/torture_cmocka.c</label>
+        <link refid="torture__cmocka_8c"/>
+      </node>
+      <node id="110">
+        <label>tests/torture_cmocka.h</label>
+        <link refid="torture__cmocka_8h"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>tests/unittests/torture_list.c</label>
+        <link refid="torture__list_8c"/>
+      </node>
+      <node id="36">
+        <label>src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="21">
+        <label>include/libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="18">
+        <label>tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="65">
+        <label>src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="61">
+        <label>src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="9">
+        <label>src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="44">
+        <label>tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="50">
+        <label>src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+      </node>
+      <node id="39">
+        <label>src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+      <node id="99">
+        <label>tests/client/torture_sftp_ext.c</label>
+        <link refid="torture__sftp__ext_8c"/>
+      </node>
+      <node id="42">
+        <label>tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="106">
+        <label>tests/client/torture_session.c</label>
+        <link refid="torture__session_8c"/>
+      </node>
+      <node id="41">
+        <label>tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="12">
+        <label>src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="92">
+        <label>src/misc.c</label>
+        <link refid="misc_8c"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="109">
+        <label>tests/server/torture_server_config.c</label>
+        <link refid="torture__server__config_8c"/>
+      </node>
+      <node id="63">
+        <label>src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="136">
+        <label>tests/unittests/torture_threads_init.c</label>
+        <link refid="torture__threads__init_8c"/>
+      </node>
+      <node id="54">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="96">
+        <label>tests/client/torture_sftp_benchmark.c</label>
+        <link refid="torture__sftp__benchmark_8c"/>
+      </node>
+      <node id="48">
+        <label>tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="31">
+        <label>src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="133">
+        <label>tests/unittests/torture_server_x11.c</label>
+        <link refid="torture__server__x11_8c"/>
+      </node>
+      <node id="114">
+        <label>tests/client/torture_hostkey.c</label>
+        <link refid="torture__hostkey_8c"/>
+      </node>
+      <node id="4">
+        <label>src/buffer.c</label>
+        <link refid="buffer_8c"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>tests/client/torture_client_config.c</label>
+        <link refid="torture__client__config_8c"/>
+      </node>
+      <node id="62">
+        <label>src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="117">
+        <label>tests/client/torture_request_env.c</label>
+        <link refid="torture__request__env_8c"/>
+      </node>
+      <node id="68">
+        <label>src/threads/mbedtls.c</label>
+        <link refid="mbedtls_8c"/>
+      </node>
+      <node id="84">
+        <label>src/config.c</label>
+        <link refid="config_8c"/>
+      </node>
+      <node id="69">
+        <label>src/threads.c</label>
+        <link refid="threads_8c"/>
+      </node>
+      <node id="45">
+        <label>tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="53">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>src/poll.c</label>
+        <link refid="poll_8c"/>
+      </node>
+      <node id="24">
+        <label>tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="10">
+        <label>src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="67">
+        <label>src/threads/libgcrypt.c</label>
+        <link refid="threads_2libgcrypt_8c"/>
+      </node>
+      <node id="85">
+        <label>src/connect.c</label>
+        <link refid="connect_8c"/>
+      </node>
+      <node id="64">
+        <label>src/libmbedcrypto.c</label>
+        <link refid="libmbedcrypto_8c"/>
+      </node>
+      <node id="78">
+        <label>src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="35">
+        <label>src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>tests/unittests/torture_callbacks.c</label>
+        <link refid="torture__callbacks_8c"/>
+      </node>
+      <node id="115">
+        <label>tests/client/torture_knownhosts_verify.c</label>
+        <link refid="torture__knownhosts__verify_8c"/>
+      </node>
+      <node id="132">
+        <label>tests/unittests/torture_rand.c</label>
+        <link refid="torture__rand_8c"/>
+      </node>
+      <node id="20">
+        <label>include/libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="66">
+        <label>src/threads/libcrypto.c</label>
+        <link refid="threads_2libcrypto_8c"/>
+      </node>
+      <node id="86">
+        <label>src/connector.c</label>
+        <link refid="connector_8c"/>
+      </node>
+      <node id="57">
+        <label>src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="100">
+        <label>tests/client/torture_sftp_fsync.c</label>
+        <link refid="torture__sftp__fsync_8c"/>
+      </node>
+      <node id="90">
+        <label>tests/unittests/torture_misc.c</label>
+        <link refid="torture__misc_8c"/>
+      </node>
+      <node id="14">
+        <label>src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="93">
+        <label>src/options.c</label>
+        <link refid="options_8c"/>
+      </node>
+      <node id="138">
+        <label>src/external/ed25519.c</label>
+        <link refid="ed25519_8c"/>
+      </node>
+      <node id="87">
+        <label>src/error.c</label>
+        <link refid="error_8c"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>src/callbacks.c</label>
+        <link refid="callbacks_8c"/>
+      </node>
+      <node id="15">
+        <label>src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="135">
+        <label>tests/unittests/torture_temp_file.c</label>
+        <link refid="torture__temp__file_8c"/>
+      </node>
+      <node id="103">
+        <label>tests/client/torture_algorithms.c</label>
+        <link refid="torture__algorithms_8c"/>
+      </node>
+      <node id="130">
+        <label>tests/unittests/torture_knownhosts_parsing.c</label>
+        <link refid="torture__knownhosts__parsing_8c"/>
+      </node>
+      <node id="55">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="5">
+        <label>tests/unittests/torture_buffer.c</label>
+        <link refid="torture__buffer_8c"/>
+      </node>
+      <node id="8">
+        <label>tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="6">
+        <label>tests/unittests/torture_threads_buffer.c</label>
+        <link refid="torture__threads__buffer_8c"/>
+      </node>
+      <node id="58">
+        <label>src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>tests/unittests/torture_temp_dir.c</label>
+        <link refid="torture__temp__dir_8c"/>
+      </node>
+      <node id="34">
+        <label>src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="102">
+        <label>src/socket.c</label>
+        <link refid="socket_8c"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>include/libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="79">
+        <label>tests/unittests/torture_bind_config.c</label>
+        <link refid="torture__bind__config_8c"/>
+      </node>
+      <node id="97">
+        <label>tests/client/torture_sftp_canonicalize_path.c</label>
+        <link refid="torture__sftp__canonicalize__path_8c"/>
+      </node>
+      <node id="28">
+        <label>src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="16">
+        <label>src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="72">
+        <label>tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="122">
+        <label>tests/pkd/pkd_keyutil.c</label>
+        <link refid="pkd__keyutil_8c"/>
+      </node>
+      <node id="80">
+        <label>include/libssh/gssapi.h</label>
+        <link refid="gssapi_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>tests/server/torture_server_auth_kbdint.c</label>
+        <link refid="torture__server__auth__kbdint_8c"/>
+      </node>
+      <node id="38">
+        <label>include/libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="128">
+        <label>tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+      <node id="88">
+        <label>tests/unittests/torture_isipaddr.c</label>
+        <link refid="torture__isipaddr_8c"/>
+      </node>
+      <node id="56">
+        <label>src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="119">
+        <label>tests/cmdline.c</label>
+        <link refid="cmdline_8c"/>
+      </node>
+      <node id="27">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="126">
+        <label>tests/unittests/torture_bytearray.c</label>
+        <link refid="torture__bytearray_8c"/>
+      </node>
+      <node id="137">
+        <label>tests/unittests/torture_tokens.c</label>
+        <link refid="torture__tokens_8c"/>
+      </node>
+      <node id="76">
+        <label>include/libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>src/gcrypt_missing.c</label>
+        <link refid="gcrypt__missing_8c"/>
+      </node>
+      <node id="17">
+        <label>src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+      <node id="91">
+        <label>src/log.c</label>
+        <link refid="log_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIBGCRYPT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBGCRYPT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_LIBGCRYPT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gcrypt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_md_hd_t<sp/>SHACTX;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_md_hd_t<sp/>SHA256CTX;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_md_hd_t<sp/>SHA384CTX;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_md_hd_t<sp/>SHA512CTX;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_md_hd_t<sp/>MD5CTX;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_md_hd_t<sp/>HMACCTX;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_md_hd_t<sp/>EVPCTX;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA_DIGEST_LENGTH<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA_DIGEST_LEN<sp/>SHA_DIGEST_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MD5_DIGEST_LEN<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA256_DIGEST_LENGTH<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA256_DIGEST_LEN<sp/>SHA256_DIGEST_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA384_DIGEST_LENGTH<sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA384_DIGEST_LEN<sp/>SHA384_DIGEST_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA512_DIGEST_LENGTH<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA512_DIGEST_LEN<sp/>SHA512_DIGEST_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EVP_MAX_MD_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVP_MAX_MD_SIZE<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVP_DIGEST_LEN<sp/>EVP_MAX_MD_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>gcry_mpi_t<sp/>bignum;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gcry_mpi<sp/>*const_bignum;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>bignum_CTX;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Constants<sp/>for<sp/>curves.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NID_gcrypt_nistp256<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NID_gcrypt_nistp384<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NID_gcrypt_nistp521<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>missing<sp/>gcrypt<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ssh_gcry_dec2bn(bignum<sp/>*bn,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ssh_gcry_bn2dec(bignum<sp/>bn);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ssh_gcry_rand_range(bignum<sp/>rnd,<sp/>bignum<sp/>max);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_new()<sp/>gcry_mpi_new(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_safe_free(num)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>((num)<sp/>!=<sp/>NULL)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gcry_mpi_release((num));<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(num)=NULL;<sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_free(num)<sp/>gcry_mpi_release(num)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_ctx_new()<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_ctx_free(ctx)<sp/>do<sp/>{(ctx)<sp/>=<sp/>NULL;}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_ctx_invalid(ctx)<sp/>(ctx<sp/>!=<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_set_word(bn,n)<sp/>(gcry_mpi_set_ui(bn,n)!=NULL<sp/>?<sp/>1<sp/>:<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_bin2bn(data,datalen,dest)<sp/>gcry_mpi_scan(dest,GCRYMPI_FMT_USG,data,datalen,NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_bn2dec(num)<sp/>ssh_gcry_bn2dec(num)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_dec2bn(num,<sp/>data)<sp/>ssh_gcry_dec2bn(data,<sp/>num)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_bn2hex(num,<sp/>data)<sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>gcry_mpi_aprint(GCRYMPI_FMT_HEX,<sp/>data,<sp/>NULL,<sp/>(const<sp/>gcry_mpi_t)num)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_hex2bn(data,<sp/>num)<sp/>(gcry_mpi_scan(num,GCRYMPI_FMT_HEX,data,0,NULL)==0?1:0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_rand(num,bits)<sp/>1,gcry_mpi_randomize(num,bits,GCRY_STRONG_RANDOM),gcry_mpi_set_bit(num,bits-1),gcry_mpi_set_bit(num,0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_mod_exp(dest,generator,exp,modulo,<sp/>ctx)<sp/>1,gcry_mpi_powm(dest,generator,exp,modulo)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_num_bits(num)<sp/>gcry_mpi_get_nbits(num)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_num_bytes(num)<sp/>((gcry_mpi_get_nbits(num)+7)/8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_is_bit_set(num,bit)<sp/>gcry_mpi_test_bit(num,bit)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_bn2bin(num,datalen,data)<sp/>gcry_mpi_print(GCRYMPI_FMT_USG,data,datalen,NULL,num)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_cmp(num1,num2)<sp/>gcry_mpi_cmp(num1,num2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_rshift1(dest,<sp/>src)<sp/>gcry_mpi_rshift<sp/>(dest,<sp/>src,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_add(dst,<sp/>a,<sp/>b)<sp/>gcry_mpi_add(dst,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_sub(dst,<sp/>a,<sp/>b)<sp/>gcry_mpi_sub(dst,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_mod(dst,<sp/>a,<sp/>b,<sp/>ctx)<sp/>1,gcry_mpi_mod(dst,<sp/>a,<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_rand_range(rnd,<sp/>max)<sp/>ssh_gcry_rand_range(rnd,<sp/>max);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bignum_dup(orig,<sp/>dest)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(*(dest)<sp/>==<sp/>NULL)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(dest)<sp/>=<sp/>gcry_mpi_copy(orig);<sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>else<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gcry_mpi_set(*(dest),<sp/>orig);<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Helper<sp/>functions<sp/>for<sp/>data<sp/>conversions.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Extract<sp/>an<sp/>MPI<sp/>from<sp/>the<sp/>given<sp/>s-expression<sp/>SEXP<sp/>named<sp/>NAME<sp/>which<sp/>is</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/>encoded<sp/>using<sp/>INFORMAT<sp/>and<sp/>store<sp/>it<sp/>in<sp/>a<sp/>newly<sp/>allocated<sp/>ssh_string</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/>encoded<sp/>using<sp/>OUTFORMAT.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/>ssh_sexp_extract_mpi(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gcry_sexp_t<sp/>sexp,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>gcry_mpi_format<sp/>informat,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>gcry_mpi_format<sp/>outformat);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ssh_fips_mode()<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_LIBGCRYPT<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LIBGCRYPT_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/libgcrypt.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="torture__packet_8c" kind="file" language="C++">
+    <compoundname>torture_packet.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="torture_8h" local="yes">torture.h</includes>
+    <includes refid="libssh_8h" local="yes">libssh/libssh.h</includes>
+    <includes refid="session_8h" local="yes">libssh/session.h</includes>
+    <includes refid="crypto_8h" local="yes">libssh/crypto.h</includes>
+    <includes refid="buffer_8h" local="yes">libssh/buffer.h</includes>
+    <includes refid="socket_8h" local="yes">libssh/socket.h</includes>
+    <includes refid="callbacks_8h" local="yes">libssh/callbacks.h</includes>
+    <includes refid="socket_8c" local="yes">socket.c</includes>
+    <incdepgraph>
+      <node id="27">
+        <label>libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdarg.h</label>
+      </node>
+      <node id="49">
+        <label>sys/un.h</label>
+      </node>
+      <node id="16">
+        <label>sys/select.h</label>
+      </node>
+      <node id="9">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>setjmp.h</label>
+      </node>
+      <node id="3">
+        <label>torture.h</label>
+        <link refid="torture_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>libssh/misc.h</label>
+        <link refid="misc_8h"/>
+      </node>
+      <node id="45">
+        <label>errno.h</label>
+      </node>
+      <node id="43">
+        <label>libssh/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>fcntl.h</label>
+      </node>
+      <node id="23">
+        <label>torture_cmocka.h</label>
+        <link refid="torture__cmocka_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>libssh/buffer.h</label>
+        <link refid="buffer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>libssh/sftp.h</label>
+        <link refid="sftp_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>netdb.h</label>
+      </node>
+      <node id="40">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>libssh/pcap.h</label>
+        <link refid="pcap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>libssh/channels.h</label>
+        <link refid="channels_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>sys/types.h</label>
+      </node>
+      <node id="30">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="50">
+        <label>signal.h</label>
+      </node>
+      <node id="38">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libssh/server.h</label>
+        <link refid="server_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>cmocka.h</label>
+      </node>
+      <node id="47">
+        <label>sys/wait.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>socket.c</label>
+        <link refid="socket_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="48">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="33">
+        <label>libssh/auth.h</label>
+        <link refid="auth_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>tests_config.h</label>
+      </node>
+      <node id="1">
+        <label>tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="24">
+        <label>libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="torture__packet_8c_1a2e84c73592c2992fdc0b2593524f3b18" prot="public" static="no">
+        <name>LIBSSH_STATIC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="3" column="9" bodyfile="tests/unittests/torture_packet.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="torture__packet_8c_1a68bd486dcffabee99677d7b90264ad82" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t test_data[]</definition>
+        <argsstring>[]</argsstring>
+        <name>test_data</name>
+        <initializer>=&quot;AThis is <ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref> data. Use it <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> check the validity of packet functions&quot;
+                    &quot;AThis is <ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref> data. Use it <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> check the validity of packet functions&quot;
+                    &quot;AThis is <ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref> data. Use it <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> check the validity of packet functions&quot;
+                    &quot;AThis is <ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref> data. Use it <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> check the validity of packet functions&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="15" column="9" bodyfile="tests/unittests/torture_packet.c" bodystart="15" bodyend="-1"/>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t key[]</definition>
+        <argsstring>[]</argsstring>
+        <name>key</name>
+        <initializer>=&quot;iekaeshoa7ooCie2shai8shahngee3ONsee3xoishooj0ojei6aeChieth1iraPh&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="19" column="9" bodyfile="tests/unittests/torture_packet.c" bodystart="19" bodyend="-1"/>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t iv[]</definition>
+        <argsstring>[]</argsstring>
+        <name>iv</name>
+        <initializer>=&quot;eixaxughoomah4ui7Aew3ohxuolaifuu&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="20" column="9" bodyfile="tests/unittests/torture_packet.c" bodystart="20" bodyend="-1"/>
+        <referencedby refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" compoundref="chacha_8c" startline="78" endline="84">chacha_ivsetup</referencedby>
+        <referencedby refid="blf_8h_1a793385bdb5692be78ca0ce3d13dbe4c7" compoundref="blowfish_8c" startline="609" endline="647">ssh_blf_cbc_decrypt</referencedby>
+        <referencedby refid="blf_8h_1a223c8d44d4a4015b614a5380beecd824" compoundref="blowfish_8c" startline="584" endline="606">ssh_blf_cbc_encrypt</referencedby>
+        <referencedby refid="torture__threads__crypto_8c_1a10ff31741221cd8e55f0139b2cecbf40" compoundref="torture__threads__crypto_8c" startline="107" endline="176">thread_crypto_aes256_cbc</referencedby>
+        <referencedby refid="torture__crypto_8c_1a7a61a8925d5b85bfcbb84effd428e308" compoundref="torture__crypto_8c" startline="61" endline="112">torture_crypto_aes256_cbc</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mac[]</definition>
+        <argsstring>[]</argsstring>
+        <name>mac</name>
+        <initializer>=&quot;thook2Jai0ahmahyae7ChuuruoPhee8Y&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="21" column="9" bodyfile="tests/unittests/torture_packet.c" bodystart="21" bodyend="-1"/>
+        <referencedby refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" compoundref="chachapoly_8c" startline="133" endline="180">chacha20_poly1305_aead_decrypt</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" compoundref="packet__crypt_8c" startline="239" endline="283">ssh_packet_hmac_verify</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>static uint8_t* copy_data</definition>
+        <argsstring>(uint8_t *data, size_t len)</argsstring>
+        <name>copy_data</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="23" column="16" bodyfile="tests/unittests/torture_packet.c" bodystart="23" bodyend="28"/>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a6995639fe47e8eed7e6c88cd15951ab7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static SSH_PACKET_CALLBACK</definition>
+        <argsstring>(copy_packet_data)</argsstring>
+        <name>SSH_PACKET_CALLBACK</name>
+        <param>
+          <type>copy_packet_data</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="30" column="8" bodyfile="tests/unittests/torture_packet.c" bodystart="30" bodyend="42"/>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a977e718db0cb84434c8d666499326d4c">ssh_buffer_get_data</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" compoundref="ssh__client_8c" startline="48">user</references>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet</definition>
+        <argsstring>(const char *cipher, const char *mac_type, const char *comp_type, size_t payload_len)</argsstring>
+        <name>torture_packet</name>
+        <param>
+          <type>const char *</type>
+          <declname>cipher</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mac_type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>comp_type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>payload_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="45" column="1" bodyfile="tests/unittests/torture_packet.c" bodystart="45" bodyend="138"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" compoundref="test__socket_8c" startline="63">callbacks</references>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" compoundref="torture__packet_8c" startline="23" endline="28">copy_data</references>
+        <references refid="wrapper_8h_1aa5c258d97a1e3278fdc43a09a4970fab" compoundref="wrapper_8c" startline="379" endline="382">crypt_set_algorithms_client</references>
+        <references refid="wrapper_8h_1a0a3d255d6f354747a39476981074b8f3" compoundref="wrapper_8c" startline="150" endline="159">crypto_new</references>
+        <references refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" compoundref="session_8h" startline="172">ssh_session_struct::current_crypto</references>
+        <references refid="structssh__crypto__struct_1aa8fb59be5dd1a66f39429dd322fd6daa" compoundref="crypto_8h" startline="131">ssh_crypto_struct::decryptIV</references>
+        <references refid="structssh__crypto__struct_1abb583ba8e6dfc2e927a6af51dd450f3a" compoundref="crypto_8h" startline="132">ssh_crypto_struct::decryptkey</references>
+        <references refid="structssh__crypto__struct_1a9e1945f0bd57afbf407569d6c523d210" compoundref="crypto_8h" startline="135">ssh_crypto_struct::decryptMAC</references>
+        <references refid="structssh__crypto__struct_1af61cb0b00eb8b0e312e161754f7fffc5" compoundref="crypto_8h" startline="130">ssh_crypto_struct::encryptIV</references>
+        <references refid="structssh__crypto__struct_1aac421535e1ea3e781710d3e659f692f2" compoundref="crypto_8h" startline="133">ssh_crypto_struct::encryptkey</references>
+        <references refid="structssh__crypto__struct_1ae18fa9cdcc44cf926cf3e37af3168c6b" compoundref="crypto_8h" startline="134">ssh_crypto_struct::encryptMAC</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" compoundref="torture__packet_8c" startline="20">iv</references>
+        <references refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" compoundref="crypto_8h" startline="151">ssh_crypto_struct::kex_methods</references>
+        <references refid="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" compoundref="torture__packet_8c" startline="19">key</references>
+        <references refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" compoundref="torture__packet_8c" startline="21">mac</references>
+        <references refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" compoundref="session_8h" startline="173">ssh_session_struct::next_crypto</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" compoundref="crypto_8h" startline="137">ssh_crypto_struct::out_cipher</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__cipher__struct_1a0d68a1551beb7cfc87dafc4baa55afc4" compoundref="crypto_8h" startline="190">ssh_cipher_struct::set_decrypt_key</references>
+        <references refid="structssh__cipher__struct_1a8da59bd29bd79509cb37e0fa20fb91ac" compoundref="crypto_8h" startline="189">ssh_cipher_struct::set_encrypt_key</references>
+        <references refid="structssh__session__struct_1a3e64318ee32b9880aafbded46fabf81d" compoundref="session_8h" startline="111">ssh_session_struct::socket</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa9f5e6c7ac6bc08f82e5e97e919f2c8cf" compoundref="libssh_8h" startline="150">SSH_COMP_C_S</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02faf7f2b92af7f68aa4c58800e607a961b7" compoundref="libssh_8h" startline="151">SSH_COMP_S_C</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fae05802581a5e6b1127c589f263eab4c9" compoundref="libssh_8h" startline="146">SSH_CRYPT_C_S</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02faac5821ec7aca39ea394e0072bc7aed50" compoundref="libssh_8h" startline="147">SSH_CRYPT_S_C</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9af69cd5e570bff317e82374ba8100e2d4" compoundref="wrapper_8h" startline="62">SSH_DIRECTION_BOTH</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa642dda9838782d3808b70c6e943c7a57" compoundref="libssh_8h" startline="145">SSH_HOSTKEYS</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02faf573b21b55662289931bc5f4726302b4" compoundref="libssh_8h" startline="144">SSH_KEX</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa14dd24d5b3e6b94774491b54d5e2768b" compoundref="libssh_8h" startline="152">SSH_LANG_C_S</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fae67b8fbe2c303146ef9baa0a8d6668c4" compoundref="libssh_8h" startline="153">SSH_LANG_S_C</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa6846e5960a4166410d91360bc5b81ac8" compoundref="libssh_8h" startline="148">SSH_MAC_C_S</references>
+        <references refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa0375ae9eec6b5875abc665c0fc117c4f" compoundref="libssh_8h" startline="149">SSH_MAC_S_C</references>
+        <references refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46caaad9d185338d90669d96cfee24cce677" compoundref="libssh_8h" startline="394">SSH_OPTIONS_LOG_VERBOSITY</references>
+        <references refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" compoundref="options_8c" startline="474" endline="1039">ssh_options_set</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="packet_8h_1a6799ed6886c75279d61dcacd83b71102" compoundref="packet_8c" startline="1426" endline="1433">ssh_packet_set_callbacks</references>
+        <references refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</references>
+        <references refid="torture__packet_8c_1a68bd486dcffabee99677d7b90264ad82" compoundref="torture__packet_8c" startline="15">test_data</references>
+        <references refid="torture_8c_1af9e8baae5bc21928aa2a666f3b232e7f" compoundref="torture_8c" startline="1321" endline="1323">torture_libssh_verbosity</references>
+        <references refid="structssh__crypto__struct_1a6f46e71537e628ed33cdc3719df9a3ad" compoundref="crypto_8h" startline="154">ssh_crypto_struct::used</references>
+        <references refid="libssh__scp_8c_1a1bdcfae3209cbd96db35a2ae356fa15e" compoundref="libssh__scp_8c" startline="28">verbosity</references>
+        <references refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" compoundref="socket_8c" startline="84">ssh_socket_struct::write_wontblock</references>
+        <referencedby refid="torture__packet_8c_1aaabe9b3f233d833d41d7a30dc3edd4e7" compoundref="torture__packet_8c" startline="242" endline="249">torture_packet_3des_cbc</referencedby>
+        <referencedby refid="torture__packet_8c_1a875b18c202808626b4ee690bac9db48f" compoundref="torture__packet_8c" startline="251" endline="257">torture_packet_3des_cbc_etm</referencedby>
+        <referencedby refid="torture__packet_8c_1a73ab4bdd1f0e1903f2af65f198f6e163" compoundref="torture__packet_8c" startline="191" endline="198">torture_packet_aes128_cbc</referencedby>
+        <referencedby refid="torture__packet_8c_1ad87137e8eb2efbff224e609a804f133b" compoundref="torture__packet_8c" startline="218" endline="224">torture_packet_aes128_cbc_etm</referencedby>
+        <referencedby refid="torture__packet_8c_1a20432d62e1294263788182d55fd65b2b" compoundref="torture__packet_8c" startline="164" endline="171">torture_packet_aes128_ctr</referencedby>
+        <referencedby refid="torture__packet_8c_1a9c05eb23c99aa1e7e253401b60b606fe" compoundref="torture__packet_8c" startline="140" endline="146">torture_packet_aes128_ctr_etm</referencedby>
+        <referencedby refid="torture__packet_8c_1ae50f4256675a6c9c00f04ef1311b3730" compoundref="torture__packet_8c" startline="274" endline="281">torture_packet_aes128_gcm</referencedby>
+        <referencedby refid="torture__packet_8c_1abbbe177b353e25a2316e56855842f4ed" compoundref="torture__packet_8c" startline="200" endline="207">torture_packet_aes192_cbc</referencedby>
+        <referencedby refid="torture__packet_8c_1ae7b7020427df614cc2ce9a0cbe0c6295" compoundref="torture__packet_8c" startline="226" endline="232">torture_packet_aes192_cbc_etm</referencedby>
+        <referencedby refid="torture__packet_8c_1a054a592b5fefe2b751da03a822f97a71" compoundref="torture__packet_8c" startline="173" endline="180">torture_packet_aes192_ctr</referencedby>
+        <referencedby refid="torture__packet_8c_1aa16bd8fcfe88717f7e1871f0c1130ab3" compoundref="torture__packet_8c" startline="148" endline="154">torture_packet_aes192_ctr_etm</referencedby>
+        <referencedby refid="torture__packet_8c_1af92cf363bafbd169d8852e9a240d5797" compoundref="torture__packet_8c" startline="209" endline="216">torture_packet_aes256_cbc</referencedby>
+        <referencedby refid="torture__packet_8c_1a8394274aa7387313d93f7e77912758ec" compoundref="torture__packet_8c" startline="234" endline="240">torture_packet_aes256_cbc_etm</referencedby>
+        <referencedby refid="torture__packet_8c_1a73ea4d17b0c2565502d9720938d34398" compoundref="torture__packet_8c" startline="182" endline="189">torture_packet_aes256_ctr</referencedby>
+        <referencedby refid="torture__packet_8c_1a5310953bdd03ffc2dc8b377f7d281a38" compoundref="torture__packet_8c" startline="156" endline="162">torture_packet_aes256_ctr_etm</referencedby>
+        <referencedby refid="torture__packet_8c_1a7383fac3c99f796b0a1efe5c745fadfa" compoundref="torture__packet_8c" startline="283" endline="290">torture_packet_aes256_gcm</referencedby>
+        <referencedby refid="torture__packet_8c_1a6c3ec40e85132fc310bbfc54dbda09b0" compoundref="torture__packet_8c" startline="259" endline="272">torture_packet_chacha20</referencedby>
+        <referencedby refid="torture__packet_8c_1a68720eb61c1c7228d89dd1ff2b1d8703" compoundref="torture__packet_8c" startline="292" endline="299">torture_packet_compress_zlib</referencedby>
+        <referencedby refid="torture__packet_8c_1af0fb716111d456adf69d908e9ebb31d8" compoundref="torture__packet_8c" startline="301" endline="308">torture_packet_compress_zlib_openssh</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a9c05eb23c99aa1e7e253401b60b606fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes128_ctr_etm</definition>
+        <argsstring>(UNUSED_PARAM(void **state))</argsstring>
+        <name>torture_packet_aes128_ctr_etm</name>
+        <param>
+          <type><ref refid="priv_8h_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(void **state)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="140" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="140" bodyend="146"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1aa16bd8fcfe88717f7e1871f0c1130ab3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes192_ctr_etm</definition>
+        <argsstring>(UNUSED_PARAM(void **state))</argsstring>
+        <name>torture_packet_aes192_ctr_etm</name>
+        <param>
+          <type><ref refid="priv_8h_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(void **state)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="148" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="148" bodyend="154"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a5310953bdd03ffc2dc8b377f7d281a38" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes256_ctr_etm</definition>
+        <argsstring>(UNUSED_PARAM(void **state))</argsstring>
+        <name>torture_packet_aes256_ctr_etm</name>
+        <param>
+          <type><ref refid="priv_8h_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(void **state)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="156" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="156" bodyend="162"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a20432d62e1294263788182d55fd65b2b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes128_ctr</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes128_ctr</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="164" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="164" bodyend="171"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a054a592b5fefe2b751da03a822f97a71" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes192_ctr</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes192_ctr</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="173" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="173" bodyend="180"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a73ea4d17b0c2565502d9720938d34398" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes256_ctr</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes256_ctr</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="182" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="182" bodyend="189"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a73ab4bdd1f0e1903f2af65f198f6e163" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes128_cbc</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes128_cbc</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="191" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="191" bodyend="198"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1abbbe177b353e25a2316e56855842f4ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes192_cbc</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes192_cbc</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="200" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="200" bodyend="207"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1af92cf363bafbd169d8852e9a240d5797" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes256_cbc</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes256_cbc</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="209" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="209" bodyend="216"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1ad87137e8eb2efbff224e609a804f133b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes128_cbc_etm</definition>
+        <argsstring>(UNUSED_PARAM(void **state))</argsstring>
+        <name>torture_packet_aes128_cbc_etm</name>
+        <param>
+          <type><ref refid="priv_8h_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(void **state)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="218" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="218" bodyend="224"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1ae7b7020427df614cc2ce9a0cbe0c6295" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes192_cbc_etm</definition>
+        <argsstring>(UNUSED_PARAM(void **state))</argsstring>
+        <name>torture_packet_aes192_cbc_etm</name>
+        <param>
+          <type><ref refid="priv_8h_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(void **state)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="226" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="226" bodyend="232"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a8394274aa7387313d93f7e77912758ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes256_cbc_etm</definition>
+        <argsstring>(UNUSED_PARAM(void **state))</argsstring>
+        <name>torture_packet_aes256_cbc_etm</name>
+        <param>
+          <type><ref refid="priv_8h_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(void **state)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="234" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="234" bodyend="240"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1aaabe9b3f233d833d41d7a30dc3edd4e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_3des_cbc</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_3des_cbc</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="242" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="242" bodyend="249"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a875b18c202808626b4ee690bac9db48f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_3des_cbc_etm</definition>
+        <argsstring>(UNUSED_PARAM(void **state))</argsstring>
+        <name>torture_packet_3des_cbc_etm</name>
+        <param>
+          <type><ref refid="priv_8h_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(void **state)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="251" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="251" bodyend="257"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a6c3ec40e85132fc310bbfc54dbda09b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_chacha20</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_chacha20</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="259" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="259" bodyend="272"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1ae50f4256675a6c9c00f04ef1311b3730" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes128_gcm</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes128_gcm</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="274" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="274" bodyend="281"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a7383fac3c99f796b0a1efe5c745fadfa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_aes256_gcm</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_aes256_gcm</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="283" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="283" bodyend="290"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a68720eb61c1c7228d89dd1ff2b1d8703" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_compress_zlib</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_compress_zlib</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="292" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="292" bodyend="299"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1af0fb716111d456adf69d908e9ebb31d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void torture_packet_compress_zlib_openssh</definition>
+        <argsstring>(void **state)</argsstring>
+        <name>torture_packet_compress_zlib_openssh</name>
+        <param>
+          <type>void **</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="301" column="13" bodyfile="tests/unittests/torture_packet.c" bodystart="301" bodyend="308"/>
+        <references refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</references>
+        <referencedby refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__packet_8c" startline="310" endline="339">torture_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int torture_run_tests</definition>
+        <argsstring>(void)</argsstring>
+        <name>torture_run_tests</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/unittests/torture_packet.c" line="310" column="5" bodyfile="tests/unittests/torture_packet.c" bodystart="310" bodyend="339"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</references>
+        <references refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" compoundref="init_8c" startline="147" endline="149">ssh_init</references>
+        <references refid="torture_8h_1a83a80a48ac2740bea8d15d95aec7e966" compoundref="torture_8h" startline="120">torture_filter_tests</references>
+        <references refid="torture__packet_8c_1aaabe9b3f233d833d41d7a30dc3edd4e7" compoundref="torture__packet_8c" startline="242" endline="249">torture_packet_3des_cbc</references>
+        <references refid="torture__packet_8c_1a875b18c202808626b4ee690bac9db48f" compoundref="torture__packet_8c" startline="251" endline="257">torture_packet_3des_cbc_etm</references>
+        <references refid="torture__packet_8c_1a73ab4bdd1f0e1903f2af65f198f6e163" compoundref="torture__packet_8c" startline="191" endline="198">torture_packet_aes128_cbc</references>
+        <references refid="torture__packet_8c_1ad87137e8eb2efbff224e609a804f133b" compoundref="torture__packet_8c" startline="218" endline="224">torture_packet_aes128_cbc_etm</references>
+        <references refid="torture__packet_8c_1a20432d62e1294263788182d55fd65b2b" compoundref="torture__packet_8c" startline="164" endline="171">torture_packet_aes128_ctr</references>
+        <references refid="torture__packet_8c_1a9c05eb23c99aa1e7e253401b60b606fe" compoundref="torture__packet_8c" startline="140" endline="146">torture_packet_aes128_ctr_etm</references>
+        <references refid="torture__packet_8c_1ae50f4256675a6c9c00f04ef1311b3730" compoundref="torture__packet_8c" startline="274" endline="281">torture_packet_aes128_gcm</references>
+        <references refid="torture__packet_8c_1abbbe177b353e25a2316e56855842f4ed" compoundref="torture__packet_8c" startline="200" endline="207">torture_packet_aes192_cbc</references>
+        <references refid="torture__packet_8c_1ae7b7020427df614cc2ce9a0cbe0c6295" compoundref="torture__packet_8c" startline="226" endline="232">torture_packet_aes192_cbc_etm</references>
+        <references refid="torture__packet_8c_1a054a592b5fefe2b751da03a822f97a71" compoundref="torture__packet_8c" startline="173" endline="180">torture_packet_aes192_ctr</references>
+        <references refid="torture__packet_8c_1aa16bd8fcfe88717f7e1871f0c1130ab3" compoundref="torture__packet_8c" startline="148" endline="154">torture_packet_aes192_ctr_etm</references>
+        <references refid="torture__packet_8c_1af92cf363bafbd169d8852e9a240d5797" compoundref="torture__packet_8c" startline="209" endline="216">torture_packet_aes256_cbc</references>
+        <references refid="torture__packet_8c_1a8394274aa7387313d93f7e77912758ec" compoundref="torture__packet_8c" startline="234" endline="240">torture_packet_aes256_cbc_etm</references>
+        <references refid="torture__packet_8c_1a73ea4d17b0c2565502d9720938d34398" compoundref="torture__packet_8c" startline="182" endline="189">torture_packet_aes256_ctr</references>
+        <references refid="torture__packet_8c_1a5310953bdd03ffc2dc8b377f7d281a38" compoundref="torture__packet_8c" startline="156" endline="162">torture_packet_aes256_ctr_etm</references>
+        <references refid="torture__packet_8c_1a7383fac3c99f796b0a1efe5c745fadfa" compoundref="torture__packet_8c" startline="283" endline="290">torture_packet_aes256_gcm</references>
+        <references refid="torture__packet_8c_1a6c3ec40e85132fc310bbfc54dbda09b0" compoundref="torture__packet_8c" startline="259" endline="272">torture_packet_chacha20</references>
+        <references refid="torture__packet_8c_1a68720eb61c1c7228d89dd1ff2b1d8703" compoundref="torture__packet_8c" startline="292" endline="299">torture_packet_compress_zlib</references>
+        <references refid="torture__packet_8c_1af0fb716111d456adf69d908e9ebb31d8" compoundref="torture__packet_8c" startline="301" endline="308">torture_packet_compress_zlib_openssh</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="torture__packet_8c_1a2e84c73592c2992fdc0b2593524f3b18" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBSSH_STATIC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="torture_8h" kindref="compound">torture.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="session_8h" kindref="compound">libssh/session.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">libssh/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_8h" kindref="compound">libssh/buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="socket_8h" kindref="compound">libssh/socket.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="socket_8c" kindref="compound">socket.c</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="torture__packet_8c_1a68bd486dcffabee99677d7b90264ad82" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="torture__packet_8c_1a68bd486dcffabee99677d7b90264ad82" kindref="member">test_data</ref>[]=</highlight><highlight class="stringliteral">&quot;AThis<sp/>is<sp/>test<sp/>data.<sp/>Use<sp/>it<sp/>to<sp/>check<sp/>the<sp/>validity<sp/>of<sp/>packet<sp/>functions&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;AThis<sp/>is<sp/>test<sp/>data.<sp/>Use<sp/>it<sp/>to<sp/>check<sp/>the<sp/>validity<sp/>of<sp/>packet<sp/>functions&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;AThis<sp/>is<sp/>test<sp/>data.<sp/>Use<sp/>it<sp/>to<sp/>check<sp/>the<sp/>validity<sp/>of<sp/>packet<sp/>functions&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;AThis<sp/>is<sp/>test<sp/>data.<sp/>Use<sp/>it<sp/>to<sp/>check<sp/>the<sp/>validity<sp/>of<sp/>packet<sp/>functions&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19" refid="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" kindref="member">key</ref>[]=</highlight><highlight class="stringliteral">&quot;iekaeshoa7ooCie2shai8shahngee3ONsee3xoishooj0ojei6aeChieth1iraPh&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20" refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref>[]=</highlight><highlight class="stringliteral">&quot;eixaxughoomah4ui7Aew3ohxuolaifuu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21" refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>[]=</highlight><highlight class="stringliteral">&quot;thook2Jai0ahmahyae7ChuuruoPhee8Y&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" kindref="member">copy_data</ref>(uint8_t<sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*ret<sp/>=<sp/>malloc(len);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(ret);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(ret,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="torture__packet_8c_1a6995639fe47e8eed7e6c88cd15951ab7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a6995639fe47e8eed7e6c88cd15951ab7" kindref="member">SSH_PACKET_CALLBACK</ref>(copy_packet_data){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*response<sp/>=<sp/><ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len<sp/>=<sp/><ref refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc" kindref="member">ssh_buffer_get_len</ref>(packet);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)type;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(len<sp/>&gt;<sp/>1024){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>1024;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a977e718db0cb84434c8d666499326d4c" kindref="member">ssh_buffer_get_data</ref>(packet,<sp/>response,<sp/>len);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" refkind="member"><highlight class="normal"><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*cipher,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mac_type,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*comp_type,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>payload_len)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref><sp/>=<sp/><ref refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" kindref="member">ssh_new</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libssh__scp_8c_1a1bdcfae3209cbd96db35a2ae356fa15e" kindref="member">verbosity</ref><sp/>=<sp/><ref refid="torture_8c_1af9e8baae5bc21928aa2a666f3b232e7f" kindref="member">torture_libssh_verbosity</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*in_cipher;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*out_cipher;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sockets[2];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>[1024];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>response[1024];</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>encrypted_packet_len;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__callbacks_1ga6b8722467c98b73a7d78c0ec055e740d" kindref="member">ssh_packet_callback</ref><sp/><ref refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" kindref="member">callbacks</ref>[]={copy_packet_data};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__packet__callbacks__struct" kindref="compound">ssh_packet_callbacks_struct</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.start=</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.n_callbacks=1,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.callbacks=<ref refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" kindref="member">callbacks</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.user=response</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cmp;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga7a801b85800baa3f4e16f5b47db0a73d" kindref="member">ssh_options_set</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1af7093adacb08e7ee1e9b16e9c8b0f46caaad9d185338d90669d96cfee24cce677" kindref="member">SSH_OPTIONS_LOG_VERBOSITY</ref>,<sp/>&amp;<ref refid="libssh__scp_8c_1a1bdcfae3209cbd96db35a2ae356fa15e" kindref="member">verbosity</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto<sp/>=<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" kindref="member">next_crypto</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>socketpair(AF_UNIX,<sp/>SOCK_STREAM,<sp/>0,<sp/>sockets);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02faf573b21b55662289931bc5f4726302b4" kindref="member">SSH_KEX</ref>]<sp/>=<sp/>strdup(</highlight><highlight class="stringliteral">&quot;curve25519-sha256@libssh.org&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa642dda9838782d3808b70c6e943c7a57" kindref="member">SSH_HOSTKEYS</ref>]<sp/>=<sp/>strdup(</highlight><highlight class="stringliteral">&quot;ssh-rsa&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fae05802581a5e6b1127c589f263eab4c9" kindref="member">SSH_CRYPT_C_S</ref>]<sp/>=<sp/>strdup(cipher);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02faac5821ec7aca39ea394e0072bc7aed50" kindref="member">SSH_CRYPT_S_C</ref>]<sp/>=<sp/>strdup(cipher);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa6846e5960a4166410d91360bc5b81ac8" kindref="member">SSH_MAC_C_S</ref>]<sp/>=<sp/>strdup(mac_type);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa0375ae9eec6b5875abc665c0fc117c4f" kindref="member">SSH_MAC_S_C</ref>]<sp/>=<sp/>strdup(mac_type);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa9f5e6c7ac6bc08f82e5e97e919f2c8cf" kindref="member">SSH_COMP_C_S</ref>]<sp/>=<sp/>strdup(comp_type);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02faf7f2b92af7f68aa4c58800e607a961b7" kindref="member">SSH_COMP_S_C</ref>]<sp/>=<sp/>strdup(comp_type);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fa14dd24d5b3e6b94774491b54d5e2768b" kindref="member">SSH_LANG_C_S</ref>]<sp/>=<sp/>strdup(</highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="libssh_8h_1a3af3a0324900b0fa3848b9b77cb6b02fae67b8fbe2c303146ef9baa0a8d6668c4" kindref="member">SSH_LANG_S_C</ref>]<sp/>=<sp/>strdup(</highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="wrapper_8h_1aa5c258d97a1e3278fdc43a09a4970fab" kindref="member">crypt_set_algorithms_client</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref><sp/>=<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" kindref="member">next_crypto</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" kindref="member">next_crypto</ref><sp/>=<sp/><ref refid="wrapper_8h_1a0a3d255d6f354747a39476981074b8f3" kindref="member">crypto_new</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aac421535e1ea3e781710d3e659f692f2" kindref="member">encryptkey</ref><sp/>=<sp/><ref refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" kindref="member">copy_data</ref>(<ref refid="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" kindref="member">key</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" kindref="member">key</ref>));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1abb583ba8e6dfc2e927a6af51dd450f3a" kindref="member">decryptkey</ref><sp/>=<sp/><ref refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" kindref="member">copy_data</ref>(<ref refid="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" kindref="member">key</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="torture__packet_8c_1a7044903dd8e1a2131db8a812d2c6309c" kindref="member">key</ref>));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1af61cb0b00eb8b0e312e161754f7fffc5" kindref="member">encryptIV</ref><sp/>=<sp/><ref refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" kindref="member">copy_data</ref>(<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref>));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aa8fb59be5dd1a66f39429dd322fd6daa" kindref="member">decryptIV</ref><sp/>=<sp/><ref refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" kindref="member">copy_data</ref>(<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref>));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1ae18fa9cdcc44cf926cf3e37af3168c6b" kindref="member">encryptMAC</ref><sp/>=<sp/><ref refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" kindref="member">copy_data</ref>(<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a9e1945f0bd57afbf407569d6c523d210" kindref="member">decryptMAC</ref><sp/>=<sp/><ref refid="torture__packet_8c_1a8204edb690a32a84aac62a8162e15df7" kindref="member">copy_data</ref>(<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>in_cipher<sp/>=<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref>-&gt;<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>in_cipher-&gt;<ref refid="structssh__cipher__struct_1a0d68a1551beb7cfc87dafc4baa55afc4" kindref="member">set_decrypt_key</ref>(in_cipher,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref>-&gt;<ref refid="structssh__crypto__struct_1abb583ba8e6dfc2e927a6af51dd450f3a" kindref="member">decryptkey</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref>-&gt;<ref refid="structssh__crypto__struct_1aa8fb59be5dd1a66f39429dd322fd6daa" kindref="member">decryptIV</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>out_cipher<sp/>=<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref>-&gt;<ref refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" kindref="member">out_cipher</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>out_cipher-&gt;<ref refid="structssh__cipher__struct_1a8da59bd29bd79509cb37e0fa20fb91ac" kindref="member">set_encrypt_key</ref>(out_cipher,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref>-&gt;<ref refid="structssh__crypto__struct_1aac421535e1ea3e781710d3e659f692f2" kindref="member">encryptkey</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref>-&gt;<ref refid="structssh__crypto__struct_1af61cb0b00eb8b0e312e161754f7fffc5" kindref="member">encryptIV</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" kindref="member">current_crypto</ref>-&gt;<ref refid="structssh__crypto__struct_1a6f46e71537e628ed33cdc3719df9a3ad" kindref="member">used</ref><sp/>=<sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9af69cd5e570bff317e82374ba8100e2d4" kindref="member">SSH_DIRECTION_BOTH</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_non_null(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" kindref="member">out_buffer</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" kindref="member">out_buffer</ref>,<sp/><ref refid="torture__packet_8c_1a68bd486dcffabee99677d7b90264ad82" kindref="member">test_data</ref>,<sp/>payload_len);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a3e64318ee32b9880aafbded46fabf81d" kindref="member">socket</ref>-&gt;<ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref><sp/>=<sp/>sockets[0];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a3e64318ee32b9880aafbded46fabf81d" kindref="member">socket</ref>-&gt;<ref refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" kindref="member">write_wontblock</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" kindref="member">ssh_packet_send</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>recv(sockets[1],<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>),<sp/>0);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_true(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>encrypted_packet_len<sp/>=<sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>cmp<sp/>=<sp/>strcmp(comp_type,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert_in_range(encrypted_packet_len,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>payload_len<sp/>+<sp/>4,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>payload_len<sp/>+<sp/>(32<sp/>*<sp/>3));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>send(sockets[0],<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>encrypted_packet_len,<sp/>0);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/>encrypted_packet_len);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="packet_8h_1a6799ed6886c75279d61dcacd83b71102" kindref="member">ssh_packet_set_callbacks</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>&amp;<ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" kindref="member">explicit_bzero</ref>(response,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(response));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" kindref="member">ssh_packet_socket_callback</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>encrypted_packet_len,<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>assert_int_not_equal(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>,<sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(payload_len<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert_memory_equal(response,<sp/><ref refid="torture__packet_8c_1a68bd486dcffabee99677d7b90264ad82" kindref="member">test_data</ref>+1,<sp/>payload_len-1);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>close(sockets[0]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>close(sockets[1]);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a3e64318ee32b9880aafbded46fabf81d" kindref="member">socket</ref>-&gt;<ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref><sp/>=<sp/><ref refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" kindref="member">SSH_INVALID_SOCKET</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" kindref="member">ssh_free</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="torture__packet_8c_1a9c05eb23c99aa1e7e253401b60b606fe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a9c05eb23c99aa1e7e253401b60b606fe" kindref="member">torture_packet_aes128_ctr_etm</ref>(<ref refid="sshd__direct-tcpip_8c_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state))</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>256;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes128-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1-etm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="torture__packet_8c_1aa16bd8fcfe88717f7e1871f0c1130ab3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1aa16bd8fcfe88717f7e1871f0c1130ab3" kindref="member">torture_packet_aes192_ctr_etm</ref>(<ref refid="sshd__direct-tcpip_8c_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state))</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>256;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes192-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1-etm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="torture__packet_8c_1a5310953bdd03ffc2dc8b377f7d281a38" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a5310953bdd03ffc2dc8b377f7d281a38" kindref="member">torture_packet_aes256_ctr_etm</ref>(<ref refid="sshd__direct-tcpip_8c_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state))</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>256;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes256-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1-etm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="torture__packet_8c_1a20432d62e1294263788182d55fd65b2b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a20432d62e1294263788182d55fd65b2b" kindref="member">torture_packet_aes128_ctr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes128-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="torture__packet_8c_1a054a592b5fefe2b751da03a822f97a71" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a054a592b5fefe2b751da03a822f97a71" kindref="member">torture_packet_aes192_ctr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes192-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="torture__packet_8c_1a73ea4d17b0c2565502d9720938d34398" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a73ea4d17b0c2565502d9720938d34398" kindref="member">torture_packet_aes256_ctr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes256-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="torture__packet_8c_1a73ab4bdd1f0e1903f2af65f198f6e163" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a73ab4bdd1f0e1903f2af65f198f6e163" kindref="member">torture_packet_aes128_cbc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes128-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="torture__packet_8c_1abbbe177b353e25a2316e56855842f4ed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1abbbe177b353e25a2316e56855842f4ed" kindref="member">torture_packet_aes192_cbc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes192-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="torture__packet_8c_1af92cf363bafbd169d8852e9a240d5797" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1af92cf363bafbd169d8852e9a240d5797" kindref="member">torture_packet_aes256_cbc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes256-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="torture__packet_8c_1ad87137e8eb2efbff224e609a804f133b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1ad87137e8eb2efbff224e609a804f133b" kindref="member">torture_packet_aes128_cbc_etm</ref>(<ref refid="sshd__direct-tcpip_8c_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state))</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>256;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes128-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1-etm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="torture__packet_8c_1ae7b7020427df614cc2ce9a0cbe0c6295" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1ae7b7020427df614cc2ce9a0cbe0c6295" kindref="member">torture_packet_aes192_cbc_etm</ref>(<ref refid="sshd__direct-tcpip_8c_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state))</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>256;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes192-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1-etm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="torture__packet_8c_1a8394274aa7387313d93f7e77912758ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a8394274aa7387313d93f7e77912758ec" kindref="member">torture_packet_aes256_cbc_etm</ref>(<ref refid="sshd__direct-tcpip_8c_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state))</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>256;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes256-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1-etm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="torture__packet_8c_1aaabe9b3f233d833d41d7a30dc3edd4e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1aaabe9b3f233d833d41d7a30dc3edd4e7" kindref="member">torture_packet_3des_cbc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;3des-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="torture__packet_8c_1a875b18c202808626b4ee690bac9db48f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a875b18c202808626b4ee690bac9db48f" kindref="member">torture_packet_3des_cbc_etm</ref>(<ref refid="sshd__direct-tcpip_8c_1a460cdce060735081f1d22b0e0f60d9dd" kindref="member">UNUSED_PARAM</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state))</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>256;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;3des-cbc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1-etm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="torture__packet_8c_1a6c3ec40e85132fc310bbfc54dbda09b0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a6c3ec40e85132fc310bbfc54dbda09b0" kindref="member">torture_packet_chacha20</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Chacha20-poly1305<sp/>is<sp/>not<sp/>FIPS-allowed<sp/>cipher<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ssh_fips_mode())<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>skip();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;chacha20-poly1305@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="torture__packet_8c_1ae50f4256675a6c9c00f04ef1311b3730" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1ae50f4256675a6c9c00f04ef1311b3730" kindref="member">torture_packet_aes128_gcm</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes128-gcm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="torture__packet_8c_1a7383fac3c99f796b0a1efe5c745fadfa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a7383fac3c99f796b0a1efe5c745fadfa" kindref="member">torture_packet_aes256_gcm</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes256-gcm@openssh.com&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="torture__packet_8c_1a68720eb61c1c7228d89dd1ff2b1d8703" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a68720eb61c1c7228d89dd1ff2b1d8703" kindref="member">torture_packet_compress_zlib</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes256-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;zlib&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="torture__packet_8c_1af0fb716111d456adf69d908e9ebb31d8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1af0fb716111d456adf69d908e9ebb31d8" kindref="member">torture_packet_compress_zlib_openssh</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**state)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)state;<sp/></highlight><highlight class="comment">/*<sp/>unused<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=1;i&lt;256;++i){</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" kindref="member">torture_packet</ref>(</highlight><highlight class="stringliteral">&quot;aes256-ctr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hmac-sha1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;zlib@openssh.com&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__packet_8c_1a18fee75b27727bcf11e18cceef200834" kindref="member">torture_run_tests</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">CMUnitTest<sp/>tests[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a20432d62e1294263788182d55fd65b2b" kindref="member">torture_packet_aes128_ctr</ref>),</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a054a592b5fefe2b751da03a822f97a71" kindref="member">torture_packet_aes192_ctr</ref>),</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a73ea4d17b0c2565502d9720938d34398" kindref="member">torture_packet_aes256_ctr</ref>),</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a9c05eb23c99aa1e7e253401b60b606fe" kindref="member">torture_packet_aes128_ctr_etm</ref>),</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1aa16bd8fcfe88717f7e1871f0c1130ab3" kindref="member">torture_packet_aes192_ctr_etm</ref>),</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a5310953bdd03ffc2dc8b377f7d281a38" kindref="member">torture_packet_aes256_ctr_etm</ref>),</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a73ab4bdd1f0e1903f2af65f198f6e163" kindref="member">torture_packet_aes128_cbc</ref>),</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1abbbe177b353e25a2316e56855842f4ed" kindref="member">torture_packet_aes192_cbc</ref>),</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1af92cf363bafbd169d8852e9a240d5797" kindref="member">torture_packet_aes256_cbc</ref>),</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1ad87137e8eb2efbff224e609a804f133b" kindref="member">torture_packet_aes128_cbc_etm</ref>),</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1ae7b7020427df614cc2ce9a0cbe0c6295" kindref="member">torture_packet_aes192_cbc_etm</ref>),</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a8394274aa7387313d93f7e77912758ec" kindref="member">torture_packet_aes256_cbc_etm</ref>),</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1aaabe9b3f233d833d41d7a30dc3edd4e7" kindref="member">torture_packet_3des_cbc</ref>),</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a875b18c202808626b4ee690bac9db48f" kindref="member">torture_packet_3des_cbc_etm</ref>),</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a6c3ec40e85132fc310bbfc54dbda09b0" kindref="member">torture_packet_chacha20</ref>),</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1ae50f4256675a6c9c00f04ef1311b3730" kindref="member">torture_packet_aes128_gcm</ref>),</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a7383fac3c99f796b0a1efe5c745fadfa" kindref="member">torture_packet_aes256_gcm</ref>),</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1a68720eb61c1c7228d89dd1ff2b1d8703" kindref="member">torture_packet_compress_zlib</ref>),</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmocka_unit_test(<ref refid="torture__packet_8c_1af0fb716111d456adf69d908e9ebb31d8" kindref="member">torture_packet_compress_zlib_openssh</ref>),</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init</ref>();</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture_8h_1a83a80a48ac2740bea8d15d95aec7e966" kindref="member">torture_filter_tests</ref>(tests);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>cmocka_run_group_tests(tests,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>();</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/unittests/torture_packet.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="crypto_8h" kind="file" language="C++">
+    <compoundname>crypto.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="wrapper_8h" local="yes">libssh/wrapper.h</includes>
+    <includes refid="dh_8h" local="yes">libssh/dh.h</includes>
+    <includes refid="ecdh_8h" local="yes">libssh/ecdh.h</includes>
+    <includes refid="kex_8h" local="yes">libssh/kex.h</includes>
+    <includes refid="curve25519_8h" local="yes">libssh/curve25519.h</includes>
+    <includedby refid="dh_8h" local="yes">include/libssh/dh.h</includedby>
+    <includedby refid="pki_8h" local="yes">include/libssh/pki.h</includedby>
+    <includedby refid="auth_8c" local="yes">src/auth.c</includedby>
+    <includedby refid="chachapoly_8c" local="yes">src/chachapoly.c</includedby>
+    <includedby refid="dh_8c" local="yes">src/dh.c</includedby>
+    <includedby refid="dh__key_8c" local="yes">src/dh_key.c</includedby>
+    <includedby refid="gssapi_8c" local="no">src/gssapi.c</includedby>
+    <includedby refid="gzip_8c" local="yes">src/gzip.c</includedby>
+    <includedby refid="kdf_8c" local="yes">src/kdf.c</includedby>
+    <includedby refid="libcrypto_8c" local="yes">src/libcrypto.c</includedby>
+    <includedby refid="libgcrypt_8c" local="yes">src/libgcrypt.c</includedby>
+    <includedby refid="libmbedcrypto_8c" local="yes">src/libmbedcrypto.c</includedby>
+    <includedby refid="packet_8c" local="yes">src/packet.c</includedby>
+    <includedby refid="packet__cb_8c" local="yes">src/packet_cb.c</includedby>
+    <includedby refid="packet__crypt_8c" local="yes">src/packet_crypt.c</includedby>
+    <includedby refid="session_8c" local="yes">src/session.c</includedby>
+    <includedby refid="threads_2libcrypto_8c" local="yes">src/threads/libcrypto.c</includedby>
+    <includedby refid="threads_2libgcrypt_8c" local="yes">src/threads/libgcrypt.c</includedby>
+    <includedby refid="mbedtls_8c" local="yes">src/threads/mbedtls.c</includedby>
+    <includedby refid="threads_8c" local="yes">src/threads.c</includedby>
+    <includedby refid="wrapper_8c" local="yes">src/wrapper.c</includedby>
+    <includedby refid="torture__rekey_8c" local="yes">tests/client/torture_rekey.c</includedby>
+    <includedby refid="torture__crypto_8c" local="yes">tests/unittests/torture_crypto.c</includedby>
+    <includedby refid="torture__packet_8c" local="yes">tests/unittests/torture_packet.c</includedby>
+    <includedby refid="torture__session__keys_8c" local="yes">tests/unittests/torture_session_keys.c</includedby>
+    <includedby refid="torture__threads__crypto_8c" local="yes">tests/unittests/torture_threads_crypto.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="9">
+        <label>sys/select.h</label>
+      </node>
+      <node id="19">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="20">
+        <label>stdint.h</label>
+      </node>
+      <node id="21">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>netdb.h</label>
+      </node>
+      <node id="16">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>sys/types.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>unistd.h</label>
+      </node>
+      <node id="1">
+        <label>include/libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="44">
+        <label>src/pki_ed25519_common.c</label>
+        <link refid="pki__ed25519__common_8c"/>
+      </node>
+      <node id="23">
+        <label>src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="29">
+        <label>include/libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="32">
+        <label>src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="66">
+        <label>tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="45">
+        <label>tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="53">
+        <label>src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="38">
+        <label>tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="35">
+        <label>tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="4">
+        <label>src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="17">
+        <label>src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="41">
+        <label>src/pki_container_openssh.c</label>
+        <link refid="pki__container__openssh_8c"/>
+      </node>
+      <node id="20">
+        <label>src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="2">
+        <label>include/libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="14">
+        <label>src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="58">
+        <label>src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="54">
+        <label>src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="8">
+        <label>src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="36">
+        <label>tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="43">
+        <label>src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+      </node>
+      <node id="31">
+        <label>src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+      <node id="34">
+        <label>tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="33">
+        <label>tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="11">
+        <label>src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="63">
+        <label>tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="56">
+        <label>src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="47">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="40">
+        <label>tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="22">
+        <label>src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="55">
+        <label>src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="61">
+        <label>src/threads/mbedtls.c</label>
+        <link refid="mbedtls_8c"/>
+      </node>
+      <node id="62">
+        <label>src/threads.c</label>
+        <link refid="threads_8c"/>
+      </node>
+      <node id="37">
+        <label>tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="46">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="9">
+        <label>src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="60">
+        <label>src/threads/libgcrypt.c</label>
+        <link refid="threads_2libgcrypt_8c"/>
+      </node>
+      <node id="57">
+        <label>src/libmbedcrypto.c</label>
+        <link refid="libmbedcrypto_8c"/>
+      </node>
+      <node id="26">
+        <label>src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="59">
+        <label>src/threads/libcrypto.c</label>
+        <link refid="threads_2libcrypto_8c"/>
+      </node>
+      <node id="50">
+        <label>src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="13">
+        <label>src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="15">
+        <label>src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="48">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="7">
+        <label>tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="51">
+        <label>src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="64">
+        <label>tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="19">
+        <label>src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="16">
+        <label>src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="65">
+        <label>tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="30">
+        <label>include/libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="49">
+        <label>src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="18">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="42">
+        <label>src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structssh__crypto__struct" prot="public">ssh_crypto_struct</innerclass>
+    <innerclass refid="structssh__cipher__struct" prot="public">ssh_cipher_struct</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="crypto_8h_1a5639c2c28b06d9e4a42053e71d2c116d" prot="public" static="no">
+        <name>DIGEST_MAX_LEN</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/crypto.h" line="53" column="9" bodyfile="include/libssh/crypto.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="crypto_8h_1a6d8facc608922ae797208a4e9c553c63" prot="public" static="no">
+        <name>AES_GCM_TAGLEN</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/crypto.h" line="55" column="9" bodyfile="include/libssh/crypto.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="crypto_8h_1a6cbeb0203f0e06cd0958438712b01b97" prot="public" static="no">
+        <name>AES_GCM_IVLEN</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/crypto.h" line="56" column="9" bodyfile="include/libssh/crypto.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_key_exchange_e</name>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa06d50b8787140eaba7768f55b2ead4a0" prot="public">
+          <name>SSH_KEX_DH_GROUP1_SHA1</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8faeff50985f7ef1e58a798ebe502d25127" prot="public">
+          <name>SSH_KEX_DH_GROUP14_SHA1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa94d94806a5bada517c5ce362c8dc51ed" prot="public">
+          <name>SSH_KEX_ECDH_SHA2_NISTP256</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8faf448ad3e1038e1a13db5bf106c228121" prot="public">
+          <name>SSH_KEX_ECDH_SHA2_NISTP384</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa3eddc334b299064d73ccbc5e21a1c917" prot="public">
+          <name>SSH_KEX_ECDH_SHA2_NISTP521</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa25c34ad7204c8aa6fc02f5718c6ca58f" prot="public">
+          <name>SSH_KEX_CURVE25519_SHA256_LIBSSH_ORG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa5834e9e582af19fb1ee9862ec8cf651b" prot="public">
+          <name>SSH_KEX_CURVE25519_SHA256</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa544f3a1e0137b83515cd8024c2002c87" prot="public">
+          <name>SSH_KEX_DH_GROUP16_SHA512</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fab85286eabab069c14c763dea821f89d9" prot="public">
+          <name>SSH_KEX_DH_GROUP18_SHA512</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/crypto.h" line="58" column="1" bodyfile="include/libssh/crypto.h" bodystart="58" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="enum" id="crypto_8h_1add1eec91255edc4e10b4148494083d32" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_cipher_e</name>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32a327a6f7a35716131d6a354e9e677eefb" prot="public">
+          <name>SSH_NO_CIPHER</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32abb1567c936525723fe6d16db782b8319" prot="public">
+          <name>SSH_3DES_CBC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32af49ad9750b9deb28aac5fef083c2edcb" prot="public">
+          <name>SSH_AES128_CBC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32af3065e749c7164b57496f4b7cc4f466b" prot="public">
+          <name>SSH_AES192_CBC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32a37e5a8241f3110ace49a84d5140b17ec" prot="public">
+          <name>SSH_AES256_CBC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32a43beedbdfd15b5af07fefcd0a8ba7e45" prot="public">
+          <name>SSH_AES128_CTR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32a11c593a738d3b6612d86be536ea2c5fb" prot="public">
+          <name>SSH_AES192_CTR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32aabd599073e6583be2343773546547bc8" prot="public">
+          <name>SSH_AES256_CTR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32a5fcc1e16a2840d00cbee57158e8c7b94" prot="public">
+          <name>SSH_AEAD_AES128_GCM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32a6a073b12b0672ddfe79189c486f33182" prot="public">
+          <name>SSH_AEAD_AES256_GCM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto_8h_1add1eec91255edc4e10b4148494083d32aa209e4c66d588b71664f209c4806fb41" prot="public">
+          <name>SSH_AEAD_CHACHA20_POLY1305</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/crypto.h" line="85" column="1" bodyfile="include/libssh/crypto.h" bodystart="85" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crypto_8h_1aa802812ad2d58e8c5e835af4b56571b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+        <definition>const struct ssh_cipher_struct* ssh_get_chacha20poly1305_cipher</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_get_chacha20poly1305_cipher</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/crypto.h" line="208" column="30" bodyfile="src/chachapoly.c" bodystart="202" bodyend="205" declfile="include/libssh/crypto.h" declline="208" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto_8h_1aeda0b41fe27c06ec4f29995cb2e7b60e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sshkdf_derive_key</definition>
+        <argsstring>(struct ssh_crypto_struct *crypto, unsigned char *key, size_t key_len, int key_type, unsigned char *output, size_t requested_len)</argsstring>
+        <name>sshkdf_derive_key</name>
+        <param>
+          <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+          <declname>crypto</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>key_len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key_type</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>requested_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/crypto.h" line="209" column="5" bodyfile="src/kdf.c" bodystart="117" bodyend="167" declfile="include/libssh/crypto.h" declline="209" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2003-2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>crypto.h<sp/>is<sp/>an<sp/>include<sp/>file<sp/>for<sp/>internal<sp/>cryptographic<sp/>structures<sp/>of<sp/>libssh</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CRYPTO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CRYPTO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_LIBGCRYPT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gcrypt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(HAVE_LIBMBEDCRYPTO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mbedtls/gcm.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wrapper_8h" kindref="compound">libssh/wrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>cbc_encrypt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>cbc_encrypt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>cbc_decrypt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>cbc_decrypt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_OPENSSL_ECDH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/ecdh.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dh_8h" kindref="compound">libssh/dh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ecdh_8h" kindref="compound">libssh/ecdh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="kex_8h" kindref="compound">libssh/kex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="curve25519_8h" kindref="compound">libssh/curve25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="crypto_8h_1a5639c2c28b06d9e4a42053e71d2c116d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIGEST_MAX_LEN<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="crypto_8h_1a6d8facc608922ae797208a4e9c553c63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AES_GCM_TAGLEN<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="crypto_8h_1a6cbeb0203f0e06cd0958438712b01b97" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AES_GCM_IVLEN<sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8f" kindref="member">ssh_key_exchange_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>diffie-hellman-group1-sha1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa06d50b8787140eaba7768f55b2ead4a0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa06d50b8787140eaba7768f55b2ead4a0" kindref="member">SSH_KEX_DH_GROUP1_SHA1</ref>=1,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>diffie-hellman-group14-sha1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8faeff50985f7ef1e58a798ebe502d25127" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8faeff50985f7ef1e58a798ebe502d25127" kindref="member">SSH_KEX_DH_GROUP14_SHA1</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_GEX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>diffie-hellman-group-exchange-sha1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>SSH_KEX_DH_GEX_SHA1,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>diffie-hellman-group-exchange-sha256<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>SSH_KEX_DH_GEX_SHA256,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WITH_GEX<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>ecdh-sha2-nistp256<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa94d94806a5bada517c5ce362c8dc51ed" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa94d94806a5bada517c5ce362c8dc51ed" kindref="member">SSH_KEX_ECDH_SHA2_NISTP256</ref>,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>ecdh-sha2-nistp384<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8faf448ad3e1038e1a13db5bf106c228121" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8faf448ad3e1038e1a13db5bf106c228121" kindref="member">SSH_KEX_ECDH_SHA2_NISTP384</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>ecdh-sha2-nistp521<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa3eddc334b299064d73ccbc5e21a1c917" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa3eddc334b299064d73ccbc5e21a1c917" kindref="member">SSH_KEX_ECDH_SHA2_NISTP521</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>curve25519-sha256@libssh.org<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa25c34ad7204c8aa6fc02f5718c6ca58f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa25c34ad7204c8aa6fc02f5718c6ca58f" kindref="member">SSH_KEX_CURVE25519_SHA256_LIBSSH_ORG</ref>,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>curve25519-sha256<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa5834e9e582af19fb1ee9862ec8cf651b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa5834e9e582af19fb1ee9862ec8cf651b" kindref="member">SSH_KEX_CURVE25519_SHA256</ref>,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>diffie-hellman-group16-sha512<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa544f3a1e0137b83515cd8024c2002c87" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa544f3a1e0137b83515cd8024c2002c87" kindref="member">SSH_KEX_DH_GROUP16_SHA512</ref>,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>diffie-hellman-group18-sha512<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fab85286eabab069c14c763dea821f89d9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fab85286eabab069c14c763dea821f89d9" kindref="member">SSH_KEX_DH_GROUP18_SHA512</ref>,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32" kindref="member">ssh_cipher_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="86" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a327a6f7a35716131d6a354e9e677eefb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a327a6f7a35716131d6a354e9e677eefb" kindref="member">SSH_NO_CIPHER</ref>=0,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_BLOWFISH_CIPHER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>SSH_BLOWFISH_CBC,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WITH_BLOWFISH_CIPHER<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32abb1567c936525723fe6d16db782b8319" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32abb1567c936525723fe6d16db782b8319" kindref="member">SSH_3DES_CBC</ref>,</highlight></codeline>
+<codeline lineno="91" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32af49ad9750b9deb28aac5fef083c2edcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32af49ad9750b9deb28aac5fef083c2edcb" kindref="member">SSH_AES128_CBC</ref>,</highlight></codeline>
+<codeline lineno="92" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32af3065e749c7164b57496f4b7cc4f466b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32af3065e749c7164b57496f4b7cc4f466b" kindref="member">SSH_AES192_CBC</ref>,</highlight></codeline>
+<codeline lineno="93" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a37e5a8241f3110ace49a84d5140b17ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a37e5a8241f3110ace49a84d5140b17ec" kindref="member">SSH_AES256_CBC</ref>,</highlight></codeline>
+<codeline lineno="94" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a43beedbdfd15b5af07fefcd0a8ba7e45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a43beedbdfd15b5af07fefcd0a8ba7e45" kindref="member">SSH_AES128_CTR</ref>,</highlight></codeline>
+<codeline lineno="95" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a11c593a738d3b6612d86be536ea2c5fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a11c593a738d3b6612d86be536ea2c5fb" kindref="member">SSH_AES192_CTR</ref>,</highlight></codeline>
+<codeline lineno="96" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32aabd599073e6583be2343773546547bc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32aabd599073e6583be2343773546547bc8" kindref="member">SSH_AES256_CTR</ref>,</highlight></codeline>
+<codeline lineno="97" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a5fcc1e16a2840d00cbee57158e8c7b94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a5fcc1e16a2840d00cbee57158e8c7b94" kindref="member">SSH_AEAD_AES128_GCM</ref>,</highlight></codeline>
+<codeline lineno="98" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a6a073b12b0672ddfe79189c486f33182" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32a6a073b12b0672ddfe79189c486f33182" kindref="member">SSH_AEAD_AES256_GCM</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32aa209e4c66d588b71664f209c4806fb41" kindref="member">SSH_AEAD_CHACHA20_POLY1305</ref></highlight></codeline>
+<codeline lineno="100" refid="crypto_8h_1add1eec91255edc4e10b4148494083d32aa209e4c66d588b71664f209c4806fb41" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="structssh__crypto__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="105" refid="structssh__crypto__struct_1adb81911af8e0d13db0ab4701319bdd1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>bignum<sp/><ref refid="structssh__crypto__struct_1adb81911af8e0d13db0ab4701319bdd1a" kindref="member">shared_secret</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structssh__crypto__struct_1a48bfbe899c2556ce3563c767c753ae35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref><sp/>*<ref refid="structssh__crypto__struct_1a48bfbe899c2556ce3563c767c753ae35" kindref="member">dh_ctx</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_GEX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dh_pmin;<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dh_pn;<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dh_pmax;<sp/></highlight><highlight class="comment">/*<sp/>preferred<sp/>group<sp/>parameters<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WITH_GEX<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_ECDH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_OPENSSL_ECC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>EC_KEY<sp/>*ecdh_privkey;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>HAVE_GCRYPT_ECC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>gcry_sexp_t<sp/>ecdh_privkey;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>HAVE_LIBMBEDCRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_ecp_keypair<sp/>*ecdh_privkey;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/>ecdh_client_pubkey;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/>ecdh_server_pubkey;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CURVE25519</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="curve25519_8h_1a269c01abb9b3d80d36203cea5ac9928e" kindref="member">ssh_curve25519_privkey</ref><sp/>curve25519_privkey;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="curve25519_8h_1ae87faacbc63407f20b54221fcd16952b" kindref="member">ssh_curve25519_pubkey</ref><sp/>curve25519_client_pubkey;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="curve25519_8h_1ae87faacbc63407f20b54221fcd16952b" kindref="member">ssh_curve25519_pubkey</ref><sp/>curve25519_server_pubkey;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="structssh__crypto__struct_1a53a57a0eaf6a4b1dfe3f0f6ab177f84d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/><ref refid="structssh__crypto__struct_1a53a57a0eaf6a4b1dfe3f0f6ab177f84d" kindref="member">dh_server_signature</ref>;<sp/></highlight><highlight class="comment">/*<sp/>information<sp/>used<sp/>by<sp/>dh_handshake.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" kindref="member">digest_len</ref>;<sp/></highlight><highlight class="comment">/*<sp/>len<sp/>of<sp/>the<sp/>two<sp/>fields<sp/>below<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="structssh__crypto__struct_1aedb3b1ec9ca06a1c4c82d965b7ef0577" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1aedb3b1ec9ca06a1c4c82d965b7ef0577" kindref="member">session_id</ref>;</highlight></codeline>
+<codeline lineno="129" refid="structssh__crypto__struct_1af8fb6bb0ce4c2900556647dcaf6c377a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1af8fb6bb0ce4c2900556647dcaf6c377a" kindref="member">secret_hash</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Secret<sp/>hash<sp/>is<sp/>same<sp/>as<sp/>session<sp/>id<sp/>until<sp/>re-kex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="structssh__crypto__struct_1af61cb0b00eb8b0e312e161754f7fffc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1af61cb0b00eb8b0e312e161754f7fffc5" kindref="member">encryptIV</ref>;</highlight></codeline>
+<codeline lineno="131" refid="structssh__crypto__struct_1aa8fb59be5dd1a66f39429dd322fd6daa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1aa8fb59be5dd1a66f39429dd322fd6daa" kindref="member">decryptIV</ref>;</highlight></codeline>
+<codeline lineno="132" refid="structssh__crypto__struct_1abb583ba8e6dfc2e927a6af51dd450f3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1abb583ba8e6dfc2e927a6af51dd450f3a" kindref="member">decryptkey</ref>;</highlight></codeline>
+<codeline lineno="133" refid="structssh__crypto__struct_1aac421535e1ea3e781710d3e659f692f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1aac421535e1ea3e781710d3e659f692f2" kindref="member">encryptkey</ref>;</highlight></codeline>
+<codeline lineno="134" refid="structssh__crypto__struct_1ae18fa9cdcc44cf926cf3e37af3168c6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1ae18fa9cdcc44cf926cf3e37af3168c6b" kindref="member">encryptMAC</ref>;</highlight></codeline>
+<codeline lineno="135" refid="structssh__crypto__struct_1a9e1945f0bd57afbf407569d6c523d210" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1a9e1945f0bd57afbf407569d6c523d210" kindref="member">decryptMAC</ref>;</highlight></codeline>
+<codeline lineno="136" refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>[<ref refid="crypto_8h_1a5639c2c28b06d9e4a42053e71d2c116d" kindref="member">DIGEST_MAX_LEN</ref>];</highlight></codeline>
+<codeline lineno="137" refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>,<sp/>*<ref refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" kindref="member">out_cipher</ref>;<sp/></highlight><highlight class="comment">/*<sp/>the<sp/>cipher<sp/>structures/objects<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>in_hmac,<sp/><ref refid="structssh__crypto__struct_1a4e9b63867c4814d84b572adf842f8d2c" kindref="member">out_hmac</ref>;<sp/></highlight><highlight class="comment">/*<sp/>the<sp/>MAC<sp/>algorithms<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="structssh__crypto__struct_1ad913f3f3dc8a8a699a28a8f575ebb73c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1ad913f3f3dc8a8a699a28a8f575ebb73c" kindref="member">in_hmac_etm</ref>,<sp/><ref refid="structssh__crypto__struct_1a67063ccea2e37040ac85e1c15d8afe2a" kindref="member">out_hmac_etm</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Whether<sp/>EtM<sp/>mode<sp/>is<sp/>used<sp/>or<sp/>not<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structssh__crypto__struct_1a02e5e04457b69f9437c968fd35840bb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="structssh__crypto__struct_1a02e5e04457b69f9437c968fd35840bb3" kindref="member">server_pubkey</ref>;</highlight></codeline>
+<codeline lineno="142" refid="structssh__crypto__struct_1a2d1c6e8bd0458906a8dffa7ea982fa2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1a2d1c6e8bd0458906a8dffa7ea982fa2d" kindref="member">do_compress_out</ref>;<sp/></highlight><highlight class="comment">/*<sp/>idem<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structssh__crypto__struct_1a9322f181b21f808d19918940335ecf40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1a9322f181b21f808d19918940335ecf40" kindref="member">do_compress_in</ref>;<sp/></highlight><highlight class="comment">/*<sp/>don&apos;t<sp/>set<sp/>them,<sp/>set<sp/>the<sp/>option<sp/>instead<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="structssh__crypto__struct_1a264a702f7930c64683183b9334fa19d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1a264a702f7930c64683183b9334fa19d0" kindref="member">delayed_compress_in</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Use<sp/>of<sp/>zlib@openssh.org<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="structssh__crypto__struct_1a180198c8214743d490536a6855244355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1a180198c8214743d490536a6855244355" kindref="member">delayed_compress_out</ref>;</highlight></codeline>
+<codeline lineno="146" refid="structssh__crypto__struct_1ab28a40b61da2c674b89dc97123deee17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1ab28a40b61da2c674b89dc97123deee17" kindref="member">compress_out_ctx</ref>;<sp/></highlight><highlight class="comment">/*<sp/>don&apos;t<sp/>touch<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="structssh__crypto__struct_1a0fa9919df32b44ccafc551d220fe609b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1a81fd4d5d3caf9d2ea0e5f17d27ccc6a3" kindref="member">compress_in_ctx</ref>;<sp/></highlight><highlight class="comment">/*<sp/>really,<sp/>don&apos;t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>kex<sp/>sent<sp/>by<sp/>server,<sp/>client,<sp/>and<sp/>mutually<sp/>elected<sp/>methods<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__kex__struct" kindref="compound">ssh_kex_struct</ref><sp/><ref refid="structssh__crypto__struct_1ac78255bf9406137ac4d400644c348a82" kindref="member">server_kex</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__kex__struct" kindref="compound">ssh_kex_struct</ref><sp/><ref refid="structssh__crypto__struct_1a0fa9919df32b44ccafc551d220fe609b" kindref="member">client_kex</ref>;</highlight></codeline>
+<codeline lineno="151" refid="structssh__crypto__struct_1a57c63b9f1f7d33f412a5997f104846f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" kindref="member">kex_methods</ref>[<ref refid="kex_8h_1a0aac49551fe045f9a556155c3d8a02a5" kindref="member">SSH_KEX_METHODS</ref>];</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8f" kindref="member">ssh_key_exchange_e</ref><sp/><ref refid="structssh__crypto__struct_1a4d0e501e9fe0b45aeebec379319ad005" kindref="member">kex_type</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0" kindref="member">ssh_kdf_digest</ref><sp/><ref refid="structssh__crypto__struct_1a57c63b9f1f7d33f412a5997f104846f2" kindref="member">digest_type</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Digest<sp/>type<sp/>for<sp/>session<sp/>keys<sp/>derivation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" kindref="member">ssh_crypto_direction_e</ref><sp/><ref refid="structssh__crypto__struct_1a6f46e71537e628ed33cdc3719df9a3ad" kindref="member">used</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Is<sp/>this<sp/>crypto<sp/>still<sp/>used<sp/>for<sp/>either<sp/>of<sp/>directions?<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="structssh__cipher__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="158" refid="structssh__cipher__struct_1a089a6f759557c29ef49a1436081ff081" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structssh__cipher__struct_1a089a6f759557c29ef49a1436081ff081" kindref="member">name</ref>;<sp/></highlight><highlight class="comment">/*<sp/>ssh<sp/>name<sp/>of<sp/>the<sp/>algorithm<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" kindref="member">blocksize</ref>;<sp/></highlight><highlight class="comment">/*<sp/>blocksize<sp/>of<sp/>the<sp/>algo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="crypto_8h_1add1eec91255edc4e10b4148494083d32" kindref="member">ssh_cipher_e</ref><sp/><ref refid="structssh__cipher__struct_1ad56b850d5dd3894b47930e8b20bd8afe" kindref="member">ciphertype</ref>;</highlight></codeline>
+<codeline lineno="161" refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" kindref="member">lenfield_blocksize</ref>;<sp/></highlight><highlight class="comment">/*<sp/>blocksize<sp/>of<sp/>the<sp/>packet<sp/>length<sp/>field<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="structssh__cipher__struct_1afb79d8c4ae0d0bae53568f2e6fe64741" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct_1afb79d8c4ae0d0bae53568f2e6fe64741" kindref="member">keylen</ref>;<sp/></highlight><highlight class="comment">/*<sp/>length<sp/>of<sp/>the<sp/>key<sp/>structure<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_LIBGCRYPT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>gcry_cipher_hd_t<sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>last_iv[<ref refid="crypto_8h_1a6cbeb0203f0e06cd0958438712b01b97" kindref="member">AES_GCM_IVLEN</ref>];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>HAVE_LIBCRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ssh_3des_key_schedule<sp/>*des3_key;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ssh_aes_key_schedule<sp/>*aes_key;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>EVP_CIPHER<sp/>*cipher;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>EVP_CIPHER_CTX<sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined<sp/>HAVE_LIBMBEDCRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_cipher_context_t<sp/>encrypt_ctx;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_cipher_context_t<sp/>decrypt_ctx;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_cipher_type_t<sp/>type;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MBEDTLS_GCM_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_gcm_context<sp/>gcm_ctx;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>last_iv[<ref refid="crypto_8h_1a6cbeb0203f0e06cd0958438712b01b97" kindref="member">AES_GCM_IVLEN</ref>];</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_GCM_C<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha20__poly1305__keysched" kindref="compound">chacha20_poly1305_keysched</ref><sp/>*<ref refid="structssh__cipher__struct_1a19389bd9b59647fe97b3826fca382591" kindref="member">chacha20_schedule</ref>;</highlight></codeline>
+<codeline lineno="181" refid="structssh__cipher__struct_1a9eaf76350f094a669eb46b3018432340" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct_1a9eaf76350f094a669eb46b3018432340" kindref="member">keysize</ref>;<sp/></highlight><highlight class="comment">/*<sp/>bytes<sp/>of<sp/>key<sp/>used.<sp/>!=<sp/>keylen<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="structssh__cipher__struct_1a6a162b3b402241535f26fdb34a8c0a10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct_1a6a162b3b402241535f26fdb34a8c0a10" kindref="member">tag_size</ref>;<sp/></highlight><highlight class="comment">/*<sp/>overhead<sp/>required<sp/>for<sp/>tag<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Counters<sp/>for<sp/>rekeying<sp/>initialization<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="structssh__cipher__struct_1a6890988b9566b6be4bf43ef1e7241d43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structssh__cipher__struct_1a6890988b9566b6be4bf43ef1e7241d43" kindref="member">packets</ref>;</highlight></codeline>
+<codeline lineno="185" refid="structssh__cipher__struct_1ae84941eebb4663ebdd2847512a5ff7be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structssh__cipher__struct_1ae84941eebb4663ebdd2847512a5ff7be" kindref="member">blocks</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Rekeying<sp/>limit<sp/>for<sp/>the<sp/>cipher<sp/>or<sp/>manually<sp/>enforced<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="structssh__cipher__struct_1a1e1f8af24a9a7f8af750463720224c4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structssh__cipher__struct_1a1e1f8af24a9a7f8af750463720224c4d" kindref="member">max_blocks</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sets<sp/>the<sp/>new<sp/>key<sp/>for<sp/>immediate<sp/>use<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="structssh__cipher__struct_1a8da59bd29bd79509cb37e0fa20fb91ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structssh__cipher__struct_1a8da59bd29bd79509cb37e0fa20fb91ac" kindref="member">set_encrypt_key</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1ae9b145408effbad6400533a736404baf" kindref="member">IV</ref>);</highlight></codeline>
+<codeline lineno="190" refid="structssh__cipher__struct_1a0d68a1551beb7cfc87dafc4baa55afc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structssh__cipher__struct_1a0d68a1551beb7cfc87dafc4baa55afc4" kindref="member">set_decrypt_key</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1ae9b145408effbad6400533a736404baf" kindref="member">IV</ref>);</highlight></codeline>
+<codeline lineno="191" refid="structssh__cipher__struct_1aa955d6daf4f41262765ab93b52fc2508" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structssh__cipher__struct_1aa955d6daf4f41262765ab93b52fc2508" kindref="member">encrypt</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="195" refid="structssh__cipher__struct_1a6f5ac62ef491ca0caa5950573d344e3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structssh__cipher__struct_1a6f5ac62ef491ca0caa5950573d344e3d" kindref="member">decrypt</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="199" refid="structssh__cipher__struct_1a68244acc5e2bce0d2a22050dfb28ac85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structssh__cipher__struct_1a68244acc5e2bce0d2a22050dfb28ac85" kindref="member">aead_encrypt</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*out,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/>uint8_t<sp/>*<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,<sp/>uint64_t<sp/>seq);</highlight></codeline>
+<codeline lineno="201" refid="structssh__cipher__struct_1a5c04d29dfbff7827a8262519ac39f186" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structssh__cipher__struct_1a5c04d29dfbff7827a8262519ac39f186" kindref="member">aead_decrypt_length</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*in,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*out,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/>uint64_t<sp/>seq);</highlight></codeline>
+<codeline lineno="203" refid="structssh__cipher__struct_1adedafb388df68e105e05626aca1bf1fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structssh__cipher__struct_1adedafb388df68e105e05626aca1bf1fb" kindref="member">aead_decrypt</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*complete_packet,<sp/>uint8_t<sp/>*out,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>encrypted_size,<sp/>uint64_t<sp/>seq);</highlight></codeline>
+<codeline lineno="205" refid="structssh__cipher__struct_1aea4cb710bc2c1cd8775bc8ac28d5b6f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structssh__cipher__struct_1aea4cb710bc2c1cd8775bc8ac28d5b6f5" kindref="member">cleanup</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*<ref refid="crypto_8h_1aa802812ad2d58e8c5e835af4b56571b7" kindref="member">ssh_get_chacha20poly1305_cipher</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="crypto_8h_1aeda0b41fe27c06ec4f29995cb2e7b60e" kindref="member">sshkdf_derive_key</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>key_len,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key_type,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>requested_len);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_CRYPTO_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/crypto.h"/>
+  </compounddef>
+</doxygen>

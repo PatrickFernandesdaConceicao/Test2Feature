@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="examples_2CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>CMakeLists.txt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="examples_2CMakeLists_8txt_1a3901ba16c737e186448fe169f89bb169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>project</definition>
+        <argsstring>(libssh-examples C CXX) set(examples_SRCS authentication.c knownhosts.c connect_ssh.c) include_directories($</argsstring>
+        <name>project</name>
+        <param>
+          <type>libssh-examples C</type>
+          <declname>CXX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/CMakeLists.txt" line="1" column="1" bodyfile="examples/CMakeLists.txt" bodystart="1" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="examples_2CMakeLists_8txt_1a8c65a82996ca56c2f4e141887befd225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(ARGP_INCLUDE_DIR) include_directories($</argsstring>
+        <name>if</name>
+        <param>
+          <type>ARGP_INCLUDE_DIR</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/CMakeLists.txt" line="11" column="1" bodyfile="examples/CMakeLists.txt" bodystart="11" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="examples_2CMakeLists_8txt_1aa7c2cb704a95c64011048f9aa4c54735" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torture_pki_ecdsa endif</definition>
+        <argsstring>() if(UNIX AND NOT WIN32) add_executable(libssh_scp libssh_scp.c $</argsstring>
+        <name>endif</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/CMakeLists.txt" line="13" column="1" bodyfile="examples/CMakeLists.txt" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="examples_2CMakeLists_8txt_1a3901ba16c737e186448fe169f89bb169" refkind="member"><highlight class="normal"><ref refid="examples_2CMakeLists_8txt_1a3901ba16c737e186448fe169f89bb169" kindref="member">project</ref>(libssh-examples<sp/>C<sp/>CXX)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(examples_SRCS</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>authentication.c</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>knownhosts.c</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><ref refid="connect__ssh_8c_1ada855ebf4aac69d9a59afb23a8e338f4" kindref="member">connect_ssh</ref>.c</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">include_directories(${libssh_BINARY_DIR})</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="examples_2CMakeLists_8txt_1a8c65a82996ca56c2f4e141887befd225" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ARGP_INCLUDE_DIR)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>include_directories(${ARGP_INCLUDE_DIR})</highlight></codeline>
+<codeline lineno="13" refid="examples_2CMakeLists_8txt_1aa7c2cb704a95c64011048f9aa4c54735" refkind="member"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(UNIX<sp/>AND<sp/>NOT<sp/>WIN32)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>add_executable(libssh_scp<sp/>libssh_scp.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>target_compile_options(libssh_scp<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>target_link_libraries(libssh_scp<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>add_executable(scp_download<sp/>scp_download.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>target_compile_options(scp_download<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>target_link_libraries(scp_download<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>add_executable(sshnetcat<sp/>sshnetcat.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>target_compile_options(sshnetcat<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>target_link_libraries(sshnetcat<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WITH_SFTP)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_executable(samplesftp<sp/>samplesftp.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_compile_options(samplesftp<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_link_libraries(samplesftp<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(WITH_SFTP)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>add_executable(<ref refid="namespacessh" kindref="compound">ssh</ref>-<ref refid="ssh__client_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref><sp/><ref refid="test__ssh__bind__accept__fd_8c_1a723afb31fe0043e3ac0f0679898753af" kindref="member">ssh_client</ref>.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>target_compile_options(<ref refid="namespacessh" kindref="compound">ssh</ref>-<ref refid="ssh__client_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref><sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>target_link_libraries(<ref refid="namespacessh" kindref="compound">ssh</ref>-<ref refid="ssh__client_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref><sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WITH_SERVER<sp/>AND<sp/>(ARGP_LIBRARY<sp/>OR<sp/>HAVE_ARGP_H))</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(HAVE_LIBUTIL)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_executable(ssh_server_fork<sp/>ssh_server_fork.c)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_compile_options(ssh_server_fork<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_link_libraries(ssh_server_fork<sp/>ssh::ssh<sp/>${ARGP_LIBRARY}<sp/>util)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(HAVE_LIBUTIL)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WITH_GSSAPI<sp/>AND<sp/>GSSAPI_FOUND)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_executable(samplesshd-<ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>samplesshd-<ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>.c)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_compile_options(samplesshd-<ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_link_libraries(samplesshd-<ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref><sp/>ssh::ssh<sp/>${ARGP_LIBRARY})</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_executable(proxy<sp/>proxy.c)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_compile_options(proxy<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_link_libraries(proxy<sp/>ssh::ssh<sp/>${ARGP_LIBRARY})</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_executable(sshd_direct-tcpip<sp/>sshd_direct-tcpip.c)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_compile_options(sshd_direct-tcpip<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_link_libraries(sshd_direct-tcpip<sp/>ssh::ssh<sp/>${ARGP_LIBRARY})</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(WITH_GSSAPI<sp/>AND<sp/>GSSAPI_FOUND)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_executable(samplesshd-kbdint<sp/>samplesshd-kbdint.c)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_compile_options(samplesshd-kbdint<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_link_libraries(samplesshd-kbdint<sp/>ssh::ssh<sp/>${ARGP_LIBRARY})</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>add_executable(keygen2<sp/>keygen2.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_compile_options(keygen2<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_link_libraries(keygen2<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" kindref="member">endif</ref><sp/>(UNIX<sp/>AND<sp/>NOT<sp/>WIN32)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">add_executable(exec<sp/>exec.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">target_compile_options(exec<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">target_link_libraries(exec<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">add_executable(senddata<sp/>senddata.c<sp/>${examples_SRCS})</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">target_compile_options(senddata<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">target_link_libraries(senddata<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">add_executable(keygen<sp/>keygen.c)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">target_compile_options(keygen<sp/>PRIVATE<sp/>${DEFAULT_C_COMPILE_FLAGS})</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">target_link_libraries(keygen<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">add_executable(libsshpp<sp/>libsshpp.cpp)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">target_link_libraries(libsshpp<sp/>ssh::ssh)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">add_executable(libsshpp_noexcept<sp/>libsshpp_noexcept.cpp)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">target_link_libraries(libsshpp_noexcept<sp/>ssh::ssh)</highlight></codeline>
+    </programlisting>
+    <location file="examples/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

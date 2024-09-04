@@ -1,0 +1,1176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__libssh__buffer" kind="group">
+    <compoundname>libssh_buffer</compoundname>
+    <title>The SSH buffer functions.</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+        <definition>struct ssh_buffer_struct* ssh_buffer_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_buffer_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Create a new SSH buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A newly initialized SSH buffer, NULL on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="119" column="24" bodyfile="src/buffer.c" bodystart="119" bodyend="142"/>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" compoundref="buffer_8c" startline="335" endline="352">ssh_buffer_allocate_size</references>
+        <referencedby refid="priv_8h_1aa9b1bdd62db42c91b1b203f6850adadf" compoundref="base64_8c" startline="60" endline="173">base64_to_bin</referencedby>
+        <referencedby refid="legacy_8h_1ad6efa496350ec4085e7480b6bd0b6748" compoundref="legacy_8c" startline="154" endline="156">buffer_new</referencedby>
+        <referencedby refid="group__libssh__channel_1ga3f6b844e236802c6780e7bcf0c0f3fce" compoundref="channels_8c" startline="847" endline="903">channel_default_bufferize</referencedby>
+        <referencedby refid="gzip_8c_1a3204e2e76fd521e3053f422d6c2e378c" compoundref="gzip_8c" startline="58" endline="107">gzip_compress</referencedby>
+        <referencedby refid="gzip_8c_1a7aa2d401411b6d0d9e4bad37633a7a9f" compoundref="gzip_8c" startline="153" endline="210">gzip_decompress</referencedby>
+        <referencedby refid="test__pcap_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__pcap_8c" startline="32" endline="50">main</referencedby>
+        <referencedby refid="pki__crypto_8c_1a3f8e0c3d950862426b9900704ad64a28" compoundref="pki__crypto_8c" startline="1473" endline="1554">pki_ecdsa_signature_to_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1ga129b5d5a3dcdb907c9ccedd838e15caf" compoundref="pki_8c" startline="1460" endline="1546">pki_import_cert_buffer</referencedby>
+        <referencedby refid="group__libssh__pki_1gae8b8a710eea5b5c36c9e2416cc0734d7" compoundref="pki__container__openssh_8c" startline="101" endline="222">pki_private_key_decrypt</referencedby>
+        <referencedby refid="pki__priv_8h_1aa2d53615fe67402faa649f5cb6160e91" compoundref="pki__crypto_8c" startline="1182" endline="1390">pki_publickey_to_blob</referencedby>
+        <referencedby refid="pki__crypto_8c_1ae3a66a820cd45b733f5ff75f898a0f33" compoundref="pki__crypto_8c" startline="1775" endline="1911">pki_signature_from_ecdsa_blob</referencedby>
+        <referencedby refid="torture__buffer_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__buffer_8c" startline="11" endline="22">setup</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga80b49b1aa5e6f34397fcb90760aa74fc" compoundref="sftpserver_8c" startline="43" endline="239">sftp_get_client_message</referencedby>
+        <referencedby refid="group__libssh__sftp_1gab80b50be07b7939cc33745204be101cc" compoundref="sftpserver_8c" startline="340" endline="357">sftp_reply_attr</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga0f6244744ed38130420440b0775cd372" compoundref="sftpserver_8c" startline="457" endline="475">sftp_reply_data</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga1cb075c0e2d230d780b34b9772cb86ee" compoundref="sftpserver_8c" startline="321" endline="338">sftp_reply_handle</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga3371e02cde0962cef0eaf09c95e9f0f9" compoundref="sftpserver_8c" startline="289" endline="319">sftp_reply_name</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga5cdfcc9fc46062a623308046806b8ccf" compoundref="sftpserver_8c" startline="397" endline="423">sftp_reply_names</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga21a9b645e22ea8c763587032008351e4" compoundref="sftpserver_8c" startline="359" endline="395">sftp_reply_names_add</referencedby>
+        <referencedby refid="group__libssh__sftp_1ga1c024542ae420f85bc146c20c19bedda" compoundref="sftpserver_8c" startline="425" endline="455">sftp_reply_status</referencedby>
+        <referencedby refid="agent_8h_1a4081a49ab8059fed3287f4977c53af0f" compoundref="agent_8c" startline="310" endline="395">ssh_agent_get_ident_count</referencedby>
+        <referencedby refid="agent_8h_1ac53a1b1236f14bba793156f30686570d" compoundref="agent_8c" startline="475" endline="592">ssh_agent_sign_data</referencedby>
+        <referencedby refid="group__libssh__channel_1ga3bff751afc5ecb5bbf9d6447e4e5370f" compoundref="channels_8c" startline="2447" endline="2476">ssh_channel_cancel_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1gaf5d55c90f3d98c583df23d21905c1127" compoundref="channels_8c" startline="1880" endline="1907">ssh_channel_change_pty_size</referencedby>
+        <referencedby refid="group__libssh__channel_1ga758cda957227751870c8772df46e5b39" compoundref="channels_8c" startline="2365" endline="2404">ssh_channel_listen_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</referencedby>
+        <referencedby refid="group__libssh__channel_1gae86b0704a1f2bdebb268b55567f7f47b" compoundref="channels_8c" startline="985" endline="1031">ssh_channel_open_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1ga93ddd5055eb3322d38c70986aa63c673" compoundref="channels_8c" startline="1057" endline="1114">ssh_channel_open_forward_unix</referencedby>
+        <referencedby refid="group__libssh__channel_1ga7aede2f9af4c494ff9e41fc08a4572f1" compoundref="channels_8c" startline="2498" endline="2535">ssh_channel_request_env</referencedby>
+        <referencedby refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" compoundref="channels_8c" startline="2568" endline="2603">ssh_channel_request_exec</referencedby>
+        <referencedby refid="group__libssh__channel_1gabb175414352256e1602286e0ab50886c" compoundref="channels_8c" startline="1798" endline="1847">ssh_channel_request_pty_size</referencedby>
+        <referencedby refid="group__libssh__channel_1gaef198ad0dcf0968aa2a449c8898d985e" compoundref="channels_8c" startline="2684" endline="2709">ssh_channel_request_send_break</referencedby>
+        <referencedby refid="group__libssh__channel_1gaa98315fca818b561970a6950683f4053" compoundref="channels_8c" startline="2638" endline="2666">ssh_channel_request_send_signal</referencedby>
+        <referencedby refid="group__libssh__channel_1ga06024b070f9b2a3d6964b79ae36695b7" compoundref="channels_8c" startline="1941" endline="1976">ssh_channel_request_subsystem</referencedby>
+        <referencedby refid="group__libssh__channel_1gadfa34624c28164bd73453cd04aa64c1f" compoundref="channels_8c" startline="2042" endline="2091">ssh_channel_request_x11</referencedby>
+        <referencedby refid="gssapi_8c_1ab20687e6a2c7c3d2c0871b39fba02564" compoundref="gssapi_8c" startline="449" endline="481">ssh_gssapi_build_mic</referencedby>
+        <referencedby refid="kex_8h_1a6e6aa406171ce64be59c5fc8fb74acc3" compoundref="kex_8c" startline="1253" endline="1279">ssh_hashbufin_add_cookie</referencedby>
+        <referencedby refid="kex_8h_1a52f54b8f641a03c2b9d5175328e5abfd" compoundref="kex_8c" startline="1215" endline="1251">ssh_hashbufout_add_cookie</referencedby>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+        <referencedby refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</referencedby>
+        <referencedby refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+        <referencedby refid="group__libssh__pki_1ga71432844d5d210d63a92acff86f91e90" compoundref="pki_8c" startline="2153" endline="2183">ssh_pki_copy_cert_to_privkey</referencedby>
+        <referencedby refid="group__libssh__pki_1gab366c5e63b468061d201397939bc6a82" compoundref="pki_8c" startline="2511" endline="2582">ssh_pki_do_sign</referencedby>
+        <referencedby refid="group__libssh__pki_1ga030b5e767d97bd26053a5644b083c133" compoundref="pki_8c" startline="2585" endline="2633">ssh_pki_do_sign_agent</referencedby>
+        <referencedby refid="group__libssh__pki_1ga302c3e762e3268e3971df86784688013" compoundref="pki_8c" startline="2185" endline="2239">ssh_pki_export_signature_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1ga942b96ee72b13655952c87efe938e6ee" compoundref="pki_8c" startline="1610" endline="1661">ssh_pki_import_pubkey_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1ga02ef62122b1d2c3065e86413cc673704" compoundref="pki_8c" startline="2241" endline="2311">ssh_pki_import_signature_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1gabadb73a1db275add212f6b72d059bcfb" compoundref="pki__container__openssh_8c" startline="230" endline="381">ssh_pki_openssh_import</referencedby>
+        <referencedby refid="pki__priv_8h_1a0a1b01b666de3e4f433660761c7658ad" compoundref="pki__container__openssh_8c" startline="534" endline="722">ssh_pki_openssh_privkey_export</referencedby>
+        <referencedby refid="group__libssh__pki_1gaf78ebf6bac541ad8a6de9b6509dc0fff" compoundref="pki_8c" startline="2403" endline="2484">ssh_pki_signature_verify</referencedby>
+        <referencedby refid="socket_8h_1ae616d257d1f37fcaf60f6d243fe4e964" compoundref="socket_8c" startline="148" endline="180">ssh_socket_new</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1ad792cdb2f22ab8009ea8bc430b059271" compoundref="torture__threads__buffer_8c" startline="476" endline="517">thread_buffer_pack_badformat</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a59e5543aaa48c7f2cffae38b4b8aa109" compoundref="torture__threads__buffer_8c" startline="162" endline="203">thread_buffer_prepend</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aec2d29aca1bc11a74c28dc0c9a45a9f8" compoundref="torture__threads__buffer_8c" startline="65" endline="92">thread_growing_buffer</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2a8a76df41ddfaadcc76c8db2cb45f16" compoundref="torture__threads__buffer_8c" startline="109" endline="146">thread_growing_buffer_shifting</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2f29726eaa600a181d39bdc877fdee23" compoundref="torture__threads__buffer_8c" startline="270" endline="324">thread_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a6cd746fcd5d2247a25f1e9afa3397390" compoundref="torture__threads__buffer_8c" startline="336" endline="402">thread_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aada376ffd60bb46e2232b036fae5728f" compoundref="torture__threads__buffer_8c" startline="415" endline="463">thread_ssh_buffer_get_format_error</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a507db24a756e383887921fe13f9bc20e" compoundref="torture__threads__buffer_8c" startline="219" endline="258">thread_ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="torture__buffer_8c_1a61af67c27c79501074300baad8637fa2" compoundref="torture__buffer_8c" startline="104" endline="134">torture_ssh_buffer_get_ssh_string</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga608cf73226454f21e8b2f9f1d838c5fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_buffer_free</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer)</argsstring>
+        <name>ssh_buffer_free</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Deallocate a SSH buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to free. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="149" column="6" bodyfile="src/buffer.c" bodystart="149" bodyend="166"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gade0108b17f43b5269b92456a785df126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_buffer_set_secure</definition>
+        <argsstring>(ssh_buffer buffer)</argsstring>
+        <name>ssh_buffer_set_secure</name>
+        <param>
+          <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Sets the buffer as secure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A secure buffer will never leave cleartext data in the heap after being reallocated or freed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to set secure. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="176" column="6" bodyfile="src/buffer.c" bodystart="176" bodyend="179"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <referencedby refid="priv_8h_1aa9b1bdd62db42c91b1b203f6850adadf" compoundref="base64_8c" startline="60" endline="173">base64_to_bin</referencedby>
+        <referencedby refid="torture__buffer_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__buffer_8c" startline="11" endline="22">setup</referencedby>
+        <referencedby refid="group__libssh__pki_1gab366c5e63b468061d201397939bc6a82" compoundref="pki_8c" startline="2511" endline="2582">ssh_pki_do_sign</referencedby>
+        <referencedby refid="group__libssh__pki_1gabadb73a1db275add212f6b72d059bcfb" compoundref="pki__container__openssh_8c" startline="230" endline="381">ssh_pki_openssh_import</referencedby>
+        <referencedby refid="group__libssh__auth_1ga50c0c150f8c4703e7ee49b3e3e3ca215" compoundref="auth_8c" startline="1246" endline="1307">ssh_userauth_password</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1ad792cdb2f22ab8009ea8bc430b059271" compoundref="torture__threads__buffer_8c" startline="476" endline="517">thread_buffer_pack_badformat</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a59e5543aaa48c7f2cffae38b4b8aa109" compoundref="torture__threads__buffer_8c" startline="162" endline="203">thread_buffer_prepend</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aec2d29aca1bc11a74c28dc0c9a45a9f8" compoundref="torture__threads__buffer_8c" startline="65" endline="92">thread_growing_buffer</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2a8a76df41ddfaadcc76c8db2cb45f16" compoundref="torture__threads__buffer_8c" startline="109" endline="146">thread_growing_buffer_shifting</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2f29726eaa600a181d39bdc877fdee23" compoundref="torture__threads__buffer_8c" startline="270" endline="324">thread_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a6cd746fcd5d2247a25f1e9afa3397390" compoundref="torture__threads__buffer_8c" startline="336" endline="402">thread_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aada376ffd60bb46e2232b036fae5728f" compoundref="torture__threads__buffer_8c" startline="415" endline="463">thread_ssh_buffer_get_format_error</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int realloc_buffer</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, size_t needed)</argsstring>
+        <name>realloc_buffer</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>needed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="181" column="12" bodyfile="src/buffer.c" bodystart="181" bodyend="220"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="buffer_8c_1a325e09b7a43db95029cfc49d40ed66b1" compoundref="buffer_8c" startline="56">BUFFER_SIZE_MAX</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <referencedby refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad4991b9eadf8b81401c032bf38ab7094" compoundref="buffer_8c" startline="366" endline="390">ssh_buffer_allocate</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" compoundref="buffer_8c" startline="335" endline="352">ssh_buffer_allocate_size</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga2b52225e65c36ae1f1585f005a454f24" compoundref="buffer_8c" startline="524" endline="551">ssh_buffer_prepend_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad877da63fd8d9a0ee00859bfbacf1eda" compoundref="buffer_8c" startline="259" endline="287">ssh_buffer_reinit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gae0e221aeee158e4762f95207c7f31a68" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void buffer_shift</definition>
+        <argsstring>(ssh_buffer buffer)</argsstring>
+        <name>buffer_shift</name>
+        <param>
+          <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="226" column="13" bodyfile="src/buffer.c" bodystart="226" bodyend="247"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <referencedby refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad4991b9eadf8b81401c032bf38ab7094" compoundref="buffer_8c" startline="366" endline="390">ssh_buffer_allocate</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" compoundref="buffer_8c" startline="335" endline="352">ssh_buffer_allocate_size</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gad877da63fd8d9a0ee00859bfbacf1eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_reinit</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer)</argsstring>
+        <name>ssh_buffer_reinit</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Reinitialize a SSH buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In case the buffer has exceeded 64K in size, the buffer will be reallocated to 64K.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to reinitialize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, &lt; 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="259" column="5" bodyfile="src/buffer.c" bodystart="259" bodyend="287"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" compoundref="buffer_8c" startline="181" endline="220">realloc_buffer</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_add_data</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, const void *data, uint32_t len)</argsstring>
+        <name>ssh_buffer_add_data</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Add data at the tail of a buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to add the data.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the data to add.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, &lt; 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="300" column="5" bodyfile="src/buffer.c" bodystart="300" bodyend="324"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gae0e221aeee158e4762f95207c7f31a68" compoundref="buffer_8c" startline="226" endline="247">buffer_shift</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" compoundref="buffer_8c" startline="181" endline="220">realloc_buffer</references>
+        <referencedby refid="group__libssh__buffer_1ga73c21faa0fedad3e83f2da8b7a0fb3c5" compoundref="buffer_8c" startline="565" endline="578">ssh_buffer_add_buffer</referencedby>
+        <referencedby refid="group__libssh__buffer_1gac880d4f0dad2902ec586cfac4809a25c" compoundref="buffer_8c" startline="403" endline="417">ssh_buffer_add_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae368cb8086f35d53bb18c586f9a28625" compoundref="buffer_8c" startline="453" endline="463">ssh_buffer_add_u16</referencedby>
+        <referencedby refid="group__libssh__buffer_1gada0ffde58ce6834889fe7a94bd038458" compoundref="buffer_8c" startline="430" endline="440">ssh_buffer_add_u32</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae6449fcf12f189067f6587888c5b1022" compoundref="buffer_8c" startline="476" endline="486">ssh_buffer_add_u64</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6e7a241701add756f1093aa6fdc08db" compoundref="buffer_8c" startline="499" endline="509">ssh_buffer_add_u8</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_allocate_size</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint32_t len)</argsstring>
+        <name>ssh_buffer_allocate_size</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Ensure the buffer has at least a certain preallocated size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to enlarge.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length to ensure as allocated.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, &lt; 0 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="335" column="5" bodyfile="src/buffer.c" bodystart="335" bodyend="352"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gae0e221aeee158e4762f95207c7f31a68" compoundref="buffer_8c" startline="226" endline="247">buffer_shift</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" compoundref="buffer_8c" startline="181" endline="220">realloc_buffer</references>
+        <referencedby refid="agent_8h_1ac53a1b1236f14bba793156f30686570d" compoundref="agent_8c" startline="475" endline="592">ssh_agent_sign_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga190a1c9ac2a48d23412ab75f2fd805e6" compoundref="buffer_8c" startline="810" endline="904">ssh_buffer_pack_allocate_va</referencedby>
+        <referencedby refid="kex_8h_1a6e6aa406171ce64be59c5fc8fb74acc3" compoundref="kex_8c" startline="1253" endline="1279">ssh_hashbufin_add_cookie</referencedby>
+        <referencedby refid="kex_8h_1a52f54b8f641a03c2b9d5175328e5abfd" compoundref="kex_8c" startline="1215" endline="1251">ssh_hashbufout_add_cookie</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gad4991b9eadf8b81401c032bf38ab7094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ssh_buffer_allocate</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint32_t len)</argsstring>
+        <name>ssh_buffer_allocate</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="366" column="6" bodyfile="src/buffer.c" bodystart="366" bodyend="390"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gae0e221aeee158e4762f95207c7f31a68" compoundref="buffer_8c" startline="226" endline="247">buffer_shift</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" compoundref="buffer_8c" startline="181" endline="220">realloc_buffer</references>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gac880d4f0dad2902ec586cfac4809a25c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_add_ssh_string</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, struct ssh_string_struct *string)</argsstring>
+        <name>ssh_buffer_add_ssh_string</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structssh__string__struct" kindref="compound">ssh_string_struct</ref> *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="403" column="5" bodyfile="src/buffer.c" bodystart="403" bodyend="417"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1aad7b2fc092973a478df54a40af69abf2">ssh_string_len</references>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gada0ffde58ce6834889fe7a94bd038458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_add_u32</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint32_t data)</argsstring>
+        <name>ssh_buffer_add_u32</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="430" column="5" bodyfile="src/buffer.c" bodystart="430" bodyend="440"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</references>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gae368cb8086f35d53bb18c586f9a28625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_add_u16</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint16_t data)</argsstring>
+        <name>ssh_buffer_add_u16</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="453" column="5" bodyfile="src/buffer.c" bodystart="453" bodyend="463"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</references>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gae6449fcf12f189067f6587888c5b1022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_add_u64</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint64_t data)</argsstring>
+        <name>ssh_buffer_add_u64</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="476" column="5" bodyfile="src/buffer.c" bodystart="476" bodyend="486"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</references>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gad6e7a241701add756f1093aa6fdc08db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_add_u8</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint8_t data)</argsstring>
+        <name>ssh_buffer_add_u8</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="499" column="5" bodyfile="src/buffer.c" bodystart="499" bodyend="509"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</references>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga2b52225e65c36ae1f1585f005a454f24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_prepend_data</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, const void *data, uint32_t len)</argsstring>
+        <name>ssh_buffer_prepend_data</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="524" column="5" bodyfile="src/buffer.c" bodystart="524" bodyend="551"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="structssh__buffer__struct_1a35db5ae46d014ff348e3501d35e532d3" compoundref="buffer_8c" startline="51">ssh_buffer_struct::pos</references>
+        <references refid="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" compoundref="buffer_8c" startline="181" endline="220">realloc_buffer</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga73c21faa0fedad3e83f2da8b7a0fb3c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_add_buffer</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, struct ssh_buffer_struct *source)</argsstring>
+        <name>ssh_buffer_add_buffer</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="565" column="5" bodyfile="src/buffer.c" bodystart="565" bodyend="578"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</references>
+        <references refid="group__libssh__buffer_1ga3577f5f4102e8010b281837b7812f261" compoundref="buffer_8c" startline="589" endline="591">ssh_buffer_get</references>
+        <references refid="group__libssh__buffer_1gad1594908ed57799f4a84066f47c3e7c0" compoundref="buffer_8c" startline="602" endline="605">ssh_buffer_get_len</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga3577f5f4102e8010b281837b7812f261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ssh_buffer_get</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer)</argsstring>
+        <name>ssh_buffer_get</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Get a pointer to the head of a buffer at the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to get the head pointer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the data from current position.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__buffer_1gad1594908ed57799f4a84066f47c3e7c0" kindref="member">ssh_buffer_get_len()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="589" column="6" bodyfile="src/buffer.c" bodystart="589" bodyend="591"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <referencedby refid="group__libssh__buffer_1ga73c21faa0fedad3e83f2da8b7a0fb3c5" compoundref="buffer_8c" startline="565" endline="578">ssh_buffer_add_buffer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gad1594908ed57799f4a84066f47c3e7c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ssh_buffer_get_len</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer)</argsstring>
+        <name>ssh_buffer_get_len</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Get the length of the buffer from the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to get the length from.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length of the buffer.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__buffer_1ga3577f5f4102e8010b281837b7812f261" kindref="member">ssh_buffer_get()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="602" column="10" bodyfile="src/buffer.c" bodystart="602" bodyend="605"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <referencedby refid="group__libssh__buffer_1ga73c21faa0fedad3e83f2da8b7a0fb3c5" compoundref="buffer_8c" startline="565" endline="578">ssh_buffer_add_buffer</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga78a03bd2576567c33858754601b2b619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ssh_buffer_pass_bytes</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint32_t len)</argsstring>
+        <name>ssh_buffer_pass_bytes</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="620" column="10" bodyfile="src/buffer.c" bodystart="620" bodyend="635"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+        <references refid="structssh__buffer__struct_1a35db5ae46d014ff348e3501d35e532d3" compoundref="buffer_8c" startline="51">ssh_buffer_struct::pos</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga14f9ecddaad320dbc98c7462117be8b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ssh_buffer_pass_bytes_end</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint32_t len)</argsstring>
+        <name>ssh_buffer_pass_bytes_end</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="648" column="10" bodyfile="src/buffer.c" bodystart="648" bodyend="658"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" compoundref="buffer_8c" startline="111">buffer_verify</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ssh_buffer_get_data</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, void *data, uint32_t len)</argsstring>
+        <name>ssh_buffer_get_data</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Get the remaining data out of the buffer and adjust the read pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data buffer where to store the data.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length to read from the buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if there is not enough data in buffer, len otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="671" column="10" bodyfile="src/buffer.c" bodystart="671" bodyend="686"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga49d552059803b03f1c305619cba34e24" compoundref="buffer_8c" startline="743" endline="750">ssh_buffer_validate_length</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="group__libssh__buffer_1ga3976e75d6d9c08438a3be49164ec64ed" compoundref="buffer_8c" startline="762" endline="792">ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga87e8b550cc80266bcc6484e7287a46e8" compoundref="buffer_8c" startline="715" endline="717">ssh_buffer_get_u32</referencedby>
+        <referencedby refid="group__libssh__buffer_1gaf41a6b3418aeeeebf63dee15c453f1a6" compoundref="buffer_8c" startline="730" endline="732">ssh_buffer_get_u64</referencedby>
+        <referencedby refid="group__libssh__buffer_1gac8b0753ba4dcc4e5b140f48af0485d39" compoundref="buffer_8c" startline="700" endline="702">ssh_buffer_get_u8</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gac8b0753ba4dcc4e5b140f48af0485d39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_get_u8</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint8_t *data)</argsstring>
+        <name>ssh_buffer_get_u8</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="700" column="5" bodyfile="src/buffer.c" bodystart="700" bodyend="702"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</references>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga87e8b550cc80266bcc6484e7287a46e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_get_u32</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint32_t *data)</argsstring>
+        <name>ssh_buffer_get_u32</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="715" column="5" bodyfile="src/buffer.c" bodystart="715" bodyend="717"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</references>
+        <referencedby refid="group__libssh__buffer_1ga3976e75d6d9c08438a3be49164ec64ed" compoundref="buffer_8c" startline="762" endline="792">ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gaf41a6b3418aeeeebf63dee15c453f1a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_get_u64</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, uint64_t *data)</argsstring>
+        <name>ssh_buffer_get_u64</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="730" column="5" bodyfile="src/buffer.c" bodystart="730" bodyend="732"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1aff4dc6b3f75f27293e07ba0d46cd180d" compoundref="buffer_8c" startline="52">ssh_buffer_struct::data</references>
+        <references refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</references>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga49d552059803b03f1c305619cba34e24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_validate_length</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, size_t len)</argsstring>
+        <name>ssh_buffer_validate_length</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Valdiates that the given length can be obtained from the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read from.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length to be checked.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the length is valid, SSH_ERROR otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="743" column="5" bodyfile="src/buffer.c" bodystart="743" bodyend="750"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__buffer__struct_1a35db5ae46d014ff348e3501d35e532d3" compoundref="buffer_8c" startline="51">ssh_buffer_struct::pos</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3976e75d6d9c08438a3be49164ec64ed" compoundref="buffer_8c" startline="762" endline="792">ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga3976e75d6d9c08438a3be49164ec64ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__string__struct" kindref="compound">ssh_string_struct</ref> *</type>
+        <definition>struct ssh_string_struct* ssh_buffer_get_ssh_string</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer)</argsstring>
+        <name>ssh_buffer_get_ssh_string</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="762" column="1" bodyfile="src/buffer.c" bodystart="762" bodyend="792"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</references>
+        <references refid="group__libssh__buffer_1ga87e8b550cc80266bcc6484e7287a46e8" compoundref="buffer_8c" startline="715" endline="717">ssh_buffer_get_u32</references>
+        <references refid="group__libssh__buffer_1ga49d552059803b03f1c305619cba34e24" compoundref="buffer_8c" startline="743" endline="750">ssh_buffer_validate_length</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="libssh_8h_1aca901aa97257413ddf60ef74ff2bf7a6">ssh_string_data</references>
+        <references refid="group__libssh__string_1gaedd3d6073cee901aaa288712896d0f28" compoundref="string_8c" startline="56" endline="74">ssh_string_new</references>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga190a1c9ac2a48d23412ab75f2fd805e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ssh_buffer_pack_allocate_va</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, const char *format, size_t argc, va_list ap)</argsstring>
+        <name>ssh_buffer_pack_allocate_va</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Pre-calculate the size we need for packing the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This makes sure that enough memory is allocated for packing the buffer and we only have to do one memory allocation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to allocate</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string of arguments.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of arguments.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The va_list of arguments.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success, SSH_ERROR on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="810" column="12" bodyfile="src/buffer.c" bodystart="810" bodyend="904"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" compoundref="buffer_8c" startline="335" endline="352">ssh_buffer_allocate_size</references>
+        <references refid="buffer_8h_1ab739a126a07e8b44069cfad36c671d2e" compoundref="buffer_8h" startline="28">SSH_BUFFER_PACK_END</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="libssh_8h_1aad7b2fc092973a478df54a40af69abf2">ssh_string_len</references>
+        <referencedby refid="group__libssh__buffer_1ga20c9686b0f64ec4e20811c8dc19b287a" compoundref="buffer_8c" startline="1047" endline="1072">_ssh_buffer_pack</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_pack_va</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, const char *format, size_t argc, va_list ap)</argsstring>
+        <name>ssh_buffer_pack_va</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="915" column="5" bodyfile="src/buffer.c" bodystart="915" bodyend="1025"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__string__struct_1ac426a8994c89f28099681cff703b33d8" compoundref="string_8h" startline="31">ssh_string_struct::data</references>
+        <references refid="priv_8h_1a9f4bf0773c45ad9a9753a1b784a13fbb" compoundref="priv_8h" startline="386">htonll</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</references>
+        <references refid="group__libssh__buffer_1gac880d4f0dad2902ec586cfac4809a25c" compoundref="buffer_8c" startline="403" endline="417">ssh_buffer_add_ssh_string</references>
+        <references refid="group__libssh__buffer_1gae368cb8086f35d53bb18c586f9a28625" compoundref="buffer_8c" startline="453" endline="463">ssh_buffer_add_u16</references>
+        <references refid="group__libssh__buffer_1gada0ffde58ce6834889fe7a94bd038458" compoundref="buffer_8c" startline="430" endline="440">ssh_buffer_add_u32</references>
+        <references refid="group__libssh__buffer_1gae6449fcf12f189067f6587888c5b1022" compoundref="buffer_8c" startline="476" endline="486">ssh_buffer_add_u64</references>
+        <references refid="group__libssh__buffer_1gad6e7a241701add756f1093aa6fdc08db" compoundref="buffer_8c" startline="499" endline="509">ssh_buffer_add_u8</references>
+        <references refid="buffer_8h_1ab739a126a07e8b44069cfad36c671d2e" compoundref="buffer_8h" startline="28">SSH_BUFFER_PACK_END</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="bignum_8h_1a40cd92d707d2f965c852f218406420c2" compoundref="bignum_8c" startline="30" endline="64">ssh_make_bignum_string</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="group__libssh__buffer_1ga20c9686b0f64ec4e20811c8dc19b287a" compoundref="buffer_8c" startline="1047" endline="1072">_ssh_buffer_pack</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1ga20c9686b0f64ec4e20811c8dc19b287a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _ssh_buffer_pack</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, const char *format, size_t argc,...)</argsstring>
+        <name>_ssh_buffer_pack</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="1047" column="5" bodyfile="src/buffer.c" bodystart="1047" bodyend="1072"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1ga190a1c9ac2a48d23412ab75f2fd805e6" compoundref="buffer_8c" startline="810" endline="904">ssh_buffer_pack_allocate_va</references>
+        <references refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_buffer_unpack_va</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, const char *format, size_t argc, va_list ap)</argsstring>
+        <name>ssh_buffer_unpack_va</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="1083" column="5" bodyfile="src/buffer.c" bodystart="1083" bodyend="1324"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="priv_8h_1a3cfcf123d4ead264289232f91f2c9ca5" compoundref="priv_8h" startline="395">ntohll</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</references>
+        <references refid="group__libssh__buffer_1gad1594908ed57799f4a84066f47c3e7c0" compoundref="buffer_8c" startline="602" endline="605">ssh_buffer_get_len</references>
+        <references refid="group__libssh__buffer_1ga3976e75d6d9c08438a3be49164ec64ed" compoundref="buffer_8c" startline="762" endline="792">ssh_buffer_get_ssh_string</references>
+        <references refid="group__libssh__buffer_1ga87e8b550cc80266bcc6484e7287a46e8" compoundref="buffer_8c" startline="715" endline="717">ssh_buffer_get_u32</references>
+        <references refid="group__libssh__buffer_1gaf41a6b3418aeeeebf63dee15c453f1a6" compoundref="buffer_8c" startline="730" endline="732">ssh_buffer_get_u64</references>
+        <references refid="group__libssh__buffer_1gac8b0753ba4dcc4e5b140f48af0485d39" compoundref="buffer_8c" startline="700" endline="702">ssh_buffer_get_u8</references>
+        <references refid="buffer_8h_1ab739a126a07e8b44069cfad36c671d2e" compoundref="buffer_8h" startline="28">SSH_BUFFER_PACK_END</references>
+        <references refid="group__libssh__buffer_1ga49d552059803b03f1c305619cba34e24" compoundref="buffer_8c" startline="743" endline="750">ssh_buffer_validate_length</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="bignum_8h_1aa8d793df34b2069dd183bc633ab0d95f" compoundref="bignum_8c" startline="66" endline="80">ssh_make_string_bn</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="libssh_8h_1a288b7786a401d82aa14f95bcaa10930b">ssh_string_burn</references>
+        <references refid="libssh_8h_1a5bc8710c8633117ff449d15489fca051" compoundref="libssh_8h" startline="790">SSH_STRING_FREE</references>
+        <referencedby refid="group__libssh__buffer_1gaa610051755070ecc05792cfb590e10c4" compoundref="buffer_8c" startline="1345" endline="1357">_ssh_buffer_unpack</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__buffer_1gaa610051755070ecc05792cfb590e10c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _ssh_buffer_unpack</definition>
+        <argsstring>(struct ssh_buffer_struct *buffer, const char *format, size_t argc,...)</argsstring>
+        <name>_ssh_buffer_unpack</name>
+        <param>
+          <type>struct <ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer_struct</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="1345" column="5" bodyfile="src/buffer.c" bodystart="1345" bodyend="1357"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__libssh__buffer_1gaad7d3655d5c5c31bc67fe9f1b9ba6a7a" prot="public" static="no">
+        <name>buffer_verify</name>
+        <param><defname>x</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/buffer.c" line="111" column="10" bodyfile="src/buffer.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Functions to handle SSH buffers. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>CMakeLists.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" prot="public" static="no" mutable="no">
+        <type>requires an out of source build Please create a separate build directory and run cmake path</type>
+        <definition>requires an out of source build Please create a separate build directory and run cmake path to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <initializer>{PROJECT_NAME} [<ref refid="structoptions" kindref="compound">options</ref>]&apos; there.&quot;)
+
+
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY &quot;${CMAKE_BINARY_DIR}/lib&quot;)
+
+
+if (WITH_ZLIB)
+    find_package(<ref refid="kex_8c_1a3df6cce22b25959a3c074fd55f09e4b2" kindref="member">ZLIB</ref> REQUIRED)
+<ref refid="tests_2unittests_2CMakeLists_8txt_1a13d0fe45ffd57fe73c0dff481f59ffed" kindref="member">endif</ref> (WITH_ZLIB)
+
+<ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (WITH_GCRYPT)
+  find_package(GCrypt 1.5.0 REQUIRED)
+  <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (NOT GCRYPT_FOUND)
+    message(FATAL_ERROR &quot;Could not find GCrypt&quot;)
+  endif (NOT GCRYPT_FOUND)
+elseif(WITH_MBEDTLS)
+    find_package(MbedTLS REQUIRED)
+    <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (NOT MBEDTLS_FOUND)
+      message(FATAL_ERROR &quot;Could not find mbedTLS&quot;)
+    endif (NOT MBEDTLS_FOUND)
+else (WITH_GCRYPT)
+  find_package(OpenSSL)
+  <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (NOT OPENSSL_FOUND)
+    find_package(GCrypt)
+    <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (NOT GCRYPT_FOUND)
+      find_package(MbedTLS)
+      <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref> (NOT MBEDTLS_FOUND)
+        message(FATAL_ERROR &quot;Could not find OpenSSL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/CMakeLists.txt" line="40" column="105" bodyfile="libssh-mirror/CMakeLists.txt" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="CMakeLists_8txt_1a6e84425a6fe6bc42a69440b30f41956c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cmake_minimum_required</definition>
+        <argsstring>(VERSION 3.3.0) cmake_policy(SET CMP0048 NEW) list(APPEND CMAKE_MODULE_PATH &quot;$</argsstring>
+        <name>cmake_minimum_required</name>
+        <param>
+          <type>VERSION 3.3.</type>
+          <declname>0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/CMakeLists.txt" line="1" column="1" bodyfile="libssh-mirror/CMakeLists.txt" bodystart="1" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cmake Modules</type>
+        <definition>cmake Modules include</definition>
+        <argsstring>(DefineCMakeDefaults) include(DefineCompilerFlags) project(libssh VERSION 0.8.90 LANGUAGES C) set(APPLICATION_NAME $</argsstring>
+        <name>include</name>
+        <param>
+          <type>DefineCMakeDefaults</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/CMakeLists.txt" line="10" column="1" bodyfile="libssh-mirror/CMakeLists.txt" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set</definition>
+        <argsstring>(LIBRARY_VERSION &quot;4.8.1&quot;) set(LIBRARY_SOVERSION &quot;4&quot;) include(DefinePlatformDefaults) include(DefineOptions.cmake) include(CPackConfig.cmake) include(GNUInstallDirs) include(CompilerChecks.cmake) include(MacroEnsureOutOfSourceBuild) macro_ensure_out_of_source_build(&quot;$</argsstring>
+        <name>set</name>
+        <param>
+          <type>LIBRARY_VERSION &quot;4.8.1&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/CMakeLists.txt" line="25" column="1" bodyfile="libssh-mirror/CMakeLists.txt" bodystart="25" bodyend="40"/>
+        <referencedby refid="group__libssh__session_1gaed7aa63089bc78f3827115f476badab5" compoundref="connect_8c" startline="277" endline="284">ssh_select_cb</referencedby>
+        <referencedby refid="socket_8h_1a1335d3cd58897c1e1672ca3d75d405ea" compoundref="socket_8c" startline="605" endline="611">ssh_socket_fd_isset</referencedby>
+        <referencedby refid="socket_8h_1a42847e318531b31eb35a7d5df8a0cfa7" compoundref="socket_8c" startline="617" endline="630">ssh_socket_fd_set</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>requires an out of source build Please create a separate build directory and run cmake path GCrypt or mbedTLS</type>
+        <definition>requires an out of source build Please create a separate build directory and run cmake path GCrypt or mbedTLS endif</definition>
+        <argsstring>(NOT MBEDTLS_FOUND) endif(NOT GCRYPT_FOUND) endif(NOT OPENSSL_FOUND) endif(WITH_GCRYPT) if(UNIT_TESTING) find_package(CMocka REQUIRED) endif() set(CMAKE_THREAD_PREFER_PTHREADS ON) set(THREADS_PREFER_PTHREAD_FLAG ON) find_package(Threads) if(WITH_GSSAPI) find_package(GSSAPI) endif(WITH_GSSAPI) if(WITH_PKCS11_URI) find_package(softhsm) if(NOT SOFTHSM_FOUND) message(SEND_ERROR &quot;Could not find softhsm module!&quot;) endif(NOT SOFTHSM_FOUND) endif(WITH_PKCS11_URI) if(WITH_NACL) find_package(NaCl) if(NOT NACL_FOUND) set(WITH_NACL OFF) endif(NOT NACL_FOUND) endif(WITH_NACL) if(BSD OR SOLARIS OR OSX) find_package(Argp) endif(BSD OR SOLARIS OR OSX) if(UNIX) find_package(ABIMap 0.3.1) else(UNIX) set(WITH_SYMBOL_VERSIONING OFF) endif(UNIX) include(ConfigureChecks.cmake) configure_file(config.h.cmake $</argsstring>
+        <name>endif</name>
+        <param>
+          <type>NOT</type>
+          <declname>MBEDTLS_FOUND</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/CMakeLists.txt" line="68" column="7" bodyfile="libssh-mirror/CMakeLists.txt" bodystart="68" bodyend="113"/>
+        <referencedby refid="pki__priv_8h_1a2ceb3135ff3591acd8db9f48fcbccec3" compoundref="pki__crypto_8c" startline="2294" endline="2407">pki_verify_data_signature</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1ac85e7b533420e07088bea89f9a38cb8c" compoundref="torture__pki__ed25519_8c" startline="417" endline="466">torture_pki_ed25519_generate_key</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1af1e2eec9a6e622023a0ecd76a8594d0a" compoundref="torture__pki__ed25519_8c" startline="771" endline="823">torture_pki_ed25519_verify</referencedby>
+        <referencedby refid="torture_8c_1a4804ce5694a475b336b090bddab4802a" compoundref="torture_8c" startline="587" endline="808">torture_setup_create_sshd_config</referencedby>
+        <referencedby refid="ssh__client_8c_1ad96d407a911fbb914fa8e4cfbf2faf0f" compoundref="ssh__client_8c" startline="87" endline="107">usage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>config h</type>
+        <definition>config h add_subdirectory</definition>
+        <argsstring>(doc) add_subdirectory(include) add_subdirectory(src) if(UNIX) configure_file(libssh.pc.cmake $</argsstring>
+        <name>add_subdirectory</name>
+        <param>
+          <type><ref refid="keygen2_8c_1af6164deb8a824f8cb2b9147cfc3174f5" kindref="member">doc</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/CMakeLists.txt" line="116" column="1" bodyfile="libssh-mirror/CMakeLists.txt" bodystart="116" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="CMakeLists_8txt_1a38c9baecb952a0e525d17fc160191252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>libssh pc</type>
+        <definition>libssh pc install</definition>
+        <argsstring>(FILES ${CMAKE_CURRENT_BINARY_DIR}/libssh.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig COMPONENT pkgconfig) endif(UNIX) include(CMakePackageConfigHelpers) set(LIBSSH_LIBRARY_NAME $</argsstring>
+        <name>install</name>
+        <param>
+          <type>FILES ${CMAKE_CURRENT_BINARY_DIR}/libssh.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig COMPONENT</type>
+          <declname>pkgconfig</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/CMakeLists.txt" line="123" column="1" bodyfile="libssh-mirror/CMakeLists.txt" bodystart="123" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="CMakeLists_8txt_1a6e84425a6fe6bc42a69440b30f41956c" refkind="member"><highlight class="normal"><ref refid="CMakeLists_8txt_1a6e84425a6fe6bc42a69440b30f41956c" kindref="member">cmake_minimum_required</ref>(VERSION<sp/>3.3.0)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">cmake_policy(SET<sp/>CMP0048<sp/>NEW)</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Specify<sp/>search<sp/>path<sp/>for<sp/>CMake<sp/>modules<sp/>to<sp/>be<sp/>loaded<sp/>by<sp/>include()<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>and<sp/>find_package()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">list(APPEND<sp/>CMAKE_MODULE_PATH<sp/></highlight><highlight class="stringliteral">&quot;${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Add<sp/>defaults<sp/>for<sp/>cmake</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Those<sp/>need<sp/>to<sp/>be<sp/>set<sp/>before<sp/>the<sp/>project()<sp/>call.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" refkind="member"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(DefineCMakeDefaults)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(DefineCompilerFlags)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="examples_2CMakeLists_8txt_1a3901ba16c737e186448fe169f89bb169" kindref="member">project</ref>(libssh<sp/>VERSION<sp/>0.8.90<sp/>LANGUAGES<sp/>C)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>global<sp/>needed<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(APPLICATION_NAME<sp/>${PROJECT_NAME})</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">#<sp/>SOVERSION<sp/>scheme:<sp/>CURRENT.AGE.REVISION</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">#<sp/><sp/><sp/>If<sp/>there<sp/>was<sp/>an<sp/>incompatible<sp/>interface<sp/>change:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>Increment<sp/>CURRENT.<sp/>Set<sp/>AGE<sp/>and<sp/>REVISION<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/>0</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">#<sp/><sp/><sp/>If<sp/>there<sp/>was<sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref><sp/>compatible<sp/>interface<sp/>change:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>Increment<sp/>AGE.<sp/>Set<sp/>REVISION<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/>0</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">#<sp/><sp/><sp/>If<sp/>the<sp/>source<sp/>code<sp/>was<sp/>changed,<sp/>but<sp/>there<sp/>were<sp/>no<sp/>interface<sp/>changes:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>Increment<sp/>REVISION.</highlight></codeline>
+<codeline lineno="25" refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" refkind="member"><highlight class="normal">set(LIBRARY_VERSION<sp/></highlight><highlight class="stringliteral">&quot;4.8.1&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>(LIBRARY_SOVERSION<sp/></highlight><highlight class="stringliteral">&quot;4&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>where<sp/>to<sp/>look<sp/>first<sp/>for<sp/>cmake<sp/>modules,<sp/>before<sp/>${CMAKE_ROOT}/Modules/<sp/>is<sp/>checked</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>add<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(DefinePlatformDefaults)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(DefineOptions.cmake)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(CPackConfig.cmake)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(GNUInstallDirs)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(CompilerChecks.cmake)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>disallow<sp/>in-source<sp/>build</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>(MacroEnsureOutOfSourceBuild)</highlight></codeline>
+<codeline lineno="40" refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" refkind="member"><highlight class="normal">macro_ensure_out_of_source_build(&quot;${PROJECT_NAME}<sp/>requires<sp/>an<sp/>out<sp/>of<sp/>source<sp/>build.<sp/>Please<sp/>create<sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref><sp/>separate<sp/>build<sp/>directory<sp/>and<sp/>run<sp/></highlight><highlight class="stringliteral">&apos;cmake<sp/>/path/to/${PROJECT_NAME}<sp/>[options]&apos;</highlight><highlight class="normal"><sp/>there.</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral">#<sp/>Copy<sp/>library<sp/>files<sp/>to<sp/>a<sp/>lib<sp/>sub-directory</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral">set(CMAKE_LIBRARY_OUTPUT_DIRECTORY<sp/>&quot;</highlight><highlight class="normal">${CMAKE_BINARY_DIR}/lib</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="44"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="45"><highlight class="stringliteral">#<sp/>search<sp/>for<sp/>libraries</highlight></codeline>
+<codeline lineno="46"><highlight class="stringliteral">if<sp/>(WITH_ZLIB)</highlight></codeline>
+<codeline lineno="47"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(ZLIB<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="48"><highlight class="stringliteral">endif<sp/>(WITH_ZLIB)</highlight></codeline>
+<codeline lineno="49"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral">if<sp/>(WITH_GCRYPT)</highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"><sp/><sp/>find_package(GCrypt<sp/>1.5.0<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="52"><highlight class="stringliteral"><sp/><sp/>if<sp/>(NOT<sp/>GCRYPT_FOUND)</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>message(FATAL_ERROR<sp/>&quot;</highlight><highlight class="normal">Could<sp/>not<sp/>find<sp/>GCrypt</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral"><sp/><sp/>endif<sp/>(NOT<sp/>GCRYPT_FOUND)</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral">elseif(WITH_MBEDTLS)</highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(MbedTLS<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="57"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(NOT<sp/>MBEDTLS_FOUND)</highlight></codeline>
+<codeline lineno="58"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>message(FATAL_ERROR<sp/>&quot;</highlight><highlight class="normal">Could<sp/>not<sp/>find<sp/>mbedTLS</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="59"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>endif<sp/>(NOT<sp/>MBEDTLS_FOUND)</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral">else<sp/>(WITH_GCRYPT)</highlight></codeline>
+<codeline lineno="61"><highlight class="stringliteral"><sp/><sp/>find_package(OpenSSL)</highlight></codeline>
+<codeline lineno="62"><highlight class="stringliteral"><sp/><sp/>if<sp/>(NOT<sp/>OPENSSL_FOUND)</highlight></codeline>
+<codeline lineno="63"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(GCrypt)</highlight></codeline>
+<codeline lineno="64"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(NOT<sp/>GCRYPT_FOUND)</highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>find_package(MbedTLS)</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(NOT<sp/>MBEDTLS_FOUND)</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message(FATAL_ERROR<sp/>&quot;</highlight><highlight class="normal">Could<sp/>not<sp/>find<sp/>OpenSSL,<sp/>GCrypt<sp/>or<sp/>mbedTLS</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="68" refid="CMakeLists_8txt_1afe4b652fdce40e32edbfd55e707a1ba0" refkind="member"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>endif<sp/>(NOT<sp/>MBEDTLS_FOUND)</highlight></codeline>
+<codeline lineno="69"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>endif<sp/>(NOT<sp/>GCRYPT_FOUND)</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"><sp/><sp/>endif<sp/>(NOT<sp/>OPENSSL_FOUND)</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral">endif(WITH_GCRYPT)</highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral">if<sp/>(UNIT_TESTING)</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(CMocka<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral">endif<sp/>()</highlight></codeline>
+<codeline lineno="76"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="77"><highlight class="stringliteral">#<sp/>Find<sp/>out<sp/>if<sp/>we<sp/>have<sp/>threading<sp/>available</highlight></codeline>
+<codeline lineno="78"><highlight class="stringliteral">set(CMAKE_THREAD_PREFER_PTHREADS<sp/>ON)</highlight></codeline>
+<codeline lineno="79"><highlight class="stringliteral">set(THREADS_PREFER_PTHREAD_FLAG<sp/>ON)</highlight></codeline>
+<codeline lineno="80"><highlight class="stringliteral">find_package(Threads)</highlight></codeline>
+<codeline lineno="81"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="82"><highlight class="stringliteral">if<sp/>(WITH_GSSAPI)</highlight></codeline>
+<codeline lineno="83"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(GSSAPI)</highlight></codeline>
+<codeline lineno="84"><highlight class="stringliteral">endif<sp/>(WITH_GSSAPI)</highlight></codeline>
+<codeline lineno="85"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="86"><highlight class="stringliteral">if<sp/>(WITH_PKCS11_URI)</highlight></codeline>
+<codeline lineno="87"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(softhsm)</highlight></codeline>
+<codeline lineno="88"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(NOT<sp/>SOFTHSM_FOUND)</highlight></codeline>
+<codeline lineno="89"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message(SEND_ERROR<sp/>&quot;</highlight><highlight class="normal">Could<sp/>not<sp/>find<sp/>softhsm<sp/>module!</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/>endif<sp/>(NOT<sp/>SOFTHSM_FOUND)</highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral">endif<sp/>(WITH_PKCS11_URI)</highlight></codeline>
+<codeline lineno="92"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="93"><highlight class="stringliteral">if<sp/>(WITH_NACL)</highlight></codeline>
+<codeline lineno="94"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(NaCl)</highlight></codeline>
+<codeline lineno="95"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(NOT<sp/>NACL_FOUND)</highlight></codeline>
+<codeline lineno="96"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set(WITH_NACL<sp/>OFF)</highlight></codeline>
+<codeline lineno="97"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>endif<sp/>(NOT<sp/>NACL_FOUND)</highlight></codeline>
+<codeline lineno="98"><highlight class="stringliteral">endif<sp/>(WITH_NACL)</highlight></codeline>
+<codeline lineno="99"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="100"><highlight class="stringliteral">if<sp/>(BSD<sp/>OR<sp/>SOLARIS<sp/>OR<sp/>OSX)</highlight></codeline>
+<codeline lineno="101"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(Argp)</highlight></codeline>
+<codeline lineno="102"><highlight class="stringliteral">endif<sp/>(BSD<sp/>OR<sp/>SOLARIS<sp/>OR<sp/>OSX)</highlight></codeline>
+<codeline lineno="103"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="104"><highlight class="stringliteral">#<sp/>Disable<sp/>symbol<sp/>versioning<sp/>in<sp/>non<sp/>UNIX<sp/>platforms</highlight></codeline>
+<codeline lineno="105"><highlight class="stringliteral">if<sp/>(UNIX)</highlight></codeline>
+<codeline lineno="106"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>find_package(ABIMap<sp/>0.3.1)</highlight></codeline>
+<codeline lineno="107"><highlight class="stringliteral">else<sp/>(UNIX)</highlight></codeline>
+<codeline lineno="108"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>set(WITH_SYMBOL_VERSIONING<sp/>OFF)</highlight></codeline>
+<codeline lineno="109"><highlight class="stringliteral">endif<sp/>(UNIX)</highlight></codeline>
+<codeline lineno="110"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="111"><highlight class="stringliteral">#<sp/>config.h<sp/>checks</highlight></codeline>
+<codeline lineno="112"><highlight class="stringliteral">include(ConfigureChecks.cmake)</highlight></codeline>
+<codeline lineno="113"><highlight class="stringliteral">configure_file(config.h.cmake<sp/>${CMAKE_CURRENT_BINARY_DIR}/config.h)</highlight></codeline>
+<codeline lineno="114"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="115"><highlight class="stringliteral">#<sp/>check<sp/>subdirectories</highlight></codeline>
+<codeline lineno="116" refid="CMakeLists_8txt_1ae9260ca0189491bffa1c0ba611aecb49" refkind="member"><highlight class="stringliteral">add_subdirectory(doc)</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral">add_subdirectory(include)</highlight></codeline>
+<codeline lineno="118"><highlight class="stringliteral">add_subdirectory(src)</highlight></codeline>
+<codeline lineno="119"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="120"><highlight class="stringliteral">#<sp/>pkg-config<sp/>file</highlight></codeline>
+<codeline lineno="121"><highlight class="stringliteral">if<sp/>(UNIX)</highlight></codeline>
+<codeline lineno="122"><highlight class="stringliteral">configure_file(libssh.pc.cmake<sp/>${CMAKE_CURRENT_BINARY_DIR}/libssh.pc)</highlight></codeline>
+<codeline lineno="123" refid="CMakeLists_8txt_1a38c9baecb952a0e525d17fc160191252" refkind="member"><highlight class="stringliteral">install(</highlight></codeline>
+<codeline lineno="124"><highlight class="stringliteral"><sp/><sp/>FILES</highlight></codeline>
+<codeline lineno="125"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>${CMAKE_CURRENT_BINARY_DIR}/libssh.pc</highlight></codeline>
+<codeline lineno="126"><highlight class="stringliteral"><sp/><sp/>DESTINATION</highlight></codeline>
+<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>${CMAKE_INSTALL_LIBDIR}/pkgconfig</highlight></codeline>
+<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/>COMPONENT</highlight></codeline>
+<codeline lineno="129"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>pkgconfig</highlight></codeline>
+<codeline lineno="130"><highlight class="stringliteral">)</highlight></codeline>
+<codeline lineno="131"><highlight class="stringliteral">endif<sp/>(UNIX)</highlight></codeline>
+<codeline lineno="132"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="133"><highlight class="stringliteral">#<sp/>CMake<sp/>config<sp/>files</highlight></codeline>
+<codeline lineno="134"><highlight class="stringliteral">include(CMakePackageConfigHelpers)</highlight></codeline>
+<codeline lineno="135"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="136"><highlight class="stringliteral">set(LIBSSH_LIBRARY_NAME<sp/>${CMAKE_SHARED_LIBRARY_PREFIX}ssh${CMAKE_SHARED_LIBRARY_SUFFIX})</highlight></codeline>
+<codeline lineno="137"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="138"><highlight class="stringliteral">#<sp/>libssh-config-version.cmake</highlight></codeline>
+<codeline lineno="139"><highlight class="stringliteral">write_basic_package_version_file(libssh-config-version.cmake</highlight></codeline>
+<codeline lineno="140"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VERSION<sp/>${PROJECT_VERSION}</highlight></codeline>
+<codeline lineno="141"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMPATIBILITY<sp/>SameMajorVersion)</highlight></codeline>
+<codeline lineno="142"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="143"><highlight class="stringliteral">install(</highlight></codeline>
+<codeline lineno="144"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FILES</highlight></codeline>
+<codeline lineno="145"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake</highlight></codeline>
+<codeline lineno="146"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>DESTINATION</highlight></codeline>
+<codeline lineno="147"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}</highlight></codeline>
+<codeline lineno="148"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>COMPONENT</highlight></codeline>
+<codeline lineno="149"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>devel)</highlight></codeline>
+<codeline lineno="150"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="151"><highlight class="stringliteral">if<sp/>(WITH_EXAMPLES)</highlight></codeline>
+<codeline lineno="152"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>add_subdirectory(examples)</highlight></codeline>
+<codeline lineno="153"><highlight class="stringliteral">endif<sp/>(WITH_EXAMPLES)</highlight></codeline>
+<codeline lineno="154"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="155"><highlight class="stringliteral">if<sp/>(UNIT_TESTING)</highlight></codeline>
+<codeline lineno="156"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>include(AddCMockaTest)</highlight></codeline>
+<codeline lineno="157"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>add_subdirectory(tests)</highlight></codeline>
+<codeline lineno="158"><highlight class="stringliteral">endif<sp/>(UNIT_TESTING)</highlight></codeline>
+<codeline lineno="159"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="160"><highlight class="stringliteral">###<sp/>SOURCE<sp/>PACKAGE</highlight></codeline>
+<codeline lineno="161"><highlight class="stringliteral">if<sp/>(WITH_SYMBOL_VERSIONING<sp/>AND<sp/>ABIMAP_FOUND)</highlight></codeline>
+<codeline lineno="162"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>Get<sp/>the<sp/>current<sp/>ABI<sp/>version<sp/>from<sp/>source</highlight></codeline>
+<codeline lineno="163"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>get_filename_component(current_abi_path</highlight></codeline>
+<codeline lineno="164"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">${CMAKE_SOURCE_DIR}/src/ABI/current</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="165"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ABSOLUTE)</highlight></codeline>
+<codeline lineno="166"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="167"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>Check<sp/>if<sp/>the<sp/>ABI<sp/>version<sp/>should<sp/>be<sp/>updated</highlight></codeline>
+<codeline lineno="168"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>file(READ<sp/>${current_abi_path}<sp/>CURRENT_ABI_CONTENT)</highlight></codeline>
+<codeline lineno="169"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>string(STRIP<sp/>&quot;</highlight><highlight class="normal">${CURRENT_ABI_CONTENT}</highlight><highlight class="stringliteral">&quot;<sp/>CURRENT_ABI_VERSION)</highlight></codeline>
+<codeline lineno="170"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="171"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(LIBRARY_VERSION<sp/>VERSION_GREATER<sp/>CURRENT_ABI_VERSION)</highlight></codeline>
+<codeline lineno="172"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set(UPDATE_ABI<sp/>TRUE)</highlight></codeline>
+<codeline lineno="173"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>endif<sp/>()</highlight></codeline>
+<codeline lineno="174"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="175"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(UPDATE_ABI)</highlight></codeline>
+<codeline lineno="176"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message(STATUS<sp/>&quot;</highlight><highlight class="normal">Library<sp/>version<sp/>bumped<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/>${LIBRARY_VERSION}:<sp/>Updating<sp/>ABI</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="177"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="178"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Get<sp/>the<sp/>list<sp/>of<sp/>header<sp/>files</highlight></codeline>
+<codeline lineno="179"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_file_list(${PROJECT_NAME}_header_list</highlight></codeline>
+<codeline lineno="180"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DIRECTORIES<sp/>&quot;</highlight><highlight class="normal">${CMAKE_SOURCE_DIR}/<ref refid="CMakeLists_8txt_1a43859916ccd4829cabb8ffff7e1328d5" kindref="member">include</ref>/libssh</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="181"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILES_PATTERNS<sp/>&quot;</highlight><highlight class="normal">*.h</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="182"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="183"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Extract<sp/>the<sp/>symbols<sp/>marked<sp/>as<sp/>&quot;</highlight><highlight class="normal"><ref refid="libssh_8h_1a2ba7f29ac0f2b5ef7134243d24888ac5" kindref="member">LIBSSH_API</ref></highlight><highlight class="stringliteral">&quot;<sp/>from<sp/>the<sp/>header<sp/>files</highlight></codeline>
+<codeline lineno="184"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extract_symbols(${PROJECT_NAME}.symbols</highlight></codeline>
+<codeline lineno="185"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HEADERS_LIST<sp/>${PROJECT_NAME}_header_list</highlight></codeline>
+<codeline lineno="186"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILTER_PATTERN<sp/>&quot;</highlight><highlight class="normal"><ref refid="libssh_8h_1a2ba7f29ac0f2b5ef7134243d24888ac5" kindref="member">LIBSSH_API</ref></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="187"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COPY_TO<sp/>&quot;</highlight><highlight class="normal">${CMAKE_SOURCE_DIR}/src/ABI/${PROJECT_NAME}-${LIBRARY_VERSION}.symbols</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="188"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="189"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(WITH_ABI_BREAK)</highlight></codeline>
+<codeline lineno="190"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set(ALLOW_ABI_BREAK<sp/>&quot;</highlight><highlight class="normal">BREAK_ABI</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="191"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>endif()</highlight></codeline>
+<codeline lineno="192"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="193"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Target<sp/>we<sp/>can<sp/>depend<sp/>on<sp/>in<sp/>&apos;make<sp/>dist&apos;</highlight></codeline>
+<codeline lineno="194"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set(_SYMBOL_TARGET<sp/>&quot;</highlight><highlight class="normal">${PROJECT_NAME}.map</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="195"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="196"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Set<sp/>the<sp/>path<sp/>to<sp/>the<sp/>current<sp/>map<sp/>file</highlight></codeline>
+<codeline lineno="197"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set(MAP_PATH<sp/>&quot;</highlight><highlight class="normal">${CMAKE_SOURCE_DIR}/src/${_SYMBOL_TARGET}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="198"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="199"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Generate<sp/>the<sp/>symbol<sp/>version<sp/>map<sp/>file</highlight></codeline>
+<codeline lineno="200"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generate_map_file(${_SYMBOL_TARGET}</highlight></codeline>
+<codeline lineno="201"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SYMBOLS<sp/>${PROJECT_NAME}.symbols</highlight></codeline>
+<codeline lineno="202"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RELEASE_NAME_VERSION<sp/>${PROJECT_NAME}_${LIBRARY_VERSION}</highlight></codeline>
+<codeline lineno="203"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CURRENT_MAP<sp/>${MAP_PATH}</highlight></codeline>
+<codeline lineno="204"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COPY_TO<sp/>${MAP_PATH}</highlight></codeline>
+<codeline lineno="205"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FINAL</highlight></codeline>
+<codeline lineno="206"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${ALLOW_ABI_BREAK})</highlight></codeline>
+<codeline lineno="207"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="208"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Write<sp/>the<sp/>current<sp/>version<sp/>to<sp/>the<sp/>source</highlight></codeline>
+<codeline lineno="209"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file(WRITE<sp/>${current_abi_path}<sp/>${LIBRARY_VERSION})</highlight></codeline>
+<codeline lineno="210"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>endif(UPDATE_ABI)</highlight></codeline>
+<codeline lineno="211"><highlight class="stringliteral">endif<sp/>(WITH_SYMBOL_VERSIONING<sp/>AND<sp/>ABIMAP_FOUND)</highlight></codeline>
+<codeline lineno="212"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="213"><highlight class="stringliteral">add_custom_target(dist<sp/>COMMAND<sp/>${CMAKE_MAKE_PROGRAM}<sp/>package_source<sp/>DEPENDS<sp/>${_SYMBOL_TARGET})</highlight></codeline>
+<codeline lineno="214"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="215"><highlight class="stringliteral">#<sp/>Link<sp/>compile<sp/>database<sp/>for<sp/>clangd</highlight></codeline>
+<codeline lineno="216"><highlight class="stringliteral">execute_process(COMMAND<sp/>cmake<sp/>-E<sp/>create_symlink</highlight></codeline>
+<codeline lineno="217"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">${CMAKE_BINARY_DIR}/compile_commands.json</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="218"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">${CMAKE_SOURCE_DIR}/compile_commands.json</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="219"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="220"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">********************************************</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="221"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">**********<sp/>${PROJECT_NAME}<sp/>build<sp/><ref refid="test__ssh__bind__accept__fd_8c_1ae9872726570c0d0d80fd77fd4b1de0b1" kindref="member">options</ref><sp/>:<sp/>**********</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="222"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="223"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">zlib<sp/>support:<sp/>${WITH_ZLIB}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="224"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">libgcrypt<sp/>support:<sp/>${WITH_GCRYPT}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="225"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">libmbedTLS<sp/>support:<sp/>${WITH_MBEDTLS}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="226"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">libnacl<sp/>support:<sp/>${WITH_NACL}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="227"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">SFTP<sp/>support:<sp/>${WITH_SFTP}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="228"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Server<sp/>support<sp/>:<sp/>${WITH_SERVER}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="229"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">GSSAPI<sp/>support<sp/>:<sp/>${WITH_GSSAPI}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="230"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">GEX<sp/>support<sp/>:<sp/>${WITH_GEX}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="231"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Pcap<sp/>debugging<sp/>support<sp/>:<sp/>${WITH_PCAP}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="232"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Build<sp/>shared<sp/>library:<sp/>${BUILD_SHARED_LIBS}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="233"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Unit<sp/>testing:<sp/>${UNIT_TESTING}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="234"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Client<sp/>code<sp/>testing:<sp/>${CLIENT_TESTING}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="235"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Blowfish<sp/>cipher<sp/>support:<sp/>${WITH_BLOWFISH_CIPHER}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="236"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">PKCS<sp/>#11<sp/>URI<sp/>support:<sp/>${WITH_PKCS11_URI}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="237"><highlight class="stringliteral">set(_SERVER_TESTING<sp/>OFF)</highlight></codeline>
+<codeline lineno="238"><highlight class="stringliteral">if<sp/>(WITH_SERVER)</highlight></codeline>
+<codeline lineno="239"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>set(_SERVER_TESTING<sp/>${SERVER_TESTING})</highlight></codeline>
+<codeline lineno="240"><highlight class="stringliteral">endif()</highlight></codeline>
+<codeline lineno="241"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Server<sp/>code<sp/>testing:<sp/>${_SERVER_TESTING}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="242"><highlight class="stringliteral">if<sp/>(WITH_INTERNAL_DOC)</highlight></codeline>
+<codeline lineno="243"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>message(STATUS<sp/>&quot;</highlight><highlight class="normal">Internal<sp/>documentation<sp/>generation</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="244"><highlight class="stringliteral">else<sp/>(WITH_INTERNAL_DOC)</highlight></codeline>
+<codeline lineno="245"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>message(STATUS<sp/>&quot;</highlight><highlight class="normal">Public<sp/>API<sp/>documentation<sp/>generation</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="246"><highlight class="stringliteral">endif<sp/>(WITH_INTERNAL_DOC)</highlight></codeline>
+<codeline lineno="247"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Benchmarks:<sp/>${WITH_BENCHMARKS}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="248"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Symbol<sp/>versioning:<sp/>${WITH_SYMBOL_VERSIONING}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="249"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Allow<sp/>ABI<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">:<sp/>${WITH_ABI_BREAK}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="250"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Release<sp/>is<sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">:<sp/>${WITH_FINAL}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="251"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Global<sp/><ref refid="ssh__client_8c_1a0d3591711bd7d6cb03d42294115721bb" kindref="member">client</ref><sp/>config:<sp/>${GLOBAL_CLIENT_CONFIG}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="252"><highlight class="stringliteral">if<sp/>(WITH_SERVER)</highlight></codeline>
+<codeline lineno="253"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">Global<sp/>bind<sp/>config:<sp/>${GLOBAL_BIND_CONFIG}</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="254"><highlight class="stringliteral">endif()</highlight></codeline>
+<codeline lineno="255"><highlight class="stringliteral">message(STATUS<sp/>&quot;</highlight><highlight class="normal">********************************************</highlight><highlight class="stringliteral">&quot;)</highlight></codeline>
+<codeline lineno="256"><highlight class="stringliteral"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

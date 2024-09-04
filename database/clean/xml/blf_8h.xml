@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="blf_8h" kind="file" language="C++">
+    <compoundname>blf.h</compoundname>
+    <includedby refid="bcrypt__pbkdf_8c" local="yes">src/external/bcrypt_pbkdf.c</includedby>
+    <includedby refid="blowfish_8c" local="yes">src/external/blowfish.c</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/external/blowfish.c</label>
+        <link refid="blowfish_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/blf.h</label>
+        <link refid="blf_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structBlowfishContext" prot="public">BlowfishContext</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="blf_8h_1a3c149435d089cd450daebdac09219dca" prot="public" static="no">
+        <name>BLF_N</name>
+        <initializer>16			/* Number of Subkeys */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="48" column="9" bodyfile="include/libssh/blf.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="blf_8h_1a66e92d34ddaca02a8ec5ae254145b91a" prot="public" static="no">
+        <name>BLF_MAXKEYLEN</name>
+        <initializer>((<ref refid="blf_8h_1a3c149435d089cd450daebdac09219dca" kindref="member">BLF_N</ref>-2)*4)	/* 448 <ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" kindref="member">bits</ref> */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="49" column="9" bodyfile="include/libssh/blf.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="blf_8h_1a8eaeccc32495ec46ec460ce38391f605" prot="public" static="no">
+        <name>BLF_MAXUTILIZED</name>
+        <initializer>((<ref refid="blf_8h_1a3c149435d089cd450daebdac09219dca" kindref="member">BLF_N</ref>+2)*4)	/* 576 <ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" kindref="member">bits</ref> */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="50" column="9" bodyfile="include/libssh/blf.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" prot="public" static="no">
+        <type>struct <ref refid="structBlowfishContext" kindref="compound">BlowfishContext</ref></type>
+        <definition>typedef struct BlowfishContext ssh_blf_ctx</definition>
+        <argsstring></argsstring>
+        <name>ssh_blf_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="56" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="blf_8h_1a77b4333c7dc134d1c3941e4a4e5faf7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Blowfish_encipher</definition>
+        <argsstring>(ssh_blf_ctx *, uint32_t *, uint32_t *)</argsstring>
+        <name>Blowfish_encipher</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>xl</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>xr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="64" column="6" bodyfile="src/external/blowfish.c" bodystart="73" bodyend="95" declfile="include/libssh/blf.h" declline="64" declcolumn="6"/>
+        <references refid="blowfish_8c_1a1271311db1fab21e96eeebc31a4b222f" compoundref="blowfish_8c" startline="70">BLFRND</references>
+        <references refid="structBlowfishContext_1aa6eda0bb3f34100a12a09dfff8052aaf" compoundref="blf_8h" startline="55">BlowfishContext::P</references>
+        <references refid="structBlowfishContext_1a1bd63c60ffdfb307d642877aa0308299" compoundref="blf_8h" startline="54">BlowfishContext::S</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="blf_8h_1aa8cce9af3a19e8bc8484e147233f4b5a" compoundref="blowfish_8c" startline="423" endline="457">Blowfish_expand0state</referencedby>
+        <referencedby refid="blf_8h_1aaab094bba44b8d36b4201ba7f1ce685c" compoundref="blowfish_8c" startline="461" endline="501">Blowfish_expandstate</referencedby>
+        <referencedby refid="blf_8h_1a223c8d44d4a4015b614a5380beecd824" compoundref="blowfish_8c" startline="584" endline="606">ssh_blf_cbc_encrypt</referencedby>
+        <referencedby refid="blf_8h_1a6272275704aaf082a99f1e2b245fa9bf" compoundref="blowfish_8c" startline="540" endline="559">ssh_blf_ecb_encrypt</referencedby>
+        <referencedby refid="blf_8h_1a4fcd0cacde54f41954dd4570caee22f3" compoundref="blowfish_8c" startline="514" endline="524">ssh_blf_enc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a0c2a87e3c379917708b27c9632089655" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Blowfish_decipher</definition>
+        <argsstring>(ssh_blf_ctx *, uint32_t *, uint32_t *)</argsstring>
+        <name>Blowfish_decipher</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>xl</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>xr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="65" column="6" bodyfile="src/external/blowfish.c" bodystart="98" bodyend="120" declfile="include/libssh/blf.h" declline="65" declcolumn="6"/>
+        <references refid="blowfish_8c_1a1271311db1fab21e96eeebc31a4b222f" compoundref="blowfish_8c" startline="70">BLFRND</references>
+        <references refid="structBlowfishContext_1aa6eda0bb3f34100a12a09dfff8052aaf" compoundref="blf_8h" startline="55">BlowfishContext::P</references>
+        <references refid="structBlowfishContext_1a1bd63c60ffdfb307d642877aa0308299" compoundref="blf_8h" startline="54">BlowfishContext::S</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="blf_8h_1a793385bdb5692be78ca0ce3d13dbe4c7" compoundref="blowfish_8c" startline="609" endline="647">ssh_blf_cbc_decrypt</referencedby>
+        <referencedby refid="blf_8h_1ae2ec5d9c6b5cb7391c646dbb502fb0e7" compoundref="blowfish_8c" startline="527" endline="537">ssh_blf_dec</referencedby>
+        <referencedby refid="blf_8h_1a38c1d35fcfa8027ddfd503ca21815521" compoundref="blowfish_8c" startline="562" endline="581">ssh_blf_ecb_decrypt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a80e3f4d9dfde1f813c9a0d0e8ae90faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Blowfish_initstate</definition>
+        <argsstring>(ssh_blf_ctx *)</argsstring>
+        <name>Blowfish_initstate</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="66" column="6" bodyfile="src/external/blowfish.c" bodystart="123" bodyend="399" declfile="include/libssh/blf.h" declline="66" declcolumn="6"/>
+        <referencedby refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" compoundref="bcrypt__pbkdf_8c" startline="66" endline="104">bcrypt_hash</referencedby>
+        <referencedby refid="blf_8h_1a2d76d226fac836aeb26301c30b4cbf67" compoundref="blowfish_8c" startline="504" endline="511">ssh_blf_key</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1aa8cce9af3a19e8bc8484e147233f4b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Blowfish_expand0state</definition>
+        <argsstring>(ssh_blf_ctx *, const uint8_t *, uint16_t)</argsstring>
+        <name>Blowfish_expand0state</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>keybytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="67" column="6" bodyfile="src/external/blowfish.c" bodystart="423" bodyend="457" declfile="include/libssh/blf.h" declline="67" declcolumn="6"/>
+        <references refid="blf_8h_1a3c149435d089cd450daebdac09219dca" compoundref="blf_8h" startline="48">BLF_N</references>
+        <references refid="blowfish_8c_1a5cd46a230b5c36e88603a03cf32f350a" compoundref="blowfish_8c" startline="73" endline="95">Blowfish_encipher</references>
+        <references refid="blowfish_8c_1ae124259f766fc3bdc9a212f768d27b73" compoundref="blowfish_8c" startline="402" endline="420">Blowfish_stream2word</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="105">k</references>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="structBlowfishContext_1aa6eda0bb3f34100a12a09dfff8052aaf" compoundref="blf_8h" startline="55">BlowfishContext::P</references>
+        <references refid="structBlowfishContext_1a1bd63c60ffdfb307d642877aa0308299" compoundref="blf_8h" startline="54">BlowfishContext::S</references>
+        <referencedby refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" compoundref="bcrypt__pbkdf_8c" startline="66" endline="104">bcrypt_hash</referencedby>
+        <referencedby refid="blf_8h_1a2d76d226fac836aeb26301c30b4cbf67" compoundref="blowfish_8c" startline="504" endline="511">ssh_blf_key</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1aaab094bba44b8d36b4201ba7f1ce685c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Blowfish_expandstate</definition>
+        <argsstring>(ssh_blf_ctx *, const uint8_t *, uint16_t, const uint8_t *, uint16_t)</argsstring>
+        <name>Blowfish_expandstate</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>databytes</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>keybytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="68" column="6" bodyfile="src/external/blowfish.c" bodystart="461" bodyend="501" declfile="include/libssh/blf.h" declline="68" declcolumn="6"/>
+        <references refid="blf_8h_1a3c149435d089cd450daebdac09219dca" compoundref="blf_8h" startline="48">BLF_N</references>
+        <references refid="blowfish_8c_1a5cd46a230b5c36e88603a03cf32f350a" compoundref="blowfish_8c" startline="73" endline="95">Blowfish_encipher</references>
+        <references refid="blowfish_8c_1ae124259f766fc3bdc9a212f768d27b73" compoundref="blowfish_8c" startline="402" endline="420">Blowfish_stream2word</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="105">k</references>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="structBlowfishContext_1aa6eda0bb3f34100a12a09dfff8052aaf" compoundref="blf_8h" startline="55">BlowfishContext::P</references>
+        <references refid="structBlowfishContext_1a1bd63c60ffdfb307d642877aa0308299" compoundref="blf_8h" startline="54">BlowfishContext::S</references>
+        <referencedby refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" compoundref="bcrypt__pbkdf_8c" startline="66" endline="104">bcrypt_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a2d76d226fac836aeb26301c30b4cbf67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_blf_key</definition>
+        <argsstring>(ssh_blf_ctx *, const uint8_t *, uint16_t)</argsstring>
+        <name>ssh_blf_key</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="73" column="6" bodyfile="src/external/blowfish.c" bodystart="504" bodyend="511" declfile="include/libssh/blf.h" declline="73" declcolumn="6"/>
+        <references refid="blowfish_8c_1a72e27c2b1a367c15d7efffda4730eaec" compoundref="blowfish_8c" startline="423" endline="457">Blowfish_expand0state</references>
+        <references refid="blowfish_8c_1ae921e6b618b5a8067de51fb399c58ecc" compoundref="blowfish_8c" startline="123" endline="399">Blowfish_initstate</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="105">k</references>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a4fcd0cacde54f41954dd4570caee22f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_blf_enc</definition>
+        <argsstring>(ssh_blf_ctx *, uint32_t *, uint16_t)</argsstring>
+        <name>ssh_blf_enc</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="74" column="6" bodyfile="src/external/blowfish.c" bodystart="514" bodyend="524" declfile="include/libssh/blf.h" declline="74" declcolumn="6"/>
+        <references refid="blowfish_8c_1a5cd46a230b5c36e88603a03cf32f350a" compoundref="blowfish_8c" startline="73" endline="95">Blowfish_encipher</references>
+        <referencedby refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" compoundref="bcrypt__pbkdf_8c" startline="66" endline="104">bcrypt_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1ae2ec5d9c6b5cb7391c646dbb502fb0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_blf_dec</definition>
+        <argsstring>(ssh_blf_ctx *, uint32_t *, uint16_t)</argsstring>
+        <name>ssh_blf_dec</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="75" column="6" bodyfile="src/external/blowfish.c" bodystart="527" bodyend="537" declfile="include/libssh/blf.h" declline="75" declcolumn="6"/>
+        <references refid="blowfish_8c_1a3a75c28728753d63ca0f55d0d1882edf" compoundref="blowfish_8c" startline="98" endline="120">Blowfish_decipher</references>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a6272275704aaf082a99f1e2b245fa9bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_blf_ecb_encrypt</definition>
+        <argsstring>(ssh_blf_ctx *, uint8_t *, uint32_t)</argsstring>
+        <name>ssh_blf_ecb_encrypt</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="77" column="6" bodyfile="src/external/blowfish.c" bodystart="540" bodyend="559" declfile="include/libssh/blf.h" declline="77" declcolumn="6"/>
+        <references refid="blowfish_8c_1a5cd46a230b5c36e88603a03cf32f350a" compoundref="blowfish_8c" startline="73" endline="95">Blowfish_encipher</references>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a38c1d35fcfa8027ddfd503ca21815521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_blf_ecb_decrypt</definition>
+        <argsstring>(ssh_blf_ctx *, uint8_t *, uint32_t)</argsstring>
+        <name>ssh_blf_ecb_decrypt</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="78" column="6" bodyfile="src/external/blowfish.c" bodystart="562" bodyend="581" declfile="include/libssh/blf.h" declline="78" declcolumn="6"/>
+        <references refid="blowfish_8c_1a3a75c28728753d63ca0f55d0d1882edf" compoundref="blowfish_8c" startline="98" endline="120">Blowfish_decipher</references>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a223c8d44d4a4015b614a5380beecd824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_blf_cbc_encrypt</definition>
+        <argsstring>(ssh_blf_ctx *, uint8_t *, uint8_t *, uint32_t)</argsstring>
+        <name>ssh_blf_cbc_encrypt</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="80" column="6" bodyfile="src/external/blowfish.c" bodystart="584" bodyend="606" declfile="include/libssh/blf.h" declline="80" declcolumn="6"/>
+        <references refid="blowfish_8c_1a5cd46a230b5c36e88603a03cf32f350a" compoundref="blowfish_8c" startline="73" endline="95">Blowfish_encipher</references>
+        <references refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" compoundref="torture__packet_8c" startline="20">iv</references>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a793385bdb5692be78ca0ce3d13dbe4c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_blf_cbc_decrypt</definition>
+        <argsstring>(ssh_blf_ctx *, uint8_t *, uint8_t *, uint32_t)</argsstring>
+        <name>ssh_blf_cbc_decrypt</name>
+        <param>
+          <type><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>iva</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="81" column="6" bodyfile="src/external/blowfish.c" bodystart="609" bodyend="647" declfile="include/libssh/blf.h" declline="81" declcolumn="6"/>
+        <references refid="blowfish_8c_1a3a75c28728753d63ca0f55d0d1882edf" compoundref="blowfish_8c" startline="98" endline="120">Blowfish_decipher</references>
+        <references refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" compoundref="torture__packet_8c" startline="20">iv</references>
+      </memberdef>
+      <memberdef kind="function" id="blf_8h_1a6d06915889b2c3c1fa46df6e13eea02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Blowfish_stream2word</definition>
+        <argsstring>(const uint8_t *, uint16_t, uint16_t *)</argsstring>
+        <name>Blowfish_stream2word</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>databytes</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>current</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/blf.h" line="84" column="10" bodyfile="src/external/blowfish.c" bodystart="402" bodyend="420" declfile="include/libssh/blf.h" declline="84" declcolumn="10"/>
+        <referencedby refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" compoundref="bcrypt__pbkdf_8c" startline="66" endline="104">bcrypt_hash</referencedby>
+        <referencedby refid="blf_8h_1aa8cce9af3a19e8bc8484e147233f4b5a" compoundref="blowfish_8c" startline="423" endline="457">Blowfish_expand0state</referencedby>
+        <referencedby refid="blf_8h_1aaab094bba44b8d36b4201ba7f1ce685c" compoundref="blowfish_8c" startline="461" endline="501">Blowfish_expandstate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$OpenBSD:<sp/>blf.h,v<sp/>1.7<sp/>2007/03/14<sp/>17:59:41<sp/>grunk<sp/>Exp<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Blowfish<sp/>-<sp/>a<sp/>fast<sp/>block<sp/>cipher<sp/>designed<sp/>by<sp/>Bruce<sp/>Schneier</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>1997<sp/>Niels<sp/>Provos<sp/>&lt;provos@physnet.uni-hamburg.de&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>3.<sp/>All<sp/>advertising<sp/>materials<sp/>mentioning<sp/>features<sp/>or<sp/>use<sp/>of<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>must<sp/>display<sp/>the<sp/>following<sp/>acknowledgement:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>product<sp/>includes<sp/>software<sp/>developed<sp/>by<sp/>Niels<sp/>Provos.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>4.<sp/>The<sp/>name<sp/>of<sp/>the<sp/>author<sp/>may<sp/>not<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_BLF_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BLF_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;includes.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HAVE_BCRYPT_PBKDF)<sp/>&amp;&amp;<sp/>!defined(HAVE_BLH_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Schneier<sp/>specifies<sp/>a<sp/>maximum<sp/>key<sp/>length<sp/>of<sp/>56<sp/>bytes.</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>This<sp/>ensures<sp/>that<sp/>every<sp/>key<sp/>bit<sp/>affects<sp/>every<sp/>cipher</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>bit.<sp/><sp/>However,<sp/>the<sp/>subkeys<sp/>can<sp/>hold<sp/>up<sp/>to<sp/>72<sp/>bytes.</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>Warning:<sp/>For<sp/>normal<sp/>blowfish<sp/>encryption<sp/>only<sp/>56<sp/>bytes</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>of<sp/>the<sp/>key<sp/>affect<sp/>all<sp/>cipherbits.</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="blf_8h_1a3c149435d089cd450daebdac09219dca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLF_N<sp/><sp/><sp/>16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>Subkeys<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="blf_8h_1a66e92d34ddaca02a8ec5ae254145b91a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLF_MAXKEYLEN<sp/>((BLF_N-2)*4)<sp/></highlight><highlight class="comment">/*<sp/>448<sp/>bits<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="blf_8h_1a8eaeccc32495ec46ec460ce38391f605" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLF_MAXUTILIZED<sp/>((BLF_N+2)*4)<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>576<sp/>bits<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Blowfish<sp/>context<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structBlowfishContext" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structBlowfishContext" kindref="compound">BlowfishContext</ref><sp/>{</highlight></codeline>
+<codeline lineno="54" refid="structBlowfishContext_1a1bd63c60ffdfb307d642877aa0308299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structBlowfishContext_1a1bd63c60ffdfb307d642877aa0308299" kindref="member">S</ref>[4][256];<sp/></highlight><highlight class="comment">/*<sp/>S-Boxes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structBlowfishContext_1aa6eda0bb3f34100a12a09dfff8052aaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structBlowfishContext_1aa6eda0bb3f34100a12a09dfff8052aaf" kindref="member">P</ref>[<ref refid="blf_8h_1a3c149435d089cd450daebdac09219dca" kindref="member">BLF_N</ref><sp/>+<sp/>2];<sp/><sp/></highlight><highlight class="comment">/*<sp/>Subkeys<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" refkind="member"><highlight class="normal">}<sp/><ref refid="blf_8h_1af541b427cee16bcd4a793fc8a81751c2" kindref="member">ssh_blf_ctx</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Raw<sp/>access<sp/>to<sp/>customized<sp/>Blowfish</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*<sp/><sp/>blf_key<sp/>is<sp/>just:</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/><sp/>Blowfish_initstate(<sp/>state<sp/>)</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/><sp/>Blowfish_expand0state(<sp/>state,<sp/>key,<sp/>keylen<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a77b4333c7dc134d1c3941e4a4e5faf7f" kindref="member">Blowfish_encipher</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint32_t<sp/>*,<sp/>uint32_t<sp/>*);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a0c2a87e3c379917708b27c9632089655" kindref="member">Blowfish_decipher</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint32_t<sp/>*,<sp/>uint32_t<sp/>*);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a80e3f4d9dfde1f813c9a0d0e8ae90faf" kindref="member">Blowfish_initstate</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1aa8cce9af3a19e8bc8484e147233f4b5a" kindref="member">Blowfish_expand0state</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*,<sp/>uint16_t);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1aaab094bba44b8d36b4201ba7f1ce685c" kindref="member">Blowfish_expandstate</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*,<sp/>uint16_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*,<sp/>uint16_t);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Standard<sp/>Blowfish<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a2d76d226fac836aeb26301c30b4cbf67" kindref="member">ssh_blf_key</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*,<sp/>uint16_t);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a4fcd0cacde54f41954dd4570caee22f3" kindref="member">ssh_blf_enc</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint32_t<sp/>*,<sp/>uint16_t);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1ae2ec5d9c6b5cb7391c646dbb502fb0e7" kindref="member">ssh_blf_dec</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint32_t<sp/>*,<sp/>uint16_t);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a6272275704aaf082a99f1e2b245fa9bf" kindref="member">ssh_blf_ecb_encrypt</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint8_t<sp/>*,<sp/>uint32_t);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a38c1d35fcfa8027ddfd503ca21815521" kindref="member">ssh_blf_ecb_decrypt</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint8_t<sp/>*,<sp/>uint32_t);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a223c8d44d4a4015b614a5380beecd824" kindref="member">ssh_blf_cbc_encrypt</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint8_t<sp/>*,<sp/>uint8_t<sp/>*,<sp/>uint32_t);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="blf_8h_1a793385bdb5692be78ca0ce3d13dbe4c7" kindref="member">ssh_blf_cbc_decrypt</ref>(<ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>*,<sp/>uint8_t<sp/>*,<sp/>uint8_t<sp/>*,<sp/>uint32_t);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Converts<sp/>uint8_t<sp/>to<sp/>uint32_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">uint32_t<sp/><ref refid="blf_8h_1a6d06915889b2c3c1fa46df6e13eea02f" kindref="member">Blowfish_stream2word</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*,<sp/>uint16_t<sp/>,<sp/>uint16_t<sp/>*);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!defined(HAVE_BCRYPT_PBKDF)<sp/>&amp;&amp;<sp/>!defined(HAVE_BLH_H)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_BLF_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/blf.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="config__parser_8h" kind="file" language="C++">
+    <compoundname>config_parser.h</compoundname>
+    <includedby refid="bind__config_8c" local="yes">src/bind_config.c</includedby>
+    <includedby refid="config_8c" local="yes">src/config.c</includedby>
+    <includedby refid="config__parser_8c" local="yes">src/config_parser.c</includedby>
+    <includedby refid="torture__config_8c" local="yes">tests/unittests/torture_config.c</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/config.c</label>
+        <link refid="config_8c"/>
+      </node>
+      <node id="2">
+        <label>src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="4">
+        <label>src/config_parser.c</label>
+        <link refid="config__parser_8c"/>
+      </node>
+      <node id="5">
+        <label>tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/config_parser.h</label>
+        <link refid="config__parser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="config__parser_8h_1a2e6c83d68e5a23ab84277e409a95c4bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_config_get_cmd</definition>
+        <argsstring>(char **str)</argsstring>
+        <name>ssh_config_get_cmd</name>
+        <param>
+          <type>char **</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/config_parser.h" line="29" column="6" bodyfile="src/config_parser.c" bodystart="39" bodyend="71" declfile="include/libssh/config_parser.h" declline="29" declcolumn="6"/>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+        <referencedby refid="torture__config_8c_1a5f07f690fb5f645b913ae6ab8b2444e3" compoundref="torture__config_8c" startline="959" endline="996">torture_config_parser_get_cmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="config__parser_8h_1ab243b2c69ba58d77fb6c1aa7328f6d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_config_get_token</definition>
+        <argsstring>(char **str)</argsstring>
+        <name>ssh_config_get_token</name>
+        <param>
+          <type>char **</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/config_parser.h" line="31" column="6" bodyfile="src/config_parser.c" bodystart="76" bodyend="110" declfile="include/libssh/config_parser.h" declline="31" declcolumn="6"/>
+        <referencedby refid="bind__config_8c_1a776c5b828c6b7f65751146ae165c7d1f" compoundref="bind__config_8c" startline="271" endline="603">ssh_bind_config_parse_line</referencedby>
+        <referencedby refid="config__parser_8h_1ae17e112d8b6a5b169afb9f47742a1b8f" compoundref="config__parser_8c" startline="112" endline="127">ssh_config_get_long</referencedby>
+        <referencedby refid="config__parser_8h_1a6fe5951d68ad9470f40ee342c9e530b2" compoundref="config__parser_8c" startline="129" endline="139">ssh_config_get_str_tok</referencedby>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+        <referencedby refid="torture__config_8c_1a43720736dcde7340cbc95df75cf5d094" compoundref="torture__config_8c" startline="1002" endline="1074">torture_config_parser_get_token</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="config__parser_8h_1ae17e112d8b6a5b169afb9f47742a1b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long ssh_config_get_long</definition>
+        <argsstring>(char **str, long notfound)</argsstring>
+        <name>ssh_config_get_long</name>
+        <param>
+          <type>char **</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>notfound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/config_parser.h" line="33" column="6" bodyfile="src/config_parser.c" bodystart="112" bodyend="127" declfile="include/libssh/config_parser.h" declline="33" declcolumn="6"/>
+        <references refid="config__parser_8c_1ab243b2c69ba58d77fb6c1aa7328f6d6b" compoundref="config__parser_8c" startline="76" endline="110">ssh_config_get_token</references>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="config__parser_8h_1a6fe5951d68ad9470f40ee342c9e530b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_config_get_str_tok</definition>
+        <argsstring>(char **str, const char *def)</argsstring>
+        <name>ssh_config_get_str_tok</name>
+        <param>
+          <type>char **</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>def</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/config_parser.h" line="35" column="12" bodyfile="src/config_parser.c" bodystart="129" bodyend="139" declfile="include/libssh/config_parser.h" declline="35" declcolumn="12"/>
+        <references refid="config__parser_8c_1ab243b2c69ba58d77fb6c1aa7328f6d6b" compoundref="config__parser_8c" startline="76" endline="110">ssh_config_get_token</references>
+        <referencedby refid="bind__config_8c_1a776c5b828c6b7f65751146ae165c7d1f" compoundref="bind__config_8c" startline="271" endline="603">ssh_bind_config_parse_line</referencedby>
+        <referencedby refid="config__parser_8h_1a8169f71e67b82dccc123b6159e24ee45" compoundref="config__parser_8c" startline="141" endline="157">ssh_config_get_yesno</referencedby>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="config__parser_8h_1a8169f71e67b82dccc123b6159e24ee45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_config_get_yesno</definition>
+        <argsstring>(char **str, int notfound)</argsstring>
+        <name>ssh_config_get_yesno</name>
+        <param>
+          <type>char **</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>notfound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/config_parser.h" line="37" column="5" bodyfile="src/config_parser.c" bodystart="141" bodyend="157" declfile="include/libssh/config_parser.h" declline="37" declcolumn="5"/>
+        <references refid="config__parser_8c_1a6fe5951d68ad9470f40ee342c9e530b2" compoundref="config__parser_8c" startline="129" endline="139">ssh_config_get_str_tok</references>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="config__parser_8h_1a45ac269803783babc1fc14db0b8fc732" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_config_parse_uri</definition>
+        <argsstring>(const char *tok, char **username, char **hostname, char **port)</argsstring>
+        <name>ssh_config_parse_uri</name>
+        <param>
+          <type>const char *</type>
+          <declname>tok</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/config_parser.h" line="52" column="5" bodyfile="src/config_parser.c" bodystart="159" bodyend="262" declfile="include/libssh/config_parser.h" declline="52" declcolumn="5"/>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" compoundref="sshnetcat_8c" startline="39">port</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__misc_1ga8b860ba32fef12da8acd4507c059e509" compoundref="misc_8c" startline="1478" endline="1495">strndup</references>
+        <references refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" compoundref="proxy_8c" startline="35">username</references>
+        <referencedby refid="config_8c_1a9d8669375c734bad778bb45a26c39f37" compoundref="config_8c" startline="421" endline="505">ssh_config_parse_proxy_jump</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>config_parser.h<sp/>-<sp/>Common<sp/>configuration<sp/>file<sp/>parser<sp/>functions</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2019<sp/>by<sp/>Red<sp/>Hat,<sp/>Inc.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Anderson<sp/>Toshiyuki<sp/>Sasaki<sp/>&lt;ansasaki@redhat.com&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_PARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIG_PARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="config__parser_8h_1a2e6c83d68e5a23ab84277e409a95c4bf" kindref="member">ssh_config_get_cmd</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**str);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="config__parser_8h_1ab243b2c69ba58d77fb6c1aa7328f6d6b" kindref="member">ssh_config_get_token</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**str);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="config__parser_8h_1ae17e112d8b6a5b169afb9f47742a1b8f" kindref="member">ssh_config_get_long</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**str,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>notfound);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="config__parser_8h_1a6fe5951d68ad9470f40ee342c9e530b2" kindref="member">ssh_config_get_str_tok</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**str,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*def);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="config__parser_8h_1a8169f71e67b82dccc123b6159e24ee45" kindref="member">ssh_config_get_yesno</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**str,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>notfound);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@brief<sp/>Parse<sp/>SSH<sp/>URI<sp/>in<sp/>format<sp/>[user@]host[:port]<sp/>from<sp/>the<sp/>given<sp/>string</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/><sp/><sp/>tok<sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>to<sp/>parse</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>@param[out]<sp/><sp/>username<sp/>Pointer<sp/>to<sp/>the<sp/>location,<sp/>where<sp/>the<sp/>new<sp/>username<sp/>will</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>be<sp/>stored<sp/>or<sp/>NULL<sp/>if<sp/>we<sp/>do<sp/>not<sp/>care<sp/>about<sp/>the<sp/>result.</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>@param[out]<sp/><sp/>hostname<sp/>Pointer<sp/>to<sp/>the<sp/>location,<sp/>where<sp/>the<sp/>new<sp/>hostname<sp/>will</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>be<sp/>stored<sp/>or<sp/>NULL<sp/>if<sp/>we<sp/>do<sp/>not<sp/>care<sp/>about<sp/>the<sp/>result.</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>@param[out]<sp/><sp/>port<sp/><sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>location,<sp/>where<sp/>the<sp/>new<sp/>port<sp/>will</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>be<sp/>stored<sp/>or<sp/>NULL<sp/>if<sp/>we<sp/>do<sp/>not<sp/>care<sp/>about<sp/>the<sp/>result.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>@returns<sp/><sp/><sp/><sp/><sp/>SSH_OK<sp/>if<sp/>the<sp/>provided<sp/>string<sp/>is<sp/>in<sp/>format<sp/>of<sp/>SSH<sp/>URI,</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SSH_ERROR<sp/>on<sp/>failure</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="config__parser_8h_1a45ac269803783babc1fc14db0b8fc732" kindref="member">ssh_config_parse_uri</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tok,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="proxy_8c_1a9b20c006bd90a09e1465fb668700e81d" kindref="member">username</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**hostname,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" kindref="member">port</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LIBSSH_CONFIG_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/config_parser.h"/>
+  </compounddef>
+</doxygen>

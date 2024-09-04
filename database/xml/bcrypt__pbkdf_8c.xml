@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="bcrypt__pbkdf_8c" kind="file" language="C++">
+    <compoundname>bcrypt_pbkdf.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="wrapper_8h" local="yes">libssh/wrapper.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes refid="blf_8h" local="yes">libssh/blf.h</includes>
+    <includes refid="pki__priv_8h" local="yes">libssh/pki_priv.h</includes>
+    <incdepgraph>
+      <node id="16">
+        <label>stdbool.h</label>
+      </node>
+      <node id="11">
+        <label>sys/select.h</label>
+      </node>
+      <node id="22">
+        <label>libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libssh/blf.h</label>
+        <link refid="blf_8h"/>
+      </node>
+      <node id="17">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>netdb.h</label>
+      </node>
+      <node id="25">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>sys/types.h</label>
+      </node>
+      <node id="18">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="23">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libssh/ed25519.h</label>
+        <link refid="ed25519_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="21">
+        <label>libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="bcrypt__pbkdf_8c_1a5a8416d0f8e1af6d7525114ef09be118" prot="public" static="no">
+        <name>SHA512_DIGEST_LENGTH</name>
+        <initializer>SHA512_DIGEST_LEN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/bcrypt_pbkdf.c" line="35" column="9" bodyfile="libssh-mirror/src/external/bcrypt_pbkdf.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bcrypt__pbkdf_8c_1a1fb7e27c716d0a71b0ff446fc55237f4" prot="public" static="no">
+        <name>BCRYPT_BLOCKS</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/bcrypt_pbkdf.c" line="62" column="9" bodyfile="libssh-mirror/src/external/bcrypt_pbkdf.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bcrypt__pbkdf_8c_1af6bd351b7874d8a75d0dcad9a5e9631e" prot="public" static="no">
+        <name>BCRYPT_HASHSIZE</name>
+        <initializer>(<ref refid="bcrypt__pbkdf_8c_1a1fb7e27c716d0a71b0ff446fc55237f4" kindref="member">BCRYPT_BLOCKS</ref> * 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/bcrypt_pbkdf.c" line="63" column="9" bodyfile="libssh-mirror/src/external/bcrypt_pbkdf.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bcrypt_hash</definition>
+        <argsstring>(uint8_t *sha2pass, uint8_t *sha2salt, uint8_t *out)</argsstring>
+        <name>bcrypt_hash</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>sha2pass</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>sha2salt</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/bcrypt_pbkdf.c" line="66" column="1" bodyfile="libssh-mirror/src/external/bcrypt_pbkdf.c" bodystart="66" bodyend="104"/>
+        <references refid="bcrypt__pbkdf_8c_1a1fb7e27c716d0a71b0ff446fc55237f4" compoundref="bcrypt__pbkdf_8c" startline="62">BCRYPT_BLOCKS</references>
+        <references refid="bcrypt__pbkdf_8c_1af6bd351b7874d8a75d0dcad9a5e9631e" compoundref="bcrypt__pbkdf_8c" startline="63">BCRYPT_HASHSIZE</references>
+        <references refid="blf_8h_1aa8cce9af3a19e8bc8484e147233f4b5a" compoundref="blowfish_8c" startline="423" endline="457">Blowfish_expand0state</references>
+        <references refid="blf_8h_1aaab094bba44b8d36b4201ba7f1ce685c" compoundref="blowfish_8c" startline="461" endline="501">Blowfish_expandstate</references>
+        <references refid="blf_8h_1a80e3f4d9dfde1f813c9a0d0e8ae90faf" compoundref="blowfish_8c" startline="123" endline="399">Blowfish_initstate</references>
+        <references refid="blf_8h_1a6d06915889b2c3c1fa46df6e13eea02f" compoundref="blowfish_8c" startline="402" endline="420">Blowfish_stream2word</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="bcrypt__pbkdf_8c_1a5a8416d0f8e1af6d7525114ef09be118" compoundref="bcrypt__pbkdf_8c" startline="35">SHA512_DIGEST_LENGTH</references>
+        <references refid="blf_8h_1a4fcd0cacde54f41954dd4570caee22f3" compoundref="blowfish_8c" startline="514" endline="524">ssh_blf_enc</references>
+        <references refid="examples__common_8h_1a01c647179ba7270ccbc9a5253846b3d2" compoundref="examples__common_8h" startline="19">ZERO_STRUCT</references>
+        <referencedby refid="pki__priv_8h_1ab650514d50b19a9f4ebd5322a9b0fc5d" compoundref="bcrypt__pbkdf_8c" startline="107" endline="182">bcrypt_pbkdf</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bcrypt__pbkdf_8c_1ab650514d50b19a9f4ebd5322a9b0fc5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int bcrypt_pbkdf</definition>
+        <argsstring>(const char *pass, size_t passlen, const uint8_t *salt, size_t saltlen, uint8_t *key, size_t keylen, unsigned int rounds)</argsstring>
+        <name>bcrypt_pbkdf</name>
+        <param>
+          <type>const char *</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>passlen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>salt</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>saltlen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keylen</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>rounds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/bcrypt_pbkdf.c" line="107" column="1" bodyfile="libssh-mirror/src/external/bcrypt_pbkdf.c" bodystart="107" bodyend="182"/>
+        <references refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" compoundref="bcrypt__pbkdf_8c" startline="66" endline="104">bcrypt_hash</references>
+        <references refid="bcrypt__pbkdf_8c_1af6bd351b7874d8a75d0dcad9a5e9631e" compoundref="bcrypt__pbkdf_8c" startline="63">BCRYPT_HASHSIZE</references>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="priv_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" compoundref="priv_8h" startline="306">MIN</references>
+        <references refid="bcrypt__pbkdf_8c_1a5a8416d0f8e1af6d7525114ef09be118" compoundref="bcrypt__pbkdf_8c" startline="35">SHA512_DIGEST_LENGTH</references>
+        <references refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db">sha512_final</references>
+        <references refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c">sha512_init</references>
+        <references refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1">sha512_update</references>
+        <referencedby refid="group__libssh__pki_1gae8b8a710eea5b5c36c9e2416cc0734d7" compoundref="pki__container__openssh_8c" startline="101" endline="222">pki_private_key_decrypt</referencedby>
+        <referencedby refid="group__libssh__pki_1gad2addfee75214413f07493a89638350f" compoundref="pki__container__openssh_8c" startline="432" endline="524">pki_private_key_encrypt</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$OpenBSD:<sp/>bcrypt_pbkdf.c,v<sp/>1.4<sp/>2013/07/29<sp/>00:55:53<sp/>tedu<sp/>Exp<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2013<sp/>Ted<sp/>Unangst<sp/>&lt;tedu@openbsd.org&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>and<sp/>distribute<sp/>this<sp/>software<sp/>for<sp/>any</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>purpose<sp/>with<sp/>or<sp/>without<sp/>fee<sp/>is<sp/>hereby<sp/>granted,<sp/>provided<sp/>that<sp/>the<sp/>above</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>appear<sp/>in<sp/>all<sp/>copies.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>THE<sp/>AUTHOR<sp/>DISCLAIMS<sp/>ALL<sp/>WARRANTIES</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>WITH<sp/>REGARD<sp/>TO<sp/>THIS<sp/>SOFTWARE<sp/>INCLUDING<sp/>ALL<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>ANY<sp/>SPECIAL,<sp/>DIRECT,<sp/>INDIRECT,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>OR<sp/>ANY<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>WHATSOEVER<sp/>RESULTING<sp/>FROM<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA<sp/>OR<sp/>PROFITS,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>NEGLIGENCE<sp/>OR<sp/>OTHER<sp/>TORTIOUS<sp/>ACTION,<sp/>ARISING<sp/>OUT<sp/>OF</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>USE<sp/>OR<sp/>PERFORMANCE<sp/>OF<sp/>THIS<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;includes.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HAVE_BCRYPT_PBKDF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wrapper_8h" kindref="compound">libssh/wrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_SYS_PARAM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/param.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="blf_8h" kindref="compound">libssh/blf.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pki__priv_8h" kindref="compound">libssh/pki_priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SHA512_DIGEST_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="bcrypt__pbkdf_8c_1a5a8416d0f8e1af6d7525114ef09be118" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHA512_DIGEST_LENGTH<sp/>SHA512_DIGEST_LEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>pkcs<sp/>#5<sp/>pbkdf2<sp/>implementation<sp/>using<sp/>the<sp/>&quot;bcrypt&quot;<sp/>hash</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>The<sp/>bcrypt<sp/>hash<sp/>function<sp/>is<sp/>derived<sp/>from<sp/>the<sp/>bcrypt<sp/>password<sp/>hashing</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>function<sp/>with<sp/>the<sp/>following<sp/>modifications:</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>1.<sp/>The<sp/>input<sp/>password<sp/>and<sp/>salt<sp/>are<sp/>preprocessed<sp/>with<sp/>SHA512.</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>2.<sp/>The<sp/>output<sp/>length<sp/>is<sp/>expanded<sp/>to<sp/>256<sp/>bits.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>3.<sp/>Subsequently<sp/>the<sp/>magic<sp/>string<sp/>to<sp/>be<sp/>encrypted<sp/>is<sp/>lengthened<sp/>and<sp/>modifed</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>to<sp/>&quot;OxychromaticBlowfishSwatDynamite&quot;</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>4.<sp/>The<sp/>hash<sp/>function<sp/>is<sp/>defined<sp/>to<sp/>perform<sp/>64<sp/>rounds<sp/>of<sp/>initial<sp/>state</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>expansion.<sp/>(More<sp/>rounds<sp/>are<sp/>performed<sp/>by<sp/>iterating<sp/>the<sp/>hash.)</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>Note<sp/>that<sp/>this<sp/>implementation<sp/>pulls<sp/>the<sp/>SHA512<sp/>operations<sp/>into<sp/>the<sp/>caller</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>as<sp/>a<sp/>performance<sp/>optimization.</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*<sp/>One<sp/>modification<sp/>from<sp/>official<sp/>pbkdf2.<sp/>Instead<sp/>of<sp/>outputting<sp/>key<sp/>material</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/>linearly,<sp/>we<sp/>mix<sp/>it.<sp/>pbkdf2<sp/>has<sp/>a<sp/>known<sp/>weakness<sp/>where<sp/>if<sp/>one<sp/>uses<sp/>it<sp/>to</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*<sp/>generate<sp/>(i.e.)<sp/>512<sp/>bits<sp/>of<sp/>key<sp/>material<sp/>for<sp/>use<sp/>as<sp/>two<sp/>256<sp/>bit<sp/>keys,<sp/>an</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>*<sp/>attacker<sp/>can<sp/>merely<sp/>run<sp/>once<sp/>through<sp/>the<sp/>outer<sp/>loop<sp/>below,<sp/>but<sp/>the<sp/>user</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>*<sp/>always<sp/>runs<sp/>it<sp/>twice.<sp/>Shuffling<sp/>output<sp/>bytes<sp/>requires<sp/>computing<sp/>the</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/>entirety<sp/>of<sp/>the<sp/>key<sp/>material<sp/>to<sp/>assemble<sp/>any<sp/>subkey.<sp/>This<sp/>is<sp/>something<sp/>a</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*<sp/>wise<sp/>caller<sp/>could<sp/>do;<sp/>we<sp/>just<sp/>do<sp/>it<sp/>for<sp/>you.</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="bcrypt__pbkdf_8c_1a1fb7e27c716d0a71b0ff446fc55237f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCRYPT_BLOCKS<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="bcrypt__pbkdf_8c_1af6bd351b7874d8a75d0dcad9a5e9631e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BCRYPT_HASHSIZE<sp/>(BCRYPT_BLOCKS<sp/>*<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" refkind="member"><highlight class="normal"><ref refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" kindref="member">bcrypt_hash</ref>(uint8_t<sp/>*sha2pass,<sp/>uint8_t<sp/>*sha2salt,<sp/>uint8_t<sp/>*out)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structBlowfishContext" kindref="compound">ssh_blf_ctx</ref><sp/>state;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>ciphertext[<ref refid="bcrypt__pbkdf_8c_1af6bd351b7874d8a75d0dcad9a5e9631e" kindref="member">BCRYPT_HASHSIZE</ref>]<sp/>=</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OxychromaticBlowfishSwatDynamite&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>cdata[<ref refid="bcrypt__pbkdf_8c_1a1fb7e27c716d0a71b0ff446fc55237f4" kindref="member">BCRYPT_BLOCKS</ref>];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>j;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>shalen<sp/>=<sp/><ref refid="bcrypt__pbkdf_8c_1a5a8416d0f8e1af6d7525114ef09be118" kindref="member">SHA512_DIGEST_LENGTH</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>key<sp/>expansion<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="blf_8h_1a80e3f4d9dfde1f813c9a0d0e8ae90faf" kindref="member">Blowfish_initstate</ref>(&amp;state);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="blf_8h_1aaab094bba44b8d36b4201ba7f1ce685c" kindref="member">Blowfish_expandstate</ref>(&amp;state,<sp/>sha2salt,<sp/>shalen,<sp/>sha2pass,<sp/>shalen);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>64;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="blf_8h_1aa8cce9af3a19e8bc8484e147233f4b5a" kindref="member">Blowfish_expand0state</ref>(&amp;state,<sp/>sha2salt,<sp/>shalen);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="blf_8h_1aa8cce9af3a19e8bc8484e147233f4b5a" kindref="member">Blowfish_expand0state</ref>(&amp;state,<sp/>sha2pass,<sp/>shalen);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>encryption<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>j<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="bcrypt__pbkdf_8c_1a1fb7e27c716d0a71b0ff446fc55237f4" kindref="member">BCRYPT_BLOCKS</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cdata[i]<sp/>=<sp/><ref refid="blf_8h_1a6d06915889b2c3c1fa46df6e13eea02f" kindref="member">Blowfish_stream2word</ref>(ciphertext,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ciphertext),</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;j);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>64;<sp/>i++)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="blf_8h_1a4fcd0cacde54f41954dd4570caee22f3" kindref="member">ssh_blf_enc</ref>(&amp;state,<sp/>cdata,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cdata)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint64_t));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>copy<sp/>out<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="bcrypt__pbkdf_8c_1a1fb7e27c716d0a71b0ff446fc55237f4" kindref="member">BCRYPT_BLOCKS</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[4<sp/>*<sp/>i<sp/>+<sp/>3]<sp/>=<sp/>(cdata[i]<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[4<sp/>*<sp/>i<sp/>+<sp/>2]<sp/>=<sp/>(cdata[i]<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[4<sp/>*<sp/>i<sp/>+<sp/>1]<sp/>=<sp/>(cdata[i]<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[4<sp/>*<sp/>i<sp/>+<sp/>0]<sp/>=<sp/>cdata[i]<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>zap<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" kindref="member">explicit_bzero</ref>(ciphertext,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ciphertext));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" kindref="member">explicit_bzero</ref>(cdata,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cdata));</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="examples__common_8h_1a01c647179ba7270ccbc9a5253846b3d2" kindref="member">ZERO_STRUCT</ref>(state);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="pki__priv_8h_1ab650514d50b19a9f4ebd5322a9b0fc5d" refkind="member"><highlight class="normal"><ref refid="bcrypt__pbkdf_8c_1ab650514d50b19a9f4ebd5322a9b0fc5d" kindref="member">bcrypt_pbkdf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pass,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>passlen,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*salt,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>saltlen,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keylen,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rounds)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>sha2pass[<ref refid="bcrypt__pbkdf_8c_1a5a8416d0f8e1af6d7525114ef09be118" kindref="member">SHA512_DIGEST_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>sha2salt[<ref refid="bcrypt__pbkdf_8c_1a5a8416d0f8e1af6d7525114ef09be118" kindref="member">SHA512_DIGEST_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>out[<ref refid="bcrypt__pbkdf_8c_1af6bd351b7874d8a75d0dcad9a5e9631e" kindref="member">BCRYPT_HASHSIZE</ref>];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>tmpout[<ref refid="bcrypt__pbkdf_8c_1af6bd351b7874d8a75d0dcad9a5e9631e" kindref="member">BCRYPT_HASHSIZE</ref>];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*countsalt;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>amt,<sp/>stride;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>count;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>origkeylen<sp/>=<sp/>keylen;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>SHA512CTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>nothing<sp/>crazy<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rounds<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(passlen<sp/>==<sp/>0<sp/>||<sp/>saltlen<sp/>==<sp/>0<sp/>||<sp/>keylen<sp/>==<sp/>0<sp/>||</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keylen<sp/>&gt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(out)<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(out)<sp/>||<sp/>saltlen<sp/>&gt;<sp/>1&lt;&lt;20)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((countsalt<sp/>=<sp/>calloc(1,<sp/>saltlen<sp/>+<sp/>4))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>stride<sp/>=<sp/>(keylen<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(out)<sp/>-<sp/>1)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(out);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>amt<sp/>=<sp/>(keylen<sp/>+<sp/>stride<sp/>-<sp/>1)<sp/>/<sp/>stride;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(countsalt,<sp/>salt,<sp/>saltlen);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>collapse<sp/>password<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>pass,<sp/>passlen);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(sha2pass,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>generate<sp/>key,<sp/>sizeof(out)<sp/>at<sp/>a<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(count<sp/>=<sp/>1;<sp/>keylen<sp/>&gt;<sp/>0;<sp/>count++)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>countsalt[saltlen<sp/>+<sp/>0]<sp/>=<sp/>(count<sp/>&gt;&gt;<sp/>24)<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>countsalt[saltlen<sp/>+<sp/>1]<sp/>=<sp/>(count<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>countsalt[saltlen<sp/>+<sp/>2]<sp/>=<sp/>(count<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>countsalt[saltlen<sp/>+<sp/>3]<sp/>=<sp/>count<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>first<sp/>round,<sp/>salt<sp/>is<sp/>salt<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>countsalt,<sp/>saltlen<sp/>+<sp/>4);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(sha2salt,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" kindref="member">bcrypt_hash</ref>(sha2pass,<sp/>sha2salt,<sp/>tmpout);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(out,<sp/>tmpout,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(out));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>rounds;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>subsequent<sp/>rounds,<sp/>salt<sp/>is<sp/>previous<sp/>output<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>tmpout,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(tmpout));</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(sha2salt,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bcrypt__pbkdf_8c_1aa06621d6b6b991f40b40f8ca4767671e" kindref="member">bcrypt_hash</ref>(sha2pass,<sp/>sha2salt,<sp/>tmpout);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(out);<sp/>j++)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j]<sp/>^=<sp/>tmpout[j];</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>pbkdf2<sp/>deviation:<sp/>ouput<sp/>the<sp/>key<sp/>material<sp/>non-linearly.</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amt<sp/>=<sp/><ref refid="priv_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" kindref="member">MIN</ref>(amt,<sp/>keylen);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>amt;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dest<sp/>=<sp/>i<sp/>*<sp/>stride<sp/>+<sp/>(count<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dest<sp/>&gt;=<sp/>origkeylen)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>[dest]<sp/>=<sp/>out[i];</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keylen<sp/>-=<sp/>i;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>zap<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" kindref="member">explicit_bzero</ref>(out,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(out));</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>free(countsalt);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_BCRYPT_PBKDF<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/external/bcrypt_pbkdf.c"/>
+  </compounddef>
+</doxygen>

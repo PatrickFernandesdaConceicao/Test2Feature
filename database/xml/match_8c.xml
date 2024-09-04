@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="match_8c" kind="file" language="C++">
+    <compoundname>match.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includedby refid="torture__config_8c" local="yes">libssh-mirror/tests/unittests/torture_config.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="13">
+        <label>sys/select.h</label>
+      </node>
+      <node id="6">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="9">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>netdb.h</label>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="10">
+        <label>unistd.h</label>
+      </node>
+      <node id="11">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/match.c</label>
+        <link refid="match_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ctype.h</label>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="12">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>libssh-mirror/src/match.c</label>
+        <link refid="match_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="match_8c_1a74dc0caeb3531175646d6b04dad8f55f" prot="public" static="no">
+        <name>MAX_MATCH_RECURSION</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/match.c" line="46" column="9" bodyfile="libssh-mirror/src/match.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int match_pattern</definition>
+        <argsstring>(const char *s, const char *pattern, size_t limit)</argsstring>
+        <name>match_pattern</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/match.c" line="52" column="12" bodyfile="libssh-mirror/src/match.c" bodystart="52" bodyend="122"/>
+        <references refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" compoundref="torture_8c" startline="75">pattern</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="priv_8h_1af5bb51ae908039c863414e7c514c613e" compoundref="match_8c" startline="130" endline="186">match_pattern_list</referencedby>
+        <referencedby refid="torture__config_8c_1ae05cfa7b66cdcc9684932703231e0d89" compoundref="torture__config_8c" startline="1078" endline="1156">torture_config_match_pattern</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="match_8c_1af5bb51ae908039c863414e7c514c613e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int match_pattern_list</definition>
+        <argsstring>(const char *string, const char *pattern, unsigned int len, int dolower)</argsstring>
+        <name>match_pattern_list</name>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dolower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/match.c" line="130" column="5" bodyfile="libssh-mirror/src/match.c" bodystart="130" bodyend="186"/>
+        <references refid="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" compoundref="match_8c" startline="52" endline="122">match_pattern</references>
+        <references refid="match_8c_1a74dc0caeb3531175646d6b04dad8f55f" compoundref="match_8c" startline="46">MAX_MATCH_RECURSION</references>
+        <references refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" compoundref="torture_8c" startline="75">pattern</references>
+        <references refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" compoundref="curve25519__ref_8c" startline="26" endline="38">sub</references>
+        <referencedby refid="priv_8h_1a0e8d71766ba54ed5a5020997663bfd21" compoundref="match_8c" startline="195" endline="197">match_hostname</referencedby>
+        <referencedby refid="config_8c_1a46d31b8f0434623e07e087ffbb0323a3" compoundref="config_8c" startline="282" endline="296">ssh_config_match</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="match_8c_1a0e8d71766ba54ed5a5020997663bfd21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int match_hostname</definition>
+        <argsstring>(const char *host, const char *pattern, unsigned int len)</argsstring>
+        <name>match_hostname</name>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/match.c" line="195" column="5" bodyfile="libssh-mirror/src/match.c" bodystart="195" bodyend="197"/>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="match_8c_1af5bb51ae908039c863414e7c514c613e" compoundref="match_8c" startline="130" endline="186">match_pattern_list</references>
+        <references refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" compoundref="torture_8c" startline="75">pattern</references>
+        <referencedby refid="config_8c_1a45c85072922b6f53ea96012589d601db" compoundref="config_8c" startline="508" endline="1134">ssh_config_parse_line</referencedby>
+        <referencedby refid="group__libssh__session_1ga6f37e3d7bb6b938b44d6a34a76fdfa0b" compoundref="known__hosts_8c" startline="288" endline="424">ssh_is_server_known</referencedby>
+        <referencedby refid="group__libssh__session_1gaa3a37302850d0467f19db4eba5257d3d" compoundref="src_2knownhosts_8c" startline="612" endline="765">ssh_known_hosts_parse_line</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Tatu<sp/>Ylonen<sp/>&lt;ylo@cs.hut.fi&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>1995<sp/>Tatu<sp/>Ylonen<sp/>&lt;ylo@cs.hut.fi&gt;,<sp/>Espoo,<sp/>Finland</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Simple<sp/>pattern<sp/>matching,<sp/>with<sp/>&apos;*&apos;<sp/>and<sp/>&apos;?&apos;<sp/>as<sp/>wildcards.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>As<sp/>far<sp/>as<sp/>I<sp/>am<sp/>concerned,<sp/>the<sp/>code<sp/>I<sp/>have<sp/>written<sp/>for<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>can<sp/>be<sp/>used<sp/>freely<sp/>for<sp/>any<sp/>purpose.<sp/><sp/>Any<sp/>derived<sp/>versions<sp/>of<sp/>this</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>software<sp/>must<sp/>be<sp/>clearly<sp/>marked<sp/>as<sp/>such,<sp/>and<sp/>if<sp/>the<sp/>derived<sp/>work<sp/>is</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>incompatible<sp/>with<sp/>the<sp/>protocol<sp/>description<sp/>in<sp/>the<sp/>RFC<sp/>file,<sp/>it<sp/>must<sp/>be</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>called<sp/>by<sp/>a<sp/>name<sp/>other<sp/>than<sp/>&quot;ssh&quot;<sp/>or<sp/>&quot;Secure<sp/>Shell&quot;.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2000<sp/>Markus<sp/>Friedl.<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>AUTHOR<sp/>``AS<sp/>IS&apos;&apos;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHOR<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctype.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="match_8c_1a74dc0caeb3531175646d6b04dad8f55f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_MATCH_RECURSION<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>the<sp/>given<sp/>string<sp/>matches<sp/>the<sp/>pattern<sp/>(which<sp/>may<sp/>contain<sp/>?</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>and<sp/>*<sp/>as<sp/>wildcards),<sp/>and<sp/>zero<sp/>if<sp/>it<sp/>does<sp/>not<sp/>match.</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" kindref="member">match_pattern</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>limit)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>had_asterisk<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref><sp/>==<sp/>NULL<sp/>||<sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>==<sp/>NULL<sp/>||<sp/>limit<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>at<sp/>end<sp/>of<sp/>pattern,<sp/>accept<sp/>if<sp/>also<sp/>at<sp/>end<sp/>of<sp/>string.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>==<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Skip<sp/>the<sp/>asterisk.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>had_asterisk<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>++;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(had_asterisk)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>at<sp/>end<sp/>of<sp/>pattern,<sp/>accept<sp/>immediately.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>next<sp/>character<sp/>in<sp/>pattern<sp/>is<sp/>known,<sp/>optimize.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;?&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Look<sp/>instances<sp/>of<sp/>the<sp/>next<sp/>character<sp/>in</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>pattern,<sp/>and<sp/>try<sp/>to<sp/>match<sp/>starting<sp/>from</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>those.</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>;<sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>++)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref><sp/>==<sp/>*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>&amp;&amp;<sp/><ref refid="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" kindref="member">match_pattern</ref>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref><sp/>+<sp/>1,<sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>+<sp/>1,<sp/>limit<sp/>-<sp/>1))<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Failed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Move<sp/>ahead<sp/>one<sp/>character<sp/>at<sp/>a<sp/>time<sp/>and<sp/>try<sp/>to</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>match<sp/>at<sp/>each<sp/>position.</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>;<sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>++)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" kindref="member">match_pattern</ref>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>,<sp/>limit<sp/>-<sp/>1))<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Failed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>There<sp/>must<sp/>be<sp/>at<sp/>least<sp/>one<sp/>more<sp/>character<sp/>in<sp/>the<sp/>string.</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>we<sp/>are<sp/>at<sp/>the<sp/>end,<sp/>fail.</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>if<sp/>the<sp/>next<sp/>character<sp/>of<sp/>the<sp/>string<sp/>is<sp/>acceptable.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>!=<sp/></highlight><highlight class="charliteral">&apos;?&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref><sp/>!=<sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Move<sp/>to<sp/>the<sp/>next<sp/>character,<sp/>both<sp/>in<sp/>string<sp/>and<sp/>in<sp/>pattern.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>++;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>++;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>NOTREACHED<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/>Tries<sp/>to<sp/>match<sp/>the<sp/>string<sp/>against<sp/>the<sp/>comma-separated<sp/>sequence<sp/>of<sp/>subpatterns</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>(each<sp/>possibly<sp/>preceded<sp/>by<sp/>!<sp/>to<sp/>indicate<sp/>negation).</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*<sp/>Returns<sp/>-1<sp/>if<sp/>negation<sp/>matches,<sp/>1<sp/>if<sp/>there<sp/>is<sp/>a<sp/>positive<sp/>match,<sp/>0<sp/>if<sp/>there<sp/>is</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*<sp/>no<sp/>match<sp/>at<sp/>all.</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="priv_8h_1af5bb51ae908039c863414e7c514c613e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="match_8c_1af5bb51ae908039c863414e7c514c613e" kindref="member">match_pattern_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dolower)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" kindref="member">sub</ref>[1024];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>negated;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>got_positive;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>subi;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>got_positive<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>len;)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>if<sp/>the<sp/>subpattern<sp/>is<sp/>negated.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;!&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>negated<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>negated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Extract<sp/>the<sp/>subpattern<sp/>up<sp/>to<sp/>a<sp/>comma<sp/>or<sp/>end.<sp/><sp/>Convert<sp/>the</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>subpattern<sp/>to<sp/>lowercase.</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(subi<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>&lt;<sp/>len<sp/>&amp;&amp;<sp/>subi<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" kindref="member">sub</ref>)<sp/>-<sp/>1<sp/>&amp;&amp;<sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>[i]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subi++,<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" kindref="member">sub</ref>[subi]<sp/>=<sp/>dolower<sp/>&amp;&amp;<sp/>isupper(<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>[i])<sp/>?</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(char)tolower(<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>[i])<sp/>:<sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>[i];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>subpattern<sp/>too<sp/>long,<sp/>return<sp/>failure<sp/>(no<sp/>match).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(subi<sp/>&gt;=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" kindref="member">sub</ref>)<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>the<sp/>subpattern<sp/>was<sp/>terminated<sp/>by<sp/>a<sp/>comma,<sp/>skip<sp/>the<sp/>comma.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/>len<sp/>&amp;&amp;<sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Null-terminate<sp/>the<sp/>subpattern.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" kindref="member">sub</ref>[subi]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Try<sp/>to<sp/>match<sp/>the<sp/>subpattern<sp/>against<sp/>the<sp/>string.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="match_8c_1ab9753ec2bb3ef6c32cab7aec7edd28ee" kindref="member">match_pattern</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><ref refid="curve25519__ref_8c_1ae86789cbba0e2cf7f9cbacd3f219c3c9" kindref="member">sub</ref>,<sp/><ref refid="match_8c_1a74dc0caeb3531175646d6b04dad8f55f" kindref="member">MAX_MATCH_RECURSION</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(negated)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Negative<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>got_positive<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>Positive<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Return<sp/>success<sp/>if<sp/>got<sp/>a<sp/>positive<sp/>match.<sp/><sp/>If<sp/>there<sp/>was<sp/>a<sp/>negative</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/><sp/><sp/>*<sp/>match,<sp/>we<sp/>have<sp/>already<sp/>returned<sp/>-1<sp/>and<sp/>never<sp/>get<sp/>here.</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>got_positive;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/>*<sp/>Tries<sp/>to<sp/>match<sp/>the<sp/>host<sp/>name<sp/>(which<sp/>must<sp/>be<sp/>in<sp/>all<sp/>lowercase)<sp/>against<sp/>the</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/>*<sp/>comma-separated<sp/>sequence<sp/>of<sp/>subpatterns<sp/>(each<sp/>possibly<sp/>preceded<sp/>by<sp/>!<sp/>to</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/>*<sp/>indicate<sp/>negation).</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/>*<sp/>Returns<sp/>-1<sp/>if<sp/>negation<sp/>matches,<sp/>1<sp/>if<sp/>there<sp/>is<sp/>a<sp/>positive<sp/>match,<sp/>0<sp/>if<sp/>there</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/>*<sp/>is<sp/>no<sp/>match<sp/>at<sp/>all.</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="priv_8h_1a0e8d71766ba54ed5a5020997663bfd21" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="match_8c_1a0e8d71766ba54ed5a5020997663bfd21" kindref="member">match_hostname</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="match_8c_1af5bb51ae908039c863414e7c514c613e" kindref="member">match_pattern_list</ref>(<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,<sp/><ref refid="torture_8c_1acd28ae39c6440992e47d3da772c56602" kindref="member">pattern</ref>,<sp/>len,<sp/>1);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/match.c"/>
+  </compounddef>
+</doxygen>

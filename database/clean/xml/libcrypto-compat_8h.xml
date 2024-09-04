@@ -1,0 +1,781 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libcrypto-compat_8h" kind="file" language="C++">
+    <compoundname>libcrypto-compat.h</compoundname>
+    <includes local="no">openssl/opensslv.h</includes>
+    <includes local="no">openssl/rsa.h</includes>
+    <includes local="no">openssl/dsa.h</includes>
+    <includes local="no">openssl/ecdsa.h</includes>
+    <includes local="no">openssl/dh.h</includes>
+    <includes local="no">openssl/evp.h</includes>
+    <includes local="no">openssl/hmac.h</includes>
+    <includes local="no">openssl/bn.h</includes>
+    <includedby refid="dh__crypto_8c" local="yes">src/dh_crypto.c</includedby>
+    <includedby refid="libcrypto-compat_8c" local="yes">src/libcrypto-compat.c</includedby>
+    <includedby refid="pki__crypto_8c" local="yes">src/pki_crypto.c</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>openssl/hmac.h</label>
+      </node>
+      <node id="3">
+        <label>openssl/rsa.h</label>
+      </node>
+      <node id="1">
+        <label>src/libcrypto-compat.h</label>
+        <link refid="libcrypto-compat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>openssl/dh.h</label>
+      </node>
+      <node id="7">
+        <label>openssl/evp.h</label>
+      </node>
+      <node id="4">
+        <label>openssl/dsa.h</label>
+      </node>
+      <node id="9">
+        <label>openssl/bn.h</label>
+      </node>
+      <node id="2">
+        <label>openssl/opensslv.h</label>
+      </node>
+      <node id="5">
+        <label>openssl/ecdsa.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="3">
+        <label>src/libcrypto-compat.c</label>
+        <link refid="libcrypto-compat_8c"/>
+      </node>
+      <node id="1">
+        <label>src/libcrypto-compat.h</label>
+        <link refid="libcrypto-compat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="libcrypto-compat_8h_1ada007b0a8f3f9089fed98a22cb2b1554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RSA_set0_key</definition>
+        <argsstring>(RSA *r, BIGNUM *n, BIGNUM *e, BIGNUM *d)</argsstring>
+        <name>RSA_set0_key</name>
+        <param>
+          <type>RSA *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="15" column="5" bodyfile="src/libcrypto-compat.c" bodystart="28" bodyend="52" declfile="src/libcrypto-compat.h" declline="15" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+        <referencedby refid="pki__crypto_8c_1a474b53790bc129ac893791abe793209e" compoundref="pki__crypto_8c" startline="1101" endline="1151">pki_privkey_build_rsa</referencedby>
+        <referencedby refid="pki__priv_8h_1ae2aeca92ffa38cd14e96fabba963389e" compoundref="pki__crypto_8c" startline="1153" endline="1180">pki_pubkey_build_rsa</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a7ac60e986908149a37f91623953d3f75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RSA_set0_factors</definition>
+        <argsstring>(RSA *r, BIGNUM *p, BIGNUM *q)</argsstring>
+        <name>RSA_set0_factors</name>
+        <param>
+          <type>RSA *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="16" column="5" bodyfile="src/libcrypto-compat.c" bodystart="54" bodyend="73" declfile="src/libcrypto-compat.h" declline="16" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+        <referencedby refid="pki__crypto_8c_1a474b53790bc129ac893791abe793209e" compoundref="pki__crypto_8c" startline="1101" endline="1151">pki_privkey_build_rsa</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1abf40cc073eea998c37e00418063da49a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RSA_set0_crt_params</definition>
+        <argsstring>(RSA *r, BIGNUM *dmp1, BIGNUM *dmq1, BIGNUM *iqmp)</argsstring>
+        <name>RSA_set0_crt_params</name>
+        <param>
+          <type>RSA *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>dmp1</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>dmq1</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>iqmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="17" column="5" bodyfile="src/libcrypto-compat.c" bodystart="75" bodyend="99" declfile="src/libcrypto-compat.h" declline="17" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a96e6deebb87bafb81f7bde3df63e59f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RSA_get0_key</definition>
+        <argsstring>(const RSA *r, const BIGNUM **n, const BIGNUM **e, const BIGNUM **d)</argsstring>
+        <name>RSA_get0_key</name>
+        <param>
+          <type>const RSA *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="18" column="6" bodyfile="src/libcrypto-compat.c" bodystart="101" bodyend="110" declfile="src/libcrypto-compat.h" declline="18" declcolumn="6"/>
+        <referencedby refid="pki__priv_8h_1ad0a4df50bbb89e4c7d1989caded21b35" compoundref="pki__crypto_8c" startline="619" endline="724">pki_key_compare</referencedby>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+        <referencedby refid="pki__priv_8h_1aa2d53615fe67402faa649f5cb6160e91" compoundref="pki__crypto_8c" startline="1182" endline="1390">pki_publickey_to_blob</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1ad0eaa8f2e87045d4abd7b3fc94ab4694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RSA_get0_factors</definition>
+        <argsstring>(const RSA *r, const BIGNUM **p, const BIGNUM **q)</argsstring>
+        <name>RSA_get0_factors</name>
+        <param>
+          <type>const RSA *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="19" column="6" bodyfile="src/libcrypto-compat.c" bodystart="112" bodyend="118" declfile="src/libcrypto-compat.h" declline="19" declcolumn="6"/>
+        <referencedby refid="pki__priv_8h_1ad0a4df50bbb89e4c7d1989caded21b35" compoundref="pki__crypto_8c" startline="619" endline="724">pki_key_compare</referencedby>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a4f4b9ece6db658890011cfcf730d18f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RSA_get0_crt_params</definition>
+        <argsstring>(const RSA *r, const BIGNUM **dmp1, const BIGNUM **dmq1, const BIGNUM **iqmp)</argsstring>
+        <name>RSA_get0_crt_params</name>
+        <param>
+          <type>const RSA *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>dmp1</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>dmq1</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>iqmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="20" column="6" bodyfile="src/libcrypto-compat.c" bodystart="120" bodyend="130" declfile="src/libcrypto-compat.h" declline="20" declcolumn="6"/>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1ad70ad75d15d2aaeae3abcc495875980a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DSA_get0_pqg</definition>
+        <argsstring>(const DSA *d, const BIGNUM **p, const BIGNUM **q, const BIGNUM **g)</argsstring>
+        <name>DSA_get0_pqg</name>
+        <param>
+          <type>const DSA *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="22" column="6" bodyfile="src/libcrypto-compat.c" bodystart="132" bodyend="141" declfile="src/libcrypto-compat.h" declline="22" declcolumn="6"/>
+        <referencedby refid="pki__priv_8h_1ad0a4df50bbb89e4c7d1989caded21b35" compoundref="pki__crypto_8c" startline="619" endline="724">pki_key_compare</referencedby>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+        <referencedby refid="pki__priv_8h_1aa2d53615fe67402faa649f5cb6160e91" compoundref="pki__crypto_8c" startline="1182" endline="1390">pki_publickey_to_blob</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a76c6c702a7a94d0b4638d5111d03c5b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DSA_set0_pqg</definition>
+        <argsstring>(DSA *d, BIGNUM *p, BIGNUM *q, BIGNUM *g)</argsstring>
+        <name>DSA_set0_pqg</name>
+        <param>
+          <type>DSA *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="23" column="5" bodyfile="src/libcrypto-compat.c" bodystart="143" bodyend="167" declfile="src/libcrypto-compat.h" declline="23" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+        <referencedby refid="pki__priv_8h_1aa18a4a0bdf5ec4b3e8ae3f21875b66aa" compoundref="pki__crypto_8c" startline="1018" endline="1059">pki_privkey_build_dss</referencedby>
+        <referencedby refid="pki__priv_8h_1a44ea17f443978628be6498fed45f4f3d" compoundref="pki__crypto_8c" startline="1061" endline="1099">pki_pubkey_build_dss</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1ab0aa58b5f27cd96e571bac8b39bb0a51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DSA_get0_key</definition>
+        <argsstring>(const DSA *d, const BIGNUM **pub_key, const BIGNUM **priv_key)</argsstring>
+        <name>DSA_get0_key</name>
+        <param>
+          <type>const DSA *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>pub_key</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>priv_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="24" column="6" bodyfile="src/libcrypto-compat.c" bodystart="169" bodyend="176" declfile="src/libcrypto-compat.h" declline="24" declcolumn="6"/>
+        <referencedby refid="pki__priv_8h_1ad0a4df50bbb89e4c7d1989caded21b35" compoundref="pki__crypto_8c" startline="619" endline="724">pki_key_compare</referencedby>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+        <referencedby refid="pki__priv_8h_1aa2d53615fe67402faa649f5cb6160e91" compoundref="pki__crypto_8c" startline="1182" endline="1390">pki_publickey_to_blob</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a110c3da644cd76d2ae675ad1837fb9ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DSA_set0_key</definition>
+        <argsstring>(DSA *d, BIGNUM *pub_key, BIGNUM *priv_key)</argsstring>
+        <name>DSA_set0_key</name>
+        <param>
+          <type>DSA *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>pub_key</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>priv_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="25" column="5" bodyfile="src/libcrypto-compat.c" bodystart="178" bodyend="197" declfile="src/libcrypto-compat.h" declline="25" declcolumn="5"/>
+        <referencedby refid="pki__priv_8h_1a2a05d9c8b3df5f3fde1bbbe7b957bf9f" compoundref="pki__crypto_8c" startline="293" endline="525">pki_key_dup</referencedby>
+        <referencedby refid="pki__priv_8h_1aa18a4a0bdf5ec4b3e8ae3f21875b66aa" compoundref="pki__crypto_8c" startline="1018" endline="1059">pki_privkey_build_dss</referencedby>
+        <referencedby refid="pki__priv_8h_1a44ea17f443978628be6498fed45f4f3d" compoundref="pki__crypto_8c" startline="1061" endline="1099">pki_pubkey_build_dss</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a40eca590d7163915606840e37c06ec41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DSA_SIG_get0</definition>
+        <argsstring>(const DSA_SIG *sig, const BIGNUM **pr, const BIGNUM **ps)</argsstring>
+        <name>DSA_SIG_get0</name>
+        <param>
+          <type>const DSA_SIG *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>pr</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>ps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="27" column="6" bodyfile="src/libcrypto-compat.c" bodystart="199" bodyend="205" declfile="src/libcrypto-compat.h" declline="27" declcolumn="6"/>
+        <referencedby refid="pki__crypto_8c_1a817708f53a64f50b665d647b6d9745c2" compoundref="pki__crypto_8c" startline="1392" endline="1471">pki_dsa_signature_to_blob</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1ab0c6d53ab9db0c963c2bdd85e81d26e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DSA_SIG_set0</definition>
+        <argsstring>(DSA_SIG *sig, BIGNUM *r, BIGNUM *s)</argsstring>
+        <name>DSA_SIG_set0</name>
+        <param>
+          <type>DSA_SIG *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="28" column="5" bodyfile="src/libcrypto-compat.c" bodystart="207" bodyend="216" declfile="src/libcrypto-compat.h" declline="28" declcolumn="5"/>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="pki__crypto_8c_1a0f1df403c735a5e15982a028f1540024" compoundref="pki__crypto_8c" startline="1656" endline="1773">pki_signature_from_dsa_blob</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1aa0ad424eeb5c9c34c12d77cd3dc9dbf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ECDSA_SIG_get0</definition>
+        <argsstring>(const ECDSA_SIG *sig, const BIGNUM **pr, const BIGNUM **ps)</argsstring>
+        <name>ECDSA_SIG_get0</name>
+        <param>
+          <type>const ECDSA_SIG *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>pr</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>ps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="30" column="6" bodyfile="src/libcrypto-compat.c" bodystart="218" bodyend="224" declfile="src/libcrypto-compat.h" declline="30" declcolumn="6"/>
+        <referencedby refid="pki__crypto_8c_1a3f8e0c3d950862426b9900704ad64a28" compoundref="pki__crypto_8c" startline="1473" endline="1554">pki_ecdsa_signature_to_blob</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1ae2f28de42b8345422b7ac3b28f330b9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ECDSA_SIG_set0</definition>
+        <argsstring>(ECDSA_SIG *sig, BIGNUM *r, BIGNUM *s)</argsstring>
+        <name>ECDSA_SIG_set0</name>
+        <param>
+          <type>ECDSA_SIG *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="31" column="5" bodyfile="src/libcrypto-compat.c" bodystart="226" bodyend="235" declfile="src/libcrypto-compat.h" declline="31" declcolumn="5"/>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="pki__crypto_8c_1ae3a66a820cd45b733f5ff75f898a0f33" compoundref="pki__crypto_8c" startline="1775" endline="1911">pki_signature_from_ecdsa_blob</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a20558440cab06b86ddfd11d4cfa33611" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int EVP_MD_CTX_reset</definition>
+        <argsstring>(EVP_MD_CTX *ctx)</argsstring>
+        <name>EVP_MD_CTX_reset</name>
+        <param>
+          <type>EVP_MD_CTX *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="33" column="5" bodyfile="src/libcrypto-compat.c" bodystart="252" bodyend="275" declfile="src/libcrypto-compat.h" declline="33" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="libcrypto-compat_8c_1af02c671375aabee860014fa0f1dc57d6" compoundref="libcrypto-compat_8c" startline="242" endline="249">OPENSSL_clear_free</references>
+        <referencedby refid="libcrypto-compat_8c_1a4e2ad7849ae3f095de4b3ddc00b6c33f" compoundref="libcrypto-compat_8c" startline="277" endline="281">EVP_MD_CTX_free</referencedby>
+        <referencedby refid="libcrypto-compat_8c_1a54dbad03f2e9d05ab85caeac4b6a5ce2" compoundref="libcrypto-compat_8c" startline="296" endline="304">hmac_ctx_cleanup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a5397f93f1cc4aa6291a6f9310765776e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EVP_MD_CTX *</type>
+        <definition>EVP_MD_CTX* EVP_MD_CTX_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>EVP_MD_CTX_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="34" column="12" bodyfile="src/libcrypto-compat.c" bodystart="237" bodyend="240" declfile="src/libcrypto-compat.h" declline="34" declcolumn="12"/>
+        <references refid="libcrypto-compat_8c_1ac1ea93cd73cec57de65044b1ee2aae7d" compoundref="libcrypto-compat_8c" startline="19" endline="26">OPENSSL_zalloc</references>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a4e2ad7849ae3f095de4b3ddc00b6c33f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EVP_MD_CTX_free</definition>
+        <argsstring>(EVP_MD_CTX *ctx)</argsstring>
+        <name>EVP_MD_CTX_free</name>
+        <param>
+          <type>EVP_MD_CTX *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="35" column="6" bodyfile="src/libcrypto-compat.c" bodystart="277" bodyend="281" declfile="src/libcrypto-compat.h" declline="35" declcolumn="6"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="libcrypto-compat_8c_1a20558440cab06b86ddfd11d4cfa33611" compoundref="libcrypto-compat_8c" startline="252" endline="275">EVP_MD_CTX_reset</references>
+        <referencedby refid="libcrypto-compat_8c_1a795a86773bfd96eb252404b529db7adf" compoundref="libcrypto-compat_8c" startline="306" endline="317">HMAC_CTX_free</referencedby>
+        <referencedby refid="pki__priv_8h_1a9d88e1b6e93f81dc11ebded5384646e3" compoundref="pki__crypto_8c" startline="2139" endline="2279">pki_sign_data</referencedby>
+        <referencedby refid="pki__priv_8h_1a2ceb3135ff3591acd8db9f48fcbccec3" compoundref="pki__crypto_8c" startline="2294" endline="2407">pki_verify_data_signature</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a631c9742a44d89809858ce3430e73f20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HMAC_CTX *</type>
+        <definition>HMAC_CTX* HMAC_CTX_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>HMAC_CTX_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="37" column="10" bodyfile="src/libcrypto-compat.c" bodystart="283" bodyend="294" declfile="src/libcrypto-compat.h" declline="37" declcolumn="10"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="libcrypto-compat_8c_1a795a86773bfd96eb252404b529db7adf" compoundref="libcrypto-compat_8c" startline="306" endline="317">HMAC_CTX_free</references>
+        <references refid="libcrypto-compat_8c_1a973c75cabed4059c31735a573a8d3ea1" compoundref="libcrypto-compat_8c" startline="319" endline="323">HMAC_CTX_reset</references>
+        <references refid="libcrypto-compat_8c_1ac1ea93cd73cec57de65044b1ee2aae7d" compoundref="libcrypto-compat_8c" startline="19" endline="26">OPENSSL_zalloc</references>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a973c75cabed4059c31735a573a8d3ea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HMAC_CTX_reset</definition>
+        <argsstring>(HMAC_CTX *ctx)</argsstring>
+        <name>HMAC_CTX_reset</name>
+        <param>
+          <type>HMAC_CTX *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="38" column="5" bodyfile="src/libcrypto-compat.c" bodystart="319" bodyend="323" declfile="src/libcrypto-compat.h" declline="38" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <referencedby refid="libcrypto-compat_8c_1a631c9742a44d89809858ce3430e73f20" compoundref="libcrypto-compat_8c" startline="283" endline="294">HMAC_CTX_new</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a795a86773bfd96eb252404b529db7adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HMAC_CTX_free</definition>
+        <argsstring>(HMAC_CTX *ctx)</argsstring>
+        <name>HMAC_CTX_free</name>
+        <param>
+          <type>HMAC_CTX *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="39" column="6" bodyfile="src/libcrypto-compat.c" bodystart="306" bodyend="317" declfile="src/libcrypto-compat.h" declline="39" declcolumn="6"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="libcrypto-compat_8c_1a4e2ad7849ae3f095de4b3ddc00b6c33f" compoundref="libcrypto-compat_8c" startline="277" endline="281">EVP_MD_CTX_free</references>
+        <references refid="libcrypto-compat_8c_1a54dbad03f2e9d05ab85caeac4b6a5ce2" compoundref="libcrypto-compat_8c" startline="296" endline="304">hmac_ctx_cleanup</references>
+        <referencedby refid="libcrypto-compat_8c_1a631c9742a44d89809858ce3430e73f20" compoundref="libcrypto-compat_8c" startline="283" endline="294">HMAC_CTX_new</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a7463021ae9e7b4cf50c20177a7319e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DH_get0_pqg</definition>
+        <argsstring>(const DH *dh, const BIGNUM **p, const BIGNUM **q, const BIGNUM **g)</argsstring>
+        <name>DH_get0_pqg</name>
+        <param>
+          <type>const DH *</type>
+          <declname>dh</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="41" column="6" bodyfile="src/libcrypto-compat.c" bodystart="339" bodyend="351" declfile="src/libcrypto-compat.h" declline="41" declcolumn="6"/>
+        <referencedby refid="dh_8h_1a4310b00fc6271a62c72abe5b69af6aa9" compoundref="dh__crypto_8c" startline="107" endline="115">ssh_dh_get_parameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1ac49073cbb8626cab1048ed48119d23af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DH_set0_pqg</definition>
+        <argsstring>(DH *dh, BIGNUM *p, BIGNUM *q, BIGNUM *g)</argsstring>
+        <name>DH_set0_pqg</name>
+        <param>
+          <type>DH *</type>
+          <declname>dh</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="43" column="5" bodyfile="src/libcrypto-compat.c" bodystart="353" bodyend="368" declfile="src/libcrypto-compat.h" declline="43" declcolumn="5"/>
+        <referencedby refid="dh_8h_1ac6b9e4755d3cffdcfde863b4930483e7" compoundref="dh__crypto_8c" startline="117" endline="160">ssh_dh_set_parameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a6fe1ce277516b04345c04cb8c3625a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DH_get0_key</definition>
+        <argsstring>(const DH *dh, const BIGNUM **pub_key, const BIGNUM **priv_key)</argsstring>
+        <name>DH_get0_key</name>
+        <param>
+          <type>const DH *</type>
+          <declname>dh</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>pub_key</declname>
+        </param>
+        <param>
+          <type>const BIGNUM **</type>
+          <declname>priv_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="44" column="6" bodyfile="src/libcrypto-compat.c" bodystart="370" bodyend="379" declfile="src/libcrypto-compat.h" declline="44" declcolumn="6"/>
+        <referencedby refid="dh_8h_1a888b43bd0cdceb75be52a04f99830e23" compoundref="dh__crypto_8c" startline="65" endline="82">ssh_dh_keypair_get_keys</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="libcrypto-compat_8h_1a7937a444111411068ed68ac44be5fa72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DH_set0_key</definition>
+        <argsstring>(DH *dh, BIGNUM *pub_key, BIGNUM *priv_key)</argsstring>
+        <name>DH_set0_key</name>
+        <param>
+          <type>DH *</type>
+          <declname>dh</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>pub_key</declname>
+        </param>
+        <param>
+          <type>BIGNUM *</type>
+          <declname>priv_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/libcrypto-compat.h" line="46" column="5" bodyfile="src/libcrypto-compat.c" bodystart="381" bodyend="396" declfile="src/libcrypto-compat.h" declline="46" declcolumn="5"/>
+        <referencedby refid="dh_8h_1a765e573a59e1e47a55be0ed88abce41f" compoundref="dh__crypto_8c" startline="84" endline="105">ssh_dh_keypair_set_keys</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LIBCRYPTO_COMPAT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBCRYPTO_COMPAT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/opensslv.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>OPENSSL_VERSION_NUMBER<sp/>&lt;<sp/>0x10100000L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/rsa.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/dsa.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/ecdsa.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/dh.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/evp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/hmac.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/bn.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1ada007b0a8f3f9089fed98a22cb2b1554" kindref="member">RSA_set0_key</ref>(RSA<sp/>*r,<sp/>BIGNUM<sp/>*n,<sp/>BIGNUM<sp/>*e,<sp/>BIGNUM<sp/>*d);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a7ac60e986908149a37f91623953d3f75" kindref="member">RSA_set0_factors</ref>(RSA<sp/>*r,<sp/>BIGNUM<sp/>*p,<sp/>BIGNUM<sp/>*q);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1abf40cc073eea998c37e00418063da49a" kindref="member">RSA_set0_crt_params</ref>(RSA<sp/>*r,<sp/>BIGNUM<sp/>*dmp1,<sp/>BIGNUM<sp/>*dmq1,<sp/>BIGNUM<sp/>*iqmp);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a96e6deebb87bafb81f7bde3df63e59f3" kindref="member">RSA_get0_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RSA<sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**e,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**d);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1ad0eaa8f2e87045d4abd7b3fc94ab4694" kindref="member">RSA_get0_factors</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RSA<sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**q);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a4f4b9ece6db658890011cfcf730d18f1" kindref="member">RSA_get0_crt_params</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RSA<sp/>*r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**dmp1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**dmq1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**iqmp);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1ad70ad75d15d2aaeae3abcc495875980a" kindref="member">DSA_get0_pqg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DSA<sp/>*d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**q,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**g);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a76c6c702a7a94d0b4638d5111d03c5b0" kindref="member">DSA_set0_pqg</ref>(DSA<sp/>*d,<sp/>BIGNUM<sp/>*p,<sp/>BIGNUM<sp/>*q,<sp/>BIGNUM<sp/>*g);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1ab0aa58b5f27cd96e571bac8b39bb0a51" kindref="member">DSA_get0_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DSA<sp/>*d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**pub_key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**priv_key);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a110c3da644cd76d2ae675ad1837fb9ee" kindref="member">DSA_set0_key</ref>(DSA<sp/>*d,<sp/>BIGNUM<sp/>*pub_key,<sp/>BIGNUM<sp/>*priv_key);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a40eca590d7163915606840e37c06ec41" kindref="member">DSA_SIG_get0</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DSA_SIG<sp/>*sig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**pr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**ps);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1ab0c6d53ab9db0c963c2bdd85e81d26e6" kindref="member">DSA_SIG_set0</ref>(DSA_SIG<sp/>*sig,<sp/>BIGNUM<sp/>*r,<sp/>BIGNUM<sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1aa0ad424eeb5c9c34c12d77cd3dc9dbf1" kindref="member">ECDSA_SIG_get0</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ECDSA_SIG<sp/>*sig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**pr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**ps);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1ae2f28de42b8345422b7ac3b28f330b9b" kindref="member">ECDSA_SIG_set0</ref>(ECDSA_SIG<sp/>*sig,<sp/>BIGNUM<sp/>*r,<sp/>BIGNUM<sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a20558440cab06b86ddfd11d4cfa33611" kindref="member">EVP_MD_CTX_reset</ref>(EVP_MD_CTX<sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">EVP_MD_CTX<sp/>*<ref refid="libcrypto-compat_8h_1a5397f93f1cc4aa6291a6f9310765776e" kindref="member">EVP_MD_CTX_new</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a4e2ad7849ae3f095de4b3ddc00b6c33f" kindref="member">EVP_MD_CTX_free</ref>(EVP_MD_CTX<sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">HMAC_CTX<sp/>*<ref refid="libcrypto-compat_8h_1a631c9742a44d89809858ce3430e73f20" kindref="member">HMAC_CTX_new</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a973c75cabed4059c31735a573a8d3ea1" kindref="member">HMAC_CTX_reset</ref>(HMAC_CTX<sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a795a86773bfd96eb252404b529db7adf" kindref="member">HMAC_CTX_free</ref>(HMAC_CTX<sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a7463021ae9e7b4cf50c20177a7319e88" kindref="member">DH_get0_pqg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DH<sp/>*dh,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**q,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**g);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1ac49073cbb8626cab1048ed48119d23af" kindref="member">DH_set0_pqg</ref>(DH<sp/>*dh,<sp/>BIGNUM<sp/>*p,<sp/>BIGNUM<sp/>*q,<sp/>BIGNUM<sp/>*g);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a6fe1ce277516b04345c04cb8c3625a55" kindref="member">DH_get0_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DH<sp/>*dh,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**pub_key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>BIGNUM<sp/>**priv_key);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="libcrypto-compat_8h_1a7937a444111411068ed68ac44be5fa72" kindref="member">DH_set0_key</ref>(DH<sp/>*dh,<sp/>BIGNUM<sp/>*pub_key,<sp/>BIGNUM<sp/>*priv_key);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>OPENSSL_VERSION_NUMBER<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LIBCRYPTO_COMPAT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="src/libcrypto-compat.h"/>
+  </compounddef>
+</doxygen>

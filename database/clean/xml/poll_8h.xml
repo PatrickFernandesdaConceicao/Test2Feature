@@ -1,0 +1,2133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="poll_8h" kind="file" language="C++">
+    <compoundname>poll.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includedby refid="ssh__server__fork_8c" local="no">examples/ssh_server_fork.c</includedby>
+    <includedby refid="sshd__direct-tcpip_8c" local="no">examples/sshd_direct-tcpip.c</includedby>
+    <includedby refid="session_8h" local="yes">include/libssh/session.h</includedby>
+    <includedby refid="agent_8c" local="yes">src/agent.c</includedby>
+    <includedby refid="connect_8c" local="yes">src/connect.c</includedby>
+    <includedby refid="connector_8c" local="yes">src/connector.c</includedby>
+    <includedby refid="init_8c" local="yes">src/init.c</includedby>
+    <includedby refid="poll_8c" local="yes">src/poll.c</includedby>
+    <includedby refid="session_8c" local="yes">src/session.c</includedby>
+    <includedby refid="socket_8c" local="yes">src/socket.c</includedby>
+    <includedby refid="default__cb_8c" local="no">tests/server/test_server/default_cb.c</includedby>
+    <includedby refid="test__socket_8c" local="no">tests/test_socket.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18">
+        <label>src/channels.c</label>
+        <link refid="channels_8c"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>tests/client/torture_connect.c</label>
+        <link refid="torture__connect_8c"/>
+      </node>
+      <node id="45">
+        <label>tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="88">
+        <label>tests/client/torture_forward.c</label>
+        <link refid="torture__forward_8c"/>
+      </node>
+      <node id="70">
+        <label>tests/client/torture_sftp_dir.c</label>
+        <link refid="torture__sftp__dir_8c"/>
+      </node>
+      <node id="95">
+        <label>tests/pkd/pkd_daemon.c</label>
+        <link refid="pkd__daemon_8c"/>
+      </node>
+      <node id="20">
+        <label>src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="54">
+        <label>src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>tests/client/torture_client_global_requests.c</label>
+        <link refid="torture__client__global__requests_8c"/>
+      </node>
+      <node id="13">
+        <label>tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="116">
+        <label>tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="108">
+        <label>tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="11">
+        <label>src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="60">
+        <label>tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="82">
+        <label>tests/server/torture_server.c</label>
+        <link refid="torture__server_8c"/>
+      </node>
+      <node id="57">
+        <label>tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="24">
+        <label>src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>tests/client/torture_proxycommand.c</label>
+        <link refid="torture__proxycommand_8c"/>
+      </node>
+      <node id="73">
+        <label>tests/client/torture_sftp_read.c</label>
+        <link refid="torture__sftp__read_8c"/>
+      </node>
+      <node id="5">
+        <label>include/libssh/bind.h</label>
+        <link refid="bind_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="67">
+        <label>src/sftp.c</label>
+        <link refid="sftp_8c"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>tests/unittests/torture_init.c</label>
+        <link refid="torture__init_8c"/>
+      </node>
+      <node id="98">
+        <label>tests/torture.c</label>
+        <link refid="torture_8c"/>
+      </node>
+      <node id="86">
+        <label>tests/torture.h</label>
+        <link refid="torture_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>tests/unittests/torture_push_pop_dir.c</label>
+        <link refid="torture__push__pop__dir_8c"/>
+      </node>
+      <node id="44">
+        <label>src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>tests/torture_key.c</label>
+        <link refid="torture__key_8c"/>
+      </node>
+      <node id="96">
+        <label>tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+      <node id="93">
+        <label>tests/client/torture_scp.c</label>
+        <link refid="torture__scp_8c"/>
+      </node>
+      <node id="19">
+        <label>tests/unittests/torture_channel.c</label>
+        <link refid="torture__channel_8c"/>
+      </node>
+      <node id="99">
+        <label>tests/torture_cmocka.c</label>
+        <link refid="torture__cmocka_8c"/>
+      </node>
+      <node id="85">
+        <label>tests/torture_cmocka.h</label>
+        <link refid="torture__cmocka_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>tests/unittests/torture_list.c</label>
+        <link refid="torture__list_8c"/>
+      </node>
+      <node id="76">
+        <label>src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="119">
+        <label>src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="112">
+        <label>tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="53">
+        <label>src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="38">
+        <label>src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="28">
+        <label>src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="121">
+        <label>tests/test_socket.c</label>
+        <link refid="test__socket_8c"/>
+      </node>
+      <node id="58">
+        <label>tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="71">
+        <label>tests/client/torture_sftp_ext.c</label>
+        <link refid="torture__sftp__ext_8c"/>
+      </node>
+      <node id="56">
+        <label>tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="81">
+        <label>tests/client/torture_session.c</label>
+        <link refid="torture__session_8c"/>
+      </node>
+      <node id="55">
+        <label>tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="31">
+        <label>src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="50">
+        <label>src/misc.c</label>
+        <link refid="misc_8c"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="120">
+        <label>tests/server/test_server/default_cb.c</label>
+        <link refid="default__cb_8c"/>
+      </node>
+      <node id="84">
+        <label>tests/server/torture_server_config.c</label>
+        <link refid="torture__server__config_8c"/>
+      </node>
+      <node id="47">
+        <label>src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="117">
+        <label>tests/unittests/torture_threads_init.c</label>
+        <link refid="torture__threads__init_8c"/>
+      </node>
+      <node id="15">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="68">
+        <label>tests/client/torture_sftp_benchmark.c</label>
+        <link refid="torture__sftp__benchmark_8c"/>
+      </node>
+      <node id="62">
+        <label>tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="49">
+        <label>src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="111">
+        <label>tests/unittests/torture_server_x11.c</label>
+        <link refid="torture__server__x11_8c"/>
+      </node>
+      <node id="89">
+        <label>tests/client/torture_hostkey.c</label>
+        <link refid="torture__hostkey_8c"/>
+      </node>
+      <node id="78">
+        <label>tests/client/torture_client_config.c</label>
+        <link refid="torture__client__config_8c"/>
+      </node>
+      <node id="46">
+        <label>src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="92">
+        <label>tests/client/torture_request_env.c</label>
+        <link refid="torture__request__env_8c"/>
+      </node>
+      <node id="21">
+        <label>src/config.c</label>
+        <link refid="config_8c"/>
+      </node>
+      <node id="59">
+        <label>tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="14">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>src/poll.c</label>
+        <link refid="poll_8c"/>
+      </node>
+      <node id="25">
+        <label>tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="29">
+        <label>src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="22">
+        <label>src/connect.c</label>
+        <link refid="connect_8c"/>
+      </node>
+      <node id="7">
+        <label>src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="65">
+        <label>src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="103">
+        <label>tests/unittests/torture_callbacks.c</label>
+        <link refid="torture__callbacks_8c"/>
+      </node>
+      <node id="90">
+        <label>tests/client/torture_knownhosts_verify.c</label>
+        <link refid="torture__knownhosts__verify_8c"/>
+      </node>
+      <node id="110">
+        <label>tests/unittests/torture_rand.c</label>
+        <link refid="torture__rand_8c"/>
+      </node>
+      <node id="2">
+        <label>examples/ssh_server_fork.c</label>
+        <link refid="ssh__server__fork_8c"/>
+      </node>
+      <node id="61">
+        <label>tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="23">
+        <label>src/connector.c</label>
+        <link refid="connector_8c"/>
+      </node>
+      <node id="6">
+        <label>src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="72">
+        <label>tests/client/torture_sftp_fsync.c</label>
+        <link refid="torture__sftp__fsync_8c"/>
+      </node>
+      <node id="37">
+        <label>tests/unittests/torture_misc.c</label>
+        <link refid="torture__misc_8c"/>
+      </node>
+      <node id="33">
+        <label>src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>src/options.c</label>
+        <link refid="options_8c"/>
+      </node>
+      <node id="34">
+        <label>src/error.c</label>
+        <link refid="error_8c"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/callbacks.c</label>
+        <link refid="callbacks_8c"/>
+      </node>
+      <node id="39">
+        <label>src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="114">
+        <label>tests/unittests/torture_temp_file.c</label>
+        <link refid="torture__temp__file_8c"/>
+      </node>
+      <node id="77">
+        <label>tests/client/torture_algorithms.c</label>
+        <link refid="torture__algorithms_8c"/>
+      </node>
+      <node id="107">
+        <label>tests/unittests/torture_knownhosts_parsing.c</label>
+        <link refid="torture__knownhosts__parsing_8c"/>
+      </node>
+      <node id="16">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="101">
+        <label>tests/unittests/torture_buffer.c</label>
+        <link refid="torture__buffer_8c"/>
+      </node>
+      <node id="27">
+        <label>tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="115">
+        <label>tests/unittests/torture_threads_buffer.c</label>
+        <link refid="torture__threads__buffer_8c"/>
+      </node>
+      <node id="66">
+        <label>src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>examples/sshd_direct-tcpip.c</label>
+        <link refid="sshd__direct-tcpip_8c"/>
+      </node>
+      <node id="113">
+        <label>tests/unittests/torture_temp_dir.c</label>
+        <link refid="torture__temp__dir_8c"/>
+      </node>
+      <node id="52">
+        <label>src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="74">
+        <label>src/socket.c</label>
+        <link refid="socket_8c"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="8">
+        <label>tests/unittests/torture_bind_config.c</label>
+        <link refid="torture__bind__config_8c"/>
+      </node>
+      <node id="69">
+        <label>tests/client/torture_sftp_canonicalize_path.c</label>
+        <link refid="torture__sftp__canonicalize__path_8c"/>
+      </node>
+      <node id="43">
+        <label>src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="40">
+        <label>src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="75">
+        <label>tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="97">
+        <label>tests/pkd/pkd_keyutil.c</label>
+        <link refid="pkd__keyutil_8c"/>
+      </node>
+      <node id="9">
+        <label>include/libssh/gssapi.h</label>
+        <link refid="gssapi_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>tests/server/torture_server_auth_kbdint.c</label>
+        <link refid="torture__server__auth__kbdint_8c"/>
+      </node>
+      <node id="30">
+        <label>src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="104">
+        <label>tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+      <node id="35">
+        <label>tests/unittests/torture_isipaddr.c</label>
+        <link refid="torture__isipaddr_8c"/>
+      </node>
+      <node id="10">
+        <label>src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="94">
+        <label>tests/cmdline.c</label>
+        <link refid="cmdline_8c"/>
+      </node>
+      <node id="42">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="102">
+        <label>tests/unittests/torture_bytearray.c</label>
+        <link refid="torture__bytearray_8c"/>
+      </node>
+      <node id="118">
+        <label>tests/unittests/torture_tokens.c</label>
+        <link refid="torture__tokens_8c"/>
+      </node>
+      <node id="4">
+        <label>include/libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+      <node id="48">
+        <label>src/log.c</label>
+        <link refid="log_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structssh__pollfd__struct" prot="public">ssh_pollfd_struct</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="poll_8h_1a52ac479a805051f59643588b096024ff" prot="public" static="no">
+        <name>POLLIN</name>
+        <initializer>0x001  /* There is data <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> read.  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="82" column="9" bodyfile="include/libssh/poll.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1ab6f53b89c7a4cc5e8349f7c778d85168" prot="public" static="no">
+        <name>POLLPRI</name>
+        <initializer>0x002  /* There is urgent data <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> read.  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="85" column="9" bodyfile="include/libssh/poll.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1a91b3c67129ac7675062f316b840a0d58" prot="public" static="no">
+        <name>POLLOUT</name>
+        <initializer>0x004  /* Writing now will not block.  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="88" column="9" bodyfile="include/libssh/poll.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1ab1c532446408c98559d4aaaeeeb99820" prot="public" static="no">
+        <name>POLLERR</name>
+        <initializer>0x008  /* Error condition.  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="92" column="9" bodyfile="include/libssh/poll.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1a262754fe6bdf27c2cd3da43284ec8536" prot="public" static="no">
+        <name>POLLHUP</name>
+        <initializer>0x010  /* Hung up.  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="95" column="9" bodyfile="include/libssh/poll.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1ae8bffe35c61e12fb7b408b89721896df" prot="public" static="no">
+        <name>POLLNVAL</name>
+        <initializer>0x020  /* Invalid polling request.  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="98" column="9" bodyfile="include/libssh/poll.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1a8ca81f2b28be692732d3f0b601fd828d" prot="public" static="no">
+        <name>POLLRDNORM</name>
+        <initializer>0x040 /* mapped <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> read fds_set */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="102" column="9" bodyfile="include/libssh/poll.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1a37c71608162976b7fa0a5465009ce3ab" prot="public" static="no">
+        <name>POLLRDBAND</name>
+        <initializer>0x080 /* mapped <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> <ref refid="test__socket_8c_1a3503f27f26034445ce38baa5e0ac3e8c" kindref="member">exception</ref> fds_set */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="105" column="9" bodyfile="include/libssh/poll.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1ab8f1f69608ba2430cd5fa629a87b5420" prot="public" static="no">
+        <name>POLLWRNORM</name>
+        <initializer>0x100 /* mapped <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> write fds_set */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="108" column="9" bodyfile="include/libssh/poll.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poll_8h_1a272636cc42f343281665cd1ba92f2f1e" prot="public" static="no">
+        <name>POLLWRBAND</name>
+        <initializer>0x200 /* mapped <ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref> write fds_set */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="111" column="9" bodyfile="include/libssh/poll.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="poll_8h_1ab86b2342c864cc22be957fd23f5d6b0d" prot="public" static="no">
+        <type>struct <ref refid="structssh__pollfd__struct" kindref="compound">ssh_pollfd_struct</ref></type>
+        <definition>typedef struct ssh_pollfd_struct ssh_pollfd_t</definition>
+        <argsstring></argsstring>
+        <name>ssh_pollfd_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="39" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="poll_8h_1abf4939a673f2b874b24dc204cedab8f5" prot="public" static="no">
+        <type>unsigned long int</type>
+        <definition>typedef unsigned long int nfds_t</definition>
+        <argsstring></argsstring>
+        <name>nfds_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="41" column="27" bodyfile="include/libssh/poll.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" prot="public" static="no">
+        <type>struct <ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx_struct</ref> *</type>
+        <definition>typedef struct ssh_poll_ctx_struct* ssh_poll_ctx</definition>
+        <argsstring></argsstring>
+        <name>ssh_poll_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="120" column="34" bodyfile="include/libssh/poll.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" prot="public" static="no">
+        <type>struct <ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle_struct</ref> *</type>
+        <definition>typedef struct ssh_poll_handle_struct* ssh_poll_handle</definition>
+        <argsstring></argsstring>
+        <name>ssh_poll_handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="121" column="37" bodyfile="include/libssh/poll.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="poll_8h_1af2a7809ed930c3f7eb5ab1a086673053" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ssh_poll_callback) (ssh_poll_handle p, socket_t fd, int revents, void *userdata)</definition>
+        <argsstring>)(ssh_poll_handle p, socket_t fd, int revents, void *userdata)</argsstring>
+        <name>ssh_poll_callback</name>
+        <briefdescription>
+<para>SSH poll callback. This callback will be used when an event caught on the socket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poll object this callback belongs to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The raw socket. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>revents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current poll events on the socket. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, &lt; 0 if you removed the poll object from its poll context. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="135" column="9" bodyfile="include/libssh/poll.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__poll_1ga26aa5e00c0201c30dad6ec0e93d3871f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_poll_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="117" column="6" bodyfile="src/poll.c" bodystart="321" bodyend="323" declfile="include/libssh/poll.h" declline="117" declcolumn="6"/>
+        <references refid="group__libssh__poll_1ga2d4a5991605a0507ae9f8854fd1ebce7" compoundref="poll_8c" startline="217" endline="319">bsd_poll</references>
+        <references refid="group__libssh__poll_1ga6abf974b607f70c29b4ea8065f69d333" compoundref="poll_8c" startline="102">ssh_poll_emu</references>
+        <referencedby refid="socket_8h_1a37f17ec6d2ede343ad1e70ed061ec9bb" compoundref="socket_8c" startline="110" endline="127">ssh_socket_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga7e60f5f498b15eab57d9b2de70ab1acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_cleanup</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_poll_cleanup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="118" column="6" bodyfile="src/poll.c" bodystart="325" bodyend="327" declfile="include/libssh/poll.h" declline="118" declcolumn="6"/>
+        <references refid="group__libssh__poll_1ga2d4a5991605a0507ae9f8854fd1ebce7" compoundref="poll_8c" startline="217" endline="319">bsd_poll</references>
+        <references refid="group__libssh__poll_1ga6abf974b607f70c29b4ea8065f69d333" compoundref="poll_8c" startline="102">ssh_poll_emu</references>
+        <referencedby refid="socket_8h_1accaf18caa54fcca41198838b5134a47b" compoundref="socket_8c" startline="132" endline="141">ssh_socket_cleanup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1gad71eb057dc675a9291b6fa78e99ebbc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_poll</definition>
+        <argsstring>(ssh_pollfd_t *fds, nfds_t nfds, int timeout)</argsstring>
+        <name>ssh_poll</name>
+        <param>
+          <type><ref refid="poll_8h_1ab86b2342c864cc22be957fd23f5d6b0d" kindref="member">ssh_pollfd_t</ref> *</type>
+          <declname>fds</declname>
+        </param>
+        <param>
+          <type><ref refid="poll_8h_1abf4939a673f2b874b24dc204cedab8f5" kindref="member">nfds_t</ref></type>
+          <declname>nfds</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="119" column="5" bodyfile="src/poll.c" bodystart="329" bodyend="331" declfile="include/libssh/poll.h" declline="119" declcolumn="5"/>
+        <references refid="group__libssh__poll_1ga6abf974b607f70c29b4ea8065f69d333" compoundref="poll_8c" startline="102">ssh_poll_emu</references>
+        <referencedby refid="agent_8c_1a5de461e227daa4f58be39d898ad861fb" compoundref="agent_8c" startline="66" endline="124">atomicio</referencedby>
+        <referencedby refid="group__libssh__poll_1ga6c0f6d3c677838181df5cd03a755fd7c" compoundref="poll_8c" startline="663" endline="721">ssh_poll_ctx_dopoll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1gac657ed07db9e5851ffb0aba45e071e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+        <definition>ssh_poll_handle ssh_poll_new</definition>
+        <argsstring>(socket_t fd, short events, ssh_poll_callback cb, void *userdata)</argsstring>
+        <name>ssh_poll_new</name>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <param>
+          <type><ref refid="poll_8h_1af2a7809ed930c3f7eb5ab1a086673053" kindref="member">ssh_poll_callback</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+<para>Allocate a new poll object, which could be used within a poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket that will be polled. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>events</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poll events that will be monitored for the socket. i.e. POLLIN, POLLPRI, POLLOUT </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function to be called if any of the events are set. The prototype of cb is: int (*ssh_poll_callback)(ssh_poll_handle p, socket_t fd, int revents, void *userdata); </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. NULL if not needed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new poll object, NULL on error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="140" column="17" bodyfile="src/poll.c" bodystart="351" bodyend="367" declfile="include/libssh/poll.h" declline="140" declcolumn="17"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="structssh__poll__handle__struct_1a69a55307e6ca9327c66f0cf02cd66164" compoundref="poll_8c" startline="72">ssh_poll_handle_struct::cb</references>
+        <references refid="structssh__poll__handle__struct_1aaf8c2e6479420a4c9dff313a33f92e08" compoundref="poll_8c" startline="73">ssh_poll_handle_struct::cb_data</references>
+        <references refid="structssh__poll__handle__struct_1acb5f3c84c402651d573f4c2f5a5cc0c6" compoundref="poll_8c" startline="70">ssh_poll_handle_struct::events</references>
+        <references refid="structssh__poll__handle__struct_1a5fa7a7592750be5dab54334aac96bc03" compoundref="poll_8c" startline="67">ssh_poll_handle_struct::fd</references>
+        <references refid="structssh__poll__handle__struct_1ae1bc1ac8f669a77d63c45741b9080799">ssh_poll_handle_struct::x</references>
+        <references refid="priv_8h_1a65e0a55b6af58e00b0a584d665af60ab" compoundref="priv_8h" startline="320">ZERO_STRUCTP</references>
+        <referencedby refid="group__libssh__server_1ga30896ad964ce5b09b3b0068b1ed783e9" compoundref="bind_8c" startline="346" endline="364">ssh_bind_get_poll</referencedby>
+        <referencedby refid="priv_8h_1a84015bb99d7ac6fe60fe6e61dbd0e1cf" compoundref="connector_8c" startline="565" endline="628">ssh_connector_set_event</referencedby>
+        <referencedby refid="group__libssh__poll_1ga41d63ffe950a48e8b2c513877e0cd6b4" compoundref="poll_8c" startline="815" endline="845">ssh_event_add_fd</referencedby>
+        <referencedby refid="socket_8h_1a5af4852b3910014440f36032ec76d785" compoundref="socket_8c" startline="386" endline="393">ssh_socket_get_poll_handle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga873ecc6866c286f7777612d94de5c00d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_free</definition>
+        <argsstring>(ssh_poll_handle p)</argsstring>
+        <name>ssh_poll_free</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Free a poll object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="142" column="6" bodyfile="src/poll.c" bodystart="376" bodyend="382" declfile="include/libssh/poll.h" declline="142" declcolumn="6"/>
+        <references refid="structssh__poll__handle__struct_1a149ea8e075d60bf955fc3b979803e7d7" compoundref="poll_8c" startline="64">ssh_poll_handle_struct::ctx</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="group__libssh__poll_1gad4404e7da7c676b126b87d2de4d45d1d" compoundref="poll_8c" startline="625" endline="645">ssh_poll_ctx_remove</references>
+        <referencedby refid="libssh_8h_1ae082e4d35591a2f2f3074f28049ff993" compoundref="connector_8c" startline="125" endline="151">ssh_connector_free</referencedby>
+        <referencedby refid="priv_8h_1ad92def69fc9cce5d1d564588e668a862" compoundref="connector_8c" startline="630" endline="659">ssh_connector_remove_event</referencedby>
+        <referencedby refid="group__libssh__poll_1ga41d63ffe950a48e8b2c513877e0cd6b4" compoundref="poll_8c" startline="815" endline="845">ssh_event_add_fd</referencedby>
+        <referencedby refid="group__libssh__poll_1gaf2cdca09a3a2024ed9bb4f134c8ae368" compoundref="poll_8c" startline="976" endline="1011">ssh_event_remove_fd</referencedby>
+        <referencedby refid="group__libssh__poll_1ga86bd0c5c2fa5614acef127e6689282ae" compoundref="poll_8c" startline="521" endline="537">ssh_poll_ctx_free</referencedby>
+        <referencedby refid="socket_8h_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1gaca05fcf77e6c4b5e55a9cfd2c9690ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+        <definition>ssh_poll_ctx ssh_poll_get_ctx</definition>
+        <argsstring>(ssh_poll_handle p)</argsstring>
+        <name>ssh_poll_get_ctx</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Get the poll context of a poll object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Poll context or NULL if the poll object isn&apos;t attached. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="143" column="14" bodyfile="src/poll.c" bodystart="391" bodyend="393" declfile="include/libssh/poll.h" declline="143" declcolumn="14"/>
+        <references refid="structssh__poll__handle__struct_1a149ea8e075d60bf955fc3b979803e7d7" compoundref="poll_8c" startline="64">ssh_poll_handle_struct::ctx</references>
+        <referencedby refid="group__libssh__session_1gaa0e04dc9e24d5112a5ca2b7bd68031d0" compoundref="session_8c" startline="633" endline="665">ssh_handle_packets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga8e2e646ac338021e8e804992e8c13496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>short</type>
+        <definition>short ssh_poll_get_events</definition>
+        <argsstring>(ssh_poll_handle p)</argsstring>
+        <name>ssh_poll_get_events</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Get the events of a poll object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Poll events. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="144" column="7" bodyfile="src/poll.c" bodystart="402" bodyend="404" declfile="include/libssh/poll.h" declline="144" declcolumn="7"/>
+        <references refid="structssh__poll__handle__struct_1acb5f3c84c402651d573f4c2f5a5cc0c6" compoundref="poll_8c" startline="70">ssh_poll_handle_struct::events</references>
+        <referencedby refid="group__libssh__poll_1ga26ad689751420b91bf002f616e8bf4f7" compoundref="poll_8c" startline="442" endline="444">ssh_poll_add_events</referencedby>
+        <referencedby refid="group__libssh__poll_1ga012582349ce62cf788761e5f97548496" compoundref="poll_8c" startline="453" endline="455">ssh_poll_remove_events</referencedby>
+        <referencedby refid="socket_8h_1a2d1f155a930ca6784cbcb44935ce58ef" compoundref="socket_8c" startline="788" endline="798">ssh_socket_get_poll_flags</referencedby>
+        <referencedby refid="socket_8c_1a830a3625d6dd3a649a6f94380d4ecb82" compoundref="socket_8c" startline="564" endline="600">ssh_socket_unbuffered_write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1gac02bf6f4444d4cc442da5865009fa5f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_set_events</definition>
+        <argsstring>(ssh_poll_handle p, short events)</argsstring>
+        <name>ssh_poll_set_events</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <briefdescription>
+<para>Set the events of a poll object. The events will also be propagated to an associated poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>events</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poll events. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="145" column="6" bodyfile="src/poll.c" bodystart="413" bodyend="418" declfile="include/libssh/poll.h" declline="145" declcolumn="6"/>
+        <references refid="structssh__poll__handle__struct_1a149ea8e075d60bf955fc3b979803e7d7" compoundref="poll_8c" startline="64">ssh_poll_handle_struct::ctx</references>
+        <references refid="structssh__pollfd__struct_1a6ed14662befc1352fc119dc5a86aaeff" compoundref="poll_8h" startline="37">ssh_pollfd_struct::events</references>
+        <references refid="structssh__poll__handle__struct_1acb5f3c84c402651d573f4c2f5a5cc0c6" compoundref="poll_8c" startline="70">ssh_poll_handle_struct::events</references>
+        <references refid="structssh__poll__handle__struct_1ac8e6da4314560c93bd306786d37325ab" compoundref="poll_8c" startline="68">ssh_poll_handle_struct::idx</references>
+        <references refid="structssh__poll__handle__struct_1a91db66fe2c1a79a900a8932e6c13484c" compoundref="poll_8c" startline="71">ssh_poll_handle_struct::lock</references>
+        <references refid="structssh__poll__ctx__struct_1a61c9aa3bcc47ba0b039db22a7256ad7c" compoundref="poll_8c" startline="78">ssh_poll_ctx_struct::pollfds</references>
+        <references refid="structssh__poll__handle__struct_1ae1bc1ac8f669a77d63c45741b9080799">ssh_poll_handle_struct::x</references>
+        <referencedby refid="group__libssh__poll_1ga26ad689751420b91bf002f616e8bf4f7" compoundref="poll_8c" startline="442" endline="444">ssh_poll_add_events</referencedby>
+        <referencedby refid="group__libssh__poll_1ga012582349ce62cf788761e5f97548496" compoundref="poll_8c" startline="453" endline="455">ssh_poll_remove_events</referencedby>
+        <referencedby refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" compoundref="socket_8c" startline="914" endline="948">ssh_socket_connect_proxycommand</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+        <referencedby refid="socket_8h_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</referencedby>
+        <referencedby refid="socket_8c_1a830a3625d6dd3a649a6f94380d4ecb82" compoundref="socket_8c" startline="564" endline="600">ssh_socket_unbuffered_write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga26ad689751420b91bf002f616e8bf4f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_add_events</definition>
+        <argsstring>(ssh_poll_handle p, short events)</argsstring>
+        <name>ssh_poll_add_events</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <briefdescription>
+<para>Add extra events to a poll object. Duplicates are ignored. The events will also be propagated to an associated poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>events</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poll events. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="146" column="6" bodyfile="src/poll.c" bodystart="442" bodyend="444" declfile="include/libssh/poll.h" declline="146" declcolumn="6"/>
+        <references refid="group__libssh__poll_1ga8e2e646ac338021e8e804992e8c13496" compoundref="poll_8c" startline="402" endline="404">ssh_poll_get_events</references>
+        <references refid="group__libssh__poll_1gac02bf6f4444d4cc442da5865009fa5f6" compoundref="poll_8c" startline="413" endline="418">ssh_poll_set_events</references>
+        <referencedby refid="connector_8c_1a49e333bf300287cfadad801243c2d7f7" compoundref="connector_8c" startline="219" endline="236">ssh_connector_reset_pollevents</referencedby>
+        <referencedby refid="group__libssh__session_1gaa0e04dc9e24d5112a5ca2b7bd68031d0" compoundref="session_8c" startline="633" endline="665">ssh_handle_packets</referencedby>
+        <referencedby refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</referencedby>
+        <referencedby refid="socket_8h_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga012582349ce62cf788761e5f97548496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_remove_events</definition>
+        <argsstring>(ssh_poll_handle p, short events)</argsstring>
+        <name>ssh_poll_remove_events</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>events</declname>
+        </param>
+        <briefdescription>
+<para>Remove events from a poll object. Non-existent are ignored. The events will also be propagated to an associated poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>events</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poll events. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="147" column="6" bodyfile="src/poll.c" bodystart="453" bodyend="455" declfile="include/libssh/poll.h" declline="147" declcolumn="6"/>
+        <references refid="group__libssh__poll_1ga8e2e646ac338021e8e804992e8c13496" compoundref="poll_8c" startline="402" endline="404">ssh_poll_get_events</references>
+        <references refid="group__libssh__poll_1gac02bf6f4444d4cc442da5865009fa5f6" compoundref="poll_8c" startline="413" endline="418">ssh_poll_set_events</references>
+        <referencedby refid="connector_8c_1a49e333bf300287cfadad801243c2d7f7" compoundref="connector_8c" startline="219" endline="236">ssh_connector_reset_pollevents</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga26c19b17ac8d1e3d7fcbfb4367fb93ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+        <definition>socket_t ssh_poll_get_fd</definition>
+        <argsstring>(ssh_poll_handle p)</argsstring>
+        <name>ssh_poll_get_fd</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Get the raw socket of a poll object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Raw socket. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="148" column="10" bodyfile="src/poll.c" bodystart="465" bodyend="471" declfile="include/libssh/poll.h" declline="148" declcolumn="10"/>
+        <references refid="structssh__poll__handle__struct_1a149ea8e075d60bf955fc3b979803e7d7" compoundref="poll_8c" startline="64">ssh_poll_handle_struct::ctx</references>
+        <references refid="structssh__pollfd__struct_1a9fd4b38088aba34965f9f22698c9fc96" compoundref="poll_8h" startline="36">ssh_pollfd_struct::fd</references>
+        <references refid="structssh__poll__handle__struct_1a5fa7a7592750be5dab54334aac96bc03" compoundref="poll_8c" startline="67">ssh_poll_handle_struct::fd</references>
+        <references refid="structssh__poll__handle__struct_1ac8e6da4314560c93bd306786d37325ab" compoundref="poll_8c" startline="68">ssh_poll_handle_struct::idx</references>
+        <references refid="structssh__poll__ctx__struct_1a61c9aa3bcc47ba0b039db22a7256ad7c" compoundref="poll_8c" startline="78">ssh_poll_ctx_struct::pollfds</references>
+        <references refid="structssh__poll__handle__struct_1ae1bc1ac8f669a77d63c45741b9080799">ssh_poll_handle_struct::x</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga2da5adcc03754a3b17e4fb0f23867ace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_set_fd</definition>
+        <argsstring>(ssh_poll_handle p, socket_t fd)</argsstring>
+        <name>ssh_poll_set_fd</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>Set the file descriptor of a poll object. The FD will also be propagated to an associated poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New file descriptor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="149" column="6" bodyfile="src/poll.c" bodystart="427" bodyend="433" declfile="include/libssh/poll.h" declline="149" declcolumn="6"/>
+        <references refid="structssh__poll__handle__struct_1a149ea8e075d60bf955fc3b979803e7d7" compoundref="poll_8c" startline="64">ssh_poll_handle_struct::ctx</references>
+        <references refid="structssh__pollfd__struct_1a9fd4b38088aba34965f9f22698c9fc96" compoundref="poll_8h" startline="36">ssh_pollfd_struct::fd</references>
+        <references refid="structssh__poll__handle__struct_1a5fa7a7592750be5dab54334aac96bc03" compoundref="poll_8c" startline="67">ssh_poll_handle_struct::fd</references>
+        <references refid="structssh__poll__handle__struct_1ac8e6da4314560c93bd306786d37325ab" compoundref="poll_8c" startline="68">ssh_poll_handle_struct::idx</references>
+        <references refid="structssh__poll__ctx__struct_1a61c9aa3bcc47ba0b039db22a7256ad7c" compoundref="poll_8c" startline="78">ssh_poll_ctx_struct::pollfds</references>
+        <references refid="structssh__poll__handle__struct_1ae1bc1ac8f669a77d63c45741b9080799">ssh_poll_handle_struct::x</references>
+        <referencedby refid="socket_8h_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga98ba36c2771b1e49d5c8e2f79be6d3ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_set_callback</definition>
+        <argsstring>(ssh_poll_handle p, ssh_poll_callback cb, void *userdata)</argsstring>
+        <name>ssh_poll_set_callback</name>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="poll_8h_1af2a7809ed930c3f7eb5ab1a086673053" kindref="member">ssh_poll_callback</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+<para>Set the callback of a poll object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function to be called if any of the events are set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function. NULL if not needed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="150" column="6" bodyfile="src/poll.c" bodystart="480" bodyend="485" declfile="include/libssh/poll.h" declline="150" declcolumn="6"/>
+        <references refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" compoundref="ssh__client_8c" startline="69">cb</references>
+        <references refid="structssh__poll__handle__struct_1a69a55307e6ca9327c66f0cf02cd66164" compoundref="poll_8c" startline="72">ssh_poll_handle_struct::cb</references>
+        <references refid="structssh__poll__handle__struct_1aaf8c2e6479420a4c9dff313a33f92e08" compoundref="poll_8c" startline="73">ssh_poll_handle_struct::cb_data</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga5364b3fb8ae1cb44e3ec09c8c10cb5fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+        <definition>ssh_poll_ctx ssh_poll_ctx_new</definition>
+        <argsstring>(size_t chunk_size)</argsstring>
+        <name>ssh_poll_ctx_new</name>
+        <param>
+          <type>size_t</type>
+          <declname>chunk_size</declname>
+        </param>
+        <briefdescription>
+<para>Create a new poll context. It could be associated with many poll object which are going to be polled at the same time as the poll context. You would need a single poll context per thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chunk_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the memory chunk that will be allocated, when more memory is needed. This is for efficiency reasons, i.e. don&apos;t allocate memory for each new poll object, but for the next 5. Set it to 0 if you want to use the library&apos;s default value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="151" column="14" bodyfile="src/poll.c" bodystart="498" bodyend="514" declfile="include/libssh/poll.h" declline="151" declcolumn="14"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="poll_8c_1a43368aeb32c3f9d274961b95d6fef110" compoundref="poll_8c" startline="43">SSH_POLL_CTX_CHUNK</references>
+        <references refid="priv_8h_1a65e0a55b6af58e00b0a584d665af60ab" compoundref="priv_8h" startline="320">ZERO_STRUCTP</references>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+        <referencedby refid="group__libssh__poll_1ga406895f99b6b486c4b65536e5399ff96" compoundref="poll_8c" startline="760" endline="785">ssh_event_new</referencedby>
+        <referencedby refid="group__libssh__poll_1ga8ad007907f642d4aa2c25e5209bf337a" compoundref="poll_8c" startline="730" endline="736">ssh_poll_get_default_ctx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga86bd0c5c2fa5614acef127e6689282ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_ctx_free</definition>
+        <argsstring>(ssh_poll_ctx ctx)</argsstring>
+        <name>ssh_poll_ctx_free</name>
+        <param>
+          <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Free a poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="152" column="6" bodyfile="src/poll.c" bodystart="521" bodyend="537" declfile="include/libssh/poll.h" declline="152" declcolumn="6"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="group__libssh__poll_1ga873ecc6866c286f7777612d94de5c00d" compoundref="poll_8c" startline="376" endline="382">ssh_poll_free</references>
+        <referencedby refid="group__libssh__poll_1ga101388903c74d53ed550574b587449cd" compoundref="poll_8c" startline="1089" endline="1118">ssh_event_free</referencedby>
+        <referencedby refid="group__libssh__poll_1ga406895f99b6b486c4b65536e5399ff96" compoundref="poll_8c" startline="760" endline="785">ssh_event_new</referencedby>
+        <referencedby refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga2c9eca31ff21406f13c1b7472ae8c85b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_poll_ctx_add</definition>
+        <argsstring>(ssh_poll_ctx ctx, ssh_poll_handle p)</argsstring>
+        <name>ssh_poll_ctx_add</name>
+        <param>
+          <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Add a poll object to a poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, &lt; 0 on error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="153" column="5" bodyfile="src/poll.c" bodystart="573" bodyend="595" declfile="include/libssh/poll.h" declline="153" declcolumn="5"/>
+        <references refid="structssh__poll__handle__struct_1a149ea8e075d60bf955fc3b979803e7d7" compoundref="poll_8c" startline="64">ssh_poll_handle_struct::ctx</references>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structssh__poll__handle__struct_1acb5f3c84c402651d573f4c2f5a5cc0c6" compoundref="poll_8c" startline="70">ssh_poll_handle_struct::events</references>
+        <references refid="structssh__poll__handle__struct_1a5fa7a7592750be5dab54334aac96bc03" compoundref="poll_8c" startline="67">ssh_poll_handle_struct::fd</references>
+        <references refid="structssh__poll__handle__struct_1ac8e6da4314560c93bd306786d37325ab" compoundref="poll_8c" startline="68">ssh_poll_handle_struct::idx</references>
+        <references refid="group__libssh__poll_1ga87079a58e0cc336ad94fbd041e97bb19" compoundref="poll_8c" startline="539" endline="563">ssh_poll_ctx_resize</references>
+        <references refid="structssh__poll__handle__struct_1ae1bc1ac8f669a77d63c45741b9080799">ssh_poll_handle_struct::x</references>
+        <referencedby refid="group__libssh__poll_1ga41d63ffe950a48e8b2c513877e0cd6b4" compoundref="poll_8c" startline="815" endline="845">ssh_event_add_fd</referencedby>
+        <referencedby refid="group__libssh__poll_1gaaf3e1df762650369e99595eee761f2a9" compoundref="poll_8c" startline="857" endline="860">ssh_event_add_poll</referencedby>
+        <referencedby refid="group__libssh__poll_1ga51af38de4cc3adbd5566ec1f1b91983d" compoundref="poll_8c" startline="884" endline="923">ssh_event_add_session</referencedby>
+        <referencedby refid="group__libssh__poll_1ga101388903c74d53ed550574b587449cd" compoundref="poll_8c" startline="1089" endline="1118">ssh_event_free</referencedby>
+        <referencedby refid="group__libssh__poll_1gaab8dec05a0afb49392c63b2ec158ac3d" compoundref="poll_8c" startline="1022" endline="1068">ssh_event_remove_session</referencedby>
+        <referencedby refid="group__libssh__session_1gaa0e04dc9e24d5112a5ca2b7bd68031d0" compoundref="session_8c" startline="633" endline="665">ssh_handle_packets</referencedby>
+        <referencedby refid="group__libssh__poll_1ga4aa3ef276370adbb4afb284947dc8005" compoundref="poll_8c" startline="605" endline="616">ssh_poll_ctx_add_socket</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="poll_8h_1a6882b1291053d52ef4cc435321395a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_poll_ctx_add_socket</definition>
+        <argsstring>(ssh_poll_ctx ctx, struct ssh_socket_struct *s)</argsstring>
+        <name>ssh_poll_ctx_add_socket</name>
+        <param>
+          <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="154" column="5" declfile="include/libssh/poll.h" declline="154" declcolumn="5"/>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1gad4404e7da7c676b126b87d2de4d45d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_poll_ctx_remove</definition>
+        <argsstring>(ssh_poll_ctx ctx, ssh_poll_handle p)</argsstring>
+        <name>ssh_poll_ctx_remove</name>
+        <param>
+          <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Remove a poll object from a poll context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="155" column="6" bodyfile="src/poll.c" bodystart="625" bodyend="645" declfile="include/libssh/poll.h" declline="155" declcolumn="6"/>
+        <references refid="structssh__poll__handle__struct_1a149ea8e075d60bf955fc3b979803e7d7" compoundref="poll_8c" startline="64">ssh_poll_handle_struct::ctx</references>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structssh__poll__handle__struct_1a5fa7a7592750be5dab54334aac96bc03" compoundref="poll_8c" startline="67">ssh_poll_handle_struct::fd</references>
+        <references refid="structssh__poll__handle__struct_1ac8e6da4314560c93bd306786d37325ab" compoundref="poll_8c" startline="68">ssh_poll_handle_struct::idx</references>
+        <references refid="group__libssh__poll_1ga87079a58e0cc336ad94fbd041e97bb19" compoundref="poll_8c" startline="539" endline="563">ssh_poll_ctx_resize</references>
+        <references refid="structssh__poll__handle__struct_1ae1bc1ac8f669a77d63c45741b9080799">ssh_poll_handle_struct::x</references>
+        <referencedby refid="group__libssh__poll_1ga51af38de4cc3adbd5566ec1f1b91983d" compoundref="poll_8c" startline="884" endline="923">ssh_event_add_session</referencedby>
+        <referencedby refid="group__libssh__poll_1ga101388903c74d53ed550574b587449cd" compoundref="poll_8c" startline="1089" endline="1118">ssh_event_free</referencedby>
+        <referencedby refid="group__libssh__poll_1ga302e3942e697063f1a54319667231f73" compoundref="poll_8c" startline="869" endline="872">ssh_event_remove_poll</referencedby>
+        <referencedby refid="group__libssh__poll_1gaab8dec05a0afb49392c63b2ec158ac3d" compoundref="poll_8c" startline="1022" endline="1068">ssh_event_remove_session</referencedby>
+        <referencedby refid="group__libssh__poll_1ga873ecc6866c286f7777612d94de5c00d" compoundref="poll_8c" startline="376" endline="382">ssh_poll_free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga6c0f6d3c677838181df5cd03a755fd7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_poll_ctx_dopoll</definition>
+        <argsstring>(ssh_poll_ctx ctx, int timeout)</argsstring>
+        <name>ssh_poll_ctx_dopoll</name>
+        <param>
+          <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Poll all the sockets associated through a poll object with a poll context. If any of the events are set after the poll, the call back function of the socket will be called. This function should be called once within the programs main loop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an already allocated poll context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An upper limit on the time for which <ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx()</ref> will block, in milliseconds. Specifying a negative value means an infinite timeout. This parameter is passed to the poll() function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK No error. SSH_ERROR Error happened during the poll. SSH_AGAIN Timeout occured </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="156" column="5" bodyfile="src/poll.c" bodystart="663" bodyend="721" declfile="include/libssh/poll.h" declline="156" declcolumn="5"/>
+        <references refid="structssh__poll__handle__struct_1a69a55307e6ca9327c66f0cf02cd66164" compoundref="poll_8c" startline="72">ssh_poll_handle_struct::cb</references>
+        <references refid="structssh__poll__handle__struct_1aaf8c2e6479420a4c9dff313a33f92e08" compoundref="poll_8c" startline="73">ssh_poll_handle_struct::cb_data</references>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structssh__poll__handle__struct_1acb5f3c84c402651d573f4c2f5a5cc0c6" compoundref="poll_8c" startline="70">ssh_poll_handle_struct::events</references>
+        <references refid="structssh__poll__handle__struct_1a91db66fe2c1a79a900a8932e6c13484c" compoundref="poll_8c" startline="71">ssh_poll_handle_struct::lock</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__poll_1gad71eb057dc675a9291b6fa78e99ebbc9" compoundref="poll_8c" startline="329" endline="331">ssh_poll</references>
+        <references refid="group__libssh__misc_1gad1c4b29e2421eb8f9ca111d98b0c2976" compoundref="misc_8c" startline="1420" endline="1432">ssh_timeout_update</references>
+        <references refid="group__libssh__misc_1gaaa0c97f49044d29f2a3b5b3ae82979ff" compoundref="misc_8c" startline="1324" endline="1335">ssh_timestamp_init</references>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+        <referencedby refid="group__libssh__poll_1gada90c0ca6919271708ba1ea0352632cb" compoundref="poll_8c" startline="957" endline="965">ssh_event_dopoll</referencedby>
+        <referencedby refid="group__libssh__session_1gaa0e04dc9e24d5112a5ca2b7bd68031d0" compoundref="session_8c" startline="633" endline="665">ssh_handle_packets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga8ad007907f642d4aa2c25e5209bf337a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref></type>
+        <definition>ssh_poll_ctx ssh_poll_get_default_ctx</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_poll_get_default_ctx</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="157" column="14" bodyfile="src/poll.c" bodystart="730" bodyend="736" declfile="include/libssh/poll.h" declline="157" declcolumn="14"/>
+        <references refid="structssh__session__struct_1aba4740d1fa60f3595772d5e2d11127af" compoundref="session_8h" startline="203">ssh_session_struct::default_poll_ctx</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__poll_1ga5364b3fb8ae1cb44e3ec09c8c10cb5fa" compoundref="poll_8c" startline="498" endline="514">ssh_poll_ctx_new</references>
+        <referencedby refid="group__libssh__channel_1ga1026cfa48ecfc0b4898d4ea443acfc5d" compoundref="channels_8c" startline="3284" endline="3398">ssh_channel_select</referencedby>
+        <referencedby refid="group__libssh__session_1gaa0e04dc9e24d5112a5ca2b7bd68031d0" compoundref="session_8c" startline="633" endline="665">ssh_handle_packets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1gaaf3e1df762650369e99595eee761f2a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_event_add_poll</definition>
+        <argsstring>(ssh_event event, ssh_poll_handle p)</argsstring>
+        <name>ssh_event_add_poll</name>
+        <param>
+          <type><ref refid="libssh_8h_1a55d4fb68310b11167e82fcd49dc9069f" kindref="member">ssh_event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Add a poll handle to the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ssh_event</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the poll handle</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success SSH_ERROR on failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="158" column="5" bodyfile="src/poll.c" bodystart="857" bodyend="860" declfile="include/libssh/poll.h" declline="158" declcolumn="5"/>
+        <references refid="structssh__event__struct_1ac151c202ff4af7d5c5e55fecda20ce9c" compoundref="poll_8c" startline="746">ssh_event_struct::ctx</references>
+        <references refid="group__libssh__poll_1ga2c9eca31ff21406f13c1b7472ae8c85b" compoundref="poll_8c" startline="573" endline="595">ssh_poll_ctx_add</references>
+        <referencedby refid="priv_8h_1a84015bb99d7ac6fe60fe6e61dbd0e1cf" compoundref="connector_8c" startline="565" endline="628">ssh_connector_set_event</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__poll_1ga302e3942e697063f1a54319667231f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_event_remove_poll</definition>
+        <argsstring>(ssh_event event, ssh_poll_handle p)</argsstring>
+        <name>ssh_event_remove_poll</name>
+        <param>
+          <type><ref refid="libssh_8h_1a55d4fb68310b11167e82fcd49dc9069f" kindref="member">ssh_event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type><ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>remove a poll handle to the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ssh_event</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the poll handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/poll.h" line="159" column="6" bodyfile="src/poll.c" bodystart="869" bodyend="872" declfile="include/libssh/poll.h" declline="159" declcolumn="6"/>
+        <references refid="structssh__event__struct_1ac151c202ff4af7d5c5e55fecda20ce9c" compoundref="poll_8c" startline="746">ssh_event_struct::ctx</references>
+        <references refid="group__libssh__poll_1gad4404e7da7c676b126b87d2de4d45d1d" compoundref="poll_8c" startline="625" endline="645">ssh_poll_ctx_remove</references>
+        <referencedby refid="priv_8h_1ad92def69fc9cce5d1d564588e668a862" compoundref="connector_8c" startline="630" endline="659">ssh_connector_remove_event</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_POLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="poll_8h" kindref="compound">poll.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">pollfd<sp/><ref refid="structssh__pollfd__struct" kindref="compound">ssh_pollfd_t</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>HAVE_POLL<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>poll<sp/>emulation<sp/>support<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structssh__pollfd__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__pollfd__struct" kindref="compound">ssh_pollfd_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="structssh__pollfd__struct_1a9fd4b38088aba34965f9f22698c9fc96" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__pollfd__struct_1a9fd4b38088aba34965f9f22698c9fc96" kindref="member">fd</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>file<sp/>descriptor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structssh__pollfd__struct_1a6ed14662befc1352fc119dc5a86aaeff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structssh__pollfd__struct_1a6ed14662befc1352fc119dc5a86aaeff" kindref="member">events</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>requested<sp/>events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structssh__pollfd__struct_1aa746fa20d2a6b0ddab633767b83736f9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structssh__pollfd__struct_1aa746fa20d2a6b0ddab633767b83736f9" kindref="member">revents</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>returned<sp/>events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="poll_8h_1ab86b2342c864cc22be957fd23f5d6b0d" refkind="member"><highlight class="normal">}<sp/><ref refid="poll_8h_1ab86b2342c864cc22be957fd23f5d6b0d" kindref="member">ssh_pollfd_t</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="poll_8h_1abf4939a673f2b874b24dc204cedab8f5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="poll_8h_1abf4939a673f2b874b24dc204cedab8f5" kindref="member">nfds_t</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLRDNORM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLRDNORM<sp/><sp/>0x0100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLRDBAND</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLRDBAND<sp/><sp/>0x0200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLIN<sp/><sp/><sp/><sp/><sp/><sp/>(POLLRDNORM<sp/>|<sp/>POLLRDBAND)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLPRI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLPRI<sp/><sp/><sp/><sp/><sp/>0x0400</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLWRNORM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLWRNORM<sp/><sp/>0x0010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLOUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLOUT<sp/><sp/><sp/><sp/><sp/>(POLLWRNORM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLWRBAND</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLWRBAND<sp/><sp/>0x0020</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLERR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLERR<sp/><sp/><sp/><sp/><sp/>0x0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLHUP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLHUP<sp/><sp/><sp/><sp/><sp/>0x0002</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLNVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLNVAL<sp/><sp/><sp/><sp/>0x0004</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>_WIN32<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>poll.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="poll_8h_1a52ac479a805051f59643588b096024ff" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLIN<sp/><sp/><sp/><sp/>0x001<sp/><sp/></highlight><highlight class="comment">/*<sp/>There<sp/>is<sp/>data<sp/>to<sp/>read.<sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLPRI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="poll_8h_1ab6f53b89c7a4cc5e8349f7c778d85168" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLPRI<sp/><sp/><sp/>0x002<sp/><sp/></highlight><highlight class="comment">/*<sp/>There<sp/>is<sp/>urgent<sp/>data<sp/>to<sp/>read.<sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLOUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="poll_8h_1a91b3c67129ac7675062f316b840a0d58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLOUT<sp/><sp/><sp/>0x004<sp/><sp/></highlight><highlight class="comment">/*<sp/>Writing<sp/>now<sp/>will<sp/>not<sp/>block.<sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLERR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="poll_8h_1ab1c532446408c98559d4aaaeeeb99820" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLERR<sp/><sp/><sp/>0x008<sp/><sp/></highlight><highlight class="comment">/*<sp/>Error<sp/>condition.<sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLHUP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="poll_8h_1a262754fe6bdf27c2cd3da43284ec8536" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLHUP<sp/><sp/><sp/>0x010<sp/><sp/></highlight><highlight class="comment">/*<sp/>Hung<sp/>up.<sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLNVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="poll_8h_1ae8bffe35c61e12fb7b408b89721896df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLNVAL<sp/><sp/>0x020<sp/><sp/></highlight><highlight class="comment">/*<sp/>Invalid<sp/>polling<sp/>request.<sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLRDNORM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="poll_8h_1a8ca81f2b28be692732d3f0b601fd828d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLRDNORM<sp/><sp/>0x040<sp/></highlight><highlight class="comment">/*<sp/>mapped<sp/>to<sp/>read<sp/>fds_set<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLRDBAND</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="poll_8h_1a37c71608162976b7fa0a5465009ce3ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLRDBAND<sp/><sp/>0x080<sp/></highlight><highlight class="comment">/*<sp/>mapped<sp/>to<sp/>exception<sp/>fds_set<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLWRNORM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="poll_8h_1ab8f1f69608ba2430cd5fa629a87b5420" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLWRNORM<sp/><sp/>0x100<sp/></highlight><highlight class="comment">/*<sp/>mapped<sp/>to<sp/>write<sp/>fds_set<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>POLLWRBAND</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="poll_8h_1a272636cc42f343281665cd1ba92f2f1e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLLWRBAND<sp/><sp/>0x200<sp/></highlight><highlight class="comment">/*<sp/>mapped<sp/>to<sp/>write<sp/>fds_set<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WIN32<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_POLL<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga26aa5e00c0201c30dad6ec0e93d3871f" kindref="member">ssh_poll_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga7e60f5f498b15eab57d9b2de70ab1acb" kindref="member">ssh_poll_cleanup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1gad71eb057dc675a9291b6fa78e99ebbc9" kindref="member">ssh_poll</ref>(<ref refid="structssh__pollfd__struct" kindref="compound">ssh_pollfd_t</ref><sp/>*fds,<sp/><ref refid="poll_8h_1abf4939a673f2b874b24dc204cedab8f5" kindref="member">nfds_t</ref><sp/>nfds,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout);</highlight></codeline>
+<codeline lineno="120" refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx_struct</ref><sp/>*<ref refid="poll_8h_1af97c1e6874209d8badb69c3ab17c071f" kindref="member">ssh_poll_ctx</ref>;</highlight></codeline>
+<codeline lineno="121" refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle_struct</ref><sp/>*<ref refid="poll_8h_1a8e1c9d5d48b80ed51c850241321baddf" kindref="member">ssh_poll_handle</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="poll_8h_1af2a7809ed930c3f7eb5ab1a086673053" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="poll_8h_1af2a7809ed930c3f7eb5ab1a086673053" kindref="member">ssh_poll_callback</ref>)(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__poll__handle__struct_1a5fa7a7592750be5dab54334aac96bc03" kindref="member">fd</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>revents,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/><ref refid="group__libssh__poll_1gac657ed07db9e5851ffb0aba45e071e99" kindref="member">ssh_poll_new</ref>(<ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events,<sp/><ref refid="poll_8h_1af2a7809ed930c3f7eb5ab1a086673053" kindref="member">ssh_poll_callback</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga873ecc6866c286f7777612d94de5c00d" kindref="member">ssh_poll_free</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="group__libssh__poll_1gaca05fcf77e6c4b5e55a9cfd2c9690ea5" kindref="member">ssh_poll_get_ctx</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga8e2e646ac338021e8e804992e8c13496" kindref="member">ssh_poll_get_events</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1gac02bf6f4444d4cc442da5865009fa5f6" kindref="member">ssh_poll_set_events</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga26ad689751420b91bf002f616e8bf4f7" kindref="member">ssh_poll_add_events</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga012582349ce62cf788761e5f97548496" kindref="member">ssh_poll_remove_events</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>events);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="group__libssh__poll_1ga26c19b17ac8d1e3d7fcbfb4367fb93ff" kindref="member">ssh_poll_get_fd</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga2da5adcc03754a3b17e4fb0f23867ace" kindref="member">ssh_poll_set_fd</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga98ba36c2771b1e49d5c8e2f79be6d3ba" kindref="member">ssh_poll_set_callback</ref>(<ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p,<sp/><ref refid="poll_8h_1af2a7809ed930c3f7eb5ab1a086673053" kindref="member">ssh_poll_callback</ref><sp/><ref refid="ssh__client_8c_1ad7278e5a44ed2f8b6a472a1941a75b89" kindref="member">cb</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*userdata);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="group__libssh__poll_1ga5364b3fb8ae1cb44e3ec09c8c10cb5fa" kindref="member">ssh_poll_ctx_new</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>chunk_size);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga86bd0c5c2fa5614acef127e6689282ae" kindref="member">ssh_poll_ctx_free</ref>(<ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga2c9eca31ff21406f13c1b7472ae8c85b" kindref="member">ssh_poll_ctx_add</ref>(<ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="154" refid="poll_8h_1a6882b1291053d52ef4cc435321395a2f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="poll_8h_1a6882b1291053d52ef4cc435321395a2f" kindref="member">ssh_poll_ctx_add_socket</ref><sp/>(<ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref><sp/>*<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1gad4404e7da7c676b126b87d2de4d45d1d" kindref="member">ssh_poll_ctx_remove</ref>(<ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga6c0f6d3c677838181df5cd03a755fd7c" kindref="member">ssh_poll_ctx_dopoll</ref>(<ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><ref refid="structssh__poll__ctx__struct" kindref="compound">ssh_poll_ctx</ref><sp/><ref refid="group__libssh__poll_1ga8ad007907f642d4aa2c25e5209bf337a" kindref="member">ssh_poll_get_default_ctx</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1gaaf3e1df762650369e99595eee761f2a9" kindref="member">ssh_event_add_poll</ref>(<ref refid="structssh__event__struct" kindref="compound">ssh_event</ref><sp/>event,<sp/><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh__poll_1ga302e3942e697063f1a54319667231f73" kindref="member">ssh_event_remove_poll</ref>(<ref refid="structssh__event__struct" kindref="compound">ssh_event</ref><sp/>event,<sp/><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle</ref><sp/>p);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>POLL_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/poll.h"/>
+  </compounddef>
+</doxygen>

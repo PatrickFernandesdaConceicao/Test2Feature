@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="bind__config_8h" kind="file" language="C++">
+    <compoundname>bind_config.h</compoundname>
+    <includes refid="server_8h" local="yes">libssh/server.h</includes>
+    <includedby refid="bind__config_8c" local="yes">libssh-mirror/src/bind_config.c</includedby>
+    <includedby refid="torture__bind__config_8c" local="no">libssh-mirror/tests/unittests/torture_bind_config.c</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>sys/select.h</label>
+      </node>
+      <node id="9">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="8">
+        <label>netdb.h</label>
+      </node>
+      <node id="6">
+        <label>sys/types.h</label>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/bind_config.h</label>
+        <link refid="bind__config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libssh/server.h</label>
+        <link refid="server_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>libssh-mirror/src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/bind_config.h</label>
+        <link refid="bind__config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/tests/unittests/torture_bind_config.c</label>
+        <link refid="torture__bind__config_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="bind__config_8h_1a53145e2856b0877d315f296901daf80e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_bind_config_opcode_e</name>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea159383ece87b841501b3c910d0471531" prot="public">
+          <name>BIND_CFG_NOT_ALLOWED_IN_MATCH</name>
+          <initializer>= -4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80eacf2e1621bb186333c237f7ae0d02e4b6" prot="public">
+          <name>BIND_CFG_UNKNOWN</name>
+          <initializer>= -3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea09d8e8176aa2948d9413346824257c0b" prot="public">
+          <name>BIND_CFG_NA</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea023367c44b91a9620392b65b1d59f66c" prot="public">
+          <name>BIND_CFG_UNSUPPORTED</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea237860ea0183944a8f094e67cae473e2" prot="public">
+          <name>BIND_CFG_INCLUDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea5e6e416614d886f371029d5f31b72959" prot="public">
+          <name>BIND_CFG_HOSTKEY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea20633bc1b1edec90ade1c29429efb751" prot="public">
+          <name>BIND_CFG_LISTENADDRESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea2e3cf3473a88b17af0118cc337c8c692" prot="public">
+          <name>BIND_CFG_PORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea4311e26b1a0375e362a609981f5270fe" prot="public">
+          <name>BIND_CFG_LOGLEVEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea5f2d865d923dd74cfd669412ae3c20b3" prot="public">
+          <name>BIND_CFG_CIPHERS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea108ec667fe26efbad15debbe8172749c" prot="public">
+          <name>BIND_CFG_MACS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea55bc17a11dc00958c9c27db4d528eeea" prot="public">
+          <name>BIND_CFG_KEXALGORITHMS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80eaf7a2dd80b1f8fd57ed7828f5123a0aee" prot="public">
+          <name>BIND_CFG_MATCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea7afa6b7bbdbeed91dc3e590b449614d5" prot="public">
+          <name>BIND_CFG_PUBKEY_ACCEPTED_KEY_TYPES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea7e171c7e3134194e1798df251344b526" prot="public">
+          <name>BIND_CFG_HOSTKEY_ALGORITHMS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bind__config_8h_1a53145e2856b0877d315f296901daf80ea70e4d2ff693d6d671223ce840c8c0310" prot="public">
+          <name>BIND_CFG_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/bind_config.h" line="31" column="1" bodyfile="libssh-mirror/include/libssh/bind_config.h" bodystart="31" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bind__config_8h_1a15e7f56a4b8bb243a995abc759670189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_bind_config_parse_file</definition>
+        <argsstring>(ssh_bind sshbind, const char *filename)</argsstring>
+        <name>ssh_bind_config_parse_file</name>
+        <param>
+          <type><ref refid="group__libssh__server_1ga78a45672ca20ee757e09baf12ff458e4" kindref="member">ssh_bind</ref></type>
+          <declname>sshbind</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/bind_config.h" line="62" column="5" bodyfile="libssh-mirror/src/bind_config.c" bodystart="605" bodyend="638" declfile="libssh-mirror/include/libssh/bind_config.h" declline="62" declcolumn="5"/>
+        <references refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea70e4d2ff693d6d671223ce840c8c0310" compoundref="bind__config_8h" startline="52">BIND_CFG_MAX</references>
+        <references refid="bind__config_8c_1a706068f562dd5c64a8b7bbd4b2298dd1" compoundref="bind__config_8c" startline="43">MAX_LINE_SIZE</references>
+        <references refid="bind__config_8c_1aa42f240490ba928861c2fd75aae18726" compoundref="bind__config_8c" startline="46">PARSING</references>
+        <references refid="bind__config_8c_1a776c5b828c6b7f65751146ae165c7d1f" compoundref="bind__config_8c" startline="271" endline="603">ssh_bind_config_parse_line</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <referencedby refid="torture__bind__config_8c_1aca55c8c470ec4f023bd56ad3f52fb343" compoundref="torture__bind__config_8c" startline="593" endline="668">torture_bind_config_ciphers</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a527e147c2fd61902c3a31e2a34bcfdba" compoundref="torture__bind__config_8c" startline="1083" endline="1103">torture_bind_config_corner_cases</referencedby>
+        <referencedby refid="torture__bind__config_8c_1aae14cbc2dd158f2e1ecfdc9f1aa55d6f" compoundref="torture__bind__config_8c" startline="1003" endline="1026">torture_bind_config_full</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a060fbc17a27064033834739a44069e51" compoundref="torture__bind__config_8c" startline="476" endline="500">torture_bind_config_hostkey</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a62c5453b39c9d9838278f9eebfd405ab" compoundref="torture__bind__config_8c" startline="861" endline="935">torture_bind_config_hostkey_algorithms</referencedby>
+        <referencedby refid="torture__bind__config_8c_1aad4906275080123152aa4c9c29261796" compoundref="torture__bind__config_8c" startline="523" endline="546">torture_bind_config_hostkey_separately</referencedby>
+        <referencedby refid="torture__bind__config_8c_1abf7bd9e5def35b19c51ecba57d4bb3ba" compoundref="torture__bind__config_8c" startline="502" endline="521">torture_bind_config_hostkey_twice_rec</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a909a8414c3abed763e5ab60390afdc9f" compoundref="torture__bind__config_8c" startline="1028" endline="1051">torture_bind_config_include</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a008ad9570d763d2651600c912191308f" compoundref="torture__bind__config_8c" startline="1053" endline="1077">torture_bind_config_include_recursive</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a3c5d1287d07c7d31f071863942521ef5" compoundref="torture__bind__config_8c" startline="721" endline="784">torture_bind_config_kexalgorithms</referencedby>
+        <referencedby refid="torture__bind__config_8c_1aac81b8f1b33f29c666b0eb30155bb979" compoundref="torture__bind__config_8c" startline="408" endline="444">torture_bind_config_listen_address</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a81eedb503f6484743b4a88120f8ad37b" compoundref="torture__bind__config_8c" startline="548" endline="591">torture_bind_config_loglevel</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a19bafa0a55b56434a33670868ab58b9e" compoundref="torture__bind__config_8c" startline="670" endline="719">torture_bind_config_macs</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a82a2ed29819612ece5ffe470b976f2d9" compoundref="torture__bind__config_8c" startline="1105" endline="1129">torture_bind_config_match_all</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a1477cd0a87e6ccda05b149982c271e8f" compoundref="torture__bind__config_8c" startline="1209" endline="1233">torture_bind_config_match_corner_cases</referencedby>
+        <referencedby refid="torture__bind__config_8c_1aa64721254d50c18ffc49a6fcf87b599f" compoundref="torture__bind__config_8c" startline="1235" endline="1260">torture_bind_config_match_invalid</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a1c89c27844b51a4829afbe398326c312" compoundref="torture__bind__config_8c" startline="1183" endline="1207">torture_bind_config_match_not_allowed</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a84d654b75b5c8ee7c265461d7d7fe76c" compoundref="torture__bind__config_8c" startline="1131" endline="1155">torture_bind_config_match_twice</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a170723ea2ccd8be3893acc126e7eea72" compoundref="torture__bind__config_8c" startline="1157" endline="1181">torture_bind_config_match_unsupported</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a45bb22e95966ca173e30490b01a6c5a1" compoundref="torture__bind__config_8c" startline="446" endline="474">torture_bind_config_port</referencedby>
+        <referencedby refid="torture__bind__config_8c_1a51c8601a8627cdc039e1e08da1327417" compoundref="torture__bind__config_8c" startline="786" endline="859">torture_bind_config_pubkey_accepted</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>bind_config.h<sp/>-<sp/>Parse<sp/>the<sp/>SSH<sp/>server<sp/>configuration<sp/>file</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2019<sp/>by<sp/>Red<sp/>Hat,<sp/>Inc.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Anderson<sp/>Toshiyuki<sp/>Sasaki<sp/>&lt;ansasaki@redhat.com&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BIND_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIND_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="server_8h" kindref="compound">libssh/server.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80e" kindref="member">ssh_bind_config_opcode_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Known<sp/>but<sp/>not<sp/>allowed<sp/>in<sp/>Match<sp/>block<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea159383ece87b841501b3c910d0471531" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea159383ece87b841501b3c910d0471531" kindref="member">BIND_CFG_NOT_ALLOWED_IN_MATCH</ref><sp/>=<sp/>-4,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unknown<sp/>opcode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80eacf2e1621bb186333c237f7ae0d02e4b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80eacf2e1621bb186333c237f7ae0d02e4b6" kindref="member">BIND_CFG_UNKNOWN</ref><sp/>=<sp/>-3,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Known<sp/>and<sp/>not<sp/>applicable<sp/>to<sp/>libssh<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea09d8e8176aa2948d9413346824257c0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea09d8e8176aa2948d9413346824257c0b" kindref="member">BIND_CFG_NA</ref><sp/>=<sp/>-2,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Known<sp/>but<sp/>not<sp/>supported<sp/>by<sp/>current<sp/>libssh<sp/>version<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea023367c44b91a9620392b65b1d59f66c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea023367c44b91a9620392b65b1d59f66c" kindref="member">BIND_CFG_UNSUPPORTED</ref><sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="40" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea237860ea0183944a8f094e67cae473e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea237860ea0183944a8f094e67cae473e2" kindref="member">BIND_CFG_INCLUDE</ref>,</highlight></codeline>
+<codeline lineno="41" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea5e6e416614d886f371029d5f31b72959" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea5e6e416614d886f371029d5f31b72959" kindref="member">BIND_CFG_HOSTKEY</ref>,</highlight></codeline>
+<codeline lineno="42" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea20633bc1b1edec90ade1c29429efb751" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea20633bc1b1edec90ade1c29429efb751" kindref="member">BIND_CFG_LISTENADDRESS</ref>,</highlight></codeline>
+<codeline lineno="43" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea2e3cf3473a88b17af0118cc337c8c692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea2e3cf3473a88b17af0118cc337c8c692" kindref="member">BIND_CFG_PORT</ref>,</highlight></codeline>
+<codeline lineno="44" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea4311e26b1a0375e362a609981f5270fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea4311e26b1a0375e362a609981f5270fe" kindref="member">BIND_CFG_LOGLEVEL</ref>,</highlight></codeline>
+<codeline lineno="45" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea5f2d865d923dd74cfd669412ae3c20b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea5f2d865d923dd74cfd669412ae3c20b3" kindref="member">BIND_CFG_CIPHERS</ref>,</highlight></codeline>
+<codeline lineno="46" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea108ec667fe26efbad15debbe8172749c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea108ec667fe26efbad15debbe8172749c" kindref="member">BIND_CFG_MACS</ref>,</highlight></codeline>
+<codeline lineno="47" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea55bc17a11dc00958c9c27db4d528eeea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea55bc17a11dc00958c9c27db4d528eeea" kindref="member">BIND_CFG_KEXALGORITHMS</ref>,</highlight></codeline>
+<codeline lineno="48" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80eaf7a2dd80b1f8fd57ed7828f5123a0aee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80eaf7a2dd80b1f8fd57ed7828f5123a0aee" kindref="member">BIND_CFG_MATCH</ref>,</highlight></codeline>
+<codeline lineno="49" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea7afa6b7bbdbeed91dc3e590b449614d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea7afa6b7bbdbeed91dc3e590b449614d5" kindref="member">BIND_CFG_PUBKEY_ACCEPTED_KEY_TYPES</ref>,</highlight></codeline>
+<codeline lineno="50" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea7e171c7e3134194e1798df251344b526" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea7e171c7e3134194e1798df251344b526" kindref="member">BIND_CFG_HOSTKEY_ALGORITHMS</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea70e4d2ff693d6d671223ce840c8c0310" kindref="member">BIND_CFG_MAX</ref><sp/></highlight><highlight class="comment">/*<sp/>Keep<sp/>this<sp/>one<sp/>last<sp/>in<sp/>the<sp/>list<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="bind__config_8h_1a53145e2856b0877d315f296901daf80ea70e4d2ff693d6d671223ce840c8c0310" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@brief<sp/>Parse<sp/>configuration<sp/>file<sp/>and<sp/>set<sp/>the<sp/>options<sp/>to<sp/>the<sp/>given<sp/>ssh_bind</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>*<sp/>@params[in]<sp/>sshbind<sp/><sp/><sp/>The<sp/>ssh_bind<sp/>context<sp/>to<sp/>be<sp/>configured</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/>@params[in]<sp/>filename<sp/><sp/>The<sp/>path<sp/>to<sp/>the<sp/>configuration<sp/>file</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/>@returns<sp/><sp/><sp/><sp/>0<sp/>on<sp/>successful<sp/>parsing<sp/>the<sp/>configuration<sp/>file,<sp/>-1<sp/>on<sp/>error</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bind__config_8h_1a15e7f56a4b8bb243a995abc759670189" kindref="member">ssh_bind_config_parse_file</ref>(<ref refid="structssh__bind__struct" kindref="compound">ssh_bind</ref><sp/>sshbind,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BIND_CONFIG_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/bind_config.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dh_8h" kind="file" language="C++">
+    <compoundname>dh.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="crypto_8h" local="yes">libssh/crypto.h</includes>
+    <includedby refid="crypto_8h" local="yes">include/libssh/crypto.h</includedby>
+    <includedby refid="client_8c" local="yes">src/client.c</includedby>
+    <includedby refid="dh-gex_8c" local="yes">src/dh-gex.c</includedby>
+    <includedby refid="dh_8c" local="yes">src/dh.c</includedby>
+    <includedby refid="dh__crypto_8c" local="yes">src/dh_crypto.c</includedby>
+    <includedby refid="dh__key_8c" local="yes">src/dh_key.c</includedby>
+    <includedby refid="ecdh_8c" local="yes">src/ecdh.c</includedby>
+    <includedby refid="ecdh__crypto_8c" local="yes">src/ecdh_crypto.c</includedby>
+    <includedby refid="ecdh__gcrypt_8c" local="yes">src/ecdh_gcrypt.c</includedby>
+    <includedby refid="ecdh__mbedcrypto_8c" local="yes">src/ecdh_mbedcrypto.c</includedby>
+    <includedby refid="init_8c" local="yes">src/init.c</includedby>
+    <includedby refid="kdf_8c" local="yes">src/kdf.c</includedby>
+    <includedby refid="kex_8c" local="yes">src/kex.c</includedby>
+    <includedby refid="known__hosts_8c" local="yes">src/known_hosts.c</includedby>
+    <includedby refid="src_2knownhosts_8c" local="yes">src/knownhosts.c</includedby>
+    <includedby refid="legacy_8c" local="no">src/legacy.c</includedby>
+    <includedby refid="messages_8c" local="yes">src/messages.c</includedby>
+    <includedby refid="packet_8c" local="yes">src/packet.c</includedby>
+    <includedby refid="packet__cb_8c" local="yes">src/packet_cb.c</includedby>
+    <includedby refid="server_8c" local="yes">src/server.c</includedby>
+    <includedby refid="wrapper_8c" local="yes">src/wrapper.c</includedby>
+    <includedby refid="torture__session__keys_8c" local="yes">tests/unittests/torture_session_keys.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="10">
+        <label>sys/select.h</label>
+      </node>
+      <node id="19">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="20">
+        <label>stdint.h</label>
+      </node>
+      <node id="21">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>include/libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>netdb.h</label>
+      </node>
+      <node id="16">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>sys/types.h</label>
+      </node>
+      <node id="14">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="8">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21">
+        <label>src/pki_ed25519_common.c</label>
+        <link refid="pki__ed25519__common_8c"/>
+      </node>
+      <node id="52">
+        <label>src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="3">
+        <label>include/libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="9">
+        <label>src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="63">
+        <label>tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="22">
+        <label>tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="47">
+        <label>src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="15">
+        <label>tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="12">
+        <label>tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="64">
+        <label>src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="38">
+        <label>src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="18">
+        <label>src/pki_container_openssh.c</label>
+        <link refid="pki__container__openssh_8c"/>
+      </node>
+      <node id="6">
+        <label>src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="62">
+        <label>tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="54">
+        <label>src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="48">
+        <label>src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="30">
+        <label>src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="13">
+        <label>tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="20">
+        <label>src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+      </node>
+      <node id="5">
+        <label>src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+      <node id="11">
+        <label>tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="10">
+        <label>tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="33">
+        <label>src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="59">
+        <label>tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="50">
+        <label>src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="24">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="17">
+        <label>tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="41">
+        <label>src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="49">
+        <label>src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="57">
+        <label>src/threads/mbedtls.c</label>
+        <link refid="mbedtls_8c"/>
+      </node>
+      <node id="58">
+        <label>src/threads.c</label>
+        <link refid="threads_8c"/>
+      </node>
+      <node id="14">
+        <label>tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="23">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="31">
+        <label>src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="56">
+        <label>src/threads/libgcrypt.c</label>
+        <link refid="threads_2libgcrypt_8c"/>
+      </node>
+      <node id="51">
+        <label>src/libmbedcrypto.c</label>
+        <link refid="libmbedcrypto_8c"/>
+      </node>
+      <node id="43">
+        <label>src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="2">
+        <label>include/libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="55">
+        <label>src/threads/libcrypto.c</label>
+        <link refid="threads_2libcrypto_8c"/>
+      </node>
+      <node id="27">
+        <label>src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="35">
+        <label>src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="36">
+        <label>src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="25">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="7">
+        <label>tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="44">
+        <label>src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="60">
+        <label>tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="40">
+        <label>src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="37">
+        <label>src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="61">
+        <label>tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="4">
+        <label>include/libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="26">
+        <label>src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="39">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="19">
+        <label>src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" prot="public" static="no">
+        <name>DH_CLIENT_KEYPAIR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="30" column="9" bodyfile="include/libssh/dh.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dh_8h_1a2da13e7a1190a4e1595829d519084bdd" prot="public" static="no">
+        <name>DH_SERVER_KEYPAIR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="31" column="9" bodyfile="include/libssh/dh.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dh_8h_1a51374d6aa1f3dc4dce020052443bdba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_init_common</definition>
+        <argsstring>(struct ssh_crypto_struct *crypto)</argsstring>
+        <name>ssh_dh_init_common</name>
+        <param>
+          <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+          <declname>crypto</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="34" column="5" bodyfile="src/dh_crypto.c" bodystart="166" bodyend="199" declfile="include/libssh/dh.h" declline="34" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structssh__crypto__struct_1a48bfbe899c2556ce3563c767c753ae35" compoundref="crypto_8h" startline="106">ssh_crypto_struct::dh_ctx</references>
+        <references refid="structssh__crypto__struct_1a4d0e501e9fe0b45aeebec379319ad005" compoundref="crypto_8h" startline="152">ssh_crypto_struct::kex_type</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="dh__crypto_8c_1a347b19702042c40983c7b0be299502a5" compoundref="dh__crypto_8c" startline="201" endline="209">ssh_dh_cleanup</references>
+        <references refid="dh__crypto_8c_1a9664ddb1523cfa9fb96d82a6bb8c5c96" compoundref="dh_8c" startline="215">ssh_dh_generator</references>
+        <references refid="dh__crypto_8c_1ac40eba6744765c1f96d8539c4f5ec4b9" compoundref="dh_8c" startline="216">ssh_dh_group1</references>
+        <references refid="dh__crypto_8c_1af835972b49b6053dd1215b92266734b1" compoundref="dh_8c" startline="217">ssh_dh_group14</references>
+        <references refid="dh__crypto_8c_1af4f1360517192a222e31f26a979bdc5e" compoundref="dh_8c" startline="218">ssh_dh_group16</references>
+        <references refid="dh__crypto_8c_1a7cba36cf23e9b6704f3355659cf841e4" compoundref="dh_8c" startline="219">ssh_dh_group18</references>
+        <references refid="dh__crypto_8c_1ac6b9e4755d3cffdcfde863b4930483e7" compoundref="dh__crypto_8c" startline="117" endline="160">ssh_dh_set_parameters</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8faeff50985f7ef1e58a798ebe502d25127" compoundref="crypto_8h" startline="62">SSH_KEX_DH_GROUP14_SHA1</references>
+        <references refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa544f3a1e0137b83515cd8024c2002c87" compoundref="crypto_8h" startline="80">SSH_KEX_DH_GROUP16_SHA512</references>
+        <references refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fab85286eabab069c14c763dea821f89d9" compoundref="crypto_8h" startline="82">SSH_KEX_DH_GROUP18_SHA512</references>
+        <references refid="crypto_8h_1a7771bd67337acdfd10dbff1c114f0e8fa06d50b8787140eaba7768f55b2ead4a0" compoundref="crypto_8h" startline="60">SSH_KEX_DH_GROUP1_SHA1</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" compoundref="dh_8c" startline="310" endline="343">ssh_client_dh_init</referencedby>
+        <referencedby refid="dh-gex_8h_1a57cee2e32a1b20a5c188123e6a785094" compoundref="dh-gex_8c" startline="64" endline="98">ssh_client_dhgex_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a347b19702042c40983c7b0be299502a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_dh_cleanup</definition>
+        <argsstring>(struct ssh_crypto_struct *crypto)</argsstring>
+        <name>ssh_dh_cleanup</name>
+        <param>
+          <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+          <declname>crypto</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="35" column="6" bodyfile="src/dh_crypto.c" bodystart="201" bodyend="209" declfile="include/libssh/dh.h" declline="35" declcolumn="6"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" compoundref="dh_8h" startline="30">DH_CLIENT_KEYPAIR</references>
+        <references refid="structssh__crypto__struct_1a48bfbe899c2556ce3563c767c753ae35" compoundref="crypto_8h" startline="106">ssh_crypto_struct::dh_ctx</references>
+        <references refid="dh_8h_1a2da13e7a1190a4e1595829d519084bdd" compoundref="dh_8h" startline="31">DH_SERVER_KEYPAIR</references>
+        <references refid="structdh__ctx_1a23e1755c8d3b47c7bae7ef96ec45d83e" compoundref="dh__crypto_8c" startline="41">dh_ctx::keypair</references>
+        <references refid="dh__key_8c_1aedd04157a9c9ae19838b617f4c5c3b8b" compoundref="dh__key_8c" startline="103" endline="107">ssh_dh_free_dh_keypair</references>
+        <references refid="dh__key_8c_1aca7957aa457e8565ed7ffeaf6d073661" compoundref="dh__key_8c" startline="96" endline="101">ssh_dh_free_generator</references>
+        <references refid="dh__key_8c_1a2f2838f41f10a021e5e599ffa0ae9882" compoundref="dh__key_8c" startline="85" endline="94">ssh_dh_free_modulus</references>
+        <referencedby refid="wrapper_8h_1a9cea366077f4498746e7e448cf21ac0d" compoundref="wrapper_8c" startline="161" endline="231">crypto_free</referencedby>
+        <referencedby refid="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" compoundref="dh_8c" startline="310" endline="343">ssh_client_dh_init</referencedby>
+        <referencedby refid="dh-gex_8h_1a57cee2e32a1b20a5c188123e6a785094" compoundref="dh-gex_8c" startline="64" endline="98">ssh_client_dhgex_init</referencedby>
+        <referencedby refid="dh_8h_1a51374d6aa1f3dc4dce020052443bdba2" compoundref="dh__crypto_8c" startline="166" endline="199">ssh_dh_init_common</referencedby>
+        <referencedby refid="dh-gex_8c_1adbc632e797a25b2f7f39854e71dc0a49" compoundref="dh-gex_8c" startline="104" endline="239">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a4310b00fc6271a62c72abe5b69af6aa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_get_parameters</definition>
+        <argsstring>(struct dh_ctx *ctx, const_bignum *modulus, const_bignum *generator)</argsstring>
+        <name>ssh_dh_get_parameters</name>
+        <param>
+          <type>struct <ref refid="structdh__ctx" kindref="compound">dh_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const_bignum *</type>
+          <declname>modulus</declname>
+        </param>
+        <param>
+          <type>const_bignum *</type>
+          <declname>generator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="37" column="5" bodyfile="src/dh_crypto.c" bodystart="107" bodyend="115" declfile="include/libssh/dh.h" declline="37" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="libcrypto-compat_8c_1a7463021ae9e7b4cf50c20177a7319e88" compoundref="libcrypto-compat_8c" startline="339" endline="351">DH_get0_pqg</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1ac6b9e4755d3cffdcfde863b4930483e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_set_parameters</definition>
+        <argsstring>(struct dh_ctx *ctx, const bignum modulus, const bignum generator)</argsstring>
+        <name>ssh_dh_set_parameters</name>
+        <param>
+          <type>struct <ref refid="structdh__ctx" kindref="compound">dh_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const bignum</type>
+          <declname>modulus</declname>
+        </param>
+        <param>
+          <type>const bignum</type>
+          <declname>generator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="39" column="5" bodyfile="src/dh_crypto.c" bodystart="117" bodyend="160" declfile="include/libssh/dh.h" declline="39" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" compoundref="dh_8h" startline="30">DH_CLIENT_KEYPAIR</references>
+        <references refid="dh_8h_1a2da13e7a1190a4e1595829d519084bdd" compoundref="dh_8h" startline="31">DH_SERVER_KEYPAIR</references>
+        <references refid="libcrypto-compat_8c_1ac49073cbb8626cab1048ed48119d23af" compoundref="libcrypto-compat_8c" startline="353" endline="368">DH_set0_pqg</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="dh__key_8c_1aedd04157a9c9ae19838b617f4c5c3b8b" compoundref="dh__key_8c" startline="103" endline="107">ssh_dh_free_dh_keypair</references>
+        <references refid="dh__key_8c_1aca7957aa457e8565ed7ffeaf6d073661" compoundref="dh__key_8c" startline="96" endline="101">ssh_dh_free_generator</references>
+        <references refid="dh__key_8c_1a2f2838f41f10a021e5e599ffa0ae9882" compoundref="dh__key_8c" startline="85" endline="94">ssh_dh_free_modulus</references>
+        <references refid="dh__key_8c_1aa998d73c5222e1e66b7797f6371cf802" compoundref="dh__key_8c" startline="109" endline="130">ssh_dh_init_dh_keypair</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="dh_8h_1a51374d6aa1f3dc4dce020052443bdba2" compoundref="dh__crypto_8c" startline="166" endline="199">ssh_dh_init_common</referencedby>
+        <referencedby refid="dh-gex_8c_1adbc632e797a25b2f7f39854e71dc0a49" compoundref="dh-gex_8c" startline="104" endline="239">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a89e83519e2e86409708679ae9d3f10d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_keypair_gen_keys</definition>
+        <argsstring>(struct dh_ctx *ctx, int peer)</argsstring>
+        <name>ssh_dh_keypair_gen_keys</name>
+        <param>
+          <type>struct <ref refid="structdh__ctx" kindref="compound">dh_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>peer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="42" column="5" bodyfile="src/dh_crypto.c" bodystart="220" bodyend="232" declfile="include/libssh/dh.h" declline="42" declcolumn="5"/>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="69">bits</references>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="dh__key_8c_1aa78188596b41b8910bd052bb022a53c8" compoundref="dh__key_8c" startline="49">DH_SECURITY_BITS</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="structdh__ctx_1a039237cb80e30af2a66ff3fd008d1c07" compoundref="dh__key_8c" startline="59">dh_ctx::generator</references>
+        <references refid="structdh__ctx_1a23e1755c8d3b47c7bae7ef96ec45d83e" compoundref="dh__crypto_8c" startline="41">dh_ctx::keypair</references>
+        <references refid="priv_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" compoundref="priv_8h" startline="306">MIN</references>
+        <references refid="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" compoundref="dh__key_8c" startline="60">dh_ctx::modulus</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" compoundref="dh_8c" startline="310" endline="343">ssh_client_dh_init</referencedby>
+        <referencedby refid="dh-gex_8c_1adbc632e797a25b2f7f39854e71dc0a49" compoundref="dh-gex_8c" startline="104" endline="239">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a888b43bd0cdceb75be52a04f99830e23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_keypair_get_keys</definition>
+        <argsstring>(struct dh_ctx *ctx, int peer, const_bignum *priv, const_bignum *pub)</argsstring>
+        <name>ssh_dh_keypair_get_keys</name>
+        <param>
+          <type>struct <ref refid="structdh__ctx" kindref="compound">dh_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>peer</declname>
+        </param>
+        <param>
+          <type>const_bignum *</type>
+          <declname>priv</declname>
+        </param>
+        <param>
+          <type>const_bignum *</type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="43" column="5" bodyfile="src/dh_crypto.c" bodystart="65" bodyend="82" declfile="include/libssh/dh.h" declline="43" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" compoundref="dh_8h" startline="30">DH_CLIENT_KEYPAIR</references>
+        <references refid="libcrypto-compat_8c_1a6fe1ce277516b04345c04cb8c3625a55" compoundref="libcrypto-compat_8c" startline="370" endline="379">DH_get0_key</references>
+        <references refid="dh_8h_1a2da13e7a1190a4e1595829d519084bdd" compoundref="dh_8h" startline="31">DH_SERVER_KEYPAIR</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" compoundref="dh_8c" startline="310" endline="343">ssh_client_dh_init</referencedby>
+        <referencedby refid="dh_8h_1a9a743a5adcfc7d5fbc25c44c6119eb59" compoundref="dh__crypto_8c" startline="245" endline="286">ssh_dh_compute_shared_secret</referencedby>
+        <referencedby refid="dh_8h_1ad90769620d45d2750b3ab7844edd4996" compoundref="dh__crypto_8c" startline="44" endline="63">ssh_dh_debug_crypto</referencedby>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+        <referencedby refid="dh-gex_8c_1adbc632e797a25b2f7f39854e71dc0a49" compoundref="dh-gex_8c" startline="104" endline="239">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a765e573a59e1e47a55be0ed88abce41f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_keypair_set_keys</definition>
+        <argsstring>(struct dh_ctx *ctx, int peer, const bignum priv, const bignum pub)</argsstring>
+        <name>ssh_dh_keypair_set_keys</name>
+        <param>
+          <type>struct <ref refid="structdh__ctx" kindref="compound">dh_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>peer</declname>
+        </param>
+        <param>
+          <type>const bignum</type>
+          <declname>priv</declname>
+        </param>
+        <param>
+          <type>const bignum</type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="45" column="5" bodyfile="src/dh_crypto.c" bodystart="84" bodyend="105" declfile="include/libssh/dh.h" declline="45" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" compoundref="dh_8h" startline="30">DH_CLIENT_KEYPAIR</references>
+        <references refid="dh_8h_1a2da13e7a1190a4e1595829d519084bdd" compoundref="dh_8h" startline="31">DH_SERVER_KEYPAIR</references>
+        <references refid="libcrypto-compat_8c_1a7937a444111411068ed68ac44be5fa72" compoundref="libcrypto-compat_8c" startline="381" endline="396">DH_set0_key</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="dh-gex_8c_1ad98b52f0ed8073797ee1a72b60591822" compoundref="dh-gex_8c" startline="241" endline="300">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a9a743a5adcfc7d5fbc25c44c6119eb59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_compute_shared_secret</definition>
+        <argsstring>(struct dh_ctx *ctx, int local, int remote, bignum *dest)</argsstring>
+        <name>ssh_dh_compute_shared_secret</name>
+        <param>
+          <type>struct <ref refid="structdh__ctx" kindref="compound">dh_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>local</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>remote</declname>
+        </param>
+        <param>
+          <type>bignum *</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="48" column="5" bodyfile="src/dh_crypto.c" bodystart="245" bodyend="286" declfile="include/libssh/dh.h" declline="48" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structdh__ctx_1a23e1755c8d3b47c7bae7ef96ec45d83e" compoundref="dh__crypto_8c" startline="41">dh_ctx::keypair</references>
+        <references refid="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" compoundref="dh__key_8c" startline="60">dh_ctx::modulus</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="dh__crypto_8c_1a888b43bd0cdceb75be52a04f99830e23" compoundref="dh__crypto_8c" startline="65" endline="82">ssh_dh_keypair_get_keys</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="dh-gex_8c_1ad98b52f0ed8073797ee1a72b60591822" compoundref="dh-gex_8c" startline="241" endline="300">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1ad90769620d45d2750b3ab7844edd4996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_dh_debug_crypto</definition>
+        <argsstring>(struct ssh_crypto_struct *c)</argsstring>
+        <name>ssh_dh_debug_crypto</name>
+        <param>
+          <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="51" column="6" bodyfile="src/dh_crypto.c" bodystart="44" bodyend="63" declfile="include/libssh/dh.h" declline="51" declcolumn="6"/>
+        <references refid="structssh__crypto__struct_1a0fa9919df32b44ccafc551d220fe609b" compoundref="crypto_8h" startline="150">ssh_crypto_struct::client_kex</references>
+        <references refid="structssh__kex__struct_1a3c982f0a27422694879c0282a102ffa4" compoundref="kex_8h" startline="30">ssh_kex_struct::cookie</references>
+        <references refid="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" compoundref="dh_8h" startline="30">DH_CLIENT_KEYPAIR</references>
+        <references refid="structssh__crypto__struct_1a48bfbe899c2556ce3563c767c753ae35" compoundref="crypto_8h" startline="106">ssh_crypto_struct::dh_ctx</references>
+        <references refid="dh_8h_1a2da13e7a1190a4e1595829d519084bdd" compoundref="dh_8h" startline="31">DH_SERVER_KEYPAIR</references>
+        <references refid="structdh__ctx_1a039237cb80e30af2a66ff3fd008d1c07" compoundref="dh__key_8c" startline="59">dh_ctx::generator</references>
+        <references refid="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" compoundref="dh__key_8c" startline="60">dh_ctx::modulus</references>
+        <references refid="structssh__crypto__struct_1ac78255bf9406137ac4d400644c348a82" compoundref="crypto_8h" startline="149">ssh_crypto_struct::server_kex</references>
+        <references refid="structssh__crypto__struct_1adb81911af8e0d13db0ab4701319bdd1a" compoundref="crypto_8h" startline="105">ssh_crypto_struct::shared_secret</references>
+        <references refid="dh__crypto_8c_1a888b43bd0cdceb75be52a04f99830e23" compoundref="dh__crypto_8c" startline="65" endline="82">ssh_dh_keypair_get_keys</references>
+        <references refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" compoundref="misc_8c" startline="467" endline="627">ssh_log_hexdump</references>
+        <references refid="bignum_8h_1a49e4571656a51c97ee2c990c8a06f144" compoundref="bignum_8c" startline="83" endline="97">ssh_print_bignum</references>
+        <referencedby refid="dh-gex_8c_1ad98b52f0ed8073797ee1a72b60591822" compoundref="dh-gex_8c" startline="241" endline="300">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a591c8d71df3bab8c691c33fd05a13343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_dh_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="54" column="5" bodyfile="src/dh.c" bodystart="227" bodyend="266" declfile="include/libssh/dh.h" declline="54" declcolumn="5"/>
+        <references refid="dh_8c_1a435042e5c1d24b2dfea24e23e500569b" compoundref="dh_8c" startline="220">dh_crypto_initialized</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="dh_8c_1af59f7501b6b01f8a3fc1a3fa6e044133" compoundref="dh_8c" startline="76">P_GROUP14_LEN</references>
+        <references refid="dh_8c_1a5d799d746067d6d3bba4f49cb64b4c19" compoundref="dh_8c" startline="52">p_group14_value</references>
+        <references refid="dh_8c_1a7c904c3695482ec5791f0b09e3970120" compoundref="dh_8c" startline="123">P_GROUP16_LEN</references>
+        <references refid="dh_8c_1a01cb343a365c889dcd47513602d0f8ab" compoundref="dh_8c" startline="78">p_group16_value</references>
+        <references refid="dh_8c_1a1e43103f1ee0f5c90403d55e8f49e577" compoundref="dh_8c" startline="213">P_GROUP18_LEN</references>
+        <references refid="dh_8c_1a0cabb8070cda3e1f369a5a227e1d0c54" compoundref="dh_8c" startline="125">p_group18_value</references>
+        <references refid="dh_8c_1ac1804208261b918a4c8187115b8a3468" compoundref="dh_8c" startline="50">P_GROUP1_LEN</references>
+        <references refid="dh_8c_1a1f2d7b642838e104d67175955f54d177" compoundref="dh_8c" startline="38">p_group1_value</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="dh_8c_1a9b69e88d96e422ade03a30c6850467e7" compoundref="dh_8c" startline="272" endline="285">ssh_dh_finalize</references>
+        <references refid="dh_8c_1a9664ddb1523cfa9fb96d82a6bb8c5c96" compoundref="dh_8c" startline="215">ssh_dh_generator</references>
+        <references refid="dh_8c_1ac40eba6744765c1f96d8539c4f5ec4b9" compoundref="dh_8c" startline="216">ssh_dh_group1</references>
+        <references refid="dh_8c_1af835972b49b6053dd1215b92266734b1" compoundref="dh_8c" startline="217">ssh_dh_group14</references>
+        <references refid="dh_8c_1af4f1360517192a222e31f26a979bdc5e" compoundref="dh_8c" startline="218">ssh_dh_group16</references>
+        <references refid="dh_8c_1a7cba36cf23e9b6704f3355659cf841e4" compoundref="dh_8c" startline="219">ssh_dh_group18</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a9b69e88d96e422ade03a30c6850467e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_dh_finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_dh_finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="55" column="6" bodyfile="src/dh.c" bodystart="272" bodyend="285" declfile="include/libssh/dh.h" declline="55" declcolumn="6"/>
+        <references refid="dh_8c_1a435042e5c1d24b2dfea24e23e500569b" compoundref="dh_8c" startline="220">dh_crypto_initialized</references>
+        <references refid="dh_8c_1a9664ddb1523cfa9fb96d82a6bb8c5c96" compoundref="dh_8c" startline="215">ssh_dh_generator</references>
+        <references refid="dh_8c_1ac40eba6744765c1f96d8539c4f5ec4b9" compoundref="dh_8c" startline="216">ssh_dh_group1</references>
+        <references refid="dh_8c_1af835972b49b6053dd1215b92266734b1" compoundref="dh_8c" startline="217">ssh_dh_group14</references>
+        <references refid="dh_8c_1af4f1360517192a222e31f26a979bdc5e" compoundref="dh_8c" startline="218">ssh_dh_group16</references>
+        <references refid="dh_8c_1a7cba36cf23e9b6704f3355659cf841e4" compoundref="dh_8c" startline="219">ssh_dh_group18</references>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+        <referencedby refid="dh_8h_1a591c8d71df3bab8c691c33fd05a13343" compoundref="dh_8c" startline="227" endline="266">ssh_dh_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1a0d46abbfee369e9fb75f930e5f6a993a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_import_next_pubkey_blob</definition>
+        <argsstring>(ssh_session session, ssh_string pubkey_blob)</argsstring>
+        <name>ssh_dh_import_next_pubkey_blob</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a27e04455dbb0a80b6fed70b30772717b" kindref="member">ssh_string</ref></type>
+          <declname>pubkey_blob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="57" column="5" bodyfile="src/dh.c" bodystart="287" bodyend="292" declfile="include/libssh/dh.h" declline="57" declcolumn="5"/>
+        <references refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" compoundref="session_8h" startline="173">ssh_session_struct::next_crypto</references>
+        <references refid="structssh__crypto__struct_1a02e5e04457b69f9437c968fd35840bb3" compoundref="crypto_8h" startline="141">ssh_crypto_struct::server_pubkey</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__pki_1ga942b96ee72b13655952c87efe938e6ee" compoundref="pki_8c" startline="1610" endline="1661">ssh_pki_import_pubkey_blob</references>
+        <referencedby refid="group__libssh__server_1gad7dc7022c232731badd57c92ca04f1d6" compoundref="server_8c" startline="275" endline="330">ssh_get_key_params</referencedby>
+        <referencedby refid="dh-gex_8c_1ad98b52f0ed8073797ee1a72b60591822" compoundref="dh-gex_8c" startline="241" endline="300">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1ga750ce8095c0f1ac5154ba05284cb747c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+        <definition>ssh_key ssh_dh_get_current_server_publickey</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_dh_get_current_server_publickey</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="60" column="9" bodyfile="src/dh.c" bodystart="632" bodyend="639" declfile="include/libssh/dh.h" declline="60" declcolumn="9"/>
+        <references refid="structssh__session__struct_1a059ad9084ca3c934197d68f5f334e8b8" compoundref="session_8h" startline="172">ssh_session_struct::current_crypto</references>
+        <references refid="structssh__crypto__struct_1a02e5e04457b69f9437c968fd35840bb3" compoundref="crypto_8h" startline="141">ssh_crypto_struct::server_pubkey</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <referencedby refid="group__libssh__session_1ga14729e84cbe765757c394f86858d250d" compoundref="dh_8c" startline="642" endline="648">ssh_dh_get_current_server_publickey_blob</referencedby>
+        <referencedby refid="group__libssh__session_1ga16eb5c500a1beaf18821c6ce51b7b965" compoundref="known__hosts_8c" startline="430" endline="493">ssh_dump_knownhost</referencedby>
+        <referencedby refid="group__libssh__session_1ga6f37e3d7bb6b938b44d6a34a76fdfa0b" compoundref="known__hosts_8c" startline="288" endline="424">ssh_is_server_known</referencedby>
+        <referencedby refid="group__libssh__session_1ga519c3985c8803c67d24ce9f937e3da9a" compoundref="src_2knownhosts_8c" startline="892" endline="952">ssh_session_export_known_hosts_entry</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1ga14729e84cbe765757c394f86858d250d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_get_current_server_publickey_blob</definition>
+        <argsstring>(ssh_session session, ssh_string *pubkey_blob)</argsstring>
+        <name>ssh_dh_get_current_server_publickey_blob</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a27e04455dbb0a80b6fed70b30772717b" kindref="member">ssh_string</ref> *</type>
+          <declname>pubkey_blob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="61" column="5" bodyfile="src/dh.c" bodystart="642" bodyend="648" declfile="include/libssh/dh.h" declline="61" declcolumn="5"/>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__session_1ga750ce8095c0f1ac5154ba05284cb747c" compoundref="dh_8c" startline="632" endline="639">ssh_dh_get_current_server_publickey</references>
+        <references refid="group__libssh__pki_1gaadeaf6dc35e99214de0af82c3c431649" compoundref="pki_8c" startline="2030" endline="2046">ssh_pki_export_pubkey_blob</references>
+        <referencedby refid="group__libssh__session_1ga7c21df77bcd00b832e2f33c3afae64a0" compoundref="known__hosts_8c" startline="145" endline="184">check_public_key</referencedby>
+        <referencedby refid="legacy_8h_1a17fab3e78214da45a6ee05cc2bb9c812" compoundref="legacy_8c" startline="708" endline="726">ssh_get_pubkey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1ga97ba6b7567dfd3814742a063e0d951e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a7e8a3aee44db4899c088577a8db5dcfa" kindref="member">ssh_key</ref></type>
+        <definition>ssh_key ssh_dh_get_next_server_publickey</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_dh_get_next_server_publickey</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="63" column="9" bodyfile="src/dh.c" bodystart="650" bodyend="653" declfile="include/libssh/dh.h" declline="63" declcolumn="9"/>
+        <references refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" compoundref="session_8h" startline="173">ssh_session_struct::next_crypto</references>
+        <references refid="structssh__crypto__struct_1a02e5e04457b69f9437c968fd35840bb3" compoundref="crypto_8h" startline="141">ssh_crypto_struct::server_pubkey</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <referencedby refid="group__libssh__session_1ga98601c8e1c5aab3a40b6efa898fbf620" compoundref="dh_8c" startline="656" endline="662">ssh_dh_get_next_server_publickey_blob</referencedby>
+        <referencedby refid="packet_8h_1a0b1288dcd70b5599427dade8e4c26c91" compoundref="packet__cb_8c" startline="95" endline="175">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1ga98601c8e1c5aab3a40b6efa898fbf620" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_dh_get_next_server_publickey_blob</definition>
+        <argsstring>(ssh_session session, ssh_string *pubkey_blob)</argsstring>
+        <name>ssh_dh_get_next_server_publickey_blob</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a27e04455dbb0a80b6fed70b30772717b" kindref="member">ssh_string</ref> *</type>
+          <declname>pubkey_blob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="64" column="5" bodyfile="src/dh.c" bodystart="656" bodyend="662" declfile="include/libssh/dh.h" declline="64" declcolumn="5"/>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__session_1ga97ba6b7567dfd3814742a063e0d951e6" compoundref="dh_8c" startline="650" endline="653">ssh_dh_get_next_server_publickey</references>
+        <references refid="group__libssh__pki_1gaadeaf6dc35e99214de0af82c3c431649" compoundref="pki_8c" startline="2030" endline="2046">ssh_pki_export_pubkey_blob</references>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_client_dh_init</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_client_dh_init</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="67" column="5" bodyfile="src/dh.c" bodystart="310" bodyend="343" declfile="include/libssh/dh.h" declline="67" declcolumn="5"/>
+        <references refid="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" compoundref="dh_8h" startline="30">DH_CLIENT_KEYPAIR</references>
+        <references refid="structssh__crypto__struct_1a48bfbe899c2556ce3563c767c753ae35" compoundref="crypto_8h" startline="106">ssh_crypto_struct::dh_ctx</references>
+        <references refid="structssh__session__struct_1a6a94fa11eb06ca18d3c0ac22a153f97f" compoundref="session_8h" startline="149">ssh_session_struct::dh_handshake_state</references>
+        <references refid="session_8h_1a52a640f6094e9b3d1a88c7da7d08c802abc3336ecef076e78410a10365dd3f7df" compoundref="session_8h" startline="54">DH_STATE_INIT_SENT</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="structssh__session__struct_1a4ea5e4ae5383c6cdb5db9f08bbbfa019" compoundref="session_8h" startline="173">ssh_session_struct::next_crypto</references>
+        <references refid="structssh__session__struct_1af0aed60c1e529bbfdcb483fd80bf98a0" compoundref="session_8h" startline="140">ssh_session_struct::out_buffer</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="ssh2_8h_1acf77971434af31d2c8253fd075ecd668" compoundref="ssh2_8h" startline="15">SSH2_MSG_KEXDH_INIT</references>
+        <references refid="buffer_8h_1ae17848a86043f0abfc60c1c4f6126ccd" compoundref="buffer_8h" startline="49">ssh_buffer_pack</references>
+        <references refid="dh_8h_1a347b19702042c40983c7b0be299502a5" compoundref="dh__crypto_8c" startline="201" endline="209">ssh_dh_cleanup</references>
+        <references refid="dh_8c_1a583ffd40bbdaf36847b028cacec5d775" compoundref="dh_8c" startline="300">ssh_dh_client_callbacks</references>
+        <references refid="dh_8h_1a51374d6aa1f3dc4dce020052443bdba2" compoundref="dh__crypto_8c" startline="166" endline="199">ssh_dh_init_common</references>
+        <references refid="dh_8h_1a89e83519e2e86409708679ae9d3f10d8" compoundref="dh__crypto_8c" startline="220" endline="232">ssh_dh_keypair_gen_keys</references>
+        <references refid="dh_8h_1a888b43bd0cdceb75be52a04f99830e23" compoundref="dh__crypto_8c" startline="65" endline="82">ssh_dh_keypair_get_keys</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="packet_8h_1a7e6c7ed74c23ace432476aa8a6841140" compoundref="packet_8c" startline="1761" endline="1843">ssh_packet_send</references>
+        <references refid="packet_8h_1a6799ed6886c75279d61dcacd83b71102" compoundref="packet_8c" startline="1426" endline="1433">ssh_packet_set_callbacks</references>
+        <referencedby refid="client_8c_1a473363c862d0bf3433aa43eb7276e865" compoundref="client_8c" startline="246" endline="299">dh_handshake</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1ad6753daea402c696f6df298768066d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_server_dh_process_init</definition>
+        <argsstring>(ssh_session session, ssh_buffer packet)</argsstring>
+        <name>ssh_server_dh_process_init</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="71" column="5" declfile="include/libssh/dh.h" declline="71" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="dh_8h_1ad19cd7d247ba8dc8f8cbb8dbeef138ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_fallback_group</definition>
+        <argsstring>(uint32_t pmax, bignum *p, bignum *g)</argsstring>
+        <name>ssh_fallback_group</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>pmax</declname>
+        </param>
+        <param>
+          <type>bignum *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bignum *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="72" column="5" declfile="include/libssh/dh.h" declline="72" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1gac026b4aca2266e0f4ba013d9ff1fbeff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ssh_dh_is_known_group</definition>
+        <argsstring>(bignum modulus, bignum generator)</argsstring>
+        <name>ssh_dh_is_known_group</name>
+        <param>
+          <type>bignum</type>
+          <declname>modulus</declname>
+        </param>
+        <param>
+          <type>bignum</type>
+          <declname>generator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/dh.h" line="73" column="6" bodyfile="src/dh.c" bodystart="604" bodyend="630" declfile="include/libssh/dh.h" declline="73" declcolumn="6"/>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a6c4a12628159470391f1b922f86cc870" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="69">bits</references>
+        <references refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" compoundref="sc25519_8c" startline="14">m</references>
+        <references refid="dh_8c_1a9664ddb1523cfa9fb96d82a6bb8c5c96" compoundref="dh_8c" startline="215">ssh_dh_generator</references>
+        <references refid="dh_8c_1af835972b49b6053dd1215b92266734b1" compoundref="dh_8c" startline="217">ssh_dh_group14</references>
+        <references refid="dh_8c_1af4f1360517192a222e31f26a979bdc5e" compoundref="dh_8c" startline="218">ssh_dh_group16</references>
+        <references refid="dh_8c_1a7cba36cf23e9b6704f3355659cf841e4" compoundref="dh_8c" startline="219">ssh_dh_group18</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <referencedby refid="dh-gex_8c_1adbc632e797a25b2f7f39854e71dc0a49" compoundref="dh-gex_8c" startline="104" endline="239">SSH_PACKET_CALLBACK</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">libssh/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="dh_8h_1a66e4ddf7fce0fd65e504e7dd14722341" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DH_CLIENT_KEYPAIR<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="dh_8h_1a2da13e7a1190a4e1595829d519084bdd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DH_SERVER_KEYPAIR<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>functions<sp/>implemented<sp/>by<sp/>crypto<sp/>backends<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a51374d6aa1f3dc4dce020052443bdba2" kindref="member">ssh_dh_init_common</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a347b19702042c40983c7b0be299502a5" kindref="member">ssh_dh_cleanup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a4310b00fc6271a62c72abe5b69af6aa9" kindref="member">ssh_dh_get_parameters</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref><sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const_bignum<sp/>*<ref refid="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" kindref="member">modulus</ref>,<sp/>const_bignum<sp/>*<ref refid="structdh__ctx_1a039237cb80e30af2a66ff3fd008d1c07" kindref="member">generator</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1ac6b9e4755d3cffdcfde863b4930483e7" kindref="member">ssh_dh_set_parameters</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref><sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>bignum<sp/><ref refid="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" kindref="member">modulus</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>bignum<sp/><ref refid="structdh__ctx_1a039237cb80e30af2a66ff3fd008d1c07" kindref="member">generator</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a89e83519e2e86409708679ae9d3f10d8" kindref="member">ssh_dh_keypair_gen_keys</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref><sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>peer);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a888b43bd0cdceb75be52a04f99830e23" kindref="member">ssh_dh_keypair_get_keys</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref><sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>peer,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const_bignum<sp/>*priv,<sp/>const_bignum<sp/>*pub);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a765e573a59e1e47a55be0ed88abce41f" kindref="member">ssh_dh_keypair_set_keys</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref><sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>peer,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>bignum<sp/>priv,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>bignum<sp/>pub);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a9a743a5adcfc7d5fbc25c44c6119eb59" kindref="member">ssh_dh_compute_shared_secret</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdh__ctx" kindref="compound">dh_ctx</ref><sp/>*<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>local,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>remote,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bignum<sp/>*dest);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1ad90769620d45d2750b3ab7844edd4996" kindref="member">ssh_dh_debug_crypto</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*c);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>common<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a591c8d71df3bab8c691c33fd05a13343" kindref="member">ssh_dh_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a9b69e88d96e422ade03a30c6850467e7" kindref="member">ssh_dh_finalize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1a0d46abbfee369e9fb75f930e5f6a993a" kindref="member">ssh_dh_import_next_pubkey_blob</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/>pubkey_blob);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="group__libssh__session_1ga750ce8095c0f1ac5154ba05284cb747c" kindref="member">ssh_dh_get_current_server_publickey</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__session_1ga14729e84cbe765757c394f86858d250d" kindref="member">ssh_dh_get_current_server_publickey_blob</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/>*pubkey_blob);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="structssh__key__struct" kindref="compound">ssh_key</ref><sp/><ref refid="group__libssh__session_1ga97ba6b7567dfd3814742a063e0d951e6" kindref="member">ssh_dh_get_next_server_publickey</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh__session_1ga98601c8e1c5aab3a40b6efa898fbf620" kindref="member">ssh_dh_get_next_server_publickey_blob</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structssh__string__struct" kindref="compound">ssh_string</ref><sp/>*pubkey_blob);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1aa7a378b17aa0b6c175b7d90eb7527310" kindref="member">ssh_client_dh_init</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_SERVER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssh_server_dh_init(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WITH_SERVER<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="dh_8h_1ad6753daea402c696f6df298768066d9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1ad6753daea402c696f6df298768066d9a" kindref="member">ssh_server_dh_process_init</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/>packet);</highlight></codeline>
+<codeline lineno="72" refid="dh_8h_1ad19cd7d247ba8dc8f8cbb8dbeef138ec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dh_8h_1ad19cd7d247ba8dc8f8cbb8dbeef138ec" kindref="member">ssh_fallback_group</ref>(uint32_t<sp/>pmax,<sp/>bignum<sp/>*p,<sp/>bignum<sp/>*g);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__libssh__session_1gac026b4aca2266e0f4ba013d9ff1fbeff" kindref="member">ssh_dh_is_known_group</ref>(bignum<sp/><ref refid="structdh__ctx_1a03d7432dfe11421b76f8ae739b95504c" kindref="member">modulus</ref>,<sp/>bignum<sp/><ref refid="structdh__ctx_1a039237cb80e30af2a66ff3fd008d1c07" kindref="member">generator</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DH_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/dh.h"/>
+  </compounddef>
+</doxygen>

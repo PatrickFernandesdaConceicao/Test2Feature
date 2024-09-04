@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="bytearray_8h" kind="file" language="C++">
+    <compoundname>bytearray.h</compoundname>
+    <includedby refid="agent_8c" local="yes">src/agent.c</includedby>
+    <includedby refid="packet_8c" local="yes">src/packet.c</includedby>
+    <includedby refid="packet__crypt_8c" local="yes">src/packet_crypt.c</includedby>
+    <includedby refid="sftp_8c" local="yes">src/sftp.c</includedby>
+    <includedby refid="torture__bytearray_8c" local="yes">tests/unittests/torture_bytearray.c</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>tests/client/torture_sftp_dir.c</label>
+        <link refid="torture__sftp__dir_8c"/>
+      </node>
+      <node id="6">
+        <label>tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="14">
+        <label>tests/client/torture_sftp_read.c</label>
+        <link refid="torture__sftp__read_8c"/>
+      </node>
+      <node id="8">
+        <label>src/sftp.c</label>
+        <link refid="sftp_8c"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="12">
+        <label>tests/client/torture_sftp_ext.c</label>
+        <link refid="torture__sftp__ext_8c"/>
+      </node>
+      <node id="3">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="9">
+        <label>tests/client/torture_sftp_benchmark.c</label>
+        <link refid="torture__sftp__benchmark_8c"/>
+      </node>
+      <node id="2">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/libssh/bytearray.h</label>
+        <link refid="bytearray_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>tests/client/torture_sftp_fsync.c</label>
+        <link refid="torture__sftp__fsync_8c"/>
+      </node>
+      <node id="4">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="10">
+        <label>tests/client/torture_sftp_canonicalize_path.c</label>
+        <link refid="torture__sftp__canonicalize__path_8c"/>
+      </node>
+      <node id="15">
+        <label>tests/unittests/torture_bytearray.c</label>
+        <link refid="torture__bytearray_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="bytearray_8h_1a5ea805cfb34c2e42c56cd6e0b2802e45" prot="public" static="no">
+        <name>_DATA_BYTE_CONST</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    ((uint8_t)(((const uint8_t *)(data))[(pos)]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="23" column="9" bodyfile="include/libssh/bytearray.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a14cc53cc0c95e057bfb6b4d44ef5ec75" prot="public" static="no">
+        <name>_DATA_BYTE</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    (((uint8_t *)(data))[(pos)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="26" column="9" bodyfile="include/libssh/bytearray.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1ad3a1c4a14703d47da026109acec04b4e" prot="public" static="no">
+        <name>PULL_LE_U8</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a5ea805cfb34c2e42c56cd6e0b2802e45" kindref="member">_DATA_BYTE_CONST</ref>(data, pos))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="33" column="9" bodyfile="include/libssh/bytearray.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a28715dd938bb25451502d7a112a63c5b" prot="public" static="no">
+        <name>PULL_LE_U16</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    ((uint16_t)<ref refid="bytearray_8h_1ad3a1c4a14703d47da026109acec04b4e" kindref="member">PULL_LE_U8</ref>(data, pos) | ((uint16_t)(<ref refid="bytearray_8h_1ad3a1c4a14703d47da026109acec04b4e" kindref="member">PULL_LE_U8</ref>(data, (pos) + 1))) &lt;&lt; 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="36" column="9" bodyfile="include/libssh/bytearray.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1aa1796af5933f98885942d8e1fb9c6039" prot="public" static="no">
+        <name>PULL_LE_U32</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    ((uint32_t)(<ref refid="bytearray_8h_1a28715dd938bb25451502d7a112a63c5b" kindref="member">PULL_LE_U16</ref>(data, pos) | ((uint32_t)<ref refid="bytearray_8h_1a28715dd938bb25451502d7a112a63c5b" kindref="member">PULL_LE_U16</ref>(data, (pos) + 2)) &lt;&lt; 16))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="39" column="9" bodyfile="include/libssh/bytearray.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a78e25aa27414512d33a37c5dd1143860" prot="public" static="no">
+        <name>PULL_LE_U64</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    ((uint64_t)(<ref refid="bytearray_8h_1aa1796af5933f98885942d8e1fb9c6039" kindref="member">PULL_LE_U32</ref>(data, pos) | ((uint64_t)<ref refid="bytearray_8h_1aa1796af5933f98885942d8e1fb9c6039" kindref="member">PULL_LE_U32</ref>(data, (pos) + 4)) &lt;&lt; 32))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="42" column="9" bodyfile="include/libssh/bytearray.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1abf664aaf2b4d7498efd515d56e8f6154" prot="public" static="no">
+        <name>PUSH_LE_U8</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a14cc53cc0c95e057bfb6b4d44ef5ec75" kindref="member">_DATA_BYTE</ref>(data, pos) = ((uint8_t)(val)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="46" column="9" bodyfile="include/libssh/bytearray.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a17f35d325deebd7ee4fff852c099174d" prot="public" static="no">
+        <name>PUSH_LE_U16</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1abf664aaf2b4d7498efd515d56e8f6154" kindref="member">PUSH_LE_U8</ref>((data), (pos), (uint8_t)((uint16_t)(val) &amp; 0xff)), <ref refid="bytearray_8h_1abf664aaf2b4d7498efd515d56e8f6154" kindref="member">PUSH_LE_U8</ref>((data), (pos) + 1, (uint8_t)((uint16_t)(val) &gt;&gt; 8)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="49" column="9" bodyfile="include/libssh/bytearray.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a5a3fd63f87f236c7c759099e99276cb5" prot="public" static="no">
+        <name>PUSH_LE_U32</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a17f35d325deebd7ee4fff852c099174d" kindref="member">PUSH_LE_U16</ref>((data), (pos), (uint16_t)((uint32_t)(val) &amp; 0xffff)), <ref refid="bytearray_8h_1a17f35d325deebd7ee4fff852c099174d" kindref="member">PUSH_LE_U16</ref>((data), (pos) + 2, (uint16_t)((uint32_t)(val) &gt;&gt; 16)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="52" column="9" bodyfile="include/libssh/bytearray.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a37c77be7a7ff557815d8f85bb477e229" prot="public" static="no">
+        <name>PUSH_LE_U64</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a5a3fd63f87f236c7c759099e99276cb5" kindref="member">PUSH_LE_U32</ref>((data), (pos), (uint32_t)((uint64_t)(val) &amp; 0xffffffff)), <ref refid="bytearray_8h_1a5a3fd63f87f236c7c759099e99276cb5" kindref="member">PUSH_LE_U32</ref>((data), (pos) + 4, (uint32_t)((uint64_t)(val) &gt;&gt; 32)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="55" column="9" bodyfile="include/libssh/bytearray.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1af4b95a03c272fb8116ac36a1e1b8143e" prot="public" static="no">
+        <name>PULL_BE_U8</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a5ea805cfb34c2e42c56cd6e0b2802e45" kindref="member">_DATA_BYTE_CONST</ref>(data, pos))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="64" column="9" bodyfile="include/libssh/bytearray.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a6d60f16efe7573fb21964556957076a7" prot="public" static="no">
+        <name>PULL_BE_U16</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    ((((uint16_t)(<ref refid="bytearray_8h_1af4b95a03c272fb8116ac36a1e1b8143e" kindref="member">PULL_BE_U8</ref>(data, pos))) &lt;&lt; 8) | (uint16_t)<ref refid="bytearray_8h_1af4b95a03c272fb8116ac36a1e1b8143e" kindref="member">PULL_BE_U8</ref>(data, (pos) + 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="67" column="9" bodyfile="include/libssh/bytearray.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a57d4b95f40e0911596700b72c15698f3" prot="public" static="no">
+        <name>PULL_BE_U32</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    ((((uint32_t)<ref refid="bytearray_8h_1a6d60f16efe7573fb21964556957076a7" kindref="member">PULL_BE_U16</ref>(data, pos)) &lt;&lt; 16) | (uint32_t)(<ref refid="bytearray_8h_1a6d60f16efe7573fb21964556957076a7" kindref="member">PULL_BE_U16</ref>(data, (pos) + 2)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="70" column="9" bodyfile="include/libssh/bytearray.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a72e8468942d3e26e6eecd1e2ccf7f7dd" prot="public" static="no">
+        <name>PULL_BE_U64</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <initializer>    ((((uint64_t)<ref refid="bytearray_8h_1a57d4b95f40e0911596700b72c15698f3" kindref="member">PULL_BE_U32</ref>(data, pos)) &lt;&lt; 32) | (uint64_t)(<ref refid="bytearray_8h_1a57d4b95f40e0911596700b72c15698f3" kindref="member">PULL_BE_U32</ref>(data, (pos) + 4)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="73" column="9" bodyfile="include/libssh/bytearray.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a4aef7c717c87afad42f450be636eefd7" prot="public" static="no">
+        <name>PUSH_BE_U8</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a14cc53cc0c95e057bfb6b4d44ef5ec75" kindref="member">_DATA_BYTE</ref>(data, pos) = ((uint8_t)(val)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="78" column="9" bodyfile="include/libssh/bytearray.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a28a501547ef7ae03a4b0c435e1997600" prot="public" static="no">
+        <name>PUSH_BE_U16</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a4aef7c717c87afad42f450be636eefd7" kindref="member">PUSH_BE_U8</ref>((data), (pos), (uint8_t)(((uint16_t)(val)) &gt;&gt; 8)), <ref refid="bytearray_8h_1a4aef7c717c87afad42f450be636eefd7" kindref="member">PUSH_BE_U8</ref>((data), (pos) + 1, (uint8_t)((val) &amp; 0xff)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="81" column="9" bodyfile="include/libssh/bytearray.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a3bd053f9b249edd7b46f6d7282c5d6e6" prot="public" static="no">
+        <name>PUSH_BE_U32</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a28a501547ef7ae03a4b0c435e1997600" kindref="member">PUSH_BE_U16</ref>((data), (pos), (uint16_t)(((uint32_t)(val)) &gt;&gt; 16)), <ref refid="bytearray_8h_1a28a501547ef7ae03a4b0c435e1997600" kindref="member">PUSH_BE_U16</ref>((data), (pos) + 2, (uint16_t)((val) &amp; 0xffff)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="84" column="9" bodyfile="include/libssh/bytearray.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bytearray_8h_1a6c1ba7966b4392c4de12b10d73248ec1" prot="public" static="no">
+        <name>PUSH_BE_U64</name>
+        <param><defname>data</defname></param>
+        <param><defname>pos</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>    (<ref refid="bytearray_8h_1a3bd053f9b249edd7b46f6d7282c5d6e6" kindref="member">PUSH_BE_U32</ref>((data), (pos), (uint32_t)(((uint64_t)(val)) &gt;&gt; 32)), <ref refid="bytearray_8h_1a3bd053f9b249edd7b46f6d7282c5d6e6" kindref="member">PUSH_BE_U32</ref>((data), (pos) + 4, (uint32_t)((val) &amp; 0xffffffff)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/bytearray.h" line="87" column="9" bodyfile="include/libssh/bytearray.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2018<sp/>Andreas<sp/>Schneider<sp/>&lt;asn@cryptomilk.org&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_BYTEARRAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BYTEARRAY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="bytearray_8h_1a5ea805cfb34c2e42c56cd6e0b2802e45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DATA_BYTE_CONST(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((uint8_t)(((const<sp/>uint8_t<sp/>*)(data))[(pos)]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="bytearray_8h_1a14cc53cc0c95e057bfb6b4d44ef5ec75" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DATA_BYTE(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((uint8_t<sp/>*)(data))[(pos)])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>These<sp/>macros<sp/>pull<sp/>or<sp/>push<sp/>integer<sp/>values<sp/>from<sp/>byte<sp/>arrays<sp/>stored<sp/>in</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>little-endian<sp/>byte<sp/>order.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="bytearray_8h_1ad3a1c4a14703d47da026109acec04b4e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_LE_U8(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(_DATA_BYTE_CONST(data,<sp/>pos))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="bytearray_8h_1a28715dd938bb25451502d7a112a63c5b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_LE_U16(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((uint16_t)PULL_LE_U8(data,<sp/>pos)<sp/>|<sp/>((uint16_t)(PULL_LE_U8(data,<sp/>(pos)<sp/>+<sp/>1)))<sp/>&lt;&lt;<sp/>8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="bytearray_8h_1aa1796af5933f98885942d8e1fb9c6039" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_LE_U32(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((uint32_t)(PULL_LE_U16(data,<sp/>pos)<sp/>|<sp/>((uint32_t)PULL_LE_U16(data,<sp/>(pos)<sp/>+<sp/>2))<sp/>&lt;&lt;<sp/>16))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="bytearray_8h_1a78e25aa27414512d33a37c5dd1143860" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_LE_U64(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((uint64_t)(PULL_LE_U32(data,<sp/>pos)<sp/>|<sp/>((uint64_t)PULL_LE_U32(data,<sp/>(pos)<sp/>+<sp/>4))<sp/>&lt;&lt;<sp/>32))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="bytearray_8h_1abf664aaf2b4d7498efd515d56e8f6154" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_LE_U8(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(_DATA_BYTE(data,<sp/>pos)<sp/>=<sp/>((uint8_t)(val)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="bytearray_8h_1a17f35d325deebd7ee4fff852c099174d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_LE_U16(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(PUSH_LE_U8((data),<sp/>(pos),<sp/>(uint8_t)((uint16_t)(val)<sp/>&amp;<sp/>0xff)),<sp/>PUSH_LE_U8((data),<sp/>(pos)<sp/>+<sp/>1,<sp/>(uint8_t)((uint16_t)(val)<sp/>&gt;&gt;<sp/>8)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="bytearray_8h_1a5a3fd63f87f236c7c759099e99276cb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_LE_U32(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(PUSH_LE_U16((data),<sp/>(pos),<sp/>(uint16_t)((uint32_t)(val)<sp/>&amp;<sp/>0xffff)),<sp/>PUSH_LE_U16((data),<sp/>(pos)<sp/>+<sp/>2,<sp/>(uint16_t)((uint32_t)(val)<sp/>&gt;&gt;<sp/>16)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="bytearray_8h_1a37c77be7a7ff557815d8f85bb477e229" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_LE_U64(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(PUSH_LE_U32((data),<sp/>(pos),<sp/>(uint32_t)((uint64_t)(val)<sp/>&amp;<sp/>0xffffffff)),<sp/>PUSH_LE_U32((data),<sp/>(pos)<sp/>+<sp/>4,<sp/>(uint32_t)((uint64_t)(val)<sp/>&gt;&gt;<sp/>32)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/>These<sp/>macros<sp/>pull<sp/>or<sp/>push<sp/>integer<sp/>values<sp/>from<sp/>byte<sp/>arrays<sp/>stored<sp/>in</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/>big-endian<sp/>byte<sp/>order<sp/>(network<sp/>byte<sp/>order).</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="bytearray_8h_1af4b95a03c272fb8116ac36a1e1b8143e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_BE_U8(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(_DATA_BYTE_CONST(data,<sp/>pos))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="bytearray_8h_1a6d60f16efe7573fb21964556957076a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_BE_U16(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((((uint16_t)(PULL_BE_U8(data,<sp/>pos)))<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/>(uint16_t)PULL_BE_U8(data,<sp/>(pos)<sp/>+<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="bytearray_8h_1a57d4b95f40e0911596700b72c15698f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_BE_U32(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((((uint32_t)PULL_BE_U16(data,<sp/>pos))<sp/>&lt;&lt;<sp/>16)<sp/>|<sp/>(uint32_t)(PULL_BE_U16(data,<sp/>(pos)<sp/>+<sp/>2)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="bytearray_8h_1a72e8468942d3e26e6eecd1e2ccf7f7dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PULL_BE_U64(data,<sp/>pos)<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((((uint64_t)PULL_BE_U32(data,<sp/>pos))<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>(uint64_t)(PULL_BE_U32(data,<sp/>(pos)<sp/>+<sp/>4)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="bytearray_8h_1a4aef7c717c87afad42f450be636eefd7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_BE_U8(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(_DATA_BYTE(data,<sp/>pos)<sp/>=<sp/>((uint8_t)(val)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="bytearray_8h_1a28a501547ef7ae03a4b0c435e1997600" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_BE_U16(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(PUSH_BE_U8((data),<sp/>(pos),<sp/>(uint8_t)(((uint16_t)(val))<sp/>&gt;&gt;<sp/>8)),<sp/>PUSH_BE_U8((data),<sp/>(pos)<sp/>+<sp/>1,<sp/>(uint8_t)((val)<sp/>&amp;<sp/>0xff)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="bytearray_8h_1a3bd053f9b249edd7b46f6d7282c5d6e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_BE_U32(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(PUSH_BE_U16((data),<sp/>(pos),<sp/>(uint16_t)(((uint32_t)(val))<sp/>&gt;&gt;<sp/>16)),<sp/>PUSH_BE_U16((data),<sp/>(pos)<sp/>+<sp/>2,<sp/>(uint16_t)((val)<sp/>&amp;<sp/>0xffff)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="bytearray_8h_1a6c1ba7966b4392c4de12b10d73248ec1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH_BE_U64(data,<sp/>pos,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(PUSH_BE_U32((data),<sp/>(pos),<sp/>(uint32_t)(((uint64_t)(val))<sp/>&gt;&gt;<sp/>32)),<sp/>PUSH_BE_U32((data),<sp/>(pos)<sp/>+<sp/>4,<sp/>(uint32_t)((val)<sp/>&amp;<sp/>0xffffffff)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_BYTEARRAY_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/bytearray.h"/>
+  </compounddef>
+</doxygen>

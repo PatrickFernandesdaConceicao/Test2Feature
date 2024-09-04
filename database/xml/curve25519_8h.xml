@@ -1,0 +1,744 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="curve25519_8h" kind="file" language="C++">
+    <compoundname>curve25519.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="libssh_8h" local="yes">libssh.h</includes>
+    <includedby refid="crypto_8h" local="yes">libssh-mirror/include/libssh/crypto.h</includedby>
+    <includedby refid="curve25519_8c" local="yes">libssh-mirror/src/curve25519.c</includedby>
+    <includedby refid="curve25519__ref_8c" local="yes">libssh-mirror/src/external/curve25519_ref.c</includedby>
+    <includedby refid="kex_8c" local="yes">libssh-mirror/src/kex.c</includedby>
+    <includedby refid="packet__cb_8c" local="yes">libssh-mirror/src/packet_cb.c</includedby>
+    <includedby refid="server_8c" local="yes">libssh-mirror/src/server.c</includedby>
+    <includedby refid="wrapper_8c" local="yes">libssh-mirror/src/wrapper.c</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>sys/select.h</label>
+      </node>
+      <node id="9">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="8">
+        <label>netdb.h</label>
+      </node>
+      <node id="6">
+        <label>sys/types.h</label>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="3">
+        <label>libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="45">
+        <label>libssh-mirror/src/pki_ed25519_common.c</label>
+        <link refid="pki__ed25519__common_8c"/>
+      </node>
+      <node id="24">
+        <label>libssh-mirror/src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>libssh-mirror/src/external/curve25519_ref.c</label>
+        <link refid="curve25519__ref_8c"/>
+      </node>
+      <node id="7">
+        <label>libssh-mirror/src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libssh-mirror/tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="30">
+        <label>libssh-mirror/include/libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libssh-mirror/src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="33">
+        <label>libssh-mirror/src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>libssh-mirror/tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="67">
+        <label>libssh-mirror/tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="46">
+        <label>libssh-mirror/tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="54">
+        <label>libssh-mirror/src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="39">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="36">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="5">
+        <label>libssh-mirror/src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>libssh-mirror/src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="18">
+        <label>libssh-mirror/src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh-mirror/src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="42">
+        <label>libssh-mirror/src/pki_container_openssh.c</label>
+        <link refid="pki__container__openssh_8c"/>
+      </node>
+      <node id="21">
+        <label>libssh-mirror/src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libssh-mirror/src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/include/libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>libssh-mirror/tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="15">
+        <label>libssh-mirror/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="59">
+        <label>libssh-mirror/src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="55">
+        <label>libssh-mirror/src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="9">
+        <label>libssh-mirror/src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="37">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="44">
+        <label>libssh-mirror/src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+      </node>
+      <node id="32">
+        <label>libssh-mirror/src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+      <node id="35">
+        <label>libssh-mirror/tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="34">
+        <label>libssh-mirror/tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="12">
+        <label>libssh-mirror/src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="64">
+        <label>libssh-mirror/tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="57">
+        <label>libssh-mirror/src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="48">
+        <label>libssh-mirror/tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="41">
+        <label>libssh-mirror/tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="23">
+        <label>libssh-mirror/src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="56">
+        <label>libssh-mirror/src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="62">
+        <label>libssh-mirror/src/threads/mbedtls.c</label>
+        <link refid="mbedtls_8c"/>
+      </node>
+      <node id="63">
+        <label>libssh-mirror/src/threads.c</label>
+        <link refid="threads_8c"/>
+      </node>
+      <node id="38">
+        <label>libssh-mirror/tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="47">
+        <label>libssh-mirror/src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>libssh-mirror/tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="10">
+        <label>libssh-mirror/src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="61">
+        <label>libssh-mirror/src/threads/libgcrypt.c</label>
+        <link refid="threads_2libgcrypt_8c"/>
+      </node>
+      <node id="58">
+        <label>libssh-mirror/src/libmbedcrypto.c</label>
+        <link refid="libmbedcrypto_8c"/>
+      </node>
+      <node id="27">
+        <label>libssh-mirror/src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/include/libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="60">
+        <label>libssh-mirror/src/threads/libcrypto.c</label>
+        <link refid="threads_2libcrypto_8c"/>
+      </node>
+      <node id="51">
+        <label>libssh-mirror/src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="14">
+        <label>libssh-mirror/src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="16">
+        <label>libssh-mirror/src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="49">
+        <label>libssh-mirror/tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="8">
+        <label>libssh-mirror/tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="52">
+        <label>libssh-mirror/src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh-mirror/src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="65">
+        <label>libssh-mirror/tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="20">
+        <label>libssh-mirror/src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="17">
+        <label>libssh-mirror/src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="66">
+        <label>libssh-mirror/tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="68">
+        <label>libssh-mirror/src/curve25519.c</label>
+        <link refid="curve25519_8c"/>
+      </node>
+      <node id="31">
+        <label>libssh-mirror/include/libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libssh-mirror/src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="50">
+        <label>libssh-mirror/src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="19">
+        <label>libssh-mirror/tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="43">
+        <label>libssh-mirror/src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="curve25519_8h_1a30e44846abec7920c7bbe91280744f0d" prot="public" static="no">
+        <name>CURVE25519_PUBKEY_SIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/curve25519.h" line="36" column="9" bodyfile="libssh-mirror/include/libssh/curve25519.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="curve25519_8h_1afb5934e3c47d9ccc91db04e3ad621af4" prot="public" static="no">
+        <name>CURVE25519_PRIVKEY_SIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/curve25519.h" line="37" column="9" bodyfile="libssh-mirror/include/libssh/curve25519.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="curve25519_8h_1ae87faacbc63407f20b54221fcd16952b" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char ssh_curve25519_pubkey[CURVE25519_PUBKEY_SIZE]</definition>
+        <argsstring>[CURVE25519_PUBKEY_SIZE]</argsstring>
+        <name>ssh_curve25519_pubkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/curve25519.h" line="46" column="23" bodyfile="libssh-mirror/include/libssh/curve25519.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="curve25519_8h_1a269c01abb9b3d80d36203cea5ac9928e" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char ssh_curve25519_privkey[CURVE25519_PRIVKEY_SIZE]</definition>
+        <argsstring>[CURVE25519_PRIVKEY_SIZE]</argsstring>
+        <name>ssh_curve25519_privkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/curve25519.h" line="47" column="23" bodyfile="libssh-mirror/include/libssh/curve25519.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="curve25519_8h_1a6afb9b83655550886cca78ffe90df54e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_scalarmult_base</definition>
+        <argsstring>(unsigned char *q, const unsigned char *n)</argsstring>
+        <name>crypto_scalarmult_base</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/curve25519.h" line="38" column="5" bodyfile="libssh-mirror/src/external/curve25519_ref.c" bodystart="11" bodyend="15" declfile="libssh-mirror/include/libssh/curve25519.h" declline="38" declcolumn="5"/>
+        <references refid="curve25519__ref_8c_1a51822a28c86e45c0d7af82ae32aa0e80" compoundref="curve25519__ref_8c" startline="9">base</references>
+        <references refid="curve25519__ref_8c_1a2e75fd403e273a57c76ceaf01b18136e" compoundref="curve25519__ref_8c" startline="253" endline="271">crypto_scalarmult</references>
+      </memberdef>
+      <memberdef kind="function" id="curve25519_8h_1a2e75fd403e273a57c76ceaf01b18136e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_scalarmult</definition>
+        <argsstring>(unsigned char *q, const unsigned char *n, const unsigned char *p)</argsstring>
+        <name>crypto_scalarmult</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/curve25519.h" line="39" column="5" bodyfile="libssh-mirror/src/external/curve25519_ref.c" bodystart="253" bodyend="271" declfile="libssh-mirror/include/libssh/curve25519.h" declline="39" declcolumn="5"/>
+        <references refid="curve25519__ref_8c_1ad08a0cb116d5133fdb813c83b884d67f" compoundref="curve25519__ref_8c" startline="56" endline="66">freeze</references>
+        <references refid="curve25519__ref_8c_1affef7ff5b3e87c52042333c772bffd48" compoundref="curve25519__ref_8c" startline="130" endline="184">mainloop</references>
+        <references refid="curve25519__ref_8c_1a0e278dc68e20c984208be2688d0d4165" compoundref="curve25519__ref_8c" startline="68" endline="81">mult</references>
+        <references refid="curve25519__ref_8c_1a995ba348f0144c42e2ed24cf0e240336" compoundref="curve25519__ref_8c" startline="186" endline="251">recip</references>
+        <referencedby refid="curve25519_8h_1a6afb9b83655550886cca78ffe90df54e" compoundref="curve25519__ref_8c" startline="11" endline="15">crypto_scalarmult_base</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="curve25519_8h_1a12a5c9d72563cef103bdf63c3980f30b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_client_curve25519_init</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_client_curve25519_init</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/curve25519.h" line="50" column="5" declfile="libssh-mirror/include/libssh/curve25519.h" declline="50" declcolumn="5"/>
+        <referencedby refid="client_8c_1a473363c862d0bf3433aa43eb7276e865" compoundref="client_8c" startline="246" endline="299">dh_handshake</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2013<sp/>by<sp/>Aris<sp/>Adamantiadis<sp/>&lt;aris@badcode.be&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CURVE25519_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CURVE25519_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libssh_8h" kindref="compound">libssh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_NACL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nacl/crypto_scalarmult_curve25519.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CURVE25519_PUBKEY_SIZE<sp/>crypto_scalarmult_curve25519_BYTES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CURVE25519_PRIVKEY_SIZE<sp/>crypto_scalarmult_curve25519_SCALARBYTES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>crypto_scalarmult_base<sp/>crypto_scalarmult_curve25519_base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>crypto_scalarmult<sp/>crypto_scalarmult_curve25519</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="curve25519_8h_1a30e44846abec7920c7bbe91280744f0d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CURVE25519_PUBKEY_SIZE<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="curve25519_8h_1afb5934e3c47d9ccc91db04e3ad621af4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CURVE25519_PRIVKEY_SIZE<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="curve25519_8h_1a6afb9b83655550886cca78ffe90df54e" kindref="member">crypto_scalarmult_base</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*q,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*n);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="curve25519_8h_1a2e75fd403e273a57c76ceaf01b18136e" kindref="member">crypto_scalarmult</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*q,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WITH_NACL<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_ECC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HAVE_CURVE25519<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="curve25519_8h_1ae87faacbc63407f20b54221fcd16952b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="curve25519_8h_1ae87faacbc63407f20b54221fcd16952b" kindref="member">ssh_curve25519_pubkey</ref>[<ref refid="curve25519_8h_1a30e44846abec7920c7bbe91280744f0d" kindref="member">CURVE25519_PUBKEY_SIZE</ref>];</highlight></codeline>
+<codeline lineno="47" refid="curve25519_8h_1a269c01abb9b3d80d36203cea5ac9928e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="curve25519_8h_1a269c01abb9b3d80d36203cea5ac9928e" kindref="member">ssh_curve25519_privkey</ref>[<ref refid="curve25519_8h_1afb5934e3c47d9ccc91db04e3ad621af4" kindref="member">CURVE25519_PRIVKEY_SIZE</ref>];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="curve25519_8h_1a12a5c9d72563cef103bdf63c3980f30b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="curve25519_8h_1a12a5c9d72563cef103bdf63c3980f30b" kindref="member">ssh_client_curve25519_init</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_SERVER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssh_server_curve25519_init(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WITH_SERVER<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CURVE25519_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/curve25519.h"/>
+  </compounddef>
+</doxygen>

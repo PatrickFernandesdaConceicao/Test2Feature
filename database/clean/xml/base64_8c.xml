@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="base64_8c" kind="file" language="C++">
+    <compoundname>base64.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="buffer_8h" local="yes">libssh/buffer.h</includes>
+    <incdepgraph>
+      <node id="17">
+        <label>stdarg.h</label>
+      </node>
+      <node id="12">
+        <label>sys/select.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>libssh/buffer.h</label>
+        <link refid="buffer_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>netdb.h</label>
+      </node>
+      <node id="11">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="1">
+        <label>src/base64.c</label>
+        <link refid="base64_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="base64_8c_1afaac080e14176ef93b4f5555f8d12f39" prot="public" static="no">
+        <name>SET_A</name>
+        <param><defname>n</defname></param>
+        <param><defname>i</defname></param>
+        <initializer>do { (n) |= ((i) &amp; 63) &lt;&lt;18; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="38" column="9" bodyfile="src/base64.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1a4bfb2a5f55fe6f739efa1a90939c2113" prot="public" static="no">
+        <name>SET_B</name>
+        <param><defname>n</defname></param>
+        <param><defname>i</defname></param>
+        <initializer>do { (n) |= ((i) &amp; 63) &lt;&lt;12; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="39" column="9" bodyfile="src/base64.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1a053ce1226f1874849d31d83d0553b715" prot="public" static="no">
+        <name>SET_C</name>
+        <param><defname>n</defname></param>
+        <param><defname>i</defname></param>
+        <initializer>do { (n) |= ((i) &amp; 63) &lt;&lt; 6; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="40" column="9" bodyfile="src/base64.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1a4218203390c21da284897c55169f0a89" prot="public" static="no">
+        <name>SET_D</name>
+        <param><defname>n</defname></param>
+        <param><defname>i</defname></param>
+        <initializer>do { (n) |= ((i) &amp; 63); } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="41" column="9" bodyfile="src/base64.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1ac9a322d6f42fa07cc5cd316d04b58ff5" prot="public" static="no">
+        <name>GET_A</name>
+        <param><defname>n</defname></param>
+        <initializer>(unsigned char) (((n) &amp; 0xff0000) &gt;&gt; 16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="43" column="9" bodyfile="src/base64.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1a4e7164c49bc7dac9904775c8c8f33359" prot="public" static="no">
+        <name>GET_B</name>
+        <param><defname>n</defname></param>
+        <initializer>(unsigned char) (((n) &amp; 0xff00) &gt;&gt; 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="44" column="9" bodyfile="src/base64.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1a335f25e89586046492fa50fd8cf952b7" prot="public" static="no">
+        <name>GET_C</name>
+        <param><defname>n</defname></param>
+        <initializer>(unsigned char) ((n) &amp; 0xff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="45" column="9" bodyfile="src/base64.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1a090189f6b662ec13a6b2b05d9d40834f" prot="public" static="no">
+        <name>BLOCK</name>
+        <param><defname>letter</defname></param>
+        <param><defname>n</defname></param>
+        <initializer>                             do {ptr = strchr((const char *)<ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>, source[n]); \
+                             <ref refid="tests_2unittests_2CMakeLists_8txt_1adf4c50373758bd4d27d88bebdc10840e" kindref="member">if</ref>(!ptr) return -1; \
+                             i = ptr - (const char *)<ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>; \
+                             SET_##letter(*block, i); \
+                         } while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="175" column="9" bodyfile="src/base64.c" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="base64_8c_1a5967693540f086cfa357f68978bf0be7" prot="public" static="no">
+        <name>BITS</name>
+        <param><defname>n</defname></param>
+        <initializer>((1 &lt;&lt; (n)) - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="242" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="base64_8c_1a508cc75bf53e64d393054677c462a316" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t alphabet[]</definition>
+        <argsstring>[]</argsstring>
+        <name>alphabet</name>
+        <initializer>= &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+                         &quot;abcdefghijklmnopqrstuvwxyz&quot;
+                         &quot;0123456789+/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="33" column="15" bodyfile="src/base64.c" bodystart="33" bodyend="-1"/>
+        <referencedby refid="base64_8c_1a8bc72065f5d699a699b64a478342355c" compoundref="base64_8c" startline="238" endline="264">_bin_to_base64</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="base64_8c_1a47e7319237c812bcf3b99e0458df338e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _base64_to_bin</definition>
+        <argsstring>(unsigned char dest[3], const char *source, int num)</argsstring>
+        <name>_base64_to_bin</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>dest</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="210" column="12" bodyfile="src/base64.c" bodystart="210" bodyend="221" declfile="src/base64.c" declline="47" declcolumn="12"/>
+        <references refid="base64_8c_1ac9a322d6f42fa07cc5cd316d04b58ff5" compoundref="base64_8c" startline="43">GET_A</references>
+        <references refid="base64_8c_1a4e7164c49bc7dac9904775c8c8f33359" compoundref="base64_8c" startline="44">GET_B</references>
+        <references refid="base64_8c_1a335f25e89586046492fa50fd8cf952b7" compoundref="base64_8c" startline="45">GET_C</references>
+        <references refid="base64_8c_1a866ac672f0c078ef5543ed5d307d42ce" compoundref="base64_8c" startline="182" endline="207">to_block4</references>
+        <referencedby refid="priv_8h_1aa9b1bdd62db42c91b1b203f6850adadf" compoundref="base64_8c" startline="60" endline="173">base64_to_bin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="base64_8c_1a6b6967500bdc814853e12c166812ef44" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int get_equals</definition>
+        <argsstring>(char *string)</argsstring>
+        <name>get_equals</name>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="224" column="12" bodyfile="src/base64.c" bodystart="224" bodyend="235" declfile="src/base64.c" declline="48" declcolumn="12"/>
+        <referencedby refid="priv_8h_1aa9b1bdd62db42c91b1b203f6850adadf" compoundref="base64_8c" startline="60" endline="173">base64_to_bin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="base64_8c_1aa9b1bdd62db42c91b1b203f6850adadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1ac91852b0afd5138f36e09ef59af8e52b" kindref="member">ssh_buffer</ref></type>
+        <definition>ssh_buffer base64_to_bin</definition>
+        <argsstring>(const char *source)</argsstring>
+        <name>base64_to_bin</name>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="60" column="12" bodyfile="src/base64.c" bodystart="60" bodyend="173"/>
+        <references refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" compoundref="base64_8c" startline="210" endline="221">_base64_to_bin</references>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="base64_8c_1a6b6967500bdc814853e12c166812ef44" compoundref="base64_8c" startline="224" endline="235">get_equals</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="group__libssh__buffer_1gade0108b17f43b5269b92456a785df126" compoundref="buffer_8c" startline="176" endline="179">ssh_buffer_set_secure</references>
+        <referencedby refid="group__libssh__session_1ga7c21df77bcd00b832e2f33c3afae64a0" compoundref="known__hosts_8c" startline="145" endline="184">check_public_key</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="group__libssh__session_1gaf7b7c8e6b973ad5cb1c30c6f31f849c5" compoundref="src_2knownhosts_8c" startline="72" endline="136">match_hashed_hostname</referencedby>
+        <referencedby refid="group__libssh__pki_1gac8d7d3fa88b93d8b059b6b5b2f457913" compoundref="pki_8c" startline="1562" endline="1593">ssh_pki_import_pubkey_base64</referencedby>
+        <referencedby refid="group__libssh__pki_1gabadb73a1db275add212f6b72d059bcfb" compoundref="pki__container__openssh_8c" startline="230" endline="381">ssh_pki_openssh_import</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="base64_8c_1a866ac672f0c078ef5543ed5d307d42ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int to_block4</definition>
+        <argsstring>(unsigned long *block, const char *source, int num)</argsstring>
+        <name>to_block4</name>
+        <param>
+          <type>unsigned long *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="182" column="12" bodyfile="src/base64.c" bodystart="182" bodyend="207"/>
+        <references refid="base64_8c_1a090189f6b662ec13a6b2b05d9d40834f" compoundref="base64_8c" startline="175">BLOCK</references>
+        <referencedby refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" compoundref="base64_8c" startline="210" endline="221">_base64_to_bin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="base64_8c_1a8bc72065f5d699a699b64a478342355c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _bin_to_base64</definition>
+        <argsstring>(uint8_t *dest, const uint8_t source[3], size_t len)</argsstring>
+        <name>_bin_to_base64</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>source</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="238" column="13" bodyfile="src/base64.c" bodystart="238" bodyend="264"/>
+        <references refid="base64_8c_1a508cc75bf53e64d393054677c462a316" compoundref="base64_8c" startline="33">alphabet</references>
+        <references refid="base64_8c_1a5967693540f086cfa357f68978bf0be7">BITS</references>
+        <referencedby refid="priv_8h_1abc94b583621acc2a3bd39b27c819768e" compoundref="base64_8c" startline="273" endline="298">bin_to_base64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="base64_8c_1abc94b583621acc2a3bd39b27c819768e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t* bin_to_base64</definition>
+        <argsstring>(const uint8_t *source, size_t len)</argsstring>
+        <name>bin_to_base64</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/base64.c" line="273" column="9" bodyfile="src/base64.c" bodystart="273" bodyend="298"/>
+        <references refid="base64_8c_1a8bc72065f5d699a699b64a478342355c" compoundref="base64_8c" startline="238" endline="264">_bin_to_base64</references>
+        <referencedby refid="group__libssh__session_1ga85ab9f031ff137ad3f9e14341b514f5b" compoundref="dh_8c" startline="678" endline="694">ssh_get_b64_unpadded</referencedby>
+        <referencedby refid="group__libssh__pki_1ga2caa40cbd9620e9f7e3e7ab654b256c5" compoundref="pki_8c" startline="2060" endline="2084">ssh_pki_export_pubkey_base64</referencedby>
+        <referencedby refid="pki__priv_8h_1a0a1b01b666de3e4f433660761c7658ad" compoundref="pki__container__openssh_8c" startline="534" endline="722">ssh_pki_openssh_privkey_export</referencedby>
+        <referencedby refid="legacy_8h_1aa4de432e122c76302e4190041fee6945" compoundref="legacy_8c" startline="575" endline="641">ssh_publickey_to_file</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>base64.c<sp/>-<sp/>support<sp/>for<sp/>base64<sp/>alphabet<sp/>system,<sp/>described<sp/>in<sp/>RFC1521</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2005-2005<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>just<sp/>the<sp/>dirtiest<sp/>part<sp/>of<sp/>code<sp/>i<sp/>ever<sp/>made<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_8h" kindref="compound">libssh/buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="base64_8c_1a508cc75bf53e64d393054677c462a316" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;abcdefghijklmnopqrstuvwxyz&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;0123456789+/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Transformations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="base64_8c_1afaac080e14176ef93b4f5555f8d12f39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_A(n,<sp/>i)<sp/>do<sp/>{<sp/>(n)<sp/>|=<sp/>((i)<sp/>&amp;<sp/>63)<sp/>&lt;&lt;18;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="base64_8c_1a4bfb2a5f55fe6f739efa1a90939c2113" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_B(n,<sp/>i)<sp/>do<sp/>{<sp/>(n)<sp/>|=<sp/>((i)<sp/>&amp;<sp/>63)<sp/>&lt;&lt;12;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="base64_8c_1a053ce1226f1874849d31d83d0553b715" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_C(n,<sp/>i)<sp/>do<sp/>{<sp/>(n)<sp/>|=<sp/>((i)<sp/>&amp;<sp/>63)<sp/>&lt;&lt;<sp/>6;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="base64_8c_1a4218203390c21da284897c55169f0a89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_D(n,<sp/>i)<sp/>do<sp/>{<sp/>(n)<sp/>|=<sp/>((i)<sp/>&amp;<sp/>63);<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="base64_8c_1ac9a322d6f42fa07cc5cd316d04b58ff5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_A(n)<sp/>(unsigned<sp/>char)<sp/>(((n)<sp/>&amp;<sp/>0xff0000)<sp/>&gt;&gt;<sp/>16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="base64_8c_1a4e7164c49bc7dac9904775c8c8f33359" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_B(n)<sp/>(unsigned<sp/>char)<sp/>(((n)<sp/>&amp;<sp/>0xff00)<sp/>&gt;&gt;<sp/>8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="base64_8c_1a335f25e89586046492fa50fd8cf952b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_C(n)<sp/>(unsigned<sp/>char)<sp/>((n)<sp/>&amp;<sp/>0xff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" kindref="member">_base64_to_bin</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>dest[3],<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*source,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8c_1a6b6967500bdc814853e12c166812ef44" kindref="member">get_equals</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>First<sp/>part:<sp/>base64<sp/>to<sp/>binary<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="priv_8h_1aa9b1bdd62db42c91b1b203f6850adadf" refkind="member"><highlight class="normal"><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/><ref refid="base64_8c_1aa9b1bdd62db42c91b1b203f6850adadf" kindref="member">base64_to_bin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*source)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><ref refid="structssh__buffer__struct" kindref="compound">ssh_buffer</ref><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>block[3];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*base64;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>equals;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>base64<sp/>=<sp/>strdup(source);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(base64<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>ptr<sp/>=<sp/>base64;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>the<sp/>number<sp/>of<sp/>equals<sp/>signs,<sp/>which<sp/>mirrors<sp/>the<sp/>padding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>equals<sp/>=<sp/><ref refid="base64_8c_1a6b6967500bdc814853e12c166812ef44" kindref="member">get_equals</ref>(ptr);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(equals<sp/>&gt;<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(base64);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>=<sp/><ref refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" kindref="member">ssh_buffer_new</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(base64);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/>*<sp/>The<sp/>base64<sp/>buffer<sp/>often<sp/>contains<sp/>sensitive<sp/>data.<sp/>Make<sp/>sure<sp/>we<sp/>don&apos;t<sp/>leak</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/>*<sp/>sensitive<sp/>data</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__buffer_1gade0108b17f43b5269b92456a785df126" kindref="member">ssh_buffer_set_secure</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>len<sp/>=<sp/>strlen(ptr);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len<sp/>&gt;<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" kindref="member">_base64_to_bin</ref>(block,<sp/>ptr,<sp/>3)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>block,<sp/>3)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>len<sp/>-=<sp/>4;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr<sp/>+=<sp/>4;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Depending<sp/>on<sp/>the<sp/>number<sp/>of<sp/>bytes<sp/>resting,<sp/>there<sp/>are<sp/>3<sp/>possibilities</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/>*<sp/>from<sp/>the<sp/>RFC.</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(len)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>(1)<sp/>The<sp/>final<sp/>quantum<sp/>of<sp/>encoding<sp/>input<sp/>is<sp/>an<sp/>integral<sp/>multiple<sp/>of</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>24<sp/>bits.<sp/>Here,<sp/>the<sp/>final<sp/>unit<sp/>of<sp/>encoded<sp/>output<sp/>will<sp/>be<sp/>an<sp/>integral</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>multiple<sp/>of<sp/>4<sp/>characters<sp/>with<sp/>no<sp/>&quot;=&quot;<sp/>padding</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(equals<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" kindref="member">_base64_to_bin</ref>(block,<sp/>ptr,<sp/>3)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>block,<sp/>3)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(base64);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>(2)<sp/>The<sp/>final<sp/>quantum<sp/>of<sp/>encoding<sp/>input<sp/>is<sp/>exactly<sp/>8<sp/>bits;<sp/>here,<sp/>the</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>final<sp/>unit<sp/>of<sp/>encoded<sp/>output<sp/>will<sp/>be<sp/>two<sp/>characters<sp/>followed<sp/>by</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>two<sp/>&quot;=&quot;<sp/>padding<sp/>characters.</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(equals<sp/>!=<sp/>2){</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" kindref="member">_base64_to_bin</ref>(block,<sp/>ptr,<sp/>1)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>block,<sp/>1)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(base64);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>final<sp/>quantum<sp/>of<sp/>encoding<sp/>input<sp/>is<sp/>exactly<sp/>16<sp/>bits.<sp/>Here,<sp/>the<sp/>final</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>unit<sp/>of<sp/>encoded<sp/>output<sp/>will<sp/>be<sp/>three<sp/>characters<sp/>followed<sp/>by<sp/>one<sp/>&quot;=&quot;</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>padding<sp/>character.</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(equals<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" kindref="member">_base64_to_bin</ref>(block,<sp/>ptr,<sp/>2)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc" kindref="member">ssh_buffer_add_data</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,block,2)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(base64);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>4,3,2<sp/>are<sp/>the<sp/>only<sp/>padding<sp/>size<sp/>allowed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" kindref="member">error</ref>:</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(base64);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><ref refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" kindref="member">SSH_BUFFER_FREE</ref>(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="base64_8c_1a090189f6b662ec13a6b2b05d9d40834f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BLOCK(letter,<sp/>n)<sp/>do<sp/>{ptr<sp/>=<sp/>strchr((const<sp/>char<sp/>*)alphabet,<sp/>source[n]);<sp/>\</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(!ptr)<sp/>return<sp/>-1;<sp/>\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>ptr<sp/>-<sp/>(const<sp/>char<sp/>*)alphabet;<sp/>\</highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET_##letter(*block,<sp/>i);<sp/>\</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Returns<sp/>0<sp/>if<sp/>ok,<sp/>-1<sp/>if<sp/>not<sp/>(ie<sp/>invalid<sp/>char<sp/>into<sp/>the<sp/>stuff)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="base64_8c_1a866ac672f0c078ef5543ed5d307d42ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8c_1a866ac672f0c078ef5543ed5d307d42ce" kindref="member">to_block4</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>*block,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*source,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>*block<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num<sp/>&lt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><ref refid="base64_8c_1a090189f6b662ec13a6b2b05d9d40834f" kindref="member">BLOCK</ref>(A,<sp/>0);<sp/></highlight><highlight class="comment">/*<sp/>6<sp/>bit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><ref refid="base64_8c_1a090189f6b662ec13a6b2b05d9d40834f" kindref="member">BLOCK</ref>(B,1);<sp/></highlight><highlight class="comment">/*<sp/>12<sp/>bit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num<sp/>&lt;<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><ref refid="base64_8c_1a090189f6b662ec13a6b2b05d9d40834f" kindref="member">BLOCK</ref>(C,<sp/>2);<sp/></highlight><highlight class="comment">/*<sp/>18<sp/>bit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num<sp/>&lt;<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><ref refid="base64_8c_1a090189f6b662ec13a6b2b05d9d40834f" kindref="member">BLOCK</ref>(D,<sp/>3);<sp/></highlight><highlight class="comment">/*<sp/>24<sp/>bit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>num<sp/>=<sp/>numbers<sp/>of<sp/>final<sp/>bytes<sp/>to<sp/>be<sp/>decoded<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8c_1a47e7319237c812bcf3b99e0458df338e" kindref="member">_base64_to_bin</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>dest[3],<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*source,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>block;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base64_8c_1a866ac672f0c078ef5543ed5d307d42ce" kindref="member">to_block4</ref>(&amp;block,<sp/>source,<sp/>num)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>dest[0]<sp/>=<sp/><ref refid="base64_8c_1ac9a322d6f42fa07cc5cd316d04b58ff5" kindref="member">GET_A</ref>(block);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>dest[1]<sp/>=<sp/><ref refid="base64_8c_1a4e7164c49bc7dac9904775c8c8f33359" kindref="member">GET_B</ref>(block);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>dest[2]<sp/>=<sp/><ref refid="base64_8c_1a335f25e89586046492fa50fd8cf952b7" kindref="member">GET_C</ref>(block);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Count<sp/>the<sp/>number<sp/>of<sp/>&quot;=&quot;<sp/>signs<sp/>and<sp/>replace<sp/>them<sp/>by<sp/>zeroes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="base64_8c_1a6b6967500bdc814853e12c166812ef44" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8c_1a6b6967500bdc814853e12c166812ef44" kindref="member">get_equals</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ptr<sp/>=<sp/>string;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((ptr=strchr(ptr,</highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">))<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>num++;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>*ptr<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr++;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>num;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>thanks<sp/>sysk<sp/>for<sp/>debugging<sp/>my<sp/>mess<sp/>:)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="base64_8c_1a8bc72065f5d699a699b64a478342355c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="base64_8c_1a8bc72065f5d699a699b64a478342355c" kindref="member">_bin_to_base64</ref>(uint8_t<sp/>*dest,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>source[3],</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITS(n)<sp/>((1<sp/>&lt;&lt;<sp/>(n))<sp/>-<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(len)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[0]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[(source[0]<sp/>&gt;&gt;<sp/>2)];</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[1]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[((source[0]<sp/>&amp;<sp/><ref refid="base64_8c_1a5967693540f086cfa357f68978bf0be7" kindref="member">BITS</ref>(2))<sp/>&lt;&lt;<sp/>4)];</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[2]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[3]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[0]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[source[0]<sp/>&gt;&gt;<sp/>2];</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[1]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[(source[1]<sp/>&gt;&gt;<sp/>4)<sp/>|<sp/>((source[0]<sp/>&amp;<sp/><ref refid="base64_8c_1a5967693540f086cfa357f68978bf0be7" kindref="member">BITS</ref>(2))<sp/>&lt;&lt;<sp/>4)];</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[2]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[(source[1]<sp/>&amp;<sp/><ref refid="base64_8c_1a5967693540f086cfa357f68978bf0be7" kindref="member">BITS</ref>(4))<sp/>&lt;&lt;<sp/>2];</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[3]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[0]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[(source[0]<sp/>&gt;&gt;<sp/>2)];</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[1]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[(source[1]<sp/>&gt;&gt;<sp/>4)<sp/>|<sp/>((source[0]<sp/>&amp;<sp/><ref refid="base64_8c_1a5967693540f086cfa357f68978bf0be7" kindref="member">BITS</ref>(2))<sp/>&lt;&lt;<sp/>4)];</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[2]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[(source[2]<sp/>&gt;&gt;<sp/>6)<sp/>|<sp/>(source[1]<sp/>&amp;<sp/><ref refid="base64_8c_1a5967693540f086cfa357f68978bf0be7" kindref="member">BITS</ref>(4))<sp/>&lt;&lt;<sp/>2];</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest[3]<sp/>=<sp/><ref refid="base64_8c_1a508cc75bf53e64d393054677c462a316" kindref="member">alphabet</ref>[source[2]<sp/>&amp;<sp/><ref refid="base64_8c_1a5967693540f086cfa357f68978bf0be7" kindref="member">BITS</ref>(6)];</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BITS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="priv_8h_1abc94b583621acc2a3bd39b27c819768e" refkind="member"><highlight class="normal">uint8_t<sp/>*<ref refid="base64_8c_1abc94b583621acc2a3bd39b27c819768e" kindref="member">bin_to_base64</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*source,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*base64<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*ptr<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>flen<sp/>=<sp/>len<sp/>+<sp/>(3<sp/>-<sp/>(len<sp/>%<sp/>3));<sp/></highlight><highlight class="comment">/*<sp/>round<sp/>to<sp/>upper<sp/>3<sp/>multiple<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>flen<sp/>=<sp/>(4<sp/>*<sp/>flen)<sp/>/<sp/>3<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>base64<sp/>=<sp/>malloc(flen);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(base64<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/>base64;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(len<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="base64_8c_1a8bc72065f5d699a699b64a478342355c" kindref="member">_bin_to_base64</ref>(ptr,<sp/>source,<sp/>len<sp/>&gt;<sp/>3<sp/>?<sp/>3<sp/>:<sp/>len);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>+=<sp/>4;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source<sp/>+=<sp/>3;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>-=<sp/>3;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>ptr[0]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>base64;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/base64.c"/>
+  </compounddef>
+</doxygen>

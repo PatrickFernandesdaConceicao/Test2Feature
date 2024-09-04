@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="noop_8c" kind="file" language="C++">
+    <compoundname>noop.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="threads_8h" local="yes">libssh/threads.h</includes>
+    <includes refid="callbacks_8h" local="no">libssh/callbacks.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>sys/select.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="14">
+        <label>stdint.h</label>
+      </node>
+      <node id="15">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>netdb.h</label>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="3">
+        <label>libssh/threads.h</label>
+        <link refid="threads_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/threads/noop.c</label>
+        <link refid="noop_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="noop_8c_1a3381df5358757a32636727fb0081976c" prot="public" static="yes" mutable="no">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref></type>
+        <definition>struct ssh_threads_callbacks_struct ssh_threads_noop</definition>
+        <argsstring></argsstring>
+        <name>ssh_threads_noop</name>
+        <initializer>=
+{
+    .type = &quot;threads_noop&quot;,
+    .mutex_init = <ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,
+    .mutex_destroy = <ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,
+    .mutex_lock = <ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,
+    .mutex_unlock = <ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,
+    .thread_id = <ref refid="noop_8c_1ab410830e69e7f4c910547071ea338037" kindref="member">threads_id_noop</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/noop.c" line="33" column="22" bodyfile="src/threads/noop.c" bodystart="38" bodyend="-1"/>
+        <referencedby refid="callbacks_8h_1a25ff5f57d28805c38a3b3c2a0195294f" compoundref="noop_8c" startline="65" endline="68">ssh_threads_get_default</referencedby>
+        <referencedby refid="callbacks_8h_1a9e689ea2a459d119c9ebab4c7e286eda" compoundref="noop_8c" startline="71" endline="74">ssh_threads_get_noop</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int threads_noop</definition>
+        <argsstring>(void **lock)</argsstring>
+        <name>threads_noop</name>
+        <param>
+          <type>void **</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/noop.c" line="26" column="12" bodyfile="src/threads/noop.c" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="noop_8c_1ab410830e69e7f4c910547071ea338037" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>static unsigned long threads_id_noop</definition>
+        <argsstring>(void)</argsstring>
+        <name>threads_id_noop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/noop.c" line="33" column="22" bodyfile="src/threads/noop.c" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="noop_8c_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_mutex_lock</definition>
+        <argsstring>(SSH_MUTEX *mutex)</argsstring>
+        <name>ssh_mutex_lock</name>
+        <param>
+          <type><ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/noop.c" line="51" column="6" bodyfile="src/threads/noop.c" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="noop_8c_1a0bddf62c454d664389e5b672eb94270d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_mutex_unlock</definition>
+        <argsstring>(SSH_MUTEX *mutex)</argsstring>
+        <name>ssh_mutex_unlock</name>
+        <param>
+          <type><ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/noop.c" line="58" column="6" bodyfile="src/threads/noop.c" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="noop_8c_1ae82446dfb825a472a4fbff79d305b213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+        <definition>struct ssh_threads_callbacks_struct* ssh_threads_get_default</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_get_default</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns a pointer to the appropriate callbacks structure for the environment, to be used with ssh_threads_set_callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to a <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> to be used with ssh_threads_set_callbacks.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" kindref="member">ssh_threads_set_callbacks</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/noop.c" line="65" column="35" bodyfile="src/threads/noop.c" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="noop_8c_1aed3006dbae78414fa3b82c8d9af69a88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref> *</type>
+        <definition>struct ssh_threads_callbacks_struct* ssh_threads_get_noop</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_threads_get_noop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the noop threads callbacks structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This can be used with ssh_threads_set_callbacks. These callbacks do nothing and are being used by default.</para>
+<para><simplesect kind="return"><para>Always returns a valid pointer to the noop callbacks structure.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__threads_1gaf473af3fbae6f1bb0e249fd1d079ff68" kindref="member">ssh_threads_set_callbacks</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/threads/noop.c" line="71" column="35" bodyfile="src/threads/noop.c" bodystart="71" bodyend="74"/>
+        <references refid="noop_8c_1a3381df5358757a32636727fb0081976c" compoundref="noop_8c" startline="38">ssh_threads_noop</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2018<sp/>by<sp/>Anderson<sp/>Toshiyuki<sp/>Sasaki</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threads_8h" kindref="compound">libssh/threads.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**lock)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)lock;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="noop_8c_1a3381df5358757a32636727fb0081976c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="noop_8c_1ab410830e69e7f4c910547071ea338037" kindref="member">threads_id_noop</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/><ref refid="noop_8c_1a3381df5358757a32636727fb0081976c" kindref="member">ssh_threads_noop</ref><sp/>=</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structssh__threads__callbacks__struct_1a2def4dea77cca2a4e12db84c42590a0c" kindref="member">type</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;threads_noop&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_init<sp/>=<sp/><ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_destroy<sp/>=<sp/><ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_lock<sp/>=<sp/><ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>.mutex_unlock<sp/>=<sp/><ref refid="noop_8c_1a8644d8daa52d4911cfcce76bbdeba4f6" kindref="member">threads_noop</ref>,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>.thread_id<sp/>=<sp/><ref refid="noop_8c_1ab410830e69e7f4c910547071ea338037" kindref="member">threads_id_noop</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Threads<sp/>interface<sp/>implementation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!(HAVE_PTHREAD)<sp/>&amp;&amp;<sp/>!(defined<sp/>_WIN32<sp/>||<sp/>defined<sp/>_WIN64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="threads_8h_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="noop_8c_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" kindref="member">ssh_mutex_lock</ref>(<ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref><sp/>*mutex)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>mutex;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="threads_8h_1a0bddf62c454d664389e5b672eb94270d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="noop_8c_1a0bddf62c454d664389e5b672eb94270d" kindref="member">ssh_mutex_unlock</ref>(<ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref><sp/>*mutex)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)<sp/>mutex;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="callbacks_8h_1a25ff5f57d28805c38a3b3c2a0195294f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/>*<ref refid="noop_8c_1ae82446dfb825a472a4fbff79d305b213" kindref="member">ssh_threads_get_default</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="noop_8c_1a3381df5358757a32636727fb0081976c" kindref="member">ssh_threads_noop</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="callbacks_8h_1a9e689ea2a459d119c9ebab4c7e286eda" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__threads__callbacks__struct" kindref="compound">ssh_threads_callbacks_struct</ref><sp/>*<ref refid="noop_8c_1aed3006dbae78414fa3b82c8d9af69a88" kindref="member">ssh_threads_get_noop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="noop_8c_1a3381df5358757a32636727fb0081976c" kindref="member">ssh_threads_noop</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/threads/noop.c"/>
+  </compounddef>
+</doxygen>

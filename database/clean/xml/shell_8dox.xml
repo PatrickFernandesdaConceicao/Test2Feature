@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="shell_8dox" kind="file" language="C++">
+    <compoundname>shell.dox</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kbhit()</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>tv<sp/>=<sp/>{<sp/>0L,<sp/>0L<sp/>};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>fd_set<sp/>fds;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>FD_ZERO(&amp;fds);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>FD_SET(0,<sp/>&amp;fds);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>select(1,<sp/>&amp;fds,<sp/>NULL,<sp/>NULL,<sp/>&amp;tv);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>very<sp/>simple<sp/>terminal<sp/>emulator:</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/><sp/><sp/>-<sp/>print<sp/>data<sp/>received<sp/>from<sp/>the<sp/>remote<sp/>computer</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/><sp/><sp/>-<sp/>send<sp/>keyboard<sp/>input<sp/>to<sp/>the<sp/>remote<sp/>computer</highlight></codeline>
+<codeline lineno="172"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interactive_shell_session(<ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Session<sp/>and<sp/>terminal<sp/>initialization<sp/>skipped<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>...</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>[256];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbytes,<sp/>nwritten;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__channel_1gaaafcda943c96ddb91e5c28c0bdee7045" kindref="member">ssh_channel_is_open</ref>(channel)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!<ref refid="group__libssh__channel_1gab535264029443d77214c0615a0788b0a" kindref="member">ssh_channel_is_eof</ref>(channel))</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>nbytes<sp/>=<sp/><ref refid="group__libssh__channel_1gaaca5a3fbe9839c3ffb37b746afc35f4c" kindref="member">ssh_channel_read_nonblocking</ref>(channel,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>),<sp/>0);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&lt;<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nwritten<sp/>=<sp/>write(1,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>nbytes);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nwritten<sp/>!=<sp/>nbytes)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!kbhit())</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>usleep(50000L);<sp/></highlight><highlight class="comment">//<sp/>0.05<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>nbytes<sp/>=<sp/>read(0,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>));</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&lt;<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nwritten<sp/>=<sp/><ref refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" kindref="member">ssh_channel_write</ref>(channel,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>nbytes);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nwritten<sp/>!=<sp/>nbytes)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal">code</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">Of<sp/>course,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>is<sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref><sp/>poor<sp/><ref refid="ssh__client_8c_1a029e0d76938d65623721b901853405a4" kindref="member">terminal</ref><sp/>emulator,<sp/>since<sp/>the<sp/><ref refid="samplesshd-kbdint_8c_1aed50069385b2de326e5bbed79b19affd" kindref="member">echo</ref><sp/>from<sp/>the<sp/>keys</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">pressed<sp/>should<sp/>not<sp/>be<sp/>done<sp/>locally,<sp/>but<sp/>should<sp/>be<sp/>done<sp/>by<sp/>the<sp/>remote<sp/>side.</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">Also,<sp/><ref refid="ssh__client_8c_1a14871705f45ccdc5bb9f4549efd8e119" kindref="member">user</ref></highlight><highlight class="stringliteral">&apos;s<sp/>input<sp/>should<sp/>not<sp/>be<sp/>sent<sp/>once<sp/>&quot;Enter&quot;<sp/>key<sp/>is<sp/>pressed,<sp/>but</highlight></codeline>
+<codeline lineno="213"><highlight class="stringliteral">immediately<sp/>after<sp/>each<sp/>key<sp/>is<sp/>pressed.<sp/>This<sp/>can<sp/>be<sp/>accomplished</highlight></codeline>
+<codeline lineno="214"><highlight class="stringliteral">by<sp/>setting<sp/>the<sp/>local<sp/>terminal<sp/>to<sp/>&quot;raw&quot;<sp/>mode<sp/>with<sp/>the<sp/>cfmakeraw(3)<sp/>function.</highlight></codeline>
+<codeline lineno="215"><highlight class="stringliteral">cfmakeraw()<sp/>is<sp/>a<sp/>standard<sp/>function<sp/>under<sp/>Linux,<sp/>on<sp/>other<sp/>systems<sp/>you<sp/>can</highlight></codeline>
+<codeline lineno="216"><highlight class="stringliteral">recode<sp/>it<sp/>with:</highlight></codeline>
+<codeline lineno="217"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="218"><highlight class="stringliteral">@code</highlight></codeline>
+<codeline lineno="219"><highlight class="stringliteral">static<sp/>void<sp/>cfmakeraw(struct<sp/>termios<sp/>*termios_p)</highlight></codeline>
+<codeline lineno="220"><highlight class="stringliteral">{</highlight></codeline>
+<codeline lineno="221"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>termios_p-&gt;c_iflag<sp/>&amp;=<sp/>~(IGNBRK|BRKINT|PARMRK|ISTRIP|INLCR|IGNCR|ICRNL|IXON);</highlight></codeline>
+<codeline lineno="222"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>termios_p-&gt;c_oflag<sp/>&amp;=<sp/>~OPOST;</highlight></codeline>
+<codeline lineno="223"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>termios_p-&gt;c_lflag<sp/>&amp;=<sp/>~(ECHO|ECHONL|ICANON|ISIG|IEXTEN);</highlight></codeline>
+<codeline lineno="224"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>termios_p-&gt;c_cflag<sp/>&amp;=<sp/>~(CSIZE|PARENB);</highlight></codeline>
+<codeline lineno="225"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>termios_p-&gt;c_cflag<sp/>|=<sp/>CS8;</highlight></codeline>
+<codeline lineno="226"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="227"><highlight class="stringliteral">@endcode</highlight></codeline>
+<codeline lineno="228"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="229"><highlight class="stringliteral">If<sp/>you<sp/>are<sp/>not<sp/>using<sp/>a<sp/>local<sp/>terminal,<sp/>but<sp/>some<sp/>kind<sp/>of<sp/>graphical</highlight></codeline>
+<codeline lineno="230"><highlight class="stringliteral">environment,<sp/>the<sp/>solution<sp/>to<sp/>this<sp/>kind<sp/>of<sp/>&quot;echo&quot;<sp/>problems<sp/>will<sp/>be<sp/>different.</highlight></codeline>
+<codeline lineno="231"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="232"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="233"><highlight class="stringliteral">@subsection<sp/>select_loop<sp/>A<sp/>more<sp/>elaborate<sp/>way<sp/>to<sp/>get<sp/>the<sp/>remote<sp/>data</highlight></codeline>
+<codeline lineno="234"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="235"><highlight class="stringliteral">***<sp/>Warning:<sp/>ssh_select()<sp/>and<sp/>ssh_channel_select()<sp/>are<sp/>not<sp/>relevant<sp/>anymore,</highlight></codeline>
+<codeline lineno="236"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>since<sp/>libssh<sp/>is<sp/>about<sp/>to<sp/>provide<sp/>an<sp/>easier<sp/>system<sp/>for<sp/>asynchronous</highlight></codeline>
+<codeline lineno="237"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>communications.<sp/>This<sp/>subsection<sp/>should<sp/>be<sp/>removed<sp/>then.<sp/>***</highlight></codeline>
+<codeline lineno="238"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="239"><highlight class="stringliteral">ssh_channel_read()<sp/>and<sp/>ssh_channel_read_nonblocking()<sp/>functions<sp/>are<sp/>simple,</highlight></codeline>
+<codeline lineno="240"><highlight class="stringliteral">but<sp/>they<sp/>are<sp/>not<sp/>adapted<sp/>when<sp/>you<sp/>expect<sp/>data<sp/>from<sp/>more<sp/>than<sp/>one<sp/>SSH<sp/>channel,</highlight></codeline>
+<codeline lineno="241"><highlight class="stringliteral">or<sp/>from<sp/>other<sp/>file<sp/>descriptors.<sp/>Last<sp/>example<sp/>showed<sp/>how<sp/>getting<sp/>data<sp/>from</highlight></codeline>
+<codeline lineno="242"><highlight class="stringliteral">the<sp/>standard<sp/>input<sp/>(the<sp/>keyboard)<sp/>at<sp/>the<sp/>same<sp/>time<sp/>as<sp/>data<sp/>from<sp/>the<sp/>SSH</highlight></codeline>
+<codeline lineno="243"><highlight class="stringliteral">channel<sp/>was<sp/>complicated.<sp/>The<sp/>functions<sp/>ssh_select()<sp/>and<sp/>ssh_channel_select()</highlight></codeline>
+<codeline lineno="244"><highlight class="stringliteral">provide<sp/>a<sp/>more<sp/>elegant<sp/>way<sp/>to<sp/>wait<sp/>for<sp/>data<sp/>coming<sp/>from<sp/>many<sp/>sources.</highlight></codeline>
+<codeline lineno="245"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="246"><highlight class="stringliteral">The<sp/>functions<sp/>ssh_select()<sp/>and<sp/>ssh_channel_select()<sp/>remind<sp/>of<sp/>the<sp/>standard</highlight></codeline>
+<codeline lineno="247"><highlight class="stringliteral">UNIX<sp/>select(2)<sp/>function.<sp/>The<sp/>idea<sp/>is<sp/>to<sp/>wait<sp/>for<sp/>&quot;something&quot;<sp/>to<sp/>happen:</highlight></codeline>
+<codeline lineno="248"><highlight class="stringliteral">incoming<sp/>data<sp/>to<sp/>be<sp/>read,<sp/>outgoing<sp/>data<sp/>to<sp/>block,<sp/>or<sp/>an<sp/>exception<sp/>to</highlight></codeline>
+<codeline lineno="249"><highlight class="stringliteral">occur.<sp/>Both<sp/>these<sp/>functions<sp/>do<sp/>a<sp/>&quot;passive<sp/>wait&quot;,<sp/>i.e.<sp/>you<sp/>can<sp/>safely<sp/>use</highlight></codeline>
+<codeline lineno="250"><highlight class="stringliteral">them<sp/>repeatedly<sp/>in<sp/>a<sp/>loop,<sp/>it<sp/>will<sp/>not<sp/>consume<sp/>exaggerate<sp/>processor<sp/>time</highlight></codeline>
+<codeline lineno="251"><highlight class="stringliteral">and<sp/>make<sp/>your<sp/>computer<sp/>unresponsive.<sp/>It<sp/>is<sp/>quite<sp/>common<sp/>to<sp/>use<sp/>these</highlight></codeline>
+<codeline lineno="252"><highlight class="stringliteral">functions<sp/>in<sp/>your<sp/>application&apos;</highlight><highlight class="normal"><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref><sp/><ref refid="exec_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref><sp/>loop.</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal">The<sp/>difference<sp/>between<sp/><ref refid="group__libssh__session_1ga86cbf041bced56d18a2a5248c46cecb4" kindref="member">ssh_select</ref>()<sp/>and<sp/><ref refid="group__libssh__channel_1ga1026cfa48ecfc0b4898d4ea443acfc5d" kindref="member">ssh_channel_select</ref>()<sp/>is<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a26896e674acdc47650fdef7a65b57886" kindref="member">that</ref></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><ref refid="group__libssh__channel_1ga1026cfa48ecfc0b4898d4ea443acfc5d" kindref="member">ssh_channel_select</ref>()<sp/>is<sp/>simpler,<sp/>but<sp/>allows<sp/>you<sp/>only<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/>watch<sp/>SSH<sp/>channels.</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><ref refid="group__libssh__session_1ga86cbf041bced56d18a2a5248c46cecb4" kindref="member">ssh_select</ref>()<sp/>is<sp/>more<sp/>complete<sp/>and<sp/>enables<sp/>watching<sp/>regular<sp/>file<sp/>descriptors</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">as<sp/>well,<sp/>in<sp/>the<sp/>same<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a7a7f57a53d58d3bb7fcdec4c55efa962" kindref="member">function</ref><sp/>call.</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">Below<sp/>is<sp/>an<sp/>example<sp/>of<sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a7a7f57a53d58d3bb7fcdec4c55efa962" kindref="member">function</ref><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a26896e674acdc47650fdef7a65b57886" kindref="member">that</ref><sp/>waits<sp/>both<sp/>for<sp/>remote<sp/>SSH<sp/>data<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref><sp/>come,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">as<sp/>well<sp/>as<sp/>standard<sp/>input<sp/>from<sp/>the<sp/>keyboard:</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">@code</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interactive_shell_session(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Session<sp/>and<sp/>terminal<sp/>initialization<sp/>skipped<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>...</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>[256];</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbytes,<sp/>nwritten;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="group__libssh__channel_1gaaafcda943c96ddb91e5c28c0bdee7045" kindref="member">ssh_channel_is_open</ref>(channel)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!<ref refid="group__libssh__channel_1gab535264029443d77214c0615a0788b0a" kindref="member">ssh_channel_is_eof</ref>(channel))</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>timeout;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>in_channels[2],<sp/>out_channels[2];</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>fd_set<sp/>fds;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxfd;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>timeout.tv_sec<sp/>=<sp/>30;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>timeout.tv_usec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>in_channels[0]<sp/>=<sp/>channel;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>in_channels[1]<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>FD_ZERO(&amp;fds);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>FD_SET(0,<sp/>&amp;fds);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>FD_SET(<ref refid="group__libssh__session_1gafe509fcea47714b5cd277d1e35e83276" kindref="member">ssh_get_fd</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>),<sp/>&amp;fds);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>maxfd<sp/>=<sp/><ref refid="group__libssh__session_1gafe509fcea47714b5cd277d1e35e83276" kindref="member">ssh_get_fd</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>)<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga86cbf041bced56d18a2a5248c46cecb4" kindref="member">ssh_select</ref>(in_channels,<sp/>out_channels,<sp/>maxfd,<sp/>&amp;fds,<sp/>&amp;timeout);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(out_channels[0]<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nbytes<sp/>=<sp/><ref refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" kindref="member">ssh_channel_read</ref>(channel,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>),<sp/>0);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&lt;<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nwritten<sp/>=<sp/>write(1,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>nbytes);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nwritten<sp/>!=<sp/>nbytes)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(FD_ISSET(0,<sp/>&amp;fds))</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nbytes<sp/>=<sp/>read(0,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>));</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&lt;<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nwritten<sp/>=<sp/><ref refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" kindref="member">ssh_channel_write</ref>(channel,<sp/><ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/>nbytes);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>!=<sp/>nwritten)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal">code</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal">@subsection<sp/>x11<sp/>Using<sp/>graphical<sp/>applications<sp/>on<sp/>the<sp/>remote<sp/>side</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal">If<sp/>your<sp/>remote<sp/>application<sp/>is<sp/>graphical,<sp/>you<sp/>can<sp/>forward<sp/>the<sp/>X11<sp/>protocol<sp/><ref refid="CMakeLists_8txt_1a76a1d017bd4c4089f326a74356e88edb" kindref="member">to</ref></highlight></codeline>
+<codeline lineno="321"><highlight class="normal">your<sp/>local<sp/>computer.</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal">To<sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a26896e674acdc47650fdef7a65b57886" kindref="member">that</ref>,<sp/>you<sp/>first<sp/>declare<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a26896e674acdc47650fdef7a65b57886" kindref="member">that</ref><sp/>you<sp/>accept<sp/>X11<sp/>connections<sp/>with</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><ref refid="group__libssh__channel_1ga548bd0f77a50b7c8180942544b375866" kindref="member">ssh_channel_accept_x11</ref>().<sp/>Then<sp/>you<sp/>create<sp/>the<sp/><ref refid="sshnetcat_8c_1ad08dcc6e9fab1b29fbaabbc4db908350" kindref="member">forwarding</ref><sp/>tunnel<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal">the<sp/>X11<sp/>protocol<sp/>with<sp/><ref refid="group__libssh__channel_1gadfa34624c28164bd73453cd04aa64c1f" kindref="member">ssh_channel_request_x11</ref>().</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal">The<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a5480bc6794101578b08bf74140eec5f1" kindref="member">following</ref><sp/>code<sp/>performs<sp/>channel<sp/>initialization<sp/>and<sp/><ref refid="ssh__client_8c_1a9aee67bdbbcaaca080f23c622d7d38d9" kindref="member">shell</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref></highlight></codeline>
+<codeline lineno="328"><highlight class="normal">opening,<sp/>and<sp/>handles<sp/><ref refid="namespacegenerate_1a3bb1e673073a90dc0b8d1659852706e3" kindref="member">a</ref><sp/>parallel<sp/>X11<sp/><ref refid="curve25519-sha256_0dlibssh_8org_8txt_1acf23df4cc7761ed915ae88187c7e028c" kindref="member">connection</ref>:</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">@code</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interactive_shell_session(<ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>channel)</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><ref refid="structssh__channel__struct" kindref="compound">ssh_channel</ref><sp/>x11channel;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1ga37c1cec33fe5a2f184768aba52e3a0db" kindref="member">ssh_channel_request_pty</ref>(channel);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1gaf5d55c90f3d98c583df23d21905c1127" kindref="member">ssh_channel_change_pty_size</ref>(channel,<sp/>80,<sp/>24);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1gadfa34624c28164bd73453cd04aa64c1f" kindref="member">ssh_channel_request_x11</ref>(channel,<sp/>0,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__channel_1gaed4c5fb30c9df2b2548421ccf4e81bf1" kindref="member">ssh_channel_request_shell</ref>(channel);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>the<sp/>data<sp/>sent<sp/>by<sp/>the<sp/>remote<sp/>computer<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/>...</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal">code</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal">Don</highlight><highlight class="stringliteral">&apos;t<sp/>forget<sp/>to<sp/>set<sp/>the<sp/>$DISPLAY<sp/>environment<sp/>variable<sp/>on<sp/>the<sp/>remote</highlight></codeline>
+<codeline lineno="354"><highlight class="stringliteral">side,<sp/>or<sp/>the<sp/>remote<sp/>applications<sp/>won&apos;</highlight><highlight class="normal">t<sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>the<sp/>X11<sp/>tunnel:</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal">@code</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">$<sp/>export<sp/>DISPLAY=:0</highlight></codeline>
+<codeline lineno="358"><highlight class="normal">$<sp/>xclock<sp/>&amp;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal">code</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal">*/</highlight></codeline>
+    </programlisting>
+    <location file="doc/shell.dox"/>
+  </compounddef>
+</doxygen>

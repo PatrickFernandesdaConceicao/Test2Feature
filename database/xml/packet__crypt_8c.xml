@@ -1,0 +1,783 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="packet__crypt_8c" kind="file" language="C++">
+    <compoundname>packet_crypt.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">netinet/in.h</includes>
+    <includes local="no">arpa/inet.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="session_8h" local="yes">libssh/session.h</includes>
+    <includes refid="wrapper_8h" local="yes">libssh/wrapper.h</includes>
+    <includes refid="crypto_8h" local="yes">libssh/crypto.h</includes>
+    <includes refid="buffer_8h" local="yes">libssh/buffer.h</includes>
+    <includes refid="bytearray_8h" local="yes">libssh/bytearray.h</includes>
+    <incdepgraph>
+      <node id="22">
+        <label>libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stdbool.h</label>
+      </node>
+      <node id="37">
+        <label>stdarg.h</label>
+      </node>
+      <node id="13">
+        <label>sys/select.h</label>
+      </node>
+      <node id="17">
+        <label>netinet/in.h</label>
+      </node>
+      <node id="18">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="7">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="31">
+        <label>libssh/misc.h</label>
+        <link refid="misc_8h"/>
+      </node>
+      <node id="33">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>libssh/buffer.h</label>
+        <link refid="buffer_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>netdb.h</label>
+      </node>
+      <node id="34">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>libssh/pcap.h</label>
+        <link refid="pcap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>libssh/channels.h</label>
+        <link refid="channels_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>sys/types.h</label>
+      </node>
+      <node id="38">
+        <label>libssh/bytearray.h</label>
+        <link refid="bytearray_8h"/>
+      </node>
+      <node id="25">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>unistd.h</label>
+      </node>
+      <node id="32">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="28">
+        <label>libssh/auth.h</label>
+        <link refid="auth_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="19">
+        <label>libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="packet__crypt_8c_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ssh_packet_decrypt_len</definition>
+        <argsstring>(ssh_session session, uint8_t *destination, uint8_t *source)</argsstring>
+        <name>ssh_packet_decrypt_len</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/packet_crypt.c" line="52" column="10" bodyfile="libssh-mirror/src/packet_crypt.c" bodystart="52" bodyend="84"/>
+        <references refid="structssh__cipher__struct_1a5c04d29dfbff7827a8262519ac39f186" compoundref="crypto_8h" startline="201">ssh_cipher_struct::aead_decrypt_length</references>
+        <references refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" compoundref="crypto_8h" startline="159">ssh_cipher_struct::blocksize</references>
+        <references refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" compoundref="libssh__scp_8c" startline="27">destination</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" compoundref="crypto_8h" startline="161">ssh_cipher_struct::lenfield_blocksize</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" compoundref="session_8h" startline="119">ssh_session_struct::recv_seq</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="packet__crypt_8c_1aa19ecc7edefcb9b60f1ec4da8ace2f44" compoundref="packet__crypt_8c" startline="92" endline="131">ssh_packet_decrypt</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet__crypt_8c_1aa19ecc7edefcb9b60f1ec4da8ace2f44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_decrypt</definition>
+        <argsstring>(ssh_session session, uint8_t *destination, uint8_t *source, size_t start, size_t encrypted_size)</argsstring>
+        <name>ssh_packet_decrypt</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>encrypted_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/packet_crypt.c" line="92" column="5" bodyfile="libssh-mirror/src/packet_crypt.c" bodystart="92" bodyend="131"/>
+        <references refid="structssh__cipher__struct_1adedafb388df68e105e05626aca1bf1fb" compoundref="crypto_8h" startline="203">ssh_cipher_struct::aead_decrypt</references>
+        <references refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" compoundref="crypto_8h" startline="159">ssh_cipher_struct::blocksize</references>
+        <references refid="structssh__cipher__struct_1a6f5ac62ef491ca0caa5950573d344e3d" compoundref="crypto_8h" startline="195">ssh_cipher_struct::decrypt</references>
+        <references refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" compoundref="libssh__scp_8c" startline="27">destination</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="priv_8h_1a9a1a185142f0e05d19758ac524f862e2" compoundref="priv_8h" startline="165">PRIdS</references>
+        <references refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" compoundref="session_8h" startline="119">ssh_session_struct::recv_seq</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="packet_8h_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" compoundref="packet__crypt_8c" startline="52" endline="84">ssh_packet_decrypt_len</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>unsigned char* ssh_packet_encrypt</definition>
+        <argsstring>(ssh_session session, void *data, uint32_t len)</argsstring>
+        <name>ssh_packet_encrypt</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/packet_crypt.c" line="133" column="15" bodyfile="libssh-mirror/src/packet_crypt.c" bodystart="133" bodyend="213"/>
+        <references refid="structssh__cipher__struct_1a68244acc5e2bce0d2a22050dfb28ac85" compoundref="crypto_8h" startline="199">ssh_cipher_struct::aead_encrypt</references>
+        <references refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" compoundref="crypto_8h" startline="159">ssh_cipher_struct::blocksize</references>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structssh__cipher__struct_1aa955d6daf4f41262765ab93b52fc2508" compoundref="crypto_8h" startline="191">ssh_cipher_struct::encrypt</references>
+        <references refid="structssh__crypto__struct_1ae18fa9cdcc44cf926cf3e37af3168c6b" compoundref="crypto_8h" startline="134">ssh_crypto_struct::encryptMAC</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" compoundref="wrapper_8c" startline="76" endline="93">hmac_digest_len</references>
+        <references refid="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299">hmac_final</references>
+        <references refid="wrapper_8h_1ab8aa5c2c9844d6e52ce9b250df8a9041">hmac_init</references>
+        <references refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520">hmac_update</references>
+        <references refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" compoundref="crypto_8h" startline="136">ssh_crypto_struct::hmacbuf</references>
+        <references refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" compoundref="crypto_8h" startline="161">ssh_cipher_struct::lenfield_blocksize</references>
+        <references refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" compoundref="crypto_8h" startline="137">ssh_crypto_struct::out_cipher</references>
+        <references refid="structssh__crypto__struct_1a4e9b63867c4814d84b572adf842f8d2c" compoundref="crypto_8h" startline="138">ssh_crypto_struct::out_hmac</references>
+        <references refid="structssh__crypto__struct_1a67063ccea2e37040ac85e1c15d8afe2a" compoundref="crypto_8h" startline="139">ssh_crypto_struct::out_hmac_etm</references>
+        <references refid="bytearray_8h_1a3bd053f9b249edd7b46f6d7282c5d6e6" compoundref="bytearray_8h" startline="84">PUSH_BE_U32</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__session__struct_1a8b2f7efa9a080ecd872df235c71626bd" compoundref="session_8h" startline="118">ssh_session_struct::send_seq</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" compoundref="wrapper_8h" startline="61">SSH_DIRECTION_OUT</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" compoundref="misc_8c" startline="467" endline="627">ssh_log_hexdump</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+      </memberdef>
+      <memberdef kind="function" id="packet__crypt_8c_1a3fede216a7babc84c07e285f00b696b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int secure_memcmp</definition>
+        <argsstring>(const void *s1, const void *s2, size_t n)</argsstring>
+        <name>secure_memcmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/packet_crypt.c" line="215" column="12" bodyfile="libssh-mirror/src/packet_crypt.c" bodystart="215" bodyend="224"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" compoundref="packet__crypt_8c" startline="239" endline="283">ssh_packet_hmac_verify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_packet_hmac_verify</definition>
+        <argsstring>(ssh_session session, const void *data, size_t len, uint8_t *mac, enum ssh_hmac_e type)</argsstring>
+        <name>ssh_packet_hmac_verify</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>mac</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/packet_crypt.c" line="239" column="5" bodyfile="libssh-mirror/src/packet_crypt.c" bodystart="239" bodyend="283"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structssh__crypto__struct_1a9e1945f0bd57afbf407569d6c523d210" compoundref="crypto_8h" startline="135">ssh_crypto_struct::decryptMAC</references>
+        <references refid="crypto_8h_1a5639c2c28b06d9e4a42053e71d2c116d" compoundref="crypto_8h" startline="53">DIGEST_MAX_LEN</references>
+        <references refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" compoundref="wrapper_8c" startline="76" endline="93">hmac_digest_len</references>
+        <references refid="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299">hmac_final</references>
+        <references refid="wrapper_8h_1ab8aa5c2c9844d6e52ce9b250df8a9041">hmac_init</references>
+        <references refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520">hmac_update</references>
+        <references refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" compoundref="crypto_8h" startline="136">ssh_crypto_struct::hmacbuf</references>
+        <references refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" compoundref="torture__packet_8c" startline="21">mac</references>
+        <references refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" compoundref="session_8h" startline="119">ssh_session_struct::recv_seq</references>
+        <references refid="packet__crypt_8c_1a3fede216a7babc84c07e285f00b696b9" compoundref="packet__crypt_8c" startline="215" endline="224">secure_memcmp</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" compoundref="wrapper_8h" startline="60">SSH_DIRECTION_IN</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa90e7e6569a012ae42c94308a4875369f" compoundref="wrapper_8h" startline="45">SSH_HMAC_AEAD_GCM</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa5f5e2a5804826d406571a97348abc67c" compoundref="wrapper_8h" startline="44">SSH_HMAC_AEAD_POLY1305</references>
+        <references refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" compoundref="misc_8c" startline="467" endline="627">ssh_log_hexdump</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" compoundref="packet_8c" startline="939" endline="977">ssh_packet_get_current_crypto</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>crypt.c<sp/>-<sp/>blowfish-cbc<sp/>code</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2003<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netinet/in.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arpa/inet.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>OPENSSL_CRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/evp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;openssl/hmac.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="session_8h" kindref="compound">libssh/session.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wrapper_8h" kindref="compound">libssh/wrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">libssh/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_8h" kindref="compound">libssh/buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bytearray_8h" kindref="compound">libssh/bytearray.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="packet_8h_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="packet__crypt_8c_1a7b4ae9fb4b6cbfe06fba10dcb3e9ec46" kindref="member">ssh_packet_decrypt_len</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*source)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>decrypted;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto<sp/>=<sp/><ref refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" kindref="member">ssh_packet_get_current_crypto</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" kindref="member">SSH_DIRECTION_IN</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crypto<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crypto-&gt;<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>-&gt;<ref refid="structssh__cipher__struct_1a5c04d29dfbff7827a8262519ac39f186" kindref="member">aead_decrypt_length</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>-&gt;<ref refid="structssh__cipher__struct_1a5c04d29dfbff7827a8262519ac39f186" kindref="member">aead_decrypt_length</ref>(</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>,<sp/>source,<sp/><ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>-&gt;<ref refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" kindref="member">lenfield_blocksize</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" kindref="member">recv_seq</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="packet__crypt_8c_1aa19ecc7edefcb9b60f1ec4da8ace2f44" kindref="member">ssh_packet_decrypt</ref>(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>-&gt;<ref refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" kindref="member">blocksize</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(<ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,<sp/>source,<sp/>8);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(&amp;decrypted,<ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(decrypted));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ntohl(decrypted);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="packet_8h_1aa19ecc7edefcb9b60f1ec4da8ace2f44" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet__crypt_8c_1aa19ecc7edefcb9b60f1ec4da8ace2f44" kindref="member">ssh_packet_decrypt</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*source,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>start,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>encrypted_size)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(encrypted_size<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>crypto<sp/>=<sp/><ref refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" kindref="member">ssh_packet_get_current_crypto</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" kindref="member">SSH_DIRECTION_IN</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crypto<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>cipher<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" kindref="member">in_cipher</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(encrypted_size<sp/>%<sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" kindref="member">blocksize</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Cryptographic<sp/>functions<sp/>must<sp/>be<sp/>used<sp/>on<sp/>multiple<sp/>of<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;blocksize<sp/>(received<sp/>%&quot;</highlight><highlight class="normal"><sp/><ref refid="priv_8h_1a9a1a185142f0e05d19758ac524f862e2" kindref="member">PRIdS</ref><sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>encrypted_size);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cipher-&gt;<ref refid="structssh__cipher__struct_1adedafb388df68e105e05626aca1bf1fb" kindref="member">aead_decrypt</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1adedafb388df68e105e05626aca1bf1fb" kindref="member">aead_decrypt</ref>(cipher,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>encrypted_size,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" kindref="member">recv_seq</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a6f5ac62ef491ca0caa5950573d344e3d" kindref="member">decrypt</ref>(cipher,<sp/>source<sp/>+<sp/>start,<sp/><ref refid="libssh__scp_8c_1ae98a0878a8abb793b89317d904f8c00a" kindref="member">destination</ref>,<sp/>encrypted_size);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" kindref="member">ssh_packet_encrypt</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/>uint32_t<sp/>len)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>HMACCTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*out<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>etm_packet_offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>finallen,<sp/><ref refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" kindref="member">blocksize</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>uint32_t<sp/>seq,<sp/><ref refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" kindref="member">lenfield_blocksize</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>type;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>etm;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>assert(len);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>crypto<sp/>=<sp/><ref refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" kindref="member">ssh_packet_get_current_crypto</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" kindref="member">SSH_DIRECTION_OUT</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crypto<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;<sp/></highlight><highlight class="comment">/*<sp/>nothing<sp/>to<sp/>do<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><ref refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" kindref="member">blocksize</ref><sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" kindref="member">out_cipher</ref>-&gt;<ref refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" kindref="member">blocksize</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><ref refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" kindref="member">lenfield_blocksize</ref><sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" kindref="member">out_cipher</ref>-&gt;<ref refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" kindref="member">lenfield_blocksize</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>type<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a4e9b63867c4814d84b572adf842f8d2c" kindref="member">out_hmac</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>etm<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a67063ccea2e37040ac85e1c15d8afe2a" kindref="member">out_hmac_etm</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(etm)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>etm_packet_offset<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((len<sp/>-<sp/><ref refid="structssh__cipher__struct_1a723c37c3a1953d71c315b84f3d87f2d2" kindref="member">lenfield_blocksize</ref><sp/>-<sp/>etm_packet_offset)<sp/>%<sp/><ref refid="structssh__cipher__struct_1a12cad96d045b242b4555b381fad9d3d9" kindref="member">blocksize</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" kindref="member">ssh_set_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" kindref="member">SSH_FATAL</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Cryptographic<sp/>functions<sp/>must<sp/>be<sp/>set&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>on<sp/>at<sp/>least<sp/>one<sp/>blocksize<sp/>(received<sp/>%d)&quot;</highlight><highlight class="normal">,<sp/>len);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>out<sp/>=<sp/>calloc(1,<sp/>len);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(out<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>seq<sp/>=<sp/>ntohl(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a8b2f7efa9a080ecd872df235c71626bd" kindref="member">send_seq</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>cipher<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" kindref="member">out_cipher</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cipher-&gt;<ref refid="structssh__cipher__struct_1a68244acc5e2bce0d2a22050dfb28ac85" kindref="member">aead_encrypt</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1a68244acc5e2bce0d2a22050dfb28ac85" kindref="member">aead_encrypt</ref>(cipher,<sp/>data,<sp/>out,<sp/>len,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>,<sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1a8b2f7efa9a080ecd872df235c71626bd" kindref="member">send_seq</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(data,<sp/>out,<sp/>len);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1ab8aa5c2c9844d6e52ce9b250df8a9041" kindref="member">hmac_init</ref>(crypto-&gt;<ref refid="structssh__crypto__struct_1ae18fa9cdcc44cf926cf3e37af3168c6b" kindref="member">encryptMAC</ref>,<sp/><ref refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" kindref="member">hmac_digest_len</ref>(type),<sp/>type);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(out);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!etm)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" kindref="member">hmac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;seq,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" kindref="member">hmac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299" kindref="member">hmac_final</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>,<sp/>&amp;finallen);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cipher-&gt;<ref refid="structssh__cipher__struct_1aa955d6daf4f41262765ab93b52fc2508" kindref="member">encrypt</ref>(cipher,<sp/>(uint8_t*)data<sp/>+<sp/>etm_packet_offset,<sp/>out,<sp/>len<sp/>-<sp/>etm_packet_offset);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>memcpy((uint8_t*)data<sp/>+<sp/>etm_packet_offset,<sp/>out,<sp/>len<sp/>-<sp/>etm_packet_offset);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(etm)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bytearray_8h_1a3bd053f9b249edd7b46f6d7282c5d6e6" kindref="member">PUSH_BE_U32</ref>(data,<sp/>0,<sp/>len<sp/>-<sp/>etm_packet_offset);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" kindref="member">hmac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;seq,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t));</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" kindref="member">hmac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299" kindref="member">hmac_final</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>,<sp/>&amp;finallen);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_CRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;mac:<sp/>&quot;</highlight><highlight class="normal">,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(finallen<sp/>!=<sp/><ref refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" kindref="member">hmac_digest_len</ref>(type))<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Final<sp/>len<sp/>is<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>finallen);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;Packet<sp/>hmac&quot;</highlight><highlight class="normal">,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>,<sp/><ref refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" kindref="member">hmac_digest_len</ref>(type));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" kindref="member">explicit_bzero</ref>(out,<sp/>len);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(out);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="packet__crypt_8c_1a3fede216a7babc84c07e285f00b696b9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet__crypt_8c_1a3fede216a7babc84c07e285f00b696b9" kindref="member">secure_memcmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*s1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*s2,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p1<sp/>=<sp/>s1;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p2<sp/>=<sp/>s2;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>n<sp/>&gt;<sp/>0;<sp/>--n)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>|=<sp/>*p1++<sp/>^<sp/>*p2++;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239" refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" kindref="member">ssh_packet_hmac_verify</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>type)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>[<ref refid="crypto_8h_1a5639c2c28b06d9e4a42053e71d2c116d" kindref="member">DIGEST_MAX_LEN</ref>]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/>HMACCTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hmaclen;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>uint32_t<sp/>seq;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>AEAD<sp/>types<sp/>have<sp/>no<sp/>mac<sp/>checking<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa5f5e2a5804826d406571a97348abc67c" kindref="member">SSH_HMAC_AEAD_POLY1305</ref><sp/>||</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/>==<sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa90e7e6569a012ae42c94308a4875369f" kindref="member">SSH_HMAC_AEAD_GCM</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>crypto<sp/>=<sp/><ref refid="packet_8h_1af36b281d11b6c0affbc0faaf1ec52fbe" kindref="member">ssh_packet_get_current_crypto</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" kindref="member">SSH_DIRECTION_IN</ref>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(crypto<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1ab8aa5c2c9844d6e52ce9b250df8a9041" kindref="member">hmac_init</ref>(crypto-&gt;<ref refid="structssh__crypto__struct_1a9e1945f0bd57afbf407569d6c523d210" kindref="member">decryptMAC</ref>,<sp/><ref refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" kindref="member">hmac_digest_len</ref>(type),<sp/>type);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>seq<sp/>=<sp/>htonl(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>-&gt;<ref refid="structssh__session__struct_1ab1034858e469a9666955b3159b2de84f" kindref="member">recv_seq</ref>);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" kindref="member">hmac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>&amp;seq,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t));</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" kindref="member">hmac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299" kindref="member">hmac_final</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/><ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>,<sp/>&amp;hmaclen);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_CRYPTO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;received<sp/>mac&quot;</highlight><highlight class="normal">,<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,hmaclen);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;Computed<sp/>mac&quot;</highlight><highlight class="normal">,<ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>,hmaclen);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" kindref="member">ssh_log_hexdump</ref>(</highlight><highlight class="stringliteral">&quot;seq&quot;</highlight><highlight class="normal">,(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&amp;seq,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(uint32_t));</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="packet__crypt_8c_1a3fede216a7babc84c07e285f00b696b9" kindref="member">secure_memcmp</ref>(<ref refid="torture__packet_8c_1ae4ea3e666683fd4d8b0a822031e742ff" kindref="member">mac</ref>,<sp/><ref refid="structssh__crypto__struct_1a396a560d45c2b4ce2452624f98f8d4a1" kindref="member">hmacbuf</ref>,<sp/>hmaclen)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/packet_crypt.c"/>
+  </compounddef>
+</doxygen>

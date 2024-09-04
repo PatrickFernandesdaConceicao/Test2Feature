@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="chacha_8h" kind="file" language="C++">
+    <compoundname>chacha.h</compoundname>
+    <includedby refid="chachapoly_8c" local="yes">libssh-mirror/src/chachapoly.c</includedby>
+    <includedby refid="chacha_8c" local="yes">libssh-mirror/src/external/chacha.c</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>libssh-mirror/src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/chacha.h</label>
+        <link refid="chacha_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/src/external/chacha.c</label>
+        <link refid="chacha_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structchacha__ctx" prot="public">chacha_ctx</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="chacha_8h_1aa17e2532c9cc03df5c3b75efb47d1085" prot="public" static="no">
+        <name>CHACHA_MINKEYLEN</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha.h" line="16" column="9" bodyfile="libssh-mirror/include/libssh/chacha.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8h_1a4b51a6f23e55f0ce7b78a3f6d8a7f59b" prot="public" static="no">
+        <name>CHACHA_NONCELEN</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha.h" line="17" column="9" bodyfile="libssh-mirror/include/libssh/chacha.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8h_1aa7586eb11735ed3691b91cf76e3a2471" prot="public" static="no">
+        <name>CHACHA_CTRLEN</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha.h" line="18" column="9" bodyfile="libssh-mirror/include/libssh/chacha.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha_8h_1a92e02d52938764735df143d8db21c5e0" prot="public" static="no">
+        <name>CHACHA_STATELEN</name>
+        <initializer>(<ref refid="chacha_8h_1a4b51a6f23e55f0ce7b78a3f6d8a7f59b" kindref="member">CHACHA_NONCELEN</ref>+<ref refid="chacha_8h_1aa7586eb11735ed3691b91cf76e3a2471" kindref="member">CHACHA_CTRLEN</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha.h" line="19" column="9" bodyfile="libssh-mirror/include/libssh/chacha.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chacha_keysetup</definition>
+        <argsstring>(struct chacha_ctx *x, const uint8_t *k, uint32_t kbits)</argsstring>
+        <name>chacha_keysetup</name>
+        <param>
+          <type>struct <ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>kbits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha.h" line="21" column="6" bodyfile="libssh-mirror/src/external/chacha.c" bodystart="53" bodyend="75" declfile="libssh-mirror/include/libssh/chacha.h" declline="21" declcolumn="6"/>
+        <references refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" compoundref="chacha_8h" startline="13">chacha_ctx::input</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="105">k</references>
+        <references refid="chacha_8c_1ade928329eca26a3dbf27fb5784bb9745" compoundref="chacha_8c" startline="49">sigma</references>
+        <references refid="chacha_8c_1a23b55cec94fb1c8a44322b9a6dca18d5" compoundref="chacha_8c" startline="50">tau</references>
+        <references refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" compoundref="chacha_8c" startline="24">U8TO32_LITTLE</references>
+        <referencedby refid="chachapoly_8c_1a67156a1c3c4b4d94dad3acad02380a07" compoundref="chachapoly_8c" startline="41" endline="63">chacha20_set_encrypt_key</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chacha_ivsetup</definition>
+        <argsstring>(struct chacha_ctx *x, const uint8_t *iv, const uint8_t *ctr)</argsstring>
+        <name>chacha_ivsetup</name>
+        <param>
+          <type>struct <ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>ctr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha.h" line="26" column="6" bodyfile="libssh-mirror/src/external/chacha.c" bodystart="78" bodyend="84" declfile="libssh-mirror/include/libssh/chacha.h" declline="26" declcolumn="6"/>
+        <references refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" compoundref="chacha_8h" startline="13">chacha_ctx::input</references>
+        <references refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" compoundref="torture__packet_8c" startline="20">iv</references>
+        <references refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" compoundref="chacha_8c" startline="24">U8TO32_LITTLE</references>
+        <referencedby refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" compoundref="chachapoly_8c" startline="133" endline="180">chacha20_poly1305_aead_decrypt</referencedby>
+        <referencedby refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" compoundref="chachapoly_8c" startline="111" endline="131">chacha20_poly1305_aead_decrypt_length</referencedby>
+        <referencedby refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" compoundref="chachapoly_8c" startline="71" endline="109">chacha20_poly1305_aead_encrypt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void chacha_encrypt_bytes</definition>
+        <argsstring>(struct chacha_ctx *x, const uint8_t *m, uint8_t *c, uint32_t bytes)</argsstring>
+        <name>chacha_encrypt_bytes</name>
+        <param>
+          <type>struct <ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha.h" line="32" column="6" bodyfile="libssh-mirror/src/external/chacha.c" bodystart="87" bodyend="216" declfile="libssh-mirror/include/libssh/chacha.h" declline="32" declcolumn="6"/>
+        <references refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" compoundref="chacha_8h" startline="13">chacha_ctx::input</references>
+        <references refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" compoundref="sc25519_8c" startline="14">m</references>
+        <references refid="chacha_8c_1a8ff5a08d0d15b5357e9b78092e5af465" compoundref="chacha_8c" startline="40">PLUS</references>
+        <references refid="chacha_8c_1ae5e745942efa0b278e4b7cad31a5cde3" compoundref="chacha_8c" startline="41">PLUSONE</references>
+        <references refid="chacha_8c_1aae524f06f43cef9dde57fb1cecc75d4a" compoundref="chacha_8c" startline="43">QUARTERROUND</references>
+        <references refid="chacha_8c_1a96d7fe696281d2bff1ae176c17c435e1" compoundref="chacha_8c" startline="30">U32TO8_LITTLE</references>
+        <references refid="chacha_8c_1ab6814964f967bf82f117707f50749af1" compoundref="chacha_8c" startline="24">U8TO32_LITTLE</references>
+        <references refid="chacha_8c_1afb73ad5e5dd2ba223f10bdc8daf4d208" compoundref="chacha_8c" startline="39">XOR</references>
+        <referencedby refid="chachapoly_8c_1ae75b191280c1f77328d7a72f3721dd88" compoundref="chachapoly_8c" startline="133" endline="180">chacha20_poly1305_aead_decrypt</referencedby>
+        <referencedby refid="chachapoly_8c_1a6ce383820d4be97f89246476f75d2322" compoundref="chachapoly_8c" startline="111" endline="131">chacha20_poly1305_aead_decrypt_length</referencedby>
+        <referencedby refid="chachapoly_8c_1a75c23ff5e01c7aa53d1fc27ec03f930d" compoundref="chachapoly_8c" startline="71" endline="109">chacha20_poly1305_aead_encrypt</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$OpenBSD:<sp/>chacha.h,v<sp/>1.3<sp/>2014/05/02<sp/>03:27:54<sp/>djm<sp/>Exp<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">chacha-merged.c<sp/>version<sp/>20080118</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">D.<sp/>J.<sp/>Bernstein</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">Public<sp/>domain.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CHACHA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structchacha__ctx" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structchacha__ctx_1a1d16e59ca6d48b67c3ef486ac35224a7" kindref="member">input</ref>[16];</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="chacha_8h_1aa17e2532c9cc03df5c3b75efb47d1085" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA_MINKEYLEN<sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="chacha_8h_1a4b51a6f23e55f0ce7b78a3f6d8a7f59b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA_NONCELEN<sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="chacha_8h_1aa7586eb11735ed3691b91cf76e3a2471" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA_CTRLEN<sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="chacha_8h_1a92e02d52938764735df143d8db21c5e0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA_STATELEN<sp/><sp/><sp/>(CHACHA_NONCELEN+CHACHA_CTRLEN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="chacha_8h_1a801923213f8e866ccec6c39ef15d50eb" kindref="member">chacha_keysetup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/>*x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a4c5b7e7f9974ccd012409eb6e21dc655" kindref="member">k</ref>,<sp/>uint32_t<sp/>kbits)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_GCC_BOUNDED_ATTRIBUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>__attribute__((__bounded__(__minbytes__,<sp/>2,<sp/><ref refid="chacha_8h_1aa17e2532c9cc03df5c3b75efb47d1085" kindref="member">CHACHA_MINKEYLEN</ref>)))</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="chacha_8h_1a8d61657faec5cc871229a1d3cf3e209a" kindref="member">chacha_ivsetup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/>*x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="torture__packet_8c_1ab8dc41e9c81185c146b1c99da4c5deaa" kindref="member">iv</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*ctr)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_GCC_BOUNDED_ATTRIBUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>__attribute__((__bounded__(__minbytes__,<sp/>2,<sp/><ref refid="chacha_8h_1a4b51a6f23e55f0ce7b78a3f6d8a7f59b" kindref="member">CHACHA_NONCELEN</ref>)))</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>__attribute__((__bounded__(__minbytes__,<sp/>3,<sp/><ref refid="chacha_8h_1aa7586eb11735ed3691b91cf76e3a2471" kindref="member">CHACHA_CTRLEN</ref>)))</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="chacha_8h_1a632518c6f3981afe52bf1b902e731a88" kindref="member">chacha_encrypt_bytes</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structchacha__ctx" kindref="compound">chacha_ctx</ref><sp/>*x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*c,<sp/>uint32_t<sp/>bytes)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_GCC_BOUNDED_ATTRIBUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>__attribute__((__bounded__(__buffer__,<sp/>2,<sp/>4)))</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>__attribute__((__bounded__(__buffer__,<sp/>3,<sp/>4)))</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>CHACHA_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/chacha.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="kdf_8c" kind="file" language="C++">
+    <compoundname>kdf.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="crypto_8h" local="yes">libssh/crypto.h</includes>
+    <includes refid="buffer_8h" local="yes">libssh/buffer.h</includes>
+    <includes refid="session_8h" local="yes">libssh/session.h</includes>
+    <includes refid="misc_8h" local="yes">libssh/misc.h</includes>
+    <includes refid="dh_8h" local="yes">libssh/dh.h</includes>
+    <includes refid="ssh2_8h" local="yes">libssh/ssh2.h</includes>
+    <includes refid="pki_8h" local="yes">libssh/pki.h</includes>
+    <includes refid="bignum_8h" local="yes">libssh/bignum.h</includes>
+    <incdepgraph>
+      <node id="30">
+        <label>libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>stdbool.h</label>
+      </node>
+      <node id="28">
+        <label>stdarg.h</label>
+      </node>
+      <node id="12">
+        <label>sys/select.h</label>
+      </node>
+      <node id="37">
+        <label>libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="39">
+        <label>libssh/bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>libssh/misc.h</label>
+        <link refid="misc_8h"/>
+      </node>
+      <node id="23">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>libssh/buffer.h</label>
+        <link refid="buffer_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>netdb.h</label>
+      </node>
+      <node id="16">
+        <label>limits.h</label>
+      </node>
+      <node id="24">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>libssh/pcap.h</label>
+        <link refid="pcap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>libssh/channels.h</label>
+        <link refid="channels_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sys/types.h</label>
+      </node>
+      <node id="21">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="17">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/kdf.c</label>
+        <link refid="kdf_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>libssh/ed25519.h</label>
+        <link refid="ed25519_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="36">
+        <label>libssh/ssh2.h</label>
+        <link refid="ssh2_8h"/>
+      </node>
+      <node id="32">
+        <label>libssh/auth.h</label>
+        <link refid="auth_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="29">
+        <label>libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structssh__mac__ctx__struct" prot="public">ssh_mac_ctx_struct</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="wrapper_8h_1a756959168f0c553560ddd06d36fca1a7" kindref="member">ssh_mac_ctx</ref></type>
+        <definition>static ssh_mac_ctx ssh_mac_ctx_init</definition>
+        <argsstring>(enum ssh_kdf_digest type)</argsstring>
+        <name>ssh_mac_ctx_init</name>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0" kindref="member">ssh_kdf_digest</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/kdf.c" line="53" column="20" bodyfile="libssh-mirror/src/kdf.c" bodystart="53" bodyend="78"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="wrapper_8h_1aaa356855efc0e302d70d5c6d5a0afdb2">sha1_init</references>
+        <references refid="wrapper_8h_1a50c68215312562fbbaf194bb850a08da">sha256_init</references>
+        <references refid="wrapper_8h_1af92a362de37b25df0c92b3d2d80b6b64">sha384_init</references>
+        <references refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c">sha512_init</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" compoundref="wrapper_8h" startline="33">SSH_KDF_SHA1</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" compoundref="wrapper_8h" startline="34">SSH_KDF_SHA256</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" compoundref="wrapper_8h" startline="35">SSH_KDF_SHA384</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" compoundref="wrapper_8h" startline="36">SSH_KDF_SHA512</references>
+      </memberdef>
+      <memberdef kind="function" id="kdf_8c_1a02edeec5733a76eed4526e54ef649559" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssh_mac_update</definition>
+        <argsstring>(ssh_mac_ctx ctx, const void *data, size_t len)</argsstring>
+        <name>ssh_mac_update</name>
+        <param>
+          <type><ref refid="wrapper_8h_1a756959168f0c553560ddd06d36fca1a7" kindref="member">ssh_mac_ctx</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/kdf.c" line="80" column="13" bodyfile="libssh-mirror/src/kdf.c" bodystart="80" bodyend="96"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="wrapper_8h_1a9122cd0a3877f98f203e37f2a8f24b06">sha1_update</references>
+        <references refid="wrapper_8h_1a5a746a5d9606298ed5adc22b425427dd">sha256_update</references>
+        <references refid="wrapper_8h_1a8b068dd66d5047a305748e38618f6cd4">sha384_update</references>
+        <references refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1">sha512_update</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" compoundref="wrapper_8h" startline="33">SSH_KDF_SHA1</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" compoundref="wrapper_8h" startline="34">SSH_KDF_SHA256</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" compoundref="wrapper_8h" startline="35">SSH_KDF_SHA384</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" compoundref="wrapper_8h" startline="36">SSH_KDF_SHA512</references>
+      </memberdef>
+      <memberdef kind="function" id="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssh_mac_final</definition>
+        <argsstring>(unsigned char *md, ssh_mac_ctx ctx)</argsstring>
+        <name>ssh_mac_final</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type><ref refid="wrapper_8h_1a756959168f0c553560ddd06d36fca1a7" kindref="member">ssh_mac_ctx</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/kdf.c" line="98" column="13" bodyfile="libssh-mirror/src/kdf.c" bodystart="98" bodyend="115"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="wrapper_8h_1a12807e522a1bc08649a75dedc52e3c8e">sha1_final</references>
+        <references refid="wrapper_8h_1abb61e25e539f07b3b2a9e9a9b78dad2e">sha256_final</references>
+        <references refid="wrapper_8h_1acec7806afa90b1232e854379ad4f6233">sha384_final</references>
+        <references refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db">sha512_final</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" compoundref="wrapper_8h" startline="33">SSH_KDF_SHA1</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" compoundref="wrapper_8h" startline="34">SSH_KDF_SHA256</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" compoundref="wrapper_8h" startline="35">SSH_KDF_SHA384</references>
+        <references refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" compoundref="wrapper_8h" startline="36">SSH_KDF_SHA512</references>
+      </memberdef>
+      <memberdef kind="function" id="kdf_8c_1aeda0b41fe27c06ec4f29995cb2e7b60e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sshkdf_derive_key</definition>
+        <argsstring>(struct ssh_crypto_struct *crypto, unsigned char *key, size_t key_len, int key_type, unsigned char *output, size_t requested_len)</argsstring>
+        <name>sshkdf_derive_key</name>
+        <param>
+          <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+          <declname>crypto</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>key_len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key_type</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>requested_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/kdf.c" line="117" column="5" bodyfile="libssh-mirror/src/kdf.c" bodystart="117" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyrihgt<sp/>(c)<sp/>2018<sp/>Red<sp/>Hat,<sp/>Inc.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">libssh/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="buffer_8h" kindref="compound">libssh/buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="session_8h" kindref="compound">libssh/session.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="misc_8h" kindref="compound">libssh/misc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dh_8h" kindref="compound">libssh/dh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ssh2_8h" kindref="compound">libssh/ssh2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pki_8h" kindref="compound">libssh/pki.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bignum_8h" kindref="compound">libssh/bignum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8h" kindref="compound">libssh/string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>following<sp/>implements<sp/>the<sp/>SSHKDF<sp/>for<sp/>crypto<sp/>backend<sp/>that</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>do<sp/>not<sp/>have<sp/>a<sp/>native<sp/>implementations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structssh__mac__ctx__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0" kindref="member">ssh_kdf_digest</ref><sp/><ref refid="structssh__mac__ctx__struct_1a7079d5f30a3896b9b32044a38322bb85" kindref="member">digest_type</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46" refid="structssh__mac__ctx__struct_1a97701c5a39d4e171d935b44a0659e796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHACTX<sp/><ref refid="structssh__mac__ctx__struct_1a97701c5a39d4e171d935b44a0659e796" kindref="member">sha1_ctx</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structssh__mac__ctx__struct_1ae985af6801c923c2e8ecc77982fdabbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHA256CTX<sp/><ref refid="structssh__mac__ctx__struct_1ae985af6801c923c2e8ecc77982fdabbd" kindref="member">sha256_ctx</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structssh__mac__ctx__struct_1a06199d307bb31cdcb43c5b0f01007135" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHA384CTX<sp/><ref refid="structssh__mac__ctx__struct_1a06199d307bb31cdcb43c5b0f01007135" kindref="member">sha384_ctx</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structssh__mac__ctx__struct_1a03aba4a358fcc9ad1c49d07b552c3a41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHA512CTX<sp/><ref refid="structssh__mac__ctx__struct_1a03aba4a358fcc9ad1c49d07b552c3a41" kindref="member">sha512_ctx</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structssh__mac__ctx__struct_1a5b995065a3f52831113dd43674a0b23c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structssh__mac__ctx__struct_1a5b995065a3f52831113dd43674a0b23c" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx</ref><sp/><ref refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" kindref="member">ssh_mac_ctx_init</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0" kindref="member">ssh_kdf_digest</ref><sp/>type)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx_struct</ref>));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;digest_type<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(type){</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" kindref="member">SSH_KDF_SHA1</ref>:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha1_ctx<sp/>=<sp/><ref refid="wrapper_8h_1aaa356855efc0e302d70d5c6d5a0afdb2" kindref="member">sha1_init</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" kindref="member">SSH_KDF_SHA256</ref>:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha256_ctx<sp/>=<sp/><ref refid="wrapper_8h_1a50c68215312562fbbaf194bb850a08da" kindref="member">sha256_init</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" kindref="member">SSH_KDF_SHA384</ref>:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha384_ctx<sp/>=<sp/><ref refid="wrapper_8h_1af92a362de37b25df0c92b3d2d80b6b64" kindref="member">sha384_init</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" kindref="member">SSH_KDF_SHA512</ref>:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha512_ctx<sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;digest_type){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" kindref="member">SSH_KDF_SHA1</ref>:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a9122cd0a3877f98f203e37f2a8f24b06" kindref="member">sha1_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha1_ctx,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" kindref="member">SSH_KDF_SHA256</ref>:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a5a746a5d9606298ed5adc22b425427dd" kindref="member">sha256_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha256_ctx,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" kindref="member">SSH_KDF_SHA384</ref>:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a8b068dd66d5047a305748e38618f6cd4" kindref="member">sha384_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha384_ctx,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" kindref="member">SSH_KDF_SHA512</ref>:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha512_ctx,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" kindref="member">ssh_mac_final</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md,<sp/><ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;digest_type){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" kindref="member">SSH_KDF_SHA1</ref>:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a12807e522a1bc08649a75dedc52e3c8e" kindref="member">sha1_final</ref>(md,<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha1_ctx);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" kindref="member">SSH_KDF_SHA256</ref>:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1abb61e25e539f07b3b2a9e9a9b78dad2e" kindref="member">sha256_final</ref>(md,<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha256_ctx);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" kindref="member">SSH_KDF_SHA384</ref>:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1acec7806afa90b1232e854379ad4f6233" kindref="member">sha384_final</ref>(md,<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha384_ctx);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" kindref="member">SSH_KDF_SHA512</ref>:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(md,<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>-&gt;ctx.sha512_ctx);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" kindref="member">SAFE_FREE</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="structssh__mac__ctx__struct_1a7079d5f30a3896b9b32044a38322bb85" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="kdf_8c_1aeda0b41fe27c06ec4f29995cb2e7b60e" kindref="member">sshkdf_derive_key</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>key_len,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key_type,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>requested_len)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Can&apos;t<sp/>use<sp/>VLAs<sp/>with<sp/>Visual<sp/>Studio,<sp/>so<sp/>allocate<sp/>the<sp/>biggest</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>digest<sp/>buffer<sp/>we<sp/>can<sp/>possibly<sp/>need<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>digest[<ref refid="crypto_8h_1a5639c2c28b06d9e4a42053e71d2c116d" kindref="member">DIGEST_MAX_LEN</ref>];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_len<sp/>=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" kindref="member">digest_len</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letter<sp/>=<sp/>key_type;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx</ref><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(DIGEST_MAX_LEN<sp/>&lt;<sp/>crypto-&gt;digest_len)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" kindref="member">ssh_mac_ctx_init</ref>(crypto-&gt;<ref refid="structssh__crypto__struct_1a57c63b9f1f7d33f412a5997f104846f2" kindref="member">digest_type</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/>key_len);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1af8fb6bb0ce4c2900556647dcaf6c377a" kindref="member">secret_hash</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" kindref="member">digest_len</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>&amp;letter,<sp/>1);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aedb3b1ec9ca06a1c4c82d965b7ef0577" kindref="member">session_id</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" kindref="member">digest_len</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" kindref="member">ssh_mac_final</ref>(digest,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(requested_len<sp/>&lt;<sp/>output_len)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_len<sp/>=<sp/>requested_len;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(output,<sp/>digest,<sp/>output_len);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(requested_len<sp/>&gt;<sp/>output_len)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" kindref="member">ssh_mac_ctx_init</ref>(crypto-&gt;<ref refid="structssh__crypto__struct_1a57c63b9f1f7d33f412a5997f104846f2" kindref="member">digest_type</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/>key_len);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1af8fb6bb0ce4c2900556647dcaf6c377a" kindref="member">secret_hash</ref>,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" kindref="member">digest_len</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" kindref="member">ssh_mac_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>output,<sp/>output_len);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" kindref="member">ssh_mac_final</ref>(digest,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(requested_len<sp/>&lt;<sp/>output_len<sp/>+<sp/>crypto-&gt;digest_len)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(output<sp/>+<sp/>output_len,<sp/>digest,<sp/>requested_len<sp/>-<sp/>output_len);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(output<sp/>+<sp/>output_len,<sp/>digest,<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" kindref="member">digest_len</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_len<sp/>+=<sp/>crypto-&gt;<ref refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" kindref="member">digest_len</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/kdf.c"/>
+  </compounddef>
+</doxygen>

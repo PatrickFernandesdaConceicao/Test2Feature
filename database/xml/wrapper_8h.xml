@@ -1,0 +1,2448 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="wrapper_8h" kind="file" language="C++">
+    <compoundname>wrapper.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="libssh_8h" local="yes">libssh/libssh.h</includes>
+    <includes refid="libcrypto_8h" local="yes">libssh/libcrypto.h</includes>
+    <includes refid="libgcrypt_8h" local="yes">libssh/libgcrypt.h</includes>
+    <includes refid="libmbedcrypto_8h" local="yes">libssh/libmbedcrypto.h</includes>
+    <includedby refid="crypto_8h" local="yes">libssh-mirror/include/libssh/crypto.h</includedby>
+    <includedby refid="keys_8h" local="yes">libssh-mirror/include/libssh/keys.h</includedby>
+    <includedby refid="packet_8h" local="yes">libssh-mirror/include/libssh/packet.h</includedby>
+    <includedby refid="bcrypt__pbkdf_8c" local="yes">libssh-mirror/src/external/bcrypt_pbkdf.c</includedby>
+    <includedby refid="ed25519_8c" local="yes">libssh-mirror/src/external/ed25519.c</includedby>
+    <includedby refid="libcrypto_8c" local="yes">libssh-mirror/src/libcrypto.c</includedby>
+    <includedby refid="libgcrypt_8c" local="yes">libssh-mirror/src/libgcrypt.c</includedby>
+    <includedby refid="libmbedcrypto_8c" local="yes">libssh-mirror/src/libmbedcrypto.c</includedby>
+    <includedby refid="packet__crypt_8c" local="yes">libssh-mirror/src/packet_crypt.c</includedby>
+    <includedby refid="pki_8c" local="yes">libssh-mirror/src/pki.c</includedby>
+    <includedby refid="wrapper_8c" local="yes">libssh-mirror/src/wrapper.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="8">
+        <label>sys/select.h</label>
+      </node>
+      <node id="10">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="11">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>netdb.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="12">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="69">
+        <label>libssh-mirror/include/libssh/packet.h</label>
+        <link refid="packet_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>libssh-mirror/src/channels.c</label>
+        <link refid="channels_8c"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>libssh-mirror/src/pki_ed25519_common.c</label>
+        <link refid="pki__ed25519__common_8c"/>
+      </node>
+      <node id="24">
+        <label>libssh-mirror/src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libssh-mirror/src/dh.c</label>
+        <link refid="dh_8c"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>libssh-mirror/tests/client/torture_connect.c</label>
+        <link refid="torture__connect_8c"/>
+      </node>
+      <node id="22">
+        <label>libssh-mirror/tests/unittests/torture_keyfiles.c</label>
+        <link refid="torture__keyfiles_8c"/>
+      </node>
+      <node id="68">
+        <label>libssh-mirror/include/libssh/keys.h</label>
+        <link refid="keys_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>libssh-mirror/include/libssh/pki.h</label>
+        <link refid="pki_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>libssh-mirror/tests/client/torture_forward.c</label>
+        <link refid="torture__forward_8c"/>
+      </node>
+      <node id="92">
+        <label>libssh-mirror/tests/client/torture_sftp_dir.c</label>
+        <link refid="torture__sftp__dir_8c"/>
+      </node>
+      <node id="114">
+        <label>libssh-mirror/tests/pkd/pkd_daemon.c</label>
+        <link refid="pkd__daemon_8c"/>
+      </node>
+      <node id="4">
+        <label>libssh-mirror/src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="33">
+        <label>libssh-mirror/src/pki.c</label>
+        <link refid="pki_8c"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>libssh-mirror/tests/client/torture_client_global_requests.c</label>
+        <link refid="torture__client__global__requests_8c"/>
+      </node>
+      <node id="25">
+        <label>libssh-mirror/tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="67">
+        <label>libssh-mirror/tests/unittests/torture_threads_crypto.c</label>
+        <link refid="torture__threads__crypto_8c"/>
+      </node>
+      <node id="46">
+        <label>libssh-mirror/tests/unittests/torture_options.c</label>
+        <link refid="torture__options_8c"/>
+      </node>
+      <node id="54">
+        <label>libssh-mirror/src/gssapi.c</label>
+        <link refid="gssapi_8c"/>
+      </node>
+      <node id="39">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="101">
+        <label>libssh-mirror/tests/server/torture_server.c</label>
+        <link refid="torture__server_8c"/>
+      </node>
+      <node id="36">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="5">
+        <label>libssh-mirror/src/dh-gex.c</label>
+        <link refid="dh-gex_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>libssh-mirror/tests/client/torture_proxycommand.c</label>
+        <link refid="torture__proxycommand_8c"/>
+      </node>
+      <node id="95">
+        <label>libssh-mirror/tests/client/torture_sftp_read.c</label>
+        <link refid="torture__sftp__read_8c"/>
+      </node>
+      <node id="53">
+        <label>libssh-mirror/src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="71">
+        <label>libssh-mirror/include/libssh/bind.h</label>
+        <link refid="bind_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libssh-mirror/src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh-mirror/src/ecdh_gcrypt.c</label>
+        <link refid="ecdh__gcrypt_8c"/>
+      </node>
+      <node id="42">
+        <label>libssh-mirror/src/pki_container_openssh.c</label>
+        <link refid="pki__container__openssh_8c"/>
+      </node>
+      <node id="89">
+        <label>libssh-mirror/src/sftp.c</label>
+        <link refid="sftp_8c"/>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>libssh-mirror/tests/unittests/torture_init.c</label>
+        <link refid="torture__init_8c"/>
+      </node>
+      <node id="117">
+        <label>libssh-mirror/tests/torture.c</label>
+        <link refid="torture_8c"/>
+      </node>
+      <node id="105">
+        <label>libssh-mirror/tests/torture.h</label>
+        <link refid="torture_8h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>libssh-mirror/tests/unittests/torture_push_pop_dir.c</label>
+        <link refid="torture__push__pop__dir_8c"/>
+      </node>
+      <node id="21">
+        <label>libssh-mirror/src/legacy.c</label>
+        <link refid="legacy_8c"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>libssh-mirror/tests/torture_key.c</label>
+        <link refid="torture__key_8c"/>
+      </node>
+      <node id="115">
+        <label>libssh-mirror/tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+      <node id="112">
+        <label>libssh-mirror/tests/client/torture_scp.c</label>
+        <link refid="torture__scp_8c"/>
+      </node>
+      <node id="77">
+        <label>libssh-mirror/tests/unittests/torture_channel.c</label>
+        <link refid="torture__channel_8c"/>
+      </node>
+      <node id="118">
+        <label>libssh-mirror/tests/torture_cmocka.c</label>
+        <link refid="torture__cmocka_8c"/>
+      </node>
+      <node id="104">
+        <label>libssh-mirror/tests/torture_cmocka.h</label>
+        <link refid="torture__cmocka_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>libssh-mirror/tests/unittests/torture_list.c</label>
+        <link refid="torture__list_8c"/>
+      </node>
+      <node id="28">
+        <label>libssh-mirror/src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/include/libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>libssh-mirror/tests/unittests/torture_session_keys.c</label>
+        <link refid="torture__session__keys_8c"/>
+      </node>
+      <node id="15">
+        <label>libssh-mirror/src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="59">
+        <label>libssh-mirror/src/packet_crypt.c</label>
+        <link refid="packet__crypt_8c"/>
+      </node>
+      <node id="55">
+        <label>libssh-mirror/src/gzip.c</label>
+        <link refid="gzip_8c"/>
+      </node>
+      <node id="9">
+        <label>libssh-mirror/src/dh_crypto.c</label>
+        <link refid="dh__crypto_8c"/>
+      </node>
+      <node id="37">
+        <label>libssh-mirror/tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="44">
+        <label>libssh-mirror/src/pki_ed25519.c</label>
+        <link refid="pki__ed25519_8c"/>
+      </node>
+      <node id="32">
+        <label>libssh-mirror/src/external/bcrypt_pbkdf.c</label>
+        <link refid="bcrypt__pbkdf_8c"/>
+      </node>
+      <node id="93">
+        <label>libssh-mirror/tests/client/torture_sftp_ext.c</label>
+        <link refid="torture__sftp__ext_8c"/>
+      </node>
+      <node id="35">
+        <label>libssh-mirror/tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="100">
+        <label>libssh-mirror/tests/client/torture_session.c</label>
+        <link refid="torture__session_8c"/>
+      </node>
+      <node id="34">
+        <label>libssh-mirror/tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="12">
+        <label>libssh-mirror/src/ecdh_crypto.c</label>
+        <link refid="ecdh__crypto_8c"/>
+      </node>
+      <node id="86">
+        <label>libssh-mirror/src/misc.c</label>
+        <link refid="misc_8c"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>libssh-mirror/tests/client/torture_rekey.c</label>
+        <link refid="torture__rekey_8c"/>
+      </node>
+      <node id="103">
+        <label>libssh-mirror/tests/server/torture_server_config.c</label>
+        <link refid="torture__server__config_8c"/>
+      </node>
+      <node id="57">
+        <label>libssh-mirror/src/libgcrypt.c</label>
+        <link refid="libgcrypt_8c"/>
+      </node>
+      <node id="132">
+        <label>libssh-mirror/tests/unittests/torture_threads_init.c</label>
+        <link refid="torture__threads__init_8c"/>
+      </node>
+      <node id="48">
+        <label>libssh-mirror/tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="90">
+        <label>libssh-mirror/tests/client/torture_sftp_benchmark.c</label>
+        <link refid="torture__sftp__benchmark_8c"/>
+      </node>
+      <node id="41">
+        <label>libssh-mirror/tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="23">
+        <label>libssh-mirror/src/messages.c</label>
+        <link refid="messages_8c"/>
+      </node>
+      <node id="128">
+        <label>libssh-mirror/tests/unittests/torture_server_x11.c</label>
+        <link refid="torture__server__x11_8c"/>
+      </node>
+      <node id="108">
+        <label>libssh-mirror/tests/client/torture_hostkey.c</label>
+        <link refid="torture__hostkey_8c"/>
+      </node>
+      <node id="98">
+        <label>libssh-mirror/tests/client/torture_client_config.c</label>
+        <link refid="torture__client__config_8c"/>
+      </node>
+      <node id="56">
+        <label>libssh-mirror/src/libcrypto.c</label>
+        <link refid="libcrypto_8c"/>
+      </node>
+      <node id="111">
+        <label>libssh-mirror/tests/client/torture_request_env.c</label>
+        <link refid="torture__request__env_8c"/>
+      </node>
+      <node id="62">
+        <label>libssh-mirror/src/threads/mbedtls.c</label>
+        <link refid="mbedtls_8c"/>
+      </node>
+      <node id="78">
+        <label>libssh-mirror/src/config.c</label>
+        <link refid="config_8c"/>
+      </node>
+      <node id="63">
+        <label>libssh-mirror/src/threads.c</label>
+        <link refid="threads_8c"/>
+      </node>
+      <node id="38">
+        <label>libssh-mirror/tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="47">
+        <label>libssh-mirror/src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>libssh-mirror/src/poll.c</label>
+        <link refid="poll_8c"/>
+      </node>
+      <node id="6">
+        <label>libssh-mirror/tests/unittests/torture_moduli.c</label>
+        <link refid="torture__moduli_8c"/>
+      </node>
+      <node id="10">
+        <label>libssh-mirror/src/dh_key.c</label>
+        <link refid="dh__key_8c"/>
+      </node>
+      <node id="61">
+        <label>libssh-mirror/src/threads/libgcrypt.c</label>
+        <link refid="threads_2libgcrypt_8c"/>
+      </node>
+      <node id="79">
+        <label>libssh-mirror/src/connect.c</label>
+        <link refid="connect_8c"/>
+      </node>
+      <node id="58">
+        <label>libssh-mirror/src/libmbedcrypto.c</label>
+        <link refid="libmbedcrypto_8c"/>
+      </node>
+      <node id="72">
+        <label>libssh-mirror/src/bind_config.c</label>
+        <link refid="bind__config_8c"/>
+      </node>
+      <node id="27">
+        <label>libssh-mirror/src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="122">
+        <label>libssh-mirror/tests/unittests/torture_callbacks.c</label>
+        <link refid="torture__callbacks_8c"/>
+      </node>
+      <node id="109">
+        <label>libssh-mirror/tests/client/torture_knownhosts_verify.c</label>
+        <link refid="torture__knownhosts__verify_8c"/>
+      </node>
+      <node id="127">
+        <label>libssh-mirror/tests/unittests/torture_rand.c</label>
+        <link refid="torture__rand_8c"/>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/include/libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>libssh-mirror/tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="60">
+        <label>libssh-mirror/src/threads/libcrypto.c</label>
+        <link refid="threads_2libcrypto_8c"/>
+      </node>
+      <node id="80">
+        <label>libssh-mirror/src/connector.c</label>
+        <link refid="connector_8c"/>
+      </node>
+      <node id="51">
+        <label>libssh-mirror/src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="94">
+        <label>libssh-mirror/tests/client/torture_sftp_fsync.c</label>
+        <link refid="torture__sftp__fsync_8c"/>
+      </node>
+      <node id="84">
+        <label>libssh-mirror/tests/unittests/torture_misc.c</label>
+        <link refid="torture__misc_8c"/>
+      </node>
+      <node id="14">
+        <label>libssh-mirror/src/ecdh_mbedcrypto.c</label>
+        <link refid="ecdh__mbedcrypto_8c"/>
+      </node>
+      <node id="87">
+        <label>libssh-mirror/src/options.c</label>
+        <link refid="options_8c"/>
+      </node>
+      <node id="134">
+        <label>libssh-mirror/src/external/ed25519.c</label>
+        <link refid="ed25519_8c"/>
+      </node>
+      <node id="81">
+        <label>libssh-mirror/src/error.c</label>
+        <link refid="error_8c"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>libssh-mirror/src/callbacks.c</label>
+        <link refid="callbacks_8c"/>
+      </node>
+      <node id="16">
+        <label>libssh-mirror/src/kdf.c</label>
+        <link refid="kdf_8c"/>
+      </node>
+      <node id="130">
+        <label>libssh-mirror/tests/unittests/torture_temp_file.c</label>
+        <link refid="torture__temp__file_8c"/>
+      </node>
+      <node id="97">
+        <label>libssh-mirror/tests/client/torture_algorithms.c</label>
+        <link refid="torture__algorithms_8c"/>
+      </node>
+      <node id="125">
+        <label>libssh-mirror/tests/unittests/torture_knownhosts_parsing.c</label>
+        <link refid="torture__knownhosts__parsing_8c"/>
+      </node>
+      <node id="49">
+        <label>libssh-mirror/tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="120">
+        <label>libssh-mirror/tests/unittests/torture_buffer.c</label>
+        <link refid="torture__buffer_8c"/>
+      </node>
+      <node id="8">
+        <label>libssh-mirror/tests/unittests/torture_hashes.c</label>
+        <link refid="torture__hashes_8c"/>
+      </node>
+      <node id="131">
+        <label>libssh-mirror/tests/unittests/torture_threads_buffer.c</label>
+        <link refid="torture__threads__buffer_8c"/>
+      </node>
+      <node id="52">
+        <label>libssh-mirror/src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>libssh-mirror/tests/unittests/torture_temp_dir.c</label>
+        <link refid="torture__temp__dir_8c"/>
+      </node>
+      <node id="26">
+        <label>libssh-mirror/src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="96">
+        <label>libssh-mirror/src/socket.c</label>
+        <link refid="socket_8c"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>libssh-mirror/tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+      <node id="73">
+        <label>libssh-mirror/tests/unittests/torture_bind_config.c</label>
+        <link refid="torture__bind__config_8c"/>
+      </node>
+      <node id="91">
+        <label>libssh-mirror/tests/client/torture_sftp_canonicalize_path.c</label>
+        <link refid="torture__sftp__canonicalize__path_8c"/>
+      </node>
+      <node id="20">
+        <label>libssh-mirror/src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="17">
+        <label>libssh-mirror/src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="66">
+        <label>libssh-mirror/tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="116">
+        <label>libssh-mirror/tests/pkd/pkd_keyutil.c</label>
+        <link refid="pkd__keyutil_8c"/>
+      </node>
+      <node id="74">
+        <label>libssh-mirror/include/libssh/gssapi.h</label>
+        <link refid="gssapi_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>libssh-mirror/tests/server/torture_server_auth_kbdint.c</label>
+        <link refid="torture__server__auth__kbdint_8c"/>
+      </node>
+      <node id="31">
+        <label>libssh-mirror/include/libssh/pki_priv.h</label>
+        <link refid="pki__priv_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libssh-mirror/src/ecdh.c</label>
+        <link refid="ecdh_8c"/>
+      </node>
+      <node id="123">
+        <label>libssh-mirror/tests/unittests/torture_config.c</label>
+        <link refid="torture__config_8c"/>
+      </node>
+      <node id="82">
+        <label>libssh-mirror/tests/unittests/torture_isipaddr.c</label>
+        <link refid="torture__isipaddr_8c"/>
+      </node>
+      <node id="50">
+        <label>libssh-mirror/src/auth.c</label>
+        <link refid="auth_8c"/>
+      </node>
+      <node id="113">
+        <label>libssh-mirror/tests/cmdline.c</label>
+        <link refid="cmdline_8c"/>
+      </node>
+      <node id="19">
+        <label>libssh-mirror/tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+      <node id="121">
+        <label>libssh-mirror/tests/unittests/torture_bytearray.c</label>
+        <link refid="torture__bytearray_8c"/>
+      </node>
+      <node id="133">
+        <label>libssh-mirror/tests/unittests/torture_tokens.c</label>
+        <link refid="torture__tokens_8c"/>
+      </node>
+      <node id="70">
+        <label>libssh-mirror/include/libssh/session.h</label>
+        <link refid="session_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>libssh-mirror/src/pki_crypto.c</label>
+        <link refid="pki__crypto_8c"/>
+      </node>
+      <node id="85">
+        <label>libssh-mirror/src/log.c</label>
+        <link refid="log_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structssh__hmac__struct" prot="public">ssh_hmac_struct</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="wrapper_8h_1a72fb99af9793134870f8645a142b7de0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_kdf_digest</name>
+        <enumvalue id="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" prot="public">
+          <name>SSH_KDF_SHA1</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" prot="public">
+          <name>SSH_KDF_SHA256</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" prot="public">
+          <name>SSH_KDF_SHA384</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" prot="public">
+          <name>SSH_KDF_SHA512</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="32" column="1" bodyfile="libssh-mirror/include/libssh/wrapper.h" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_hmac_e</name>
+        <enumvalue id="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa55d238e024d5057683e3e6d17730f0f7" prot="public">
+          <name>SSH_HMAC_SHA1</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa23072e9b7b8dbef9efd588e4182ccc5a" prot="public">
+          <name>SSH_HMAC_SHA256</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa143a1ef7b9ed8d1f2ae315cfb7c61ccd" prot="public">
+          <name>SSH_HMAC_SHA512</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa8f1a9d0b61ab4d99f92ad4db94044ff3" prot="public">
+          <name>SSH_HMAC_MD5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa5f5e2a5804826d406571a97348abc67c" prot="public">
+          <name>SSH_HMAC_AEAD_POLY1305</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa90e7e6569a012ae42c94308a4875369f" prot="public">
+          <name>SSH_HMAC_AEAD_GCM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="39" column="1" bodyfile="libssh-mirror/include/libssh/wrapper.h" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="wrapper_8h_1a972b17be894f22e360cd8b19abb47546" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_des_e</name>
+        <enumvalue id="wrapper_8h_1a972b17be894f22e360cd8b19abb47546a568bb6037c5eeb20677f46b09f0c587d" prot="public">
+          <name>SSH_3DES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a972b17be894f22e360cd8b19abb47546a37102fa462670277c2633c132d27e118" prot="public">
+          <name>SSH_DES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="48" column="1" bodyfile="libssh-mirror/include/libssh/wrapper.h" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="enum" id="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ssh_crypto_direction_e</name>
+        <enumvalue id="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" prot="public">
+          <name>SSH_DIRECTION_IN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" prot="public">
+          <name>SSH_DIRECTION_OUT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9af69cd5e570bff317e82374ba8100e2d4" prot="public">
+          <name>SSH_DIRECTION_BOTH</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="59" column="1" bodyfile="libssh-mirror/include/libssh/wrapper.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="wrapper_8h_1a756959168f0c553560ddd06d36fca1a7" prot="public" static="no">
+        <type>struct <ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx_struct</ref> *</type>
+        <definition>typedef struct ssh_mac_ctx_struct* ssh_mac_ctx</definition>
+        <argsstring></argsstring>
+        <name>ssh_mac_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="68" column="33" bodyfile="libssh-mirror/include/libssh/wrapper.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="wrapper_8h_1ae89783901ebac520286020a4f0586ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MD5CTX</type>
+        <definition>MD5CTX md5_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>md5_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="69" column="8" declfile="libssh-mirror/include/libssh/wrapper.h" declline="69" declcolumn="8"/>
+        <referencedby refid="group__libssh__session_1gaf8ff0e2236d54d964a82f68d7323a741" compoundref="session_8c" startline="972" endline="1034">ssh_get_pubkey_hash</referencedby>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1aad8f8cb0fa94280b84f40f09288ad44e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void md5_update</definition>
+        <argsstring>(MD5CTX c, const void *data, unsigned long len)</argsstring>
+        <name>md5_update</name>
+        <param>
+          <type>MD5CTX</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="70" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="70" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1gaf8ff0e2236d54d964a82f68d7323a741" compoundref="session_8c" startline="972" endline="1034">ssh_get_pubkey_hash</referencedby>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a03fc66bb771519f69a5a19c65c87d69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void md5_final</definition>
+        <argsstring>(unsigned char *md, MD5CTX c)</argsstring>
+        <name>md5_final</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>MD5CTX</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="71" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="71" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1gaf8ff0e2236d54d964a82f68d7323a741" compoundref="session_8c" startline="972" endline="1034">ssh_get_pubkey_hash</referencedby>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1aaa356855efc0e302d70d5c6d5a0afdb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SHACTX</type>
+        <definition>SHACTX sha1_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>sha1_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="73" column="8" declfile="libssh-mirror/include/libssh/wrapper.h" declline="73" declcolumn="8"/>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+        <referencedby refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" compoundref="kdf_8c" startline="53" endline="78">ssh_mac_ctx_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a9122cd0a3877f98f203e37f2a8f24b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha1_update</definition>
+        <argsstring>(SHACTX c, const void *data, unsigned long len)</argsstring>
+        <name>sha1_update</name>
+        <param>
+          <type>SHACTX</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="74" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="74" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+        <referencedby refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" compoundref="kdf_8c" startline="80" endline="96">ssh_mac_update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a12807e522a1bc08649a75dedc52e3c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha1_final</definition>
+        <argsstring>(unsigned char *md, SHACTX c)</argsstring>
+        <name>sha1_final</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>SHACTX</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="75" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="75" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+        <referencedby refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" compoundref="kdf_8c" startline="98" endline="115">ssh_mac_final</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha1</definition>
+        <argsstring>(const unsigned char *digest, int len, unsigned char *hash)</argsstring>
+        <name>sha1</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>digest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="76" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="76" declcolumn="6"/>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+        <referencedby refid="torture__hashes_8c_1ae6a089b8a29d47bb83feb13b577f7e21" compoundref="torture__hashes_8c" startline="81" endline="98">torture_sha1_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a50c68215312562fbbaf194bb850a08da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SHA256CTX</type>
+        <definition>SHA256CTX sha256_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>sha256_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="78" column="11" declfile="libssh-mirror/include/libssh/wrapper.h" declline="78" declcolumn="11"/>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+        <referencedby refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" compoundref="kdf_8c" startline="53" endline="78">ssh_mac_ctx_init</referencedby>
+        <referencedby refid="group__libssh__pki_1gaf78ebf6bac541ad8a6de9b6509dc0fff" compoundref="pki_8c" startline="2403" endline="2484">ssh_pki_signature_verify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a5a746a5d9606298ed5adc22b425427dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha256_update</definition>
+        <argsstring>(SHA256CTX c, const void *data, unsigned long len)</argsstring>
+        <name>sha256_update</name>
+        <param>
+          <type>SHA256CTX</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="79" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="79" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+        <referencedby refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" compoundref="kdf_8c" startline="80" endline="96">ssh_mac_update</referencedby>
+        <referencedby refid="group__libssh__pki_1gaf78ebf6bac541ad8a6de9b6509dc0fff" compoundref="pki_8c" startline="2403" endline="2484">ssh_pki_signature_verify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1abb61e25e539f07b3b2a9e9a9b78dad2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha256_final</definition>
+        <argsstring>(unsigned char *md, SHA256CTX c)</argsstring>
+        <name>sha256_final</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>SHA256CTX</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="80" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="80" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1ga7a7b16a4bed6d8d58f10bdb269172ff7" compoundref="session_8c" startline="1117" endline="1219">ssh_get_publickey_hash</referencedby>
+        <referencedby refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" compoundref="kdf_8c" startline="98" endline="115">ssh_mac_final</referencedby>
+        <referencedby refid="group__libssh__pki_1gaf78ebf6bac541ad8a6de9b6509dc0fff" compoundref="pki_8c" startline="2403" endline="2484">ssh_pki_signature_verify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha256</definition>
+        <argsstring>(const unsigned char *digest, int len, unsigned char *hash)</argsstring>
+        <name>sha256</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>digest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="81" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="81" declcolumn="6"/>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+        <referencedby refid="torture__hashes_8c_1a7d6d03a2483bbfd42a521edea581044b" compoundref="torture__hashes_8c" startline="120" endline="142">torture_sha256_fingerprint</referencedby>
+        <referencedby refid="torture__hashes_8c_1aae6590b5c29c9ce2e9b20d9893cd5c7e" compoundref="torture__hashes_8c" startline="100" endline="118">torture_sha256_hash</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1af92a362de37b25df0c92b3d2d80b6b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SHA384CTX</type>
+        <definition>SHA384CTX sha384_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>sha384_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="83" column="11" declfile="libssh-mirror/include/libssh/wrapper.h" declline="83" declcolumn="11"/>
+        <referencedby refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" compoundref="kdf_8c" startline="53" endline="78">ssh_mac_ctx_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a8b068dd66d5047a305748e38618f6cd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha384_update</definition>
+        <argsstring>(SHA384CTX c, const void *data, unsigned long len)</argsstring>
+        <name>sha384_update</name>
+        <param>
+          <type>SHA384CTX</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="84" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="84" declcolumn="6"/>
+        <referencedby refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" compoundref="kdf_8c" startline="80" endline="96">ssh_mac_update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1acec7806afa90b1232e854379ad4f6233" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha384_final</definition>
+        <argsstring>(unsigned char *md, SHA384CTX c)</argsstring>
+        <name>sha384_final</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>SHA384CTX</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="85" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="85" declcolumn="6"/>
+        <referencedby refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" compoundref="kdf_8c" startline="98" endline="115">ssh_mac_final</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a332dfc8369578811749a2bd10f29ba59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha384</definition>
+        <argsstring>(const unsigned char *digest, int len, unsigned char *hash)</argsstring>
+        <name>sha384</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>digest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="86" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="86" declcolumn="6"/>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SHA512CTX</type>
+        <definition>SHA512CTX sha512_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>sha512_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="88" column="11" declfile="libssh-mirror/include/libssh/wrapper.h" declline="88" declcolumn="11"/>
+        <referencedby refid="pki__priv_8h_1ab650514d50b19a9f4ebd5322a9b0fc5d" compoundref="bcrypt__pbkdf_8c" startline="107" endline="182">bcrypt_pbkdf</referencedby>
+        <referencedby refid="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" compoundref="ed25519_8c" startline="113" endline="174">crypto_sign_ed25519</referencedby>
+        <referencedby refid="ed25519_8c_1a22f87ea2901498ee82e6166b7bdde303" compoundref="ed25519_8c" startline="80" endline="111">crypto_sign_ed25519_keypair</referencedby>
+        <referencedby refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" compoundref="ed25519_8c" startline="62" endline="77">get_hram</referencedby>
+        <referencedby refid="kdf_8c_1a9fea9ae0d73f0106595ef8719bc93b8f" compoundref="kdf_8c" startline="53" endline="78">ssh_mac_ctx_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha512_update</definition>
+        <argsstring>(SHA512CTX c, const void *data, unsigned long len)</argsstring>
+        <name>sha512_update</name>
+        <param>
+          <type>SHA512CTX</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="89" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="89" declcolumn="6"/>
+        <referencedby refid="pki__priv_8h_1ab650514d50b19a9f4ebd5322a9b0fc5d" compoundref="bcrypt__pbkdf_8c" startline="107" endline="182">bcrypt_pbkdf</referencedby>
+        <referencedby refid="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" compoundref="ed25519_8c" startline="113" endline="174">crypto_sign_ed25519</referencedby>
+        <referencedby refid="ed25519_8c_1a22f87ea2901498ee82e6166b7bdde303" compoundref="ed25519_8c" startline="80" endline="111">crypto_sign_ed25519_keypair</referencedby>
+        <referencedby refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" compoundref="ed25519_8c" startline="62" endline="77">get_hram</referencedby>
+        <referencedby refid="kdf_8c_1a02edeec5733a76eed4526e54ef649559" compoundref="kdf_8c" startline="80" endline="96">ssh_mac_update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha512_final</definition>
+        <argsstring>(unsigned char *md, SHA512CTX c)</argsstring>
+        <name>sha512_final</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>SHA512CTX</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="90" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="90" declcolumn="6"/>
+        <referencedby refid="pki__priv_8h_1ab650514d50b19a9f4ebd5322a9b0fc5d" compoundref="bcrypt__pbkdf_8c" startline="107" endline="182">bcrypt_pbkdf</referencedby>
+        <referencedby refid="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" compoundref="ed25519_8c" startline="113" endline="174">crypto_sign_ed25519</referencedby>
+        <referencedby refid="ed25519_8c_1a22f87ea2901498ee82e6166b7bdde303" compoundref="ed25519_8c" startline="80" endline="111">crypto_sign_ed25519_keypair</referencedby>
+        <referencedby refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" compoundref="ed25519_8c" startline="62" endline="77">get_hram</referencedby>
+        <referencedby refid="kdf_8c_1afd7c9b620c4f21c4ec1639c8696f03c0" compoundref="kdf_8c" startline="98" endline="115">ssh_mac_final</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ae89b582acc2fcf9f268e244908bec33c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sha512</definition>
+        <argsstring>(const unsigned char *digest, int len, unsigned char *hash)</argsstring>
+        <name>sha512</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>digest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="91" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="91" declcolumn="6"/>
+        <referencedby refid="kex_8h_1aa65d23af384112419a2f13f5b7f2d9ea" compoundref="kex_8c" startline="946" endline="1213">ssh_make_sessionid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ae8cd71b294e1eaec95b6e82b20192bf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evp</definition>
+        <argsstring>(int nid, unsigned char *digest, int len, unsigned char *hash, unsigned int *hlen)</argsstring>
+        <name>evp</name>
+        <param>
+          <type>int</type>
+          <declname>nid</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>digest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>hlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="93" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="93" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ada1e1ee732b3bd524284b32178e0252d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EVPCTX</type>
+        <definition>EVPCTX evp_init</definition>
+        <argsstring>(int nid)</argsstring>
+        <name>evp_init</name>
+        <param>
+          <type>int</type>
+          <declname>nid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="94" column="8" declfile="libssh-mirror/include/libssh/wrapper.h" declline="94" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ac6ea9e8ecd1ddbd3702cb09a1fa75fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evp_update</definition>
+        <argsstring>(EVPCTX ctx, const void *data, unsigned long len)</argsstring>
+        <name>evp_update</name>
+        <param>
+          <type>EVPCTX</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="95" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a6c705909707dbf153daaf168be09e515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evp_final</definition>
+        <argsstring>(EVPCTX ctx, unsigned char *md, unsigned int *mdlen)</argsstring>
+        <name>evp_final</name>
+        <param>
+          <type>EVPCTX</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>mdlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="96" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="96" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ab8aa5c2c9844d6e52ce9b250df8a9041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HMACCTX</type>
+        <definition>HMACCTX hmac_init</definition>
+        <argsstring>(const void *key, int len, enum ssh_hmac_e type)</argsstring>
+        <name>hmac_init</name>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="98" column="9" declfile="libssh-mirror/include/libssh/wrapper.h" declline="98" declcolumn="9"/>
+        <referencedby refid="group__libssh__session_1gaad45946956020be5ce9ff7c50f190734" compoundref="src_2knownhosts_8c" startline="53" endline="70">hash_hostname</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" compoundref="packet__crypt_8c" startline="133" endline="213">ssh_packet_encrypt</referencedby>
+        <referencedby refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" compoundref="packet__crypt_8c" startline="239" endline="283">ssh_packet_hmac_verify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hmac_update</definition>
+        <argsstring>(HMACCTX c, const void *data, unsigned long len)</argsstring>
+        <name>hmac_update</name>
+        <param>
+          <type>HMACCTX</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="99" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="99" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1gaad45946956020be5ce9ff7c50f190734" compoundref="src_2knownhosts_8c" startline="53" endline="70">hash_hostname</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" compoundref="packet__crypt_8c" startline="133" endline="213">ssh_packet_encrypt</referencedby>
+        <referencedby refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" compoundref="packet__crypt_8c" startline="239" endline="283">ssh_packet_hmac_verify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hmac_final</definition>
+        <argsstring>(HMACCTX ctx, unsigned char *hashmacbuf, unsigned int *len)</argsstring>
+        <name>hmac_final</name>
+        <param>
+          <type>HMACCTX</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>hashmacbuf</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="100" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="100" declcolumn="6"/>
+        <referencedby refid="group__libssh__session_1gaad45946956020be5ce9ff7c50f190734" compoundref="src_2knownhosts_8c" startline="53" endline="70">hash_hostname</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" compoundref="packet__crypt_8c" startline="133" endline="213">ssh_packet_encrypt</referencedby>
+        <referencedby refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" compoundref="packet__crypt_8c" startline="239" endline="283">ssh_packet_hmac_verify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t hmac_digest_len</definition>
+        <argsstring>(enum ssh_hmac_e type)</argsstring>
+        <name>hmac_digest_len</name>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="101" column="8" bodyfile="libssh-mirror/src/wrapper.c" bodystart="76" bodyend="93" declfile="libssh-mirror/include/libssh/wrapper.h" declline="101" declcolumn="8"/>
+        <references refid="crypto_8h_1a6d8facc608922ae797208a4e9c553c63" compoundref="crypto_8h" startline="55">AES_GCM_TAGLEN</references>
+        <references refid="libssh_8h_1ae1ccf1a4af3f69b0f73113109de28a90" compoundref="libssh_8h" startline="279">MD5_DIGEST_LEN</references>
+        <references refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" compoundref="chacha20-poly1305-common_8h" startline="35">POLY1305_TAGLEN</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa90e7e6569a012ae42c94308a4875369f" compoundref="wrapper_8h" startline="45">SSH_HMAC_AEAD_GCM</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa5f5e2a5804826d406571a97348abc67c" compoundref="wrapper_8h" startline="44">SSH_HMAC_AEAD_POLY1305</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa8f1a9d0b61ab4d99f92ad4db94044ff3" compoundref="wrapper_8h" startline="43">SSH_HMAC_MD5</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa55d238e024d5057683e3e6d17730f0f7" compoundref="wrapper_8h" startline="40">SSH_HMAC_SHA1</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa23072e9b7b8dbef9efd588e4182ccc5a" compoundref="wrapper_8h" startline="41">SSH_HMAC_SHA256</references>
+        <references refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa143a1ef7b9ed8d1f2ae315cfb7c61ccd" compoundref="wrapper_8h" startline="42">SSH_HMAC_SHA512</references>
+        <referencedby refid="packet_8c_1a1128b705f0ac99d1f2f8f4242a717902" compoundref="packet_8c" startline="1593" endline="1738">packet_send2</referencedby>
+        <referencedby refid="kex_8h_1ad66e7a0891466620e0722fe19aaff9f8" compoundref="kex_8c" startline="1281" endline="1411">ssh_generate_session_keys</referencedby>
+        <referencedby refid="packet__crypt_8c_1abdf83dcec86ab5fce6c237e3f1622788" compoundref="packet__crypt_8c" startline="133" endline="213">ssh_packet_encrypt</referencedby>
+        <referencedby refid="packet__crypt_8c_1a68ff2cd30fefc2798aa57c0bba880235" compoundref="packet__crypt_8c" startline="239" endline="283">ssh_packet_hmac_verify</referencedby>
+        <referencedby refid="packet_8h_1af53b16a51c1fb0b3cd7c15baba882ed8" compoundref="packet_8c" startline="1059" endline="1389">ssh_packet_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ad9414083e28fa1900965b57b087b9df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_kdf</definition>
+        <argsstring>(struct ssh_crypto_struct *crypto, unsigned char *key, size_t key_len, int key_type, unsigned char *output, size_t requested_len)</argsstring>
+        <name>ssh_kdf</name>
+        <param>
+          <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+          <declname>crypto</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>key_len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key_type</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>requested_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="103" column="5" declfile="libssh-mirror/include/libssh/wrapper.h" declline="103" declcolumn="5"/>
+        <referencedby refid="kex_8h_1ad66e7a0891466620e0722fe19aaff9f8" compoundref="kex_8c" startline="1281" endline="1411">ssh_generate_session_keys</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1aa5c258d97a1e3278fdc43a09a4970fab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypt_set_algorithms_client</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>crypt_set_algorithms_client</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="108" column="5" bodyfile="libssh-mirror/src/wrapper.c" bodystart="379" bodyend="382" declfile="libssh-mirror/include/libssh/wrapper.h" declline="108" declcolumn="5"/>
+        <references refid="wrapper_8c_1ad32e8a080951bc4a8b5a07d3e76517f1" compoundref="wrapper_8c" startline="233" endline="377">crypt_set_algorithms2</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <referencedby refid="packet_8h_1ab8efa43ad331ae38c5a72bea6b5f6a14" compoundref="packet_8c" startline="1877" endline="1994">ssh_packet_set_newkeys</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a0d1d5ba8b1aa92198d65aa7a173dd758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypt_set_algorithms_server</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>crypt_set_algorithms_server</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="109" column="5" declfile="libssh-mirror/include/libssh/wrapper.h" declline="109" declcolumn="5"/>
+        <referencedby refid="group__libssh__server_1ga6b0057a0346a87ddd9b57bfbbc580d4d" compoundref="server_8c" startline="338" endline="449">ssh_server_connection_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a0a3d255d6f354747a39476981074b8f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+        <definition>struct ssh_crypto_struct* crypto_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>crypto_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="110" column="24" bodyfile="libssh-mirror/src/wrapper.c" bodystart="150" bodyend="159" declfile="libssh-mirror/include/libssh/wrapper.h" declline="110" declcolumn="24"/>
+        <references refid="priv_8h_1a65e0a55b6af58e00b0a584d665af60ab" compoundref="priv_8h" startline="320">ZERO_STRUCTP</references>
+        <referencedby refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</referencedby>
+        <referencedby refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</referencedby>
+        <referencedby refid="packet_8h_1ab8efa43ad331ae38c5a72bea6b5f6a14" compoundref="packet_8c" startline="1877" endline="1994">ssh_packet_set_newkeys</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a9cea366077f4498746e7e448cf21ac0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void crypto_free</definition>
+        <argsstring>(struct ssh_crypto_struct *crypto)</argsstring>
+        <name>crypto_free</name>
+        <param>
+          <type>struct <ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref> *</type>
+          <declname>crypto</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="111" column="6" bodyfile="libssh-mirror/src/wrapper.c" bodystart="161" bodyend="231" declfile="libssh-mirror/include/libssh/wrapper.h" declline="111" declcolumn="6"/>
+        <references refid="wrapper_8c_1a243e6c0261490e2174bfcd7032aa15cf" compoundref="wrapper_8c" startline="145" endline="148">cipher_free</references>
+        <references refid="structssh__crypto__struct_1a0fa9919df32b44ccafc551d220fe609b" compoundref="crypto_8h" startline="150">ssh_crypto_struct::client_kex</references>
+        <references refid="structssh__crypto__struct_1a81fd4d5d3caf9d2ea0e5f17d27ccc6a3" compoundref="crypto_8h" startline="147">ssh_crypto_struct::compress_in_ctx</references>
+        <references refid="structssh__crypto__struct_1ab28a40b61da2c674b89dc97123deee17" compoundref="crypto_8h" startline="146">ssh_crypto_struct::compress_out_ctx</references>
+        <references refid="structssh__crypto__struct_1aa8fb59be5dd1a66f39429dd322fd6daa" compoundref="crypto_8h" startline="131">ssh_crypto_struct::decryptIV</references>
+        <references refid="structssh__crypto__struct_1abb583ba8e6dfc2e927a6af51dd450f3a" compoundref="crypto_8h" startline="132">ssh_crypto_struct::decryptkey</references>
+        <references refid="structssh__crypto__struct_1a9e1945f0bd57afbf407569d6c523d210" compoundref="crypto_8h" startline="135">ssh_crypto_struct::decryptMAC</references>
+        <references refid="structssh__crypto__struct_1aac94072165df7dbad1b08abc81287c87" compoundref="crypto_8h" startline="127">ssh_crypto_struct::digest_len</references>
+        <references refid="structssh__crypto__struct_1af61cb0b00eb8b0e312e161754f7fffc5" compoundref="crypto_8h" startline="130">ssh_crypto_struct::encryptIV</references>
+        <references refid="structssh__crypto__struct_1aac421535e1ea3e781710d3e659f692f2" compoundref="crypto_8h" startline="133">ssh_crypto_struct::encryptkey</references>
+        <references refid="structssh__crypto__struct_1ae18fa9cdcc44cf926cf3e37af3168c6b" compoundref="crypto_8h" startline="134">ssh_crypto_struct::encryptMAC</references>
+        <references refid="group__libssh__misc_1ga51869b401cb0f3e711527bc9a730fbff" compoundref="misc_8c" startline="1461" endline="1474">explicit_bzero</references>
+        <references refid="structssh__crypto__struct_1aead09fb1e43713d5a0da7b6de897ff88" compoundref="crypto_8h" startline="137">ssh_crypto_struct::in_cipher</references>
+        <references refid="structssh__crypto__struct_1abb7b0e918e308277cd12968ed578f26f" compoundref="crypto_8h" startline="151">ssh_crypto_struct::kex_methods</references>
+        <references refid="structssh__cipher__struct_1a9eaf76350f094a669eb46b3018432340" compoundref="crypto_8h" startline="181">ssh_cipher_struct::keysize</references>
+        <references refid="structssh__kex__struct_1a5a8b3f27866bcbfde98a9d66793ae389" compoundref="kex_8h" startline="31">ssh_kex_struct::methods</references>
+        <references refid="structssh__crypto__struct_1a983a4a59241cfaa5fbea8fc67e963104" compoundref="crypto_8h" startline="137">ssh_crypto_struct::out_cipher</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__crypto__struct_1af8fb6bb0ce4c2900556647dcaf6c377a" compoundref="crypto_8h" startline="129">ssh_crypto_struct::secret_hash</references>
+        <references refid="structssh__crypto__struct_1ac78255bf9406137ac4d400644c348a82" compoundref="crypto_8h" startline="149">ssh_crypto_struct::server_kex</references>
+        <references refid="structssh__crypto__struct_1a02e5e04457b69f9437c968fd35840bb3" compoundref="crypto_8h" startline="141">ssh_crypto_struct::server_pubkey</references>
+        <references refid="structssh__crypto__struct_1aedb3b1ec9ca06a1c4c82d965b7ef0577" compoundref="crypto_8h" startline="128">ssh_crypto_struct::session_id</references>
+        <references refid="structssh__crypto__struct_1adb81911af8e0d13db0ab4701319bdd1a" compoundref="crypto_8h" startline="105">ssh_crypto_struct::shared_secret</references>
+        <references refid="dh_8h_1a347b19702042c40983c7b0be299502a5" compoundref="dh__crypto_8c" startline="201" endline="209">ssh_dh_cleanup</references>
+        <references refid="kex_8h_1a0aac49551fe045f9a556155c3d8a02a5" compoundref="kex_8h" startline="27">SSH_KEX_METHODS</references>
+        <references refid="group__libssh__pki_1ga08808beb83a42ccd6f1c710ddeb1b4c2" compoundref="pki_8c" startline="205" endline="210">ssh_key_free</references>
+        <referencedby refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</referencedby>
+        <referencedby refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</referencedby>
+        <referencedby refid="packet_8h_1ab8efa43ad331ae38c5a72bea6b5f6a14" compoundref="packet_8c" startline="1877" endline="1994">ssh_packet_set_newkeys</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a6fc4e0eb0333ffb1ce2fe4f768dad084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_reseed</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_reseed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="113" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="113" declcolumn="6"/>
+        <referencedby refid="group__libssh__server_1ga142f1e2f79f6623f14dcfa40dccaa061" compoundref="bind_8c" startline="423" endline="551">ssh_bind_accept_fd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a85862055a818ffd18e9ab3cfd90d6419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_crypto_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_crypto_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="114" column="5" declfile="libssh-mirror/include/libssh/wrapper.h" declline="114" declcolumn="5"/>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1aab642f57bab0ffe271a4e2dae28c94e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_crypto_finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_crypto_finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="115" column="6" declfile="libssh-mirror/include/libssh/wrapper.h" declline="115" declcolumn="6"/>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a1e2cfae9bf8e464629791db0e415fac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_cipher_clear</definition>
+        <argsstring>(struct ssh_cipher_struct *cipher)</argsstring>
+        <name>ssh_cipher_clear</name>
+        <param>
+          <type>struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+          <declname>cipher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="117" column="6" bodyfile="libssh-mirror/src/wrapper.c" bodystart="122" bodyend="143" declfile="libssh-mirror/include/libssh/wrapper.h" declline="117" declcolumn="6"/>
+        <references refid="structssh__cipher__struct_1aea4cb710bc2c1cd8775bc8ac28d5b6f5" compoundref="crypto_8h" startline="205">ssh_cipher_struct::cleanup</references>
+        <references refid="structssh__cipher__struct_1afb79d8c4ae0d0bae53568f2e6fe64741" compoundref="crypto_8h" startline="162">ssh_cipher_struct::keylen</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <referencedby refid="wrapper_8c_1a243e6c0261490e2174bfcd7032aa15cf" compoundref="wrapper_8c" startline="145" endline="148">cipher_free</referencedby>
+        <referencedby refid="group__libssh__pki_1gae8b8a710eea5b5c36c9e2416cc0734d7" compoundref="pki__container__openssh_8c" startline="101" endline="222">pki_private_key_decrypt</referencedby>
+        <referencedby refid="group__libssh__pki_1gad2addfee75214413f07493a89638350f" compoundref="pki__container__openssh_8c" startline="432" endline="524">pki_private_key_encrypt</referencedby>
+        <referencedby refid="torture__threads__crypto_8c_1a10ff31741221cd8e55f0139b2cecbf40" compoundref="torture__threads__crypto_8c" startline="107" endline="176">thread_crypto_aes256_cbc</referencedby>
+        <referencedby refid="torture__crypto_8c_1a7a61a8925d5b85bfcbb84effd428e308" compoundref="torture__crypto_8c" startline="61" endline="112">torture_crypto_aes256_cbc</referencedby>
+        <referencedby refid="torture__crypto_8c_1ab64f3e1c195d213180ef35af7d66ddd5" compoundref="torture__crypto_8c" startline="149" endline="212">torture_crypto_chacha20poly1305</referencedby>
+        <referencedby refid="torture__crypto_8c_1ac23c1def1c77b678622271fa1c5babb0" compoundref="torture__crypto_8c" startline="250" endline="284">torture_crypto_chacha20poly1305_bad_data</referencedby>
+        <referencedby refid="torture__crypto_8c_1ac5da76524302b35d696ae6c8052164a4" compoundref="torture__crypto_8c" startline="214" endline="248">torture_crypto_chacha20poly1305_bad_packet_length</referencedby>
+        <referencedby refid="torture__crypto_8c_1a96022dc24e9b9ff8d4c798457ef6cef8" compoundref="torture__crypto_8c" startline="286" endline="321">torture_crypto_chacha20poly1305_bad_tag</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1a318c7bbebc639712a4afeea8c13216f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__hmac__struct" kindref="compound">ssh_hmac_struct</ref> *</type>
+        <definition>struct ssh_hmac_struct* ssh_get_hmactab</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_get_hmactab</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="118" column="22" bodyfile="libssh-mirror/src/wrapper.c" bodystart="72" bodyend="74" declfile="libssh-mirror/include/libssh/wrapper.h" declline="118" declcolumn="22"/>
+        <references refid="wrapper_8c_1a88cd9d59b7bb7bfff0b3ad71c2623adc" compoundref="wrapper_8c" startline="58">ssh_hmac_tab</references>
+        <referencedby refid="wrapper_8c_1ad32e8a080951bc4a8b5a07d3e76517f1" compoundref="wrapper_8c" startline="233" endline="377">crypt_set_algorithms2</referencedby>
+        <referencedby refid="wrapper_8h_1ae29d7fc41c9735b510c34d3a2759b937" compoundref="wrapper_8c" startline="95" endline="105">ssh_hmac_type_to_string</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1aa8c597bf12b9fae942c265c6c8c5569d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref> *</type>
+        <definition>struct ssh_cipher_struct* ssh_get_ciphertab</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_get_ciphertab</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="119" column="24" declfile="libssh-mirror/include/libssh/wrapper.h" declline="119" declcolumn="24"/>
+        <referencedby refid="wrapper_8c_1ad863cdff7b24d1be51bc4e000014d699" compoundref="wrapper_8c" startline="108" endline="120">cipher_new</referencedby>
+        <referencedby refid="wrapper_8c_1ad32e8a080951bc4a8b5a07d3e76517f1" compoundref="wrapper_8c" startline="233" endline="377">crypt_set_algorithms2</referencedby>
+        <referencedby refid="torture__crypto_8c_1aba563ce4202b7c9f23f28dc39c6a0dd5" compoundref="torture__crypto_8c" startline="42" endline="59">get_cipher</referencedby>
+        <referencedby refid="group__libssh__pki_1gae8b8a710eea5b5c36c9e2416cc0734d7" compoundref="pki__container__openssh_8c" startline="101" endline="222">pki_private_key_decrypt</referencedby>
+        <referencedby refid="group__libssh__pki_1gad2addfee75214413f07493a89638350f" compoundref="pki__container__openssh_8c" startline="432" endline="524">pki_private_key_encrypt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="wrapper_8h_1ae29d7fc41c9735b510c34d3a2759b937" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_hmac_type_to_string</definition>
+        <argsstring>(enum ssh_hmac_e hmac_type, bool etm)</argsstring>
+        <name>ssh_hmac_type_to_string</name>
+        <param>
+          <type>enum <ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref></type>
+          <declname>hmac_type</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>etm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/wrapper.h" line="120" column="12" bodyfile="libssh-mirror/src/wrapper.c" bodystart="95" bodyend="105" declfile="libssh-mirror/include/libssh/wrapper.h" declline="120" declcolumn="12"/>
+        <references refid="structssh__hmac__struct_1a0696a624c034840b9ac85a5860f23155" compoundref="wrapper_8h" startline="56">ssh_hmac_struct::etm</references>
+        <references refid="structssh__hmac__struct_1a1593915afd0b0f0c32dd4e4078e5a0a7" compoundref="wrapper_8h" startline="55">ssh_hmac_struct::hmac_type</references>
+        <references refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" compoundref="samplesshd-kbdint_8c" startline="186">name</references>
+        <references refid="structssh__hmac__struct_1a5413f16eb64f3bd714c24e0a4da5dd63" compoundref="wrapper_8h" startline="54">ssh_hmac_struct::name</references>
+        <references refid="wrapper_8c_1a318c7bbebc639712a4afeea8c13216f6" compoundref="wrapper_8c" startline="72" endline="74">ssh_get_hmactab</references>
+        <referencedby refid="group__libssh__session_1ga293196b7f1b1653ff970b8206671def9" compoundref="session_8c" startline="435" endline="441">ssh_get_hmac_in</referencedby>
+        <referencedby refid="group__libssh__session_1ga2fc37631d6a350d9c31dcb336b98a836" compoundref="session_8c" startline="450" endline="456">ssh_get_hmac_out</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WRAPPER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WRAPPER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libcrypto_8h" kindref="compound">libssh/libcrypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libgcrypt_8h" kindref="compound">libssh/libgcrypt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libmbedcrypto_8h" kindref="compound">libssh/libmbedcrypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0" kindref="member">ssh_kdf_digest</ref><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a3e93dc05103dff0994a9e95777a036bb" kindref="member">SSH_KDF_SHA1</ref>=1,</highlight></codeline>
+<codeline lineno="34" refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a76b447d157b635e52dd612787bc9f7cc" kindref="member">SSH_KDF_SHA256</ref>,</highlight></codeline>
+<codeline lineno="35" refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0ae5eb46e93a2e0dd2917060a4ab1deeaf" kindref="member">SSH_KDF_SHA384</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" kindref="member">SSH_KDF_SHA512</ref></highlight></codeline>
+<codeline lineno="37" refid="wrapper_8h_1a72fb99af9793134870f8645a142b7de0a6ba12a29d170075867800bf29a635a95" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="40" refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa55d238e024d5057683e3e6d17730f0f7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa55d238e024d5057683e3e6d17730f0f7" kindref="member">SSH_HMAC_SHA1</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="41" refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa23072e9b7b8dbef9efd588e4182ccc5a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa23072e9b7b8dbef9efd588e4182ccc5a" kindref="member">SSH_HMAC_SHA256</ref>,</highlight></codeline>
+<codeline lineno="42" refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa143a1ef7b9ed8d1f2ae315cfb7c61ccd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa143a1ef7b9ed8d1f2ae315cfb7c61ccd" kindref="member">SSH_HMAC_SHA512</ref>,</highlight></codeline>
+<codeline lineno="43" refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa8f1a9d0b61ab4d99f92ad4db94044ff3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa8f1a9d0b61ab4d99f92ad4db94044ff3" kindref="member">SSH_HMAC_MD5</ref>,</highlight></codeline>
+<codeline lineno="44" refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa5f5e2a5804826d406571a97348abc67c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa5f5e2a5804826d406571a97348abc67c" kindref="member">SSH_HMAC_AEAD_POLY1305</ref>,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa90e7e6569a012ae42c94308a4875369f" kindref="member">SSH_HMAC_AEAD_GCM</ref></highlight></codeline>
+<codeline lineno="46" refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6aa90e7e6569a012ae42c94308a4875369f" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="wrapper_8h_1a972b17be894f22e360cd8b19abb47546" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a972b17be894f22e360cd8b19abb47546" kindref="member">ssh_des_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="49" refid="wrapper_8h_1a972b17be894f22e360cd8b19abb47546a568bb6037c5eeb20677f46b09f0c587d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a972b17be894f22e360cd8b19abb47546a568bb6037c5eeb20677f46b09f0c587d" kindref="member">SSH_3DES</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="wrapper_8h_1a972b17be894f22e360cd8b19abb47546a37102fa462670277c2633c132d27e118" kindref="member">SSH_DES</ref></highlight></codeline>
+<codeline lineno="51" refid="wrapper_8h_1a972b17be894f22e360cd8b19abb47546a37102fa462670277c2633c132d27e118" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structssh__hmac__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__hmac__struct" kindref="compound">ssh_hmac_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="54" refid="structssh__hmac__struct_1a1593915afd0b0f0c32dd4e4078e5a0a7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structssh__hmac__struct_1a5413f16eb64f3bd714c24e0a4da5dd63" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/><ref refid="structssh__hmac__struct_1a1593915afd0b0f0c32dd4e4078e5a0a7" kindref="member">hmac_type</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structssh__hmac__struct_1a0696a624c034840b9ac85a5860f23155" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structssh__hmac__struct_1a0696a624c034840b9ac85a5860f23155" kindref="member">etm</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9" kindref="member">ssh_crypto_direction_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a86b8de4a56d77c10ee93f4cb0ab82d71" kindref="member">SSH_DIRECTION_IN</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="61" refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9a4a51e00d57fa481f88149a9d7cd83c91" kindref="member">SSH_DIRECTION_OUT</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="62" refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9af69cd5e570bff317e82374ba8100e2d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1a9ebe789b5f29a369c7799ec6ce17f1a9af69cd5e570bff317e82374ba8100e2d4" kindref="member">SSH_DIRECTION_BOTH</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="wrapper_8h_1a756959168f0c553560ddd06d36fca1a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__mac__ctx__struct" kindref="compound">ssh_mac_ctx_struct</ref><sp/>*<ref refid="wrapper_8h_1a756959168f0c553560ddd06d36fca1a7" kindref="member">ssh_mac_ctx</ref>;</highlight></codeline>
+<codeline lineno="69" refid="wrapper_8h_1ae89783901ebac520286020a4f0586ee5" refkind="member"><highlight class="normal">MD5CTX<sp/><ref refid="wrapper_8h_1ae89783901ebac520286020a4f0586ee5" kindref="member">md5_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70" refid="wrapper_8h_1aad8f8cb0fa94280b84f40f09288ad44e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1aad8f8cb0fa94280b84f40f09288ad44e" kindref="member">md5_update</ref>(MD5CTX<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="71" refid="wrapper_8h_1a03fc66bb771519f69a5a19c65c87d69e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a03fc66bb771519f69a5a19c65c87d69e" kindref="member">md5_final</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md,MD5CTX<sp/>c);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="wrapper_8h_1aaa356855efc0e302d70d5c6d5a0afdb2" refkind="member"><highlight class="normal">SHACTX<sp/><ref refid="wrapper_8h_1aaa356855efc0e302d70d5c6d5a0afdb2" kindref="member">sha1_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74" refid="wrapper_8h_1a9122cd0a3877f98f203e37f2a8f24b06" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a9122cd0a3877f98f203e37f2a8f24b06" kindref="member">sha1_update</ref>(SHACTX<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="75" refid="wrapper_8h_1a12807e522a1bc08649a75dedc52e3c8e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a12807e522a1bc08649a75dedc52e3c8e" kindref="member">sha1_final</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md,SHACTX<sp/>c);</highlight></codeline>
+<codeline lineno="76" refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a13a88355c3f8f273ce90235f8e562a63" kindref="member">sha1</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*digest,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="wrapper_8h_1a50c68215312562fbbaf194bb850a08da" refkind="member"><highlight class="normal">SHA256CTX<sp/><ref refid="wrapper_8h_1a50c68215312562fbbaf194bb850a08da" kindref="member">sha256_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79" refid="wrapper_8h_1a5a746a5d9606298ed5adc22b425427dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a5a746a5d9606298ed5adc22b425427dd" kindref="member">sha256_update</ref>(SHA256CTX<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="80" refid="wrapper_8h_1abb61e25e539f07b3b2a9e9a9b78dad2e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1abb61e25e539f07b3b2a9e9a9b78dad2e" kindref="member">sha256_final</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md,SHA256CTX<sp/>c);</highlight></codeline>
+<codeline lineno="81" refid="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1ae6cc8bca6f3cd36da02b85c3fbffaf12" kindref="member">sha256</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*digest,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="wrapper_8h_1af92a362de37b25df0c92b3d2d80b6b64" refkind="member"><highlight class="normal">SHA384CTX<sp/><ref refid="wrapper_8h_1af92a362de37b25df0c92b3d2d80b6b64" kindref="member">sha384_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84" refid="wrapper_8h_1a8b068dd66d5047a305748e38618f6cd4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a8b068dd66d5047a305748e38618f6cd4" kindref="member">sha384_update</ref>(SHA384CTX<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="85" refid="wrapper_8h_1acec7806afa90b1232e854379ad4f6233" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1acec7806afa90b1232e854379ad4f6233" kindref="member">sha384_final</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md,SHA384CTX<sp/>c);</highlight></codeline>
+<codeline lineno="86" refid="wrapper_8h_1a332dfc8369578811749a2bd10f29ba59" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a332dfc8369578811749a2bd10f29ba59" kindref="member">sha384</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*digest,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" refkind="member"><highlight class="normal">SHA512CTX<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89" refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(SHA512CTX<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="90" refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md,SHA512CTX<sp/>c);</highlight></codeline>
+<codeline lineno="91" refid="wrapper_8h_1ae89b582acc2fcf9f268e244908bec33c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1ae89b582acc2fcf9f268e244908bec33c" kindref="member">sha512</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*digest,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="wrapper_8h_1ae8cd71b294e1eaec95b6e82b20192bf1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1ae8cd71b294e1eaec95b6e82b20192bf1" kindref="member">evp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nid,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*digest,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*hlen);</highlight></codeline>
+<codeline lineno="94" refid="wrapper_8h_1ada1e1ee732b3bd524284b32178e0252d" refkind="member"><highlight class="normal">EVPCTX<sp/><ref refid="wrapper_8h_1ada1e1ee732b3bd524284b32178e0252d" kindref="member">evp_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nid);</highlight></codeline>
+<codeline lineno="95" refid="wrapper_8h_1ac6ea9e8ecd1ddbd3702cb09a1fa75fd0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1ac6ea9e8ecd1ddbd3702cb09a1fa75fd0" kindref="member">evp_update</ref>(EVPCTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="96" refid="wrapper_8h_1a6c705909707dbf153daaf168be09e515" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a6c705909707dbf153daaf168be09e515" kindref="member">evp_final</ref>(EVPCTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*md,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*mdlen);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="wrapper_8h_1ab8aa5c2c9844d6e52ce9b250df8a9041" refkind="member"><highlight class="normal">HMACCTX<sp/><ref refid="wrapper_8h_1ab8aa5c2c9844d6e52ce9b250df8a9041" kindref="member">hmac_init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>type);</highlight></codeline>
+<codeline lineno="99" refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a7d55e61ee55f8e6e1230c84a5c22b520" kindref="member">hmac_update</ref>(HMACCTX<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="100" refid="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a0e829b6ecab93b0a02ba2f89899da299" kindref="member">hmac_final</ref>(HMACCTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hashmacbuf,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*len);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a9a5068e440aa6353ea6969f8f007d227" kindref="member">hmac_digest_len</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>type);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="wrapper_8h_1ad9414083e28fa1900965b57b087b9df9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1ad9414083e28fa1900965b57b087b9df9" kindref="member">ssh_kdf</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>key_len,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key_type,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>requested_len);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1aa5c258d97a1e3278fdc43a09a4970fab" kindref="member">crypt_set_algorithms_client</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="109" refid="wrapper_8h_1a0d1d5ba8b1aa92198d65aa7a173dd758" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a0d1d5ba8b1aa92198d65aa7a173dd758" kindref="member">crypt_set_algorithms_server</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*<ref refid="wrapper_8h_1a0a3d255d6f354747a39476981074b8f3" kindref="member">crypto_new</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a9cea366077f4498746e7e448cf21ac0d" kindref="member">crypto_free</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__crypto__struct" kindref="compound">ssh_crypto_struct</ref><sp/>*crypto);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="wrapper_8h_1a6fc4e0eb0333ffb1ce2fe4f768dad084" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a6fc4e0eb0333ffb1ce2fe4f768dad084" kindref="member">ssh_reseed</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114" refid="wrapper_8h_1a85862055a818ffd18e9ab3cfd90d6419" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a85862055a818ffd18e9ab3cfd90d6419" kindref="member">ssh_crypto_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115" refid="wrapper_8h_1aab642f57bab0ffe271a4e2dae28c94e5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1aab642f57bab0ffe271a4e2dae28c94e5" kindref="member">ssh_crypto_finalize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a1e2cfae9bf8e464629791db0e415fac0" kindref="member">ssh_cipher_clear</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*cipher);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__hmac__struct" kindref="compound">ssh_hmac_struct</ref><sp/>*<ref refid="wrapper_8h_1a318c7bbebc639712a4afeea8c13216f6" kindref="member">ssh_get_hmactab</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119" refid="wrapper_8h_1aa8c597bf12b9fae942c265c6c8c5569d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__cipher__struct" kindref="compound">ssh_cipher_struct</ref><sp/>*<ref refid="wrapper_8h_1aa8c597bf12b9fae942c265c6c8c5569d" kindref="member">ssh_get_ciphertab</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="wrapper_8h_1ae29d7fc41c9735b510c34d3a2759b937" kindref="member">ssh_hmac_type_to_string</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wrapper_8h_1a23eb7bb01b7f804d688feff35807fa6a" kindref="member">ssh_hmac_e</ref><sp/>hmac_type,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>etm);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WRAPPER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/wrapper.h"/>
+  </compounddef>
+</doxygen>

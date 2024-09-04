@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pkd__util_8c" kind="file" language="C++">
+    <compoundname>pkd_util.c</compoundname>
+    <includes local="no">errno.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="string_8h" local="no">string.h</includes>
+    <includes local="no">sys/wait.h</includes>
+    <includes refid="pkd__client_8h" local="yes">pkd_client.h</includes>
+    <includes refid="pkd__util_8h" local="yes">pkd_util.h</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>sys/select.h</label>
+      </node>
+      <node id="1">
+        <label>tests/pkd/pkd_util.c</label>
+        <link refid="pkd__util_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pkd_util.h</label>
+        <link refid="pkd__util_8h"/>
+      </node>
+      <node id="8">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>errno.h</label>
+      </node>
+      <node id="17">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>netdb.h</label>
+      </node>
+      <node id="3">
+        <label>limits.h</label>
+      </node>
+      <node id="13">
+        <label>sys/types.h</label>
+      </node>
+      <node id="10">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>signal.h</label>
+      </node>
+      <node id="19">
+        <label>pkd_client.h</label>
+        <link refid="pkd__client_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>sys/wait.h</label>
+      </node>
+      <node id="11">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="21">
+        <label>tests_config.h</label>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pkd__util_8c_1acf65e484ea127f4b225184a90bb678d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int system_checked</definition>
+        <argsstring>(const char *cmd)</argsstring>
+        <name>system_checked</name>
+        <param>
+          <type>const char *</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+<para>runs system(3); exits if that is interrupted with SIGINT/QUIT </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 upon success, non-zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_util.c" line="22" column="5" bodyfile="tests/pkd/pkd_util.c" bodystart="22" bodyend="35"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" compoundref="pkd__util_8c" startline="37" endline="41">bin_exists</referencedby>
+        <referencedby refid="pkd__hello_8c_1a7222dcdba7d5c75f19ab7f7a01f4c3b5" compoundref="pkd__hello_8c" startline="961" endline="965">pkd_rmfiles</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a6d0bc762949147235629d6284381f36b" compoundref="pkd__keyutil_8c" startline="202" endline="209">setup_dropbear_client_rsa_key</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a3ae4d39c9a615e4437e8813bf9d8b087" compoundref="pkd__keyutil_8c" startline="54" endline="72">setup_ecdsa_keys</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a0ef31e42db803b76cf938cf5004d796b" compoundref="pkd__keyutil_8c" startline="34" endline="41">setup_ed25519_key</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a5fea363e4e2b008230b5c1f1b2c2ab45" compoundref="pkd__keyutil_8c" startline="94" endline="185">setup_openssh_client_keys</referencedby>
+        <referencedby refid="pkd__keyutil_8c_1a8771b1145156761f8c375cb182205b4a" compoundref="pkd__keyutil_8c" startline="25" endline="32">setup_rsa_key</referencedby>
+        <referencedby refid="pkd__hello_8c_1a309149b5cc3377b93dcb9d7557d42340" compoundref="pkd__hello_8c" startline="576" endline="595">torture_pkd_runtest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int bin_exists</definition>
+        <argsstring>(const char *binary)</argsstring>
+        <name>bin_exists</name>
+        <param>
+          <type>const char *</type>
+          <declname>binary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_util.c" line="37" column="12" bodyfile="tests/pkd/pkd_util.c" bodystart="37" bodyend="41"/>
+        <references refid="pkd__util_8c_1acf65e484ea127f4b225184a90bb678d3" compoundref="pkd__util_8c" startline="22" endline="35">system_checked</references>
+        <referencedby refid="pkd__util_8c_1ab60e11a5644a040e4130e74e6212572e" compoundref="pkd__util_8c" startline="111" endline="113">is_dropbear_client_enabled</referencedby>
+        <referencedby refid="pkd__util_8c_1a6cd34e17c578b6d8588ff89683fd4770" compoundref="pkd__util_8c" startline="105" endline="109">is_openssh_client_enabled</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pkd__util_8c_1a6ab56c35a836c6015f70ee35a59b3b66" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int is_openssh_client_new_enough</definition>
+        <argsstring>(void)</argsstring>
+        <name>is_openssh_client_new_enough</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_util.c" line="43" column="12" bodyfile="tests/pkd/pkd_util.c" bodystart="43" bodyend="103"/>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="pkd__util_8c_1a6cd34e17c578b6d8588ff89683fd4770" compoundref="pkd__util_8c" startline="105" endline="109">is_openssh_client_enabled</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pkd__util_8c_1a6cd34e17c578b6d8588ff89683fd4770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int is_openssh_client_enabled</definition>
+        <argsstring>(void)</argsstring>
+        <name>is_openssh_client_enabled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_util.c" line="105" column="5" bodyfile="tests/pkd/pkd_util.c" bodystart="105" bodyend="109"/>
+        <references refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" compoundref="pkd__util_8c" startline="37" endline="41">bin_exists</references>
+        <references refid="pkd__util_8c_1a6ab56c35a836c6015f70ee35a59b3b66" compoundref="pkd__util_8c" startline="43" endline="103">is_openssh_client_new_enough</references>
+        <references refid="pkd__client_8h_1a5b07caeb6fb0f0b8c36e2951431f3157" compoundref="pkd__client_8h" startline="16">OPENSSH_BINARY</references>
+        <references refid="pkd__client_8h_1a517638571aacce544defbd9c2632f7a0" compoundref="pkd__client_8h" startline="17">OPENSSH_KEYGEN</references>
+        <referencedby refid="pkd__hello_8c_1a5e7c1318bf40ef5dbeda5e1d1b910398" compoundref="pkd__hello_8c" startline="760" endline="924">pkd_run_tests</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pkd__util_8c_1ab60e11a5644a040e4130e74e6212572e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int is_dropbear_client_enabled</definition>
+        <argsstring>(void)</argsstring>
+        <name>is_dropbear_client_enabled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_util.c" line="111" column="5" bodyfile="tests/pkd/pkd_util.c" bodystart="111" bodyend="113"/>
+        <references refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" compoundref="pkd__util_8c" startline="37" endline="41">bin_exists</references>
+        <references refid="pkd__client_8h_1aa3d1b80969b8e5163470eaa3d586e243" compoundref="pkd__client_8h" startline="64">DROPBEAR_BINARY</references>
+        <references refid="pkd__client_8h_1a2d4973448bae5cfd801f709bc7343b2c" compoundref="pkd__client_8h" startline="65">DROPBEAR_KEYGEN</references>
+        <referencedby refid="pkd__hello_8c_1a5e7c1318bf40ef5dbeda5e1d1b910398" compoundref="pkd__hello_8c" startline="760" endline="924">pkd_run_tests</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>pkd_util.c<sp/>--<sp/>pkd<sp/>utilities</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>(c)<sp/>2014,<sp/>2018<sp/>Jon<sp/>Simons<sp/>&lt;jon@jonsimons.org&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="string_8h" kindref="compound">string.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/wait.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pkd__client_8h" kindref="compound">pkd_client.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pkd__util_8h" kindref="compound">pkd_util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="pkd__util_8c_1acf65e484ea127f4b225184a90bb678d3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8c_1acf65e484ea127f4b225184a90bb678d3" kindref="member">system_checked</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*cmd)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>system(cmd);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(WIFSIGNALED(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((WTERMSIG(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>)<sp/>==<sp/>SIGINT)<sp/>||<sp/>(WTERMSIG(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>)<sp/>==<sp/>SIGQUIT)))<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>WEXITSTATUS(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" kindref="member">bin_exists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*binary)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>bin[1024]<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(&amp;bin[0],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(bin),<sp/></highlight><highlight class="stringliteral">&quot;type<sp/>%s<sp/>1&gt;/dev/null<sp/>2&gt;/dev/null&quot;</highlight><highlight class="normal">,<sp/>binary);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="pkd__util_8c_1acf65e484ea127f4b225184a90bb678d3" kindref="member">system_checked</ref>(bin)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="pkd__util_8c_1a6ab56c35a836c6015f70ee35a59b3b66" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8c_1a6ab56c35a836c6015f70ee35a59b3b66" kindref="member">is_openssh_client_new_enough</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fp<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>version_buff[1024]<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*version;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version_ok<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>major<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tmp<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(version_ok)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>version_ok;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>fp<sp/>=<sp/>popen(</highlight><highlight class="stringliteral">&quot;ssh<sp/>-V<sp/>2&gt;&amp;1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fp<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>get<sp/>OpenSSH<sp/>client<sp/>version\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>done;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fgets(&amp;version_buff[0],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(version_buff),<sp/>fp)<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>get<sp/>OpenSSH<sp/>client<sp/>version<sp/>string\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>errfgets;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>version<sp/>=<sp/>strstr(version_buff,<sp/></highlight><highlight class="stringliteral">&quot;OpenSSH&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(version<sp/>==<sp/>NULL);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>&quot;OpenSSH_&lt;major&gt;.&lt;minor&gt;&lt;SP&gt;...&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen(version)<sp/>&lt;<sp/>11)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>errversion;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Extract<sp/>major.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>major<sp/>=<sp/>strtoul(version<sp/>+<sp/>8,<sp/>&amp;tmp,<sp/>10);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((tmp<sp/>==<sp/>(version<sp/>+<sp/>8))<sp/>||</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((errno<sp/>==<sp/>ERANGE)<sp/>&amp;&amp;<sp/>(major<sp/>==<sp/>ULONG_MAX))<sp/>||</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((errno<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(major<sp/>==<sp/>0))<sp/>||</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((major<sp/>&lt;<sp/>1)<sp/>||<sp/>(major<sp/>&gt;<sp/>100)))<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>parse<sp/>OpenSSH<sp/>client<sp/>version,<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;errno<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>errno);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>errversion;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(major<sp/>&lt;<sp/>7)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>minimum<sp/>OpenSSH<sp/>client<sp/>version<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;required<sp/>is<sp/>7,<sp/>found:<sp/>%ld\n&quot;</highlight><highlight class="normal">,<sp/>major);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>errversion;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>version_ok<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">errversion:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">errfgets:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>pclose(fp);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>get<sp/>OpenSSH<sp/>client<sp/>version:<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">done:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>version_ok;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="pkd__util_8c_1a6cd34e17c578b6d8588ff89683fd4770" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8c_1a6cd34e17c578b6d8588ff89683fd4770" kindref="member">is_openssh_client_enabled</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" kindref="member">bin_exists</ref>(<ref refid="pkd__client_8h_1a5b07caeb6fb0f0b8c36e2951431f3157" kindref="member">OPENSSH_BINARY</ref>)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" kindref="member">bin_exists</ref>(<ref refid="pkd__client_8h_1a517638571aacce544defbd9c2632f7a0" kindref="member">OPENSSH_KEYGEN</ref>)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__util_8c_1a6ab56c35a836c6015f70ee35a59b3b66" kindref="member">is_openssh_client_new_enough</ref>());</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="pkd__util_8c_1ab60e11a5644a040e4130e74e6212572e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__util_8c_1ab60e11a5644a040e4130e74e6212572e" kindref="member">is_dropbear_client_enabled</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" kindref="member">bin_exists</ref>(<ref refid="pkd__client_8h_1aa3d1b80969b8e5163470eaa3d586e243" kindref="member">DROPBEAR_BINARY</ref>)<sp/>&amp;&amp;<sp/><ref refid="pkd__util_8c_1a9bba162048bb708870b400a3690e08c9" kindref="member">bin_exists</ref>(<ref refid="pkd__client_8h_1a2d4973448bae5cfd801f709bc7343b2c" kindref="member">DROPBEAR_KEYGEN</ref>));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/pkd/pkd_util.c"/>
+  </compounddef>
+</doxygen>

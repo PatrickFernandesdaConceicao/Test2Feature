@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="torture__pki_8h" kind="file" language="C++">
+    <compoundname>torture_pki.h</compoundname>
+    <includedby refid="torture__pki_8c" local="yes">tests/torture_pki.c</includedby>
+    <includedby refid="unittests_2torture__pki_8c" local="yes">tests/unittests/torture_pki.c</includedby>
+    <includedby refid="torture__pki__dsa_8c" local="yes">tests/unittests/torture_pki_dsa.c</includedby>
+    <includedby refid="torture__pki__ecdsa_8c" local="yes">tests/unittests/torture_pki_ecdsa.c</includedby>
+    <includedby refid="torture__pki__ecdsa__uri_8c" local="yes">tests/unittests/torture_pki_ecdsa_uri.c</includedby>
+    <includedby refid="torture__pki__ed25519_8c" local="yes">tests/unittests/torture_pki_ed25519.c</includedby>
+    <includedby refid="torture__pki__rsa_8c" local="yes">tests/unittests/torture_pki_rsa.c</includedby>
+    <includedby refid="torture__pki__rsa__uri_8c" local="yes">tests/unittests/torture_pki_rsa_uri.c</includedby>
+    <includedby refid="torture__threads__pki__rsa_8c" local="yes">tests/unittests/torture_threads_pki_rsa.c</includedby>
+    <invincdepgraph>
+      <node id="8">
+        <label>tests/unittests/torture_pki_rsa.c</label>
+        <link refid="torture__pki__rsa_8c"/>
+      </node>
+      <node id="5">
+        <label>tests/unittests/torture_pki_ecdsa.c</label>
+        <link refid="torture__pki__ecdsa_8c"/>
+      </node>
+      <node id="6">
+        <label>tests/unittests/torture_pki_ecdsa_uri.c</label>
+        <link refid="torture__pki__ecdsa__uri_8c"/>
+      </node>
+      <node id="4">
+        <label>tests/unittests/torture_pki_dsa.c</label>
+        <link refid="torture__pki__dsa_8c"/>
+      </node>
+      <node id="3">
+        <label>tests/unittests/torture_pki.c</label>
+        <link refid="unittests_2torture__pki_8c"/>
+      </node>
+      <node id="10">
+        <label>tests/unittests/torture_threads_pki_rsa.c</label>
+        <link refid="torture__threads__pki__rsa_8c"/>
+      </node>
+      <node id="7">
+        <label>tests/unittests/torture_pki_ed25519.c</label>
+        <link refid="torture__pki__ed25519_8c"/>
+      </node>
+      <node id="9">
+        <label>tests/unittests/torture_pki_rsa_uri.c</label>
+        <link refid="torture__pki__rsa__uri_8c"/>
+      </node>
+      <node id="2">
+        <label>tests/torture_pki.c</label>
+        <link refid="torture__pki_8c"/>
+      </node>
+      <node id="1">
+        <label>tests/torture_pki.h</label>
+        <link refid="torture__pki_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="torture__pki_8h_1a5d49720f3282d89456bd689195b5a6dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* torture_pki_read_file</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>torture_pki_read_file</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/torture_pki.h" line="1" column="6" bodyfile="tests/torture_pki.c" bodystart="22" bodyend="60" declfile="tests/torture_pki.h" declline="1" declcolumn="6"/>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="torture__threads__pki__rsa_8c_1a772735aa4bc0d085025c43ec601e131f" compoundref="torture__threads__pki__rsa_8c" startline="255" endline="285">thread_pki_rsa_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a363d69aeff024124f249836eba17de2a" compoundref="torture__pki__ecdsa_8c" startline="221" endline="242">torture_pki_ecdsa_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a66d1fea9a02a99198d49a0bab8137bb2" compoundref="torture__pki__ecdsa_8c" startline="244" endline="273">torture_pki_ecdsa_import_privkey_base64_comment</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a287d309a6e9d25d2c57ee4fd7cb3d83c" compoundref="torture__pki__ecdsa_8c" startline="275" endline="304">torture_pki_ecdsa_import_privkey_base64_whitespace</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1af0543a9b7a50843b7d949e810d4f8efe" compoundref="torture__pki__ecdsa_8c" startline="353" endline="393">torture_pki_ecdsa_publickey_base64</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a678bb5fc3cb7cdb348b28871b4235fee" compoundref="torture__pki__ecdsa_8c" startline="307" endline="331">torture_pki_ecdsa_publickey_from_privatekey</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3fb35e2d5a1771b2634293d9d98ba2b8" compoundref="torture__pki__ed25519_8c" startline="121" endline="150">torture_pki_ed25519_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3ec02b604003a154dcd2f5f9ca3510f5" compoundref="torture__pki__ed25519_8c" startline="152" endline="189">torture_pki_ed25519_import_privkey_base64_comment</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1acee4117de89206b23a3accf8f1fe0f2f" compoundref="torture__pki__ed25519_8c" startline="191" endline="228">torture_pki_ed25519_import_privkey_base64_whitespace</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1a0d1a8451a47db3e614c4bc227919b7df" compoundref="torture__pki__rsa_8c" startline="186" endline="214">torture_pki_rsa_import_privkey_base64</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1a2c3889e8423e999f51c8ff8aa0a4122a" compoundref="torture__pki__rsa_8c" startline="216" endline="252">torture_pki_rsa_import_privkey_base64_comment</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1a7b62bc1a850c745fbd59f75b4f934a72" compoundref="torture__pki__rsa_8c" startline="254" endline="290">torture_pki_rsa_import_privkey_base64_whitespace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__pki_8h_1acd426033c68a568e2cc262fa84b7abe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int torture_read_one_line</definition>
+        <argsstring>(const char *filename, char *buffer, size_t len)</argsstring>
+        <name>torture_read_one_line</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/torture_pki.h" line="2" column="5" bodyfile="tests/torture_pki.c" bodystart="62" bodyend="82" declfile="tests/torture_pki.h" declline="2" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <referencedby refid="torture__pki__dsa_8c_1a7a8dc756ca36c97ff595b7920e78141a" compoundref="torture__pki__dsa_8c" startline="699" endline="739">torture_pki_dsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a22ba49e4dec6d610c2e484ae909fb205" compoundref="torture__pki__ecdsa_8c" startline="395" endline="438">torture_pki_ecdsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ecdsa__uri_8c_1a009cf2bdaeaeb2d0645e7ef26aa0f68a" compoundref="torture__pki__ecdsa__uri_8c" startline="159" endline="217">torture_pki_ecdsa_publickey_from_privatekey_uri</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3cd812d589795ecc52564cbfb198c12f" compoundref="torture__pki__ed25519_8c" startline="376" endline="415">torture_pki_ed25519_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1af09fa6043d2157e4244c66bd9e964cbf" compoundref="torture__pki__rsa_8c" startline="443" endline="482">torture_pki_rsa_generate_pubkey_from_privkey</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="torture__pki_8h_1a0afdc77a108f75aaa1e2afc38f584149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t torture_pubkey_len</definition>
+        <argsstring>(const char *pubkey)</argsstring>
+        <name>torture_pubkey_len</name>
+        <param>
+          <type>const char *</type>
+          <declname>pubkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/torture_pki.h" line="3" column="8" bodyfile="tests/torture_pki.c" bodystart="89" bodyend="102" declfile="tests/torture_pki.h" declline="3" declcolumn="8"/>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" compoundref="curve25519-sha256_0dlibssh_8org_8txt" startline="93">pubkey</references>
+        <referencedby refid="torture__pki__dsa_8c_1a7a8dc756ca36c97ff595b7920e78141a" compoundref="torture__pki__dsa_8c" startline="699" endline="739">torture_pki_dsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ecdsa_8c_1a22ba49e4dec6d610c2e484ae909fb205" compoundref="torture__pki__ecdsa_8c" startline="395" endline="438">torture_pki_ecdsa_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__ed25519_8c_1a3cd812d589795ecc52564cbfb198c12f" compoundref="torture__pki__ed25519_8c" startline="376" endline="415">torture_pki_ed25519_generate_pubkey_from_privkey</referencedby>
+        <referencedby refid="torture__pki__rsa_8c_1af09fa6043d2157e4244c66bd9e964cbf" compoundref="torture__pki__rsa_8c" startline="443" endline="482">torture_pki_rsa_generate_pubkey_from_privkey</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="torture__pki_8h_1a5d49720f3282d89456bd689195b5a6dc" kindref="member">torture_pki_read_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="torture__pki_8h_1acd426033c68a568e2cc262fa84b7abe2" kindref="member">torture_read_one_line</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="torture__pki_8h_1a0afdc77a108f75aaa1e2afc38f584149" kindref="member">torture_pubkey_len</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a555595207a1407936ebb264ebdbf434c" kindref="member">pubkey</ref>);</highlight></codeline>
+    </programlisting>
+    <location file="tests/torture_pki.h"/>
+  </compounddef>
+</doxygen>

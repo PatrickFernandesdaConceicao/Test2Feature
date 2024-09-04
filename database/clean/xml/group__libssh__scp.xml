@@ -1,0 +1,1167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__libssh__scp" kind="group">
+    <compoundname>libssh_scp</compoundname>
+    <title>The SSH scp functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+        <definition>ssh_scp ssh_scp_new</definition>
+        <argsstring>(ssh_session session, int mode, const char *location)</argsstring>
+        <name>ssh_scp_new</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+<para>Create a new scp session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSH session to use.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of SSH_SCP_WRITE or SSH_SCP_READ, depending if you need to drop files remotely or read them. It is not possible to combine read and write. SSH_SCP_RECURSIVE Flag can be or&apos;ed to this to indicate that you&apos;re going to use recursion. Browsing through directories is not possible without this.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory in which write or read will be done. Any push or pull will be relative to this place. This can also be a pattern of files to download (read).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A ssh_scp handle, NULL if the creation was impossible. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="61" column="9" bodyfile="src/scp.c" bodystart="61" bodyend="108"/>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="structssh__scp__struct_1a1341bf622b8bdeea8fecf9b1bd843890" compoundref="scp_8h" startline="40">ssh_scp_struct::location</references>
+        <references refid="structssh__scp__struct_1a26d96c11a255881f400d7abe614650e8" compoundref="scp_8h" startline="37">ssh_scp_struct::mode</references>
+        <references refid="structssh__scp__struct_1abdd4a4813d8b92a6fff710bacc15f49a" compoundref="scp_8h" startline="38">ssh_scp_struct::recursive</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" compoundref="scp_8c" startline="286" endline="304">ssh_scp_free</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5faec68abd66d1c5386f6b6a4daf06299c4" compoundref="scp_8h" startline="25">SSH_SCP_NEW</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5aa2d96fd7ece9f3b0c17359746867e4df" compoundref="libssh_8h" startline="428">SSH_SCP_READ</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5aca105e99ebfc586789d57700de5036ac" compoundref="libssh_8h" startline="429">SSH_SCP_RECURSIVE</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5a869c4d02c7a4b9ece1e5134dc1724061" compoundref="libssh_8h" startline="426">SSH_SCP_WRITE</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+        <referencedby refid="torture__scp_8c_1ae84c81f735a3f0cf4f3085bd6a016962" compoundref="torture__scp_8c" startline="149" endline="210">torture_scp_upload</referencedby>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_init</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_init</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the scp channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp context to initialize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success or an SSH error code.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" kindref="member">ssh_scp_new()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="119" column="5" bodyfile="src/scp.c" bodystart="119" bodyend="230"/>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="structssh__scp__struct_1a1341bf622b8bdeea8fecf9b1bd843890" compoundref="scp_8h" startline="40">ssh_scp_struct::location</references>
+        <references refid="structssh__scp__struct_1a26d96c11a255881f400d7abe614650e8" compoundref="scp_8h" startline="37">ssh_scp_struct::mode</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1abdd4a4813d8b92a6fff710bacc15f49a" compoundref="scp_8h" startline="38">ssh_scp_struct::recursive</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" compoundref="channels_8c" startline="920" endline="930">ssh_channel_open_session</references>
+        <references refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" compoundref="channels_8c" startline="2568" endline="2603">ssh_channel_request_exec</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a5e4247396f11fdc228d356a408c81715" compoundref="libssh_8h" startline="374">SSH_LOG_DEBUG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__misc_1ga3a7b41aee872513df2e3de6cdf22ec5d" compoundref="misc_8c" startline="1540" endline="1693">ssh_quote_file_name</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5faec68abd66d1c5386f6b6a4daf06299c4" compoundref="scp_8h" startline="25">SSH_SCP_NEW</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa77f02bc6ce75a1dcbc9d2a3cf760d094" compoundref="scp_8h" startline="28">SSH_SCP_READ_INITED</references>
+        <references refid="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" compoundref="scp_8c" startline="574" endline="628">ssh_scp_response</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5a869c4d02c7a4b9ece1e5134dc1724061" compoundref="libssh_8h" startline="426">SSH_SCP_WRITE</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa435179ee058f33a2b8eeb609da279a57" compoundref="scp_8h" startline="26">SSH_SCP_WRITE_INITED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+        <referencedby refid="torture__scp_8c_1ae84c81f735a3f0cf4f3085bd6a016962" compoundref="torture__scp_8c" startline="149" endline="210">torture_scp_upload</referencedby>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_close</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_close</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Close the scp channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp context to close.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK on success or an SSH error code.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" kindref="member">ssh_scp_init()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="241" column="5" bodyfile="src/scp.c" bodystart="241" bodyend="277"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="group__libssh__channel_1ga238f07e0455456a5bfd8a49ead917732" compoundref="channels_8c" startline="1285" endline="1336">ssh_channel_close</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__channel_1gab535264029443d77214c0615a0788b0a" compoundref="channels_8c" startline="1596" endline="1608">ssh_channel_is_eof</references>
+        <references refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" compoundref="channels_8c" startline="2831" endline="2838">ssh_channel_read</references>
+        <references refid="group__libssh__channel_1ga072f82fdf3e50514f747653af2c99004" compoundref="channels_8c" startline="1224" endline="1270">ssh_channel_send_eof</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5faec68abd66d1c5386f6b6a4daf06299c4" compoundref="scp_8h" startline="25">SSH_SCP_NEW</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" compoundref="scp_8c" startline="286" endline="304">ssh_scp_free</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+        <referencedby refid="torture__scp_8c_1ae84c81f735a3f0cf4f3085bd6a016962" compoundref="torture__scp_8c" startline="149" endline="210">torture_scp_upload</referencedby>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_scp_free</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_free</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Free a scp context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to free.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" kindref="member">ssh_scp_new()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="286" column="6" bodyfile="src/scp.c" bodystart="286" bodyend="304"/>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="structssh__scp__struct_1a1341bf622b8bdeea8fecf9b1bd843890" compoundref="scp_8h" startline="40">ssh_scp_struct::location</references>
+        <references refid="structssh__scp__struct_1ac408595fd2827a307ef9d29caf108ca8" compoundref="scp_8h" startline="45">ssh_scp_struct::request_name</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" compoundref="scp_8c" startline="241" endline="277">ssh_scp_close</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5faec68abd66d1c5386f6b6a4daf06299c4" compoundref="scp_8h" startline="25">SSH_SCP_NEW</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <references refid="structssh__scp__struct_1a65f2e025f7a64951a178bf7a6ee44441" compoundref="scp_8h" startline="46">ssh_scp_struct::warning</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" compoundref="scp_8c" startline="61" endline="108">ssh_scp_new</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+        <referencedby refid="torture__scp_8c_1ae84c81f735a3f0cf4f3085bd6a016962" compoundref="torture__scp_8c" startline="149" endline="210">torture_scp_upload</referencedby>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gaa584f03d4e3d582ac10a3a19818ec56d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_push_directory</definition>
+        <argsstring>(ssh_scp scp, const char *dirname, int mode)</argsstring>
+        <name>ssh_scp_push_directory</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>dirname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Create a directory in a scp in sink mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dirname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the directory being created.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UNIX permissions for the new directory, e.g. 0755.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the directory has been created, SSH_ERROR if an error occured.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1ga2ca698c1e49612c083d9f8a72df52188" kindref="member">ssh_scp_leave_directory()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="320" column="5" bodyfile="src/scp.c" bodystart="320" bodyend="399"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__misc_1ga83b053a8bdf80eea5ebc662e5098a52b" compoundref="misc_8c" startline="902" endline="940">ssh_basename</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="group__libssh__misc_1gab037701ea7c4084918793a839fcdc767" compoundref="misc_8c" startline="1710" endline="1736">ssh_newline_vis</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" compoundref="scp_8c" startline="574" endline="628">ssh_scp_response</references>
+        <references refid="group__libssh__scp_1ga8772a6523a2a21a06e3986dbcc02118f" compoundref="scp_8c" startline="1095" endline="1100">ssh_scp_string_mode</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa435179ee058f33a2b8eeb609da279a57" compoundref="scp_8h" startline="26">SSH_SCP_WRITE_INITED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga2ca698c1e49612c083d9f8a72df52188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_leave_directory</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_leave_directory</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Leave a directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SSH_OK if the directory has been left, SSH_ERROR if an error occured.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1gaa584f03d4e3d582ac10a3a19818ec56d" kindref="member">ssh_scp_push_directory()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="409" column="5" bodyfile="src/scp.c" bodystart="409" bodyend="436"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" compoundref="scp_8c" startline="574" endline="628">ssh_scp_response</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa435179ee058f33a2b8eeb609da279a57" compoundref="scp_8h" startline="26">SSH_SCP_WRITE_INITED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga50b701b9c8923011d4fc6489c9c7eaae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_push_file64</definition>
+        <argsstring>(ssh_scp scp, const char *filename, uint64_t size, int mode)</argsstring>
+        <name>ssh_scp_push_file64</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the sending of a file to a scp in sink mode, using a 64-bit size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file being sent. It should not contain any path indicator</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exact size in bytes of the file being sent.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UNIX permissions for the new file, e.g. 0644.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the file is ready to be sent, SSH_ERROR if an error occured.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1ga544f4b9c525071910110ada94148adc6" kindref="member">ssh_scp_push_file()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="456" column="5" bodyfile="src/scp.c" bodystart="456" bodyend="540"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="structssh__scp__struct_1a83666a71f4184630d6c1eacf733df2f6" compoundref="scp_8h" startline="42">ssh_scp_struct::filelen</references>
+        <references refid="structssh__scp__struct_1a7299b9b4dc764773702bda3da0696d32" compoundref="scp_8h" startline="43">ssh_scp_struct::processed</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__misc_1ga83b053a8bdf80eea5ebc662e5098a52b" compoundref="misc_8c" startline="902" endline="940">ssh_basename</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="group__libssh__misc_1gab037701ea7c4084918793a839fcdc767" compoundref="misc_8c" startline="1710" endline="1736">ssh_newline_vis</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" compoundref="scp_8c" startline="574" endline="628">ssh_scp_response</references>
+        <references refid="group__libssh__scp_1ga8772a6523a2a21a06e3986dbcc02118f" compoundref="scp_8c" startline="1095" endline="1100">ssh_scp_string_mode</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa435179ee058f33a2b8eeb609da279a57" compoundref="scp_8h" startline="26">SSH_SCP_WRITE_INITED</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa1afef6c270e013cb250b5685af400b5f" compoundref="scp_8h" startline="27">SSH_SCP_WRITE_WRITING</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="group__libssh__scp_1ga544f4b9c525071910110ada94148adc6" compoundref="scp_8c" startline="557" endline="560">ssh_scp_push_file</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga544f4b9c525071910110ada94148adc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_push_file</definition>
+        <argsstring>(ssh_scp scp, const char *filename, size_t size, int mode)</argsstring>
+        <name>ssh_scp_push_file</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the sending of a file to a scp in sink mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file being sent. It should not contain any path indicator</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exact size in bytes of the file being sent.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UNIX permissions for the new file, e.g. 0644.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the file is ready to be sent, SSH_ERROR if an error occured. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="557" column="5" bodyfile="src/scp.c" bodystart="557" bodyend="560"/>
+        <references refid="group__libssh__scp_1ga50b701b9c8923011d4fc6489c9c7eaae" compoundref="scp_8c" startline="456" endline="540">ssh_scp_push_file64</references>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="torture__scp_8c_1ae84c81f735a3f0cf4f3085bd6a016962" compoundref="torture__scp_8c" startline="149" endline="210">torture_scp_upload</referencedby>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_response</definition>
+        <argsstring>(ssh_scp scp, char **response)</argsstring>
+        <name>ssh_scp_response</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="574" column="5" bodyfile="src/scp.c" bodystart="574" bodyend="628"/>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" compoundref="channels_8c" startline="2831" endline="2838">ssh_channel_read</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a1c08cc9177a5598e0675abfb833d2993" compoundref="libssh_8h" startline="358">SSH_LOG_RARE</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="group__libssh__scp_1ga0be44d8a450767d92668d36d1beb43b9" compoundref="scp_8c" startline="718" endline="748">ssh_scp_read_string</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" compoundref="scp_8c" startline="119" endline="230">ssh_scp_init</referencedby>
+        <referencedby refid="group__libssh__scp_1ga2ca698c1e49612c083d9f8a72df52188" compoundref="scp_8c" startline="409" endline="436">ssh_scp_leave_directory</referencedby>
+        <referencedby refid="group__libssh__scp_1gaa584f03d4e3d582ac10a3a19818ec56d" compoundref="scp_8c" startline="320" endline="399">ssh_scp_push_directory</referencedby>
+        <referencedby refid="group__libssh__scp_1ga50b701b9c8923011d4fc6489c9c7eaae" compoundref="scp_8c" startline="456" endline="540">ssh_scp_push_file64</referencedby>
+        <referencedby refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" compoundref="scp_8c" startline="956" endline="1014">ssh_scp_read</referencedby>
+        <referencedby refid="group__libssh__scp_1ga11f48e2cf62bcec20d9232ed3ca41752" compoundref="scp_8c" startline="642" endline="702">ssh_scp_write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga11f48e2cf62bcec20d9232ed3ca41752" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_write</definition>
+        <argsstring>(ssh_scp scp, const void *buffer, size_t len)</argsstring>
+        <name>ssh_scp_write</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write into a remote scp file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to write.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the write was successful, SSH_ERROR an error occured while writing. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="642" column="5" bodyfile="src/scp.c" bodystart="642" bodyend="702"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="structssh__scp__struct_1a83666a71f4184630d6c1eacf733df2f6" compoundref="scp_8h" startline="42">ssh_scp_struct::filelen</references>
+        <references refid="structssh__scp__struct_1a7299b9b4dc764773702bda3da0696d32" compoundref="scp_8h" startline="43">ssh_scp_struct::processed</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1ga157f7d1df5de07ec6c6976e2034ba6e2" compoundref="channels_8c" startline="3038" endline="3069">ssh_channel_poll</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" compoundref="scp_8c" startline="574" endline="628">ssh_scp_response</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa435179ee058f33a2b8eeb609da279a57" compoundref="scp_8h" startline="26">SSH_SCP_WRITE_INITED</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa1afef6c270e013cb250b5685af400b5f" compoundref="scp_8h" startline="27">SSH_SCP_WRITE_WRITING</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="torture__scp_8c_1ae84c81f735a3f0cf4f3085bd6a016962" compoundref="torture__scp_8c" startline="149" endline="210">torture_scp_upload</referencedby>
+        <referencedby refid="torture__scp_8c_1a80c97d719fde7b4accb1450260e8e49a" compoundref="torture__scp_8c" startline="474" endline="541">torture_scp_upload_newline</referencedby>
+        <referencedby refid="torture__scp_8c_1a28c39250b07d3fbe1c24f06b5d8c830b" compoundref="torture__scp_8c" startline="212" endline="282">torture_scp_upload_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga0be44d8a450767d92668d36d1beb43b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_read_string</definition>
+        <argsstring>(ssh_scp scp, char *buffer, size_t len)</argsstring>
+        <name>ssh_scp_read_string</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Read a string on a channel, terminated by &apos;<linebreak/>
+&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to a buffer to place the string.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer in bytes. If the string is bigger than len-1, only len-1 bytes are read and the string is null-terminated.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the string was read, SSH_ERROR if an error occured while reading. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="718" column="5" bodyfile="src/scp.c" bodystart="718" bodyend="748"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" compoundref="channels_8c" startline="2831" endline="2838">ssh_channel_read</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <referencedby refid="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" compoundref="scp_8c" startline="770" endline="869">ssh_scp_pull_request</referencedby>
+        <referencedby refid="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" compoundref="scp_8c" startline="574" endline="628">ssh_scp_response</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_pull_request</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_pull_request</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Wait for a scp request (file, directory). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SSH_SCP_REQUEST_NEWFILE: The other side is sending a file SSH_SCP_REQUEST_NEWDIR: The other side is sending a directory SSH_SCP_REQUEST_ENDDIR: The other side has finished with the current directory SSH_SCP_REQUEST_WARNING: The other side sent us a warning SSH_SCP_REQUEST_EOF: The other side finished sending us files and data. SSH_ERROR: Some error happened</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" kindref="member">ssh_scp_read()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1gad36438c6b1e235d96cec43ca350e9b4f" kindref="member">ssh_scp_deny_request()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" kindref="member">ssh_scp_accept_request()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1gafa91c1569e4d22d58a928b232264bbcb" kindref="member">ssh_scp_request_get_warning()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="770" column="5" bodyfile="src/scp.c" bodystart="770" bodyend="869"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="structssh__scp__struct_1a83666a71f4184630d6c1eacf733df2f6" compoundref="scp_8h" startline="42">ssh_scp_struct::filelen</references>
+        <references refid="priv_8h_1a7244ab798f58214294b580ca0bb48552" compoundref="priv_8h" startline="190">MAX_BUF_SIZE</references>
+        <references refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" compoundref="samplesshd-kbdint_8c" startline="186">name</references>
+        <references refid="structssh__scp__struct_1a7299b9b4dc764773702bda3da0696d32" compoundref="scp_8h" startline="43">ssh_scp_struct::processed</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1a8902628eff24c259890e3c3846ff5c80" compoundref="scp_8h" startline="47">ssh_scp_struct::request_mode</references>
+        <references refid="structssh__scp__struct_1ac408595fd2827a307ef9d29caf108ca8" compoundref="scp_8h" startline="45">ssh_scp_struct::request_name</references>
+        <references refid="structssh__scp__struct_1a629d361c85a81eafd2133bb582a937c4" compoundref="scp_8h" startline="44">ssh_scp_struct::request_type</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1gab535264029443d77214c0615a0788b0a" compoundref="channels_8c" startline="1596" endline="1608">ssh_channel_is_eof</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="group__libssh__scp_1gab7d6e452c6963199477103394456d3ae" compoundref="scp_8c" startline="1081" endline="1085">ssh_scp_integer_mode</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa77f02bc6ce75a1dcbc9d2a3cf760d094" compoundref="scp_8h" startline="28">SSH_SCP_READ_INITED</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fae6018256ca2213c55800e312260d1179" compoundref="scp_8h" startline="29">SSH_SCP_READ_REQUESTED</references>
+        <references refid="group__libssh__scp_1ga0be44d8a450767d92668d36d1beb43b9" compoundref="scp_8c" startline="718" endline="748">ssh_scp_read_string</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaa12a854dbc1c954bfee2e10420bfaf2eb" compoundref="libssh_8h" startline="440">SSH_SCP_REQUEST_ENDDIR</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaa4779d32e7c5ba15afef0d828bc391653" compoundref="libssh_8h" startline="438">SSH_SCP_REQUEST_EOF</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaa07f1a333fb14fa55a3a3e6aab60a1066" compoundref="libssh_8h" startline="434">SSH_SCP_REQUEST_NEWDIR</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaab15eaf3f0bd4918a9d73c1202596bc60" compoundref="libssh_8h" startline="436">SSH_SCP_REQUEST_NEWFILE</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaa40f5297f48df6ebd6ec06c891c88286d" compoundref="libssh_8h" startline="442">SSH_SCP_REQUEST_WARNING</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa868b0df2ebb526aace3271ed753fce37" compoundref="scp_8h" startline="32">SSH_SCP_TERMINATED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <references refid="structssh__scp__struct_1a65f2e025f7a64951a178bf7a6ee44441" compoundref="scp_8h" startline="46">ssh_scp_struct::warning</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gad36438c6b1e235d96cec43ca350e9b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_deny_request</definition>
+        <argsstring>(ssh_scp scp, const char *reason)</argsstring>
+        <name>ssh_scp_deny_request</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+<para>Deny the transfer of a file or creation of a directory coming from the remote party. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">reason</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A nul-terminated string with a human-readable explanation of the deny.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the message was sent, SSH_ERROR if the sending the message failed, or sending it in a bad state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="882" column="5" bodyfile="src/scp.c" bodystart="882" bodyend="907"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="priv_8h_1a7244ab798f58214294b580ca0bb48552" compoundref="priv_8h" startline="190">MAX_BUF_SIZE</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa77f02bc6ce75a1dcbc9d2a3cf760d094" compoundref="scp_8h" startline="28">SSH_SCP_READ_INITED</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fae6018256ca2213c55800e312260d1179" compoundref="scp_8h" startline="29">SSH_SCP_READ_REQUESTED</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_accept_request</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_accept_request</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Accepts transfer of a file or creation of a directory coming from the remote party. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_OK if the message was sent, SSH_ERROR if sending the message failed, or sending it in a bad state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="918" column="5" bodyfile="src/scp.c" bodystart="918" bodyend="944"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1a629d361c85a81eafd2133bb582a937c4" compoundref="scp_8h" startline="44">ssh_scp_struct::request_type</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa77f02bc6ce75a1dcbc9d2a3cf760d094" compoundref="scp_8h" startline="28">SSH_SCP_READ_INITED</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa4fd06eb1ad3ddd1e794cef1d99f9c3b2" compoundref="scp_8h" startline="30">SSH_SCP_READ_READING</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fae6018256ca2213c55800e312260d1179" compoundref="scp_8h" startline="29">SSH_SCP_READ_REQUESTED</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaab15eaf3f0bd4918a9d73c1202596bc60" compoundref="libssh_8h" startline="436">SSH_SCP_REQUEST_NEWFILE</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" compoundref="scp_8c" startline="956" endline="1014">ssh_scp_read</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_read</definition>
+        <argsstring>(ssh_scp scp, void *buffer, size_t size)</argsstring>
+        <name>ssh_scp_read</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Read from a remote scp file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination buffer.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The nNumber of bytes read, SSH_ERROR if an error occured while reading. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="956" column="5" bodyfile="src/scp.c" bodystart="956" bodyend="1014"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__scp__struct_1a8215edf44f36d46232cd3810270ffefb" compoundref="scp_8h" startline="39">ssh_scp_struct::channel</references>
+        <references refid="structssh__scp__struct_1a83666a71f4184630d6c1eacf733df2f6" compoundref="scp_8h" startline="42">ssh_scp_struct::filelen</references>
+        <references refid="structssh__scp__struct_1a7299b9b4dc764773702bda3da0696d32" compoundref="scp_8h" startline="43">ssh_scp_struct::processed</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__scp__struct_1a629d361c85a81eafd2133bb582a937c4" compoundref="scp_8h" startline="44">ssh_scp_struct::request_type</references>
+        <references refid="structssh__scp__struct_1aeec832345ac858cdc59926376ed76a0c" compoundref="scp_8h" startline="36">ssh_scp_struct::session</references>
+        <references refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" compoundref="channels_8c" startline="2831" endline="2838">ssh_channel_read</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" compoundref="scp_8c" startline="918" endline="944">ssh_scp_accept_request</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fad50bdaff7c10f9ed2a11fa8c052484b0" compoundref="scp_8h" startline="31">SSH_SCP_ERROR</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa77f02bc6ce75a1dcbc9d2a3cf760d094" compoundref="scp_8h" startline="28">SSH_SCP_READ_INITED</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fa4fd06eb1ad3ddd1e794cef1d99f9c3b2" compoundref="scp_8h" startline="30">SSH_SCP_READ_READING</references>
+        <references refid="scp_8h_1a6aa1850b3eb55fdb974072f120071a5fae6018256ca2213c55800e312260d1179" compoundref="scp_8h" startline="29">SSH_SCP_READ_REQUESTED</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaab15eaf3f0bd4918a9d73c1202596bc60" compoundref="libssh_8h" startline="436">SSH_SCP_REQUEST_NEWFILE</references>
+        <references refid="group__libssh__scp_1gab713864881af7ebda7e1e9c609fdf604" compoundref="scp_8c" startline="574" endline="628">ssh_scp_response</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__scp__struct_1a2700ad8ad906e1332f21e2b47b5e03f6" compoundref="scp_8h" startline="41">ssh_scp_struct::state</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gab41ede14208dea4bbd3600077008ccf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_scp_request_get_filename</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_request_get_filename</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Get the name of the directory or file being pushed from the other party. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The file name, NULL on error. The string should not be freed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="1023" column="12" bodyfile="src/scp.c" bodystart="1023" bodyend="1030"/>
+        <references refid="structssh__scp__struct_1ac408595fd2827a307ef9d29caf108ca8" compoundref="scp_8h" startline="45">ssh_scp_struct::request_name</references>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga3386eb6df0cc620e74a039974c6280d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_request_get_permissions</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_request_get_permissions</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Get the permissions of the directory or file being pushed from the other party. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The UNIX permission, e.g 0644, -1 on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="1038" column="5" bodyfile="src/scp.c" bodystart="1038" bodyend="1045"/>
+        <references refid="structssh__scp__struct_1a8902628eff24c259890e3c3846ff5c80" compoundref="scp_8h" startline="47">ssh_scp_struct::request_mode</references>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga8b6f736a5b5af73cf59c7825d7e61966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ssh_scp_request_get_size</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_request_get_size</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of the file being pushed from the other party. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The numeric size of the file being read. </para>
+</simplesect>
+<simplesect kind="warning"><para>The real size may not fit in a 32 bits field and may be truncated. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__scp_1gaefe7f44417e1dc0d857d634fe1117d6d" kindref="member">ssh_scp_request_get_size64()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="1054" column="8" bodyfile="src/scp.c" bodystart="1054" bodyend="1060"/>
+        <references refid="structssh__scp__struct_1a83666a71f4184630d6c1eacf733df2f6" compoundref="scp_8h" startline="42">ssh_scp_struct::filelen</references>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="torture__scp_8c_1a6eef780baf714db34233b43a03efe5b3" compoundref="torture__scp_8c" startline="284" endline="368">torture_scp_download</referencedby>
+        <referencedby refid="torture__scp_8c_1aab120962ebb02776ef0dc45dac8ccaa9" compoundref="torture__scp_8c" startline="370" endline="472">torture_scp_download_recursive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gaefe7f44417e1dc0d857d634fe1117d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t ssh_scp_request_get_size64</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_request_get_size64</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Get the size of the file being pushed from the other party. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The numeric size of the file being read. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="1066" column="10" bodyfile="src/scp.c" bodystart="1066" bodyend="1072"/>
+        <references refid="structssh__scp__struct_1a83666a71f4184630d6c1eacf733df2f6" compoundref="scp_8h" startline="42">ssh_scp_struct::filelen</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gab7d6e452c6963199477103394456d3ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_scp_integer_mode</definition>
+        <argsstring>(const char *mode)</argsstring>
+        <name>ssh_scp_integer_mode</name>
+        <param>
+          <type>const char *</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Convert a scp text mode to an integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode to convert, e.g. &quot;0644&quot;.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An integer value, e.g. 420 for &quot;0644&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="1081" column="5" bodyfile="src/scp.c" bodystart="1081" bodyend="1085"/>
+        <referencedby refid="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" compoundref="scp_8c" startline="770" endline="869">ssh_scp_pull_request</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1ga8772a6523a2a21a06e3986dbcc02118f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_scp_string_mode</definition>
+        <argsstring>(int mode)</argsstring>
+        <name>ssh_scp_string_mode</name>
+        <param>
+          <type>int</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Convert a unix mode into a scp string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode to convert, e.g. 420 or 0644.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a malloc&apos;ed string containing the scp mode, e.g. &quot;0644&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="1095" column="6" bodyfile="src/scp.c" bodystart="1095" bodyend="1100"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <referencedby refid="group__libssh__scp_1gaa584f03d4e3d582ac10a3a19818ec56d" compoundref="scp_8c" startline="320" endline="399">ssh_scp_push_directory</referencedby>
+        <referencedby refid="group__libssh__scp_1ga50b701b9c8923011d4fc6489c9c7eaae" compoundref="scp_8c" startline="456" endline="540">ssh_scp_push_file64</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__scp_1gafa91c1569e4d22d58a928b232264bbcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ssh_scp_request_get_warning</definition>
+        <argsstring>(ssh_scp scp)</argsstring>
+        <name>ssh_scp_request_get_warning</name>
+        <param>
+          <type><ref refid="libssh_8h_1a0ea1c11303462f0aab8c702862532759" kindref="member">ssh_scp</ref></type>
+          <declname>scp</declname>
+        </param>
+        <briefdescription>
+<para>Get the warning string from a scp handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scp handle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A warning string, or NULL on error. The string should not be freed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/scp.c" line="1110" column="12" bodyfile="src/scp.c" bodystart="1110" bodyend="1117"/>
+        <references refid="structssh__scp__struct_1a65f2e025f7a64951a178bf7a6ee44441" compoundref="scp_8h" startline="46">ssh_scp_struct::warning</references>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>SCP protocol over SSH functions </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

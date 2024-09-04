@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="init_8c" kind="file" language="C++">
+    <compoundname>init.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="priv_8h" local="yes">libssh/priv.h</includes>
+    <includes refid="socket_8h" local="yes">libssh/socket.h</includes>
+    <includes refid="dh_8h" local="yes">libssh/dh.h</includes>
+    <includes refid="poll_8h" local="yes">libssh/poll.h</includes>
+    <includes refid="threads_8h" local="yes">libssh/threads.h</includes>
+    <incdepgraph>
+      <node id="18">
+        <label>stdbool.h</label>
+      </node>
+      <node id="11">
+        <label>sys/select.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>libssh/dh.h</label>
+        <link refid="dh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/init.c</label>
+        <link refid="init_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>netdb.h</label>
+      </node>
+      <node id="23">
+        <label>libssh/ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libssh/kex.h</label>
+        <link refid="kex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>sys/types.h</label>
+      </node>
+      <node id="21">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="17">
+        <label>libssh/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libssh/poll.h</label>
+        <link refid="poll_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>libssh/curve25519.h</label>
+        <link refid="curve25519_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="27">
+        <label>libssh/threads.h</label>
+        <link refid="threads_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="init_8c_1ac54dbec32632f8f2eebfb3407a23f1cf" prot="public" static="no">
+        <name>CONSTRUCTOR_ATTRIBUTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="38" column="10" bodyfile="libssh-mirror/src/init.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="init_8c_1a00f5a7951c5fd86f4636df605e021241" prot="public" static="no">
+        <name>DESTRUCTOR_ATTRIBUTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="44" column="10" bodyfile="libssh-mirror/src/init.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="init_8c_1af5dbe5c1488d910354335ad0153cd142" prot="public" static="yes" mutable="no">
+        <type><ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref></type>
+        <definition>SSH_MUTEX ssh_init_mutex</definition>
+        <argsstring></argsstring>
+        <name>ssh_init_mutex</name>
+        <initializer>= <ref refid="threads_8h_1a6c8ebc8ff34715ac61df6788f61740ed" kindref="member">SSH_MUTEX_STATIC_INIT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="48" column="18" bodyfile="libssh-mirror/src/init.c" bodystart="48" bodyend="-1"/>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="init_8c_1ae06e628392c256c6e741abbf208af758" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int _ssh_initialized</definition>
+        <argsstring></argsstring>
+        <name>_ssh_initialized</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="51" column="12" bodyfile="libssh-mirror/src/init.c" bodystart="51" bodyend="-1"/>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="init_8c_1a47d6b605d3d5129b030d236952d64900" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int _ssh_init_ret</definition>
+        <argsstring></argsstring>
+        <name>_ssh_init_ret</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="54" column="12" bodyfile="libssh-mirror/src/init.c" bodystart="54" bodyend="-1"/>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libssh_constructor</definition>
+        <argsstring>(void)</argsstring>
+        <name>libssh_constructor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global cryptographic data structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This functions is automatically called when the library is loaded. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="56" column="6" bodyfile="libssh-mirror/src/init.c" bodystart="56" bodyend="102"/>
+        <references refid="init_8c_1a47d6b605d3d5129b030d236952d64900" compoundref="init_8c" startline="54">_ssh_init_ret</references>
+        <references refid="init_8c_1ae06e628392c256c6e741abbf208af758" compoundref="init_8c" startline="51">_ssh_initialized</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="wrapper_8h_1a85862055a818ffd18e9ab3cfd90d6419">ssh_crypto_init</references>
+        <references refid="dh_8h_1a591c8d71df3bab8c691c33fd05a13343" compoundref="dh_8c" startline="227" endline="266">ssh_dh_init</references>
+        <references refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" compoundref="init_8c" startline="48">ssh_init_mutex</references>
+        <references refid="threads_8h_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" compoundref="noop_8c" startline="51" endline="56">ssh_mutex_lock</references>
+        <references refid="threads_8h_1a0bddf62c454d664389e5b672eb94270d" compoundref="noop_8c" startline="58" endline="63">ssh_mutex_unlock</references>
+        <references refid="socket_8h_1a37f17ec6d2ede343ad1e70ed061ec9bb" compoundref="socket_8c" startline="110" endline="127">ssh_socket_init</references>
+        <references refid="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" compoundref="threads_8c" startline="42" endline="64">ssh_threads_init</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global cryptographic data structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Since version 0.8.0, it is not necessary to call this function on systems which are fully supported with regards to threading (that is, system with pthreads available).</para>
+<para>If the library is already initialized, increments the _ssh_initialized counter and return the error code cached in _ssh_init_ret.</para>
+<para><simplesect kind="return"><para>SSH_OK on success, SSH_ERROR if an error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="147" column="5" bodyfile="libssh-mirror/src/init.c" bodystart="147" bodyend="149"/>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+        <referencedby refid="ssh__server__fork_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="ssh__server__fork_8c" startline="687" endline="775">main</referencedby>
+        <referencedby refid="torture__rand_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__rand_8c" startline="18" endline="30">setup</referencedby>
+        <referencedby refid="torture__threads__init_8c_1aef8a909445607e4039432ddfa288da6e" compoundref="torture__threads__init_8c" startline="58" endline="71">thread_ssh_init</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__algorithms_8c" startline="732" endline="949">torture_run_tests</referencedby>
+        <referencedby refid="torture__init_8c_1a6a4d0c5fadfefcad961bea1956bc87cc" compoundref="torture__init_8c" startline="8" endline="17">torture_ssh_init</referencedby>
+        <referencedby refid="torture__init_8c_1a1d2954bc91353e9e64186f22e442b943" compoundref="torture__init_8c" startline="19" endline="33">torture_ssh_init_after_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _ssh_finalize</definition>
+        <argsstring>(unsigned destructor)</argsstring>
+        <name>_ssh_finalize</name>
+        <param>
+          <type>unsigned</type>
+          <declname>destructor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="151" column="12" bodyfile="libssh-mirror/src/init.c" bodystart="151" bodyend="183"/>
+        <references refid="init_8c_1a47d6b605d3d5129b030d236952d64900" compoundref="init_8c" startline="54">_ssh_init_ret</references>
+        <references refid="init_8c_1ae06e628392c256c6e741abbf208af758" compoundref="init_8c" startline="51">_ssh_initialized</references>
+        <references refid="wrapper_8h_1aab642f57bab0ffe271a4e2dae28c94e5">ssh_crypto_finalize</references>
+        <references refid="dh_8h_1a9b69e88d96e422ade03a30c6850467e7" compoundref="dh_8c" startline="272" endline="285">ssh_dh_finalize</references>
+        <references refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" compoundref="init_8c" startline="48">ssh_init_mutex</references>
+        <references refid="threads_8h_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" compoundref="noop_8c" startline="51" endline="56">ssh_mutex_lock</references>
+        <references refid="threads_8h_1a0bddf62c454d664389e5b672eb94270d" compoundref="noop_8c" startline="58" endline="63">ssh_mutex_unlock</references>
+        <references refid="socket_8h_1accaf18caa54fcca41198838b5134a47b" compoundref="socket_8c" startline="132" endline="141">ssh_socket_cleanup</references>
+        <references refid="group__libssh__threads_1ga892b23f2f4ffe4e33290a83802faa265" compoundref="threads_8c" startline="66" endline="69">ssh_threads_finalize</references>
+        <referencedby refid="group__libssh_1ga12489699b7b74b46ac372ee5ecfffc6c" compoundref="init_8c" startline="191" endline="200">libssh_destructor</referencedby>
+        <referencedby refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh_1ga12489699b7b74b46ac372ee5ecfffc6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libssh_destructor</definition>
+        <argsstring>(void)</argsstring>
+        <name>libssh_destructor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Finalize and cleanup all libssh and cryptographic data structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is automatically called when the library is unloaded. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="191" column="6" bodyfile="libssh-mirror/src/init.c" bodystart="191" bodyend="200"/>
+        <references refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh_1ga94a851d00248acde9cd7da084b491242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Finalize and cleanup all libssh and cryptographic data structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Since version 0.8.0, it is not necessary to call this function, since it is automatically called when the library is unloaded.</para>
+<para>If <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref> is called explicitly, then <ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize()</ref> must be called explicitly.</para>
+<para>When called, decrements the counter _ssh_initialized. If the counter reaches zero, then the libssh and cryptographic data structures are cleaned up.</para>
+<para><simplesect kind="return"><para>0 on succes, -1 if an error occured.</para>
+</simplesect>
+<simplesect kind="return"><para>0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/init.c" line="218" column="5" bodyfile="libssh-mirror/src/init.c" bodystart="218" bodyend="220"/>
+        <references refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</references>
+        <referencedby refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" compoundref="sftp__stress_2main_8c" startline="76" endline="135">connect_host</referencedby>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+        <referencedby refid="exec_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="exec_8c" startline="7" endline="66">main</referencedby>
+        <referencedby refid="torture__rand_8c_1a199383cdaf56acd2611400b9bb125142" compoundref="torture__rand_8c" startline="32" endline="38">teardown</referencedby>
+        <referencedby refid="torture__threads__init_8c_1aef8a909445607e4039432ddfa288da6e" compoundref="torture__threads__init_8c" startline="58" endline="71">thread_ssh_init</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__algorithms_8c" startline="732" endline="949">torture_run_tests</referencedby>
+        <referencedby refid="torture__init_8c_1a6a4d0c5fadfefcad961bea1956bc87cc" compoundref="torture__init_8c" startline="8" endline="17">torture_ssh_init</referencedby>
+        <referencedby refid="torture__init_8c_1a1d2954bc91353e9e64186f22e442b943" compoundref="torture__init_8c" startline="19" endline="33">torture_ssh_init_after_finalize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>init.c<sp/>-<sp/>initialization<sp/>and<sp/>finalization<sp/>of<sp/>the<sp/>library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2003-2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="priv_8h" kindref="compound">libssh/priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="socket_8h" kindref="compound">libssh/socket.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dh_8h" kindref="compound">libssh/dh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="poll_8h" kindref="compound">libssh/poll.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threads_8h" kindref="compound">libssh/threads.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;winsock2.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONSTRUCTOR_ATTRIBUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSTRUCTOR_ATTRIBUTE<sp/>__attribute__((constructor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="init_8c_1ac54dbec32632f8f2eebfb3407a23f1cf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSTRUCTOR_ATTRIBUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_CONSTRUCTOR_ATTRIBUTE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_DESTRUCTOR_ATTRIBUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DESTRUCTOR_ATTRIBUTE<sp/>__attribute__((destructor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="init_8c_1a00f5a7951c5fd86f4636df605e021241" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DESTRUCTOR_ATTRIBUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HAVE_DESTRUCTOR_ATTRIBUTE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Declare<sp/>static<sp/>mutex<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="threads_8h_1a9f6ff98ba0f86df8541d59abebb4ecca" kindref="member">SSH_MUTEX</ref><sp/><ref refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" kindref="member">ssh_init_mutex</ref><sp/>=<sp/><ref refid="threads_8h_1a6c8ebc8ff34715ac61df6788f61740ed" kindref="member">SSH_MUTEX_STATIC_INIT</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Counter<sp/>for<sp/>initializations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="init_8c_1ae06e628392c256c6e741abbf208af758" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8c_1ae06e628392c256c6e741abbf208af758" kindref="member">_ssh_initialized</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Cache<sp/>the<sp/>returned<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="init_8c_1a47d6b605d3d5129b030d236952d64900" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a47d6b605d3d5129b030d236952d64900" kindref="member">_ssh_init_ret</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" kindref="member">libssh_constructor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><ref refid="init_8c_1ac54dbec32632f8f2eebfb3407a23f1cf" kindref="member">CONSTRUCTOR_ATTRIBUTE</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh_1ga12489699b7b74b46ac372ee5ecfffc6c" kindref="member">libssh_destructor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><ref refid="init_8c_1a00f5a7951c5fd86f4636df605e021241" kindref="member">DESTRUCTOR_ATTRIBUTE</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_ssh_init(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>constructor)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!constructor)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="threads_8h_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" kindref="member">ssh_mutex_lock</ref>(&amp;<ref refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" kindref="member">ssh_init_mutex</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ae06e628392c256c6e741abbf208af758" kindref="member">_ssh_initialized</ref>++;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1ae06e628392c256c6e741abbf208af758" kindref="member">_ssh_initialized</ref><sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="init_8c_1a47d6b605d3d5129b030d236952d64900" kindref="member">_ssh_init_ret</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>_ret;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh__threads_1ga93b7aed4984dbd58a270f1f7eb37f5cd" kindref="member">ssh_threads_init</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>_ret;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="wrapper_8h_1a85862055a818ffd18e9ab3cfd90d6419" kindref="member">ssh_crypto_init</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>_ret;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="dh_8h_1a591c8d71df3bab8c691c33fd05a13343" kindref="member">ssh_dh_init</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>_ret;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="socket_8h_1a37f17ec6d2ede343ad1e70ed061ec9bb" kindref="member">ssh_socket_init</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>_ret;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">_ret:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1a47d6b605d3d5129b030d236952d64900" kindref="member">_ssh_init_ret</ref><sp/>=<sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!constructor)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="threads_8h_1a0bddf62c454d664389e5b672eb94270d" kindref="member">ssh_mutex_unlock</ref>(&amp;<ref refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" kindref="member">ssh_init_mutex</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" kindref="member">libssh_constructor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>_ssh_init(1);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>auto_init()\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ssh_init(0);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" kindref="member">_ssh_finalize</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>destructor)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!destructor)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="threads_8h_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" kindref="member">ssh_mutex_lock</ref>(&amp;<ref refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" kindref="member">ssh_init_mutex</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1ae06e628392c256c6e741abbf208af758" kindref="member">_ssh_initialized</ref><sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="init_8c_1ae06e628392c256c6e741abbf208af758" kindref="member">_ssh_initialized</ref>--;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>_ret;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1ae06e628392c256c6e741abbf208af758" kindref="member">_ssh_initialized</ref><sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="init_8c_1a47d6b605d3d5129b030d236952d64900" kindref="member">_ssh_init_ret</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>_ret;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>the<sp/>counter<sp/>reaches<sp/>zero<sp/>or<sp/>it<sp/>is<sp/>the<sp/>destructor<sp/>calling,<sp/>finalize<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dh_8h_1a9b69e88d96e422ade03a30c6850467e7" kindref="member">ssh_dh_finalize</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aab642f57bab0ffe271a4e2dae28c94e5" kindref="member">ssh_crypto_finalize</ref>();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="socket_8h_1accaf18caa54fcca41198838b5134a47b" kindref="member">ssh_socket_cleanup</ref>();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>It<sp/>is<sp/>important<sp/>to<sp/>finalize<sp/>threading<sp/>after<sp/>CRYPTO<sp/>because</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>it<sp/>still<sp/>depends<sp/>on<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__threads_1ga892b23f2f4ffe4e33290a83802faa265" kindref="member">ssh_threads_finalize</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="init_8c_1ae06e628392c256c6e741abbf208af758" kindref="member">_ssh_initialized</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">_ret:</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!destructor)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="threads_8h_1a0bddf62c454d664389e5b672eb94270d" kindref="member">ssh_mutex_unlock</ref>(&amp;<ref refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" kindref="member">ssh_init_mutex</ref>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="group__libssh_1ga12489699b7b74b46ac372ee5ecfffc6c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__libssh_1ga12489699b7b74b46ac372ee5ecfffc6c" kindref="member">libssh_destructor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/><ref refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" kindref="member">_ssh_finalize</ref>(1);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>libssh_destructor()\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" kindref="member">_ssh_finalize</ref>(0);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>!defined(LIBSSH_STATIC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Library<sp/>constructor<sp/>and<sp/>destructor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">BOOL<sp/>WINAPI<sp/>DllMain(HINSTANCE<sp/>hinstDLL,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DWORD<sp/>fdwReason,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LPVOID<sp/>lpvReserved)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(fdwReason)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DLL_PROCESS_ATTACH:</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>=<sp/>_ssh_init(1);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" kindref="member">rc</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;DllMain:<sp/>ssh_init<sp/>failed!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DLL_PROCESS_DETACH:</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" kindref="member">_ssh_finalize</ref>(1);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TRUE;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_MSC_VER<sp/>&amp;&amp;<sp/>!LIBSSH_STATIC<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_WIN32<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/init.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="benchmarks_8h" kind="file" language="C++">
+    <compoundname>benchmarks.h</compoundname>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includedby refid="bench__raw_8c" local="yes">tests/benchmarks/bench_raw.c</includedby>
+    <includedby refid="bench__scp_8c" local="yes">tests/benchmarks/bench_scp.c</includedby>
+    <includedby refid="bench__sftp_8c" local="yes">tests/benchmarks/bench_sftp.c</includedby>
+    <includedby refid="benchmarks_8c" local="yes">tests/benchmarks/benchmarks.c</includedby>
+    <includedby refid="latency_8c" local="yes">tests/benchmarks/latency.c</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>sys/select.h</label>
+      </node>
+      <node id="8">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="7">
+        <label>netdb.h</label>
+      </node>
+      <node id="1">
+        <label>tests/benchmarks/benchmarks.h</label>
+        <link refid="benchmarks_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="2">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>tests/benchmarks/bench_raw.c</label>
+        <link refid="bench__raw_8c"/>
+      </node>
+      <node id="3">
+        <label>tests/benchmarks/bench_scp.c</label>
+        <link refid="bench__scp_8c"/>
+      </node>
+      <node id="5">
+        <label>tests/benchmarks/benchmarks.c</label>
+        <link refid="benchmarks_8c"/>
+      </node>
+      <node id="1">
+        <label>tests/benchmarks/benchmarks.h</label>
+        <link refid="benchmarks_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>tests/benchmarks/bench_sftp.c</label>
+        <link refid="bench__sftp_8c"/>
+      </node>
+      <node id="6">
+        <label>tests/benchmarks/latency.c</label>
+        <link refid="latency_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structargument__s" prot="public">argument_s</innerclass>
+    <innerclass refid="structbenchmark" prot="public">benchmark</innerclass>
+    <innerclass refid="structtimestamp__struct" prot="public">timestamp_struct</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="benchmarks_8h_1af4d9e57372bcd6cd117f6022befb7245" prot="public" static="no">
+        <name>MAX_HOSTS_CONNECT</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="30" column="9" bodyfile="tests/benchmarks/benchmarks.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101" prot="public" static="no" strong="no">
+        <type></type>
+        <name>libssh_benchmarks</name>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a8bd5dbae4e97cff4678dcea658274af3" prot="public">
+          <name>BENCHMARK_RAW_UPLOAD</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101afa813cf7a5d62f2d411358bdd8eda198" prot="public">
+          <name>BENCHMARK_RAW_DOWNLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101aaa921ea2413e6b2a007fb6087cd59386" prot="public">
+          <name>BENCHMARK_SCP_UPLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101aa93c36573690d4c60741d99ba44555bc" prot="public">
+          <name>BENCHMARK_SCP_DOWNLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a76ff6520cd65c1a123f8be733db4033f" prot="public">
+          <name>BENCHMARK_SYNC_SFTP_UPLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a735618a81391cf78e7867a98d67256e3" prot="public">
+          <name>BENCHMARK_SYNC_SFTP_DOWNLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a5ec161d414efa43e3726f6c3b1fdc5e1" prot="public">
+          <name>BENCHMARK_ASYNC_SFTP_DOWNLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" prot="public">
+          <name>BENCHMARK_NUMBER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="32" column="1" bodyfile="tests/benchmarks/benchmarks.h" bodystart="32" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="benchmarks_8h_1ad0b82466bf83e80cf5c5e78d3d0f2e4a" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* bench_fct) (ssh_session session, struct argument_s *args, float *bps)</definition>
+        <argsstring>)(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>bench_fct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="56" column="9" bodyfile="tests/benchmarks/benchmarks.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="benchmarks_8h_1aff2566f4c366b48d73479bef43ee4d2e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="54" column="13" bodyfile="tests/benchmarks/benchmarks.c" bodystart="347" bodyend="-1" declfile="tests/benchmarks/benchmarks.h" declline="54" declcolumn="13"/>
+        <referencedby refid="group__libssh__buffer_1ga20c9686b0f64ec4e20811c8dc19b287a" compoundref="buffer_8c" startline="1047" endline="1072">_ssh_buffer_pack</referencedby>
+        <referencedby refid="group__libssh__buffer_1gaa610051755070ecc05792cfb590e10c4" compoundref="buffer_8c" startline="1345" endline="1357">_ssh_buffer_unpack</referencedby>
+        <referencedby refid="group__libssh__log_1gac8bd5378e8af9c6af0ebc198ae6dd2ed" compoundref="log_8c" startline="117" endline="130">_ssh_log</referencedby>
+        <referencedby refid="tests_2authentication_8c_1a3207e3c92d80db9b5bcd4b7114eab195" compoundref="tests_2authentication_8c" startline="15" endline="47">auth_kbdint</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a442e0c31c0c57f60ec1f5eaaceebf436" compoundref="examples_2authentication_8c" startline="141" endline="241">authenticate_console</referencedby>
+        <referencedby refid="examples_2authentication_8c_1a358ed06284cff4e8ee596d31238e5731" compoundref="examples_2authentication_8c" startline="27" endline="101">authenticate_kbdint</referencedby>
+        <referencedby refid="priv_8h_1aa9b1bdd62db42c91b1b203f6850adadf" compoundref="base64_8c" startline="60" endline="173">base64_to_bin</referencedby>
+        <referencedby refid="ssh__client_8c_1a8b8ff3289e057f1b391476c5c4b71178" compoundref="ssh__client_8c" startline="290" endline="316">batch_shell</referencedby>
+        <referencedby refid="bench__sftp_8c_1a5d05a4e9603ff04353b637065dacf28c" compoundref="bench__sftp_8c" startline="159" endline="239">benchmarks_async_sftp_down</referencedby>
+        <referencedby refid="bench__raw_8c_1afd64b09e9ae3ce2136328be2cd0bac89" compoundref="bench__raw_8c" startline="227" endline="285">benchmarks_raw_down</referencedby>
+        <referencedby refid="bench__raw_8c_1a070a579a7a62c222e5f28c9e074c0df7" compoundref="bench__raw_8c" startline="107" endline="182">benchmarks_raw_up</referencedby>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="bench__sftp_8c_1aea73fc2575a832d79f09c7b3fa25cac9" compoundref="bench__sftp_8c" startline="97" endline="149">benchmarks_sync_sftp_down</referencedby>
+        <referencedby refid="bench__sftp_8c_1acef09f85489fe47862edb8378a22af82" compoundref="bench__sftp_8c" startline="41" endline="87">benchmarks_sync_sftp_up</referencedby>
+        <referencedby refid="legacy_8h_1a0d2e18ae46c3b5c36a0b6988c9e4d59c" compoundref="legacy_8c" startline="145" endline="147">buffer_free</referencedby>
+        <referencedby refid="legacy_8h_1aef9ac9378dc7bfe3e3c3f7c55e5a98f5" compoundref="legacy_8c" startline="148" endline="150">buffer_get</referencedby>
+        <referencedby refid="legacy_8h_1aa0cd1cfbd77a218c13583c23a11e0d22" compoundref="legacy_8c" startline="151" endline="153">buffer_get_len</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae0e221aeee158e4762f95207c7f31a68" compoundref="buffer_8c" startline="226" endline="247">buffer_shift</referencedby>
+        <referencedby refid="client_8c_1a4c4c9ace93a9791515090ebc197dd736" compoundref="client_8c" startline="96" endline="164">callback_receive_banner</referencedby>
+        <referencedby refid="group__libssh__channel_1gab391f5c978cb1bc8df3ebd061f38e8c5" compoundref="channels_8c" startline="2731" endline="2790">channel_read_buffer</referencedby>
+        <referencedby refid="group__libssh__channel_1gaee35ccabe6998568d138d35f538765d9" compoundref="channels_8c" startline="1698" endline="1780">channel_request</referencedby>
+        <referencedby refid="scp__download_8c_1abf8ad844320270e1c0b49e510c9bb4a0" compoundref="scp__download_8c" startline="61" endline="100">create_files</referencedby>
+        <referencedby refid="test__tunnel_8c_1acbd4f6c4ecc68d1c4cc45223741be81c" compoundref="test__tunnel_8c" startline="10" endline="63">do_connect</referencedby>
+        <referencedby refid="scp__download_8c_1a35cc69188bd8d7779bea4da50ecb8f78" compoundref="scp__download_8c" startline="103" endline="163">fetch_files</referencedby>
+        <referencedby refid="classssh_1_1Session_1a00ef8e842d49d238122cbdd3dece60a1" compoundref="libsshpp_8hpp" startline="371" endline="379">ssh::Session::log</referencedby>
+        <referencedby refid="exec_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="exec_8c" startline="7" endline="66">main</referencedby>
+        <referencedby refid="group__libssh__session_1ga8986fdab5f7b17935b21e96652f22cf8" compoundref="known__hosts_8c" startline="196" endline="272">match_hashed_host</referencedby>
+        <referencedby refid="pki__crypto_8c_1a817708f53a64f50b665d647b6d9745c2" compoundref="pki__crypto_8c" startline="1392" endline="1471">pki_dsa_signature_to_blob</referencedby>
+        <referencedby refid="pki__priv_8h_1aa3663627890dacf870e2b9874c51e712" compoundref="pki__ed25519__common_8c" startline="189" endline="203">pki_ed25519_public_key_to_blob</referencedby>
+        <referencedby refid="pki__priv_8h_1a456b31fe92a5fc2fabcd8a5ec2c87e3c" compoundref="pki__ed25519_8c" startline="59" endline="99">pki_ed25519_sign</referencedby>
+        <referencedby refid="pki__priv_8h_1abb580d92eaeac82f200b332bb09043dd" compoundref="pki__ed25519_8c" startline="101" endline="149">pki_ed25519_verify</referencedby>
+        <referencedby refid="group__libssh__pki_1ga129b5d5a3dcdb907c9ccedd838e15caf" compoundref="pki_8c" startline="1460" endline="1546">pki_import_cert_buffer</referencedby>
+        <referencedby refid="group__libssh__pki_1ga12fb8e3141837c332165568530a1d29a" compoundref="pki_8c" startline="1100" endline="1278">pki_import_privkey_buffer</referencedby>
+        <referencedby refid="group__libssh__pki_1ga47e989e47acf6d577c805910e688a21f" compoundref="pki_8c" startline="1280" endline="1458">pki_import_pubkey_buffer</referencedby>
+        <referencedby refid="group__libssh__pki_1gae31fc9d1d7202ca99b444d6b8159cabb" compoundref="pki__container__openssh_8c" startline="404" endline="426">pki_openssh_export_privkey_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1gae8b8a710eea5b5c36c9e2416cc0734d7" compoundref="pki__container__openssh_8c" startline="101" endline="222">pki_private_key_decrypt</referencedby>
+        <referencedby refid="pki__priv_8h_1aa2d53615fe67402faa649f5cb6160e91" compoundref="pki__crypto_8c" startline="1182" endline="1390">pki_publickey_to_blob</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga66ac61dc075863462b8d83b65660e7df" compoundref="buffer_8c" startline="181" endline="220">realloc_buffer</referencedby>
+        <referencedby refid="sshnetcat_8c_1a38ba4d370f756491ce0d55e0c320d08b" compoundref="sshnetcat_8c" startline="77" endline="175">select_loop</referencedby>
+        <referencedby refid="torture__buffer_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__buffer_8c" startline="11" endline="22">setup</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga73c21faa0fedad3e83f2da8b7a0fb3c5" compoundref="buffer_8c" startline="565" endline="578">ssh_buffer_add_buffer</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3bf82f0f310311432410f9393ebab528" compoundref="buffer_8c" startline="300" endline="324">ssh_buffer_add_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gac880d4f0dad2902ec586cfac4809a25c" compoundref="buffer_8c" startline="403" endline="417">ssh_buffer_add_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae368cb8086f35d53bb18c586f9a28625" compoundref="buffer_8c" startline="453" endline="463">ssh_buffer_add_u16</referencedby>
+        <referencedby refid="group__libssh__buffer_1gada0ffde58ce6834889fe7a94bd038458" compoundref="buffer_8c" startline="430" endline="440">ssh_buffer_add_u32</referencedby>
+        <referencedby refid="group__libssh__buffer_1gae6449fcf12f189067f6587888c5b1022" compoundref="buffer_8c" startline="476" endline="486">ssh_buffer_add_u64</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6e7a241701add756f1093aa6fdc08db" compoundref="buffer_8c" startline="499" endline="509">ssh_buffer_add_u8</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad4991b9eadf8b81401c032bf38ab7094" compoundref="buffer_8c" startline="366" endline="390">ssh_buffer_allocate</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad9103e11e347e99cf35f027e81d969f5" compoundref="buffer_8c" startline="335" endline="352">ssh_buffer_allocate_size</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga608cf73226454f21e8b2f9f1d838c5fc" compoundref="buffer_8c" startline="149" endline="166">ssh_buffer_free</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3577f5f4102e8010b281837b7812f261" compoundref="buffer_8c" startline="589" endline="591">ssh_buffer_get</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga2664b48795a4cba70a424e7704bdbcf2" compoundref="buffer_8c" startline="671" endline="686">ssh_buffer_get_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad1594908ed57799f4a84066f47c3e7c0" compoundref="buffer_8c" startline="602" endline="605">ssh_buffer_get_len</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3976e75d6d9c08438a3be49164ec64ed" compoundref="buffer_8c" startline="762" endline="792">ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga87e8b550cc80266bcc6484e7287a46e8" compoundref="buffer_8c" startline="715" endline="717">ssh_buffer_get_u32</referencedby>
+        <referencedby refid="group__libssh__buffer_1gaf41a6b3418aeeeebf63dee15c453f1a6" compoundref="buffer_8c" startline="730" endline="732">ssh_buffer_get_u64</referencedby>
+        <referencedby refid="group__libssh__buffer_1gac8b0753ba4dcc4e5b140f48af0485d39" compoundref="buffer_8c" startline="700" endline="702">ssh_buffer_get_u8</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga190a1c9ac2a48d23412ab75f2fd805e6" compoundref="buffer_8c" startline="810" endline="904">ssh_buffer_pack_allocate_va</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga3ac81bb0848d74fe313ffa16500db1bb" compoundref="buffer_8c" startline="915" endline="1025">ssh_buffer_pack_va</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga78a03bd2576567c33858754601b2b619" compoundref="buffer_8c" startline="620" endline="635">ssh_buffer_pass_bytes</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga14f9ecddaad320dbc98c7462117be8b0" compoundref="buffer_8c" startline="648" endline="658">ssh_buffer_pass_bytes_end</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga2b52225e65c36ae1f1585f005a454f24" compoundref="buffer_8c" startline="524" endline="551">ssh_buffer_prepend_data</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad877da63fd8d9a0ee00859bfbacf1eda" compoundref="buffer_8c" startline="259" endline="287">ssh_buffer_reinit</referencedby>
+        <referencedby refid="group__libssh__buffer_1gade0108b17f43b5269b92456a785df126" compoundref="buffer_8c" startline="176" endline="179">ssh_buffer_set_secure</referencedby>
+        <referencedby refid="group__libssh__buffer_1gad6f2016153a535fcc92b10a5267a729c" compoundref="buffer_8c" startline="1083" endline="1324">ssh_buffer_unpack_va</referencedby>
+        <referencedby refid="group__libssh__buffer_1ga49d552059803b03f1c305619cba34e24" compoundref="buffer_8c" startline="743" endline="750">ssh_buffer_validate_length</referencedby>
+        <referencedby refid="group__libssh__channel_1ga3bff751afc5ecb5bbf9d6447e4e5370f" compoundref="channels_8c" startline="2447" endline="2476">ssh_channel_cancel_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1gaf5d55c90f3d98c583df23d21905c1127" compoundref="channels_8c" startline="1880" endline="1907">ssh_channel_change_pty_size</referencedby>
+        <referencedby refid="group__libssh__channel_1ga758cda957227751870c8772df46e5b39" compoundref="channels_8c" startline="2365" endline="2404">ssh_channel_listen_forward</referencedby>
+        <referencedby refid="group__libssh__channel_1ga7aede2f9af4c494ff9e41fc08a4572f1" compoundref="channels_8c" startline="2498" endline="2535">ssh_channel_request_env</referencedby>
+        <referencedby refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" compoundref="channels_8c" startline="2568" endline="2603">ssh_channel_request_exec</referencedby>
+        <referencedby refid="group__libssh__channel_1gabb175414352256e1602286e0ab50886c" compoundref="channels_8c" startline="1798" endline="1847">ssh_channel_request_pty_size</referencedby>
+        <referencedby refid="group__libssh__channel_1gaef198ad0dcf0968aa2a449c8898d985e" compoundref="channels_8c" startline="2684" endline="2709">ssh_channel_request_send_break</referencedby>
+        <referencedby refid="group__libssh__channel_1gaa98315fca818b561970a6950683f4053" compoundref="channels_8c" startline="2638" endline="2666">ssh_channel_request_send_signal</referencedby>
+        <referencedby refid="group__libssh__channel_1ga06024b070f9b2a3d6964b79ae36695b7" compoundref="channels_8c" startline="1941" endline="1976">ssh_channel_request_subsystem</referencedby>
+        <referencedby refid="group__libssh__channel_1gadfa34624c28164bd73453cd04aa64c1f" compoundref="channels_8c" startline="2042" endline="2091">ssh_channel_request_x11</referencedby>
+        <referencedby refid="connector_8c_1a4cc7de304441a1cdb59c3656ad1a1678" compoundref="connector_8c" startline="513" endline="563">ssh_connector_channel_write_wontblock_cb</referencedby>
+        <referencedby refid="connector_8c_1a83806fe46fe887adb695eeca7f35682a" compoundref="connector_8c" startline="243" endline="322">ssh_connector_fd_in_cb</referencedby>
+        <referencedby refid="connector_8c_1ad13c8d29eb297a425c51a53379450dd1" compoundref="connector_8c" startline="327" endline="370">ssh_connector_fd_out_cb</referencedby>
+        <referencedby refid="connector_8c_1a9d10a96cbda381bccc2fee5f2d5904c5" compoundref="connector_8c" startline="713" endline="726">ssh_connector_fd_read</referencedby>
+        <referencedby refid="connector_8c_1a2c034263a1c5bab38564d40cbfc67631" compoundref="connector_8c" startline="734" endline="752">ssh_connector_fd_write</referencedby>
+        <referencedby refid="group__libssh__misc_1gaecdd455fe4f0feb2781ffddf179f38ba" compoundref="misc_8c" startline="283" endline="298">ssh_dir_writeable</referencedby>
+        <referencedby refid="group__libssh__session_1ga16eb5c500a1beaf18821c6ce51b7b965" compoundref="known__hosts_8c" startline="430" endline="493">ssh_dump_knownhost</referencedby>
+        <referencedby refid="group__libssh__session_1ga1be0cba6d1c27a46361d91b84263d382" compoundref="known__hosts_8c" startline="73" endline="130">ssh_get_knownhost_line</referencedby>
+        <referencedby refid="group__libssh__channel_1ga814cf8a82b4098b8994f9029fed572c0" compoundref="channels_8c" startline="2256" endline="2341">ssh_global_request</referencedby>
+        <referencedby refid="callbacks_8c_1a34d5f8c7e772fe313418d195acf4bc1f" compoundref="callbacks_8c" startline="34" endline="46">ssh_legacy_log_callback</referencedby>
+        <referencedby refid="group__libssh__log_1ga0bb252b81e0c497fc559c9e4007cf6c5" compoundref="log_8c" startline="134" endline="147">ssh_log</referencedby>
+        <referencedby refid="group__libssh__log_1gacfb35fd4c7d3dafdbbfaa2c255022ddc" compoundref="log_8c" startline="155" endline="169">ssh_log_common</referencedby>
+        <referencedby refid="group__libssh__log_1ga28de9ecb422e9b2ffcd5dcb5b7ec13e1" compoundref="log_8c" startline="97" endline="115">ssh_log_function</referencedby>
+        <referencedby refid="group__libssh__misc_1ga2f4f479e4dc3412c7b4af6946eef6269" compoundref="misc_8c" startline="467" endline="627">ssh_log_hexdump</referencedby>
+        <referencedby refid="group__libssh__log_1ga04874b7c2777229ef8ec669886ee10bd" compoundref="log_8c" startline="80" endline="95">ssh_log_stderr</referencedby>
+        <referencedby refid="group__libssh__pki_1gac8d7d3fa88b93d8b059b6b5b2f457913" compoundref="pki_8c" startline="1562" endline="1593">ssh_pki_import_pubkey_base64</referencedby>
+        <referencedby refid="group__libssh__pki_1ga942b96ee72b13655952c87efe938e6ee" compoundref="pki_8c" startline="1610" endline="1661">ssh_pki_import_pubkey_blob</referencedby>
+        <referencedby refid="group__libssh__pki_1gabadb73a1db275add212f6b72d059bcfb" compoundref="pki__container__openssh_8c" startline="230" endline="381">ssh_pki_openssh_import</referencedby>
+        <referencedby refid="pki__priv_8h_1a0a1b01b666de3e4f433660761c7658ad" compoundref="pki__container__openssh_8c" startline="534" endline="722">ssh_pki_openssh_privkey_export</referencedby>
+        <referencedby refid="legacy_8h_1aa4de432e122c76302e4190041fee6945" compoundref="legacy_8c" startline="575" endline="641">ssh_publickey_to_file</referencedby>
+        <referencedby refid="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" compoundref="scp_8c" startline="918" endline="944">ssh_scp_accept_request</referencedby>
+        <referencedby refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" compoundref="scp_8c" startline="241" endline="277">ssh_scp_close</referencedby>
+        <referencedby refid="group__libssh__scp_1gad36438c6b1e235d96cec43ca350e9b4f" compoundref="scp_8c" startline="882" endline="907">ssh_scp_deny_request</referencedby>
+        <referencedby refid="group__libssh__scp_1ga2ca698c1e49612c083d9f8a72df52188" compoundref="scp_8c" startline="409" endline="436">ssh_scp_leave_directory</referencedby>
+        <referencedby refid="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" compoundref="scp_8c" startline="770" endline="869">ssh_scp_pull_request</referencedby>
+        <referencedby refid="group__libssh__scp_1gaa584f03d4e3d582ac10a3a19818ec56d" compoundref="scp_8c" startline="320" endline="399">ssh_scp_push_directory</referencedby>
+        <referencedby refid="group__libssh__scp_1ga50b701b9c8923011d4fc6489c9c7eaae" compoundref="scp_8c" startline="456" endline="540">ssh_scp_push_file64</referencedby>
+        <referencedby refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" compoundref="scp_8c" startline="956" endline="1014">ssh_scp_read</referencedby>
+        <referencedby refid="group__libssh__scp_1ga0be44d8a450767d92668d36d1beb43b9" compoundref="scp_8c" startline="718" endline="748">ssh_scp_read_string</referencedby>
+        <referencedby refid="group__libssh__scp_1ga8772a6523a2a21a06e3986dbcc02118f" compoundref="scp_8c" startline="1095" endline="1100">ssh_scp_string_mode</referencedby>
+        <referencedby refid="group__libssh__scp_1ga11f48e2cf62bcec20d9232ed3ca41752" compoundref="scp_8c" startline="642" endline="702">ssh_scp_write</referencedby>
+        <referencedby refid="priv_8h_1aacb791f6b4bb44f93327dee7ab138717" compoundref="client_8c" startline="175" endline="237">ssh_send_banner</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+        <referencedby refid="socket_8c_1a6949167d4df3919f169f151e1c904a80" compoundref="socket_8c" startline="533" endline="559">ssh_socket_unbuffered_read</referencedby>
+        <referencedby refid="socket_8c_1a830a3625d6dd3a649a6f94380d4ecb82" compoundref="socket_8c" startline="564" endline="600">ssh_socket_unbuffered_write</referencedby>
+        <referencedby refid="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" compoundref="socket_8c" startline="637" endline="648">ssh_socket_write</referencedby>
+        <referencedby refid="group__libssh__session_1gaf61a9cfdc40c76ffce9f9a8543755d36" compoundref="known__hosts_8c" startline="499" endline="565">ssh_write_knownhost</referencedby>
+        <referencedby refid="torture__callbacks_8c_1ada0ae0e0b5b42f381f264e325c47b2f2" compoundref="torture__callbacks_8c" startline="73" endline="85">test_mock_ssh_logging_callback</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1ad792cdb2f22ab8009ea8bc430b059271" compoundref="torture__threads__buffer_8c" startline="476" endline="517">thread_buffer_pack_badformat</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a59e5543aaa48c7f2cffae38b4b8aa109" compoundref="torture__threads__buffer_8c" startline="162" endline="203">thread_buffer_prepend</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aec2d29aca1bc11a74c28dc0c9a45a9f8" compoundref="torture__threads__buffer_8c" startline="65" endline="92">thread_growing_buffer</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2a8a76df41ddfaadcc76c8db2cb45f16" compoundref="torture__threads__buffer_8c" startline="109" endline="146">thread_growing_buffer_shifting</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a2f29726eaa600a181d39bdc877fdee23" compoundref="torture__threads__buffer_8c" startline="270" endline="324">thread_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a6cd746fcd5d2247a25f1e9afa3397390" compoundref="torture__threads__buffer_8c" startline="336" endline="402">thread_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1aada376ffd60bb46e2232b036fae5728f" compoundref="torture__threads__buffer_8c" startline="415" endline="463">thread_ssh_buffer_get_format_error</referencedby>
+        <referencedby refid="torture__threads__buffer_8c_1a507db24a756e383887921fe13f9bc20e" compoundref="torture__threads__buffer_8c" startline="219" endline="258">thread_ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="torture__buffer_8c_1acca75050aecb4fa6d7d8a0a4481f8f54" compoundref="torture__buffer_8c" startline="236" endline="260">torture_buffer_pack_badformat</referencedby>
+        <referencedby refid="torture__buffer_8c_1a266a6405d0d6e3ad583ad64873638567" compoundref="torture__buffer_8c" startline="74" endline="99">torture_buffer_prepend</referencedby>
+        <referencedby refid="torture__buffer_8c_1a8934aec188a50d6fa6d3bf8915141db5" compoundref="torture__buffer_8c" startline="34" endline="46">torture_growing_buffer</referencedby>
+        <referencedby refid="torture__buffer_8c_1a2317a69c8eb7a247ad8279d17ffdf7e6" compoundref="torture__buffer_8c" startline="52" endline="69">torture_growing_buffer_shifting</referencedby>
+        <referencedby refid="torture__knownhosts_8c_1a5aa5170ce1bb16886fd54b737bc72aed" compoundref="torture__knownhosts_8c" startline="97" endline="152">torture_knownhosts_port</referencedby>
+        <referencedby refid="torture__callbacks_8c_1a417de1456aab235a265edcc4212e890e" compoundref="torture__callbacks_8c" startline="87" endline="106">torture_log_callback</referencedby>
+        <referencedby refid="torture__packet_8c_1ad28ea8febde081f05f3c6379e5397dd4" compoundref="torture__packet_8c" startline="45" endline="138">torture_packet</referencedby>
+        <referencedby refid="torture__rand_8c_1a725105eae5bf8ba0bec58639cc79f4f3" compoundref="torture__rand_8c" startline="40" endline="54">torture_rand_thread</referencedby>
+        <referencedby refid="torture__pki_8c_1acd426033c68a568e2cc262fa84b7abe2" compoundref="torture__pki_8c" startline="62" endline="82">torture_read_one_line</referencedby>
+        <referencedby refid="torture__request__env_8c_1af673d397cb089d358c279e3e6e082388" compoundref="torture__request__env_8c" startline="78" endline="118">torture_request_env</referencedby>
+        <referencedby refid="torture__buffer_8c_1aa5cce47bb186a19d068d8ae76bd83acd" compoundref="torture__buffer_8c" startline="136" endline="165">torture_ssh_buffer_add_format</referencedby>
+        <referencedby refid="torture__buffer_8c_1a65473b3f9a634cf3f3261a61a8caca05" compoundref="torture__buffer_8c" startline="167" endline="209">torture_ssh_buffer_get_format</referencedby>
+        <referencedby refid="torture__buffer_8c_1a8b6c2558161b5a41762c0f44b2f0bcee" compoundref="torture__buffer_8c" startline="211" endline="234">torture_ssh_buffer_get_format_error</referencedby>
+        <referencedby refid="torture__buffer_8c_1a61af67c27c79501074300baad8637fa2" compoundref="torture__buffer_8c" startline="104" endline="134">torture_ssh_buffer_get_ssh_string</referencedby>
+        <referencedby refid="torture__misc_8c_1a181933ed646695542ff693fb5546964f" compoundref="torture__misc_8c" startline="367" endline="410">torture_ssh_dir_writeable</referencedby>
+        <referencedby refid="torture__misc_8c_1a3fc4093e1bd00dbd7dedd1abd5f0c258" compoundref="torture__misc_8c" startline="412" endline="502">torture_ssh_mkdirs</referencedby>
+        <referencedby refid="torture__misc_8c_1aeafe803e2a63f22130674c32a006326c" compoundref="torture__misc_8c" startline="640" endline="656">torture_ssh_newline_vis</referencedby>
+        <referencedby refid="torture__misc_8c_1aa5be6dded4c0979bd47da4aa4d1ad225" compoundref="torture__misc_8c" startline="504" endline="638">torture_ssh_quote_file_name</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="benchmarks_8h_1a33a30ecb04e95771eb40760397d2cc40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_ping_latency</definition>
+        <argsstring>(const char *host, float *average)</argsstring>
+        <name>benchmarks_ping_latency</name>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>average</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="71" column="5" bodyfile="tests/benchmarks/latency.c" bodystart="42" bodyend="85" declfile="tests/benchmarks/benchmarks.h" declline="71" declcolumn="5"/>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="latency_8c_1a1c663c58f7081ea97a7ca14d8278c6a0" compoundref="latency_8c" startline="31">PING_PROGRAM</references>
+        <referencedby refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" compoundref="benchmarks_8c" startline="317" endline="345">do_benchmarks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_ssh_latency</definition>
+        <argsstring>(ssh_session session, float *average)</argsstring>
+        <name>benchmarks_ssh_latency</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>average</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="72" column="5" bodyfile="tests/benchmarks/latency.c" bodystart="119" bodyend="148" declfile="tests/benchmarks/benchmarks.h" declline="72" declcolumn="5"/>
+        <references refid="latency_8c_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1ga238f07e0455456a5bfd8a49ead917732" compoundref="channels_8c" startline="1285" endline="1336">ssh_channel_close</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" compoundref="channels_8c" startline="920" endline="930">ssh_channel_open_session</references>
+        <references refid="group__libssh__channel_1ga7aede2f9af4c494ff9e41fc08a4572f1" compoundref="channels_8c" startline="2498" endline="2535">ssh_channel_request_env</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__error_1ga036433b7bf3d4ca94206253f58d136f9" compoundref="error_8c" startline="148" endline="152">ssh_get_error_code</references>
+        <references refid="latency_8c_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <referencedby refid="benchmarks_8c_1a05e2b4f4ba038cee1f81f42b79a1b002" compoundref="benchmarks_8c" startline="317" endline="345">do_benchmarks</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timestamp_init</definition>
+        <argsstring>(struct timestamp_struct *ts)</argsstring>
+        <name>timestamp_init</name>
+        <param>
+          <type>struct <ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref> *</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="74" column="6" bodyfile="tests/benchmarks/latency.c" bodystart="91" bodyend="93" declfile="tests/benchmarks/benchmarks.h" declline="74" declcolumn="6"/>
+        <references refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" compoundref="benchmarks_8h" startline="68">timestamp_struct::timestamp</references>
+        <referencedby refid="bench__sftp_8c_1a5d05a4e9603ff04353b637065dacf28c" compoundref="bench__sftp_8c" startline="159" endline="239">benchmarks_async_sftp_down</referencedby>
+        <referencedby refid="bench__raw_8c_1afd64b09e9ae3ce2136328be2cd0bac89" compoundref="bench__raw_8c" startline="227" endline="285">benchmarks_raw_down</referencedby>
+        <referencedby refid="bench__raw_8c_1a070a579a7a62c222e5f28c9e074c0df7" compoundref="bench__raw_8c" startline="107" endline="182">benchmarks_raw_up</referencedby>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" compoundref="latency_8c" startline="119" endline="148">benchmarks_ssh_latency</referencedby>
+        <referencedby refid="bench__sftp_8c_1aea73fc2575a832d79f09c7b3fa25cac9" compoundref="bench__sftp_8c" startline="97" endline="149">benchmarks_sync_sftp_down</referencedby>
+        <referencedby refid="bench__sftp_8c_1acef09f85489fe47862edb8378a22af82" compoundref="bench__sftp_8c" startline="41" endline="87">benchmarks_sync_sftp_up</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float elapsed_time</definition>
+        <argsstring>(struct timestamp_struct *ts)</argsstring>
+        <name>elapsed_time</name>
+        <param>
+          <type>struct <ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref> *</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="75" column="7" bodyfile="tests/benchmarks/latency.c" bodystart="100" bodyend="110" declfile="tests/benchmarks/benchmarks.h" declline="75" declcolumn="7"/>
+        <references refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" compoundref="benchmarks_8h" startline="68">timestamp_struct::timestamp</references>
+        <referencedby refid="bench__sftp_8c_1a5d05a4e9603ff04353b637065dacf28c" compoundref="bench__sftp_8c" startline="159" endline="239">benchmarks_async_sftp_down</referencedby>
+        <referencedby refid="bench__raw_8c_1afd64b09e9ae3ce2136328be2cd0bac89" compoundref="bench__raw_8c" startline="227" endline="285">benchmarks_raw_down</referencedby>
+        <referencedby refid="bench__raw_8c_1a070a579a7a62c222e5f28c9e074c0df7" compoundref="bench__raw_8c" startline="107" endline="182">benchmarks_raw_up</referencedby>
+        <referencedby refid="bench__scp_8c_1ab1fd794fd0201340942c553606c69e6a" compoundref="bench__scp_8c" startline="92" endline="150">benchmarks_scp_down</referencedby>
+        <referencedby refid="bench__scp_8c_1a051cb8e90b1ce2680509775e390fc32f" compoundref="bench__scp_8c" startline="38" endline="82">benchmarks_scp_up</referencedby>
+        <referencedby refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" compoundref="latency_8c" startline="119" endline="148">benchmarks_ssh_latency</referencedby>
+        <referencedby refid="bench__sftp_8c_1aea73fc2575a832d79f09c7b3fa25cac9" compoundref="bench__sftp_8c" startline="97" endline="149">benchmarks_sync_sftp_down</referencedby>
+        <referencedby refid="bench__sftp_8c_1acef09f85489fe47862edb8378a22af82" compoundref="bench__sftp_8c" startline="41" endline="87">benchmarks_sync_sftp_up</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1a070a579a7a62c222e5f28c9e074c0df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_raw_up</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_raw_up</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="79" column="5" bodyfile="tests/benchmarks/bench_raw.c" bodystart="107" bodyend="182" declfile="tests/benchmarks/benchmarks.h" declline="79" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="bench__raw_8c_1a1fcb9ad4652766d7994efae5b27d676d" compoundref="bench__raw_8c" startline="47" endline="61">get_python_eater</references>
+        <references refid="bench__raw_8c_1aa8f72fbdca7b2e95ead9e20f46290f2a" compoundref="bench__raw_8c" startline="27">PYTHON_PATH</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1ga238f07e0455456a5bfd8a49ead917732" compoundref="channels_8c" startline="1285" endline="1336">ssh_channel_close</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" compoundref="channels_8c" startline="920" endline="930">ssh_channel_open_session</references>
+        <references refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" compoundref="channels_8c" startline="2831" endline="2838">ssh_channel_read</references>
+        <references refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" compoundref="channels_8c" startline="2568" endline="2603">ssh_channel_request_exec</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="bench__raw_8c_1ab14322fd9f96904e565cabfbe2b42a5e" compoundref="bench__raw_8c" startline="71" endline="97">upload_script</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1afd64b09e9ae3ce2136328be2cd0bac89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_raw_down</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_raw_down</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="81" column="5" bodyfile="tests/benchmarks/bench_raw.c" bodystart="227" bodyend="285" declfile="tests/benchmarks/benchmarks.h" declline="81" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="bench__raw_8c_1a791bcd7546969c539de890d13a11ec95" compoundref="bench__raw_8c" startline="203" endline="217">get_python_giver</references>
+        <references refid="bench__raw_8c_1aa8f72fbdca7b2e95ead9e20f46290f2a" compoundref="bench__raw_8c" startline="27">PYTHON_PATH</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__channel_1ga238f07e0455456a5bfd8a49ead917732" compoundref="channels_8c" startline="1285" endline="1336">ssh_channel_close</references>
+        <references refid="group__libssh__channel_1gad1417f9eae8928fed20faafe2d9dbfff" compoundref="channels_8c" startline="1123" endline="1167">ssh_channel_free</references>
+        <references refid="group__libssh__channel_1gada8ccda7bf65165fe145d3096a252dcc" compoundref="channels_8c" startline="80" endline="129">ssh_channel_new</references>
+        <references refid="group__libssh__channel_1gaf051dd30d75bf6dc45d1a5088cf970bd" compoundref="channels_8c" startline="920" endline="930">ssh_channel_open_session</references>
+        <references refid="group__libssh__channel_1gac92381c4c5d4a7eab35f6e84686f033d" compoundref="channels_8c" startline="2831" endline="2838">ssh_channel_read</references>
+        <references refid="group__libssh__channel_1ga567d509183ade0a77190f390e2b5747d" compoundref="channels_8c" startline="2568" endline="2603">ssh_channel_request_exec</references>
+        <references refid="group__libssh__channel_1ga5d658df773ba854b35ff9f905341e2fb" compoundref="channels_8c" startline="1553" endline="1555">ssh_channel_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="bench__raw_8c_1ab14322fd9f96904e565cabfbe2b42a5e" compoundref="bench__raw_8c" startline="71" endline="97">upload_script</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1a051cb8e90b1ce2680509775e390fc32f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_scp_up</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_scp_up</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="86" column="5" bodyfile="tests/benchmarks/bench_scp.c" bodystart="38" bodyend="82" declfile="tests/benchmarks/benchmarks.h" declline="86" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" compoundref="bench__scp_8c" startline="27">SCPDIR</references>
+        <references refid="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" compoundref="bench__scp_8c" startline="28">SCPFILE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" compoundref="scp_8c" startline="241" endline="277">ssh_scp_close</references>
+        <references refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" compoundref="scp_8c" startline="286" endline="304">ssh_scp_free</references>
+        <references refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" compoundref="scp_8c" startline="119" endline="230">ssh_scp_init</references>
+        <references refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" compoundref="scp_8c" startline="61" endline="108">ssh_scp_new</references>
+        <references refid="group__libssh__scp_1ga544f4b9c525071910110ada94148adc6" compoundref="scp_8c" startline="557" endline="560">ssh_scp_push_file</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5a869c4d02c7a4b9ece1e5134dc1724061" compoundref="libssh_8h" startline="426">SSH_SCP_WRITE</references>
+        <references refid="group__libssh__scp_1ga11f48e2cf62bcec20d9232ed3ca41752" compoundref="scp_8c" startline="642" endline="702">ssh_scp_write</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1ab1fd794fd0201340942c553606c69e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_scp_down</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_scp_down</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="88" column="5" bodyfile="tests/benchmarks/bench_scp.c" bodystart="92" bodyend="150" declfile="tests/benchmarks/benchmarks.h" declline="88" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="bench__scp_8c_1aa52bc8d7dcd49526df5e68402da977c5" compoundref="bench__scp_8c" startline="27">SCPDIR</references>
+        <references refid="bench__scp_8c_1ac27741483d3563262cb206d97e90b05a" compoundref="bench__scp_8c" startline="28">SCPFILE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="group__libssh__scp_1gad3bb38b15f02597cc1e155c526a51e51" compoundref="scp_8c" startline="918" endline="944">ssh_scp_accept_request</references>
+        <references refid="group__libssh__scp_1ga14d31059dcf6fb2325fb960da8e4474e" compoundref="scp_8c" startline="241" endline="277">ssh_scp_close</references>
+        <references refid="group__libssh__scp_1gac29000cdb07c74d54251fbd838c0c661" compoundref="scp_8c" startline="286" endline="304">ssh_scp_free</references>
+        <references refid="group__libssh__scp_1ga1db56dcb9dee01dd0b679b3b11151110" compoundref="scp_8c" startline="119" endline="230">ssh_scp_init</references>
+        <references refid="group__libssh__scp_1ga9fcd39a2bb6438e39cf19ff859dc2f2e" compoundref="scp_8c" startline="61" endline="108">ssh_scp_new</references>
+        <references refid="group__libssh__scp_1gaba59cd8cc77d219cac93f865445c6e47" compoundref="scp_8c" startline="770" endline="869">ssh_scp_pull_request</references>
+        <references refid="libssh_8h_1a99fb83031ce9923c84392b4e92f956b5aa2d96fd7ece9f3b0c17359746867e4df" compoundref="libssh_8h" startline="428">SSH_SCP_READ</references>
+        <references refid="group__libssh__scp_1ga10bf627407959b51a7c39b37e8d46460" compoundref="scp_8c" startline="956" endline="1014">ssh_scp_read</references>
+        <references refid="group__libssh__scp_1ga8b6f736a5b5af73cf59c7825d7e61966" compoundref="scp_8c" startline="1054" endline="1060">ssh_scp_request_get_size</references>
+        <references refid="libssh_8h_1af626c92121ee675aaf0c28274e0d54eaab15eaf3f0bd4918a9d73c1202596bc60" compoundref="libssh_8h" startline="436">SSH_SCP_REQUEST_NEWFILE</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1acef09f85489fe47862edb8378a22af82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_sync_sftp_up</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_sync_sftp_up</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="93" column="5" bodyfile="tests/benchmarks/bench_sftp.c" bodystart="41" bodyend="87" declfile="tests/benchmarks/benchmarks.h" declline="93" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__sftp_1ga2a303b07042530a0c653c05ea6fa240b">sftp_close</references>
+        <references refid="group__libssh__sftp_1ga7b6bfbd5e81da1cdddf14a44caf21d37">sftp_free</references>
+        <references refid="group__libssh__sftp_1gab8ec37b2cb85c9bb47341683f43f0841">sftp_init</references>
+        <references refid="group__libssh__sftp_1gae84eeb5a1af9d49db10f17a060151e97">sftp_new</references>
+        <references refid="group__libssh__sftp_1gaad64845af1100fb9325f20812f38da3b">sftp_open</references>
+        <references refid="group__libssh__sftp_1gaf270f5ad058082ca836a456a090ad314">sftp_write</references>
+        <references refid="bench__sftp_8c_1a7829b596a5678d40a824d4f2c3a71f44" compoundref="bench__sftp_8c" startline="30">SFTPDIR</references>
+        <references refid="bench__sftp_8c_1aeec8d41b30adf84f5daa58cdcba66d54" compoundref="bench__sftp_8c" startline="31">SFTPFILE</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1aea73fc2575a832d79f09c7b3fa25cac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_sync_sftp_down</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_sync_sftp_down</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="95" column="5" bodyfile="tests/benchmarks/bench_sftp.c" bodystart="97" bodyend="149" declfile="tests/benchmarks/benchmarks.h" declline="95" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__sftp_1ga2a303b07042530a0c653c05ea6fa240b">sftp_close</references>
+        <references refid="group__libssh__sftp_1ga7b6bfbd5e81da1cdddf14a44caf21d37">sftp_free</references>
+        <references refid="group__libssh__sftp_1gab8ec37b2cb85c9bb47341683f43f0841">sftp_init</references>
+        <references refid="group__libssh__sftp_1gae84eeb5a1af9d49db10f17a060151e97">sftp_new</references>
+        <references refid="group__libssh__sftp_1gaad64845af1100fb9325f20812f38da3b">sftp_open</references>
+        <references refid="group__libssh__sftp_1gaba8095f72d8287e74b440f9984c05385">sftp_read</references>
+        <references refid="bench__sftp_8c_1a7829b596a5678d40a824d4f2c3a71f44" compoundref="bench__sftp_8c" startline="30">SFTPDIR</references>
+        <references refid="bench__sftp_8c_1aeec8d41b30adf84f5daa58cdcba66d54" compoundref="bench__sftp_8c" startline="31">SFTPFILE</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      <memberdef kind="function" id="benchmarks_8h_1a5d05a4e9603ff04353b637065dacf28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int benchmarks_async_sftp_down</definition>
+        <argsstring>(ssh_session session, struct argument_s *args, float *bps)</argsstring>
+        <name>benchmarks_async_sftp_down</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structargument__s" kindref="compound">argument_s</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>bps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/benchmarks/benchmarks.h" line="97" column="5" bodyfile="tests/benchmarks/bench_sftp.c" bodystart="159" bodyend="239" declfile="tests/benchmarks/benchmarks.h" declline="97" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" compoundref="benchmarks_8h" startline="49">argument_s::chunksize</references>
+        <references refid="structargument__s_1a21831b211ab5a2887c12228411fd8154" compoundref="benchmarks_8h" startline="50">argument_s::concurrent_requests</references>
+        <references refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" compoundref="benchmarks_8h" startline="48">argument_s::datasize</references>
+        <references refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" compoundref="latency_8c" startline="100" endline="110">elapsed_time</references>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__sftp_1ga46717d68301346682d5650e37eae6503">sftp_async_read</references>
+        <references refid="group__libssh__sftp_1ga7863299ed9a2e74d684500b79f430ad7">sftp_async_read_begin</references>
+        <references refid="group__libssh__sftp_1ga2a303b07042530a0c653c05ea6fa240b">sftp_close</references>
+        <references refid="group__libssh__sftp_1ga7b6bfbd5e81da1cdddf14a44caf21d37">sftp_free</references>
+        <references refid="group__libssh__sftp_1gab8ec37b2cb85c9bb47341683f43f0841">sftp_init</references>
+        <references refid="group__libssh__sftp_1gae84eeb5a1af9d49db10f17a060151e97">sftp_new</references>
+        <references refid="group__libssh__sftp_1gaad64845af1100fb9325f20812f38da3b">sftp_open</references>
+        <references refid="bench__sftp_8c_1a7829b596a5678d40a824d4f2c3a71f44" compoundref="bench__sftp_8c" startline="30">SFTPDIR</references>
+        <references refid="bench__sftp_8c_1aeec8d41b30adf84f5daa58cdcba66d54" compoundref="bench__sftp_8c" startline="31">SFTPFILE</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" compoundref="latency_8c" startline="91" endline="93">timestamp_init</references>
+        <references refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" compoundref="benchmarks_8h" startline="45">argument_s::verbose</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2010<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>The<sp/>SSH<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>the<sp/>SSH<sp/>Library;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BENCHMARKS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BENCHMARKS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>benchmarks.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>maximum<sp/>number<sp/>of<sp/>parallel<sp/>hosts<sp/>that<sp/>may<sp/>be<sp/>checked<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="benchmarks_8h_1af4d9e57372bcd6cd117f6022befb7245" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_HOSTS_CONNECT<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101" kindref="member">libssh_benchmarks</ref><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a8bd5dbae4e97cff4678dcea658274af3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a8bd5dbae4e97cff4678dcea658274af3" kindref="member">BENCHMARK_RAW_UPLOAD</ref>=0,</highlight></codeline>
+<codeline lineno="34" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101afa813cf7a5d62f2d411358bdd8eda198" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101afa813cf7a5d62f2d411358bdd8eda198" kindref="member">BENCHMARK_RAW_DOWNLOAD</ref>,</highlight></codeline>
+<codeline lineno="35" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101aaa921ea2413e6b2a007fb6087cd59386" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101aaa921ea2413e6b2a007fb6087cd59386" kindref="member">BENCHMARK_SCP_UPLOAD</ref>,</highlight></codeline>
+<codeline lineno="36" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101aa93c36573690d4c60741d99ba44555bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101aa93c36573690d4c60741d99ba44555bc" kindref="member">BENCHMARK_SCP_DOWNLOAD</ref>,</highlight></codeline>
+<codeline lineno="37" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a76ff6520cd65c1a123f8be733db4033f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a76ff6520cd65c1a123f8be733db4033f" kindref="member">BENCHMARK_SYNC_SFTP_UPLOAD</ref>,</highlight></codeline>
+<codeline lineno="38" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a735618a81391cf78e7867a98d67256e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a735618a81391cf78e7867a98d67256e3" kindref="member">BENCHMARK_SYNC_SFTP_DOWNLOAD</ref>,</highlight></codeline>
+<codeline lineno="39" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a5ec161d414efa43e3726f6c3b1fdc5e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a5ec161d414efa43e3726f6c3b1fdc5e1" kindref="member">BENCHMARK_ASYNC_SFTP_DOWNLOAD</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" kindref="member">BENCHMARK_NUMBER</ref></highlight></codeline>
+<codeline lineno="41" refid="benchmarks_8h_1a88308063dff3b2e4089bb3fce273c101a1fca6a2dd69688213a344ebe364934b1" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structargument__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="44" refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structargument__s_1a59f4cf6e70e10f437854215466432d72" kindref="member">hosts</ref>[<ref refid="benchmarks_8h_1af4d9e57372bcd6cd117f6022befb7245" kindref="member">MAX_HOSTS_CONNECT</ref>];</highlight></codeline>
+<codeline lineno="45" refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structargument__s_1aaee6183271569d13a32b1b12d0e7c434" kindref="member">verbose</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structargument__s_1a3c866ec617b4ed468d10edaa0db8f508" kindref="member">nhosts</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structargument__s_1af04c45026e2f5a808d83e290bc78f89b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structargument__s_1af04c45026e2f5a808d83e290bc78f89b" kindref="member">ntests</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structargument__s_1a37d0431b8893e912f1ee045ce71386b5" kindref="member">datasize</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structargument__s_1a0fe14b06da5d2def95d1e280120d1fbc" kindref="member">chunksize</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structargument__s_1a21831b211ab5a2887c12228411fd8154" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structargument__s_1a21831b211ab5a2887c12228411fd8154" kindref="member">concurrent_requests</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structargument__s_1a09d39c40b5f2f7de7d381fefcac05456" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structargument__s_1a09d39c40b5f2f7de7d381fefcac05456" kindref="member">cipher</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="benchmarks_8h_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="benchmarks_8h_1ad0b82466bf83e80cf5c5e78d3d0f2e4a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="benchmarks_8h_1ad0b82466bf83e80cf5c5e78d3d0f2e4a" kindref="member">bench_fct</ref>)(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structbenchmark" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbenchmark" kindref="compound">benchmark</ref><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="structbenchmark_1a8594089f20ef467a2c6e8cc01c653b21" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structbenchmark_1a8594089f20ef467a2c6e8cc01c653b21" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structbenchmark_1af766d17ca54928d54f763cd09867246b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="benchmarks_8h_1ad0b82466bf83e80cf5c5e78d3d0f2e4a" kindref="member">bench_fct</ref><sp/><ref refid="structbenchmark_1af766d17ca54928d54f763cd09867246b" kindref="member">fct</ref>;</highlight></codeline>
+<codeline lineno="62" refid="structbenchmark_1a23f1f9188e0f5877d3b6aee4218fdb04" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structbenchmark_1a23f1f9188e0f5877d3b6aee4218fdb04" kindref="member">enabled</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>latency.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="structtimestamp__struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/><ref refid="structtimestamp__struct_1a17d500bb0a2d672ee2aa8f3e4cd6e234" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1a33a30ecb04e95771eb40760397d2cc40" kindref="member">benchmarks_ping_latency</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*average);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1a166dab0266f920174e138f1039ca1773" kindref="member">benchmarks_ssh_latency</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*average);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1ad5966bfd9ad01311a474472dbddcbcab" kindref="member">timestamp_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>*ts);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1a9a290a799ef77fe179d811d1a41fd423" kindref="member">elapsed_time</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtimestamp__struct" kindref="compound">timestamp_struct</ref><sp/>*ts);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>bench_raw.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1a070a579a7a62c222e5f28c9e074c0df7" kindref="member">benchmarks_raw_up</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1afd64b09e9ae3ce2136328be2cd0bac89" kindref="member">benchmarks_raw_down</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>bench_scp.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1a051cb8e90b1ce2680509775e390fc32f" kindref="member">benchmarks_scp_up</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1ab1fd794fd0201340942c553606c69e6a" kindref="member">benchmarks_scp_down</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>bench_sftp.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1acef09f85489fe47862edb8378a22af82" kindref="member">benchmarks_sync_sftp_up</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1aea73fc2575a832d79f09c7b3fa25cac9" kindref="member">benchmarks_sync_sftp_down</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="benchmarks_8h_1a5d05a4e9603ff04353b637065dacf28c" kindref="member">benchmarks_async_sftp_down</ref><sp/>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structargument__s" kindref="compound">argument_s</ref><sp/>*args,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*bps);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BENCHMARKS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="tests/benchmarks/benchmarks.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="knownhosts_8h" kind="file" language="C++">
+    <compoundname>knownhosts.h</compoundname>
+    <includedby refid="kex_8c" local="yes">src/kex.c</includedby>
+    <includedby refid="known__hosts_8c" local="yes">src/known_hosts.c</includedby>
+    <includedby refid="src_2knownhosts_8c" local="yes">src/knownhosts.c</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/known_hosts.c</label>
+        <link refid="known__hosts_8c"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/libssh/knownhosts.h</label>
+        <link refid="knownhosts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/knownhosts.c</label>
+        <link refid="src_2knownhosts_8c"/>
+      </node>
+      <node id="2">
+        <label>src/kex.c</label>
+        <link refid="kex_8c"/>
+      </node>
+      <node id="4">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh__session_1ga95043df5a4378cc43ed13ba7ac5b4d01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__list" kindref="compound">ssh_list</ref> *</type>
+        <definition>struct ssh_list* ssh_known_hosts_get_algorithms</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_known_hosts_get_algorithms</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/knownhosts.h" line="25" column="15" bodyfile="src/knownhosts.c" bodystart="347" bodyend="453" declfile="include/libssh/knownhosts.h" declline="25" declcolumn="15"/>
+        <references refid="proxy_8c_1a11614f44ef4d939bdd984953346a7572" compoundref="proxy_8c" startline="33">error</references>
+        <references refid="structssh__session__struct_1af35a02eebf952e900f35a88867029047" compoundref="session_8h" startline="215">ssh_session_struct::global_knownhosts</references>
+        <references refid="structssh__session__struct_1ae2c7b3b1e40963af7e7dcd2544867539" compoundref="session_8h" startline="214">ssh_session_struct::knownhosts</references>
+        <references refid="structssh__iterator_1a7fd7219325e56f365796ad59c8443ee5" compoundref="misc_8h" startline="45">ssh_iterator::next</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__knownhosts__entry_1a64df8de718e20463836e0e06eb5f312f" compoundref="libssh_8h" startline="323">ssh_knownhosts_entry::publickey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="misc_8h_1a1f44c71b6f7ba10a4a543f73a07a85aa" compoundref="misc_8h" startline="73">ssh_iterator_value</references>
+        <references refid="group__libssh__session_1ga4590766bedc2bf9a9f9727b3fac4eaa8" compoundref="src_2knownhosts_8c" startline="215" endline="300">ssh_known_hosts_read_entries</references>
+        <references refid="group__libssh__session_1ga97b827bd9eef76277e8420359e843cd8" compoundref="src_2knownhosts_8c" startline="145" endline="156">ssh_knownhosts_entry_free</references>
+        <references refid="group__libssh__misc_1ga4590c6ff62f0e6feb59e2e3152a6721f" compoundref="misc_8c" startline="724" endline="745">ssh_list_append</references>
+        <references refid="group__libssh__misc_1ga5cd8838fe4ea4b06a2b6729cf89e2415" compoundref="misc_8c" startline="703" endline="713">ssh_list_count</references>
+        <references refid="group__libssh__misc_1ga069155e0b5924eb930022b8d566f6d28" compoundref="misc_8c" startline="669" endline="680">ssh_list_free</references>
+        <references refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" compoundref="misc_8c" startline="682" endline="686">ssh_list_get_iterator</references>
+        <references refid="group__libssh__misc_1ga4c696e6fd38257737962971fa0362435" compoundref="misc_8c" startline="661" endline="667">ssh_list_new</references>
+        <references refid="group__libssh__misc_1gac862429660a1f93dcf625d08f407b85e" compoundref="misc_8c" startline="771" endline="798">ssh_list_remove</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__session_1ga882e56c9ac92b2e860f055ac903e9c07" compoundref="options_8c" startline="1420" endline="1490">ssh_options_apply</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="group__libssh__session_1gae8571ad5d4a9490badba8606e9942ec2" compoundref="src_2knownhosts_8c" startline="302" endline="334">ssh_session_get_host_port</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__key__struct_1af198ae6d0eee951e7d46b8dacbf3c412" compoundref="pki_8h" startline="57">ssh_key_struct::type_c</references>
+        <referencedby refid="torture__knownhosts__verify_8c_1a440a79f135a76bbdc5cd40590ec30765" compoundref="torture__knownhosts__verify_8c" startline="216" endline="270">torture_knownhosts_duplicate</referencedby>
+        <referencedby refid="torture__knownhosts__verify_8c_1ac1c0973d318a3572507db80d43277613" compoundref="torture__knownhosts__verify_8c" startline="146" endline="214">torture_knownhosts_precheck</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1gad36769864e0a5247edffd6e428e34e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* ssh_known_hosts_get_algorithms_names</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_known_hosts_get_algorithms_names</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/knownhosts.h" line="26" column="6" bodyfile="src/knownhosts.c" bodystart="504" bodyend="593" declfile="include/libssh/knownhosts.h" declline="26" declcolumn="6"/>
+        <references refid="structssh__session__struct_1af35a02eebf952e900f35a88867029047" compoundref="session_8h" startline="215">ssh_session_struct::global_knownhosts</references>
+        <references refid="structssh__session__struct_1ae2c7b3b1e40963af7e7dcd2544867539" compoundref="session_8h" startline="214">ssh_session_struct::knownhosts</references>
+        <references refid="structssh__session__struct_1a1c29cf990c1d0df6e1b0971d4f3d1f3e">ssh_session_struct::opts</references>
+        <references refid="structssh__knownhosts__entry_1a64df8de718e20463836e0e06eb5f312f" compoundref="libssh_8h" startline="323">ssh_knownhosts_entry::publickey</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="misc_8h_1a1f44c71b6f7ba10a4a543f73a07a85aa" compoundref="misc_8h" startline="73">ssh_iterator_value</references>
+        <references refid="group__libssh__session_1ga3a9485c3e297b368b0bf3a9f045b8c1a" compoundref="src_2knownhosts_8c" startline="464" endline="489">ssh_known_host_sigs_from_hostkey_type</references>
+        <references refid="group__libssh__session_1ga4590766bedc2bf9a9f9727b3fac4eaa8" compoundref="src_2knownhosts_8c" startline="215" endline="300">ssh_known_hosts_read_entries</references>
+        <references refid="group__libssh__session_1ga97b827bd9eef76277e8420359e843cd8" compoundref="src_2knownhosts_8c" startline="145" endline="156">ssh_knownhosts_entry_free</references>
+        <references refid="group__libssh__misc_1ga5cd8838fe4ea4b06a2b6729cf89e2415" compoundref="misc_8c" startline="703" endline="713">ssh_list_count</references>
+        <references refid="group__libssh__misc_1ga069155e0b5924eb930022b8d566f6d28" compoundref="misc_8c" startline="669" endline="680">ssh_list_free</references>
+        <references refid="group__libssh__misc_1gad36d247bfcae7965d6aca8245d061e0d" compoundref="misc_8c" startline="682" endline="686">ssh_list_get_iterator</references>
+        <references refid="group__libssh__misc_1gac862429660a1f93dcf625d08f407b85e" compoundref="misc_8c" startline="771" endline="798">ssh_list_remove</references>
+        <references refid="group__libssh__session_1ga882e56c9ac92b2e860f055ac903e9c07" compoundref="options_8c" startline="1420" endline="1490">ssh_options_apply</references>
+        <references refid="token_8h_1afaab89e7c5cf75e6874da23ce9434255" compoundref="token_8c" startline="276" endline="357">ssh_remove_duplicates</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1ad1339fb4b92a9d25bdb99df5de5c4f88" compoundref="libssh_8h" startline="285">SSH_REQUEST_DENIED</references>
+        <references refid="group__libssh__session_1gae8571ad5d4a9490badba8606e9942ec2" compoundref="src_2knownhosts_8c" startline="302" endline="334">ssh_session_get_host_port</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="structssh__key__struct_1a22557faf765b925690d178c9241fb3e2" compoundref="pki_8h" startline="55">ssh_key_struct::type</references>
+        <referencedby refid="kex_8h_1a5e4f1c90323e182066cfe75a5153c111" compoundref="kex_8c" startline="570" endline="657">ssh_client_select_hostkeys</referencedby>
+        <referencedby refid="torture__knownhosts__parsing_8c_1a6d9c521b05703644072a60947172795b" compoundref="torture__knownhosts__parsing_8c" startline="374" endline="397">torture_knownhosts_get_algorithms_names</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh__session_1gae484a2e6dac6c5738db62c3ba602f118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="libssh_8h_1a6c80b2ddbe692af440986e1c5b8a2a92" kindref="member">ssh_known_hosts_e</ref></type>
+        <definition>enum ssh_known_hosts_e ssh_session_get_known_hosts_entry_file</definition>
+        <argsstring>(ssh_session session, const char *filename, struct ssh_knownhosts_entry **pentry)</argsstring>
+        <name>ssh_session_get_known_hosts_entry_file</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structssh__knownhosts__entry" kindref="compound">ssh_knownhosts_entry</ref> **</type>
+          <declname>pentry</declname>
+        </param>
+        <briefdescription>
+<para>Get the known_hosts entry for the current connected session from the given known_hosts file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session to validate.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename to parse.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pentry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to store the allocated known hosts entry.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SSH_KNOWN_HOSTS_OK: The server is known and has not changed.<linebreak/>
+ SSH_KNOWN_HOSTS_CHANGED: The server key has changed. Either you are under attack or the administrator changed the key. You HAVE to warn the user about a possible attack.<linebreak/>
+ SSH_KNOWN_HOSTS_OTHER: The server gave use a key of a type while we had an other type recorded. It is a possible attack.<linebreak/>
+ SSH_KNOWN_HOSTS_UNKNOWN: The server is unknown. User should confirm the public key hash is correct.<linebreak/>
+ SSH_KNOWN_HOSTS_NOT_FOUND: The known host file does not exist. The host is thus unknown. File will be created if host key is accepted.<linebreak/>
+ SSH_KNOWN_HOSTS_ERROR: There had been an eror checking the host.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__libssh__session_1ga97b827bd9eef76277e8420359e843cd8" kindref="member">ssh_knownhosts_entry_free()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/knownhosts.h" line="26" column="6" bodyfile="src/knownhosts.c" bodystart="1199" bodyend="1229" declfile="include/libssh/knownhosts.h" declline="26" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>20014<sp/>by<sp/>Aris<sp/>Adamantiadis<sp/>&lt;aris@badcode.be&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SSH_KNOWNHOSTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SSH_KNOWNHOSTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__list" kindref="compound">ssh_list</ref><sp/>*<ref refid="group__libssh__session_1ga95043df5a4378cc43ed13ba7ac5b4d01" kindref="member">ssh_known_hosts_get_algorithms</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__libssh__session_1gad36769864e0a5247edffd6e428e34e8a" kindref="member">ssh_known_hosts_get_algorithms_names</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a6c80b2ddbe692af440986e1c5b8a2a92" kindref="member">ssh_known_hosts_e</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="group__libssh__session_1gae484a2e6dac6c5738db62c3ba602f118" kindref="member">ssh_session_get_known_hosts_entry_file</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__knownhosts__entry" kindref="compound">ssh_knownhosts_entry</ref><sp/>**pentry);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SSH_KNOWNHOSTS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/knownhosts.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,591 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ed25519_8c" kind="file" language="C++">
+    <compoundname>ed25519.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="libcrypto_8h" local="yes">libssh/libcrypto.h</includes>
+    <includes refid="wrapper_8h" local="yes">libssh/wrapper.h</includes>
+    <includes refid="ge25519_8h" local="yes">libssh/ge25519.h</includes>
+    <includes refid="sc25519_8h" local="yes">libssh/sc25519.h</includes>
+    <includes refid="ed25519_8h" local="yes">libssh/ed25519.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="10">
+        <label>sys/select.h</label>
+      </node>
+      <node id="17">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="18">
+        <label>stdint.h</label>
+      </node>
+      <node id="19">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>libssh/ge25519.h</label>
+        <link refid="ge25519_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>sc25519.h</label>
+        <link refid="sc25519_8h"/>
+      </node>
+      <node id="3">
+        <label>libssh/libcrypto.h</label>
+        <link refid="libcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>netdb.h</label>
+      </node>
+      <node id="14">
+        <label>libssh/libmbedcrypto.h</label>
+        <link refid="libmbedcrypto_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>sys/types.h</label>
+      </node>
+      <node id="13">
+        <label>libssh/libgcrypt.h</label>
+        <link refid="libgcrypt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="1">
+        <label>src/external/ed25519.c</label>
+        <link refid="ed25519_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>libssh/ed25519.h</label>
+        <link refid="ed25519_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libssh/wrapper.h</label>
+        <link refid="wrapper_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="16">
+        <label>fe25519.h</label>
+        <link refid="fe25519_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" prot="public" static="no">
+        <name>F</name>
+        <param><defname>i</defname></param>
+        <initializer>differentbits |= x[i] ^ y[i];</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/ed25519.c" line="25" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ed25519_8c_1ae038a49ca4efe2aa9a87477cf23b91d9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int crypto_verify_32</definition>
+        <argsstring>(const unsigned char *x, const unsigned char *y)</argsstring>
+        <name>crypto_verify_32</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/ed25519.c" line="22" column="12" bodyfile="src/external/ed25519.c" bodystart="22" bodyend="60"/>
+        <references refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db">F</references>
+        <referencedby refid="ed25519_8c_1a2afd36052d1604dbb7e6aba76b9b15c8" compoundref="ed25519_8c" startline="176" endline="222">crypto_sign_ed25519_open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void get_hram</definition>
+        <argsstring>(unsigned char *hram, const unsigned char *sm, const unsigned char *pk, unsigned char *playground, uint64_t smlen)</argsstring>
+        <name>get_hram</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>hram</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sm</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>pk</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>playground</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>smlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/ed25519.c" line="62" column="13" bodyfile="src/external/ed25519.c" bodystart="62" bodyend="77"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db">sha512_final</references>
+        <references refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c">sha512_init</references>
+        <references refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1">sha512_update</references>
+        <referencedby refid="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" compoundref="ed25519_8c" startline="113" endline="174">crypto_sign_ed25519</referencedby>
+        <referencedby refid="ed25519_8c_1a2afd36052d1604dbb7e6aba76b9b15c8" compoundref="ed25519_8c" startline="176" endline="222">crypto_sign_ed25519_open</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ed25519_8c_1a22f87ea2901498ee82e6166b7bdde303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_sign_ed25519_keypair</definition>
+        <argsstring>(unsigned char *pk, unsigned char *sk)</argsstring>
+        <name>crypto_sign_ed25519_keypair</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>pk</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/ed25519.c" line="80" column="5" bodyfile="src/external/ed25519.c" bodystart="80" bodyend="111"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="ge25519_8h_1a5538a2b1944238e8f49b3bcf1976a529" compoundref="ge25519_8h" startline="18">ge25519_pack</references>
+        <references refid="ge25519_8h_1ac9339fa24136bdb634a9f63d68e2689f" compoundref="ge25519_8h" startline="21">ge25519_scalarmult_base</references>
+        <references refid="sc25519_8h_1a0f2305dc99df8bd9e83eb868e9af51d5" compoundref="sc25519_8h" startline="14">sc25519_from32bytes</references>
+        <references refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db">sha512_final</references>
+        <references refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c">sha512_init</references>
+        <references refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1">sha512_update</references>
+        <references refid="libssh_8h_1aa04e01bdb1b607b705233a5d3587ae11">ssh_get_random</references>
+      </memberdef>
+      <memberdef kind="function" id="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_sign_ed25519</definition>
+        <argsstring>(unsigned char *sm, uint64_t *smlen, const unsigned char *m, uint64_t mlen, const unsigned char *sk)</argsstring>
+        <name>crypto_sign_ed25519</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sm</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>smlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>mlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/ed25519.c" line="113" column="5" bodyfile="src/external/ed25519.c" bodystart="113" bodyend="174"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="ge25519_8h_1a5538a2b1944238e8f49b3bcf1976a529" compoundref="ge25519_8h" startline="18">ge25519_pack</references>
+        <references refid="ge25519_8h_1ac9339fa24136bdb634a9f63d68e2689f" compoundref="ge25519_8h" startline="21">ge25519_scalarmult_base</references>
+        <references refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" compoundref="ed25519_8c" startline="62" endline="77">get_hram</references>
+        <references refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" compoundref="sc25519_8c" startline="14">m</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="sc25519_8h_1a16052f26820d1ce8751892116d1ce63f" compoundref="sc25519_8h" startline="22">sc25519_add</references>
+        <references refid="sc25519_8h_1a0f2305dc99df8bd9e83eb868e9af51d5" compoundref="sc25519_8h" startline="14">sc25519_from32bytes</references>
+        <references refid="sc25519_8h_1a723644806a7bfde4ce2481c4255401ae" compoundref="sc25519_8h" startline="16">sc25519_from64bytes</references>
+        <references refid="sc25519_8h_1aa3d77963058bb483c36866ab1a78b173" compoundref="sc25519_8h" startline="24">sc25519_mul</references>
+        <references refid="sc25519_8h_1a45470bc285c12d39e034a9b118b8bdb3" compoundref="sc25519_8h" startline="18">sc25519_to32bytes</references>
+        <references refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db">sha512_final</references>
+        <references refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c">sha512_init</references>
+        <references refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1">sha512_update</references>
+      </memberdef>
+      <memberdef kind="function" id="ed25519_8c_1a2afd36052d1604dbb7e6aba76b9b15c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int crypto_sign_ed25519_open</definition>
+        <argsstring>(unsigned char *m, uint64_t *mlen, const unsigned char *sm, uint64_t smlen, const unsigned char *pk)</argsstring>
+        <name>crypto_sign_ed25519_open</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>mlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sm</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>smlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>pk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/external/ed25519.c" line="176" column="5" bodyfile="src/external/ed25519.c" bodystart="176" bodyend="222"/>
+        <references refid="ed25519_8c_1ae038a49ca4efe2aa9a87477cf23b91d9" compoundref="ed25519_8c" startline="22" endline="60">crypto_verify_32</references>
+        <references refid="ge25519_8h_1a631b232bb858ae91bfdfe5ffb6527aaf" compoundref="ge25519_8h" startline="16">ge25519_base</references>
+        <references refid="ge25519_8h_1a81b75fd676efc9f56328cf0eea18634a" compoundref="ge25519_8h" startline="20">ge25519_double_scalarmult_vartime</references>
+        <references refid="ge25519_8h_1a5538a2b1944238e8f49b3bcf1976a529" compoundref="ge25519_8h" startline="18">ge25519_pack</references>
+        <references refid="ge25519_8h_1ae38aa9a08a35829dbed901cb0a5df776" compoundref="ge25519_8h" startline="17">ge25519_unpackneg_vartime</references>
+        <references refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" compoundref="ed25519_8c" startline="62" endline="77">get_hram</references>
+        <references refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" compoundref="sc25519_8c" startline="14">m</references>
+        <references refid="sc25519_8h_1a0f2305dc99df8bd9e83eb868e9af51d5" compoundref="sc25519_8h" startline="14">sc25519_from32bytes</references>
+        <references refid="sc25519_8h_1a723644806a7bfde4ce2481c4255401ae" compoundref="sc25519_8h" startline="16">sc25519_from64bytes</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$OpenBSD:<sp/>ed25519.c,v<sp/>1.3<sp/>2013/12/09<sp/>11:03:45<sp/>markus<sp/>Exp<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Public<sp/>Domain,<sp/>Authors:<sp/>Daniel<sp/>J.<sp/>Bernstein,<sp/>Niels<sp/>Duif,<sp/>Tanja<sp/>Lange,</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Peter<sp/>Schwabe,<sp/>Bo-Yin<sp/>Yang.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copied<sp/>from<sp/>supercop-20130419/crypto_sign/ed25519/ref/ed25519.c</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libcrypto_8h" kindref="compound">libssh/libcrypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wrapper_8h" kindref="compound">libssh/wrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ge25519_8h" kindref="compound">libssh/ge25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sc25519_8h" kindref="compound">libssh/sc25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ed25519_8h" kindref="compound">libssh/ed25519.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Public<sp/>Domain,<sp/>Author:<sp/>Daniel<sp/>J.<sp/>Bernstein</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Copied<sp/>from<sp/>nacl-20110221/crypto_verify/32/ref/verify.c</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="ed25519_8c_1ae038a49ca4efe2aa9a87477cf23b91d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ed25519_8c_1ae038a49ca4efe2aa9a87477cf23b91d9" kindref="member">crypto_verify_32</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*x,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*y)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>differentbits<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>F(i)<sp/>differentbits<sp/>|=<sp/>x[i]<sp/>^<sp/>y[i];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(0)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(1)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(2)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(3)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(4)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(5)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(6)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(7)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(8)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(9)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(10)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(11)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(12)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(13)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(14)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(15)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(16)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(17)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(18)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(19)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(20)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(21)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(22)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(23)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(24)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(25)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(26)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(27)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(28)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(29)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(30)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1ab35e9bec34f95271ec8f184e471746db" kindref="member">F</ref>(31)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(1<sp/>&amp;<sp/>((differentbits<sp/>-<sp/>1)<sp/>&gt;&gt;<sp/>8))<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" kindref="member">get_hram</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hram,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sm,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pk,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*playground,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>smlen)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>i;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>SHA512CTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/><sp/>0;i<sp/>&lt;<sp/>32;++i)<sp/><sp/><sp/><sp/>playground[i]<sp/>=<sp/>sm[i];</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>32;i<sp/>&lt;<sp/>64;++i)<sp/><sp/><sp/><sp/>playground[i]<sp/>=<sp/>pk[i-32];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>64;i<sp/>&lt;<sp/>smlen;++i)<sp/>playground[i]<sp/>=<sp/>sm[i];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>playground,<sp/>smlen);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(hram,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="ed25519_8c_1a22f87ea2901498ee82e6166b7bdde303" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ed25519_8c_1a22f87ea2901498ee82e6166b7bdde303" kindref="member">crypto_sign_ed25519_keypair</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pk,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sk)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsc25519" kindref="compound">sc25519</ref><sp/>scsk;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structge25519" kindref="compound">ge25519</ref><sp/>gepk;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>SHA512CTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>extsk[64];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ok;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>ok<sp/>=<sp/><ref refid="libssh_8h_1aa04e01bdb1b607b705233a5d3587ae11" kindref="member">ssh_get_random</ref>(sk,<sp/>32,<sp/>0);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ok)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>sk,<sp/>32);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(extsk,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>extsk[0]<sp/>&amp;=<sp/>248;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>extsk[31]<sp/>&amp;=<sp/>127;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>extsk[31]<sp/>|=<sp/>64;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a0f2305dc99df8bd9e83eb868e9af51d5" kindref="member">sc25519_from32bytes</ref>(&amp;scsk,extsk);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8h_1ac9339fa24136bdb634a9f63d68e2689f" kindref="member">ge25519_scalarmult_base</ref>(&amp;gepk,<sp/>&amp;scsk);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8h_1a5538a2b1944238e8f49b3bcf1976a529" kindref="member">ge25519_pack</ref>(pk,<sp/>&amp;gepk);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;32;i++)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sk[32<sp/>+<sp/>i]<sp/>=<sp/>pk[i];</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ed25519_8c_1ab5bd77faf6dbe75acf31028b9caecce7" kindref="member">crypto_sign_ed25519</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sm,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>*smlen,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>mlen,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sk)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsc25519" kindref="compound">sc25519</ref><sp/>sck,<sp/>scs,<sp/>scsk;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structge25519" kindref="compound">ge25519</ref><sp/>ger;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>SHA512CTX<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>r[32];</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>[32];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>extsk[64];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>i;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hmg[SHA512_DIGEST_LEN];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hram[SHA512_DIGEST_LEN];</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>sk,<sp/>32);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(extsk,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>extsk[0]<sp/>&amp;=<sp/>248;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>extsk[31]<sp/>&amp;=<sp/>127;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>extsk[31]<sp/>|=<sp/>64;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>*smlen<sp/>=<sp/>mlen<sp/>+<sp/>64;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;i<sp/>&lt;<sp/>mlen;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sm[64<sp/>+<sp/>i]<sp/>=<sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>[i];</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;i<sp/>&lt;<sp/>32;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sm[32<sp/>+<sp/>i]<sp/>=<sp/>extsk[32+i];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Generate<sp/>k<sp/>as<sp/>h(extsk[32],...,extsk[63],m)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref><sp/>=<sp/><ref refid="wrapper_8h_1a4d6dce44cd309db900fdb51b9010d26c" kindref="member">sha512_init</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1af97cb2f6db720ef6d4786a1ca46741e1" kindref="member">sha512_update</ref>(<ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>,<sp/>sm<sp/>+<sp/>32,<sp/>mlen<sp/>+<sp/>32);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wrapper_8h_1aba63c598a21004daf1f72d8dfea891db" kindref="member">sha512_final</ref>(hmg,<sp/><ref refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Computation<sp/>of<sp/>R<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a723644806a7bfde4ce2481c4255401ae" kindref="member">sc25519_from64bytes</ref>(&amp;sck,<sp/>hmg);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8h_1ac9339fa24136bdb634a9f63d68e2689f" kindref="member">ge25519_scalarmult_base</ref>(&amp;ger,<sp/>&amp;sck);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8h_1a5538a2b1944238e8f49b3bcf1976a529" kindref="member">ge25519_pack</ref>(r,<sp/>&amp;ger);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Computation<sp/>of<sp/>s<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>32;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sm[i]<sp/>=<sp/>r[i];</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" kindref="member">get_hram</ref>(hram,<sp/>sm,<sp/>sk+32,<sp/>sm,<sp/>mlen+64);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a723644806a7bfde4ce2481c4255401ae" kindref="member">sc25519_from64bytes</ref>(&amp;scs,<sp/>hram);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a0f2305dc99df8bd9e83eb868e9af51d5" kindref="member">sc25519_from32bytes</ref>(&amp;scsk,<sp/>extsk);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1aa3d77963058bb483c36866ab1a78b173" kindref="member">sc25519_mul</ref>(&amp;scs,<sp/>&amp;scs,<sp/>&amp;scsk);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a16052f26820d1ce8751892116d1ce63f" kindref="member">sc25519_add</ref>(&amp;scs,<sp/>&amp;scs,<sp/>&amp;sck);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a45470bc285c12d39e034a9b118b8bdb3" kindref="member">sc25519_to32bytes</ref>(<ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,&amp;scs);<sp/></highlight><highlight class="comment">/*<sp/>cat<sp/>s<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;i<sp/>&lt;<sp/>32;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sm[32<sp/>+<sp/>i]<sp/>=<sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>[i];</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="ed25519_8c_1a2afd36052d1604dbb7e6aba76b9b15c8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ed25519_8c_1a2afd36052d1604dbb7e6aba76b9b15c8" kindref="member">crypto_sign_ed25519_open</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>*mlen,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sm,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>smlen,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pk)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>t2[32];</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structge25519" kindref="compound">ge25519</ref><sp/>get1,<sp/>get2;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsc25519" kindref="compound">sc25519</ref><sp/>schram,<sp/>scs;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hram[SHA512_DIGEST_LEN];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>*mlen<sp/>=<sp/>(uint64_t)<sp/>-1;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(smlen<sp/>&lt;<sp/>64)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="ge25519_8h_1ae38aa9a08a35829dbed901cb0a5df776" kindref="member">ge25519_unpackneg_vartime</ref>(&amp;get1,<sp/>pk))<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ed25519_8c_1a9b5a94ad15d26d646a9df5cd6e9730eb" kindref="member">get_hram</ref>(hram,sm,pk,<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,smlen);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a723644806a7bfde4ce2481c4255401ae" kindref="member">sc25519_from64bytes</ref>(&amp;schram,<sp/>hram);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8h_1a0f2305dc99df8bd9e83eb868e9af51d5" kindref="member">sc25519_from32bytes</ref>(&amp;scs,<sp/>sm+32);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8h_1a81b75fd676efc9f56328cf0eea18634a" kindref="member">ge25519_double_scalarmult_vartime</ref>(&amp;get2,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;get1,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;schram,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="ge25519_8h_1a631b232bb858ae91bfdfe5ffb6527aaf" kindref="member">ge25519_base</ref>,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;scs);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ge25519_8h_1a5538a2b1944238e8f49b3bcf1976a529" kindref="member">ge25519_pack</ref>(t2,<sp/>&amp;get2);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="ed25519_8c_1ae038a49ca4efe2aa9a87477cf23b91d9" kindref="member">crypto_verify_32</ref>(sm,<sp/>t2);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>smlen<sp/>-<sp/>64;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>[i]<sp/>=<sp/>sm[i<sp/>+<sp/>64];</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*mlen<sp/>=<sp/>smlen-64;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>smlen<sp/>-<sp/>64;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/external/ed25519.c"/>
+  </compounddef>
+</doxygen>

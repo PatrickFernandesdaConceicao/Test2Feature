@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pkd__daemon_8h" kind="file" language="C++">
+    <compoundname>pkd_daemon.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includedby refid="pkd__daemon_8c" local="yes">tests/pkd/pkd_daemon.c</includedby>
+    <includedby refid="pkd__hello_8c" local="yes">tests/pkd/pkd_hello.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>tests/pkd/pkd_daemon.h</label>
+        <link refid="pkd__daemon_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>tests/pkd/pkd_daemon.c</label>
+        <link refid="pkd__daemon_8c"/>
+      </node>
+      <node id="1">
+        <label>tests/pkd/pkd_daemon.h</label>
+        <link refid="pkd__daemon_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tests/pkd/pkd_hello.c</label>
+        <link refid="pkd__hello_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpkd__daemon__args" prot="public">pkd_daemon_args</innerclass>
+    <innerclass refid="structpkd__result" prot="public">pkd_result</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>pkd_hostkey_type_e</name>
+        <enumvalue id="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431baa0552f0f5ae5a77e9066f1e61cf85b7c" prot="public">
+          <name>PKD_RSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431ba3e4e29980162d94460e6ff8f182847e7" prot="public">
+          <name>PKD_ED25519</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431ba5e1d4b1a054dc2e89120273d33a8de86" prot="public">
+          <name>PKD_ECDSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_daemon.h" line="13" column="1" bodyfile="tests/pkd/pkd_daemon.h" bodystart="13" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pkd__daemon_8h_1a776706b657a7689a30274d2b142b9d96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pkd_start</definition>
+        <argsstring>(struct pkd_daemon_args *args)</argsstring>
+        <name>pkd_start</name>
+        <param>
+          <type>struct <ref refid="structpkd__daemon__args" kindref="compound">pkd_daemon_args</ref> *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_daemon.h" line="54" column="5" bodyfile="tests/pkd/pkd_daemon.c" bodystart="549" bodyend="566" declfile="tests/pkd/pkd_daemon.h" declline="54" declcolumn="5"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structpkd__daemon__args_1aa78fd1ab1c15482ee9e1037d2b668263" compoundref="pkd__daemon_8h" startline="37">pkd_daemon_args::log_stderr</references>
+        <references refid="structpkd__daemon__args_1aa4beea90c8936c98c28a6fc186c20cdf" compoundref="pkd__daemon_8h" startline="36">pkd_daemon_args::log_stdout</references>
+        <references refid="structpkd__daemon__args_1ad2e4346a95c684b06af0cc16c0304fc0">pkd_daemon_args::opts</references>
+        <references refid="pkd__daemon_8c_1a69029cade6d389940e081066d842f213" compoundref="pkd__daemon_8c" startline="481" endline="543">pkd_main</references>
+        <references refid="pkd__daemon_8c_1a07d2722ea6f20306c00181a69bb864f0" compoundref="pkd__daemon_8c" startline="34">pkderr_enabled</references>
+        <references refid="pkd__daemon_8c_1a001f30c28070509985fb81cbe625df3c" compoundref="pkd__daemon_8c" startline="33">pkdout_enabled</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="pkd__hello_8c_1af27acdaa1d964c927bbb5c95fbff629b" compoundref="pkd__hello_8c" startline="132" endline="143">torture_pkd_setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="pkd__daemon_8h_1a3ab57e4aab434d8a0c493fe89aec5b6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pkd_stop</definition>
+        <argsstring>(struct pkd_result *out)</argsstring>
+        <name>pkd_stop</name>
+        <param>
+          <type>struct <ref refid="structpkd__result" kindref="compound">pkd_result</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/pkd/pkd_daemon.h" line="55" column="6" bodyfile="tests/pkd/pkd_daemon.c" bodystart="568" bodyend="584" declfile="tests/pkd/pkd_daemon.h" declline="55" declcolumn="6"/>
+        <references refid="pkd__daemon_8c_1a369ae25f82baa025322b03deb70aa5f3">ctx</references>
+        <references refid="structpkd__result_1a881d3b48df4a5f3955b39927a1fab940" compoundref="pkd__daemon_8h" startline="51">pkd_result::ok</references>
+        <references refid="pkd__daemon_8c_1aa1993e97f761faa56aac7ec019cb705f">pkd_state</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <referencedby refid="pkd__hello_8c_1ad7395ab9691d82915f8969e017b9071d" compoundref="pkd__hello_8c" startline="145" endline="154">torture_pkd_teardown</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>pkd_daemon.h<sp/>--<sp/>tests<sp/>use<sp/>this<sp/>interface<sp/>to<sp/>start,<sp/>stop<sp/>pkd</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>instances<sp/>and<sp/>get<sp/>results</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>(c)<sp/>2014<sp/>Jon<sp/>Simons</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__PKD_DAEMON_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PKD_DAEMON_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431b" kindref="member">pkd_hostkey_type_e</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431baa0552f0f5ae5a77e9066f1e61cf85b7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431baa0552f0f5ae5a77e9066f1e61cf85b7c" kindref="member">PKD_RSA</ref>,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_DSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>PKD_DSA,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431ba3e4e29980162d94460e6ff8f182847e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431ba3e4e29980162d94460e6ff8f182847e7" kindref="member">PKD_ED25519</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431ba5e1d4b1a054dc2e89120273d33a8de86" kindref="member">PKD_ECDSA</ref></highlight></codeline>
+<codeline lineno="20" refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431ba5e1d4b1a054dc2e89120273d33a8de86" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="structpkd__daemon__args" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpkd__daemon__args" kindref="compound">pkd_daemon_args</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8h_1a80a2782902665d4ab43d447b0c98431b" kindref="member">pkd_hostkey_type_e</ref><sp/><ref refid="structpkd__daemon__args_1ad87097384e90fb1573a84403c7c12c90" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="24" refid="structpkd__daemon__args_1aa95930945bdf83085a880e0db22c1b66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structpkd__daemon__args_1aa95930945bdf83085a880e0db22c1b66" kindref="member">hostkeypath</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="structpkd__daemon__args_1a0ebc05660f2d5d6ecf1ef26f7aec49b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="structpkd__daemon__args_1a0ebc05660f2d5d6ecf1ef26f7aec49b3" kindref="member">buf</ref>;</highlight></codeline>
+<codeline lineno="28" refid="structpkd__daemon__args_1a8be3a07ed39057844999c45650a9b080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structpkd__daemon__args_1a8be3a07ed39057844999c45650a9b080" kindref="member">len</ref>;</highlight></codeline>
+<codeline lineno="29" refid="structpkd__daemon__args_1a479723930f0a1bbb1c80c5290f81dc8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpkd__daemon__args_1a479723930f0a1bbb1c80c5290f81dc8e" kindref="member">payload</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="structpkd__daemon__args_1a02d0a613a424dd343c4b8a4405a524cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structpkd__daemon__args_1a02d0a613a424dd343c4b8a4405a524cf" kindref="member">rekey_data_limit</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34" refid="structpkd__daemon__args_1af1367a4b1f2e1761d34bb60fdd61d804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpkd__daemon__args_1af1367a4b1f2e1761d34bb60fdd61d804" kindref="member">list</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structpkd__daemon__args_1aa4beea90c8936c98c28a6fc186c20cdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpkd__daemon__args_1aa4beea90c8936c98c28a6fc186c20cdf" kindref="member">log_stdout</ref>;</highlight></codeline>
+<codeline lineno="37" refid="structpkd__daemon__args_1aa78fd1ab1c15482ee9e1037d2b668263" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpkd__daemon__args_1aa78fd1ab1c15482ee9e1037d2b668263" kindref="member">log_stderr</ref>;</highlight></codeline>
+<codeline lineno="38" refid="structpkd__daemon__args_1a33916af2f687c6b59aa794725cfd3949" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpkd__daemon__args_1a33916af2f687c6b59aa794725cfd3949" kindref="member">libssh_log_level</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structpkd__daemon__args_1a7295a3e2df9709cf593d11212876dd7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structpkd__daemon__args_1a7295a3e2df9709cf593d11212876dd7a" kindref="member">testname</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structpkd__daemon__args_1a0d54b843cb678cd75452b8ac6a536187" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structpkd__daemon__args_1a0d54b843cb678cd75452b8ac6a536187" kindref="member">testmatch</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structpkd__daemon__args_1ab6d479cba328fd5ec490c3afc1cb01bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpkd__daemon__args_1ab6d479cba328fd5ec490c3afc1cb01bd" kindref="member">iterations</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="structpkd__daemon__args_1af7e99df10bf7677368d6a6f4451e0154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structpkd__daemon__args_1af7e99df10bf7677368d6a6f4451e0154" kindref="member">mkdtemp_str</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structpkd__daemon__args_1affab8fe0fc0ece883c4e8729185be4c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpkd__daemon__args_1affab8fe0fc0ece883c4e8729185be4c3" kindref="member">socket_wrapper</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structpkd__daemon__args_1ad2e4346a95c684b06af0cc16c0304fc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpkd__daemon__args_1ad2e4346a95c684b06af0cc16c0304fc0" kindref="member">opts</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structpkd__result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpkd__result" kindref="compound">pkd_result</ref><sp/>{</highlight></codeline>
+<codeline lineno="51" refid="structpkd__result_1a881d3b48df4a5f3955b39927a1fab940" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpkd__result_1a881d3b48df4a5f3955b39927a1fab940" kindref="member">ok</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8h_1a776706b657a7689a30274d2b142b9d96" kindref="member">pkd_start</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpkd__daemon__args" kindref="compound">pkd_daemon_args</ref><sp/>*args);</highlight></codeline>
+<codeline lineno="55" refid="structpkd__daemon__args_1ad87097384e90fb1573a84403c7c12c90" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pkd__daemon_8h_1a3ab57e4aab434d8a0c493fe89aec5b6b" kindref="member">pkd_stop</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpkd__result" kindref="compound">pkd_result</ref><sp/>*out);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__PKD_DAEMON_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="tests/pkd/pkd_daemon.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="poly1305_8c" kind="file" language="C++">
+    <compoundname>poly1305.c</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes refid="poly1305_8h" local="yes">libssh/poly1305.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>libssh/chacha20-poly1305-common.h</label>
+        <link refid="chacha20-poly1305-common_8h"/>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>libssh/poly1305.h</label>
+        <link refid="poly1305_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1">
+        <label>libssh-mirror/src/external/poly1305.c</label>
+        <link refid="poly1305_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" prot="public" static="no">
+        <name>mul32x32_64</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((uint64_t)(a) * (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/poly1305.c" line="13" column="9" bodyfile="libssh-mirror/src/external/poly1305.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" prot="public" static="no">
+        <name>U8TO32_LE</name>
+        <param><defname>p</defname></param>
+        <initializer>    (((uint32_t)((p)[0])) | \
+     ((uint32_t)((p)[1]) &lt;&lt;  8) | \
+     ((uint32_t)((p)[2]) &lt;&lt; 16) | \
+     ((uint32_t)((p)[3]) &lt;&lt; 24))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/poly1305.c" line="15" column="9" bodyfile="libssh-mirror/src/external/poly1305.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="poly1305_8c_1a08af2fb25b17973248d8cc16f9aa7c46" prot="public" static="no">
+        <name>U32TO8_LE</name>
+        <param><defname>p</defname></param>
+        <param><defname>v</defname></param>
+        <initializer>    do { \
+        (p)[0] = (uint8_t)((v)); \
+        (p)[1] = (uint8_t)((v) &gt;&gt;  8); \
+        (p)[2] = (uint8_t)((v) &gt;&gt; 16); \
+        (p)[3] = (uint8_t)((v) &gt;&gt; 24); \
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/poly1305.c" line="21" column="9" bodyfile="libssh-mirror/src/external/poly1305.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="poly1305_8c_1a1f9b7699685df465de913931d6a5c591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void poly1305_auth</definition>
+        <argsstring>(unsigned char out[POLY1305_TAGLEN], const unsigned char *m, size_t inlen, const unsigned char key[POLY1305_KEYLEN])</argsstring>
+        <name>poly1305_auth</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>out</declname>
+          <array>[POLY1305_TAGLEN]</array>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>inlen</declname>
+        </param>
+        <param>
+          <type>const unsigned char</type>
+          <declname>key</declname>
+          <array>[POLY1305_KEYLEN]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/src/external/poly1305.c" line="30" column="1" bodyfile="libssh-mirror/src/external/poly1305.c" bodystart="30" bodyend="156"/>
+        <references refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" compoundref="torture__crypto_8c" startline="9">key</references>
+        <references refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" compoundref="sc25519_8c" startline="14">m</references>
+        <references refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" compoundref="poly1305_8c" startline="13">mul32x32_64</references>
+        <references refid="poly1305_8c_1a08af2fb25b17973248d8cc16f9aa7c46" compoundref="poly1305_8c" startline="21">U32TO8_LE</references>
+        <references refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" compoundref="poly1305_8c" startline="15">U8TO32_LE</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Public<sp/>Domain<sp/>poly1305<sp/>from<sp/>Andrew<sp/>Moon</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>poly1305-donna-unrolled.c<sp/>from<sp/>https://github.com/floodyberry/poly1305-donna</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="poly1305_8h" kindref="compound">libssh/poly1305.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mul32x32_64(a,b)<sp/>((uint64_t)(a)<sp/>*<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U8TO32_LE(p)<sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((uint32_t)((p)[0]))<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>((uint32_t)((p)[1])<sp/>&lt;&lt;<sp/><sp/>8)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>((uint32_t)((p)[2])<sp/>&lt;&lt;<sp/>16)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>((uint32_t)((p)[3])<sp/>&lt;&lt;<sp/>24))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="poly1305_8c_1a08af2fb25b17973248d8cc16f9aa7c46" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>U32TO8_LE(p,<sp/>v)<sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[0]<sp/>=<sp/>(uint8_t)((v));<sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[1]<sp/>=<sp/>(uint8_t)((v)<sp/>&gt;&gt;<sp/><sp/>8);<sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[2]<sp/>=<sp/>(uint8_t)((v)<sp/>&gt;&gt;<sp/>16);<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(p)[3]<sp/>=<sp/>(uint8_t)((v)<sp/>&gt;&gt;<sp/>24);<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="poly1305_8c_1a1f9b7699685df465de913931d6a5c591" refkind="member"><highlight class="normal"><ref refid="poly1305_8c_1a1f9b7699685df465de913931d6a5c591" kindref="member">poly1305_auth</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>out[<ref refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" kindref="member">POLY1305_TAGLEN</ref>],<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>inlen,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>[<ref refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" kindref="member">POLY1305_KEYLEN</ref>])<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>t0,t1,t2,t3;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>h0,h1,h2,h3,h4;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>r0,r1,r2,r3,r4;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>s1,s2,s3,s4;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>b,<sp/>nb;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>j;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>t[5];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>f0,f1,f2,f3;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>g0,g1,g2,g3,g4;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>c;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mp[16];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>clamp<sp/>key<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>t0<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>+0);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>t1<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>+4);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>t2<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>+8);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>t3<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>+12);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>precompute<sp/>multipliers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>r0<sp/>=<sp/>t0<sp/>&amp;<sp/>0x3ffffff;<sp/>t0<sp/>&gt;&gt;=<sp/>26;<sp/>t0<sp/>|=<sp/>t1<sp/>&lt;&lt;<sp/>6;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>r1<sp/>=<sp/>t0<sp/>&amp;<sp/>0x3ffff03;<sp/>t1<sp/>&gt;&gt;=<sp/>20;<sp/>t1<sp/>|=<sp/>t2<sp/>&lt;&lt;<sp/>12;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>r2<sp/>=<sp/>t1<sp/>&amp;<sp/>0x3ffc0ff;<sp/>t2<sp/>&gt;&gt;=<sp/>14;<sp/>t2<sp/>|=<sp/>t3<sp/>&lt;&lt;<sp/>18;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>r3<sp/>=<sp/>t2<sp/>&amp;<sp/>0x3f03fff;<sp/>t3<sp/>&gt;&gt;=<sp/>8;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>r4<sp/>=<sp/>t3<sp/>&amp;<sp/>0x00fffff;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>s1<sp/>=<sp/>r1<sp/>*<sp/>5;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>s2<sp/>=<sp/>r2<sp/>*<sp/>5;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>s3<sp/>=<sp/>r3<sp/>*<sp/>5;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>s4<sp/>=<sp/>r4<sp/>*<sp/>5;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>init<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>h0<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>h1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>h2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>h3<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>h4<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>full<sp/>blocks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(inlen<sp/>&lt;<sp/>16)<sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>poly1305_donna_atmost15bytes;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">poly1305_donna_16bytes:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref><sp/>+=<sp/>16;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>inlen<sp/>-=<sp/>16;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>t0<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>-16);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>t1<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>-12);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>t2<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>-8);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>t3<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(<ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>-4);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>h0<sp/>+=<sp/>t0<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>h1<sp/>+=<sp/>((((uint64_t)t1<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>t0)<sp/>&gt;&gt;<sp/>26)<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>h2<sp/>+=<sp/>((((uint64_t)t2<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>t1)<sp/>&gt;&gt;<sp/>20)<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>h3<sp/>+=<sp/>((((uint64_t)t3<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>t2)<sp/>&gt;&gt;<sp/>14)<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>h4<sp/>+=<sp/>(t3<sp/>&gt;&gt;<sp/>8)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>24);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">poly1305_donna_mul:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>t[0]<sp/><sp/>=<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h0,r0)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h1,s4)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h2,s3)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h3,s2)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h4,s1);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>t[1]<sp/><sp/>=<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h0,r1)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h1,r0)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h2,s4)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h3,s3)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h4,s2);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>t[2]<sp/><sp/>=<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h0,r2)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h1,r1)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h2,r0)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h3,s4)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h4,s3);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>t[3]<sp/><sp/>=<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h0,r3)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h1,r2)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h2,r1)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h3,r0)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h4,s4);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>t[4]<sp/><sp/>=<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h0,r4)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h1,r3)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h2,r2)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h3,r1)<sp/>+<sp/><ref refid="poly1305_8c_1a704d22f25cb87e1cecc62297a5610aab" kindref="member">mul32x32_64</ref>(h4,r0);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h0<sp/>=<sp/>(uint32_t)t[0]<sp/>&amp;<sp/>0x3ffffff;<sp/>c<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(t[0]<sp/>&gt;&gt;<sp/>26);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>t[1]<sp/>+=<sp/>c;<sp/><sp/><sp/><sp/><sp/><sp/>h1<sp/>=<sp/>(uint32_t)t[1]<sp/>&amp;<sp/>0x3ffffff;<sp/>b<sp/>=<sp/>(uint32_t)(t[1]<sp/>&gt;&gt;<sp/>26);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>t[2]<sp/>+=<sp/>b;<sp/><sp/><sp/><sp/><sp/><sp/>h2<sp/>=<sp/>(uint32_t)t[2]<sp/>&amp;<sp/>0x3ffffff;<sp/>b<sp/>=<sp/>(uint32_t)(t[2]<sp/>&gt;&gt;<sp/>26);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>t[3]<sp/>+=<sp/>b;<sp/><sp/><sp/><sp/><sp/><sp/>h3<sp/>=<sp/>(uint32_t)t[3]<sp/>&amp;<sp/>0x3ffffff;<sp/>b<sp/>=<sp/>(uint32_t)(t[3]<sp/>&gt;&gt;<sp/>26);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>t[4]<sp/>+=<sp/>b;<sp/><sp/><sp/><sp/><sp/><sp/>h4<sp/>=<sp/>(uint32_t)t[4]<sp/>&amp;<sp/>0x3ffffff;<sp/>b<sp/>=<sp/>(uint32_t)(t[4]<sp/>&gt;&gt;<sp/>26);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>h0<sp/>+=<sp/>b<sp/>*<sp/>5;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(inlen<sp/>&gt;=<sp/>16)<sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>poly1305_donna_16bytes;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>final<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">poly1305_donna_atmost15bytes:</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!inlen)<sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>poly1305_donna_finish;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>inlen;<sp/>j++)<sp/>mp[j]<sp/>=<sp/><ref refid="sc25519_8c_1a748017a7a68b798f02a5e84721515182" kindref="member">m</ref>[j];</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>mp[j++]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>j<sp/>&lt;<sp/>16;<sp/>j++)<sp/><sp/><sp/><sp/>mp[j]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>inlen<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>t0<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(mp+0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>t1<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(mp+4);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>t2<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(mp+8);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>t3<sp/>=<sp/><ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(mp+12);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>h0<sp/>+=<sp/>t0<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>h1<sp/>+=<sp/>((((uint64_t)t1<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>t0)<sp/>&gt;&gt;<sp/>26)<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>h2<sp/>+=<sp/>((((uint64_t)t2<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>t1)<sp/>&gt;&gt;<sp/>20)<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>h3<sp/>+=<sp/>((((uint64_t)t3<sp/>&lt;&lt;<sp/>32)<sp/>|<sp/>t2)<sp/>&gt;&gt;<sp/>14)<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>h4<sp/>+=<sp/>(t3<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>poly1305_donna_mul;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">poly1305_donna_finish:</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>h0<sp/>&gt;&gt;<sp/>26;<sp/>h0<sp/>=<sp/>h0<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>h1<sp/>+=<sp/><sp/><sp/><sp/><sp/>b;<sp/>b<sp/>=<sp/>h1<sp/>&gt;&gt;<sp/>26;<sp/>h1<sp/>=<sp/>h1<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>h2<sp/>+=<sp/><sp/><sp/><sp/><sp/>b;<sp/>b<sp/>=<sp/>h2<sp/>&gt;&gt;<sp/>26;<sp/>h2<sp/>=<sp/>h2<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>h3<sp/>+=<sp/><sp/><sp/><sp/><sp/>b;<sp/>b<sp/>=<sp/>h3<sp/>&gt;&gt;<sp/>26;<sp/>h3<sp/>=<sp/>h3<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>h4<sp/>+=<sp/><sp/><sp/><sp/><sp/>b;<sp/>b<sp/>=<sp/>h4<sp/>&gt;&gt;<sp/>26;<sp/>h4<sp/>=<sp/>h4<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>h0<sp/>+=<sp/>b<sp/>*<sp/>5;<sp/>b<sp/>=<sp/>h0<sp/>&gt;&gt;<sp/>26;<sp/>h0<sp/>=<sp/>h0<sp/>&amp;<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>h1<sp/>+=<sp/><sp/><sp/><sp/><sp/>b;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>g0<sp/>=<sp/>h0<sp/>+<sp/>5;<sp/>b<sp/>=<sp/>g0<sp/>&gt;&gt;<sp/>26;<sp/>g0<sp/>&amp;=<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>g1<sp/>=<sp/>h1<sp/>+<sp/>b;<sp/>b<sp/>=<sp/>g1<sp/>&gt;&gt;<sp/>26;<sp/>g1<sp/>&amp;=<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>g2<sp/>=<sp/>h2<sp/>+<sp/>b;<sp/>b<sp/>=<sp/>g2<sp/>&gt;&gt;<sp/>26;<sp/>g2<sp/>&amp;=<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>g3<sp/>=<sp/>h3<sp/>+<sp/>b;<sp/>b<sp/>=<sp/>g3<sp/>&gt;&gt;<sp/>26;<sp/>g3<sp/>&amp;=<sp/>0x3ffffff;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>g4<sp/>=<sp/>h4<sp/>+<sp/>b<sp/>-<sp/>(1<sp/>&lt;&lt;<sp/>26);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(g4<sp/>&gt;&gt;<sp/>31)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>nb<sp/>=<sp/>~b;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>h0<sp/>=<sp/>(h0<sp/>&amp;<sp/>nb)<sp/>|<sp/>(g0<sp/>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>h1<sp/>=<sp/>(h1<sp/>&amp;<sp/>nb)<sp/>|<sp/>(g1<sp/>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>h2<sp/>=<sp/>(h2<sp/>&amp;<sp/>nb)<sp/>|<sp/>(g2<sp/>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>h3<sp/>=<sp/>(h3<sp/>&amp;<sp/>nb)<sp/>|<sp/>(g3<sp/>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>h4<sp/>=<sp/>(h4<sp/>&amp;<sp/>nb)<sp/>|<sp/>(g4<sp/>&amp;<sp/>b);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>f0<sp/>=<sp/>((h0<sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>|<sp/>(h1<sp/>&lt;&lt;<sp/>26))<sp/>+<sp/>(uint64_t)<ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(&amp;<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>[16]);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>f1<sp/>=<sp/>((h1<sp/>&gt;&gt;<sp/><sp/>6)<sp/>|<sp/>(h2<sp/>&lt;&lt;<sp/>20))<sp/>+<sp/>(uint64_t)<ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(&amp;<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>[20]);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>f2<sp/>=<sp/>((h2<sp/>&gt;&gt;<sp/>12)<sp/>|<sp/>(h3<sp/>&lt;&lt;<sp/>14))<sp/>+<sp/>(uint64_t)<ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(&amp;<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>[24]);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>f3<sp/>=<sp/>((h3<sp/>&gt;&gt;<sp/>18)<sp/>|<sp/>(h4<sp/>&lt;&lt;<sp/><sp/>8))<sp/>+<sp/>(uint64_t)<ref refid="poly1305_8c_1a3f859632e32dfd0c1c427db07df07bb7" kindref="member">U8TO32_LE</ref>(&amp;<ref refid="torture__crypto_8c_1a42363914b961236c71004e83b3b66a1b" kindref="member">key</ref>[28]);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="poly1305_8c_1a08af2fb25b17973248d8cc16f9aa7c46" kindref="member">U32TO8_LE</ref>(&amp;out[<sp/>0],<sp/>f0);<sp/>f1<sp/>+=<sp/>(f0<sp/>&gt;&gt;<sp/>32);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="poly1305_8c_1a08af2fb25b17973248d8cc16f9aa7c46" kindref="member">U32TO8_LE</ref>(&amp;out[<sp/>4],<sp/>f1);<sp/>f2<sp/>+=<sp/>(f1<sp/>&gt;&gt;<sp/>32);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="poly1305_8c_1a08af2fb25b17973248d8cc16f9aa7c46" kindref="member">U32TO8_LE</ref>(&amp;out[<sp/>8],<sp/>f2);<sp/>f3<sp/>+=<sp/>(f2<sp/>&gt;&gt;<sp/>32);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="poly1305_8c_1a08af2fb25b17973248d8cc16f9aa7c46" kindref="member">U32TO8_LE</ref>(&amp;out[12],<sp/>f3);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/src/external/poly1305.c"/>
+  </compounddef>
+</doxygen>

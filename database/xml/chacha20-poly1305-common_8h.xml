@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="chacha20-poly1305-common_8h" kind="file" language="C++">
+    <compoundname>chacha20-poly1305-common.h</compoundname>
+    <includedby refid="poly1305_8h" local="yes">libssh-mirror/include/libssh/poly1305.h</includedby>
+    <includedby refid="chachapoly_8c" local="yes">libssh-mirror/src/chachapoly.c</includedby>
+    <includedby refid="torture__crypto_8c" local="yes">libssh-mirror/tests/unittests/torture_crypto.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>libssh-mirror/include/libssh/chacha20-poly1305-common.h</label>
+        <link refid="chacha20-poly1305-common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libssh-mirror/src/chachapoly.c</label>
+        <link refid="chachapoly_8c"/>
+      </node>
+      <node id="5">
+        <label>libssh-mirror/src/wrapper.c</label>
+        <link refid="wrapper_8c"/>
+      </node>
+      <node id="2">
+        <label>libssh-mirror/include/libssh/poly1305.h</label>
+        <link refid="poly1305_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libssh-mirror/src/external/poly1305.c</label>
+        <link refid="poly1305_8c"/>
+      </node>
+      <node id="6">
+        <label>libssh-mirror/tests/unittests/torture_crypto.c</label>
+        <link refid="torture__crypto_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structssh__packet__header" prot="public">ssh_packet_header</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="chacha20-poly1305-common_8h_1a194ef26d8fdb2ebb44fbe0c6caed2f86" prot="public" static="no">
+        <name>CHACHA20_BLOCKSIZE</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha20-poly1305-common.h" line="32" column="9" bodyfile="libssh-mirror/include/libssh/chacha20-poly1305-common.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha20-poly1305-common_8h_1aeec6d2e554796dc5d0927c0833fb7164" prot="public" static="no">
+        <name>CHACHA20_KEYLEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha20-poly1305-common.h" line="33" column="9" bodyfile="libssh-mirror/include/libssh/chacha20-poly1305-common.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" prot="public" static="no">
+        <name>POLY1305_TAGLEN</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha20-poly1305-common.h" line="35" column="9" bodyfile="libssh-mirror/include/libssh/chacha20-poly1305-common.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" prot="public" static="no">
+        <name>POLY1305_KEYLEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libssh-mirror/include/libssh/chacha20-poly1305-common.h" line="37" column="9" bodyfile="libssh-mirror/include/libssh/chacha20-poly1305-common.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2020<sp/>Red<sp/>Hat,<sp/>Inc.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Jakub<sp/>Jelen<sp/>&lt;jjelen@redhat.com&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>chacha20-poly1305.h<sp/>file</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>includes<sp/>definitions<sp/>needed<sp/>for<sp/>Chacha20-poly1305<sp/>AEAD<sp/>cipher</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>using<sp/>different<sp/>crypto<sp/>backends.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CHACHA20_POLY1305_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA20_POLY1305_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="chacha20-poly1305-common_8h_1a194ef26d8fdb2ebb44fbe0c6caed2f86" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA20_BLOCKSIZE<sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="chacha20-poly1305-common_8h_1aeec6d2e554796dc5d0927c0833fb7164" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHACHA20_KEYLEN<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="chacha20-poly1305-common_8h_1afc7970b98fcb71e4c1a96756714d9853" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLY1305_TAGLEN<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>size<sp/>of<sp/>the<sp/>keys<sp/>k1<sp/>and<sp/>k2<sp/>as<sp/>defined<sp/>in<sp/>specs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="chacha20-poly1305-common_8h_1a477fbf8e9d06f039b44e1d6bde626931" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLY1305_KEYLEN<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(push,<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structssh__packet__header" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__packet__header" kindref="compound">ssh_packet_header</ref><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="structssh__packet__header_1a1eb98c53b0c6e0a35454cae464f62459" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structssh__packet__header_1a1eb98c53b0c6e0a35454cae464f62459" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structssh__packet__header_1a5791c8fc2f22ab8348e8f712ec4ad562" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structssh__packet__header_1a5791c8fc2f22ab8348e8f712ec4ad562" kindref="member">payload</ref>[];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">__attribute__<sp/>((packed))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>pack(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CHACHA20_POLY1305_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libssh-mirror/include/libssh/chacha20-poly1305-common.h"/>
+  </compounddef>
+</doxygen>

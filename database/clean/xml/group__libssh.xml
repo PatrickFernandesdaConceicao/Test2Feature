@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="group__libssh" kind="group">
+    <compoundname>libssh</compoundname>
+    <title>The libssh API</title>
+    <innergroup refid="group__libssh__callbacks">The libssh callbacks</innergroup>
+    <innergroup refid="group__libssh__auth">The SSH authentication functions.</innergroup>
+    <innergroup refid="group__libssh__buffer">The SSH buffer functions.</innergroup>
+    <innergroup refid="group__libssh__channel">The SSH channel functions</innergroup>
+    <innergroup refid="group__libssh__error">The SSH error functions.</innergroup>
+    <innergroup refid="group__libssh__log">The SSH logging functions.</innergroup>
+    <innergroup refid="group__libssh__messages">The SSH message functions</innergroup>
+    <innergroup refid="group__libssh__misc">The SSH helper functions.</innergroup>
+    <innergroup refid="group__libssh__pki">The SSH Public Key Infrastructure</innergroup>
+    <innergroup refid="group__libssh__poll">The SSH poll functions.</innergroup>
+    <innergroup refid="group__libssh__scp">The SSH scp functions</innergroup>
+    <innergroup refid="group__libssh__session">The SSH session functions.</innergroup>
+    <innergroup refid="group__libssh__string">The SSH string functions</innergroup>
+    <innergroup refid="group__libssh__threads">The SSH threading functions.</innergroup>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global cryptographic data structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Since version 0.8.0, it is not necessary to call this function on systems which are fully supported with regards to threading (that is, system with pthreads available).</para>
+<para>If the library is already initialized, increments the _ssh_initialized counter and return the error code cached in _ssh_init_ret.</para>
+<para><simplesect kind="return"><para>SSH_OK on success, SSH_ERROR if an error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/init.c" line="147" column="5" bodyfile="src/init.c" bodystart="147" bodyend="149"/>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+        <referencedby refid="ssh__server__fork_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="ssh__server__fork_8c" startline="687" endline="775">main</referencedby>
+        <referencedby refid="torture__rand_8c_1ab3743688c369a6a63ebea4512080e9fe" compoundref="torture__rand_8c" startline="18" endline="30">setup</referencedby>
+        <referencedby refid="torture__threads__init_8c_1aef8a909445607e4039432ddfa288da6e" compoundref="torture__threads__init_8c" startline="58" endline="71">thread_ssh_init</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__algorithms_8c" startline="732" endline="949">torture_run_tests</referencedby>
+        <referencedby refid="torture__init_8c_1a6a4d0c5fadfefcad961bea1956bc87cc" compoundref="torture__init_8c" startline="8" endline="17">torture_ssh_init</referencedby>
+        <referencedby refid="torture__init_8c_1a1d2954bc91353e9e64186f22e442b943" compoundref="torture__init_8c" startline="19" endline="33">torture_ssh_init_after_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int _ssh_finalize</definition>
+        <argsstring>(unsigned destructor)</argsstring>
+        <name>_ssh_finalize</name>
+        <param>
+          <type>unsigned</type>
+          <declname>destructor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/init.c" line="151" column="12" bodyfile="src/init.c" bodystart="151" bodyend="183"/>
+        <references refid="init_8c_1a47d6b605d3d5129b030d236952d64900" compoundref="init_8c" startline="54">_ssh_init_ret</references>
+        <references refid="init_8c_1ae06e628392c256c6e741abbf208af758" compoundref="init_8c" startline="51">_ssh_initialized</references>
+        <references refid="wrapper_8h_1aab642f57bab0ffe271a4e2dae28c94e5">ssh_crypto_finalize</references>
+        <references refid="dh_8h_1a9b69e88d96e422ade03a30c6850467e7" compoundref="dh_8c" startline="272" endline="285">ssh_dh_finalize</references>
+        <references refid="init_8c_1af5dbe5c1488d910354335ad0153cd142" compoundref="init_8c" startline="48">ssh_init_mutex</references>
+        <references refid="threads_8h_1a7e6e0bd6f7d7607f0ddd2e85d0cf5be6" compoundref="noop_8c" startline="51" endline="56">ssh_mutex_lock</references>
+        <references refid="threads_8h_1a0bddf62c454d664389e5b672eb94270d" compoundref="noop_8c" startline="58" endline="63">ssh_mutex_unlock</references>
+        <references refid="socket_8h_1accaf18caa54fcca41198838b5134a47b" compoundref="socket_8c" startline="132" endline="141">ssh_socket_cleanup</references>
+        <references refid="group__libssh__threads_1ga892b23f2f4ffe4e33290a83802faa265" compoundref="threads_8c" startline="66" endline="69">ssh_threads_finalize</references>
+        <referencedby refid="group__libssh_1ga12489699b7b74b46ac372ee5ecfffc6c" compoundref="init_8c" startline="191" endline="200">libssh_destructor</referencedby>
+        <referencedby refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh_1ga12489699b7b74b46ac372ee5ecfffc6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libssh_destructor</definition>
+        <argsstring>(void)</argsstring>
+        <name>libssh_destructor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Finalize and cleanup all libssh and cryptographic data structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is automatically called when the library is unloaded. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/init.c" line="191" column="6" bodyfile="src/init.c" bodystart="191" bodyend="200"/>
+        <references refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+      </memberdef>
+      <memberdef kind="function" id="group__libssh_1ga94a851d00248acde9cd7da084b491242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Finalize and cleanup all libssh and cryptographic data structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Since version 0.8.0, it is not necessary to call this function, since it is automatically called when the library is unloaded.</para>
+<para>If <ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init()</ref> is called explicitly, then <ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize()</ref> must be called explicitly.</para>
+<para>When called, decrements the counter _ssh_initialized. If the counter reaches zero, then the libssh and cryptographic data structures are cleaned up.</para>
+<para><simplesect kind="return"><para>0 on succes, -1 if an error occured.</para>
+</simplesect>
+<simplesect kind="return"><para>0 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/init.c" line="218" column="5" bodyfile="src/init.c" bodystart="218" bodyend="220"/>
+        <references refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</references>
+        <referencedby refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" compoundref="sftp__stress_2main_8c" startline="76" endline="135">connect_host</referencedby>
+        <referencedby refid="ssh__client__fuzzer_8cpp_1a91ce7c16e9840492202299da2b451e60" compoundref="ssh__client__fuzzer_8cpp" startline="85" endline="158">LLVMFuzzerTestOneInput</referencedby>
+        <referencedby refid="exec_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="exec_8c" startline="7" endline="66">main</referencedby>
+        <referencedby refid="torture__rand_8c_1a199383cdaf56acd2611400b9bb125142" compoundref="torture__rand_8c" startline="32" endline="38">teardown</referencedby>
+        <referencedby refid="torture__threads__init_8c_1aef8a909445607e4039432ddfa288da6e" compoundref="torture__threads__init_8c" startline="58" endline="71">thread_ssh_init</referencedby>
+        <referencedby refid="torture__algorithms_8c_1a18fee75b27727bcf11e18cceef200834" compoundref="torture__algorithms_8c" startline="732" endline="949">torture_run_tests</referencedby>
+        <referencedby refid="torture__init_8c_1a6a4d0c5fadfefcad961bea1956bc87cc" compoundref="torture__init_8c" startline="8" endline="17">torture_ssh_init</referencedby>
+        <referencedby refid="torture__init_8c_1a1d2954bc91353e9e64186f22e442b943" compoundref="torture__init_8c" startline="19" endline="33">torture_ssh_init_after_finalize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The libssh library is implementing the SSH protocols and some of its extensions. This group of functions is mostly used to implement an SSH client. Some function are needed to implement an SSH server too. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="socket_8h" kind="file" language="C++">
+    <compoundname>socket.h</compoundname>
+    <includes refid="callbacks_8h" local="yes">libssh/callbacks.h</includes>
+    <includedby refid="agent_8c" local="yes">src/agent.c</includedby>
+    <includedby refid="bind_8c" local="yes">src/bind.c</includedby>
+    <includedby refid="channels_8c" local="yes">src/channels.c</includedby>
+    <includedby refid="client_8c" local="yes">src/client.c</includedby>
+    <includedby refid="connect_8c" local="yes">src/connect.c</includedby>
+    <includedby refid="init_8c" local="yes">src/init.c</includedby>
+    <includedby refid="packet_8c" local="yes">src/packet.c</includedby>
+    <includedby refid="packet__cb_8c" local="yes">src/packet_cb.c</includedby>
+    <includedby refid="poll_8c" local="yes">src/poll.c</includedby>
+    <includedby refid="server_8c" local="yes">src/server.c</includedby>
+    <includedby refid="session_8c" local="yes">src/session.c</includedby>
+    <includedby refid="socket_8c" local="yes">src/socket.c</includedby>
+    <includedby refid="test__socket_8c" local="no">tests/test_socket.c</includedby>
+    <includedby refid="torture__packet_8c" local="yes">tests/unittests/torture_packet.c</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>sys/select.h</label>
+      </node>
+      <node id="11">
+        <label>libssh/priv.h</label>
+        <link refid="priv_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>string.h</label>
+        <link refid="string_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="12">
+        <label>stdint.h</label>
+      </node>
+      <node id="13">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>include/libssh/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libssh/callbacks.h</label>
+        <link refid="callbacks_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>netdb.h</label>
+      </node>
+      <node id="6">
+        <label>sys/types.h</label>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>src/channels.c</label>
+        <link refid="channels_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>src/packet.c</label>
+        <link refid="packet_8c"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="12">
+        <label>tests/unittests/torture_packet_filter.c</label>
+        <link refid="torture__packet__filter_8c"/>
+      </node>
+      <node id="1">
+        <label>include/libssh/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>tests/unittests/torture_channel.c</label>
+        <link refid="torture__channel_8c"/>
+      </node>
+      <node id="10">
+        <label>src/init.c</label>
+        <link refid="init_8c"/>
+      </node>
+      <node id="20">
+        <label>tests/test_socket.c</label>
+        <link refid="test__socket_8c"/>
+      </node>
+      <node id="3">
+        <label>tests/client/torture_auth.c</label>
+        <link refid="torture__auth_8c"/>
+      </node>
+      <node id="2">
+        <label>src/agent.c</label>
+        <link refid="agent_8c"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>src/poll.c</label>
+        <link refid="poll_8c"/>
+      </node>
+      <node id="9">
+        <label>src/connect.c</label>
+        <link refid="connect_8c"/>
+      </node>
+      <node id="15">
+        <label>src/server.c</label>
+        <link refid="server_8c"/>
+      </node>
+      <node id="5">
+        <label>src/bind.c</label>
+        <link refid="bind_8c"/>
+      </node>
+      <node id="4">
+        <label>tests/client/torture_auth_pkcs11.c</label>
+        <link refid="torture__auth__pkcs11_8c"/>
+      </node>
+      <node id="16">
+        <label>src/session.c</label>
+        <link refid="session_8c"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/packet_cb.c</label>
+        <link refid="packet__cb_8c"/>
+      </node>
+      <node id="18">
+        <label>src/socket.c</label>
+        <link refid="socket_8c"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>tests/unittests/torture_packet.c</label>
+        <link refid="torture__packet_8c"/>
+      </node>
+      <node id="17">
+        <label>tests/client/torture_knownhosts.c</label>
+        <link refid="torture__knownhosts_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" prot="public" static="no">
+        <type>struct <ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref> *</type>
+        <definition>typedef struct ssh_socket_struct* ssh_socket</definition>
+        <argsstring></argsstring>
+        <name>ssh_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="29" column="33" bodyfile="include/libssh/socket.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="socket_8h_1a37f17ec6d2ede343ad1e70ed061ec9bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_socket_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="31" column="5" bodyfile="src/socket.c" bodystart="110" bodyend="127" declfile="include/libssh/socket.h" declline="31" declcolumn="5"/>
+        <references refid="socket_8c_1ac66d31bdde02d58b6bde394c33cb2808" compoundref="socket_8c" startline="97">sockets_initialized</references>
+        <references refid="group__libssh__poll_1ga26aa5e00c0201c30dad6ec0e93d3871f" compoundref="poll_8c" startline="321" endline="323">ssh_poll_init</references>
+        <referencedby refid="init_8c_1a0e416b0a7b37b1617da57235bbe4f8f9" compoundref="init_8c" startline="56" endline="102">libssh_constructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1accaf18caa54fcca41198838b5134a47b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_cleanup</definition>
+        <argsstring>(void)</argsstring>
+        <name>ssh_socket_cleanup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Cleanup the socket system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="32" column="6" bodyfile="src/socket.c" bodystart="132" bodyend="141" declfile="include/libssh/socket.h" declline="32" declcolumn="6"/>
+        <references refid="socket_8c_1ac66d31bdde02d58b6bde394c33cb2808" compoundref="socket_8c" startline="97">sockets_initialized</references>
+        <references refid="group__libssh__poll_1ga7e60f5f498b15eab57d9b2de70ab1acb" compoundref="poll_8c" startline="325" endline="327">ssh_poll_cleanup</references>
+        <referencedby refid="group__libssh_1ga9cd03971bbbc8003c357f74881ac8812" compoundref="init_8c" startline="151" endline="183">_ssh_finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1ae616d257d1f37fcaf60f6d243fe4e964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+        <definition>ssh_socket ssh_socket_new</definition>
+        <argsstring>(ssh_session session)</argsstring>
+        <name>ssh_socket_new</name>
+        <param>
+          <type><ref refid="libssh_8h_1a02d3754de040612632cdd499c20f92f6" kindref="member">ssh_session</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="33" column="12" bodyfile="src/socket.c" bodystart="148" bodyend="180" declfile="include/libssh/socket.h" declline="33" declcolumn="12"/>
+        <references refid="structssh__socket__struct_1aa1e8d0d228c2d7c851c3c82d595aea53" compoundref="socket_8c" startline="85">ssh_socket_struct::data_except</references>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="structssh__socket__struct_1a284673b0d4470b2e1f27c32860d40aab" compoundref="socket_8c" startline="80">ssh_socket_struct::fd_is_socket</references>
+        <references refid="structssh__socket__struct_1af549d9b6cbe93aa20f2774211584e602" compoundref="socket_8c" startline="88">ssh_socket_struct::in_buffer</references>
+        <references refid="structssh__socket__struct_1ac49859e63fa612be7bb59647710104e3" compoundref="socket_8c" startline="81">ssh_socket_struct::last_errno</references>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="structssh__socket__struct_1ae8ae624da1e6ff73d87c3d0a281209c3" compoundref="socket_8c" startline="82">ssh_socket_struct::read_wontblock</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="structssh__socket__struct_1afd130ba0ed3447b26c688c2befa67b0b" compoundref="socket_8c" startline="89">ssh_socket_struct::session</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="group__libssh__buffer_1ga7ecc914104a5bf0da485d3e42f6a7d3b" compoundref="buffer_8c" startline="119" endline="142">ssh_buffer_new</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3ac9557988890c49e880eb8d7210772108" compoundref="socket_8c" startline="70">SSH_SOCKET_NONE</references>
+        <references refid="structssh__socket__struct_1ae812226fa991a4793a2aacf6ce171b3c" compoundref="socket_8c" startline="86">ssh_socket_struct::state</references>
+        <references refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" compoundref="socket_8c" startline="84">ssh_socket_struct::write_wontblock</references>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+        <referencedby refid="agent_8h_1adc12d57484ac2d7f4d4c7a379fe04382" compoundref="agent_8c" startline="126" endline="143">ssh_agent_new</referencedby>
+        <referencedby refid="group__libssh__server_1ga142f1e2f79f6623f14dcfa40dccaa061" compoundref="bind_8c" startline="423" endline="551">ssh_bind_accept_fd</referencedby>
+        <referencedby refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a4f4b2a1a8e54b3c6406a60c1b031de18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_reset</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_reset</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="34" column="6" bodyfile="src/socket.c" bodystart="187" bodyend="202" declfile="include/libssh/socket.h" declline="34" declcolumn="6"/>
+        <references refid="structssh__socket__struct_1aa1e8d0d228c2d7c851c3c82d595aea53" compoundref="socket_8c" startline="85">ssh_socket_struct::data_except</references>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="structssh__socket__struct_1a284673b0d4470b2e1f27c32860d40aab" compoundref="socket_8c" startline="80">ssh_socket_struct::fd_is_socket</references>
+        <references refid="structssh__socket__struct_1af549d9b6cbe93aa20f2774211584e602" compoundref="socket_8c" startline="88">ssh_socket_struct::in_buffer</references>
+        <references refid="structssh__socket__struct_1ac49859e63fa612be7bb59647710104e3" compoundref="socket_8c" startline="81">ssh_socket_struct::last_errno</references>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="structssh__socket__struct_1a89a9735ece75279f0bda33ead820aac5" compoundref="socket_8c" startline="93">ssh_socket_struct::proxy_pid</references>
+        <references refid="structssh__socket__struct_1ae8ae624da1e6ff73d87c3d0a281209c3" compoundref="socket_8c" startline="82">ssh_socket_struct::read_wontblock</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="libssh_8h_1ac8802ff7f5348d0145dab5242623f740">ssh_buffer_reinit</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3ac9557988890c49e880eb8d7210772108" compoundref="socket_8c" startline="70">SSH_SOCKET_NONE</references>
+        <references refid="structssh__socket__struct_1ae812226fa991a4793a2aacf6ce171b3c" compoundref="socket_8c" startline="86">ssh_socket_struct::state</references>
+        <references refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" compoundref="socket_8c" startline="84">ssh_socket_struct::write_wontblock</references>
+        <referencedby refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1aa035e463e9a96923d81e01bfcf140d8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_free</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_free</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="35" column="6" bodyfile="src/socket.c" bodystart="398" bodyend="407" declfile="include/libssh/socket.h" declline="35" declcolumn="6"/>
+        <references refid="structssh__socket__struct_1af549d9b6cbe93aa20f2774211584e602" compoundref="socket_8c" startline="88">ssh_socket_struct::in_buffer</references>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="sshd__direct-tcpip_8c_1aed3129b7674034c979192bcca6b0ad8c" compoundref="sshd__direct-tcpip_8c" startline="36">SAFE_FREE</references>
+        <references refid="libssh_8h_1a8b09f7d6f7066de7ef8dab4ed7494a52" compoundref="libssh_8h" startline="828">SSH_BUFFER_FREE</references>
+        <references refid="socket_8c_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</references>
+        <referencedby refid="agent_8c_1a9ce225db395840212b219e35179baa2a" compoundref="agent_8c" startline="196" endline="207">ssh_agent_free</referencedby>
+        <referencedby refid="group__libssh__server_1ga6609243446f1650243101e0a779dc822" compoundref="bind_8c" startline="553" endline="581">ssh_bind_accept</referencedby>
+        <referencedby refid="group__libssh__server_1ga142f1e2f79f6623f14dcfa40dccaa061" compoundref="bind_8c" startline="423" endline="551">ssh_bind_accept_fd</referencedby>
+        <referencedby refid="group__libssh__session_1gae5af27a98a7488e9f5ded6b37c274156" compoundref="session_8c" startline="191" endline="326">ssh_free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a1bf2efced17e41fdd72719e1daee8851" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_set_fd</definition>
+        <argsstring>(ssh_socket s, socket_t fd)</argsstring>
+        <name>ssh_socket_set_fd</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="36" column="6" bodyfile="src/socket.c" bodystart="497" bodyend="512" declfile="include/libssh/socket.h" declline="36" declcolumn="6"/>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="poll_8h_1a91b3c67129ac7675062f316b840a0d58" compoundref="poll_8h" startline="88">POLLOUT</references>
+        <references refid="poll_8h_1ab8f1f69608ba2430cd5fa629a87b5420" compoundref="poll_8h" startline="108">POLLWRNORM</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="group__libssh__poll_1ga26ad689751420b91bf002f616e8bf4f7" compoundref="poll_8c" startline="442" endline="444">ssh_poll_add_events</references>
+        <references refid="group__libssh__poll_1gac02bf6f4444d4cc442da5865009fa5f6" compoundref="poll_8c" startline="413" endline="418">ssh_poll_set_events</references>
+        <references refid="group__libssh__poll_1ga2da5adcc03754a3b17e4fb0f23867ace" compoundref="poll_8c" startline="427" endline="433">ssh_poll_set_fd</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3a59cfbc6f713a31c06785fe80ad41a1be" compoundref="socket_8c" startline="71">SSH_SOCKET_CONNECTING</references>
+        <references refid="socket_8c_1a5fbd3273a05d9b398d5e6e5c2f435671" compoundref="socket_8c" startline="386" endline="393">ssh_socket_get_poll_handle</references>
+        <references refid="structssh__socket__struct_1ae812226fa991a4793a2aacf6ce171b3c" compoundref="socket_8c" startline="86">ssh_socket_struct::state</references>
+        <referencedby refid="group__libssh__server_1ga142f1e2f79f6623f14dcfa40dccaa061" compoundref="bind_8c" startline="423" endline="551">ssh_bind_accept_fd</referencedby>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+        <referencedby refid="libssh_8h_1a6506fb814a5d71a8dff067797c157c7e" compoundref="agent_8c" startline="176" endline="186">ssh_set_agent_socket</referencedby>
+        <referencedby refid="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" compoundref="socket_8c" startline="839" endline="859">ssh_socket_connect</referencedby>
+        <referencedby refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" compoundref="socket_8c" startline="914" endline="948">ssh_socket_connect_proxycommand</referencedby>
+        <referencedby refid="socket_8h_1ab9221de828e2d8110a891a72e99529b2" compoundref="socket_8c" startline="410" endline="441">ssh_socket_unix</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1ae2a8e654afdc3bdeedf335bdc254401c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+        <definition>socket_t ssh_socket_get_fd</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_get_fd</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="37" column="10" bodyfile="src/socket.c" bodystart="517" bodyend="520" declfile="include/libssh/socket.h" declline="37" declcolumn="10"/>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="agent_8c_1a5de461e227daa4f58be39d898ad861fb" compoundref="agent_8c" startline="66" endline="124">atomicio</referencedby>
+        <referencedby refid="group__libssh__session_1gafe509fcea47714b5cd277d1e35e83276" compoundref="session_8c" startline="566" endline="572">ssh_get_fd</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1ab9221de828e2d8110a891a72e99529b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_unix</definition>
+        <argsstring>(ssh_socket s, const char *path)</argsstring>
+        <name>ssh_socket_unix</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="39" column="5" bodyfile="src/socket.c" bodystart="410" bodyend="441" declfile="include/libssh/socket.h" declline="39" declcolumn="5"/>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="structssh__socket__struct_1afd130ba0ed3447b26c688c2befa67b0b" compoundref="socket_8c" startline="89">ssh_socket_struct::session</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="socket_8c_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</references>
+        <referencedby refid="agent_8c_1adfbbf8b7d2860b9dba5a0a666aad6dc7" compoundref="agent_8c" startline="209" endline="229">agent_connect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a4b4cbdb96d450601a8ba7f2b0530a9c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_execute_command</definition>
+        <argsstring>(const char *command, socket_t in, socket_t out)</argsstring>
+        <name>ssh_execute_command</name>
+        <param>
+          <type>const char *</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="40" column="6" bodyfile="src/socket.c" bodystart="870" bodyend="901" declfile="include/libssh/socket.h" declline="40" declcolumn="6"/>
+        <references refid="ssh__client_8c_1a9aee67bdbbcaaca080f23c622d7d38d9" compoundref="ssh__client_8c" startline="244" endline="288">shell</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a12e6bbab0c5a667e259e2f9599a72550" compoundref="libssh_8h" startline="346">SSH_LOG_WARNING</references>
+        <referencedby refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" compoundref="socket_8c" startline="914" endline="948">ssh_socket_connect_proxycommand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_connect_proxycommand</definition>
+        <argsstring>(ssh_socket s, const char *command)</argsstring>
+        <name>ssh_socket_connect_proxycommand</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="41" column="5" bodyfile="src/socket.c" bodystart="914" bodyend="948" declfile="include/libssh/socket.h" declline="41" declcolumn="5"/>
+        <references refid="structssh__socket__struct_1a67865c66b8d1dc1f0566671883a7d70f" compoundref="socket_8c" startline="90">ssh_socket_struct::callbacks</references>
+        <references refid="structssh__socket__callbacks__struct_1a905f6e0260fd5891d4afa9ed229b8479" compoundref="callbacks_8h" startline="402">ssh_socket_callbacks_struct::connected</references>
+        <references refid="structssh__socket__struct_1a284673b0d4470b2e1f27c32860d40aab" compoundref="socket_8c" startline="80">ssh_socket_struct::fd_is_socket</references>
+        <references refid="poll_8h_1a52ac479a805051f59643588b096024ff" compoundref="poll_8h" startline="82">POLLIN</references>
+        <references refid="poll_8h_1a91b3c67129ac7675062f316b840a0d58" compoundref="poll_8h" startline="88">POLLOUT</references>
+        <references refid="structssh__socket__struct_1a89a9735ece75279f0bda33ead820aac5" compoundref="socket_8c" startline="93">ssh_socket_struct::proxy_pid</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="socket_8c_1a4b4cbdb96d450601a8ba7f2b0530a9c0" compoundref="socket_8c" startline="870" endline="901">ssh_execute_command</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__poll_1gac02bf6f4444d4cc442da5865009fa5f6" compoundref="poll_8c" startline="413" endline="418">ssh_poll_set_events</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3ac9beec1845b81705f1abbca49b90f2bc" compoundref="socket_8c" startline="72">SSH_SOCKET_CONNECTED</references>
+        <references refid="group__libssh__callbacks_1ga777321b241841b09620e4c948520b753" compoundref="callbacks_8h" startline="412">SSH_SOCKET_CONNECTED_OK</references>
+        <references refid="socket_8c_1a5fbd3273a05d9b398d5e6e5c2f435671" compoundref="socket_8c" startline="386" endline="393">ssh_socket_get_poll_handle</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3ac9557988890c49e880eb8d7210772108" compoundref="socket_8c" startline="70">SSH_SOCKET_NONE</references>
+        <references refid="socket_8c_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</references>
+        <references refid="structssh__socket__struct_1ae812226fa991a4793a2aacf6ce171b3c" compoundref="socket_8c" startline="86">ssh_socket_struct::state</references>
+        <references refid="structssh__socket__callbacks__struct_1a21680bc94721a1507e1382e06f731aef" compoundref="callbacks_8h" startline="385">ssh_socket_callbacks_struct::userdata</references>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1aaf4853539d6ed1c3508cca5a45d557d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_close</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_close</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="43" column="6" bodyfile="src/socket.c" bodystart="447" bodyend="487" declfile="include/libssh/socket.h" declline="43" declcolumn="6"/>
+        <references refid="priv_8h_1ab40c0609fec1cdd4a1f711590f9701cc" compoundref="priv_8h" startline="380">CLOSE_SOCKET</references>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="structssh__socket__struct_1ac49859e63fa612be7bb59647710104e3" compoundref="socket_8c" startline="81">ssh_socket_struct::last_errno</references>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="structssh__socket__struct_1a89a9735ece75279f0bda33ead820aac5" compoundref="socket_8c" startline="93">ssh_socket_struct::proxy_pid</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <references refid="libssh_8h_1ab3c2f1accd58d32987f02d8aebdc1fc4" compoundref="libssh_8h" startline="370">SSH_LOG_WARN</references>
+        <references refid="group__libssh__poll_1ga873ecc6866c286f7777612d94de5c00d" compoundref="poll_8c" startline="376" endline="382">ssh_poll_free</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3aa9bb4d19786978b623df05ad740a3456" compoundref="socket_8c" startline="75">SSH_SOCKET_CLOSED</references>
+        <references refid="socket_8c_1a29176fb6f348985227454a3f5daec745" compoundref="socket_8c" startline="525" endline="528">ssh_socket_is_open</references>
+        <references refid="structssh__socket__struct_1ae812226fa991a4793a2aacf6ce171b3c" compoundref="socket_8c" startline="86">ssh_socket_struct::state</references>
+        <referencedby refid="agent_8h_1a2990b7f52fca9ee1dbebb306f28dc734" compoundref="agent_8c" startline="188" endline="194">ssh_agent_close</referencedby>
+        <referencedby refid="group__libssh__session_1gafa8d153635a261e97870ab71d570149a" compoundref="client_8c" startline="384" endline="478">ssh_client_connection_callback</referencedby>
+        <referencedby refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</referencedby>
+        <referencedby refid="packet_8h_1aa9b244813ff6d3c64845e6cf31354ecf" compoundref="packet__cb_8c" startline="48" endline="78">SSH_PACKET_CALLBACK</referencedby>
+        <referencedby refid="group__libssh__server_1ga6b0057a0346a87ddd9b57bfbbc580d4d" compoundref="server_8c" startline="338" endline="449">ssh_server_connection_callback</referencedby>
+        <referencedby refid="group__libssh__session_1gae1bd16255ba373325adf76307d0c8c42" compoundref="session_8c" startline="465" endline="473">ssh_silent_disconnect</referencedby>
+        <referencedby refid="socket_8h_1aa035e463e9a96923d81e01bfcf140d8d" compoundref="socket_8c" startline="398" endline="407">ssh_socket_free</referencedby>
+        <referencedby refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_write</definition>
+        <argsstring>(ssh_socket s, const void *buffer, int len)</argsstring>
+        <name>ssh_socket_write</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="44" column="5" bodyfile="src/socket.c" bodystart="637" bodyend="648" declfile="include/libssh/socket.h" declline="44" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="structssh__socket__struct_1afd130ba0ed3447b26c688c2befa67b0b" compoundref="socket_8c" startline="89">ssh_socket_struct::session</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="priv_8h_1ae280c413c792e04237f000841ac8ce44" compoundref="priv_8h" startline="265">ssh_set_error_oom</references>
+        <references refid="socket_8c_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</references>
+        <referencedby refid="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" compoundref="test__socket_8c" startline="36" endline="43">data_rcv</referencedby>
+        <referencedby refid="packet_8c_1a45f5be5728a777df5f23387e73f2a3d8" compoundref="packet_8c" startline="1583" endline="1591">ssh_packet_write</referencedby>
+        <referencedby refid="priv_8h_1aacb791f6b4bb44f93327dee7ab138717" compoundref="client_8c" startline="175" endline="237">ssh_send_banner</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a29176fb6f348985227454a3f5daec745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_is_open</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_is_open</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="45" column="5" bodyfile="src/socket.c" bodystart="525" bodyend="528" declfile="include/libssh/socket.h" declline="45" declcolumn="5"/>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+        <referencedby refid="group__libssh__channel_1ga3a106d0c860b8ada098b4ed317c3cce4" compoundref="channels_8c" startline="3204" endline="3250">channel_protocol_select</referencedby>
+        <referencedby refid="agent_8c_1aa00cb12345f1b86b6b472866b3dc5d9c" compoundref="agent_8c" startline="457" endline="473">ssh_agent_is_running</referencedby>
+        <referencedby refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</referencedby>
+        <referencedby refid="group__libssh__session_1ga5ffa2201152e29cc680c4b8e4a3f4fdf" compoundref="session_8c" startline="905" endline="928">ssh_send_debug</referencedby>
+        <referencedby refid="group__libssh__session_1gab8827415fd19cf6cb64e7fc83c09e423" compoundref="session_8c" startline="870" endline="892">ssh_send_ignore</referencedby>
+        <referencedby refid="socket_8h_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</referencedby>
+        <referencedby refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a1335d3cd58897c1e1672ca3d75d405ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_fd_isset</definition>
+        <argsstring>(ssh_socket s, fd_set *set)</argsstring>
+        <name>ssh_socket_fd_isset</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>fd_set *</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="46" column="5" bodyfile="src/socket.c" bodystart="605" bodyend="611" declfile="include/libssh/socket.h" declline="46" declcolumn="5"/>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" compoundref="CMakeLists_8txt" startline="25" endline="40">set</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a42847e318531b31eb35a7d5df8a0cfa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_fd_set</definition>
+        <argsstring>(ssh_socket s, fd_set *set, socket_t *max_fd)</argsstring>
+        <name>ssh_socket_fd_set</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>fd_set *</type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref> *</type>
+          <declname>max_fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="47" column="6" bodyfile="src/socket.c" bodystart="617" bodyend="630" declfile="include/libssh/socket.h" declline="47" declcolumn="6"/>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" compoundref="CMakeLists_8txt" startline="25" endline="40">set</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a3b8e9125cf7ed77ae479d07cf24be154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_set_fd_in</definition>
+        <argsstring>(ssh_socket s, socket_t fd)</argsstring>
+        <name>ssh_socket_set_fd_in</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="48" column="6" declfile="include/libssh/socket.h" declline="48" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1abc26d6e5c932b8bbf1275f9f78788022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_set_fd_out</definition>
+        <argsstring>(ssh_socket s, socket_t fd)</argsstring>
+        <name>ssh_socket_set_fd_out</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="49" column="6" declfile="include/libssh/socket.h" declline="49" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_nonblocking_flush</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_nonblocking_flush</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="50" column="5" bodyfile="src/socket.c" bodystart="655" bodyend="727" declfile="include/libssh/socket.h" declline="50" declcolumn="5"/>
+        <references refid="structssh__session__struct_1a729d3c7f6ae20cb5a00ac7cd28a630f7" compoundref="session_8h" startline="124">ssh_session_struct::alive</references>
+        <references refid="structssh__socket__struct_1a67865c66b8d1dc1f0566671883a7d70f" compoundref="socket_8c" startline="90">ssh_socket_struct::callbacks</references>
+        <references refid="structssh__socket__callbacks__struct_1ae642ee58e72973ee0802820e46cb777b" compoundref="callbacks_8h" startline="398">ssh_socket_callbacks_struct::exception</references>
+        <references refid="structssh__socket__struct_1ac49859e63fa612be7bb59647710104e3" compoundref="socket_8c" startline="81">ssh_socket_struct::last_errno</references>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="structssh__counter__struct_1a0fc155fa51fb41bc8011da0df017e182" compoundref="libssh_8h" startline="110">ssh_counter_struct::out_bytes</references>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="poll_8h_1a91b3c67129ac7675062f316b840a0d58" compoundref="poll_8h" startline="88">POLLOUT</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="structssh__socket__struct_1afd130ba0ed3447b26c688c2befa67b0b" compoundref="socket_8c" startline="89">ssh_socket_struct::session</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="structssh__session__struct_1a8da928017a30c1056abf6824e96aca7b" compoundref="session_8h" startline="237">ssh_session_struct::socket_counter</references>
+        <references refid="libssh_8h_1a9c57e4f6482106336045a4d25a55f28e" compoundref="libssh_8h" startline="331">SSH_AGAIN</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="buffer_8h_1a226d198c4274fac7c354b6a340049d47">ssh_buffer_pass_bytes</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="group__libssh__poll_1ga26ad689751420b91bf002f616e8bf4f7" compoundref="poll_8c" startline="442" endline="444">ssh_poll_add_events</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="socket_8c_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</references>
+        <references refid="group__libssh__callbacks_1ga37ab1ae01d34ff9b5a2b1b4ae334fd6f" compoundref="callbacks_8h" startline="410">SSH_SOCKET_EXCEPTION_ERROR</references>
+        <references refid="socket_8c_1a29176fb6f348985227454a3f5daec745" compoundref="socket_8c" startline="525" endline="528">ssh_socket_is_open</references>
+        <references refid="socket_8c_1a830a3625d6dd3a649a6f94380d4ecb82" compoundref="socket_8c" startline="564" endline="600">ssh_socket_unbuffered_write</references>
+        <references refid="structssh__socket__callbacks__struct_1a21680bc94721a1507e1382e06f731aef" compoundref="callbacks_8h" startline="385">ssh_socket_callbacks_struct::userdata</references>
+        <references refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" compoundref="socket_8c" startline="84">ssh_socket_struct::write_wontblock</references>
+        <referencedby refid="test__socket_8c_1ac39a780210b22e9594698e9ec67fb5e5" compoundref="test__socket_8c" startline="36" endline="43">data_rcv</referencedby>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+        <referencedby refid="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" compoundref="socket_8c" startline="637" endline="648">ssh_socket_write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a6d635344343af4fe2b372b01e59299ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_set_write_wontblock</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_set_write_wontblock</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="51" column="6" bodyfile="src/socket.c" bodystart="729" bodyend="732" declfile="include/libssh/socket.h" declline="51" declcolumn="6"/>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" compoundref="socket_8c" startline="84">ssh_socket_struct::write_wontblock</references>
+        <referencedby refid="group__libssh__session_1ga3f1b3c59662464eec3649d3d72a40543" compoundref="session_8c" startline="593" endline="599">ssh_set_fd_towrite</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a8c75ff63e98886df2b9e3de35095314d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_set_read_wontblock</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_set_read_wontblock</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="52" column="6" bodyfile="src/socket.c" bodystart="734" bodyend="737" declfile="include/libssh/socket.h" declline="52" declcolumn="6"/>
+        <references refid="structssh__socket__struct_1ae8ae624da1e6ff73d87c3d0a281209c3" compoundref="socket_8c" startline="82">ssh_socket_struct::read_wontblock</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="group__libssh__session_1ga0e05c91c6f475eabc8d221914d25a425" compoundref="session_8c" startline="580" endline="586">ssh_set_fd_toread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1aee43f4cb991640176f1d43ef5b00c744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_set_except</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_set_except</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="53" column="6" bodyfile="src/socket.c" bodystart="739" bodyend="742" declfile="include/libssh/socket.h" declline="53" declcolumn="6"/>
+        <references refid="structssh__socket__struct_1aa1e8d0d228c2d7c851c3c82d595aea53" compoundref="socket_8c" startline="85">ssh_socket_struct::data_except</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="group__libssh__session_1ga06453278350fd9e940c5c1b0d5225f19" compoundref="session_8c" startline="606" endline="612">ssh_set_fd_except</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a4944a315eb3379d72e5d1863994a745f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_get_status</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_get_status</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="54" column="5" bodyfile="src/socket.c" bodystart="769" bodyend="786" declfile="include/libssh/socket.h" declline="54" declcolumn="5"/>
+        <references refid="structssh__socket__struct_1aa1e8d0d228c2d7c851c3c82d595aea53" compoundref="socket_8c" startline="85">ssh_socket_struct::data_except</references>
+        <references refid="structssh__socket__struct_1af549d9b6cbe93aa20f2774211584e602" compoundref="socket_8c" startline="88">ssh_socket_struct::in_buffer</references>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="libssh_8h_1a7d19d717827a40f33e5e58ef2b12fc1e" compoundref="libssh_8h" startline="228">SSH_CLOSED_ERROR</references>
+        <references refid="libssh_8h_1ab43b60dbabf6f8ea8001d49b7fabbbd1" compoundref="libssh_8h" startline="226">SSH_READ_PENDING</references>
+        <references refid="libssh_8h_1a23b4dcde28bace8c4a4d21fb2cc2d1b5" compoundref="libssh_8h" startline="230">SSH_WRITE_PENDING</references>
+        <referencedby refid="group__libssh__session_1gac199314d1646372c566ef14b9b6dca53" compoundref="session_8c" startline="752" endline="778">ssh_get_status</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a2d1f155a930ca6784cbcb44935ce58ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_get_poll_flags</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_get_poll_flags</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="55" column="5" bodyfile="src/socket.c" bodystart="788" bodyend="798" declfile="include/libssh/socket.h" declline="55" declcolumn="5"/>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="poll_8h_1a52ac479a805051f59643588b096024ff" compoundref="poll_8h" startline="82">POLLIN</references>
+        <references refid="poll_8h_1a91b3c67129ac7675062f316b840a0d58" compoundref="poll_8h" startline="88">POLLOUT</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="group__libssh__poll_1ga8e2e646ac338021e8e804992e8c13496" compoundref="poll_8c" startline="402" endline="404">ssh_poll_get_events</references>
+        <references refid="libssh_8h_1ab43b60dbabf6f8ea8001d49b7fabbbd1" compoundref="libssh_8h" startline="226">SSH_READ_PENDING</references>
+        <references refid="libssh_8h_1a23b4dcde28bace8c4a4d21fb2cc2d1b5" compoundref="libssh_8h" startline="230">SSH_WRITE_PENDING</references>
+        <referencedby refid="group__libssh__session_1gae9d0104fbeca17bcfb0659ad718c4606" compoundref="session_8c" startline="790" endline="797">ssh_get_poll_flags</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1ab1da50ceb561300f26b250da9e197c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_buffered_write_bytes</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_buffered_write_bytes</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="56" column="5" bodyfile="src/socket.c" bodystart="759" bodyend="766" declfile="include/libssh/socket.h" declline="56" declcolumn="5"/>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <referencedby refid="group__libssh__session_1gac06e77d8cc7d3c9b3ce54cfd8db35afa" compoundref="session_8c" startline="503" endline="510">ssh_flush_termination</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a7b6d96bfb71ce6b9d5a4dc8406874691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_data_available</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_data_available</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="57" column="5" bodyfile="src/socket.c" bodystart="744" bodyend="747" declfile="include/libssh/socket.h" declline="57" declcolumn="5"/>
+        <references refid="structssh__socket__struct_1ae8ae624da1e6ff73d87c3d0a281209c3" compoundref="socket_8c" startline="82">ssh_socket_struct::read_wontblock</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="group__libssh__channel_1ga3a106d0c860b8ada098b4ed317c3cce4" compoundref="channels_8c" startline="3204" endline="3250">channel_protocol_select</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1ac9d2595a2e7ce42c7319d1dce077260c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_data_writable</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_data_writable</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="58" column="5" bodyfile="src/socket.c" bodystart="749" bodyend="752" declfile="include/libssh/socket.h" declline="58" declcolumn="5"/>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" compoundref="socket_8c" startline="84">ssh_socket_struct::write_wontblock</references>
+        <referencedby refid="group__libssh__channel_1ga3a106d0c860b8ada098b4ed317c3cce4" compoundref="channels_8c" startline="3204" endline="3250">channel_protocol_select</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1ae275c9b263b248c4b92672f979e29bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_set_nonblocking</definition>
+        <argsstring>(socket_t fd)</argsstring>
+        <name>ssh_socket_set_nonblocking</name>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="59" column="5" bodyfile="src/socket.c" bodystart="814" bodyend="817" declfile="include/libssh/socket.h" declline="59" declcolumn="5"/>
+        <referencedby refid="priv_8h_1a3a806e36fb02fc4f205e32206fc6d18c" compoundref="connect_8c" startline="165" endline="269">ssh_connect_host_nonblocking</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a44a16694df7e76c5e87d0e11e3040aca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_set_blocking</definition>
+        <argsstring>(socket_t fd)</argsstring>
+        <name>ssh_socket_set_blocking</name>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="60" column="5" bodyfile="src/socket.c" bodystart="819" bodyend="822" declfile="include/libssh/socket.h" declline="60" declcolumn="5"/>
+        <referencedby refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a15a69b474244317cc9401a9a404e7bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssh_socket_set_callbacks</definition>
+        <argsstring>(ssh_socket s, ssh_socket_callbacks callbacks)</argsstring>
+        <name>ssh_socket_set_callbacks</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="group__libssh__callbacks_1ga2e7d10bc4ef1f67b4f79a83bf4a40f9a" kindref="member">ssh_socket_callbacks</ref></type>
+          <declname>callbacks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="62" column="6" bodyfile="src/socket.c" bodystart="212" bodyend="215" declfile="include/libssh/socket.h" declline="62" declcolumn="6"/>
+        <references refid="structssh__socket__struct_1a67865c66b8d1dc1f0566671883a7d70f" compoundref="socket_8c" startline="90">ssh_socket_struct::callbacks</references>
+        <references refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" compoundref="test__socket_8c" startline="63">callbacks</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+        <referencedby refid="group__libssh__server_1gab60c37350653eb3b65a99ac089c55830" compoundref="server_8c" startline="528" endline="563">ssh_handle_key_exchange</referencedby>
+        <referencedby refid="packet_8c_1a2b98f7c23a7c0a673c3b34190bc4a9a9" compoundref="packet_8c" startline="1415" endline="1421">ssh_packet_register_socket_callback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1aa57456b012ab138a8665f5014fae4d36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_pollcallback</definition>
+        <argsstring>(struct ssh_poll_handle_struct *p, socket_t fd, int revents, void *v_s)</argsstring>
+        <name>ssh_socket_pollcallback</name>
+        <param>
+          <type>struct <ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle_struct</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref></type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>revents</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>v_s</declname>
+        </param>
+        <briefdescription>
+<para>SSH poll callback. This callback will be used when an event caught on the socket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poll object this callback belongs to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The raw socket. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>revents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current poll events on the socket. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userdata to be passed to the callback function, in this case the socket object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, &lt; 0 when the poll object has been removed from its poll context. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="63" column="5" bodyfile="src/socket.c" bodystart="230" bodyend="379" declfile="include/libssh/socket.h" declline="63" declcolumn="5"/>
+        <references refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" compoundref="benchmarks_8c" startline="347">buffer</references>
+        <references refid="structssh__socket__struct_1a67865c66b8d1dc1f0566671883a7d70f" compoundref="socket_8c" startline="90">ssh_socket_struct::callbacks</references>
+        <references refid="structssh__socket__callbacks__struct_1a905f6e0260fd5891d4afa9ed229b8479" compoundref="callbacks_8h" startline="402">ssh_socket_callbacks_struct::connected</references>
+        <references refid="structssh__socket__callbacks__struct_1aad1bb53264cd71badae09bd3a0f561eb" compoundref="callbacks_8h" startline="394">ssh_socket_callbacks_struct::controlflow</references>
+        <references refid="structssh__socket__callbacks__struct_1a73d09c1b2ae438da96c4b3bbfb99c9ad" compoundref="callbacks_8h" startline="390">ssh_socket_callbacks_struct::data</references>
+        <references refid="structssh__socket__callbacks__struct_1ae642ee58e72973ee0802820e46cb777b" compoundref="callbacks_8h" startline="398">ssh_socket_callbacks_struct::exception</references>
+        <references refid="structssh__socket__struct_1af549d9b6cbe93aa20f2774211584e602" compoundref="socket_8c" startline="88">ssh_socket_struct::in_buffer</references>
+        <references refid="structssh__counter__struct_1a4fb86ab2536688750c960f58ac414c79" compoundref="libssh_8h" startline="109">ssh_counter_struct::in_bytes</references>
+        <references refid="structssh__socket__struct_1ac49859e63fa612be7bb59647710104e3" compoundref="socket_8c" startline="81">ssh_socket_struct::last_errno</references>
+        <references refid="priv_8h_1a7244ab798f58214294b580ca0bb48552" compoundref="priv_8h" startline="190">MAX_BUF_SIZE</references>
+        <references refid="structssh__socket__struct_1a41c5c92e4da72a23e5a7c2e4b33475da" compoundref="socket_8c" startline="87">ssh_socket_struct::out_buffer</references>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="poll_8h_1ab1c532446408c98559d4aaaeeeb99820" compoundref="poll_8h" startline="92">POLLERR</references>
+        <references refid="poll_8h_1a262754fe6bdf27c2cd3da43284ec8536" compoundref="poll_8h" startline="95">POLLHUP</references>
+        <references refid="poll_8h_1a52ac479a805051f59643588b096024ff" compoundref="poll_8h" startline="82">POLLIN</references>
+        <references refid="poll_8h_1a91b3c67129ac7675062f316b840a0d58" compoundref="poll_8h" startline="88">POLLOUT</references>
+        <references refid="poll_8h_1ab8f1f69608ba2430cd5fa629a87b5420" compoundref="poll_8h" startline="108">POLLWRNORM</references>
+        <references refid="pkd__daemon_8c_1ac6509c6fe4cbf7bde170597172f8a288" compoundref="pkd__daemon_8c" startline="62">rc</references>
+        <references refid="structssh__socket__struct_1ae8ae624da1e6ff73d87c3d0a281209c3" compoundref="socket_8c" startline="82">ssh_socket_struct::read_wontblock</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="structssh__socket__struct_1afd130ba0ed3447b26c688c2befa67b0b" compoundref="socket_8c" startline="89">ssh_socket_struct::session</references>
+        <references refid="structssh__session__struct_1a8da928017a30c1056abf6824e96aca7b" compoundref="session_8h" startline="237">ssh_session_struct::socket_counter</references>
+        <references refid="libssh_8h_1a92d37237bf129961367accd4a9e0dcfc">ssh_buffer_add_data</references>
+        <references refid="libssh_8h_1a240b02fb7c0475fbb5996d1f759221ee">ssh_buffer_get</references>
+        <references refid="libssh_8h_1a61400c7267feb254046cd606a3fdfdbc">ssh_buffer_get_len</references>
+        <references refid="buffer_8h_1a226d198c4274fac7c354b6a340049d47">ssh_buffer_pass_bytes</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a6445dfe21592d69d9741d319538b6673" compoundref="libssh_8h" startline="352">SSH_LOG_PACKET</references>
+        <references refid="libssh_8h_1a466c84d8dd5b1ba9162d491f31117a6b" compoundref="libssh_8h" startline="376">SSH_LOG_TRACE</references>
+        <references refid="group__libssh__poll_1ga012582349ce62cf788761e5f97548496" compoundref="poll_8c" startline="453" endline="455">ssh_poll_remove_events</references>
+        <references refid="group__libssh__poll_1gac02bf6f4444d4cc442da5865009fa5f6" compoundref="poll_8c" startline="413" endline="418">ssh_poll_set_events</references>
+        <references refid="socket_8c_1aaf4853539d6ed1c3508cca5a45d557d6" compoundref="socket_8c" startline="447" endline="487">ssh_socket_close</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3ac9beec1845b81705f1abbca49b90f2bc" compoundref="socket_8c" startline="72">SSH_SOCKET_CONNECTED</references>
+        <references refid="group__libssh__callbacks_1ga3121a6449b4f59f96dd1196e8fd87b2b" compoundref="callbacks_8h" startline="413">SSH_SOCKET_CONNECTED_ERROR</references>
+        <references refid="group__libssh__callbacks_1ga777321b241841b09620e4c948520b753" compoundref="callbacks_8h" startline="412">SSH_SOCKET_CONNECTED_OK</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3a59cfbc6f713a31c06785fe80ad41a1be" compoundref="socket_8c" startline="71">SSH_SOCKET_CONNECTING</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3a05841101197c2fd1e65193678ffd300a" compoundref="socket_8c" startline="74">SSH_SOCKET_ERROR</references>
+        <references refid="group__libssh__callbacks_1gadc333c5dedfa61e2a0725428bd3aab89" compoundref="callbacks_8h" startline="409">SSH_SOCKET_EXCEPTION_EOF</references>
+        <references refid="group__libssh__callbacks_1ga37ab1ae01d34ff9b5a2b1b4ae334fd6f" compoundref="callbacks_8h" startline="410">SSH_SOCKET_EXCEPTION_ERROR</references>
+        <references refid="group__libssh__callbacks_1gab50359ff09370deb71808b135af21961" compoundref="callbacks_8h" startline="407">SSH_SOCKET_FLOW_WRITEWONTBLOCK</references>
+        <references refid="socket_8c_1ae2a8e654afdc3bdeedf335bdc254401c" compoundref="socket_8c" startline="517" endline="520">ssh_socket_get_fd</references>
+        <references refid="socket_8c_1a29176fb6f348985227454a3f5daec745" compoundref="socket_8c" startline="525" endline="528">ssh_socket_is_open</references>
+        <references refid="socket_8c_1a718a60a5a68d22d59991e2ae353c5eb6" compoundref="socket_8c" startline="655" endline="727">ssh_socket_nonblocking_flush</references>
+        <references refid="socket_8c_1a44a16694df7e76c5e87d0e11e3040aca" compoundref="socket_8c" startline="819" endline="822">ssh_socket_set_blocking</references>
+        <references refid="socket_8c_1a6949167d4df3919f169f151e1c904a80" compoundref="socket_8c" startline="533" endline="559">ssh_socket_unbuffered_read</references>
+        <references refid="structssh__socket__struct_1ae812226fa991a4793a2aacf6ce171b3c" compoundref="socket_8c" startline="86">ssh_socket_struct::state</references>
+        <references refid="structssh__socket__callbacks__struct_1a21680bc94721a1507e1382e06f731aef" compoundref="callbacks_8h" startline="385">ssh_socket_callbacks_struct::userdata</references>
+        <references refid="structssh__socket__struct_1a1d884828e85e60c0bdd21ffe8e145f97" compoundref="socket_8c" startline="84">ssh_socket_struct::write_wontblock</references>
+        <referencedby refid="socket_8h_1a5af4852b3910014440f36032ec76d785" compoundref="socket_8c" startline="386" endline="393">ssh_socket_get_poll_handle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1a5af4852b3910014440f36032ec76d785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle_struct</ref> *</type>
+        <definition>struct ssh_poll_handle_struct* ssh_socket_get_poll_handle</definition>
+        <argsstring>(ssh_socket s)</argsstring>
+        <name>ssh_socket_get_poll_handle</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="64" column="30" bodyfile="src/socket.c" bodystart="386" bodyend="393" declfile="include/libssh/socket.h" declline="64" declcolumn="30"/>
+        <references refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" compoundref="socket_8c" startline="79">ssh_socket_struct::fd</references>
+        <references refid="structssh__socket__struct_1a91abd954fa769480ef871d8760b9c9a3" compoundref="socket_8c" startline="91">ssh_socket_struct::poll_handle</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="group__libssh__poll_1gac657ed07db9e5851ffb0aba45e071e99" compoundref="poll_8c" startline="351" endline="367">ssh_poll_new</references>
+        <references refid="socket_8c_1aa57456b012ab138a8665f5014fae4d36" compoundref="socket_8c" startline="230" endline="379">ssh_socket_pollcallback</references>
+        <referencedby refid="group__libssh__server_1ga142f1e2f79f6623f14dcfa40dccaa061" compoundref="bind_8c" startline="423" endline="551">ssh_bind_accept_fd</referencedby>
+        <referencedby refid="group__libssh__session_1gaa0e04dc9e24d5112a5ca2b7bd68031d0" compoundref="session_8c" startline="633" endline="665">ssh_handle_packets</referencedby>
+        <referencedby refid="group__libssh__poll_1ga4aa3ef276370adbb4afb284947dc8005" compoundref="poll_8c" startline="605" endline="616">ssh_poll_ctx_add_socket</referencedby>
+        <referencedby refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" compoundref="socket_8c" startline="914" endline="948">ssh_socket_connect_proxycommand</referencedby>
+        <referencedby refid="socket_8h_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssh_socket_connect</definition>
+        <argsstring>(ssh_socket s, const char *host, uint16_t port, const char *bind_addr)</argsstring>
+        <name>ssh_socket_connect</name>
+        <param>
+          <type><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>bind_addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/libssh/socket.h" line="66" column="5" bodyfile="src/socket.c" bodystart="839" bodyend="859" declfile="include/libssh/socket.h" declline="66" declcolumn="5"/>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" compoundref="sshnetcat_8c" startline="39">port</references>
+        <references refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" compoundref="test__socket_8c" startline="34">s</references>
+        <references refid="structssh__socket__struct_1afd130ba0ed3447b26c688c2befa67b0b" compoundref="socket_8c" startline="89">ssh_socket_struct::session</references>
+        <references refid="priv_8h_1a3a806e36fb02fc4f205e32206fc6d18c" compoundref="connect_8c" startline="165" endline="269">ssh_connect_host_nonblocking</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1a036b2b00fb04337a4d06d719d1b62be1a86ff0b2e8da6ad8628efc556b6ce1887" compoundref="libssh_8h" startline="286">SSH_FATAL</references>
+        <references refid="libssh_8h_1a5f05b48043a1f47b36388227bee5d4f8" compoundref="libssh_8h" startline="140">SSH_INVALID_SOCKET</references>
+        <references refid="priv_8h_1aa21fd8a7a609329603b7b16da7939fca" compoundref="priv_8h" startline="240">SSH_LOG</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a75fa79e63947b66462db977d9b5ae27c" compoundref="libssh_8h" startline="349">SSH_LOG_PROTOCOL</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="priv_8h_1a55177b3e8db90ca9adb435c44281963c" compoundref="priv_8h" startline="258">ssh_set_error</references>
+        <references refid="socket_8c_1aa201846b09f7fb2b31e6602151e88ee3ac9557988890c49e880eb8d7210772108" compoundref="socket_8c" startline="70">SSH_SOCKET_NONE</references>
+        <references refid="socket_8c_1a1bf2efced17e41fdd72719e1daee8851" compoundref="socket_8c" startline="497" endline="512">ssh_socket_set_fd</references>
+        <references refid="structssh__socket__struct_1ae812226fa991a4793a2aacf6ce171b3c" compoundref="socket_8c" startline="86">ssh_socket_struct::state</references>
+        <referencedby refid="test__socket_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="test__socket_8c" startline="70" endline="93">main</referencedby>
+        <referencedby refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>SSH<sp/>Library</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2009<sp/>by<sp/>Aris<sp/>Adamantiadis</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SOCKET_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOCKET_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="callbacks_8h" kindref="compound">libssh/callbacks.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle_struct</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>socket.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref>;</highlight></codeline>
+<codeline lineno="29" refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__socket__struct" kindref="compound">ssh_socket_struct</ref>*<sp/><ref refid="socket_8h_1a6b62005b4c3ccb51da8c758305c7d159" kindref="member">ssh_socket</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a37f17ec6d2ede343ad1e70ed061ec9bb" kindref="member">ssh_socket_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1accaf18caa54fcca41198838b5134a47b" kindref="member">ssh_socket_cleanup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="socket_8h_1ae616d257d1f37fcaf60f6d243fe4e964" kindref="member">ssh_socket_new</ref>(<ref refid="structssh__session__struct" kindref="compound">ssh_session</ref><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a4f4b2a1a8e54b3c6406a60c1b031de18" kindref="member">ssh_socket_reset</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1aa035e463e9a96923d81e01bfcf140d8d" kindref="member">ssh_socket_free</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a1bf2efced17e41fdd72719e1daee8851" kindref="member">ssh_socket_set_fd</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="socket_8h_1ae2a8e654afdc3bdeedf335bdc254401c" kindref="member">ssh_socket_get_fd</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1ab9221de828e2d8110a891a72e99529b2" kindref="member">ssh_socket_unix</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a4b4cbdb96d450601a8ba7f2b0530a9c0" kindref="member">ssh_execute_command</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*command,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/>in,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/>out);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a4a6d84c45677fe9f8195b3630338920b" kindref="member">ssh_socket_connect_proxycommand</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*command);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1aaf4853539d6ed1c3508cca5a45d557d6" kindref="member">ssh_socket_close</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a1ab5802c4b5bd77777278f18666d2721" kindref="member">ssh_socket_write</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="benchmarks_8c_1aff2566f4c366b48d73479bef43ee4d2e" kindref="member">buffer</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a29176fb6f348985227454a3f5daec745" kindref="member">ssh_socket_is_open</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a1335d3cd58897c1e1672ca3d75d405ea" kindref="member">ssh_socket_fd_isset</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/>fd_set<sp/>*<ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a42847e318531b31eb35a7d5df8a0cfa7" kindref="member">ssh_socket_fd_set</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/>fd_set<sp/>*<ref refid="CMakeLists_8txt_1aedfdfd01a75aededaea39dc830001b75" kindref="member">set</ref>,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/>*max_fd);</highlight></codeline>
+<codeline lineno="48" refid="socket_8h_1a3b8e9125cf7ed77ae479d07cf24be154" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a3b8e9125cf7ed77ae479d07cf24be154" kindref="member">ssh_socket_set_fd_in</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="49" refid="socket_8h_1abc26d6e5c932b8bbf1275f9f78788022" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1abc26d6e5c932b8bbf1275f9f78788022" kindref="member">ssh_socket_set_fd_out</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a718a60a5a68d22d59991e2ae353c5eb6" kindref="member">ssh_socket_nonblocking_flush</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a6d635344343af4fe2b372b01e59299ba" kindref="member">ssh_socket_set_write_wontblock</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a8c75ff63e98886df2b9e3de35095314d" kindref="member">ssh_socket_set_read_wontblock</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1aee43f4cb991640176f1d43ef5b00c744" kindref="member">ssh_socket_set_except</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a4944a315eb3379d72e5d1863994a745f" kindref="member">ssh_socket_get_status</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a2d1f155a930ca6784cbcb44935ce58ef" kindref="member">ssh_socket_get_poll_flags</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1ab1da50ceb561300f26b250da9e197c86" kindref="member">ssh_socket_buffered_write_bytes</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a7b6d96bfb71ce6b9d5a4dc8406874691" kindref="member">ssh_socket_data_available</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1ac9d2595a2e7ce42c7319d1dce077260c" kindref="member">ssh_socket_data_writable</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1ae275c9b263b248c4b92672f979e29bc1" kindref="member">ssh_socket_set_nonblocking</ref>(<ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a44a16694df7e76c5e87d0e11e3040aca" kindref="member">ssh_socket_set_blocking</ref>(<ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1a15a69b474244317cc9401a9a404e7bcc" kindref="member">ssh_socket_set_callbacks</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,<sp/><ref refid="structssh__socket__callbacks__struct" kindref="compound">ssh_socket_callbacks</ref><sp/><ref refid="test__socket_8c_1a6f7c6c5b8dbd2f4417bf5cdf04c253f9" kindref="member">callbacks</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1aa57456b012ab138a8665f5014fae4d36" kindref="member">ssh_socket_pollcallback</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle_struct</ref><sp/>*p,<sp/><ref refid="libssh_8h_1a30353f381f5fccbb956eea1f3a110b6c" kindref="member">socket_t</ref><sp/><ref refid="structssh__socket__struct_1a862e0ae2bf99d16a24d3988cd8c26607" kindref="member">fd</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>revents,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*v_s);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structssh__poll__handle__struct" kindref="compound">ssh_poll_handle_struct</ref><sp/>*<sp/><ref refid="socket_8h_1a5af4852b3910014440f36032ec76d785" kindref="member">ssh_socket_get_poll_handle</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="socket_8h_1ace11b434c7f9edcbbf26cef9334b2ba8" kindref="member">ssh_socket_connect</ref>(<ref refid="structssh__socket__struct" kindref="compound">ssh_socket</ref><sp/><ref refid="test__socket_8c_1a73991beba1accdcc64730cb00c146fe2" kindref="member">s</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="sshnetcat_8c_1ad723da1801ae1586eb330380e2d9a912" kindref="member">port</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*bind_addr);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SOCKET_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/libssh/socket.h"/>
+  </compounddef>
+</doxygen>

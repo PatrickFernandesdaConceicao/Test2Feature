@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="sftp__stress_2main_8c" kind="file" language="C++">
+    <compoundname>main.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="libssh_8h" local="no">libssh/libssh.h</includes>
+    <includes refid="sftp_8h" local="no">libssh/sftp.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes local="no">pthread.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>sys/select.h</label>
+      </node>
+      <node id="9">
+        <label>libssh/legacy.h</label>
+        <link refid="legacy_8h"/>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>fcntl.h</label>
+      </node>
+      <node id="1">
+        <label>tests/sftp_stress/main.c</label>
+        <link refid="sftp__stress_2main_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libssh/sftp.h</label>
+        <link refid="sftp_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>netdb.h</label>
+      </node>
+      <node id="15">
+        <label>pthread.h</label>
+      </node>
+      <node id="6">
+        <label>sys/types.h</label>
+      </node>
+      <node id="4">
+        <label>unistd.h</label>
+      </node>
+      <node id="14">
+        <label>signal.h</label>
+      </node>
+      <node id="11">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>libssh/libssh.h</label>
+        <link refid="libssh_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sftp__stress_2main_8c_1aaee5fa6ef498d4fa948b31ae533c146b" prot="public" static="no">
+        <name>TEST_READ</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="15" column="17" bodyfile="tests/sftp_stress/main.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sftp__stress_2main_8c_1a3430741a02c5da1f25edcc311502c24d" prot="public" static="no">
+        <name>TEST_WRITE</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="16" column="9" bodyfile="tests/sftp_stress/main.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sftp__stress_2main_8c_1a51ca9914034cd3e92903476fd4eebbd6" prot="public" static="no">
+        <name>NTHREADS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="17" column="9" bodyfile="tests/sftp_stress/main.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" prot="public" static="no">
+        <name>FILESIZE</name>
+        <initializer>100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="18" column="9" bodyfile="tests/sftp_stress/main.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sftp__stress_2main_8c_1a6fab9965b10f859b7e70150cb6439260" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char samplefile[FILESIZE]</definition>
+        <argsstring>[FILESIZE]</argsstring>
+        <name>samplefile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="19" column="15" bodyfile="tests/sftp_stress/main.c" bodystart="19" bodyend="-1"/>
+        <referencedby refid="sftp__stress_2main_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="sftp__stress_2main_8c" startline="54" endline="74">main</referencedby>
+        <referencedby refid="sftp__stress_2main_8c_1ac2a820a1f47a1ee5c76d2e3e930bdc61" compoundref="sftp__stress_2main_8c" startline="137" endline="174">sftp_test</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="sftp__stress_2main_8c_1ad263606c4f32031e57d51306ae5cf58e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>volatile int stop</definition>
+        <argsstring></argsstring>
+        <name>stop</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="20" column="14" bodyfile="tests/sftp_stress/main.c" bodystart="20" bodyend="-1"/>
+        <referencedby refid="sftp__stress_2main_8c_1a0816db2ac84607b8bad1d2aa4798849c" compoundref="sftp__stress_2main_8c" startline="23" endline="26">signal_stop</referencedby>
+        <referencedby refid="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" compoundref="sftp__stress_2main_8c" startline="47" endline="52">thread</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="sftp__stress_2main_8c_1a2e9645f39096cbfe1926297b89f4fe82" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* hosts[]</definition>
+        <argsstring>[]</argsstring>
+        <name>hosts</name>
+        <initializer>={&quot;localhost&quot;,&quot;barebone&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="22" column="12" bodyfile="tests/sftp_stress/main.c" bodystart="22" bodyend="-1"/>
+        <referencedby refid="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" compoundref="sftp__stress_2main_8c" startline="47" endline="52">thread</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sftp__stress_2main_8c_1a0816db2ac84607b8bad1d2aa4798849c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void signal_stop</definition>
+        <argsstring>()</argsstring>
+        <name>signal_stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="23" column="6" bodyfile="tests/sftp_stress/main.c" bodystart="23" bodyend="26"/>
+        <references refid="sftp__stress_2main_8c_1ad263606c4f32031e57d51306ae5cf58e" compoundref="sftp__stress_2main_8c" startline="20">stop</references>
+        <referencedby refid="sftp__stress_2main_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="sftp__stress_2main_8c" startline="54" endline="74">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SSH_SESSION *</type>
+        <definition>SSH_SESSION * connect_host</definition>
+        <argsstring>(const char *hostname)</argsstring>
+        <name>connect_host</name>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="76" column="13" bodyfile="tests/sftp_stress/main.c" bodystart="76" bodyend="135" declfile="tests/sftp_stress/main.c" declline="28" declcolumn="13"/>
+        <references refid="test__ssh__bind__accept__fd_8c_1ae9872726570c0d0d80fd77fd4b1de0b1">options</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" compoundref="libssh_8h" startline="167">SSH_AUTH_ERROR</references>
+        <references refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" compoundref="libssh_8h" startline="162">SSH_AUTH_SUCCESS</references>
+        <references refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" compoundref="client_8c" startline="507" endline="620">ssh_connect</references>
+        <references refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</references>
+        <references refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="libssh_8h_1a9f4fc1896f2043312a8279eb2541fa00">ssh_log</references>
+        <references refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a926c933f61d1afa64003c1cc66f6a01c" compoundref="libssh_8h" startline="355">SSH_LOG_FUNCTIONS</references>
+        <references refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" compoundref="session_8c" startline="59" endline="181">ssh_new</references>
+        <references refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a937c9ac6e9ca0246673a89af71c92529" compoundref="libssh_8h" startline="233">SSH_SERVER_ERROR</references>
+        <references refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a56261a6f9777c297f6d8fe8c759ea33c" compoundref="libssh_8h" startline="237">SSH_SERVER_FOUND_OTHER</references>
+        <references refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a469ee95941498a9ea93b8fd02e44513a" compoundref="libssh_8h" startline="236">SSH_SERVER_KNOWN_CHANGED</references>
+        <references refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a0a045c9225cf3a2c12fd96b386094bdf" compoundref="libssh_8h" startline="235">SSH_SERVER_KNOWN_OK</references>
+        <references refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a1b1b3797fa462712355030a79be6b538" compoundref="libssh_8h" startline="234">SSH_SERVER_NOT_KNOWN</references>
+        <references refid="group__libssh__session_1gacbc5d04fe66beee863a0c61a93fdf765" compoundref="src_2knownhosts_8c" startline="1255" endline="1258">ssh_session_is_known_server</references>
+        <references refid="legacy_8h_1aebc0160212f355d57e4c331e4650d53c" compoundref="legacy_8c" startline="97" endline="99">ssh_userauth_autopubkey</references>
+        <references refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" compoundref="auth_8c" startline="406" endline="459">ssh_userauth_none</references>
+        <referencedby refid="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" compoundref="sftp__stress_2main_8c" startline="31" endline="45">docycle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sftp__stress_2main_8c_1ac2a820a1f47a1ee5c76d2e3e930bdc61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sftp_test</definition>
+        <argsstring>(SSH_SESSION *session, int test)</argsstring>
+        <name>sftp_test</name>
+        <param>
+          <type>SSH_SESSION *</type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="137" column="5" bodyfile="tests/sftp_stress/main.c" bodystart="137" bodyend="174" declfile="tests/sftp_stress/main.c" declline="29" declcolumn="5"/>
+        <references refid="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" compoundref="sftp__stress_2main_8c" startline="18">FILESIZE</references>
+        <references refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" compoundref="samplesshd-kbdint_8c" startline="186">name</references>
+        <references refid="sftp__stress_2main_8c_1a6fab9965b10f859b7e70150cb6439260" compoundref="sftp__stress_2main_8c" startline="19">samplefile</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="group__libssh__sftp_1ga2a303b07042530a0c653c05ea6fa240b">sftp_close</references>
+        <references refid="group__libssh__sftp_1ga7b6bfbd5e81da1cdddf14a44caf21d37">sftp_free</references>
+        <references refid="group__libssh__sftp_1gab8ec37b2cb85c9bb47341683f43f0841">sftp_init</references>
+        <references refid="group__libssh__sftp_1gae84eeb5a1af9d49db10f17a060151e97">sftp_new</references>
+        <references refid="group__libssh__sftp_1gaad64845af1100fb9325f20812f38da3b">sftp_open</references>
+        <references refid="group__libssh__sftp_1gaf270f5ad058082ca836a456a090ad314">sftp_write</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" compoundref="error_8c" startline="128" endline="132">ssh_get_error</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" compoundref="pkd__hello_8c" startline="697">test</references>
+        <references refid="sftp__stress_2main_8c_1a3430741a02c5da1f25edcc311502c24d" compoundref="sftp__stress_2main_8c" startline="16">TEST_WRITE</references>
+        <referencedby refid="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" compoundref="sftp__stress_2main_8c" startline="31" endline="45">docycle</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int docycle</definition>
+        <argsstring>(const char *host, int test)</argsstring>
+        <name>docycle</name>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="31" column="5" bodyfile="tests/sftp_stress/main.c" bodystart="31" bodyend="45"/>
+        <references refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" compoundref="sftp__stress_2main_8c" startline="76" endline="135">connect_host</references>
+        <references refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" compoundref="sshnetcat_8c" startline="37">host</references>
+        <references refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" compoundref="torture__session__keys_8c" startline="61">session</references>
+        <references refid="sftp__stress_2main_8c_1ac2a820a1f47a1ee5c76d2e3e930bdc61" compoundref="sftp__stress_2main_8c" startline="137" endline="174">sftp_test</references>
+        <references refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" compoundref="client_8c" startline="672" endline="750">ssh_disconnect</references>
+        <references refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" compoundref="libssh_8h" startline="330">SSH_ERROR</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" compoundref="pkd__hello_8c" startline="697">test</references>
+        <referencedby refid="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" compoundref="sftp__stress_2main_8c" startline="47" endline="52">thread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int thread</definition>
+        <argsstring>()</argsstring>
+        <name>thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="47" column="5" bodyfile="tests/sftp_stress/main.c" bodystart="47" bodyend="52"/>
+        <references refid="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" compoundref="sftp__stress_2main_8c" startline="31" endline="45">docycle</references>
+        <references refid="sftp__stress_2main_8c_1a2e9645f39096cbfe1926297b89f4fe82" compoundref="sftp__stress_2main_8c" startline="22">hosts</references>
+        <references refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" compoundref="libssh_8h" startline="329">SSH_OK</references>
+        <references refid="sftp__stress_2main_8c_1ad263606c4f32031e57d51306ae5cf58e" compoundref="sftp__stress_2main_8c" startline="20">stop</references>
+        <references refid="sftp__stress_2main_8c_1a3430741a02c5da1f25edcc311502c24d" compoundref="sftp__stress_2main_8c" startline="16">TEST_WRITE</references>
+        <referencedby refid="sftp__stress_2main_8c_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="sftp__stress_2main_8c" startline="54" endline="74">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="sftp__stress_2main_8c_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sftp_stress/main.c" line="54" column="5" bodyfile="tests/sftp_stress/main.c" bodystart="54" bodyend="74"/>
+        <references refid="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" compoundref="sftp__stress_2main_8c" startline="18">FILESIZE</references>
+        <references refid="sftp__stress_2main_8c_1a51ca9914034cd3e92903476fd4eebbd6" compoundref="sftp__stress_2main_8c" startline="17">NTHREADS</references>
+        <references refid="sftp__stress_2main_8c_1a6fab9965b10f859b7e70150cb6439260" compoundref="sftp__stress_2main_8c" startline="19">samplefile</references>
+        <references refid="sftp__stress_2main_8c_1a0816db2ac84607b8bad1d2aa4798849c" compoundref="sftp__stress_2main_8c" startline="23" endline="26">signal_stop</references>
+        <references refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" compoundref="init_8c" startline="218" endline="220">ssh_finalize</references>
+        <references refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" compoundref="init_8c" startline="147" endline="149">ssh_init</references>
+        <references refid="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" compoundref="sftp__stress_2main_8c" startline="47" endline="52">thread</references>
+        <references refid="curve25519-sha256_0dlibssh_8org_8txt_1a64e3b3da47d2dcb5585763c1a7036884">time</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>main.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>22<sp/>juin<sp/>2009</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>aris</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libssh_8h" kindref="compound">libssh/libssh.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="sftp_8h" kindref="compound">libssh/sftp.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="sftp__stress_2main_8c_1aaee5fa6ef498d4fa948b31ae533c146b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_READ<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="sftp__stress_2main_8c_1a3430741a02c5da1f25edcc311502c24d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_WRITE<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="sftp__stress_2main_8c_1a51ca9914034cd3e92903476fd4eebbd6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NTHREADS<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILESIZE<sp/>100000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="sftp__stress_2main_8c_1a6fab9965b10f859b7e70150cb6439260" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="sftp__stress_2main_8c_1a6fab9965b10f859b7e70150cb6439260" kindref="member">samplefile</ref>[<ref refid="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" kindref="member">FILESIZE</ref>];</highlight></codeline>
+<codeline lineno="20" refid="sftp__stress_2main_8c_1ad263606c4f32031e57d51306ae5cf58e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sftp__stress_2main_8c_1ad263606c4f32031e57d51306ae5cf58e" kindref="member">stop</ref>=0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="sftp__stress_2main_8c_1a2e9645f39096cbfe1926297b89f4fe82" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="sftp__stress_2main_8c_1a2e9645f39096cbfe1926297b89f4fe82" kindref="member">hosts</ref>[]={</highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;barebone&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23" refid="sftp__stress_2main_8c_1a0816db2ac84607b8bad1d2aa4798849c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sftp__stress_2main_8c_1a0816db2ac84607b8bad1d2aa4798849c" kindref="member">signal_stop</ref>(){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="sftp__stress_2main_8c_1ad263606c4f32031e57d51306ae5cf58e" kindref="member">stop</ref>=1;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Stopping...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">SSH_SESSION<sp/>*<ref refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" kindref="member">connect_host</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sftp__stress_2main_8c_1ac2a820a1f47a1ee5c76d2e3e930bdc61" kindref="member">sftp_test</ref>(SSH_SESSION<sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" kindref="member">docycle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref>){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>SSH_SESSION<sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>=<ref refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" kindref="member">connect_host</ref>(<ref refid="sshnetcat_8c_1a1c2046dcb30a629d6d9f45ff8f403f12" kindref="member">host</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret=<ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;connect<sp/>failed\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Connected\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>ret=<ref refid="sftp__stress_2main_8c_1ac2a820a1f47a1ee5c76d2e3e930bdc61" kindref="member">sftp_test</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ret<sp/>!=<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>sftp\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" kindref="member">thread</ref>(){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="sftp__stress_2main_8c_1a4b5163f873a51988cbd753ca533151d1" kindref="member">docycle</ref>(<ref refid="sftp__stress_2main_8c_1a2e9645f39096cbfe1926297b89f4fe82" kindref="member">hosts</ref>[rand()%2],<ref refid="sftp__stress_2main_8c_1a3430741a02c5da1f25edcc311502c24d" kindref="member">TEST_WRITE</ref>)<sp/>==<sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="sftp__stress_2main_8c_1ad263606c4f32031e57d51306ae5cf58e" kindref="member">stop</ref>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="sftp__stress_2main_8c_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="server_2test__server_2main_8c_1aa86a8bbbf4e1ef1a41dd619074535f0e" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>pthread_t<sp/>threads[<ref refid="sftp__stress_2main_8c_1a51ca9914034cd3e92903476fd4eebbd6" kindref="member">NTHREADS</ref>];</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="group__libssh_1ga3ebf8d6920e563f3b032e3cd5277598e" kindref="member">ssh_init</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>srand(<ref refid="curve25519-sha256_0dlibssh_8org_8txt_1a64e3b3da47d2dcb5585763c1a7036884" kindref="member">time</ref>(NULL));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;<ref refid="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" kindref="member">FILESIZE</ref>;++i)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sftp__stress_2main_8c_1a6fab9965b10f859b7e70150cb6439260" kindref="member">samplefile</ref>[i]=rand()<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>signal(SIGTERM,<ref refid="sftp__stress_2main_8c_1a0816db2ac84607b8bad1d2aa4798849c" kindref="member">signal_stop</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>signal(SIGINT,<ref refid="sftp__stress_2main_8c_1a0816db2ac84607b8bad1d2aa4798849c" kindref="member">signal_stop</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;<ref refid="sftp__stress_2main_8c_1a51ca9914034cd3e92903476fd4eebbd6" kindref="member">NTHREADS</ref>;++i){</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>srand(i);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_create(&amp;threads[i],NULL,(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/><ref refid="sftp__stress_2main_8c_1a7d27db85acc5db3bf9f28ba47d342d6c" kindref="member">thread</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;<ref refid="sftp__stress_2main_8c_1a51ca9914034cd3e92903476fd4eebbd6" kindref="member">NTHREADS</ref>;++i){</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_join(threads[i],NULL);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Ended\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" refkind="member"><highlight class="normal">SSH_SESSION<sp/>*<ref refid="sftp__stress_2main_8c_1acc3eb7c671bca3152e8e0df16bd40145" kindref="member">connect_host</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname){</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>SSH_SESSION<sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>SSH_OPTIONS<sp/>*<ref refid="test__ssh__bind__accept__fd_8c_1ae9872726570c0d0d80fd77fd4b1de0b1" kindref="member">options</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>auth=0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="structoptions" kindref="compound">options</ref>=ssh_options_new();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>ssh_options_set_host(<ref refid="structoptions" kindref="compound">options</ref>,hostname);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>=<ref refid="group__libssh__session_1gaadadc0f9601547c30db7c4d62017d32c" kindref="member">ssh_new</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>ssh_set_options(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<ref refid="structoptions" kindref="compound">options</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__session_1ga032e07cbd8bc3f14cb2dd375db0b03d7" kindref="member">ssh_connect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>)){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Connection<sp/>failed<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>state<sp/>=<sp/><ref refid="group__libssh__session_1gacbc5d04fe66beee863a0c61a93fdf765" kindref="member">ssh_session_is_known_server</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(state){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a0a045c9225cf3a2c12fd96b386094bdf" kindref="member">SSH_SERVER_KNOWN_OK</ref>:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">/*<sp/>ok<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a469ee95941498a9ea93b8fd02e44513a" kindref="member">SSH_SERVER_KNOWN_CHANGED</ref>:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Host<sp/>key<sp/>for<sp/>server<sp/>changed<sp/>:<sp/>server&apos;s<sp/>one<sp/>is<sp/>now<sp/>:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;For<sp/>security<sp/>reason,<sp/>connection<sp/>will<sp/>be<sp/>stopped\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a56261a6f9777c297f6d8fe8c759ea33c" kindref="member">SSH_SERVER_FOUND_OTHER</ref>:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;The<sp/>host<sp/>key<sp/>for<sp/>this<sp/>server<sp/>was<sp/>not<sp/>found<sp/>but<sp/>an<sp/>other<sp/>type<sp/>of<sp/>key<sp/>exists.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;An<sp/>attacker<sp/>might<sp/>change<sp/>the<sp/>default<sp/>server<sp/>key<sp/>to<sp/>confuse<sp/>your<sp/>client&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;into<sp/>thinking<sp/>the<sp/>key<sp/>does<sp/>not<sp/>exist\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;We<sp/>advise<sp/>you<sp/>to<sp/>rerun<sp/>the<sp/>client<sp/>with<sp/>-d<sp/>or<sp/>-r<sp/>for<sp/>more<sp/>safety.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh_1ga94a851d00248acde9cd7da084b491242" kindref="member">ssh_finalize</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a1b1b3797fa462712355030a79be6b538" kindref="member">SSH_SERVER_NOT_KNOWN</ref>:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;The<sp/>server<sp/>is<sp/>unknown.<sp/>Leaving<sp/>now&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a5b2ba86e7c65d274a2d1eb6754a6cba7a937c9ac6e9ca0246673a89af71c92529" kindref="member">SSH_SERVER_ERROR</ref>:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__auth_1ga58e7c265236edbc97a2f117d3f23b4dd" kindref="member">ssh_userauth_none</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>auth=<ref refid="legacy_8h_1aebc0160212f355d57e4c331e4650d53c" kindref="member">ssh_userauth_autopubkey</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(auth==<ref refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2a33d82f552d20734c17e770af637e3e17" kindref="member">SSH_AUTH_ERROR</ref>){</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Authenticating<sp/>with<sp/>pubkey:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(auth!=<ref refid="libssh_8h_1a5b35a5038ad8eac4a4e4c00c6239e6e2ab145398ebf554c3cc5d6acfb241c5235" kindref="member">SSH_AUTH_SUCCESS</ref>){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight><highlight class="stringliteral">&quot;Authentication<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__session_1ga0f048a4c0dbe02cfb7e9c5b6d0db0f27" kindref="member">ssh_disconnect</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><ref refid="libssh_8h_1a9f4fc1896f2043312a8279eb2541fa00" kindref="member">ssh_log</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/><ref refid="group__libssh__log_1ggadf764cbdea00d65edcd07bb9953ad2b7a926c933f61d1afa64003c1cc66f6a01c" kindref="member">SSH_LOG_FUNCTIONS</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Authentication<sp/>success&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="sftp__stress_2main_8c_1ac2a820a1f47a1ee5c76d2e3e930bdc61" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sftp__stress_2main_8c_1ac2a820a1f47a1ee5c76d2e3e930bdc61" kindref="member">sftp_test</ref>(SSH_SESSION<sp/>*<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref>){</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>SFTP_SESSION<sp/>*sftp=<ref refid="group__libssh__sftp_1gae84eeb5a1af9d49db10f17a060151e97" kindref="member">sftp_new</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>SFTP_FILE<sp/>*file;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wrote=0;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>[128];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sftp<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="group__libssh__sftp_1gab8ec37b2cb85c9bb47341683f43f0841" kindref="member">sftp_init</ref>(sftp)&lt;0){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;problem<sp/>initializing<sp/>sftp<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="pkd__hello_8c_1a0bc0cdcfc45ae8054b73f97c5982aa9b" kindref="member">test</ref>==<ref refid="sftp__stress_2main_8c_1a3430741a02c5da1f25edcc311502c24d" kindref="member">TEST_WRITE</ref>){</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(<ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>),</highlight><highlight class="stringliteral">&quot;/tmp/libsshstress%d&quot;</highlight><highlight class="normal">,rand());</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>file=<ref refid="group__libssh__sftp_1gaad64845af1100fb9325f20812f38da3b" kindref="member">sftp_open</ref>(sftp,<ref refid="samplesshd-kbdint_8c_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>,O_RDWR|O_CREAT,0777);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!file){</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>file<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__sftp_1ga7b6bfbd5e81da1cdddf14a44caf21d37" kindref="member">sftp_free</ref>(sftp);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(wrote&lt;<ref refid="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" kindref="member">FILESIZE</ref>){</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max=<ref refid="sftp__stress_2main_8c_1a8049c678a855a57b1030eab386393a8f" kindref="member">FILESIZE</ref>-wrote;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>towrite=rand()%max<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret=<ref refid="group__libssh__sftp_1gaf270f5ad058082ca836a456a090ad314" kindref="member">sftp_write</ref>(file,&amp;<ref refid="sftp__stress_2main_8c_1a6fab9965b10f859b7e70150cb6439260" kindref="member">samplefile</ref>[wrote],towrite);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ret&lt;=0){</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Problem<sp/>while<sp/>writing<sp/>:<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="group__libssh__error_1ga9241586665bf21f823806473fc386258" kindref="member">ssh_get_error</ref>(<ref refid="torture__session__keys_8c_1a1ea82fff28491cf424fc0753ec725adb" kindref="member">session</ref>));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__libssh__sftp_1ga7b6bfbd5e81da1cdddf14a44caf21d37" kindref="member">sftp_free</ref>(sftp);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1a790179ef432b3b59aaccd9adab0169ec" kindref="member">SSH_ERROR</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ret<sp/>!=<sp/>towrite){</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Asked<sp/>to<sp/>write<sp/>%d,<sp/>wrote<sp/>%d\n&quot;</highlight><highlight class="normal">,towrite,ret);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>wrote<sp/>+=<sp/>ret;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__libssh__sftp_1ga2a303b07042530a0c653c05ea6fa240b" kindref="member">sftp_close</ref>(file);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="group__libssh__sftp_1ga7b6bfbd5e81da1cdddf14a44caf21d37" kindref="member">sftp_free</ref>(sftp);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="libssh_8h_1ac1ee1d1e917456d4760a94a18015377d" kindref="member">SSH_OK</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/sftp_stress/main.c"/>
+  </compounddef>
+</doxygen>
