@@ -1,5 +1,5 @@
 # Test2Feature
-This tool that objective show the test traceability for feature in systems HCSs.
+This tool that objective show the test traceability for feature in systems HCSs sass.
 
 ## First steps:
 
