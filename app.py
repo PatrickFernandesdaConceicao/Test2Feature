@@ -6,6 +6,9 @@ from flask import Flask, request, render_template, jsonify
 from flask_frozen import Freezer
 
 app = Flask(__name__)
+
+# Configuração do Freezer para usar a pasta 'docs'
+app.config['FREEZER_DESTINATION'] = 'docs'  # Definindo a pasta de saída para o GitHub Pages
 freezer = Freezer(app)
 
 # Rota principal
@@ -25,13 +28,14 @@ def user(username):
 
 # Gerador para as rotas dinâmicas
 @freezer.register_generator
-def user_generator():
+def usernames_generator():
     usernames = ['Alice', 'Bob', 'Charlie']
     for username in usernames:
         yield {'username': username}
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Rodar em modo debug para testar
+    # Congelar o aplicativo ao invés de rodar o servidor Flask
+    freezer.freeze()
 
 
 
