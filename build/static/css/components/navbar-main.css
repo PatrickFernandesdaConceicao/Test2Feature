@@ -1,0 +1,91 @@
+.section-navbar {
+    width: 15vw; 
+    min-height: 100vh;
+    max-height: auto;
+    background-color: var(--pattern-black);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 32px;  
+    transition: width 0.1s; /* Adiciona uma transição suave */
+}
+
+.section-navbar.collapsed nav p span {
+    display: none; /* Esconde o texto dos itens do nav */
+}
+
+.section-navbar nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.shut-icon {
+    margin-bottom: 64px;
+    padding-left: 40px;  
+    cursor: pointer;
+}
+
+.section-navbar nav p {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    background-color: var(--pattern-black); 
+    border-radius: 3px;
+    text-wrap: nowrap;
+}
+
+.section-navbar nav p img {
+    margin-right: 20px;
+}
+
+.section-navbar.collapsed nav p img {
+    margin-right: 0; /* Remove o espaço à direita do ícone */
+}
+
+.section-navbar nav p:hover {
+    background-color: #000; 
+}
+
+.section-inputs {
+    width: 85vw;
+    box-sizing: border-box;
+}
+
+.section-navbar.collapsed {
+    width: 7vw; 
+    display: flex;
+    align-items: center;
+
+}
+
+.section-navbar.collapsed .shut-icon{
+    padding-left: 0px;
+}
+.section-navbar.collapsed nav p{
+    justify-content: center;
+    padding: 32px 0px;
+}
+.active-button {
+    background-color: black!important;
+}
+@media (max-width:1132px){
+    .section-navbar.collapsed {
+        width: 8vw; 
+        display: flex;
+        align-items: center;
+    
+    }
+}
+@media (max-width:850px){
+    .section-navbar.collapsed {
+        width: 10vw; 
+        display: flex;
+        align-items: center;
+    
+    }
+}

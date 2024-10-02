@@ -3,8 +3,37 @@ import shutil
 import subprocess
 import pandas as pd
 from flask import Flask, request, render_template, jsonify
+from flask_frozen import Freezer
 
 app = Flask(__name__)
+freezer = Freezer(app)
+
+# Rota principal
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+# Rota estática
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+# Rota dinâmica
+@app.route('/user/<username>')
+def user(username):
+    return f'Hello, {username}!'
+
+# Gerador para as rotas dinâmicas
+@freezer.register_generator
+def user_generator():
+    usernames = ['Alice', 'Bob', 'Charlie']
+    for username in usernames:
+        yield {'username': username}
+
+if __name__ == '__main__':
+    app.run(debug=True)  # Rodar em modo debug para testar
+
+
 
 def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
     try:
