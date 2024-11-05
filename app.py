@@ -21,10 +21,6 @@ def about():
 def user(username):
     return f'Hello, {username}!'
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
-
-
 def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
     try:
         df = pd.read_csv(csv_file_path)
@@ -40,11 +36,10 @@ def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
         # Obter os dados para a página atual
         paginated_data = df.iloc[start_idx:end_idx]
 
-        return paginated_data
+        return paginated_data, len(df)  # Retornando também o total de itens
     except Exception as e:
         print(f"Erro ao gerar tabela: {e}")
-        return None
-
+        return None, 0  # Retorna None e 0 em caso de erro
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -155,7 +150,14 @@ def index():
     # Carregar dados da tabela para a página atual
     csv_file_path = os.path.join(os.path.dirname(__file__), 'MergeTestFeaturesLines', 'result', 'feature2test.csv')
     try:
-        tabela_html, total_items = gerar_tabela(csv_file_path, page=page, per_page=per_page, search_query=search_query)
+        tabela_data, total_items = gerar_tabela(csv_file_path, page=page, per_page=per_page, search_query=search_query)
+
+        # Converter o DataFrame em HTML
+        if tabela_data is not None:
+            tabela_html = tabela_data.to_html(classes='table table-striped', index=False)
+        else:
+            tabela_html = "Nenhum dado encontrado."
+
     except Exception as error:
         message = f"Erro ao gerar a tabela: {error}"
 
@@ -179,13 +181,13 @@ def get_table():
         csv_file_path = os.path.join(os.path.dirname(__file__), 'MergeTestFeaturesLines', 'result', 'feature2test.csv')
 
     try:
-        tabela_html, total_items = gerar_tabela(csv_file_path, page=page, per_page=per_page, search_query=search_query)
+        tabela_data, total_items = gerar_tabela(csv_file_path, page=page, per_page=per_page, search_query=search_query)
         total_pages = count_pages(total_items, per_page=per_page)
     except Exception as error:
         return jsonify({'error': str(error)}), 500
 
     return jsonify({
-        'tabela_html': tabela_html,
+        'tabela_html': tabela_data.to_html(classes='table table-striped', index=False) if tabela_data is not None else "Nenhum dado encontrado.",
         'total_pages': total_pages
     })
 
