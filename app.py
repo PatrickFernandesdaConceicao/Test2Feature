@@ -3,13 +3,8 @@ import shutil
 import subprocess
 import pandas as pd
 from flask import Flask, request, render_template, jsonify
-from flask_frozen import Freezer
 
 app = Flask(__name__)
-
-# Configuração do Freezer para usar a pasta 'docs'
-app.config['FREEZER_DESTINATION'] = 'docs'  # Definindo a pasta de saída para o GitHub Pages
-freezer = Freezer(app)
 
 # Rota principal
 @app.route('/')
@@ -26,18 +21,8 @@ def about():
 def user(username):
     return f'Hello, {username}!'
 
-# Gerador para as rotas dinâmicas
-@freezer.register_generator
-def usernames_generator():
-    usernames = ['Alice', 'Bob', 'Charlie']
-    for username in usernames:
-        yield {'username': username}
-
 if __name__ == '__main__':
-    # Congelar o aplicativo ao invés de rodar o servidor Flask
-    freezer.freeze()
-
-
+    app.run()
 
 def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
     try:
@@ -52,14 +37,13 @@ def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
         end_idx = start_idx + per_page
 
         # Obter os dados para a página atual
-        paginated_df = df.iloc[start_idx:end_idx]
+        paginated_data = df.iloc[start_idx:end_idx]
 
-        # Converter DataFrame para HTML
-        tabela_html = paginated_df.to_html(index=False)
-        return tabela_html, len(df)
-
+        return paginated_data
     except Exception as e:
-        return f"Erro ao gerar a tabela: {e}", 0
+        print(f"Erro ao gerar tabela: {e}")
+        return None
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
