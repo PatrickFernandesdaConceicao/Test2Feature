@@ -7,40 +7,6 @@ from flask import Flask, request, render_template, jsonify
 app = Flask(__name__)
 
 # Rota principal
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-# Rota estática
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-# Rota dinâmica
-@app.route('/user/<username>')
-def user(username):
-    return f'Hello, {username}!'
-
-def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
-    try:
-        df = pd.read_csv(csv_file_path)
-
-        # Filtrar os dados com base no critério de busca
-        if search_query:
-            df = df[df.apply(lambda row: row.astype(str).str.contains(search_query, case=False).any(), axis=1)]
-
-        # Calcular índices de início e fim para paginação
-        start_idx = (page - 1) * per_page
-        end_idx = start_idx + per_page
-
-        # Obter os dados para a página atual
-        paginated_data = df.iloc[start_idx:end_idx]
-
-        return paginated_data, len(df)  # Retornando também o total de itens
-    except Exception as e:
-        print(f"Erro ao gerar tabela: {e}")
-        return None, 0  # Retorna None e 0 em caso de erro
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     message = None
@@ -111,6 +77,7 @@ def index():
         except Exception as error:
             message = f"Erro: {error}"
 
+        # Doxygen
         try:
             doxyfile_source = os.path.join(DOXYGEN_DIR, "Doxyfile")
             doxyfile_dest = os.path.join(PATHSYS, "Doxyfile")
@@ -130,6 +97,7 @@ def index():
         except Exception as error:
             message = f"An error occurred: {error}"
 
+        # MineTestLines
         try:
             os.chdir(os.path.join(PATHSCRIPT, "MineTestLines"))
             subprocess.run(["python3", "MineTestLines.py", PATHTEST, PATHXML, testFolder], check=True)
@@ -162,6 +130,36 @@ def index():
         message = f"Erro ao gerar a tabela: {error}"
 
     return render_template('index.html', message=message, tabela_html=tabela_html, page=page, per_page=per_page)
+
+# Rota sobre
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+# Rota do usuário
+@app.route('/user/<username>')
+def user(username):
+    return f'Hello, {username}!'
+
+def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
+    try:
+        df = pd.read_csv(csv_file_path)
+
+        # Filtrar os dados com base no critério de busca
+        if search_query:
+            df = df[df.apply(lambda row: row.astype(str).str.contains(search_query, case=False).any(), axis=1)]
+
+        # Calcular índices de início e fim para paginação
+        start_idx = (page - 1) * per_page
+        end_idx = start_idx + per_page
+
+        # Obter os dados para a página atual
+        paginated_data = df.iloc[start_idx:end_idx]
+
+        return paginated_data, len(df)  # Retornando também o total de itens
+    except Exception as e:
+        print(f"Erro ao gerar tabela: {e}")
+        return None, 0  # Retorna None e 0 em caso de erro
 
 def count_pages(total_items, per_page=10):
     total_pages = (total_items + per_page - 1) // per_page
