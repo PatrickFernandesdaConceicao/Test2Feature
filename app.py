@@ -22,7 +22,8 @@ def user(username):
     return f'Hello, {username}!'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+
 
 def gerar_tabela(csv_file_path, page=1, per_page=10, search_query=""):
     try:
