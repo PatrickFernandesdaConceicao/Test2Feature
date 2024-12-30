@@ -24,7 +24,7 @@ echo "Doxygen e Gradle instalados com sucesso."
 echo "Instalando dependências Python..."
 pip install -r requirements.txt
 
-echo "Instalação concluída. Iniciando o servidor..."
+echo "instalação concluída. Iniciando o servidor..."
 
 # Comando para iniciar o servidor Flask com gunicorn
 exec gunicorn app:app
