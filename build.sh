@@ -1,25 +1,30 @@
 #!/bin/bash
 
+echo "Iniciando o processo de instalação..."
+
 # Instalar Doxygen 1.9.10
+echo "Instalando Doxygen..."
 wget https://github.com/doxygen/doxygen/releases/download/Release_1_9_10/doxygen-1.9.10.linux.bin.tar.gz
 tar -xvf doxygen-1.9.10.linux.bin.tar.gz
 mv doxygen-1.9.10 /opt/doxygen
-
-# Adicionar Doxygen ao PATH
 export PATH="/opt/doxygen/bin:$PATH"
-
-# Verificar Doxygen
 doxygen --version
 
 # Instalar Gradle 4.4
+echo "Instalando Gradle..."
 wget https://services.gradle.org/distributions/gradle-4.4-bin.zip
 unzip gradle-4.4-bin.zip
 mv gradle-4.4 /opt/gradle
-
-# Adicionar Gradle ao PATH
 export PATH="/opt/gradle/bin:$PATH"
-
-# Verificar Gradle
 gradle --version
 
-# Continuar com o restante da construção (caso precise de mais dependências)
+echo "Doxygen e Gradle instalados com sucesso."
+
+# Garantir que todas as dependências Python estão instaladas
+echo "Instalando dependências Python..."
+pip install -r requirements.txt
+
+echo "Instalação concluída. Iniciando o servidor..."
+
+# Comando para iniciar o servidor Flask com gunicorn
+exec gunicorn app:app
