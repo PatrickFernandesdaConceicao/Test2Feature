@@ -8,7 +8,18 @@ mv doxygen-1.9.10 /opt/doxygen
 # Adicionar Doxygen ao PATH
 export PATH="/opt/doxygen/bin:$PATH"
 
-# Verificar a versão instalada
+# Verificar Doxygen
 doxygen --version
 
-# Continuar com o restante da construção
+# Instalar Gradle 4.4
+wget https://services.gradle.org/distributions/gradle-4.4-bin.zip
+unzip gradle-4.4-bin.zip
+mv gradle-4.4 /opt/gradle
+
+# Adicionar Gradle ao PATH
+export PATH="/opt/gradle/bin:$PATH"
+
+# Verificar Gradle
+gradle --version
+
+# Continuar com o restante da construção (caso precise de mais dependências)
