@@ -27,4 +27,4 @@ pip install -r requirements.txt
 echo "instalação concluída. Iniciando o servidor..."
 
 # Comando para iniciar o servidor Flask com gunicorn
-exec gunicorn app:app
+exec gunicorn app:app --bind 0.0.0.0:10000
