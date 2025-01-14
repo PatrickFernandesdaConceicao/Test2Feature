@@ -9,7 +9,7 @@ echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
 wget https://github.com/doxygen/doxygen/releases/download/Release_${DOXYGEN_VERSION//./_}/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz -O doxygen.tar.gz
 if [[ -f "doxygen.tar.gz" ]]; then
     tar -xvf doxygen.tar.gz
-    sudo mv doxygen-${DOXYGEN_VERSION} /opt/doxygen
+    mv doxygen-${DOXYGEN_VERSION} /opt/doxygen
     export PATH="/opt/doxygen/bin:$PATH"
     if ! command -v doxygen &>/dev/null; then
         echo "Erro: Doxygen não foi instalado corretamente." >&2
@@ -27,7 +27,7 @@ echo "Instalando Gradle versão $GRADLE_VERSION..."
 wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -O gradle.zip
 if [[ -f "gradle.zip" ]]; then
     unzip gradle.zip
-    sudo mv gradle-${GRADLE_VERSION} /opt/gradle
+    mv gradle-${GRADLE_VERSION} /opt/gradle
     export PATH="/opt/gradle/bin:$PATH"
     if ! command -v gradle &>/dev/null; then
         echo "Erro: Gradle não foi instalado corretamente." >&2
