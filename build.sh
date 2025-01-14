@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e  # Para o script ao encontrar um erro
+set -e  # Interrompe ao encontrar um erro
 echo "Iniciando o processo de instalação..."
 
 # Instalar Doxygen
@@ -8,9 +8,9 @@ DOXYGEN_VERSION="1.9.8"  # Substitua pela versão desejada
 echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
 wget https://github.com/doxygen/doxygen/releases/download/Release_${DOXYGEN_VERSION//./_}/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz -O doxygen.tar.gz
 if [[ -f "doxygen.tar.gz" ]]; then
-    tar -xvf doxygen.tar.gz
-    mv doxygen-${DOXYGEN_VERSION} /opt/doxygen
-    export PATH="/opt/doxygen/bin:$PATH"
+    tar -xzf doxygen.tar.gz
+    mv doxygen-${DOXYGEN_VERSION} "$HOME/doxygen"
+    export PATH="$HOME/doxygen/bin:$PATH"
     if ! command -v doxygen &>/dev/null; then
         echo "Erro: Doxygen não foi instalado corretamente." >&2
         exit 1
@@ -21,14 +21,14 @@ else
     exit 1
 fi
 
-# Instalar Gradle
-GRADLE_VERSION="7.6"  # Substitua pela versão desejada
+# Instalar Gradle 4.4
+GRADLE_VERSION="4.4"
 echo "Instalando Gradle versão $GRADLE_VERSION..."
 wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -O gradle.zip
 if [[ -f "gradle.zip" ]]; then
-    unzip gradle.zip
-    mv gradle-${GRADLE_VERSION} /opt/gradle
-    export PATH="/opt/gradle/bin:$PATH"
+    unzip -q gradle.zip
+    mv gradle-${GRADLE_VERSION} "$HOME/gradle"
+    export PATH="$HOME/gradle/bin:$PATH"
     if ! command -v gradle &>/dev/null; then
         echo "Erro: Gradle não foi instalado corretamente." >&2
         exit 1
@@ -50,5 +50,5 @@ fi
 
 echo "Instalação concluída. Iniciando o servidor..."
 
-# Comando para iniciar o servidor Flask com gunicorn
+# Comando para iniciar o servidor Flask com Gunicorn
 exec gunicorn app:app --bind 0.0.0.0:10000
