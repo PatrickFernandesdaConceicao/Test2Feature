@@ -11,11 +11,13 @@ if [[ -f "openjdk.tar.gz" ]]; then
     mv java-se-8u41-ri "$HOME/openjdk8"
     export JAVA_HOME="$HOME/openjdk8"
     export PATH="$JAVA_HOME/bin:$PATH"
-    if ! java -version 2>/dev/null | grep -q "1.8"; then
-        echo "Erro: OpenJDK 8 não foi instalado corretamente." >&2
+
+    echo "Validando instalação do OpenJDK 8..."
+    if ! "$JAVA_HOME/bin/java" -version 2>/dev/null | grep -q "1.8"; then
+        echo "Erro: OpenJDK 8 não foi instalado corretamente. Verifique os passos de instalação e o diretório extraído." >&2
         exit 1
     fi
-    echo "OpenJDK $(java -version 2>&1 | head -n 1) instalado com sucesso."
+    echo "OpenJDK versão $("$JAVA_HOME/bin/java" -version 2>&1 | head -n 1) instalado com sucesso."
 else
     echo "Erro: Falha ao baixar o OpenJDK 8." >&2
     exit 1
