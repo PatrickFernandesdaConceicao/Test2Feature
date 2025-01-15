@@ -3,15 +3,27 @@
 set -e  # Interrompe o script ao encontrar um erro
 echo "Iniciando o processo de instalação..."
 
-# Instalar JDK 8
-echo "Instalando JDK 8..."
-sudo apt-get update
-sudo apt-get install -y openjdk-8-jdk
-if ! java -version 2>/dev/null | grep -q "1.8"; then
-    echo "Erro: JDK 8 não foi instalado corretamente." >&2
+# Instalar JDK 8 manualmente
+JDK_VERSION="8u202"
+JDK_BUILD="b08"
+JDK_URL="https://download.oracle.com/otn-pub/java/jdk/${JDK_VERSION}-${JDK_BUILD}/1961070e4c9b4e26a04e7f5a083f551e/jdk-${JDK_VERSION}-linux-x64.tar.gz"
+
+echo "Baixando e instalando JDK 8..."
+wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "$JDK_URL" -O jdk.tar.gz
+if [[ -f "jdk.tar.gz" ]]; then
+    tar -xzf jdk.tar.gz
+    mv jdk1.8.0_202 "$HOME/jdk8"
+    export JAVA_HOME="$HOME/jdk8"
+    export PATH="$JAVA_HOME/bin:$PATH"
+    if ! java -version 2>/dev/null | grep -q "1.8"; then
+        echo "Erro: JDK 8 não foi instalado corretamente." >&2
+        exit 1
+    fi
+    echo "JDK $(java -version 2>&1 | head -n 1) instalado com sucesso."
+else
+    echo "Erro: Falha ao baixar o JDK 8." >&2
     exit 1
 fi
-echo "JDK $(java -version 2>&1 | head -n 1) instalado com sucesso."
 
 # Instalar Doxygen
 DOXYGEN_VERSION="1.9.8"
