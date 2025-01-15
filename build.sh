@@ -1,38 +1,34 @@
 #!/bin/bash
 
-set -e  # Interrompe o script ao encontrar um erro
+set -e  # Para o script ao encontrar um erro
 echo "Iniciando o processo de instalação..."
 
-# Instalar JDK 8 manualmente
-JDK_VERSION="8u202"
-JDK_BUILD="b08"
-JDK_URL="https://download.oracle.com/otn-pub/java/jdk/${JDK_VERSION}-${JDK_BUILD}/1961070e4c9b4e26a04e7f5a083f551e/jdk-${JDK_VERSION}-linux-x64.tar.gz"
-
-echo "Baixando e instalando JDK 8..."
-wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "$JDK_URL" -O jdk.tar.gz
-if [[ -f "jdk.tar.gz" ]]; then
-    tar -xzf jdk.tar.gz
-    mv jdk1.8.0_202 "$HOME/jdk8"
-    export JAVA_HOME="$HOME/jdk8"
+# Instalar o OpenJDK 8
+echo "Instalando OpenJDK 8..."
+wget https://download.java.net/openjdk/jdk8u41/ri/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz -O openjdk.tar.gz
+if [[ -f "openjdk.tar.gz" ]]; then
+    tar -xzf openjdk.tar.gz
+    mv java-se-8u41-ri "$HOME/openjdk8"
+    export JAVA_HOME="$HOME/openjdk8"
     export PATH="$JAVA_HOME/bin:$PATH"
     if ! java -version 2>/dev/null | grep -q "1.8"; then
-        echo "Erro: JDK 8 não foi instalado corretamente." >&2
+        echo "Erro: OpenJDK 8 não foi instalado corretamente." >&2
         exit 1
     fi
-    echo "JDK $(java -version 2>&1 | head -n 1) instalado com sucesso."
+    echo "OpenJDK $(java -version 2>&1 | head -n 1) instalado com sucesso."
 else
-    echo "Erro: Falha ao baixar o JDK 8." >&2
+    echo "Erro: Falha ao baixar o OpenJDK 8." >&2
     exit 1
 fi
 
 # Instalar Doxygen
-DOXYGEN_VERSION="1.9.8"
+DOXYGEN_VERSION="1.9.8"  # Substitua pela versão desejada
 echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
 wget https://github.com/doxygen/doxygen/releases/download/Release_${DOXYGEN_VERSION//./_}/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz -O doxygen.tar.gz
 if [[ -f "doxygen.tar.gz" ]]; then
-    tar -xzf doxygen.tar.gz
-    mv doxygen-${DOXYGEN_VERSION} "$HOME/doxygen"
-    export PATH="$HOME/doxygen/bin:$PATH"
+    tar -xvf doxygen.tar.gz
+    mv doxygen-${DOXYGEN_VERSION} /opt/doxygen
+    export PATH="/opt/doxygen/bin:$PATH"
     if ! command -v doxygen &>/dev/null; then
         echo "Erro: Doxygen não foi instalado corretamente." >&2
         exit 1
@@ -43,14 +39,14 @@ else
     exit 1
 fi
 
-# Instalar Gradle 4.4
-GRADLE_VERSION="4.4"
+# Instalar Gradle
+GRADLE_VERSION="4.4"  # Substitua pela versão desejada
 echo "Instalando Gradle versão $GRADLE_VERSION..."
 wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -O gradle.zip
 if [[ -f "gradle.zip" ]]; then
-    unzip -q gradle.zip
-    mv gradle-${GRADLE_VERSION} "$HOME/gradle"
-    export PATH="$HOME/gradle/bin:$PATH"
+    unzip gradle.zip
+    mv gradle-${GRADLE_VERSION} /opt/gradle
+    export PATH="/opt/gradle/bin:$PATH"
     if ! command -v gradle &>/dev/null; then
         echo "Erro: Gradle não foi instalado corretamente." >&2
         exit 1
@@ -72,5 +68,5 @@ fi
 
 echo "Instalação concluída. Iniciando o servidor..."
 
-# Comando para iniciar o servidor Flask com Gunicorn
+# Comando para iniciar o servidor Flask com gunicorn
 exec gunicorn app:app --bind 0.0.0.0:10000
