@@ -1,10 +1,20 @@
 #!/bin/bash
 
-set -e  # Interrompe ao encontrar um erro
+set -e  # Interrompe o script ao encontrar um erro
 echo "Iniciando o processo de instalação..."
 
+# Instalar JDK 8
+echo "Instalando JDK 8..."
+sudo apt-get update
+sudo apt-get install -y openjdk-8-jdk
+if ! java -version 2>/dev/null | grep -q "1.8"; then
+    echo "Erro: JDK 8 não foi instalado corretamente." >&2
+    exit 1
+fi
+echo "JDK $(java -version 2>&1 | head -n 1) instalado com sucesso."
+
 # Instalar Doxygen
-DOXYGEN_VERSION="1.10.0"  # Substitua pela versão desejada
+DOXYGEN_VERSION="1.9.8"
 echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
 wget https://github.com/doxygen/doxygen/releases/download/Release_${DOXYGEN_VERSION//./_}/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz -O doxygen.tar.gz
 if [[ -f "doxygen.tar.gz" ]]; then
