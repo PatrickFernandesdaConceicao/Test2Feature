@@ -3,25 +3,52 @@
 set -e  # Para o script ao encontrar um erro
 echo "Iniciando o processo de instalação..."
 
-# Instalar o OpenJDK 8
-echo "Instalando OpenJDK 8..."
+#!/bin/bash
+
+set -e  # Interrompe o script em caso de erro
+echo "Iniciando o processo de instalação do OpenJDK 8..."
+
+# Baixar e instalar o OpenJDK 8
+echo "Baixando OpenJDK 8..."
 wget https://download.java.net/openjdk/jdk8u41/ri/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz -O openjdk.tar.gz
+
 if [[ -f "openjdk.tar.gz" ]]; then
+    echo "Extraindo OpenJDK..."
     tar -xzf openjdk.tar.gz
+    echo "Conteúdo da pasta extraída:"
+    ls -l
     mv java-se-8u41-ri "$HOME/openjdk8"
+
+    # Configurar JAVA_HOME
     export JAVA_HOME="$HOME/openjdk8"
     export PATH="$JAVA_HOME/bin:$PATH"
 
-    echo "Validando instalação do OpenJDK 8..."
-    if ! "$JAVA_HOME/bin/java" -version 2>/dev/null | grep -q "1.8"; then
-        echo "Erro: OpenJDK 8 não foi instalado corretamente. Verifique os passos de instalação e o diretório extraído." >&2
+    # Verificar se a pasta contém os binários esperados
+    echo "Verificando estrutura do OpenJDK..."
+    if [[ -d "$JAVA_HOME/bin" && -x "$JAVA_HOME/bin/java" ]]; then
+        echo "Estrutura de pasta válida. Validando instalação..."
+    else
+        echo "Erro: Estrutura de pasta inválida ou binário não encontrado em $JAVA_HOME/bin." >&2
+        echo "Conteúdo da pasta $JAVA_HOME:"
+        ls -l "$JAVA_HOME"
         exit 1
     fi
-    echo "OpenJDK versão $("$JAVA_HOME/bin/java" -version 2>&1 | head -n 1) instalado com sucesso."
+
+    # Validar versão do Java
+    echo "Executando java -version..."
+    JAVA_VERSION=$("$JAVA_HOME/bin/java" -version 2>&1)
+    echo "$JAVA_VERSION"
+    if echo "$JAVA_VERSION" | grep -q "1.8"; then
+        echo "OpenJDK 8 instalado com sucesso."
+    else
+        echo "Erro: Versão do Java não corresponde ao esperado (1.8)." >&2
+        exit 1
+    fi
 else
     echo "Erro: Falha ao baixar o OpenJDK 8." >&2
     exit 1
 fi
+
 
 # Instalar Doxygen
 DOXYGEN_VERSION="1.9.8"  # Substitua pela versão desejada
