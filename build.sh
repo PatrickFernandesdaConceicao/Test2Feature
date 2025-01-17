@@ -5,7 +5,10 @@ echo "Iniciando o processo de instalação..."
 
 #!/bin/bash
 
-set -e  # Interrompe o script em caso de erro
+#!/bin/bash
+
+set -e  # Para o script ao encontrar um erro
+
 echo "Iniciando o processo de instalação do OpenJDK 8..."
 
 # Baixar e instalar o OpenJDK 8
@@ -17,20 +20,30 @@ if [[ -f "openjdk.tar.gz" ]]; then
     tar -xzf openjdk.tar.gz
     echo "Conteúdo da pasta extraída:"
     ls -l
-    mv java-se-8u41-ri "$HOME/openjdk8"
+
+    # Remover diretório de destino, se existir
+    if [[ -d "/opt/render/openjdk8" ]]; then
+        echo "Removendo diretório existente em /opt/render/openjdk8..."
+        rm -rf /opt/render/openjdk8
+    fi
+
+    # Criar diretório de destino
+    mkdir -p /opt/render/openjdk8
+
+    # Mover pasta extraída
+    echo "Movendo OpenJDK para /opt/render/openjdk8..."
+    mv java-se-8u41-ri /opt/render/openjdk8
 
     # Configurar JAVA_HOME
-    export JAVA_HOME="$HOME/openjdk8"
+    export JAVA_HOME="/opt/render/openjdk8/java-se-8u41-ri"
     export PATH="$JAVA_HOME/bin:$PATH"
 
-    # Verificar se a pasta contém os binários esperados
+    # Verificar estrutura do OpenJDK
     echo "Verificando estrutura do OpenJDK..."
     if [[ -d "$JAVA_HOME/bin" && -x "$JAVA_HOME/bin/java" ]]; then
-        echo "Estrutura de pasta válida. Validando instalação..."
+        echo "Estrutura válida. Validando instalação..."
     else
-        echo "Erro: Estrutura de pasta inválida ou binário não encontrado em $JAVA_HOME/bin." >&2
-        echo "Conteúdo da pasta $JAVA_HOME:"
-        ls -l "$JAVA_HOME"
+        echo "Erro: Estrutura de pasta inválida ou binário não encontrado." >&2
         exit 1
     fi
 
