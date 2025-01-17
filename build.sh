@@ -1,5 +1,37 @@
 #!/bin/bash
 
+set -e  # Faz o script parar caso ocorra algum erro
+
+echo "Iniciando a instalação das dependências..."
+
+# Atualizar o sistema e instalar dependências necessárias
+echo "Atualizando o sistema..."
+apt-get update && apt-get install -y build-essential cmake flex bison wget
+
+# Instalar Doxygen
+DOXYGEN_VERSION="1.9.8"  # Substitua pela versão desejada
+echo "Baixando Doxygen versão $DOXYGEN_VERSION..."
+wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O doxygen.tar.gz
+
+if [[ -f "doxygen.tar.gz" ]]; then
+    echo "Extraindo Doxygen..."
+    tar -xzf doxygen.tar.gz
+    cd doxygen-Release_${DOXYGEN_VERSION//./_} || exit
+    mkdir build
+    cd build || exit
+    cmake ..
+    make
+    make install DESTDIR=../doxygen_install
+    export PATH="$PWD/doxygen_install/usr/local/bin:$PATH"
+    cd ../.. || exit
+    echo "Doxygen instalado com sucesso."
+else
+    echo "Erro ao baixar o Doxygen." >&2
+    exit 1
+fi
+
+
+
 set -e  # Para o script ao encontrar um erro
 echo "Iniciando o processo de instalação..."
 
@@ -63,29 +95,7 @@ apt-get update && apt-get install -y flex bison || {
     exit 1
 }
 
-# Instalar Doxygen
-DOXYGEN_VERSION="1.10.0"  # Substitua pela versão desejada
-echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
-wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O doxygen.tar.gz
-if [[ -f "doxygen.tar.gz" ]]; then
-    tar -xzf doxygen.tar.gz
-    cd doxygen-Release_${DOXYGEN_VERSION//./_} || exit
-    mkdir build
-    cd build || exit
-    cmake ..
-    make
-    make install DESTDIR=../doxygen_install
-    export PATH="$PWD/doxygen_install/usr/local/bin:$PATH"
-    cd ../.. || exit
-    if ! command -v doxygen &>/dev/null; then
-        echo "Erro: Doxygen não foi instalado corretamente." >&2
-        exit 1
-    fi
-    echo "Doxygen versão $(doxygen --version) instalado com sucesso."
-else
-    echo "Erro: Falha ao baixar o Doxygen." >&2
-    exit 1
-fi
+set -e  # Faz o script parar caso ocorra algum erro
 
 # Instalar Gradle
 GRADLE_VERSION="4.4"  # Substitua pela versão desejada
