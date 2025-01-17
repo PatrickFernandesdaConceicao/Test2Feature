@@ -4,7 +4,7 @@ FROM ubuntu:20.04
 # Definir variáveis de ambiente e diretório de trabalho
 WORKDIR /opt/render/project/src
 
-# Atualizar o sistema e instalar dependências essenciais
+# Atualizar o sistema e instalar dependências essenciais, incluindo o FLEX
 RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
