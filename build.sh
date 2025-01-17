@@ -63,18 +63,32 @@ else
 fi
 
 
-echo "Instalando Doxygen..."
+#!/bin/bash
+
+set -e  # Para interromper o script em caso de erro
+
+echo "Iniciando instalação do Doxygen..."
+
 DOXYGEN_VERSION="1.9.8"
-wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O doxygen.tar.gz
-if [[ -f "doxygen.tar.gz" ]]; then
-    tar -xvf doxygen.tar.gz
-    mv doxygen-Release_${DOXYGEN_VERSION//./_} ./doxygen
-    export PATH="$PWD/doxygen:$PATH"
-    if ! command -v ./doxygen/bin/doxygen &>/dev/null; then
+DOXYGEN_ARCHIVE="doxygen-Release_${DOXYGEN_VERSION//./_}.tar.gz"
+DOXYGEN_DIR="doxygen-Release_${DOXYGEN_VERSION//./_}"
+
+# Baixar o Doxygen
+wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O $DOXYGEN_ARCHIVE
+
+# Verificar se o arquivo foi baixado corretamente
+if [[ -f "$DOXYGEN_ARCHIVE" ]]; then
+    echo "Extraindo o Doxygen..."
+    tar -xvf $DOXYGEN_ARCHIVE
+    export PATH="$PWD/$DOXYGEN_DIR/bin:$PATH"
+
+    # Verificar se o Doxygen foi instalado
+    if ! command -v doxygen &>/dev/null; then
         echo "Erro: Doxygen não foi instalado corretamente." >&2
         exit 1
     fi
-    echo "Doxygen versão $(./doxygen/bin/doxygen --version) instalado com sucesso."
+
+    echo "Doxygen versão $(doxygen --version) instalado com sucesso."
 else
     echo "Erro: Falha ao baixar o Doxygen." >&2
     exit 1
