@@ -64,7 +64,7 @@ apt-get update && apt-get install -y flex bison || {
 }
 
 # Instalar Doxygen
-DOXYGEN_VERSION="1.9.8"  # Substitua pela versão desejada
+DOXYGEN_VERSION="1.10.0"  # Substitua pela versão desejada
 echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
 wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O doxygen.tar.gz
 if [[ -f "doxygen.tar.gz" ]]; then
