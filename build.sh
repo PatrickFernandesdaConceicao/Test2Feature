@@ -63,23 +63,23 @@ else
 fi
 
 
-# Instalar Doxygen
-DOXYGEN_VERSION="1.10.0"  # Substitua pela versão desejada
-echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
-wget https://github.com/doxygen/doxygen/releases/download/Release_${DOXYGEN_VERSION//./_}/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz -O doxygen.tar.gz
+echo "Instalando Doxygen..."
+DOXYGEN_VERSION="1.9.8"
+wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O doxygen.tar.gz
 if [[ -f "doxygen.tar.gz" ]]; then
     tar -xvf doxygen.tar.gz
-    mv doxygen-${DOXYGEN_VERSION} /opt/doxygen
-    export PATH="/opt/doxygen/bin:$PATH"
-    if ! command -v doxygen &>/dev/null; then
+    mv doxygen-Release_${DOXYGEN_VERSION//./_} ./doxygen
+    export PATH="$PWD/doxygen:$PATH"
+    if ! command -v ./doxygen/bin/doxygen &>/dev/null; then
         echo "Erro: Doxygen não foi instalado corretamente." >&2
         exit 1
     fi
-    echo "Doxygen versão $(doxygen --version) instalado com sucesso."
+    echo "Doxygen versão $(./doxygen/bin/doxygen --version) instalado com sucesso."
 else
     echo "Erro: Falha ao baixar o Doxygen." >&2
     exit 1
 fi
+
 
 # Instalar Gradle
 GRADLE_VERSION="4.4"  # Substitua pela versão desejada
