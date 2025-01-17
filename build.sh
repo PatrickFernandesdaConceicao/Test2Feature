@@ -62,37 +62,32 @@ else
     exit 1
 fi
 
+set -e  # Para o script ao encontrar um erro
 
-#!/bin/bash
-
-set -e  # Para interromper o script em caso de erro
-
-echo "Iniciando instalação do Doxygen..."
-
-DOXYGEN_VERSION="1.9.8"
-DOXYGEN_ARCHIVE="doxygen-Release_${DOXYGEN_VERSION//./_}.tar.gz"
-DOXYGEN_DIR="doxygen-Release_${DOXYGEN_VERSION//./_}"
-
-# Baixar o Doxygen
-wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O $DOXYGEN_ARCHIVE
-
-# Verificar se o arquivo foi baixado corretamente
-if [[ -f "$DOXYGEN_ARCHIVE" ]]; then
-    echo "Extraindo o Doxygen..."
-    tar -xvf $DOXYGEN_ARCHIVE
-    export PATH="$PWD/$DOXYGEN_DIR/bin:$PATH"
-
-    # Verificar se o Doxygen foi instalado
+# Instalar Doxygen
+DOXYGEN_VERSION="1.9.8"  # Substitua pela versão desejada
+echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
+wget https://github.com/doxygen/doxygen/archive/refs/tags/Release_${DOXYGEN_VERSION//./_}.tar.gz -O doxygen.tar.gz
+if [[ -f "doxygen.tar.gz" ]]; then
+    tar -xzf doxygen.tar.gz
+    cd doxygen-Release_${DOXYGEN_VERSION//./_} || exit
+    mkdir build
+    cd build || exit
+    cmake ..
+    make
+    make install DESTDIR=../doxygen_install
+    export PATH="$PWD/doxygen_install/usr/local/bin:$PATH"
+    cd ../.. || exit
     if ! command -v doxygen &>/dev/null; then
         echo "Erro: Doxygen não foi instalado corretamente." >&2
         exit 1
     fi
-
     echo "Doxygen versão $(doxygen --version) instalado com sucesso."
 else
     echo "Erro: Falha ao baixar o Doxygen." >&2
     exit 1
 fi
+
 
 
 # Instalar Gradle
