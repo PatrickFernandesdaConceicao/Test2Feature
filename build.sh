@@ -3,12 +3,6 @@
 set -e  # Para o script ao encontrar um erro
 echo "Iniciando o processo de instalação..."
 
-#!/bin/bash
-
-#!/bin/bash
-
-set -e  # Para o script ao encontrar um erro
-
 echo "Iniciando o processo de instalação do OpenJDK 8..."
 
 # Baixar e instalar o OpenJDK 8
@@ -61,11 +55,6 @@ else
     echo "Erro: Falha ao baixar o OpenJDK 8." >&2
     exit 1
 fi
-
-set -e  # Para o script ao encontrar um erro
-
-
-set -e  # Para o script ao encontrar um erro
 
 # Instalar dependências necessárias
 echo "Instalando dependências necessárias (FLEX)..."
