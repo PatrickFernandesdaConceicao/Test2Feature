@@ -64,6 +64,16 @@ fi
 
 set -e  # Para o script ao encontrar um erro
 
+
+set -e  # Para o script ao encontrar um erro
+
+# Instalar dependências necessárias
+echo "Instalando dependências necessárias (FLEX)..."
+apt-get update && apt-get install -y flex bison || {
+    echo "Erro: Não foi possível instalar o FLEX e suas dependências." >&2
+    exit 1
+}
+
 # Instalar Doxygen
 DOXYGEN_VERSION="1.9.8"  # Substitua pela versão desejada
 echo "Instalando Doxygen versão $DOXYGEN_VERSION..."
@@ -87,8 +97,6 @@ else
     echo "Erro: Falha ao baixar o Doxygen." >&2
     exit 1
 fi
-
-
 
 # Instalar Gradle
 GRADLE_VERSION="4.4"  # Substitua pela versão desejada
