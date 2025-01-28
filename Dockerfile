@@ -48,6 +48,7 @@ RUN echo "Instalando Gradle..." \
 
 # Copiar arquivos do repositório para o container
 COPY . .
+ 
 
 # Instalar dependências Python do arquivo requirements.txt
 COPY requirements.txt .
