@@ -15,6 +15,9 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
+# Atualizar o pip para a versão mais recente
+RUN pip install --upgrade pip
+
 # Instalar OpenJDK 8
 RUN echo "Baixando e instalando OpenJDK 8..." \
     && wget https://download.java.net/openjdk/jdk8u41/ri/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz -O openjdk.tar.gz \
@@ -47,7 +50,6 @@ RUN echo "Instalando Gradle..." \
 COPY . .
 
 # Instalar dependências Python do arquivo requirements.txt
-RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
